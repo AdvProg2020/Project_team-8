@@ -2,6 +2,9 @@ package View;
 
 import Model.FilterAndSort;
 
-public class GoodsMenu {
+public class GoodsMenu extends Menu {
 
+    public GoodsMenu(Menu parentMenu) {
+        super("", parentMenu);
+    }
 }

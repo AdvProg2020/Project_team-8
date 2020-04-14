@@ -1,7 +1,8 @@
 package View;
 
-import Model.DefaultUser;
+public class MainMenu extends Menu{
 
-public class MainMenu {
-
+    public MainMenu() {
+        super("", null);
+    }
 }
