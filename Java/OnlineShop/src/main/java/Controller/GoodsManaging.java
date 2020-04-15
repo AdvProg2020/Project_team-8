@@ -1,12 +1,15 @@
 package Controller;
 
+import Model.FilterAndSort;
+
 import java.util.Scanner;
 
-public class SalesMenu {
+public class GoodsManaging {
     private static Scanner scanner;
 
+
     public static void setScanner(Scanner scanner) {
-        SalesMenu.scanner = scanner;
+        GoodsManaging.scanner = scanner;
     }
 
     public void viewCategories() {

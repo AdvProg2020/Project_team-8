@@ -11,7 +11,7 @@ public abstract class Menu {
     protected Menu parentMenu;
     private HashMap<Integer, Menu> subMenus;
     protected static Scanner scanner;
-    protected LoginType User = LoginType.DEFAULT;
+    protected LoginType user = LoginType.DEFAULT;
 
     public Menu(String name, Menu parentMenu) {
     }
