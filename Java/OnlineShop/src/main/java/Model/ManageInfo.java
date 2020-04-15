@@ -1,11 +1,10 @@
 package Model;
 
-import java.io.DataInput;
-import java.util.List;
+import java.util.ArrayList;
 
 public class ManageInfo {
-    public static List<Category> allCategories;
-    public static List<Request> allRequests;
-    public static List<User> allUsers;
-    public static List<Discount> allDiscounts;
+    public static ArrayList<Category> allCategories;
+    public static ArrayList<Request> allRequests;
+    public static ArrayList<User> allUsers;
+    public static ArrayList<Discount> allDiscounts;
 }

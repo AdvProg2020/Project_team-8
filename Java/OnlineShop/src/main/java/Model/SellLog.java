@@ -10,5 +10,5 @@ public class SellLog {
     private int discountAmount;
     private ArrayList<Good> goods;
     private String buyerName;
-    private CardSituation sellSituation;
+    private CartSituation sellSituation;
 }
