@@ -1,15 +1,17 @@
 package View;
 
 import Model.DefaultUser;
+import Controller.*;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
 public abstract class Menu {
     private String name;
-    private Menu parentMenu;
+    protected Menu parentMenu;
     private HashMap<Integer, Menu> subMenus;
     protected static Scanner scanner;
+    protected LoginType User = LoginType.DEFAULT;
 
     public Menu(String name, Menu parentMenu) {
     }
