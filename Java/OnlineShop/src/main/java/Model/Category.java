@@ -1,10 +1,12 @@
 package Model;
 
-import java.util.List;
+import java.util.ArrayList;
+
 
 public class Category {
     private String name;
     private Category subCategory;
-    private List<Good> goods;
-    private String specialAttributes;
+    private ArrayList<Good> goods;
+    private ArrayList<String> specialAttributes;
+    public static ArrayList<Category> categories;
 }

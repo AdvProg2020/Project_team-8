@@ -7,6 +7,6 @@ public class Opinion {
     private User user;
     private Good good;
     private String commentText;
-    private boolean isBuyedByUser;
+    private boolean wasBoughtByUser;
     private OpinionSituation situation;
 }
