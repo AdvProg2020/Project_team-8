@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class ManagerManaging {
     private static Manager manager;
     private static Scanner scanner;
-
+    
     public static void setManager() {
         ;
     }

@@ -1,5 +1,7 @@
 package View;
 
+import Controller.BuyerManaging;
+
 public class PurchaseMenu extends Menu {
     public PurchaseMenu(Menu parentMenu) {
         super("", parentMenu);
@@ -10,6 +12,7 @@ public class PurchaseMenu extends Menu {
     }
 
     private Menu discountCode() {
+        BuyerManaging.discountCodeEntry();
         return null;
     }
 

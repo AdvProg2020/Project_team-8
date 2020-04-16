@@ -3,6 +3,8 @@ package View;
 import Controller.GoodsManaging;
 import Model.FilterAndSort;
 
+import java.util.ArrayList;
+
 public class GoodsMenu extends Menu {
 
     public GoodsMenu(Menu parentMenu) {
@@ -10,6 +12,7 @@ public class GoodsMenu extends Menu {
     }
 
     private Menu viewCategories() {
+        ArrayList<String> categories = GoodsManaging.viewCategories();
         return null;
     }
 

@@ -1,5 +1,9 @@
 package View;
 
+import Controller.BuyerManaging;
+import Controller.ManagerManaging;
+import Controller.SellerManaging;
+
 public class ClientsMenu extends Menu {
     public ClientsMenu(String name, Menu parentMenu) {
         super(name, parentMenu);
@@ -8,6 +12,7 @@ public class ClientsMenu extends Menu {
     //Manager
 
     private Menu viewManagersPersonalInfo() {
+        String personalInfo = ManagerManaging.showPersonalInfo();
         return null;
     }
 
@@ -38,6 +43,7 @@ public class ClientsMenu extends Menu {
     //Seller
 
     private Menu viewSellersPersonalInfo() {
+        String personalInfo = SellerManaging.viewPersonalInfo();
         return null;
     }
 
@@ -77,6 +83,7 @@ public class ClientsMenu extends Menu {
     //Buyer
 
     private Menu viewBuyersPersonalInfo() {
+        String personalInfo = BuyerManaging.showPersonalInfo();
         return null;
     }
 

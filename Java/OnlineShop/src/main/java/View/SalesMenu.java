@@ -1,5 +1,9 @@
 package View;
 
+import Controller.SalesManaging;
+
+import java.util.ArrayList;
+
 public class SalesMenu extends Menu{
 
     public SalesMenu(Menu parentMenu) {
@@ -7,6 +11,7 @@ public class SalesMenu extends Menu{
     }
 
     private Menu viewCategories() {
+        ArrayList<String> categories = SalesManaging.viewCategories();
         return null;
     }
 
