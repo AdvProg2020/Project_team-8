@@ -2,11 +2,11 @@ package Controller;
 
 import java.util.Scanner;
 
-public class MainMenu {
+public class MenuChangeManaging {
      private static Scanner scanner;
 
      public static void setScanner(Scanner scanner) {
-          MainMenu.scanner = scanner;
+          MenuChangeManaging.scanner = scanner;
      }
 
      public int changeMenu() {

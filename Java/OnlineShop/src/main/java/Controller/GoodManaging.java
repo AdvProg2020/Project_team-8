@@ -6,7 +6,7 @@ import Model.Opinion;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ProductManaging {
+public class GoodManaging {
     private static Good good;
     private static Scanner scanner;
 
@@ -15,7 +15,7 @@ public class ProductManaging {
     }
 
     public static void setScanner(Scanner scanner) {
-        ProductManaging.scanner = scanner;
+        GoodManaging.scanner = scanner;
     }
 
     public String digest() {

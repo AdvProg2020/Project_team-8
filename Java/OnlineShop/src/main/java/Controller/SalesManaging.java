@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class SalesMenu {
+public class SalesManaging {
     private static Scanner scanner;
 
     public static void setScanner(Scanner scanner) {
-        SalesMenu.scanner = scanner;
+        SalesManaging.scanner = scanner;
     }
 
     public ArrayList<String> viewCategories() {
