@@ -20,67 +20,67 @@ public class SellerManaging {
         SellerManaging.scanner = scanner;
     }
 
-    public String viewPersonalInfo() {
+    public static String viewPersonalInfo() {
         return null;
     }
 
-    public boolean editFieldOfInfo() {
+    public static boolean editFieldOfInfo() {
         return false;
     }
 
-    public String viewCompaniesInfo() {
+    public static String viewCompaniesInfo() {
         return null;
     }
 
-    public ArrayList<String> ViewSalesHistory() {
+    public static ArrayList<String> ViewSalesHistory() {
         return null;
     }
 
-    public HashMap<Integer, String> manageProducts() {
+    public static HashMap<Integer, String> manageProducts() {
         return null;
     }
 
-    public Good viewProduct() {
+    public static Good viewProduct() {
         return null;
     }
 
-    public ArrayList<String> viewBuyersOfProduct() {
+    public static ArrayList<String> viewBuyersOfProduct() {
         return null;
     }
 
-    public boolean editProduct() {
+    public static boolean editProduct() {
         return false;
     }
 
-    public boolean addProduct() {
+    public static boolean addProduct() {
         return false;
     }
 
-    public boolean removeProduct() {
+    public static boolean removeProduct() {
         return false;
     }
 
-    public ArrayList<String> showCategories() {
+    public static ArrayList<String> showCategories() {
         return null;
     }
 
-    public HashMap<Integer, String> viewOffs() {
+    public static HashMap<Integer, String> viewOffs() {
         return null;
     }
 
-    public Good viewOff() {
+    public static Good viewOff() {
         return null;
     }
 
-    public boolean editOff() {
+    public static boolean editOff() {
         return false;
     }
 
-    public boolean addOff() {
+    public static boolean addOff() {
         return false;
     }
 
-    public int viewBalance() {
+    public static int viewBalance() {
         return 0;
     }
 }

@@ -1,5 +1,6 @@
 package View;
 
+import Controller.GoodsManaging;
 import Model.FilterAndSort;
 
 public class GoodsMenu extends Menu {

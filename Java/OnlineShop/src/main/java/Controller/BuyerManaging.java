@@ -19,71 +19,71 @@ public class BuyerManaging {
         BuyerManaging.scanner = scanner;
     }
 
-    public String showPersonalInfo(){
+    public static String showPersonalInfo(){
         return null;
     }
 
-    public boolean editAFieldOfOfInfo() {
+    public static boolean editAFieldOfOfInfo() {
         return false;
     }
 
-    public void viewCart() {
+    public static void viewCart() {
         ;
     }
 
-    public HashMap<Integer, String> showProductsFromCart() {
+    public static HashMap<Integer, String> showProductsFromCart() {
         return null;
     }
 
-    public Good viewProductIdFromCart() {
+    public static Good viewProductIdFromCart() {
         return null;
     }
 
-    public int increaseProductNumberInCart() {
+    public static int increaseProductNumberInCart() {
         return 0;
     }
 
-    public int decreaseProductNumberInCart() {
+    public static int decreaseProductNumberInCart() {
         return 0;
     }
 
-    public int showTotalPrice() {
+    public static int showTotalPrice() {
         return 0;
     }
 
-    public void purchase() {
+    public static void purchase() {
         ;
     }
 
-    public void receiverInfo() {
+    public static void receiverInfo() {
         ;
     }
 
-    public boolean discountCodeEntry() {
+    public static boolean discountCodeEntry() {
         return false;
     }
 
-    public boolean payment() {
+    public static boolean payment() {
         return false;
     }
 
-    public HashMap<Integer, String> viewOrders() {
+    public static HashMap<Integer, String> viewOrders() {
         return null;
     }
 
-    public Good showOrder() {
+    public static Good showOrder() {
         return null;
     }
 
-    public boolean rateProduct() {
+    public static boolean rateProduct() {
         return false;
     }
 
-    public int viewBalance() {
+    public static int viewBalance() {
         return 0;
     }
 
-    public ArrayList<String> viewDiscountCodes() {
+    public static ArrayList<String> viewDiscountCodes() {
         return null;
     }
 }

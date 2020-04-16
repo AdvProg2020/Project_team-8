@@ -1,9 +1,9 @@
 package Controller;
 
 import Model.Discount;
-import Model.Manager;
 import Model.Request;
 import Model.User;
+import Model.Manager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,87 +21,87 @@ public class ManagerManaging {
         ManagerManaging.scanner = scanner;
     }
 
-    public String showPersonalInfo(){
+    public static String showPersonalInfo(){
         return null;
     }
 
-    public boolean editAFieldOfOfInfo() {
+    public static boolean editAFieldOfOfInfo() {
         return false;
     }
 
-    public HashMap<Integer, String> manageUsers() {
+    public static HashMap<Integer, String> manageUsers() {
         return null;
     }
 
-    public User viewUser() {
+    public static User viewUser() {
         return null;
     }
 
-    public boolean deleteUser() {
+    public static boolean deleteUser() {
         return false;
     }
 
-    public boolean createNewManager() {
+    public static boolean createNewManager() {
         return false;
     }
 
-    public HashMap<Integer, String> manageAllProducts() {
+    public static HashMap<Integer, String> manageAllProducts() {
         return null;
     }
 
-    public boolean removeProduct() {
+    public static boolean removeProduct() {
         return false;
     }
 
-    public boolean createDiscountCode() {
+    public static boolean createDiscountCode() {
         return false;
     }
 
-    public ArrayList<String> viewDiscountCodes() {
+    public static ArrayList<String> viewDiscountCodes() {
         return null;
     }
 
-    public Discount viewDiscountCode() {
+    public static Discount viewDiscountCode() {
         return null;
     }
 
-    public boolean editDiscountCode() {
+    public static boolean editDiscountCode() {
         return false;
     }
 
-    public boolean removeDiscountCode() {
+    public static boolean removeDiscountCode() {
         return false;
     }
 
-    public HashMap<Integer, String> manageRequests() {
+    public static HashMap<Integer, String> manageRequests() {
         return null;
     }
 
-    public Request requestDetails() {
+    public static Request requestDetails() {
         return null;
     }
 
-    public boolean acceptRequest() {
+    public static boolean acceptRequest() {
         return false;
     }
 
-    public boolean rejectRequest() {
+    public static boolean rejectRequest() {
         return false;
     }
 
-    public ArrayList<String> manageCategories() {
+    public static ArrayList<String> manageCategories() {
         return null;
     }
 
-    public boolean editCategory() {
+    public static boolean editCategory() {
         return false;
     }
 
-    public boolean addCategory() {
+    public static boolean addCategory() {
         return false;
     }
 
-    public boolean removeCategory() {
+    public static boolean removeCategory() {
         return false;
     }
 }

@@ -1,5 +1,7 @@
 package View;
 
+import Controller.MenuChangeManaging;
+
 import java.util.HashMap;
 
 public abstract class Menu {
@@ -23,6 +25,6 @@ public abstract class Menu {
     }
 
     public void execute() {
-
+        int menuChanger = MenuChangeManaging.changeMenu();
     }
 }

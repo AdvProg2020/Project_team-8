@@ -18,31 +18,31 @@ public class GoodManaging {
         GoodManaging.scanner = scanner;
     }
 
-    public String digest() {
+    public static String digest() {
         return null;
     }
 
-    public boolean addProductToCart() {
+    public static boolean addProductToCart() {
         return false;
     }
 
-    public void selectSellerToBuyFrom() {
+    public static void selectSellerToBuyFrom() {
         ;
     }
 
-    public String attributes() {
+    public static String attributes() {
         return null;
     }
 
-    public String compareToAnotherProduct() {
+    public static String compareToAnotherProduct() {
         return null;
     }
 
-    public ArrayList<Opinion> showComments() {
+    public static ArrayList<Opinion> showComments() {
         return null;
     }
 
-    public boolean addComment() {
+    public static boolean addComment() {
         return false;
     }
 }

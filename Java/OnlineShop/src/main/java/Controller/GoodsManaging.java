@@ -13,43 +13,43 @@ public class GoodsManaging {
         GoodsManaging.scanner = scanner;
     }
 
-    public ArrayList<String> viewCategories() {
+    public static ArrayList<String> viewCategories() {
         return null;
     }
 
-    public ArrayList<FilterAndSort> showAvailableFilters() {
+    public static ArrayList<FilterAndSort> showAvailableFilters() {
         return null;
     }
 
-    public boolean setFilter() {
+    public static boolean setFilter() {
         return false;
     }
 
-    public ArrayList<FilterAndSort> showCurrentFilters() {
+    public static ArrayList<FilterAndSort> showCurrentFilters() {
         return null;
     }
 
-    public boolean disableAllFilters() {
+    public static boolean disableAllFilters() {
         return false;
     }
 
-    public ArrayList<FilterAndSort> showAvailableSorts() {
+    public static ArrayList<FilterAndSort> showAvailableSorts() {
         return null;
     }
 
-    public boolean setSort() {
+    public static boolean setSort() {
         return false;
     }
 
-    public ArrayList<FilterAndSort> showCurrentSort() {
+    public static ArrayList<FilterAndSort> showCurrentSort() {
         return null;
     }
 
-    public boolean disableSort() {
+    public static boolean disableSort() {
         return false;
     }
 
-    public HashMap<Integer, String> showProducts() {
+    public static HashMap<Integer, String> showProducts() {
         return null;
     }
 }

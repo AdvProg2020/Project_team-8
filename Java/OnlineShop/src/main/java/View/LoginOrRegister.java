@@ -1,5 +1,7 @@
 package View;
 
+import Controller.LoginOrRegisterManaging;
+
 public class LoginOrRegister extends Menu{
 
 
@@ -8,10 +10,13 @@ public class LoginOrRegister extends Menu{
     }
 
     private Menu RegisterNewPerson() {
+        LoginOrRegisterManaging.register();
         return null;
     }
 
     private Menu Login() {
+
+        LoginOrRegisterManaging.login();
         return null;
     }
 

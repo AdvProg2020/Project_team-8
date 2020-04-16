@@ -9,7 +9,7 @@ public class MenuChangeManaging {
           MenuChangeManaging.scanner = scanner;
      }
 
-     public int changeMenu() {
+     public static int changeMenu() {
           return 0;
      }
 }
