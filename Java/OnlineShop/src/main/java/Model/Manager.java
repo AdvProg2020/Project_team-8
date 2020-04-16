@@ -18,8 +18,6 @@ public class Manager extends User {
     public void deleteUser(String username) {
 
     }
-    public void acceptRequest(int id){}
-    public void declineRequest(int id){}
     public void createNewManager() {
 
     }

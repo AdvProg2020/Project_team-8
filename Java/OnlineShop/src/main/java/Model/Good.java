@@ -17,6 +17,17 @@ public class Good {
     private int averageScore;
     private ArrayList<Opinion> opinions;
 
+    public Good(String name, String brand, int price, ArrayList<User> sellers, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
+        this.name = name;
+        this.brand = brand;
+        this.price = price;
+        this.sellers = sellers;
+        this.stock = stock;
+        this.category = category;
+        this.categorySpecialAttributes = categorySpecialAttributes;
+        this.detailInfo = detailInfo;
+    }
+
     public int getStock() {
         return stock;
     }
@@ -97,15 +108,8 @@ public class Good {
         this.price = price;
     }
 
-    public Good(String name, String brand, int price, ArrayList<User> sellers, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
-        this.name = name;
-        this.brand = brand;
-        this.price = price;
-        this.sellers = sellers;
-        this.stock = stock;
-        this.category = category;
-        this.categorySpecialAttributes = categorySpecialAttributes;
-        this.detailInfo = detailInfo;
+    public int getId() {
+        return id;
     }
 
     public static boolean isThereGoodWithId(int goodId) {
@@ -114,10 +118,5 @@ public class Good {
 
     public static Good getGoodById(int goodId) {
         return null;
-    }
-
-
-    public int getId() {
-        return id;
     }
 }

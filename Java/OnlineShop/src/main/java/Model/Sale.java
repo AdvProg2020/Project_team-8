@@ -11,8 +11,9 @@ public class Sale {
     private Date endTime;
     private int amount;
 
-    public Sale(ArrayList<Good> goods, Date startTime, Date endTime, int amount) {
-        this.goods = goods;
+    public Sale(ItemCreationSituation situation, int id, Date startTime, Date endTime, int amount) {
+        this.situation = situation;
+        this.id = id;
         this.startTime = startTime;
         this.endTime = endTime;
         this.amount = amount;
@@ -50,14 +51,6 @@ public class Sale {
         this.amount = amount;
     }
 
-    public Sale(ItemCreationSituation situation, int id, Date startTime, Date endTime, int amount) {
-        this.situation = situation;
-        this.id = id;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.amount = amount;
-    }
-
     public ArrayList<Good> getGoods() {
         return goods;
     }
@@ -69,9 +62,11 @@ public class Sale {
     public int getId() {
         return id;
     }
+
     public static Boolean isSaleWithId(int id){
         return null;
     }
+
     public static Sale getSaleById(int id){
         return null;
     }

@@ -14,7 +14,7 @@ public class User {
     protected String passWord;
     private int credit;
     protected UserType type;
-    ArrayList<User> users=ManageInfo.allUsers;
+    ArrayList<User> users = ManageInfo.allUsers;
 
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         this.userName = userName;

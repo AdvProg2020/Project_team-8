@@ -5,14 +5,12 @@ import java.util.Date;
 
 public class BuyLog {
     private int id;
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
+    private Date date;
+    private int totalAmount;
+    private int discountAmount;
+    private ArrayList<Good> goods;
+    private String SellerName;
+    private CartSituation buySituation;
 
     public BuyLog(Date date, int totalAmount, int discountAmount, ArrayList<Good> goods, String sellerName, CartSituation buySituation) {
         this.date = date;
@@ -21,6 +19,14 @@ public class BuyLog {
         this.goods = goods;
         SellerName = sellerName;
         this.buySituation = buySituation;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public int getTotalAmount() {
@@ -62,13 +68,6 @@ public class BuyLog {
     public void setBuySituation(CartSituation buySituation) {
         this.buySituation = buySituation;
     }
-
-    private Date date;
-    private int totalAmount;
-    private int discountAmount;
-    private ArrayList<Good> goods;
-    private String SellerName;
-    private CartSituation buySituation;
 
     public int getId() {
         return id;
