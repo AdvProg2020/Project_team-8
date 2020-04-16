@@ -1,7 +1,9 @@
 package Controller;
 
 import Model.Good;
+import Model.Opinion;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ProductManaging {
@@ -16,31 +18,31 @@ public class ProductManaging {
         ProductManaging.scanner = scanner;
     }
 
-    public void digest() {
-        ;
+    public String digest() {
+        return null;
     }
 
-    public void addProductToCart() {
-        ;
+    public boolean addProductToCart() {
+        return false;
     }
 
     public void selectSellerToBuyFrom() {
         ;
     }
 
-    public void attributes() {
-        ;
+    public String attributes() {
+        return null;
     }
 
-    public void compareToAnotherProduct() {
-        ;
+    public String compareToAnotherProduct() {
+        return null;
     }
 
-    public void showComments() {
-        ;
+    public ArrayList<Opinion> showComments() {
+        return null;
     }
 
-    public void addComment() {
-        ;
+    public boolean addComment() {
+        return false;
     }
 }

@@ -1,7 +1,12 @@
 package Controller;
 
+import Model.Discount;
 import Model.Manager;
+import Model.Request;
+import Model.User;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class ManagerManaging {
@@ -16,87 +21,87 @@ public class ManagerManaging {
         ManagerManaging.scanner = scanner;
     }
 
-    public void showPersonalInfo(){
-        ;
+    public String showPersonalInfo(){
+        return null;
     }
 
-    public void editAFieldOfOfInfo() {
-        ;
+    public boolean editAFieldOfOfInfo() {
+        return false;
     }
 
-    public void manageUsers() {
-        ;
+    public HashMap<Integer, String> manageUsers() {
+        return null;
     }
 
-    public void viewUser() {
-        ;
+    public User viewUser() {
+        return null;
     }
 
-    public void deleteUser() {
-        ;
+    public boolean deleteUser() {
+        return false;
     }
 
-    public void createNewManager() {
-        ;
+    public boolean createNewManager() {
+        return false;
     }
 
-    public void manageAllProducts() {
-        ;
+    public HashMap<Integer, String> manageAllProducts() {
+        return null;
     }
 
-    public void removeProduct() {
-        ;
+    public boolean removeProduct() {
+        return false;
     }
 
-    public void createDiscountCode() {
-        ;
+    public boolean createDiscountCode() {
+        return false;
     }
 
-    public void viewDiscountCodes() {
-        ;
+    public ArrayList<String> viewDiscountCodes() {
+        return null;
     }
 
-    public void viewDiscountCode() {
-
+    public Discount viewDiscountCode() {
+        return null;
     }
 
-    public void editDiscountCode() {
-        ;
+    public boolean editDiscountCode() {
+        return false;
     }
 
-    public void removeDiscountCode() {
-        ;
+    public boolean removeDiscountCode() {
+        return false;
     }
 
-    public void manageRequests() {
-        ;
+    public HashMap<Integer, String> manageRequests() {
+        return null;
     }
 
-    public void requestDetails() {
-        ;
+    public Request requestDetails() {
+        return null;
     }
 
-    public void acceptRequest() {
-        ;
+    public boolean acceptRequest() {
+        return false;
     }
 
-    public void rejectRequest() {
-        ;
+    public boolean rejectRequest() {
+        return false;
     }
 
-    public void manageCategories() {
-        ;
+    public ArrayList<String> manageCategories() {
+        return null;
     }
 
-    public void editCategory() {
-        ;
+    public boolean editCategory() {
+        return false;
     }
 
-    public void addCategory() {
-        ;
+    public boolean addCategory() {
+        return false;
     }
 
-    public void removeCategory() {
-        ;
+    public boolean removeCategory() {
+        return false;
     }
 }

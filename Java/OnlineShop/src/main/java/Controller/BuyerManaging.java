@@ -1,7 +1,10 @@
 package Controller;
 
 import Model.Buyer;
+import Model.Good;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class BuyerManaging {
@@ -12,40 +15,40 @@ public class BuyerManaging {
         ;
     }
 
-    public void setScanner(Scanner scanner) {
+    public static void setScanner(Scanner scanner) {
         BuyerManaging.scanner = scanner;
     }
 
-    public void showPersonalInfo(){
-        ;
+    public String showPersonalInfo(){
+        return null;
     }
 
-    public void editAFieldOfOfInfo() {
-        ;
+    public boolean editAFieldOfOfInfo() {
+        return false;
     }
 
     public void viewCart() {
         ;
     }
 
-    public void showProductsFromCart() {
-        ;
+    public HashMap<Integer, String> showProductsFromCart() {
+        return null;
     }
 
-    public void viewProductIdFromCart() {
-        ;
+    public Good viewProductIdFromCart() {
+        return null;
     }
 
-    public void increaseProductNumberInCart() {
-        ;
+    public int increaseProductNumberInCart() {
+        return 0;
     }
 
-    public void decreaseProductNumberInCart() {
-        ;
+    public int decreaseProductNumberInCart() {
+        return 0;
     }
 
-    public void showTotalPrice() {
-        ;
+    public int showTotalPrice() {
+        return 0;
     }
 
     public void purchase() {
@@ -56,31 +59,31 @@ public class BuyerManaging {
         ;
     }
 
-    public void discountCodeEntry() {
-        ;
+    public boolean discountCodeEntry() {
+        return false;
     }
 
-    public void payment() {
-        ;
+    public boolean payment() {
+        return false;
     }
 
-    public void viewOrders() {
-        ;
+    public HashMap<Integer, String> viewOrders() {
+        return null;
     }
 
-    public void showOrder() {
-        ;
+    public Good showOrder() {
+        return null;
     }
 
-    public void rateProduct() {
-        ;
+    public boolean rateProduct() {
+        return false;
     }
 
-    public void viewBalance() {
-        ;
+    public int viewBalance() {
+        return 0;
     }
 
-    public void viewDiscountCodes() {
-        ;
+    public ArrayList<String> viewDiscountCodes() {
+        return null;
     }
 }

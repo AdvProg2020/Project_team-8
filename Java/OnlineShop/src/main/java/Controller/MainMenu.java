@@ -1,14 +1,15 @@
 package Controller;
 
-
-//delete kon ino vghn niazi behesh nist ya bego che niazi hast //@Arash_ST
-
-
-import Model.Cart;
+import java.util.Scanner;
 
 public class MainMenu {
-     Cart cart;
+     private static Scanner scanner;
 
+     public static void setScanner(Scanner scanner) {
+          MainMenu.scanner = scanner;
+     }
 
-
+     public int changeMenu() {
+          return 0;
+     }
 }

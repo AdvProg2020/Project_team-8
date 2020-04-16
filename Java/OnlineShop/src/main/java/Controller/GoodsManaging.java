@@ -2,53 +2,54 @@ package Controller;
 
 import Model.FilterAndSort;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class GoodsManaging {
     private static Scanner scanner;
 
-
     public static void setScanner(Scanner scanner) {
         GoodsManaging.scanner = scanner;
     }
 
-    public void viewCategories() {
-        ;
+    public ArrayList<String> viewCategories() {
+        return null;
     }
 
-    public void showAvailableFilters() {
-        ;
+    public ArrayList<FilterAndSort> showAvailableFilters() {
+        return null;
     }
 
-    public void setFilter() {
-        ;
+    public boolean setFilter() {
+        return false;
     }
 
-    public void showCurrentFilters() {
-        ;
+    public ArrayList<FilterAndSort> showCurrentFilters() {
+        return null;
     }
 
-    public void disableAllFilters() {
-        ;
+    public boolean disableAllFilters() {
+        return false;
     }
 
-    public void showAvailableSorts() {
-        ;
+    public ArrayList<FilterAndSort> showAvailableSorts() {
+        return null;
     }
 
-    public void setSort() {
-        ;
+    public boolean setSort() {
+        return false;
     }
 
-    public void showCurrentSort() {
-        ;
+    public ArrayList<FilterAndSort> showCurrentSort() {
+        return null;
     }
 
-    public void disableSort() {
-        ;
+    public boolean disableSort() {
+        return false;
     }
 
-    public void showProducts() {
-        ;
+    public HashMap<Integer, String> showProducts() {
+        return null;
     }
 }

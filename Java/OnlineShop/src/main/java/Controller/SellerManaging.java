@@ -1,7 +1,10 @@
 package Controller;
 
+import Model.Good;
 import Model.Seller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class SellerManaging {
@@ -17,67 +20,67 @@ public class SellerManaging {
         SellerManaging.scanner = scanner;
     }
 
-    public void viewPersonalInfo() {
-        ;
+    public String viewPersonalInfo() {
+        return null;
     }
 
-    public void editFieldOfInfo() {
-        ;
+    public boolean editFieldOfInfo() {
+        return false;
     }
 
-    public void viewCompaniesInfo() {
-        ;
+    public String viewCompaniesInfo() {
+        return null;
     }
 
-    public void ViewSalesHistory() {
-        ;
+    public ArrayList<String> ViewSalesHistory() {
+        return null;
     }
 
-    public void manageProducts() {
-        ;
+    public HashMap<Integer, String> manageProducts() {
+        return null;
     }
 
-    public void viewProduct() {
-        ;
+    public Good viewProduct() {
+        return null;
     }
 
-    public void viewBuyersOfProduct() {
-        ;
+    public ArrayList<String> viewBuyersOfProduct() {
+        return null;
     }
 
-    public void editProduct() {
-        ;
+    public boolean editProduct() {
+        return false;
     }
 
-    public void addProduct() {
-        ;
+    public boolean addProduct() {
+        return false;
     }
 
-    public void removeProduct() {
-        ;
+    public boolean removeProduct() {
+        return false;
     }
 
-    public void showCategories() {
-        ;
+    public ArrayList<String> showCategories() {
+        return null;
     }
 
-    public void viewOffs() {
-        ;
+    public HashMap<Integer, String> viewOffs() {
+        return null;
     }
 
-    public void viewOff() {
-        ;
+    public Good viewOff() {
+        return null;
     }
 
-    public void editOff() {
-        ;
+    public boolean editOff() {
+        return false;
     }
 
-    public void addOff() {
-        ;
+    public boolean addOff() {
+        return false;
     }
 
-    public void viewBalance() {
-        ;
+    public int viewBalance() {
+        return 0;
     }
 }
