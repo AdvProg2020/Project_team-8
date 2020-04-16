@@ -12,11 +12,7 @@ public class Discount {
     private int maxReductionAmount;
     private int usageNumber;
     private ArrayList<User> users;
-    private static ArrayList<Discount> discounts;
-
-    public int getCode() {
-        return code;
-    }
+    private static ArrayList<Discount> discounts = ManageInfo.allDiscounts;
 
     public Discount(int code, Date startDate, Date endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
         this.code = code;
@@ -25,6 +21,10 @@ public class Discount {
         this.percentReduction = percentReduction;
         this.maxReductionAmount = maxReductionAmount;
         this.usageNumber = usageNumber;
+    }
+
+    public int getCode() {
+        return code;
     }
 
     public void setCode(int code) {
@@ -69,16 +69,6 @@ public class Discount {
 
     public void setUsageNumber(int usageNumber) {
         this.usageNumber = usageNumber;
-    }
-
-    public Discount(int code, Date startDate, Date endDate, int percentReduction, int maxReductionAmount, int usageNumber, ArrayList<User> users) {
-        this.code = code;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.percentReduction = percentReduction;
-        this.maxReductionAmount = maxReductionAmount;
-        this.usageNumber = usageNumber;
-        this.users = users;
     }
 
     public ArrayList<User> getUsers() {

@@ -11,19 +11,7 @@ public class Request {
     private int requestId;
     private Seller seller;
     private String request;
-    ArrayList<Request> requests=ManageInfo.allRequests;
-    public static Request getRequestById(String requestId) {
-        return null;
-    }
-    public void sellerEditSale(Sale sale) {
-
-    }
-    public void sellerAddSale(Sale sale) {
-
-    }
-    public void sellerEditGood(Good good) {
-
-    }
+    ArrayList<Request> requests = ManageInfo.allRequests;
 
     public Good getGood() {
         return good;
@@ -52,10 +40,22 @@ public class Request {
     public void sellerRemoveGood(Good good){
 
     }
-    public static Boolean isRequestWithId(int id){
+    public static Boolean isThereRequestWithId(int id){
         return null;
     }
-    public static Request getRequestById(int id){
+
+    public static Request getRequestById(int requestId){
         return null;
     }
+
+    public void sellerEditSale(Sale sale) {
+
+    }
+    public void sellerAddSale(Sale sale) {
+
+    }
+    public void sellerEditGood(Good good) {
+
+    }
+
 }

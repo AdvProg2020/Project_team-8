@@ -6,6 +6,9 @@ public class Opinion {
     }
     private User user;
     private Good good;
+    private String commentText;
+    private boolean wasBoughtByUser;
+    private OpinionSituation situation;
 
     public Opinion(User user, Good good, String commentText, boolean wasBoughtByUser) {
         this.user = user;
@@ -53,8 +56,4 @@ public class Opinion {
     public void setSituation(OpinionSituation situation) {
         this.situation = situation;
     }
-
-    private String commentText;
-    private boolean wasBoughtByUser;
-    private OpinionSituation situation;
 }

@@ -7,16 +7,20 @@ public class Seller extends User {
     private ArrayList<Sale> mySales;
     private ArrayList<Good> myGoods;
     private ArrayList<SellLog> mySellLog;
-
-    public ArrayList<Sale> getMySales() {
-        return mySales;
-    }
+    private String companyName;
+    private String factoryName;
+    private String workShopName;
+    public static ArrayList<Seller> sellers;
 
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type, String companyName, String factoryName, String workShopName) {
         super(userName, firstName, lastName, email, phoneNumber, passWord, type);
         this.companyName = companyName;
         this.factoryName = factoryName;
         this.workShopName = workShopName;
+    }
+
+    public ArrayList<Sale> getMySales() {
+        return mySales;
     }
 
     public void setMySales(ArrayList<Sale> mySales) {
@@ -61,16 +65,6 @@ public class Seller extends User {
 
     public void setWorkShopName(String workShopName) {
         this.workShopName = workShopName;
-    }
-
-    private String companyName;
-    private String factoryName;
-    private String workShopName;
-    public static ArrayList<Seller> sellers;
-
-
-    public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
-        super(userName, firstName, lastName, email, phoneNumber, passWord, type);
     }
 
     public static void createNewSeller() {
