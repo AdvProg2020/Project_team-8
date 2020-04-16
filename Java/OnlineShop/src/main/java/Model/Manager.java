@@ -3,8 +3,6 @@ package Model;
 import java.util.ArrayList;
 
 public class Manager extends User {
-    public static ArrayList<Manager> managers;
-
     public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         super(userName, firstName, lastName, email, phoneNumber, passWord, type);
     }
@@ -20,7 +18,8 @@ public class Manager extends User {
     public void deleteUser(String username) {
 
     }
-
+    public void acceptRequest(int id){}
+    public void declineRequest(int id){}
     public void createNewManager() {
 
     }

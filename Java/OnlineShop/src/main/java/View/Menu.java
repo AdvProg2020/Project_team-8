@@ -1,8 +1,5 @@
 package View;
 
-import Model.DefaultUser;
-import Controller.*;
-
 import java.util.HashMap;
 import java.util.Scanner;
 

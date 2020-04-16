@@ -8,8 +8,6 @@ public class Buyer extends User {
     private Cart cart;
     private ArrayList<Discount> myDiscounts;
     private ArrayList<BuyLog> myLogs;
-    public static ArrayList<Buyer> buyers;
-
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         super(userName, firstName, lastName, email, phoneNumber, passWord, type);
     }
@@ -25,7 +23,6 @@ public class Buyer extends User {
     public static void CreateNewBuyer() {
 
     }
-
     public ArrayList<String> viewCart(Cart cart) {
         return null;
     }

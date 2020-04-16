@@ -3,6 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="6aa5c707-66da-4d7d-920b-fa9a3625d622" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/BuyLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/BuyLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Buyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DefaultUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Discount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/FilterAndSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/FilterAndSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Opinion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Opinion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SellLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SellLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Seller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/LoginOrRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +75,8 @@
       <workItem from="1586865687290" duration="8041000" />
       <workItem from="1586890310790" duration="68000" />
       <workItem from="1586890400888" duration="36000" />
-      <workItem from="1586890794666" duration="1330000" />
+      <workItem from="1586890794666" duration="1639000" />
+      <workItem from="1587033102121" duration="4746000" />
     </task>
     <servers />
   </component>
@@ -64,22 +84,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="0" key="#Project_Structure" timestamp="1586891907214">
+    <state x="233" y="0" key="#Project_Structure" timestamp="1586892457028">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1586891907214" />
+    <state x="233" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1586892457028" />
+    <state x="751" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1587037203549">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="751" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1587037203549" />
     <state x="438" y="200" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586873011264">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="438" y="200" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1586873011264" />
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587035700342">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1587035700342" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1586890433400">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1586890433400" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1586890401453">
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1587033101837">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1586890401453" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1587033101837" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1586866401323">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

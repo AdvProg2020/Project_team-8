@@ -14,7 +14,7 @@ public class User {
     protected String passWord;
     private int credit;
     protected UserType type;
-    public static ArrayList<User> users;
+    ArrayList<User> users=ManageInfo.allUsers;
 
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         this.userName = userName;
@@ -54,10 +54,6 @@ public class User {
         return type;
     }
 
-    public static ArrayList<User> getUsers() {
-        return users;
-    }
-
     public void setUserName(String userName) {
         this.userName = userName;
     }
@@ -84,10 +80,6 @@ public class User {
 
     public void setType(UserType type) {
         this.type = type;
-    }
-
-    public static void setUsers(ArrayList<User> users) {
-        User.users = users;
     }
 
     public static boolean isThereUserWithUsername(String userName) {

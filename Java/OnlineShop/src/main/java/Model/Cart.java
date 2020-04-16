@@ -7,7 +7,27 @@ import java.util.List;
 public class Cart {
     private ArrayList<Good> goods;
     private HashMap<Good, String> amountOfPerGood;
-    private int totalPrice;
+
+    public void setGoods(ArrayList<Good> goods) {
+        this.goods = goods;
+    }
+
+    public void setAmountOfPerGood(HashMap<Good, String> amountOfPerGood) {
+        this.amountOfPerGood = amountOfPerGood;
+    }
+
+    public void setCardSituation(CartSituation cardSituation) {
+        this.cardSituation = cardSituation;
+    }
+
+    public Cart(ArrayList<Good> goods) {
+        this.goods = goods;
+    }
+
+    public void setTotalAmount(int totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
     private CartSituation cardSituation;
     private int totalAmount;
 }
