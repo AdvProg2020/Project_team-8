@@ -1,9 +1,7 @@
 package Controller;
 
-import Model.Discount;
-import Model.Request;
-import Model.User;
-import Model.Manager;
+import Model.*;
+import com.sun.tools.javac.Main;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +10,7 @@ import java.util.Scanner;
 public class ManagerManaging {
     private static Manager manager;
     private static Scanner scanner;
-    
+
     public static void setManager() {
         ;
     }

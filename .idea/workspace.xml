@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="117cbb97-4a2d-4930-857a-41ec4518a333" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/OnlineShop/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/OnlineShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/OnlineShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/Controller/MenuChangeManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/Controller/MenuChangeManaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/View/GoodsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/View/GoodsMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/View/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/View/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/View/Menu.java" afterDir="false" />
+    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Project_team-8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_team-8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/Controller/ManagerManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/OnlineShop/src/main/java/Controller/ManagerManaging.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,20 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Java/OnlineShop" />
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Project_team-8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -48,6 +59,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588078365417">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
