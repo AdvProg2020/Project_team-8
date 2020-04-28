@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6aa5c707-66da-4d7d-920b-fa9a3625d622" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/BuyLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/BuyLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DefaultUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Discount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/FilterAndSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/FilterAndSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Good.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Opinion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Opinion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SellLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SellLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Seller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/LoginOrRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/MenuChangeManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/MenuChangeManaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/GoodsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/GoodsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/MainMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,14 +48,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -60,6 +66,20 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\IdeaProjects\OnlineShop\src\main\java\Controller" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="OnlineShop" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -76,22 +96,51 @@
       <workItem from="1586890310790" duration="68000" />
       <workItem from="1586890400888" duration="36000" />
       <workItem from="1586890794666" duration="1639000" />
-      <workItem from="1587033102121" duration="4746000" />
+      <workItem from="1587033102121" duration="8989000" />
+      <workItem from="1587913196464" duration="42000" />
+      <workItem from="1588053715567" duration="611000" />
+      <workItem from="1588058621838" duration="1817000" />
+      <workItem from="1588060467577" duration="1793000" />
+      <workItem from="1588062581896" duration="4000" />
+      <workItem from="1588062633723" duration="625000" />
+      <workItem from="1588071965280" duration="89000" />
+      <workItem from="1588072112807" duration="84000" />
+      <workItem from="1588072273278" duration="26000" />
+      <workItem from="1588072835007" duration="3000" />
+      <workItem from="1588073112139" duration="431000" />
+      <workItem from="1588076976663" duration="438000" />
+      <workItem from="1588077428114" duration="761000" />
+      <workItem from="1588078202265" duration="128000" />
+      <workItem from="1588078368247" duration="30000" />
+      <workItem from="1588078436850" duration="736000" />
+      <workItem from="1588079245654" duration="305000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Project_Structure" timestamp="1586892457028">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1586892457028" />
-    <state x="751" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1587037203549">
+    <state x="751" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1588061396924">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="751" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1587037203549" />
+    <state x="751" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1588061396924" />
     <state x="438" y="200" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586873011264">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -100,14 +149,34 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1587035700342" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1586890433400">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588078396494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1586890433400" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1587033101837">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588078396494" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1588079172988">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1587033101837" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588079172988" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1588079172988">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588079172988" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1588079172988">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588079172988" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1588079172988">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588079172988" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1588073115524">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1588073115524" />
+    <state x="91" y="36" key="new project wizard" timestamp="1587913233789">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="91" y="36" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1587913233789" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1586866401323">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -116,5 +185,8 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1586873798509" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OnlineShop$Main.ic" NAME="Main Coverage Results" MODIFIED="1588079032809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

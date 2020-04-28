@@ -3,13 +3,10 @@ package Controller;
 import java.util.Scanner;
 
 public class MenuChangeManaging {
-     private static Scanner scanner;
-
-     public static void setScanner(Scanner scanner) {
-          MenuChangeManaging.scanner = scanner;
-     }
-
+     private static Scanner scanner ;
      public static int changeMenu() {
-          return 0;
+          scanner = new Scanner(System.in);
+          Integer input = Integer.parseInt(scanner.nextLine());
+          return input;
      }
 }
