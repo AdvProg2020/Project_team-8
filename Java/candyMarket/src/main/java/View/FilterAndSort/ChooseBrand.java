@@ -26,6 +26,10 @@ public class ChooseBrand extends Filter {
             return;
         }
         else {
+            if (num>brands.size()) {
+                System.out.println(ViewException.invalidNumber().getMessage());
+                run();
+            }
             SubFilter currentSubFilter = SubFilter.getSubFilterById(num-1,brands);
             if(currentSubFilter.isEnable()) currentSubFilter.setEnable(false);
             else currentSubFilter.setEnable(true);
