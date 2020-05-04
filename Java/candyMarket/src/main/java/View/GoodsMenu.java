@@ -61,10 +61,11 @@ public class GoodsMenu extends Menu {
             }
 
             @Override
-            public void execute() {
+            public void execute() throws ViewException {
                 int menuChanger = ConsoleCmd.scanner.nextInt();
-                if(menuChanger == 1)
+                if(menuChanger == 0)
                     this.parentMenu.run();
+                else throw ViewException.invalidNumber();
             }
         };
     }

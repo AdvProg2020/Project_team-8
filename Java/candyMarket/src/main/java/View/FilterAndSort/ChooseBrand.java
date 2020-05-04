@@ -1,5 +1,6 @@
 package View.FilterAndSort;
 
+import Controller.GoodsManaging;
 import Model.ManageInfo;
 import View.ConsoleCmd;
 import View.ConsoleDesign;
@@ -8,7 +9,7 @@ import View.ViewException;
 import java.util.ArrayList;
 
 public class ChooseBrand extends Filter {
-    private ArrayList<SubFilter> brands = SubFilter.createAllSubFilters(ManageInfo.allBrands);
+    private ArrayList<SubFilter> brands = SubFilter.createAllSubFilters(GoodsManaging.ViewBrands());
     public void run() throws ViewException {
         this.setEnable(true);
         System.out.println("Brands menu");

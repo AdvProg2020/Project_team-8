@@ -1,5 +1,8 @@
 package Controller;
 
+import Model.Category;
+import Model.ManageInfo;
+import Model.Sale;
 import View.FilterAndSort.FilterAndSort;
 
 import java.util.ArrayList;
@@ -14,9 +17,16 @@ public class GoodsManaging {
     }
 
     public static ArrayList<String> viewCategories() {
-        return null;
+        ArrayList<String> categories = new ArrayList<String>();
+        for (Category c:
+                ManageInfo.allCategories) {
+            categories.add(c.getName());
+        }
+        return categories;
     }
-
+    public static ArrayList<String> ViewBrands() {
+        return ManageInfo.allBrands;
+    }
     public static ArrayList<String> showAvailableFilters() {
         return null;
     }
