@@ -9,13 +9,13 @@ import View.ViewException;
 import java.util.ArrayList;
 
 public class ChooseBrand extends Filter {
-    private ArrayList<SubFilter> brands = SubFilter.createAllSubFilters(GoodsManaging.ViewBrands());
+    private ArrayList<Filter> brands = FilterAndSort.createAllFilters(GoodsManaging.ViewBrands());
     public void run() throws ViewException {
         this.setEnable(true);
         System.out.println("Brands menu");
         System.out.println("0. back");
         ConsoleDesign.printColorFull(ConsoleDesign.BLUE_UNDERLINED,"Choose the brands : ");
-        for (SubFilter s:
+        for (Filter s:
              brands) {
             String line = s.getId()+". "+s.getName();
             if(s.isEnable()) ConsoleDesign.printColorFull(ConsoleDesign.GREEN_BACKGROUND,line);
@@ -30,9 +30,9 @@ public class ChooseBrand extends Filter {
                 System.out.println(ViewException.invalidNumber().getMessage());
                 run();
             }
-            SubFilter currentSubFilter = SubFilter.getSubFilterById(num-1,brands);
-            if(currentSubFilter.isEnable()) currentSubFilter.setEnable(false);
-            else currentSubFilter.setEnable(true);
+            Filter currentFilter = FilterAndSort.getFilterById(num-1,brands);
+            if(currentFilter.isEnable()) currentFilter.setEnable(false);
+            else currentFilter.setEnable(true);
             run();
         }
     }
