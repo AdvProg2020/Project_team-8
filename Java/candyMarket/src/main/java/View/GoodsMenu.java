@@ -95,8 +95,10 @@ public class GoodsMenu extends Menu {
             @Override
             public void execute() throws ViewException {
                 int menuChanger = ConsoleCmd.scanner.nextInt();
-                if(menuChanger == 0)
+                if(menuChanger == 0){
+                    GoodsManaging.updateFixedGoods();
                     this.parentMenu.run();
+                }
                 else if(menuChanger == 1) {
                     if(FilterAndSort.sortDescendingMode == true) FilterAndSort.sortDescendingMode=false;
                     else FilterAndSort.sortDescendingMode = true;
