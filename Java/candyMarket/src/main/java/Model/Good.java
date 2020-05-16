@@ -1,8 +1,19 @@
 package Model;
 
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Good {
+    public long getDateModified() {
+        return dateModified;
+    }
+
+    public void setDateModified(long dateModified) {
+        this.dateModified = dateModified;
+    }
+
+    private long dateModified;
     private int salePercentageAmount;
     private int id;
     private ItemCreationSituation situation;
@@ -28,6 +39,7 @@ public class Good {
         this.categorySpecialAttributes = categorySpecialAttributes;
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
+        this.dateModified = System.currentTimeMillis();
     }
 
     public int getStock() {

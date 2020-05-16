@@ -7,6 +7,7 @@ import View.FilterMenus.ChoosePrice;
 import View.ViewException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class FilterAndSort {
     public static ArrayList<Filter> filters = FilterAndSort.createAllFilters();
@@ -37,14 +38,24 @@ public class FilterAndSort {
         IS_EXIST,CHOOSE_BRANDS,CHOOSE_PRICE_RANGE,CHOOSE_CATEGORIES
     }
     public static enum sortsTypes{
-        DESCENDING_MODE,PRICE,ALPHABETICALLY,CHOOSE_CATEGORY,DATE_MODIFIED
+        DESCENDING_MODE,PRICE,ALPHABETICALLY,DATE_MODIFIED
     }
     public static ArrayList<Good> sortGoods(ArrayList<Good> goods){
-        switch (sortsType){
+        switch (sortsType) {
             case ALPHABETICALLY:
+                Collections.sort(goods, new SortComparators.SortAlphabetically());
+                break;
+            case PRICE:
+                Collections.sort(goods, new SortComparators.SortPrice());
+                break;
+            case DATE_MODIFIED:
+                Collections.sort(goods, new SortComparators.SortDateModified());
+                break;
+            }
+                if(sortDescendingMode)
+                    Collections.reverse(goods);
+                return  goods;
         }
-        return null;
-    }
     public static ArrayList<Good> filterGoods(ArrayList<Good> goods){
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
         for (Filter f:
