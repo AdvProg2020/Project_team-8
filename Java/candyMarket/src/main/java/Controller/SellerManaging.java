@@ -24,15 +24,15 @@ public class SellerManaging {
         return null;
     }
 
-    public static boolean editFieldOfInfo() {
-        return false;
+    public static String editFieldOfInfo(String toBeEditedField,String newField) {
+        return null;
     }
 
     public static String viewCompaniesInfo() {
         return null;
     }
 
-    public static ArrayList<String> ViewSalesHistory() {
+    public static ArrayList<String> viewSalesHistory() {
         return null;
     }
 
