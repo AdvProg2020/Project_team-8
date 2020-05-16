@@ -73,11 +73,13 @@ public class GoodManaging {
         return data;
     }
 
-    public static ArrayList<Opinion> showComments() {
+    public static String showComments() {
         return null;
     }
+    public static void addComment(String title , String content){
 
-    public static boolean addComment() {
+    }
+    public static boolean CanComment() {
         return false;
     }
 }

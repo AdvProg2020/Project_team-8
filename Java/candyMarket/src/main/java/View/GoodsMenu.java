@@ -25,7 +25,8 @@ public class GoodsMenu extends Menu {
                 System.out.println(this.getName());
                 System.out.println("0. back");
                 System.out.println("Available filters :");
-                for (Filter f: FilterAndSort.filters) {
+                for (Filter f:
+                        FilterAndSort.filters) {
                     String line = f.getId()+". "+f.getName().toString();
                     if(f.isEnable()) ConsoleDesign.printColorFull(ConsoleDesign.GREEN_BACKGROUND,line);
                     else System.out.println(line);
@@ -50,13 +51,14 @@ public class GoodsMenu extends Menu {
         };
     }
     private Menu viewCategories() {
-        return new Menu("View Categories",this) {
+        return new Menu("ViewCategories",this) {
             @Override
             public void show() {
                 System.out.println(this.getName());
                 ArrayList<String> categories = GoodsManaging.viewCategories();
                 System.out.println("0. back");
-                for (String category: categories) {
+                for (String category:
+                        categories) {
                     System.out.println("-");
                 }
             }
@@ -76,7 +78,7 @@ public class GoodsMenu extends Menu {
             public void show() {
                 System.out.println(this.getName());
                 System.out.println("0. back");
-                System.out.println("Available sorts :");
+                System.out.println("Available sotrs :");
                 if(FilterAndSort.sortDescendingMode == true){
                     ConsoleDesign.printColorFull(ConsoleDesign.YELLOW,"1. "+FilterAndSort.sortsType.values()[0].toString());
                 }
@@ -109,7 +111,7 @@ public class GoodsMenu extends Menu {
     }
 
     private Menu showProducts() {
-        return new Menu("Show Products",this) {
+        return new Menu("ShowProducts",this) {
             @Override
             public void show() {
                 System.out.println(this.getName());

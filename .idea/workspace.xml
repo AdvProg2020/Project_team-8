@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/SellerManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/SellerManaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/GoodsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/GoodsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/GoodsManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/GoodsManaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/PurchaseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/PurchaseMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +30,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Java/OnlineShop" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -80,8 +69,6 @@
       <workItem from="1589544127184" duration="6000" />
       <workItem from="1589545372882" duration="6331000" />
       <workItem from="1589610181041" duration="3274000" />
-      <workItem from="1589618912048" duration="12473000" />
-      <workItem from="1589643610663" duration="8155000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -109,45 +96,38 @@
     <option name="LAST_COMMIT_MESSAGE" value="Make clients menu(start)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589650563389">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589505778337">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1589650563389" />
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1589505778337" />
-    <state x="490" y="229" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1589619060492">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="490" y="229" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1589619060492" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589663183310">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589615267794">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1589663183310" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589615267794" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588513942136">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588078365417" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1588513942136" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1589663183357">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="140" key="GridCell.Tab.0.bottom" timestamp="1589617259949">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589663183357" />
     <state width="1237" height="140" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589617259949" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1589663183357">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="140" key="GridCell.Tab.0.center" timestamp="1589617259949">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589663183357" />
     <state width="1237" height="140" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1589617259949" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1589663183357">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="140" key="GridCell.Tab.0.left" timestamp="1589617259948">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589663183357" />
     <state width="1237" height="140" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1589617259948" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1589663183357">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="140" key="GridCell.Tab.0.right" timestamp="1589617259949">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589663183357" />
     <state width="1237" height="140" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1589617259949" />
     <state width="1237" height="199" key="GridCell.Tab.1.bottom" timestamp="1589615206330">
       <screen x="0" y="0" width="1280" height="683" />
@@ -169,10 +149,9 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589615487595" />
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1589643647126">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1589610188088">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589643647126" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589610188088" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1589616417690">
       <screen x="0" y="0" width="1280" height="683" />
