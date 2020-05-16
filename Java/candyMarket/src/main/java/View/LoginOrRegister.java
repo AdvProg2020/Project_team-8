@@ -5,6 +5,14 @@ import java.util.HashMap;
 
 public class LoginOrRegister extends Menu {
 
+    public LoginOrRegister(Menu parentMenu) {
+        super("LoginOrRegister", parentMenu);
+        HashMap<Integer , Menu> subMenus = new HashMap<Integer, Menu>();
+        subMenus.put(1,RegisterNewPerson());
+        subMenus.put(2,Login());
+        this.setSubMenus(subMenus);
+    }
+    
     @Override
     public void run() {
         if (!(user == LoginType.DEFAULT))
@@ -13,13 +21,6 @@ public class LoginOrRegister extends Menu {
             super.run();
     }
 
-    public LoginOrRegister(Menu parentMenu) {
-        super("LoginOrRegister", parentMenu);
-        HashMap<Integer , Menu> subMenus = new HashMap<Integer, Menu>();
-        subMenus.put(1,RegisterNewPerson());
-        subMenus.put(2,Login());
-        this.setSubMenus(subMenus);
-    }
 
     private Menu RegisterNewPerson() {
         return new Menu("Register", this) {
@@ -27,13 +28,18 @@ public class LoginOrRegister extends Menu {
             public void show() {
                 System.out.println(this.getName());
                 System.out.println("0. back");
-                System.out.println("1. Enter A UserName :");
             }
 
             @Override
             public void execute() throws ViewException {
                 user = LoginType.MANAGER;
-                super.execute();
+                System.out.println("Enter A UserName :");
+                ConsoleCmd.scanner.nextLine();
+                String username = ConsoleCmd.scanner.nextLine();
+                System.out.println("Enter your Password :");
+                String password = ConsoleCmd.scanner.nextLine();
+                System.out.println("Login Successfully");
+                this.parentMenu.run();
             }
         };
     }
