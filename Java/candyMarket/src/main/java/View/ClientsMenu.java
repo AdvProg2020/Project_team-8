@@ -4,41 +4,61 @@ import Controller.BuyerManaging;
 import Controller.ManagerManaging;
 import Controller.SellerManaging;
 
+import java.util.HashMap;
+
 public class ClientsMenu extends Menu {
+    private HashMap<Integer , Menu> subMenus = new HashMap<Integer, Menu>();
+
     public ClientsMenu(String name, Menu parentMenu) {
         super(name, parentMenu);
+        subMenus.put(1,new ManagerMenu("", this));
+        subMenus.put(2,new SellerMenu("", this));
+        subMenus.put(3,new BuyerMenu("", this));
+        this.setSubMenus(subMenus);
+    }
+
+    @Override
+    public void run() {
+        if (user == LoginType.DEFAULT)
+            this.parentMenu.subMenus.get(1).run();
+        if (user == LoginType.MANAGER)
+            this.subMenus.get(1).run();
+        if (user == LoginType.SELLER)
+            this.subMenus.get(2).run();
+        if (user == LoginType.BUYER)
+            this.subMenus.get(3).run();
     }
 
     //Manager
 
-    private Menu viewManagersPersonalInfo() {
-        String personalInfo = ManagerManaging.showPersonalInfo();
-        return null;
-    }
+        private Menu viewManagersPersonalInfo () {
+            String personalInfo = ManagerManaging.showPersonalInfo();
+            return null;
+        }
 
-    private Menu manageUsers() {
-        return  null;
-    }
+        private Menu manageUsers () {
+            return null;
+        }
 
-    private Menu manageAllProducts() {
-        return null;
-    }
+        private Menu manageAllProducts () {
+            return null;
+        }
 
-    private Menu createDiscountCode() {
-        return null;
-    }
+        private Menu createDiscountCode () {
+            return null;
+        }
 
-    private Menu viewAllDiscountCodes() {
-        return null;
-    }
+        private Menu viewAllDiscountCodes () {
+            return null;
+        }
 
-    private Menu manageRequests() {
-        return null;
-    }
+        private Menu manageRequests () {
+            return null;
+        }
 
-    private Menu manageCategories() {
-        return null;
-    }
+        private Menu manageCategories () {
+            return null;
+        }
 
     //Seller
 

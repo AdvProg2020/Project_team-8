@@ -5,7 +5,7 @@ import java.util.HashMap;
 public abstract class Menu {
     private String name;
     protected Menu parentMenu;
-    private HashMap<Integer, Menu> subMenus;
+    protected HashMap<Integer, Menu> subMenus;
     protected LoginType user = LoginType.DEFAULT;
 
     public Menu(String name, Menu parentMenu) {
