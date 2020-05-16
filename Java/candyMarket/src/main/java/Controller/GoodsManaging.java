@@ -59,7 +59,7 @@ public class GoodsManaging {
         return false;
     }
     public static void updateFixedGoods(){
-        Good.fixedGoods = FilterAndSort.filterGoods(Good.fixedGoods);
+        Good.fixedGoods = FilterAndSort.filterGoods(ManageInfo.allGoods);
         Good.fixedGoods = FilterAndSort.sortGoods(Good.fixedGoods);
     }
     public static ArrayList<String> showProducts() {

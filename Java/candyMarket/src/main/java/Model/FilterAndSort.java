@@ -40,6 +40,9 @@ public class FilterAndSort {
         DESCENDING_MODE,PRICE,ALPHABETICALLY,CHOOSE_CATEGORY,DATE_MODIFIED
     }
     public static ArrayList<Good> sortGoods(ArrayList<Good> goods){
+        switch (sortsType){
+            case ALPHABETICALLY:
+        }
         return null;
     }
     public static ArrayList<Good> filterGoods(ArrayList<Good> goods){
