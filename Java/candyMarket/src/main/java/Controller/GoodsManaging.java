@@ -1,12 +1,12 @@
 package Controller;
 
 import Model.Category;
+import Model.Good;
 import Model.ManageInfo;
-import Model.Sale;
-import View.FilterAndSort.FilterAndSort;
+import Model.FilterAndSort;
+import com.sun.org.apache.bcel.internal.generic.GOTO;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class GoodsManaging {
@@ -58,8 +58,16 @@ public class GoodsManaging {
     public static boolean disableSort() {
         return false;
     }
-
-    public static HashMap<Integer, String> showProducts() {
-        return null;
+    public static void updateFixedGoods(){
+        Good.fixedGoods = FilterAndSort.filterGoods(Good.fixedGoods);
+        Good.fixedGoods = FilterAndSort.sortGoods(Good.fixedGoods);
+    }
+    public static ArrayList<String> showProducts() {
+        ArrayList<String> viewGoods = new ArrayList<String>();
+        for (Good g:
+                Good.fixedGoods) {
+            viewGoods.add(g.getName());
+        }
+        return viewGoods;
     }
 }

@@ -1,6 +1,6 @@
 package Controller;
 
-import View.FilterAndSort.FilterAndSort;
+import Model.FilterAndSort;
 
 import java.util.ArrayList;
 import java.util.HashMap;

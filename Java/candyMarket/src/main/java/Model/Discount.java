@@ -11,8 +11,6 @@ public class Discount {
     private int maxReductionAmount;
     private int usageNumber;
     private ArrayList<User> users;
-    private static ArrayList<Discount> discounts = ManageInfo.allDiscounts;
-
     public Discount(int code, Date startDate, Date endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
         this.code = code;
         this.startDate = startDate;

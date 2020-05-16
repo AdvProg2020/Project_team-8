@@ -9,14 +9,14 @@ public class Sale {
     private ArrayList<Good> goods;
     private Date startTime;
     private Date endTime;
-    private int amount;
+    private int salePercentageAmount;
 
     public Sale(ItemCreationSituation situation, int id, Date startTime, Date endTime, int amount) {
         this.situation = situation;
         this.id = id;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.amount = amount;
+        this.salePercentageAmount = amount;
     }
 
     public ItemCreationSituation getSituation() {
@@ -44,11 +44,11 @@ public class Sale {
     }
 
     public int getAmount() {
-        return amount;
+        return salePercentageAmount;
     }
 
     public void setAmount(int amount) {
-        this.amount = amount;
+        this.salePercentageAmount = amount;
     }
 
     public ArrayList<Good> getGoods() {

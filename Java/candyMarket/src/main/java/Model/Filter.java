@@ -1,9 +1,7 @@
-package View.FilterAndSort;
+package Model;
 
-import View.ConsoleCmd;
+import Model.FilterAndSort;
 import View.ViewException;
-
-import java.util.ArrayList;
 
 public class Filter{
     private int id;
@@ -26,7 +24,7 @@ public class Filter{
 
     public Filter(int id) {
         enable = false;
-        name=FilterAndSort.filtersType.values()[id-1].toString();
+        name= FilterAndSort.filtersTypes.values()[id-1].toString();
         this.id = id;
     }
     public Filter(int id,String name) {

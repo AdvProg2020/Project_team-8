@@ -3,6 +3,7 @@ package Model;
 import java.util.ArrayList;
 
 public class Good {
+    private int salePercentageAmount;
     private int id;
     private ItemCreationSituation situation;
     private String name;
@@ -16,7 +17,7 @@ public class Good {
     private String detailInfo;
     private int averageScore;
     private ArrayList<Opinion> opinions;
-
+    public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
     public Good(String name, String brand, int price, ArrayList<User> sellers, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
         this.name = name;
         this.brand = brand;
@@ -26,6 +27,7 @@ public class Good {
         this.category = category;
         this.categorySpecialAttributes = categorySpecialAttributes;
         this.detailInfo = detailInfo;
+        this.salePercentageAmount = 0;
     }
 
     public int getStock() {
@@ -118,5 +120,21 @@ public class Good {
 
     public static Good getGoodById(int goodId) {
         return null;
+    }
+    public static Good getGoodByName(String name,ArrayList<Good> goods) {
+        for (Good g:
+             goods) {
+            if(g.getName().equals(name))
+                return g;
+        }
+        return null;
+    }
+
+    public int getsalePercentageAmount() {
+        return salePercentageAmount;
+    }
+
+    public void setsalePercentageAmount(int salePercentageAmount) {
+        this.salePercentageAmount = salePercentageAmount;
     }
 }
