@@ -6,7 +6,7 @@ public abstract class Menu {
     private String name;
     protected Menu parentMenu;
     protected HashMap<Integer, Menu> subMenus;
-    protected LoginType user = LoginType.DEFAULT;
+    protected static LoginType user = LoginType.DEFAULT;
 
     public Menu(String name, Menu parentMenu) {
         this.name = name;
