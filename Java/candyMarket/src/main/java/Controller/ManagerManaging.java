@@ -11,21 +11,16 @@ import java.util.Scanner;
 
 public class ManagerManaging {
     private static Manager manager;
-    private static Scanner scanner;
 
     public static void setManager() {
         ;
-    }
-
-    public static void setScanner(Scanner scanner) {
-        ManagerManaging.scanner = scanner;
     }
 
     public static String showPersonalInfo(){
         return null;
     }
 
-    public static boolean editAFieldOfOfInfo() {
+    public static boolean editAFieldOfOfInfo(String toBeEditedField, String newField) {
         return false;
     }
 
@@ -33,16 +28,16 @@ public class ManagerManaging {
         return null;
     }
 
-    public static User viewUser() {
+    public static String viewUser() {
         return null;
     }
 
-    public static boolean deleteUser() {
-        return false;
+    public static String deleteUser() {
+        return null;
     }
 
-    public static boolean createNewManager() {
-        return false;
+    public static String createNewManager() {
+        return null;
     }
 
     public static HashMap<Integer, String> manageAllProducts() {

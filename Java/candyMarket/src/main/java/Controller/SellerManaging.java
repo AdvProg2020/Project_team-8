@@ -11,14 +11,8 @@ import java.util.Scanner;
 public class SellerManaging {
     private static Seller seller;
 
-    private static Scanner scanner;
-
     public static void setSeller() {
         ;
-    }
-
-    public static void setScanner(Scanner scanner) {
-        SellerManaging.scanner = scanner;
     }
 
     public static String viewPersonalInfo() {
