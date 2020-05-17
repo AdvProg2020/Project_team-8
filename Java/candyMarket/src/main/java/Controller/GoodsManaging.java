@@ -26,37 +26,6 @@ public class GoodsManaging {
     public static ArrayList<String> ViewBrands() {
         return ManageInfo.allBrands;
     }
-    public static ArrayList<String> showAvailableFilters() {
-        return null;
-    }
-
-    public static boolean setFilter() {
-        return false;
-    }
-
-    public static ArrayList<FilterAndSort> showCurrentFilters() {
-        return null;
-    }
-
-    public static boolean disableAllFilters() {
-        return false;
-    }
-
-    public static ArrayList<FilterAndSort> showAvailableSorts() {
-        return null;
-    }
-
-    public static boolean setSort() {
-        return false;
-    }
-
-    public static ArrayList<FilterAndSort> showCurrentSort() {
-        return null;
-    }
-
-    public static boolean disableSort() {
-        return false;
-    }
     public static void updateFixedGoods(){
         Good.fixedGoods = FilterAndSort.filterGoods(ManageInfo.allGoods);
         Good.fixedGoods = FilterAndSort.sortGoods(Good.fixedGoods);

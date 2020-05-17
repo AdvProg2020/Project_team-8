@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class BuyLog {
+    private String address;
+    private String phoneNumber;
     private int id;
     private Date date;
     private int totalAmount;

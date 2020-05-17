@@ -19,7 +19,6 @@ public class Discount {
         this.maxReductionAmount = maxReductionAmount;
         this.usageNumber = usageNumber;
     }
-
     public int getCode() {
         return code;
     }
@@ -79,6 +78,10 @@ public class Discount {
     public static Discount getDiscountById(String id) {
         return null;
     }
+    public static Discount getDiscountByCode(String code) {
+        return null;
+    }
+
     public static Boolean isDiscountWithId(String id) {
         return null;
     }

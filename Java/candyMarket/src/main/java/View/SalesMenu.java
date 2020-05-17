@@ -20,7 +20,7 @@ public class SalesMenu extends Menu {
     }
 
     private Menu showOffs() {
-        return new Menu("ShowProducts",this) {
+        return new Menu("Show Offs",this) {
             ArrayList<String> products  = SalesManaging.showOffs();
             @Override
             public void show() {

@@ -12,10 +12,20 @@ public class User {
     protected String email;
     protected String phoneNumber;
     protected String passWord;
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    protected Cart cart;
     private int credit;
     protected UserType type;
     ArrayList<User> users = ManageInfo.allUsers;
-
+    public static User currentUser;
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         this.userName = userName;
         this.firstName = firstName;
