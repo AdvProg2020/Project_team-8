@@ -6,16 +6,16 @@ public class Seller extends User {
     private ArrayList<Sale> mySales;
     private ArrayList<Good> myGoods;
     private ArrayList<SellLog> mySellLog;
-    private String companyName;
-    private String factoryName;
-    private String workShopName;
+    private String sellerCompanyName;
+    String workType;
     public static ArrayList<Seller> sellers;
-    public static Seller currentSeller;
-    public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type, String companyName, String factoryName, String workShopName) {
-        super(userName, firstName, lastName, email, phoneNumber, passWord, type);
-        this.companyName = companyName;
-        this.factoryName = factoryName;
-        this.workShopName = workShopName;
+
+    public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName, String workType) {
+        super(userName, firstName, lastName, email, phoneNumber, passWord);
+        this.sellerCompanyName = sellerCompanyName;
+        this.workType = workType;
+        User.users.add(this);
+        this.setType(UserType.SELLER);
     }
 
     public ArrayList<Sale> getMySales() {
@@ -42,36 +42,20 @@ public class Seller extends User {
         this.mySellLog = mySellLog;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getSellerCompanyName() {
+        return sellerCompanyName;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public String getFactoryName() {
-        return factoryName;
-    }
-
-    public void setFactoryName(String factoryName) {
-        this.factoryName = factoryName;
-    }
-
-    public String getWorkShopName() {
-        return workShopName;
-    }
-
-    public void setWorkShopName(String workShopName) {
-        this.workShopName = workShopName;
+    public void setSellerCompanyName(String sellerCompanyName) {
+        this.sellerCompanyName = sellerCompanyName;
     }
 
     public static void createNewSeller() {
 
     }
 
-    public ArrayList<String> viewCompanyInformation(Seller seller) {
-        return null;
+    public String viewCompanyInformation(Seller seller) {
+        return "Company name: " + seller.getSellerCompanyName() + "\n";
     }
 
     public ArrayList<String> viewSalesHistory(Seller seller) {

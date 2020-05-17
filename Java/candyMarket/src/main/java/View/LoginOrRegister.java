@@ -148,6 +148,7 @@ public class LoginOrRegister extends Menu {
                             }
                     }
                 }
+                LoginOrRegisterManaging.register(info);
                 System.out.println("Registered Successfully");
                 switch (type) {
                     case 1 :

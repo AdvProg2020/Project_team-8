@@ -79,28 +79,23 @@ public class SellerMenu extends Menu {
                     }
                     switch (selectedFieldToBeEdited) {
                         case 1:
-                            if (SellerManaging.editFieldOfInfo("firstName", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("firstName", newField));
                             this.run();
                             break;
                         case 2:
-                            if (SellerManaging.editFieldOfInfo("lastName", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("lastName", newField));
                             this.run();
                             break;
                         case 3:
-                            if (SellerManaging.editFieldOfInfo("email", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("email", newField));
                             this.run();
                             break;
                         case 4:
-                            if (SellerManaging.editFieldOfInfo("telephoneNumber", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("telephoneNumber", newField));
                             this.run();
                             break;
                         case 5:
-                            if (SellerManaging.editFieldOfInfo("password", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("password", newField));
                             this.run();
                             break;
                         default:
@@ -210,8 +205,7 @@ public class SellerMenu extends Menu {
                     case 3 :
                         System.out.println("Enter ID of the product:");
                         id = ConsoleCmd.scanner.nextInt();
-                        if (SellerManaging.editProduct(id))
-                            System.out.println("Edited Successfully");;
+                        System.out.println(SellerManaging.editProduct(id));
                         this.run();
                     default :
                         try{
@@ -245,8 +239,7 @@ public class SellerMenu extends Menu {
                 else {
                     newProduct.add(command);
                 }
-                if (SellerManaging.addProduct(newProduct))
-                    System.out.println("Wait for Manager's Approval");;
+                System.out.println(SellerManaging.addProduct(newProduct));
                 this.parentMenu.run();
             }
         };
@@ -267,8 +260,7 @@ public class SellerMenu extends Menu {
                     this.parentMenu.run();
                 }
                 else {
-                    if (SellerManaging.removeProduct(id))
-                        System.out.println("Wait for Manager's Approval");;
+                    System.out.println(SellerManaging.removeProduct(id));
                     this.run();
                 }
             }
@@ -323,8 +315,7 @@ public class SellerMenu extends Menu {
                     case 2 :
                         System.out.println("Enter ID of the product:");
                         id = ConsoleCmd.scanner.nextInt();
-                        if (SellerManaging.editOff(id))
-                            System.out.println("Wait for Manager's Approval");;
+                        System.out.println(SellerManaging.editOff(id));
                         this.run();
                     case 3 :
                         System.out.println("enter fields of off");
@@ -337,8 +328,7 @@ public class SellerMenu extends Menu {
                         else {
                             newOff.add(command);
                         }
-                        if (SellerManaging.addOff(newOff))
-                            System.out.println("Wait for Manager's Approval");;
+                        System.out.println(SellerManaging.addOff(newOff));
                         this.parentMenu.run();
                     default :
                         try{
