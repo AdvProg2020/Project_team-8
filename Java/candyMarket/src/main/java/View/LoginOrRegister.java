@@ -126,8 +126,6 @@ public class LoginOrRegister extends Menu {
                             }
                             System.out.println("Enter your workplace name :");
                             String companyName = ConsoleCmd.scanner.nextLine();
-                            if (companyName.charAt(0) == '0')
-                                this.parentMenu.run();
                             info.put("companyName", companyName);
                             break;
                         case 3:
@@ -150,8 +148,7 @@ public class LoginOrRegister extends Menu {
                             }
                     }
                 }
-                String result = LoginOrRegisterManaging.register(info);
-                System.out.println(result);
+                System.out.println("Registered Successfully");
                 switch (type) {
                     case 1 :
                         user = LoginType.BUYER;
