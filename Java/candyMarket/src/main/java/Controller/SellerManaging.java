@@ -3,6 +3,7 @@ package Controller;
 import Model.Good;
 import Model.Seller;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -10,29 +11,23 @@ import java.util.Scanner;
 public class SellerManaging {
     private static Seller seller;
 
-    private static Scanner scanner;
-
     public static void setSeller() {
         ;
-    }
-
-    public static void setScanner(Scanner scanner) {
-        SellerManaging.scanner = scanner;
     }
 
     public static String viewPersonalInfo() {
         return null;
     }
 
-    public static boolean editFieldOfInfo() {
-        return false;
+    public static String editFieldOfInfo(String toBeEditedField,String newField) {
+        return null;
     }
 
     public static String viewCompaniesInfo() {
         return null;
     }
 
-    public static ArrayList<String> ViewSalesHistory() {
+    public static ArrayList<String> viewSalesHistory() {
         return null;
     }
 
@@ -40,24 +35,24 @@ public class SellerManaging {
         return null;
     }
 
-    public static Good viewProduct() {
+    public static String viewProduct(int id) {
         return null;
     }
 
-    public static ArrayList<String> viewBuyersOfProduct() {
+    public static ArrayList<String> viewBuyersOfProduct(int id) {
         return null;
     }
 
-    public static boolean editProduct() {
-        return false;
+    public static String editProduct(int id) {
+        return null;
     }
 
-    public static boolean addProduct() {
-        return false;
+    public static String addProduct(ArrayList<String> details) {
+        return null;
     }
 
-    public static boolean removeProduct() {
-        return false;
+    public static String removeProduct(int id) {
+        return null;
     }
 
     public static ArrayList<String> showCategories() {
@@ -68,16 +63,16 @@ public class SellerManaging {
         return null;
     }
 
-    public static Good viewOff() {
+    public static String viewOff(int id) {
         return null;
     }
 
-    public static boolean editOff() {
-        return false;
+    public static String editOff(int id) {
+        return null;
     }
 
-    public static boolean addOff() {
-        return false;
+    public static String addOff(ArrayList<String> details) {
+        return null;
     }
 
     public static int viewBalance() {

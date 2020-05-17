@@ -13,8 +13,6 @@ public abstract class Menu {
         this.parentMenu = parentMenu;
     }
 
-    public void setParentMenu(Menu parentMenu) {
-    }
 
     public HashMap<Integer, Menu> getSubMenus() {
         return subMenus;
@@ -35,6 +33,7 @@ public abstract class Menu {
         if(subMenus == null) return;
         for (Integer menuNum : subMenus.keySet()
              ) {
+        for (Integer menuNum : subMenus.keySet()) {
             System.out.println(menuNum+". "+subMenus.get(menuNum).getName());
         }
     }
@@ -53,7 +52,7 @@ public abstract class Menu {
         int menuChanger = ConsoleCmd.scanner.nextInt();
         if (menuChanger == 0)
         {
-            if(this.parentMenu==null)
+            if (this.parentMenu==null)
                 System.exit(1);
             else
                 nextMenu=this.parentMenu;

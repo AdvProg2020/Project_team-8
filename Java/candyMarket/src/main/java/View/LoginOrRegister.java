@@ -1,7 +1,10 @@
 package View;
 
 
+import Controller.LoginOrRegisterManaging;
+
 import javax.swing.text.View;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -35,62 +38,131 @@ public class LoginOrRegister extends Menu {
 
             @Override
             public void execute() throws ViewException {
+                boolean checkForExistingManager = LoginOrRegisterManaging.isThisTheFirstManager();
+                HashMap<String, String> info = new HashMap<>();
                 System.out.println("Enter A UserName :");
                 ConsoleCmd.scanner.nextLine();
                 String username = ConsoleCmd.scanner.nextLine();
-                if (username.charAt(0) == '0')
-                    this.parentMenu.run();
-                if (username.charAt(0) == '0')
-                    this.parentMenu.run();
+                while (LoginOrRegisterManaging.isThereUsernameWithThisName(username)) {
+                    try {
+                        throw ViewException.existingUsername();
+                    }catch (ViewException e) {
+                        System.out.println(ViewException.existingUsername().getMessage());
+                    }
+                    username = ConsoleCmd.scanner.nextLine();
+                }
+                info.put("username", username);
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
-                if (password.charAt(0) == '0')
-                    this.parentMenu.run();
+                info.put("password", password);
                 System.out.println("Enter your Name :");
                 String name = ConsoleCmd.scanner.nextLine();
-                if (name.charAt(0) == '0')
-                    this.parentMenu.run();
+                info.put("firstName", name);
                 System.out.println("Enter your LastName :");
                 String lastName = ConsoleCmd.scanner.nextLine();
-                if (lastName.charAt(0) == '0')
-                    this.parentMenu.run();
+                info.put("lastName", lastName);
                 System.out.println("Enter your Email :");
                 String email = ConsoleCmd.scanner.nextLine();
-                while (!emailValidation(email)) {
-                    if (password.charAt(0) == '0')
-                        this.parentMenu.run();
+                while (!emailValidation(email) || LoginOrRegisterManaging.isThereASameEmail(email)) {
                     try {
                         throw ViewException.invalidEmailFormat();
                     }catch (ViewException e) {
-                        System.out.println(ViewException.invalidEmailFormat().getMessage());
+                        if (!emailValidation(email))
+                            System.out.println(ViewException.invalidEmailFormat().getMessage());
+                        if (LoginOrRegisterManaging.isThereUsernameWithThisName(email))
+                            System.out.println(ViewException.existingEmail().getMessage());
                     }
                     email = ConsoleCmd.scanner.nextLine();
                 }
+                info.put("email", email);
+                System.out.println("Enter your phone number :");
+                String phoneNumber = ConsoleCmd.scanner.nextLine();
+                while (!phoneValidation(phoneNumber)) {
+                    try {
+                        throw ViewException.invalidPhoneNumberFormat();
+                    }catch (ViewException e) {
+                        System.out.println(ViewException.invalidPhoneNumberFormat().getMessage());
+                    }
+                    phoneNumber = ConsoleCmd.scanner.nextLine();
+                }
+                info.put("phoneNumber", phoneNumber);
                 System.out.println("Enter the type of your account\n" +
-                        "0. back\n" +
                         "1. Buyer\n" +
                         "2. Seller\n" +
                         "3. Manager");
-                String type = ConsoleCmd.scanner.nextLine();
-                switch (Integer.parseInt(type)) {
-                    case 0 :
-                        this.parentMenu.run();
-                        break;
+                Integer type = 4;
+                while (type > 3 || type < 1) {
+                    type = ConsoleCmd.scanner.nextInt();
+                    switch (type) {
+                        case 1:
+                            info.put("type", "Buyer");
+                            break;
+                        case 2:
+                            info.put("type", "Seller");
+                            int workType = 0;
+                            System.out.println("Enter a type :\n" +
+                                    "1. company\n" +
+                                    "2. factory\n" +
+                                    "3. workshop");
+                            workType = ConsoleCmd.scanner.nextInt();
+                            while (workType < 1 || workType > 3) {
+                                try{
+                                    throw ViewException.invalidNumber();
+                                }catch (ViewException e) {
+                                    System.out.println(ViewException.invalidNumber().getMessage());
+                                }
+                                workType = ConsoleCmd.scanner.nextInt();
+                            }
+                            switch (workType) {
+                                case 1 :
+                                    info.put("workType", "company");
+                                    break;
+                                case 2 :
+                                    info.put("workType", "factory");
+                                    break;
+                                case 3 :
+                                    info.put("workType", "workshop");
+                                    break;
+                            }
+                            System.out.println("Enter your workplace name :");
+                            String companyName = ConsoleCmd.scanner.nextLine();
+                            if (companyName.charAt(0) == '0')
+                                this.parentMenu.run();
+                            info.put("companyName", companyName);
+                            break;
+                        case 3:
+                            if (checkForExistingManager)
+                                info.put("type", "Manager");
+                            else {
+                                try {
+                                    throw ViewException.existingManager();
+                                }catch (ViewException e) {
+                                    System.out.println(ViewException.existingManager().getMessage());
+                                    type = 4;
+                                }
+                            }
+                            break;
+                        default:
+                            try {
+                                throw ViewException.invalidNumber();
+                            } catch (ViewException e) {
+                                System.out.println(ViewException.invalidNumber().getMessage());
+                            }
+                    }
+                }
+                String result = LoginOrRegisterManaging.register(info);
+                System.out.println(result);
+                switch (type) {
                     case 1 :
                         user = LoginType.BUYER;
                         break;
                     case 2 :
-                        System.out.println("Enter your company's name :");
-                        String companyName = ConsoleCmd.scanner.nextLine();
-                        if (companyName.charAt(0) == '0')
-                            this.parentMenu.run();
                         user = LoginType.SELLER;
                         break;
                     case 3 :
                         user = LoginType.MANAGER;
                         break;
                 }
-                System.out.println("Registered Successfully");
                 this.parentMenu.run();
             }
         };
@@ -109,13 +181,31 @@ public class LoginOrRegister extends Menu {
                 System.out.println("Enter A UserName :");
                 ConsoleCmd.scanner.nextLine();
                 String username = ConsoleCmd.scanner.nextLine();
-                if (username.charAt(0) == '0')
-                    this.parentMenu.run();
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
-                if (password.charAt(0) == '0')
-                    this.parentMenu.run();
-                user = LoginType.MANAGER;
+                int type = 0;
+                while ((type = LoginOrRegisterManaging.login(username, password)) == 4) {
+                    try {
+                        throw ViewException.invalidLogin();
+                    }catch (ViewException e) {
+                        System.out.println(ViewException.invalidLogin().getMessage());
+                    }
+                    System.out.println("Enter A UserName :");
+                    username = ConsoleCmd.scanner.nextLine();
+                    System.out.println("Enter your Password :");
+                    password = ConsoleCmd.scanner.nextLine();
+                }
+                switch (type) {
+                    case 1 :
+                        user = LoginType.BUYER;
+                        break;
+                    case 2 :
+                        user = LoginType.SELLER;
+                        break;
+                    case 3 :
+                        user = LoginType.MANAGER;
+                        break;
+                }
                 System.out.println("Login Successfully");
                 this.parentMenu.run();
             }
@@ -126,5 +216,11 @@ public class LoginOrRegister extends Menu {
         String mailRegex = "^\\S+@\\w+\\.com$";
         Pattern mailPattern = Pattern.compile(mailRegex);
         return email.matches(mailRegex);
+    }
+
+    private boolean phoneValidation(String phone) {
+        String phoneRegex = "^\\+?\\d+$";
+        Pattern phonePattern = Pattern.compile(phoneRegex);
+        return phone.matches(phoneRegex);
     }
 }
