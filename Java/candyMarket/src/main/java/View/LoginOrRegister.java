@@ -1,7 +1,10 @@
 package View;
 
 
+import Controller.LoginOrRegisterManaging;
+
 import javax.swing.text.View;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -35,29 +38,34 @@ public class LoginOrRegister extends Menu {
 
             @Override
             public void execute() throws ViewException {
+                ArrayList<String> info = new ArrayList<>();
                 System.out.println("Enter A UserName :");
                 ConsoleCmd.scanner.nextLine();
                 String username = ConsoleCmd.scanner.nextLine();
                 if (username.charAt(0) == '0')
                     this.parentMenu.run();
+                info.add(username);
                 if (username.charAt(0) == '0')
                     this.parentMenu.run();
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 if (password.charAt(0) == '0')
                     this.parentMenu.run();
+                info.add(password);
                 System.out.println("Enter your Name :");
                 String name = ConsoleCmd.scanner.nextLine();
                 if (name.charAt(0) == '0')
                     this.parentMenu.run();
+                info.add(name);
                 System.out.println("Enter your LastName :");
                 String lastName = ConsoleCmd.scanner.nextLine();
                 if (lastName.charAt(0) == '0')
                     this.parentMenu.run();
+                info.add(lastName);
                 System.out.println("Enter your Email :");
                 String email = ConsoleCmd.scanner.nextLine();
                 while (!emailValidation(email)) {
-                    if (password.charAt(0) == '0')
+                    if (email.charAt(0) == '0')
                         this.parentMenu.run();
                     try {
                         throw ViewException.invalidEmailFormat();
@@ -66,8 +74,21 @@ public class LoginOrRegister extends Menu {
                     }
                     email = ConsoleCmd.scanner.nextLine();
                 }
+                info.add(email);
+                System.out.println("Enter your phone number :");
+                String phoneNumber = ConsoleCmd.scanner.nextLine();
+                while (!phoneValidation(phoneNumber)) {
+                    if (phoneNumber.charAt(0) == '0')
+                        this.parentMenu.run();
+                    try {
+                        throw ViewException.invalidPhoneNumberFormat();
+                    }catch (ViewException e) {
+                        System.out.println(ViewException.invalidPhoneNumberFormat().getMessage());
+                    }
+                    phoneNumber = ConsoleCmd.scanner.nextLine();
+                }
+                info.add(phoneNumber);
                 System.out.println("Enter the type of your account\n" +
-                        "0. back\n" +
                         "1. Buyer\n" +
                         "2. Seller\n" +
                         "3. Manager");
@@ -77,18 +98,36 @@ public class LoginOrRegister extends Menu {
                         this.parentMenu.run();
                         break;
                     case 1 :
-                        user = LoginType.BUYER;
+                        info.add("Buyer");
                         break;
                     case 2 :
+                        info.add("Seller");
                         System.out.println("Enter your company's name :");
                         String companyName = ConsoleCmd.scanner.nextLine();
                         if (companyName.charAt(0) == '0')
                             this.parentMenu.run();
-                        user = LoginType.SELLER;
+                        info.add(companyName);
                         break;
                     case 3 :
-                        user = LoginType.MANAGER;
+                        info.add("Manager");
                         break;
+                }
+                String result = LoginOrRegisterManaging.register(info);
+                if (result != null)
+                    System.out.println(result);
+                else {
+                    System.out.println(result);
+                    switch (Integer.parseInt(type)) {
+                        case 1 :
+                            user = LoginType.BUYER;
+                            break;
+                        case 2 :
+                            user = LoginType.SELLER;
+                            break;
+                        case 3 :
+                            user = LoginType.MANAGER;
+                            break;
+                    }
                 }
                 System.out.println("Registered Successfully");
                 this.parentMenu.run();
@@ -126,5 +165,11 @@ public class LoginOrRegister extends Menu {
         String mailRegex = "^\\S+@\\w+\\.com$";
         Pattern mailPattern = Pattern.compile(mailRegex);
         return email.matches(mailRegex);
+    }
+
+    private boolean phoneValidation(String phone) {
+        String phoneRegex = "^\\+?\\d+$";
+        Pattern phonePattern = Pattern.compile(phoneRegex);
+        return phone.matches(phoneRegex);
     }
 }
