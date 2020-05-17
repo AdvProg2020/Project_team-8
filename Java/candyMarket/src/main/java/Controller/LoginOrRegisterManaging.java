@@ -18,8 +18,8 @@ public class LoginOrRegisterManaging {
         return true;
     }
 
-    public static String register(HashMap<String, String> info) {
-        return null;
+    public static void register(HashMap<String, String> info) {
+
     }
 
     public static int login(String username, String password) {

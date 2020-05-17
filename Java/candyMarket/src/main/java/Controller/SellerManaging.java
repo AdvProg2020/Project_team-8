@@ -19,8 +19,8 @@ public class SellerManaging {
         return null;
     }
 
-    public static String editFieldOfInfo(String toBeEditedField,String newField) {
-        return null;
+    public static boolean editFieldOfInfo(String toBeEditedField,String newField) {
+        return true;
     }
 
     public static String viewCompaniesInfo() {
@@ -43,16 +43,16 @@ public class SellerManaging {
         return null;
     }
 
-    public static String editProduct(int id) {
-        return null;
+    public static boolean editProduct(int id) {
+        return false;
     }
 
-    public static String addProduct(ArrayList<String> details) {
-        return null;
+    public static boolean addProduct(ArrayList<String> details) {
+        return false;
     }
 
-    public static String removeProduct(int id) {
-        return null;
+    public static boolean removeProduct(int id) {
+        return false;
     }
 
     public static ArrayList<String> showCategories() {
@@ -67,12 +67,12 @@ public class SellerManaging {
         return null;
     }
 
-    public static String editOff(int id) {
-        return null;
+    public static boolean editOff(int id) {
+        return false;
     }
 
-    public static String addOff(ArrayList<String> details) {
-        return null;
+    public static boolean addOff(ArrayList<String> details) {
+        return false;
     }
 
     public static int viewBalance() {

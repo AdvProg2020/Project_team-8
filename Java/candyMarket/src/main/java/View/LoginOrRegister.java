@@ -150,8 +150,7 @@ public class LoginOrRegister extends Menu {
                             }
                     }
                 }
-                String result = LoginOrRegisterManaging.register(info);
-                System.out.println(result);
+                System.out.println("Registered Successfully");
                 switch (type) {
                     case 1 :
                         user = LoginType.BUYER;
