@@ -25,11 +25,21 @@ public class LoginOrRegisterManaging {
     }
 
     public static int login(String username, String password) {
+        User currentUser = User.getUserByUsername(username);
+        if (currentUser.isUsernameAndPasswordCorrect(username, password)) {
+            switch (currentUser.getUserName()) {
+                case "buyer":
+                    return 1;
+                case "seller":
+                    return 2;
+                case "manager":
+                    return 3;
+            }
+        }
+        return 4;
         //1.Buyer
         //2.Seller
         //3.Manager
         //4.WrongPassword
-
-        return 0;
     }
 }

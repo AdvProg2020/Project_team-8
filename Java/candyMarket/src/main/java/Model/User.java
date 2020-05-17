@@ -114,7 +114,11 @@ public class User {
         return false;
     }
 
-    public static User getUserByUsername(String userName) {
+    public static User getUserByUsername(String username) {
+        for (User user : users) {
+            if (user.getUserName().equals(username))
+                return user;
+        }
         return null;
     }
 
