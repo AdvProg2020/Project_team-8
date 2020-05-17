@@ -2,11 +2,9 @@ package View;
 
 import Controller.SellerManaging;
 import Model.Seller;
-import jdk.swing.interop.SwingInterOpUtils;
 
 import javax.swing.text.View;
 import java.beans.XMLEncoder;
-import java.nio.channels.SeekableByteChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -234,7 +232,7 @@ public class SellerMenu extends Menu {
                 System.out.println("enter fields of product");
                 ConsoleCmd.scanner.nextLine();
                 String command = ConsoleCmd.scanner.nextLine();
-                ArrayList<String> newProduct = new ArrayList<>();
+                ArrayList<String> newProduct = new ArrayList<String>();
                 if (command.charAt(0) == '0') {
                     this.parentMenu.run();
                 }
@@ -323,7 +321,7 @@ public class SellerMenu extends Menu {
                         System.out.println("enter fields of off");
                         ConsoleCmd.scanner.nextLine();
                         String command = ConsoleCmd.scanner.nextLine();
-                        ArrayList<String> newOff = new ArrayList<>();
+                        ArrayList<String> newOff = new ArrayList<String>();
                         if (command.charAt(0) == '0') {
                             this.parentMenu.run();
                         }

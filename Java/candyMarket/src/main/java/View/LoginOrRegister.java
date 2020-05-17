@@ -39,7 +39,7 @@ public class LoginOrRegister extends Menu {
             @Override
             public void execute() throws ViewException {
                 boolean checkForExistingManager = LoginOrRegisterManaging.isThisTheFirstManager();
-                HashMap<String, String> info = new HashMap<>();
+                HashMap<String, String> info = new HashMap<String, String>();
                 System.out.println("Enter A UserName :");
                 ConsoleCmd.scanner.nextLine();
                 String username = ConsoleCmd.scanner.nextLine();

@@ -6,8 +6,10 @@ public class Buyer extends User {
     private ArrayList<BuyLog> myBuyLog;
     private ArrayList<Discount> myDiscounts;
     private ArrayList<BuyLog> myLogs;
+    private int balance;
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         super(userName, firstName, lastName, email, phoneNumber, passWord, type);
+        this.balance=0;
     }
 
     public Cart getCart() {
@@ -70,4 +72,11 @@ public class Buyer extends User {
     }
 
 
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
 }
