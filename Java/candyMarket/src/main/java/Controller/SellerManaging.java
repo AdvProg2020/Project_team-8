@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Buyer;
 import Model.Good;
 import Model.Seller;
 import Model.User;
@@ -81,6 +82,7 @@ public class SellerManaging {
     }
 
     public static void logout() {
-
+        User.currentUser = null;
+        Buyer.currentBuyer = null;
     }
 }

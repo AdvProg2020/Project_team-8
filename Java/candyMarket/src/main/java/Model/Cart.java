@@ -1,31 +1,9 @@
 package Model;
 
-import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
-
-import javax.jws.soap.SOAPBinding;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
 public class Cart {
     private String address;
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
     private String phoneNumber;
     private int id;
     private long date;
@@ -47,13 +25,24 @@ public class Cart {
         discountAmount = totalAmount* discount.getPercentReduction()/100;
         if(discountAmount > discount.getMaxReductionAmount()) discountAmount=discount.getMaxReductionAmount();
     }
-    public Date getDate() {
-        return date;
+
+
+    public String getAddress() {
+        return address;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setAddress(String address) {
+        this.address = address;
     }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 
     public int getTotalAmount() {
         return totalAmount;
@@ -71,13 +60,6 @@ public class Cart {
         this.discountAmount = discountAmount;
     }
 
-    public ArrayList<Good> getGoods() {
-        return goods;
-    }
-
-    public void setGoods(ArrayList<Good> goods) {
-        this.goods = goods;
-    }
 
     public String getBuyerName() {
         return buyerName;

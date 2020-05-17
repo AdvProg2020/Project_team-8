@@ -41,21 +41,6 @@ public class BuyLog {
         this.discountAmount = discountAmount;
     }
 
-    public ArrayList<Good> getGoods() {
-        return goods;
-    }
-
-    public void setGoods(ArrayList<Good> goods) {
-        this.goods = goods;
-    }
-
-    public String getSellerName() {
-        return SellerName;
-    }
-
-    public void setSellerName(String sellerName) {
-        SellerName = sellerName;
-    }
 
     public CartSituation getBuySituation() {
         return buySituation;

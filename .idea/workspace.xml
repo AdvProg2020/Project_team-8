@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
+    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="Update register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/CartManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/CartManaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/SellerManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/SellerManaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/BuyLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/BuyLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Seller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/PurchaseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/PurchaseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,44 +161,44 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update register" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1589729945346">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1589733840102">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1589729945346" />
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1589733840102" />
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1589708699030" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589728889456">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589733286394">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1589728889456" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1589733286394" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589715720753" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588513942136">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588078365417" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1588513942136" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1589730517228">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1589734817418">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589730517228" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589734817418" />
     <state width="1237" height="199" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1589730517228">
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1589734817418">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589730517228" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589734817418" />
     <state width="1237" height="199" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1589682405294" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1589730517228">
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1589734817417">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589730517228" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589734817417" />
     <state width="1237" height="199" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1589682405294" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1589730517228">
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1589734817418">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589730517228" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589734817418" />
     <state width="1237" height="199" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1589730136249">
       <screen x="0" y="0" width="1280" height="680" />
