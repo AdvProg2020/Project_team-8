@@ -7,16 +7,13 @@ public class Seller extends User {
     private ArrayList<Good> myGoods;
     private ArrayList<SellLog> mySellLog;
     private String sellerCompanyName;
-    enum sellerType {
-        COMPANY,
-        FACTORY,
-        WORKSHOP
-    }
+    String workType;
     public static ArrayList<Seller> sellers;
 
-    public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName) {
+    public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName, String workType) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.sellerCompanyName = sellerCompanyName;
+        this.workType = workType;
         User.users.add(this);
         this.setType(UserType.SELLER);
     }

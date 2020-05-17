@@ -25,7 +25,8 @@ public class LoginOrRegisterManaging {
     public static void register(HashMap<String, String> info) {
         switch (info.get("type")) {
             case "seller":
-                new Seller(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"), info.get("companyName"));
+                new Seller(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"), info.get("companyName"), info.get("workType"));
+
                 break;
             case "buyer":
                 new Buyer(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"));

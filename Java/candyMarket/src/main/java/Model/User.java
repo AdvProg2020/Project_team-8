@@ -6,6 +6,7 @@ public class User {
     enum UserType {
         BUYER, SELLER, MANAGER
     }
+    protected Cart cart;
     protected String username;
     protected String firstName;
     protected String lastName;
@@ -25,6 +26,14 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.password = passWord;
         users.add(this);
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 
     public String getUsername() {
