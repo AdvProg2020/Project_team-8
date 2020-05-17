@@ -17,7 +17,7 @@ public class LoginOrRegister extends Menu {
     }
 
     @Override
-    public void run() {
+    public void run() throws ViewException {
         if (!(user == LoginType.DEFAULT))
             this.parentMenu.subMenus.get(2).run();
         else

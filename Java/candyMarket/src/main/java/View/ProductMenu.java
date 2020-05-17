@@ -63,8 +63,9 @@ public class ProductMenu extends Menu {
     private Menu compare(){
         return new Menu("Compare",this) {
             @Override
-            public void run() {
+            public void run() throws ViewException {
                 compareWithProduct().run();
+                show();
             }
 
             @Override
@@ -75,13 +76,6 @@ public class ProductMenu extends Menu {
                 ConsoleDesign.printColorFull(GoodManaging.compareToAnotherProduct(goodName, goodNameCompareWith), ConsoleDesign.GREEN);
             }
 
-            @Override
-            public void execute() throws ViewException {
-                int menuChanger = ConsoleCmd.scanner.nextInt();
-                if (menuChanger == 0)
-                    this.parentMenu.run();
-                else throw ViewException.invalidNumber();
-            }
         };
     }
     private Menu compareWithProduct()

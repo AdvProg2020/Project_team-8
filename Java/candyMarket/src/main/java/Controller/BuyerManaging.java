@@ -27,33 +27,6 @@ public class BuyerManaging {
         return false;
     }
 
-    public static void viewCart() {
-        ;
-    }
-
-    public static HashMap<Integer, String> showProductsFromCart() {
-        return null;
-    }
-
-    public static Good viewProductIdFromCart() {
-        return null;
-    }
-
-    public static int increaseProductNumberInCart() {
-        return 0;
-    }
-
-    public static int decreaseProductNumberInCart() {
-        return 0;
-    }
-
-    public static int showTotalPrice() {
-        return 0;
-    }
-
-    public static void purchase() {
-        ;
-    }
 
     public static void receiverInfo() {
         ;

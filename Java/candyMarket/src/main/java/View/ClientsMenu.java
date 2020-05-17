@@ -18,7 +18,7 @@ public class ClientsMenu extends Menu {
     }
 
     @Override
-    public void run() {
+    public void run() throws ViewException {
         if (user == LoginType.DEFAULT)
             this.parentMenu.subMenus.get(1).run();
         if (user == LoginType.MANAGER)

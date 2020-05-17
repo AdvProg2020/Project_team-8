@@ -33,15 +33,7 @@ public class GoodsMenu extends Menu {
                     System.out.println("-");
                 }
             }
-
-            @Override
-            public void execute() throws ViewException {
-                int menuChanger = ConsoleCmd.scanner.nextInt();
-                if(menuChanger == 0)
-                    this.parentMenu.run();
-                else throw ViewException.invalidNumber();
-            }
-        };
+            };
     }
 
 

@@ -72,7 +72,7 @@ public class FilterAndSort {
                 }
             }
         }
-        return null;
+        return filteredGoods;
     }
     public static ArrayList<Good> isExistFilter(ArrayList<Good> goods){
         ArrayList<Good> filteredGoods = new ArrayList<Good>();

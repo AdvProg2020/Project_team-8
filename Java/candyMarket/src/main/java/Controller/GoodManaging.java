@@ -29,7 +29,7 @@ public class GoodManaging {
         return data;
     }
 
-    public static boolean addProductToCart() {
+    public static boolean addProductToCart(String name) {
         return false;
     }
 
