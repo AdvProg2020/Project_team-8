@@ -1,11 +1,9 @@
 package Controller;
 
-import Model.Discount;
-import Model.Manager;
-import Model.Request;
-import Model.User;
+import Model.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -20,8 +18,8 @@ public class ManagerManaging {
         return null;
     }
 
-    public static boolean editAFieldOfOfInfo(String toBeEditedField, String newField) {
-        return false;
+    public static void editAFieldOfOfInfo(String toBeEditedField, String newField) {
+        ;
     }
 
     public static ArrayList<String> manageUsers() {
@@ -32,8 +30,8 @@ public class ManagerManaging {
         return null;
     }
 
-    public static String deleteUser(String username) {
-        return null;
+    public static void deleteUser(String username) {
+        ;
     }
 
     public static void createNewManager(HashMap<String, String> info) {
@@ -44,59 +42,93 @@ public class ManagerManaging {
         return null;
     }
 
-    public static boolean removeProduct() {
+    public static boolean isThereProductWithId(int id) {
         return false;
     }
 
-    public static boolean createDiscountCode() {
+    public static void removeProduct(int id) {
+        ;
+    }
+
+    public static boolean isThisCodeExists(int code) {
         return false;
+    }
+
+    public static void createDiscountCode(int code, Date start, Date end, int percentage, int max, ArrayList<String> users) {
+        ;
     }
 
     public static ArrayList<String> viewDiscountCodes() {
         return null;
     }
 
-    public static Discount viewDiscountCode() {
+    public static String viewDiscountCode(int code) {
         return null;
     }
 
-    public static boolean editDiscountCode() {
-        return false;
+    public static void editDiscountCodeDate(String toBeEditedField, Date newDate) {
+        ;
     }
 
-    public static boolean removeDiscountCode() {
-        return false;
+    public static void editDiscountCodeIntegers(String toBeEditedField, int newDate) {
+        ;
+    }
+
+    public static boolean doesThisPersonHaveThisCode(int code, String username) {
+        return true;
+    }
+
+    public static void addTheCodeToUser(int code, String username) {
+        ;
+    }
+
+    public static void removeDiscountCode(int code) {
+        ;
     }
 
     public static HashMap<Integer, String> manageRequests() {
         return null;
     }
 
-    public static Request requestDetails() {
+    public static boolean isThereRequestWithID(int id) {return false;}
+
+    public static String requestDetails(int id) {
         return null;
     }
 
-    public static boolean acceptRequest() {
-        return false;
+    public static void acceptRequest(int id) {
+        ;
     }
 
-    public static boolean rejectRequest() {
-        return false;
+    public static void rejectRequest(int id) {
+        ;
     }
 
     public static ArrayList<String> manageCategories() {
         return null;
     }
 
-    public static boolean editCategory() {
+    public static boolean isThereSuchCategory(String categoryName) {
         return false;
     }
 
-    public static boolean addCategory() {
+    public static boolean isThereSuchGoodInCategory(String categoryName, String goodName) {
         return false;
     }
 
-    public static boolean removeCategory() {
-        return false;
+    public static void editCategory(String toBeEditedField, String categoryName, String newField) {
+        ;
+    }
+
+    public static void addCategory(String name, ArrayList<Good> goods, ArrayList<String> Attributes) {
+        ;
+    }
+
+    public static void removeCategory(String name) {
+        ;
+    }
+
+    public static void logout() {
+
     }
 }
