@@ -6,12 +6,27 @@ public class User {
     enum UserType {
         BUYER, SELLER, MANAGER
     }
-    protected String userName;
+    protected Cart cart;
+    protected String username;
     protected String firstName;
     protected String lastName;
     protected String email;
     protected String phoneNumber;
-    protected String passWord;
+    protected String password;
+    private int credit;
+    private UserType type;
+    public static ArrayList<User> users = ManageInfo.allUsers;
+    public static User currentUser;
+
+    public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
+        this.username = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.password = passWord;
+        users.add(this);
+    }
 
     public Cart getCart() {
         return cart;
@@ -21,23 +36,8 @@ public class User {
         this.cart = cart;
     }
 
-    protected Cart cart;
-    private int credit;
-    protected UserType type;
-    ArrayList<User> users = ManageInfo.allUsers;
-    public static User currentUser;
-    public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
-        this.userName = userName;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.passWord = passWord;
-        this.type = type;
-    }
-
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public String getFirstName() {
@@ -56,16 +56,16 @@ public class User {
         return phoneNumber;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
     public UserType getType() {
         return type;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setFirstName(String firstName) {
@@ -84,8 +84,8 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setType(UserType type) {
@@ -93,19 +93,70 @@ public class User {
     }
 
     public static boolean isThereUserWithUsername(String userName) {
-        return true;
+        for (User user : users) {
+            if (user.getUsername().equals(userName))
+                return true;
+        }
+        return false;
     }
 
-    public static User getUserByUsername(String userName) {
+    public static boolean isThereUserWithEmail(String email) {
+        for (User user : users) {
+            if (user.getEmail().equals(email))
+                return true;
+        }
+        return false;
+    }
+
+    public boolean isUsernameAndPasswordCorrect(String username, String passWord) {
+        if (isThereUserWithUsername(username)) {
+            for (User user : users) {
+                if (user.getPassword().equals(passWord)) {
+                    currentUser = this;
+                    return true;
+                }
+                else
+                    return false;
+            }
+        }
+        return false;
+    }
+
+    public static User getUserByUsername(String username) {
+        for (User user : users) {
+            if (user.getUsername().equals(username))
+                return user;
+        }
         return null;
     }
 
-    public ArrayList<String> viewUserPersonalInfo(User user) {
-        return null;
+    public String viewUserPersonalInfo(User user) {
+        return "Username: " + user.getUsername() + "\n"
+                + "Password: " + user.getPassword() + "\n"
+                + "First name: " + user.getFirstName() + "\n"
+                + "Last name: " + user.getLastName() + "\n"
+                + "Email: " + user.getEmail() + "\n"
+                + "Phone number" + user.getPhoneNumber() + "\n";
     }
 
-    public void editPersonalInfo(String field) {
-
+    public void editPersonalInfo(String toBeEditedField, String newField) {
+        switch (toBeEditedField) {
+            case "password":
+                currentUser.setPassword(newField);
+                break;
+            case "firstName":
+                currentUser.setFirstName(newField);
+                break;
+            case "lastName":
+                currentUser.setLastName(newField);
+                break;
+            case "email":
+                currentUser.setEmail(newField);
+                break;
+            case "phoneNumber":
+                currentUser.setPhoneNumber(newField);
+                break;
+        }
     }
 
 

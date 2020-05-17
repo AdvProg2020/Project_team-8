@@ -13,7 +13,6 @@ public abstract class Menu {
         this.parentMenu = parentMenu;
     }
 
-
     public HashMap<Integer, Menu> getSubMenus() {
         return subMenus;
     }

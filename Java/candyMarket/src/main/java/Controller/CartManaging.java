@@ -4,6 +4,7 @@ import Model.*;
 
 //import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 import java.util.HashMap;
 
 public class CartManaging {
@@ -48,11 +49,14 @@ public class CartManaging {
         User.currentUser.getCart().addDiscount(discount);
         return true;
     }
-    public static boolean pay()
-    {
-        return false;
-    }
+//    public static boolean pay()
+//    {
+//        if(((Buyer)User.currentUser).getBalance();
+//        User.currentUser.getCart().pay();
+//        User.currentUser.getCart().setBuySituation(CartSituation.PAYMENT);
+//        return false;
+//    }
     public static void purchase() {
-
+        User.currentUser.getCart().setBuySituation(CartSituation.CONFIRMATION);
     }
 }

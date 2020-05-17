@@ -2,11 +2,9 @@ package View;
 
 import Controller.SellerManaging;
 import Model.Seller;
-import jdk.swing.interop.SwingInterOpUtils;
 
 import javax.swing.text.View;
 import java.beans.XMLEncoder;
-import java.nio.channels.SeekableByteChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -27,7 +25,6 @@ public class SellerMenu extends Menu {
         subMenus.put(7, showCategories());
         subMenus.put(8, viewOffs());
         subMenus.put(9, viewBalance());
-        subMenus.put(10, logout());
         this.setSubMenus(subMenus);
     }
 
@@ -82,28 +79,23 @@ public class SellerMenu extends Menu {
                     }
                     switch (selectedFieldToBeEdited) {
                         case 1:
-                            if (SellerManaging.editFieldOfInfo("firstName", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("firstName", newField));
                             this.run();
                             break;
                         case 2:
-                            if (SellerManaging.editFieldOfInfo("lastName", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("lastName", newField));
                             this.run();
                             break;
                         case 3:
-                            if (SellerManaging.editFieldOfInfo("email", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("email", newField));
                             this.run();
                             break;
                         case 4:
-                            if (SellerManaging.editFieldOfInfo("telephoneNumber", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("telephoneNumber", newField));
                             this.run();
                             break;
                         case 5:
-                            if (SellerManaging.editFieldOfInfo("password", newField))
-                                System.out.println("Edited Successfully");;
+                            System.out.println(SellerManaging.editFieldOfInfo("password", newField));
                             this.run();
                             break;
                         default:
@@ -213,8 +205,7 @@ public class SellerMenu extends Menu {
                     case 3 :
                         System.out.println("Enter ID of the product:");
                         id = ConsoleCmd.scanner.nextInt();
-                        if (SellerManaging.editProduct(id))
-                            System.out.println("Wait For Manager's Approval");;
+                        System.out.println(SellerManaging.editProduct(id));
                         this.run();
                     default :
                         try{
@@ -241,15 +232,14 @@ public class SellerMenu extends Menu {
                 System.out.println("enter fields of product");
                 ConsoleCmd.scanner.nextLine();
                 String command = ConsoleCmd.scanner.nextLine();
-                ArrayList<String> newProduct = new ArrayList<>();
+                ArrayList<String> newProduct = new ArrayList<String>();
                 if (command.charAt(0) == '0') {
                     this.parentMenu.run();
                 }
                 else {
                     newProduct.add(command);
                 }
-                if (SellerManaging.addProduct(newProduct))
-                    System.out.println("Wait for Manager's Approval");;
+                System.out.println(SellerManaging.addProduct(newProduct));
                 this.parentMenu.run();
             }
         };
@@ -270,8 +260,7 @@ public class SellerMenu extends Menu {
                     this.parentMenu.run();
                 }
                 else {
-                    if (SellerManaging.removeProduct(id))
-                        System.out.println("Wait for Manager's Approval");;
+                    System.out.println(SellerManaging.removeProduct(id));
                     this.run();
                 }
             }
@@ -326,22 +315,20 @@ public class SellerMenu extends Menu {
                     case 2 :
                         System.out.println("Enter ID of the product:");
                         id = ConsoleCmd.scanner.nextInt();
-                        if (SellerManaging.editOff(id))
-                            System.out.println("Wait for Manager's Approval");;
+                        System.out.println(SellerManaging.editOff(id));
                         this.run();
                     case 3 :
                         System.out.println("enter fields of off");
                         ConsoleCmd.scanner.nextLine();
                         String command = ConsoleCmd.scanner.nextLine();
-                        ArrayList<String> newOff = new ArrayList<>();
+                        ArrayList<String> newOff = new ArrayList<String>();
                         if (command.charAt(0) == '0') {
                             this.parentMenu.run();
                         }
                         else {
                             newOff.add(command);
                         }
-                        if (SellerManaging.addOff(newOff))
-                            System.out.println("Wait for Manager's Approval");;
+                        System.out.println(SellerManaging.addOff(newOff));
                         this.parentMenu.run();
                     default :
                         try{
@@ -366,39 +353,6 @@ public class SellerMenu extends Menu {
             @Override
             public void execute() throws ViewException {
                 super.execute();
-            }
-        };
-    }
-
-    private Menu logout() {
-        return new Menu("logout", this) {
-            @Override
-            public void show() {
-                System.out.println("0. back");
-                System.out.println("1. Continue logging out");
-            }
-
-            @Override
-            public void execute() throws ViewException {
-                int menuChanger = ConsoleCmd.scanner.nextInt();
-                switch (menuChanger) {
-                    case 0 :
-                        this.parentMenu.run();
-                        break;
-                    case 1 :
-                        SellerManaging.logout();
-                        System.out.println("Logout Successfully");
-                        user = LoginType.DEFAULT;
-                        this.parentMenu.parentMenu.parentMenu.run();
-                        break;
-                    default :
-                        try{
-                            throw ViewException.invalidNumber();
-                        }catch (ViewException e) {
-                            System.out.println(ViewException.invalidNumber().getMessage());
-                            this.run();
-                        }
-                }
             }
         };
     }

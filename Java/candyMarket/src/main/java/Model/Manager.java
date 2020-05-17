@@ -3,8 +3,10 @@ package Model;
 import java.util.ArrayList;
 
 public class Manager extends User {
-    public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
-        super(userName, firstName, lastName, email, phoneNumber, passWord, type);
+    public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
+        super(userName, firstName, lastName, email, phoneNumber, passWord);
+        User.users.add(this);
+        this.setType(UserType.MANAGER);
     }
 
     public ArrayList<String> viewAllUsers() {

@@ -16,7 +16,6 @@ public class ViewException extends Exception {
     public static ViewException invalidDiscountCode(){
         return new ViewException("Please enter valid code");
     }
-
     public static ViewException existingUsername(){
         return new ViewException("This username has already been taken, please choose another :");
     }
