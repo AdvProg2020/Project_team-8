@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_gilecode_yagson_yagson_0_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/GoodsManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/GoodsManaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +45,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Java/OnlineShop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -69,6 +90,14 @@
       <workItem from="1589544127184" duration="6000" />
       <workItem from="1589545372882" duration="6331000" />
       <workItem from="1589610181041" duration="3274000" />
+      <workItem from="1589668825155" duration="603000" />
+      <workItem from="1589669846465" duration="4608000" />
+      <workItem from="1589674773745" duration="55000" />
+      <workItem from="1589674848516" duration="600000" />
+      <workItem from="1589675865121" duration="23000" />
+      <workItem from="1589675903413" duration="39000" />
+      <workItem from="1589676198081" duration="784000" />
+      <workItem from="1589706650576" duration="696000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -93,9 +122,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="make runnable" />
     <MESSAGE value="Make clients menu(start)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make clients menu(start)" />
+    <MESSAGE value="Seller menu (view)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seller menu (view)" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="233" y="0" key="#Notifications" timestamp="1589706727140">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="0" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1589706727140" />
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589505778337">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -113,21 +147,25 @@
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588078365417" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1588513942136" />
-    <state width="1237" height="140" key="GridCell.Tab.0.bottom" timestamp="1589617259949">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1589677798915">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589677798915" />
     <state width="1237" height="140" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589617259949" />
-    <state width="1237" height="140" key="GridCell.Tab.0.center" timestamp="1589617259949">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1589677798915">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589677798915" />
     <state width="1237" height="140" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1589617259949" />
-    <state width="1237" height="140" key="GridCell.Tab.0.left" timestamp="1589617259948">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1589677798915">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589677798915" />
     <state width="1237" height="140" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1589617259948" />
-    <state width="1237" height="140" key="GridCell.Tab.0.right" timestamp="1589617259949">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1589677798915">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589677798915" />
     <state width="1237" height="140" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1589617259949" />
     <state width="1237" height="199" key="GridCell.Tab.1.bottom" timestamp="1589615206330">
       <screen x="0" y="0" width="1280" height="683" />
@@ -145,17 +183,20 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1589615206330" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589615487595">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589663341267">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1589663341267" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589615487595" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1589610188088">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1589706657176">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589706657176" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589610188088" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1589616417690">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1589706693849">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1589706693849" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589616417690" />
     <state x="91" y="36" key="new project wizard" timestamp="1588513960615">
       <screen x="0" y="0" width="1280" height="683" />
