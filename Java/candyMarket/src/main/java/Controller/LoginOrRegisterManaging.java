@@ -1,13 +1,15 @@
 package Controller;
 
 
+import Model.User;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LoginOrRegisterManaging {
 
     public static boolean isThereUsernameWithThisName(String requestedUsername) {
-        return true;
+        return User.isThereUserWithUsername(requestedUsername);
     }
 
     public static boolean isThisTheFirstManager() {
@@ -15,7 +17,7 @@ public class LoginOrRegisterManaging {
     }
 
     public static boolean isThereASameEmail(String requestedMail) {
-        return true;
+        return User.isThereUserWithEmail(requestedMail);
     }
 
     public static String register(HashMap<String, String> info) {

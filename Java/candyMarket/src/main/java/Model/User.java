@@ -92,6 +92,14 @@ public class User {
         return false;
     }
 
+    public static boolean isThereUserWithEmail(String email) {
+        for (User user : users) {
+            if (user.getEmail().equals(email))
+                return true;
+        }
+        return false;
+    }
+
     public boolean isUsernameAndPasswordCorrect(String username, String passWord) {
         if (isThereUserWithUsername(username)) {
             for (User user : users) {

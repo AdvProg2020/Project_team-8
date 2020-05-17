@@ -55,12 +55,12 @@ public class LoginOrRegister extends Menu {
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 info.put("password", password);
-                System.out.println("Enter your Name :");
+                System.out.println("Enter your First name :");
                 String name = ConsoleCmd.scanner.nextLine();
-                info.put("name", name);
-                System.out.println("Enter your LastName :");
+                info.put("firstName", name);
+                System.out.println("Enter your Last name :");
                 String lastName = ConsoleCmd.scanner.nextLine();
-                info.put("last name", lastName);
+                info.put("lastName", lastName);
                 System.out.println("Enter your Email :");
                 String email = ConsoleCmd.scanner.nextLine();
                 while (!emailValidation(email) || LoginOrRegisterManaging.isThereASameEmail(email)) {
@@ -85,7 +85,7 @@ public class LoginOrRegister extends Menu {
                     }
                     phoneNumber = ConsoleCmd.scanner.nextLine();
                 }
-                info.put("phone number", phoneNumber);
+                info.put("phoneNumber", phoneNumber);
                 System.out.println("Enter the type of your account\n" +
                         "1. Buyer\n" +
                         "2. Seller\n" +

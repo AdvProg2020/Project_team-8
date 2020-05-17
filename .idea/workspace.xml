@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/SellerManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/SellerManaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Java/OnlineShop" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
