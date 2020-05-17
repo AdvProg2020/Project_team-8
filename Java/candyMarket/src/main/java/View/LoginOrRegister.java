@@ -55,12 +55,12 @@ public class LoginOrRegister extends Menu {
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 info.put("password", password);
-                System.out.println("Enter your First name :");
+                System.out.println("Enter your Name :");
                 String name = ConsoleCmd.scanner.nextLine();
-                info.put("firstName", name);
-                System.out.println("Enter your Last name :");
+                info.put("name", name);
+                System.out.println("Enter your LastName :");
                 String lastName = ConsoleCmd.scanner.nextLine();
-                info.put("lastName", lastName);
+                info.put("last name", lastName);
                 System.out.println("Enter your Email :");
                 String email = ConsoleCmd.scanner.nextLine();
                 while (!emailValidation(email) || LoginOrRegisterManaging.isThereASameEmail(email)) {
@@ -85,7 +85,7 @@ public class LoginOrRegister extends Menu {
                     }
                     phoneNumber = ConsoleCmd.scanner.nextLine();
                 }
-                info.put("phoneNumber", phoneNumber);
+                info.put("phone number", phoneNumber);
                 System.out.println("Enter the type of your account\n" +
                         "1. Buyer\n" +
                         "2. Seller\n" +
@@ -103,7 +103,7 @@ public class LoginOrRegister extends Menu {
                             String companyName = ConsoleCmd.scanner.nextLine();
                             if (companyName.charAt(0) == '0')
                                 this.parentMenu.run();
-                            info.put("companyName", companyName);
+                            info.put("company name", companyName);
                             break;
                         case 3:
                             if (checkForExistingManager)
@@ -125,7 +125,8 @@ public class LoginOrRegister extends Menu {
                             }
                     }
                 }
-                System.out.println("You have logged in successfully");
+                String result = LoginOrRegisterManaging.register(info);
+                System.out.println(result);
                 switch (type) {
                     case 1 :
                         user = LoginType.BUYER;
