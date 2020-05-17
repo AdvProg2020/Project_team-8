@@ -156,23 +156,18 @@ public class LoginOrRegister extends Menu {
                 System.out.println("Enter A UserName :");
                 ConsoleCmd.scanner.nextLine();
                 String username = ConsoleCmd.scanner.nextLine();
-                while (!LoginOrRegisterManaging.isThereUsernameWithThisName(username)) {
-                    try {
-                        throw ViewException.existingUsername();
-                    }catch (ViewException e) {
-                        System.out.println(ViewException.notExistingUsername().getMessage());
-                    }
-                    username = ConsoleCmd.scanner.nextLine();
-                }
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 int type = 0;
                 while ((type = LoginOrRegisterManaging.login(username, password)) == 4) {
                     try {
-                        throw ViewException.invalidPassword();
+                        throw ViewException.invalidLogin();
                     }catch (ViewException e) {
-                        System.out.println(ViewException.invalidPassword().getMessage());
+                        System.out.println(ViewException.invalidLogin().getMessage());
                     }
+                    System.out.println("Enter A UserName :");
+                    username = ConsoleCmd.scanner.nextLine();
+                    System.out.println("Enter your Password :");
                     password = ConsoleCmd.scanner.nextLine();
                 }
                 switch (type) {

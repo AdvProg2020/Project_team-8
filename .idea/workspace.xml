@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/ManagerManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/ManagerManaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/SellerManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/SellerManaging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/ManagerMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/ViewException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/ViewException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +69,7 @@
       <workItem from="1589545372882" duration="6331000" />
       <workItem from="1589610181041" duration="3274000" />
       <workItem from="1589670057134" duration="10400000" />
-      <workItem from="1589707395468" duration="7108000" />
+      <workItem from="1589707395468" duration="8285000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -110,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589679879931</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="finalize Register and Login Menus">
+      <created>1589714594540</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589714594541</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +124,8 @@
     <MESSAGE value="Make clients menu(start)" />
     <MESSAGE value="Finalize Registering (on View)" />
     <MESSAGE value="Update SellersMenu v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update SellersMenu v2" />
+    <MESSAGE value="finalize Register and Login Menus" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize Register and Login Menus" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589708699030">
@@ -132,10 +136,10 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589679878681">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589714593268">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589679878681" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589714593268" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588513942136">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -173,10 +177,10 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589679887786">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589714612183">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589679887786" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589714612183" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1589707394626">
       <screen x="0" y="0" width="1280" height="683" />
     </state>

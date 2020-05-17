@@ -25,8 +25,8 @@ public class ViewException extends Exception {
     public static ViewException invalidPhoneNumberFormat(){
         return new ViewException("Please enter valid phone number");
     }
-    public static ViewException invalidPassword(){
-        return new ViewException("Password is Wrong, please try again :");
+    public static ViewException invalidLogin(){
+        return new ViewException("Username or Password is Wrong, please try again :");
     }
     public ViewException (String msg){
         super(ConsoleDesign.RED+"Error : "+ ConsoleDesign.WHITE+msg);
