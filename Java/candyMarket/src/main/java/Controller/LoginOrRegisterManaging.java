@@ -1,9 +1,11 @@
 package Controller;
 
 
+import Model.Buyer;
+import Model.Manager;
+import Model.Seller;
 import Model.User;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LoginOrRegisterManaging {
@@ -20,14 +22,24 @@ public class LoginOrRegisterManaging {
         return User.isThereUserWithEmail(requestedMail);
     }
 
-    public static String register(HashMap<String, String> info) {
-        return null;
+    public static void register(HashMap<String, String> info) {
+        switch (info.get("type")) {
+            case "seller":
+                new Seller(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"), info.get("companyName"));
+                break;
+            case "buyer":
+                new Buyer(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"));
+                break;
+            case "manager":
+                new Manager(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"));
+                break;
+        }
     }
 
     public static int login(String username, String password) {
         User currentUser = User.getUserByUsername(username);
         if (currentUser.isUsernameAndPasswordCorrect(username, password)) {
-            switch (currentUser.getUserName()) {
+            switch (currentUser.getUsername()) {
                 case "buyer":
                     return 1;
                 case "seller":

@@ -6,30 +6,29 @@ public class User {
     enum UserType {
         BUYER, SELLER, MANAGER
     }
-    protected String userName;
+    protected String username;
     protected String firstName;
     protected String lastName;
     protected String email;
     protected String phoneNumber;
-    protected String passWord;
+    protected String password;
     private int credit;
-    protected UserType type;
+    private UserType type;
     public static ArrayList<User> users = ManageInfo.allUsers;
     public static User currentUser;
 
-    public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
-        this.userName = userName;
+    public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
+        this.username = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.passWord = passWord;
-        this.type = type;
+        this.password = passWord;
         users.add(this);
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public String getFirstName() {
@@ -48,16 +47,16 @@ public class User {
         return phoneNumber;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
     public UserType getType() {
         return type;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setFirstName(String firstName) {
@@ -76,8 +75,8 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setType(UserType type) {
@@ -86,7 +85,7 @@ public class User {
 
     public static boolean isThereUserWithUsername(String userName) {
         for (User user : users) {
-            if (user.getUserName().equals(userName))
+            if (user.getUsername().equals(userName))
                 return true;
         }
         return false;
@@ -103,7 +102,7 @@ public class User {
     public boolean isUsernameAndPasswordCorrect(String username, String passWord) {
         if (isThereUserWithUsername(username)) {
             for (User user : users) {
-                if (user.getPassWord().equals(passWord)) {
+                if (user.getPassword().equals(passWord)) {
                     currentUser = this;
                     return true;
                 }
@@ -116,15 +115,15 @@ public class User {
 
     public static User getUserByUsername(String username) {
         for (User user : users) {
-            if (user.getUserName().equals(username))
+            if (user.getUsername().equals(username))
                 return user;
         }
         return null;
     }
 
     public String viewUserPersonalInfo(User user) {
-        return "Username: " + user.getUserName() + "\n"
-                + "Password: " + user.getPassWord() + "\n"
+        return "Username: " + user.getUsername() + "\n"
+                + "Password: " + user.getPassword() + "\n"
                 + "First name: " + user.getFirstName() + "\n"
                 + "Last name: " + user.getLastName() + "\n"
                 + "Email: " + user.getEmail() + "\n"
@@ -134,7 +133,7 @@ public class User {
     public void editPersonalInfo(String toBeEditedField, String newField) {
         switch (toBeEditedField) {
             case "password":
-                currentUser.setPassWord(newField);
+                currentUser.setPassword(newField);
                 break;
             case "firstName":
                 currentUser.setFirstName(newField);

@@ -103,7 +103,7 @@ public class LoginOrRegister extends Menu {
                             String companyName = ConsoleCmd.scanner.nextLine();
                             if (companyName.charAt(0) == '0')
                                 this.parentMenu.run();
-                            info.put("company name", companyName);
+                            info.put("companyName", companyName);
                             break;
                         case 3:
                             if (checkForExistingManager)
@@ -125,8 +125,7 @@ public class LoginOrRegister extends Menu {
                             }
                     }
                 }
-                String result = LoginOrRegisterManaging.register(info);
-                System.out.println(result);
+                System.out.println("You have logged in successfully");
                 switch (type) {
                     case 1 :
                         user = LoginType.BUYER;
