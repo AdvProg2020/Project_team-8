@@ -1,5 +1,7 @@
 package Model;
 
+import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -96,5 +98,9 @@ public class Cart {
     }
     public void pay(){
         ((Buyer) User.currentUser).setBalance(((Buyer) User.currentUser).getBalance()-User.currentUser.getCart().getTotalAmount()-User.currentUser.getCart().getDiscountAmount());
+    }
+    public void canPay(){
+
+        return false;
     }
 }

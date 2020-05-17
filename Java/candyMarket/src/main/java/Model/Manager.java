@@ -6,7 +6,7 @@ public class Manager extends User {
     public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         super(userName, firstName, lastName, email, phoneNumber, passWord, type);
     }
-
+    public static Manager currentManager;
     public ArrayList<String> viewAllUsers() {
         return null;
     }

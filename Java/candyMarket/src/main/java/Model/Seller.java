@@ -10,7 +10,7 @@ public class Seller extends User {
     private String factoryName;
     private String workShopName;
     public static ArrayList<Seller> sellers;
-
+    public static Seller currentSeller;
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type, String companyName, String factoryName, String workShopName) {
         super(userName, firstName, lastName, email, phoneNumber, passWord, type);
         this.companyName = companyName;

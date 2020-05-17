@@ -51,10 +51,7 @@ public class CartManaging {
     }
     public static boolean pay()
     {
-        if(((Buyer)User.currentUser).getBalance();
-        User.currentUser.getCart().pay();
-        User.currentUser.getCart().setBuySituation(CartSituation.PAYMENT);
-        return false;
+
     }
     public static void purchase() {
         User.currentUser.getCart().setBuySituation(CartSituation.CONFIRMATION);
