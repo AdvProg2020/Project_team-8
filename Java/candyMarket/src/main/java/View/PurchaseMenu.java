@@ -79,6 +79,7 @@ public class PurchaseMenu extends Menu {
         return new Menu("Purchase",this) {
             @Override
             public void run() throws ViewException {
+                CartManaging.purchase();
                 receiverInformation().run();
                 discountCode().run();
                 payment().run();

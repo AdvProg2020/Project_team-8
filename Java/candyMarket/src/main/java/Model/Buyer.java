@@ -4,13 +4,10 @@ import java.util.ArrayList;
 
 public class Buyer extends User {
     private ArrayList<BuyLog> myBuyLog;
-    private Cart cart;
     private ArrayList<Discount> myDiscounts;
     private ArrayList<BuyLog> myLogs;
-
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         super(userName, firstName, lastName, email, phoneNumber, passWord, type);
-        User.users.add(this);
     }
 
     public Cart getCart() {

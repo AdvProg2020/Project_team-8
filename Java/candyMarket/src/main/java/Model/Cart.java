@@ -94,5 +94,7 @@ public class Cart {
     public int getId() {
         return id;
     }
-
+    public void pay(){
+        ((Buyer) User.currentUser).setBalance(((Buyer) User.currentUser).getBalance()-User.currentUser.getCart().getTotalAmount()-User.currentUser.getCart().getDiscountAmount());
+    }
 }

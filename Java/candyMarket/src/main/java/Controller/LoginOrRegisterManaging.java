@@ -27,7 +27,6 @@ public class LoginOrRegisterManaging {
         //2.Seller
         //3.Manager
         //4.WrongPassword
-
         return 0;
     }
 }
