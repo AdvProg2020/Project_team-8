@@ -8,9 +8,9 @@ public class Seller extends User {
     private ArrayList<SellLog> mySellLog;
     private String sellerCompanyName;
     enum sellerType {
-        company,
-        factory,
-        workshop
+        COMPANY,
+        FACTORY,
+        WORKSHOP
     }
     public static ArrayList<Seller> sellers;
 
@@ -18,6 +18,7 @@ public class Seller extends User {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.sellerCompanyName = sellerCompanyName;
         User.users.add(this);
+        this.setType(UserType.SELLER);
     }
 
     public ArrayList<Sale> getMySales() {

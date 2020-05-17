@@ -11,6 +11,7 @@ public class Buyer extends User {
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         User.users.add(this);
+        this.setType(UserType.BUYER);
     }
 
     public Cart getCart() {
