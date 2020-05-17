@@ -24,20 +24,20 @@ public class ManagerManaging {
         return false;
     }
 
-    public static HashMap<Integer, String> manageUsers() {
+    public static ArrayList<String> manageUsers() {
         return null;
     }
 
-    public static String viewUser() {
+    public static String viewUser(String username) {
         return null;
     }
 
-    public static String deleteUser() {
+    public static String deleteUser(String username) {
         return null;
     }
 
-    public static String createNewManager() {
-        return null;
+    public static void createNewManager(HashMap<String, String> info) {
+        ;
     }
 
     public static HashMap<Integer, String> manageAllProducts() {
