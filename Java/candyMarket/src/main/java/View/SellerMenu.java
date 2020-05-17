@@ -27,6 +27,7 @@ public class SellerMenu extends Menu {
         subMenus.put(7, showCategories());
         subMenus.put(8, viewOffs());
         subMenus.put(9, viewBalance());
+        subMenus.put(10, logout());
         this.setSubMenus(subMenus);
     }
 
@@ -213,7 +214,7 @@ public class SellerMenu extends Menu {
                         System.out.println("Enter ID of the product:");
                         id = ConsoleCmd.scanner.nextInt();
                         if (SellerManaging.editProduct(id))
-                            System.out.println("Edited Successfully");;
+                            System.out.println("Wait For Manager's Approval");;
                         this.run();
                     default :
                         try{
@@ -365,6 +366,39 @@ public class SellerMenu extends Menu {
             @Override
             public void execute() throws ViewException {
                 super.execute();
+            }
+        };
+    }
+
+    private Menu logout() {
+        return new Menu("logout", this) {
+            @Override
+            public void show() {
+                System.out.println("0. back");
+                System.out.println("1. Continue logging out");
+            }
+
+            @Override
+            public void execute() throws ViewException {
+                int menuChanger = ConsoleCmd.scanner.nextInt();
+                switch (menuChanger) {
+                    case 0 :
+                        this.parentMenu.run();
+                        break;
+                    case 1 :
+                        SellerManaging.logout();
+                        System.out.println("Logout Successfully");
+                        user = LoginType.DEFAULT;
+                        this.parentMenu.parentMenu.parentMenu.run();
+                        break;
+                    default :
+                        try{
+                            throw ViewException.invalidNumber();
+                        }catch (ViewException e) {
+                            System.out.println(ViewException.invalidNumber().getMessage());
+                            this.run();
+                        }
+                }
             }
         };
     }

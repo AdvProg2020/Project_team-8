@@ -31,8 +31,6 @@ public abstract class Menu {
         if(this.parentMenu==null) System.out.println("0. exit");
         else System.out.println("0. back");
         if(subMenus == null) return;
-        for (Integer menuNum : subMenus.keySet()
-             ) {
         for (Integer menuNum : subMenus.keySet()) {
             System.out.println(menuNum+". "+subMenus.get(menuNum).getName());
         }
