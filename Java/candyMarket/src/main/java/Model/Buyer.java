@@ -7,6 +7,7 @@ public class Buyer extends User {
     private ArrayList<Discount> myDiscounts;
     private ArrayList<BuyLog> myLogs;
     private int balance;
+    public static Buyer currentBuyer;
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         super(userName, firstName, lastName, email, phoneNumber, passWord, type);
         this.balance=0;

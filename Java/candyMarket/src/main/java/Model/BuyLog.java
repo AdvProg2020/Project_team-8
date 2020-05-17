@@ -2,34 +2,28 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class BuyLog {
     private String address;
     private String phoneNumber;
     private int id;
-    private Date date;
+    private long date;
     private int totalAmount;
     private int discountAmount;
-    private ArrayList<Good> goods;
-    private String SellerName;
+    private HashMap<Integer,Good> goods;
+    private String buyerName;
     private CartSituation buySituation;
 
-    public BuyLog(Date date, int totalAmount, int discountAmount, ArrayList<Good> goods, String sellerName, CartSituation buySituation) {
-        this.date = date;
+    public BuyLog(int totalAmount, int discountAmount, HashMap<Integer,Good> goods, String sellerName) {
+        this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
         this.goods = goods;
-        SellerName = sellerName;
-        this.buySituation = buySituation;
+        this.buyerName = buyerName;
+        this.buySituation = CartSituation.CONFIRMATION;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
 
     public int getTotalAmount() {
         return totalAmount;
