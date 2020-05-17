@@ -20,7 +20,7 @@ public class LoginOrRegister extends Menu {
     }
 
     @Override
-    public void run() {
+    public void run() throws ViewException {
         if (!(user == LoginType.DEFAULT))
             this.parentMenu.subMenus.get(2).run();
         else
@@ -55,7 +55,7 @@ public class LoginOrRegister extends Menu {
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 info.put("password", password);
-                System.out.println("Enter your firstName :");
+                System.out.println("Enter your Name :");
                 String name = ConsoleCmd.scanner.nextLine();
                 info.put("firstName", name);
                 System.out.println("Enter your LastName :");
@@ -99,10 +99,33 @@ public class LoginOrRegister extends Menu {
                             break;
                         case 2:
                             info.put("type", "Seller");
-                            System.out.println("Enter your company's name :");
+                            int workType = 0;
+                            System.out.println("Enter a type :\n" +
+                                    "1. company\n" +
+                                    "2. factory\n" +
+                                    "3. workshop");
+                            workType = ConsoleCmd.scanner.nextInt();
+                            while (workType < 1 || workType > 3) {
+                                try{
+                                    throw ViewException.invalidNumber();
+                                }catch (ViewException e) {
+                                    System.out.println(ViewException.invalidNumber().getMessage());
+                                }
+                                workType = ConsoleCmd.scanner.nextInt();
+                            }
+                            switch (workType) {
+                                case 1 :
+                                    info.put("workType", "company");
+                                    break;
+                                case 2 :
+                                    info.put("workType", "factory");
+                                    break;
+                                case 3 :
+                                    info.put("workType", "workshop");
+                                    break;
+                            }
+                            System.out.println("Enter your workplace name :");
                             String companyName = ConsoleCmd.scanner.nextLine();
-                            if (companyName.charAt(0) == '0')
-                                this.parentMenu.run();
                             info.put("companyName", companyName);
                             break;
                         case 3:
@@ -125,8 +148,7 @@ public class LoginOrRegister extends Menu {
                             }
                     }
                 }
-                LoginOrRegisterManaging.register(info);
-                System.out.println("You have been successfully logged in");
+                System.out.println("Registered Successfully");
                 switch (type) {
                     case 1 :
                         user = LoginType.BUYER;

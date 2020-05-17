@@ -8,10 +8,8 @@ public class Buyer extends User {
     private ArrayList<Discount> myDiscounts;
     private ArrayList<BuyLog> myLogs;
 
-    public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
-        super(userName, firstName, lastName, email, phoneNumber, passWord);
-        User.users.add(this);
-        this.setType(UserType.BUYER);
+    public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
+        super(userName, firstName, lastName, email, phoneNumber, passWord, type);
     }
 
     public Cart getCart() {

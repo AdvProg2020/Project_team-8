@@ -30,17 +30,20 @@ public abstract class Menu {
         System.out.println(this.name);
         if(this.parentMenu==null) System.out.println("0. exit");
         else System.out.println("0. back");
+        if(subMenus == null) return;
+        for (Integer menuNum : subMenus.keySet()
+             ) {
         for (Integer menuNum : subMenus.keySet()) {
             System.out.println(menuNum+". "+subMenus.get(menuNum).getName());
         }
     }
-    public void run(){
+    public void run() throws ViewException {
         try {
             show();
             execute();
         }
-        catch (Exception e){
-            System.out.println(ViewException.invalidNumber().getMessage());
+        catch (ViewException e){
+            System.out.println(e.getMessage());
             run();
         }
     }
@@ -60,3 +63,4 @@ public abstract class Menu {
         nextMenu.run();
     }
 }
+
