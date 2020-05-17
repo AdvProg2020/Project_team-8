@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +73,7 @@
       <workItem from="1589610181041" duration="3274000" />
       <workItem from="1589670057134" duration="10400000" />
       <workItem from="1589707395468" duration="11035000" />
+      <workItem from="1589728619221" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -123,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589715722402</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update buyer and seller">
+      <created>1589727355652</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589727355652</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +144,8 @@
     <MESSAGE value="Update SellersMenu v2" />
     <MESSAGE value="finalize Register and Login Menus" />
     <MESSAGE value="finalize Register and Login Menus v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize Register and Login Menus v2" />
+    <MESSAGE value="Update buyer and seller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update buyer and seller" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589708699030">
@@ -147,9 +156,10 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589715720753">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589727353857">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1589727353857" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589715720753" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588513942136">
       <screen x="0" y="0" width="1280" height="683" />
@@ -188,18 +198,27 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589715731424">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="121" y="51" key="MergeDialog" timestamp="1589727410850">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="121" y="51" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1589727410850" />
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1589727410876">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1589727410876" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589727536849">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1589727536849" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589715731424" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1589707394626">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707394626" />
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1589727311733">
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1589727366968">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1589727311733" />
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1589727366968" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707905054" />
     <state x="91" y="36" key="new project wizard" timestamp="1588513960615">
       <screen x="0" y="0" width="1280" height="683" />
