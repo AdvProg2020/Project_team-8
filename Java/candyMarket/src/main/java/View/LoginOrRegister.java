@@ -126,8 +126,6 @@ public class LoginOrRegister extends Menu {
                             }
                             System.out.println("Enter your workplace name :");
                             String companyName = ConsoleCmd.scanner.nextLine();
-                            if (companyName.charAt(0) == '0')
-                                this.parentMenu.run();
                             info.put("companyName", companyName);
                             break;
                         case 3:
