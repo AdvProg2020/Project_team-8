@@ -7,10 +7,11 @@ public class Buyer extends User {
     private Cart cart;
     private ArrayList<Discount> myDiscounts;
     private ArrayList<BuyLog> myLogs;
-
-    public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
-        super(userName, firstName, lastName, email, phoneNumber, passWord);
-        User.users.add(this);
+    private int balance;
+    public static Buyer currentBuyer;
+    public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
+        super(userName, firstName, lastName, email, phoneNumber, passWord, type);
+        this.balance=0;
     }
 
     public Cart getCart() {

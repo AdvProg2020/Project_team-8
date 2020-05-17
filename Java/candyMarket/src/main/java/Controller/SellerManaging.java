@@ -79,4 +79,8 @@ public class SellerManaging {
     public static int viewBalance() {
         return 0;
     }
+
+    public static void logout() {
+
+    }
 }

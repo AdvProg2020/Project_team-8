@@ -1,7 +1,11 @@
 package Model;
 
+import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
+
+import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class Cart {
     private String address;
@@ -24,19 +28,19 @@ public class Cart {
 
     private String phoneNumber;
     private int id;
-    private Date date;
+    private long date;
     private int totalAmount;
     private int discountAmount;
-    private ArrayList<Good> goods;
-    private String SellerName;
+    private HashMap<Integer,Good> goods;
+    private String buyerName;
     private CartSituation buySituation;
 
-    public Cart(Date date, int totalAmount, int discountAmount, ArrayList<Good> goods, String sellerName, CartSituation buySituation) {
-        this.date = date;
+    public Cart( int totalAmount, int discountAmount, HashMap<Integer,Good> goods, String sellerName, CartSituation buySituation) {
+        this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
         this.goods = goods;
-        SellerName = sellerName;
+        this.buyerName = buyerName;
         this.buySituation = buySituation;
     }
     public void addDiscount(Discount discount){
@@ -75,12 +79,12 @@ public class Cart {
         this.goods = goods;
     }
 
-    public String getSellerName() {
-        return SellerName;
+    public String getBuyerName() {
+        return buyerName;
     }
 
-    public void setSellerName(String sellerName) {
-        SellerName = sellerName;
+    public void setBuyerName(String sellerName) {
+        buyerName = buyerName;
     }
 
     public CartSituation getBuySituation() {
@@ -94,7 +98,15 @@ public class Cart {
     public int getId() {
         return id;
     }
-//    public void pay(){
-//        ((Buyer) User.currentUser).setBalance(((Buyer) User.currentUser).getBalance()-User.currentUser.getCart().getTotalAmount()-User.currentUser.getCart().getDiscountAmount());
-//    }
+    public void pay(){
+        Buyer.currentBuyer.setBalance(((Buyer) User.currentUser).getBalance()-User.currentUser.getCart().getTotalAmount()-User.currentUser.getCart().getDiscountAmount());
+    }
+    public Boolean canPay(){
+        if(Buyer.currentBuyer.getBalance()<User.currentUser.getCart().totalAmount- User.currentUser.getCart().discountAmount)
+        return false;
+        else return true;
+    }
+    public void createLogs(){
+        BuyLog buyLog = new BuyLog(totalAmount,discountAmount,goods,buyerName);
+    }
 }
