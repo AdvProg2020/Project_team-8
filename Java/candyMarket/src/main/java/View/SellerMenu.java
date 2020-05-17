@@ -93,7 +93,7 @@ public class SellerMenu extends Menu {
                             this.run();
                             break;
                         case 4:
-                            System.out.println(SellerManaging.editFieldOfInfo("telephoneNumber", newField));
+                            System.out.println(SellerManaging.editFieldOfInfo("phoneNumber", newField));
                             this.run();
                             break;
                         case 5:

@@ -14,7 +14,8 @@ public class User {
     protected String passWord;
     private int credit;
     protected UserType type;
-    ArrayList<User> users = ManageInfo.allUsers;
+    public static ArrayList<User> users = ManageInfo.allUsers;
+    public static User currentUser;
 
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
         this.userName = userName;
@@ -24,6 +25,7 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.passWord = passWord;
         this.type = type;
+        users.add(this);
     }
 
     public String getUserName() {
@@ -83,19 +85,58 @@ public class User {
     }
 
     public static boolean isThereUserWithUsername(String userName) {
-        return true;
+        for (User user : users) {
+            if (user.getUserName().equals(userName))
+                return true;
+        }
+        return false;
+    }
+
+    public boolean isUsernameAndPasswordCorrect(String username, String passWord) {
+        if (isThereUserWithUsername(username)) {
+            for (User user : users) {
+                if (user.getPassWord().equals(passWord)) {
+                    currentUser = this;
+                    return true;
+                }
+                else
+                    return false;
+            }
+        }
+        return false;
     }
 
     public static User getUserByUsername(String userName) {
         return null;
     }
 
-    public ArrayList<String> viewUserPersonalInfo(User user) {
-        return null;
+    public String viewUserPersonalInfo(User user) {
+        return "Username: " + user.getUserName() + "\n"
+                + "Password: " + user.getPassWord() + "\n"
+                + "First name: " + user.getFirstName() + "\n"
+                + "Last name: " + user.getLastName() + "\n"
+                + "Email: " + user.getEmail() + "\n"
+                + "Phone number" + user.getPhoneNumber() + "\n";
     }
 
-    public void editPersonalInfo(String field) {
-
+    public void editPersonalInfo(String toBeEditedField, String newField) {
+        switch (toBeEditedField) {
+            case "password":
+                currentUser.setPassWord(newField);
+                break;
+            case "firstName":
+                currentUser.setFirstName(newField);
+                break;
+            case "lastName":
+                currentUser.setLastName(newField);
+                break;
+            case "email":
+                currentUser.setEmail(newField);
+                break;
+            case "phoneNumber":
+                currentUser.setPhoneNumber(newField);
+                break;
+        }
     }
 
 

@@ -70,8 +70,10 @@ public class Seller extends User {
 
     }
 
-    public ArrayList<String> viewCompanyInformation(Seller seller) {
-        return null;
+    public String viewCompanyInformation(Seller seller) {
+        return "Company name: " + seller.getCompanyName() + "\n"
+                + "Factory name" + seller.getFactoryName() + "\n"
+                + "Workshop name" + seller.getWorkShopName() + "\n";
     }
 
     public ArrayList<String> viewSalesHistory(Seller seller) {
