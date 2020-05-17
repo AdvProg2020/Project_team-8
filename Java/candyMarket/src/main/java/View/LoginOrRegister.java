@@ -57,10 +57,10 @@ public class LoginOrRegister extends Menu {
                 info.put("password", password);
                 System.out.println("Enter your Name :");
                 String name = ConsoleCmd.scanner.nextLine();
-                info.put("name", name);
+                info.put("firstName", name);
                 System.out.println("Enter your LastName :");
                 String lastName = ConsoleCmd.scanner.nextLine();
-                info.put("last name", lastName);
+                info.put("lastName", lastName);
                 System.out.println("Enter your Email :");
                 String email = ConsoleCmd.scanner.nextLine();
                 while (!emailValidation(email) || LoginOrRegisterManaging.isThereASameEmail(email)) {
@@ -85,7 +85,7 @@ public class LoginOrRegister extends Menu {
                     }
                     phoneNumber = ConsoleCmd.scanner.nextLine();
                 }
-                info.put("phone number", phoneNumber);
+                info.put("phoneNumber", phoneNumber);
                 System.out.println("Enter the type of your account\n" +
                         "1. Buyer\n" +
                         "2. Seller\n" +
@@ -99,11 +99,36 @@ public class LoginOrRegister extends Menu {
                             break;
                         case 2:
                             info.put("type", "Seller");
-                            System.out.println("Enter your company's name :");
+                            int workType = 0;
+                            System.out.println("Enter a type :\n" +
+                                    "1. company\n" +
+                                    "2. factory\n" +
+                                    "3. workshop");
+                            workType = ConsoleCmd.scanner.nextInt();
+                            while (workType < 1 || workType > 3) {
+                                try{
+                                    throw ViewException.invalidNumber();
+                                }catch (ViewException e) {
+                                    System.out.println(ViewException.invalidNumber().getMessage());
+                                }
+                                workType = ConsoleCmd.scanner.nextInt();
+                            }
+                            switch (workType) {
+                                case 1 :
+                                    info.put("workType", "company");
+                                    break;
+                                case 2 :
+                                    info.put("workType", "factory");
+                                    break;
+                                case 3 :
+                                    info.put("workType", "workshop");
+                                    break;
+                            }
+                            System.out.println("Enter your workplace name :");
                             String companyName = ConsoleCmd.scanner.nextLine();
                             if (companyName.charAt(0) == '0')
                                 this.parentMenu.run();
-                            info.put("company name", companyName);
+                            info.put("companyName", companyName);
                             break;
                         case 3:
                             if (checkForExistingManager)
