@@ -49,14 +49,16 @@ public class CartManaging {
         User.currentUser.getCart().addDiscount(discount);
         return true;
     }
-//    public static boolean pay()
-//    {
-//        if(((Buyer)User.currentUser).getBalance();
-//        User.currentUser.getCart().pay();
-//        User.currentUser.getCart().setBuySituation(CartSituation.PAYMENT);
-//        return false;
-//    }
+    public static boolean pay()
+    {
+        if(!User.currentUser.getCart().canPay())
+            return false;
+        else User.currentUser.getCart().pay();
+        return true;
+
+    }
     public static void purchase() {
         User.currentUser.getCart().setBuySituation(CartSituation.CONFIRMATION);
+        User.currentUser.getCart().createLogs();
     }
 }

@@ -8,7 +8,7 @@ public class Manager extends User {
         User.users.add(this);
         this.setType(UserType.MANAGER);
     }
-
+    public static Manager currentManager;
     public ArrayList<String> viewAllUsers() {
         return null;
     }
