@@ -8,6 +8,17 @@ public class Seller extends User {
     private ArrayList<SellLog> mySellLog;
     private String sellerCompanyName;
     String workType;
+    public static Seller currentSeller;
+    public static ArrayList<Seller> getSellers() {
+        return sellers;
+    }
+    public void addMySellLog(SellLog sellLog){
+        mySellLog.add(sellLog);
+    }
+    public static void setSellers(ArrayList<Seller> sellers) {
+        Seller.sellers = sellers;
+    }
+
     public static ArrayList<Seller> sellers;
 
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName, String workType) {

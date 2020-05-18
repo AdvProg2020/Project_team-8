@@ -11,17 +11,18 @@ public class BuyLog {
     private long date;
     private int totalAmount;
     private int discountAmount;
-    private HashMap<Integer,Good> goods;
+    private HashMap<Good,Integer> goods;
     private String buyerName;
     private CartSituation buySituation;
 
-    public BuyLog(int totalAmount, int discountAmount, HashMap<Integer,Good> goods, String sellerName) {
+    public BuyLog(int totalAmount, int discountAmount, HashMap<Good,Integer> goods, String sellerName) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
         this.goods = goods;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.CONFIRMATION;
+        this.id = ManageInfo.allBuyLogs.size();
     }
 
 
