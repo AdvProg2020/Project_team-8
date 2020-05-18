@@ -20,8 +20,8 @@ public class Good {
     private String name;
     private String brand;
     private int price;
-    private ArrayList<User> sellers;
     private ArrayList<Buyer> buyers;
+    private Seller seller;
     private int stock;
     private Category category;
     private String categorySpecialAttributes;
@@ -29,11 +29,11 @@ public class Good {
     private int averageScore;
     private ArrayList<Opinion> opinions;
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
-    public Good(String name, String brand, int price, ArrayList<User> sellers, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
+    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
         this.name = name;
         this.brand = brand;
         this.price = price;
-        this.sellers = sellers;
+        this.seller= seller;
         this.stock = stock;
         this.category = category;
         this.categorySpecialAttributes = categorySpecialAttributes;
@@ -148,5 +148,16 @@ public class Good {
 
     public void setsalePercentageAmount(int salePercentageAmount) {
         this.salePercentageAmount = salePercentageAmount;
+    }
+
+    public Seller getSeller() {
+        return seller;
+    }
+
+    public void setSeller(Seller seller) {
+        this.seller = seller;
+    }
+    public int getAmountAfterSale(){
+        return (int) (price*(1-(double)getsalePercentageAmount()/100));
     }
 }

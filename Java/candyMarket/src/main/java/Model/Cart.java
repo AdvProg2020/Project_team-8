@@ -1,29 +1,48 @@
 package Model;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Cart {
     private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
     private String phoneNumber;
-    private int id;
-    private long date;
-    private int totalAmount;
-    private int discountAmount;
-    private HashMap<Integer,Good> goods;
+    private int totalAmount = 0;
+    private int discountAmount = 0;
+
+    public ArrayList<Good> getGoods() {
+        return goods;
+    }
+
+    public void setGoods(ArrayList<Good> goods) {
+        this.goods = goods;
+    }
+
+    private HashMap<Good,Integer> howManyGoods;
+    private ArrayList<Good> goods;
     private String buyerName;
     private CartSituation buySituation;
 
-    public Cart( int totalAmount, int discountAmount, HashMap<Integer,Good> goods, String sellerName, CartSituation buySituation) {
-        this.date = System.currentTimeMillis();
-        this.totalAmount = totalAmount;
-        this.discountAmount = discountAmount;
-        this.goods = goods;
-        this.buyerName = buyerName;
-        this.buySituation = buySituation;
-    }
+
     public void addDiscount(Discount discount){
         discountAmount = totalAmount* discount.getPercentReduction()/100;
         if(discountAmount > discount.getMaxReductionAmount()) discountAmount=discount.getMaxReductionAmount();
+        totalAmount -= discountAmount;
     }
 
 
@@ -76,19 +95,49 @@ public class Cart {
     public void setBuySituation(CartSituation buySituation) {
         this.buySituation = buySituation;
     }
-
-    public int getId() {
-        return id;
-    }
-    public void pay(){
-        Buyer.currentBuyer.setBalance(((Buyer) User.currentUser).getBalance()-User.currentUser.getCart().getTotalAmount()-User.currentUser.getCart().getDiscountAmount());
-    }
     public Boolean canPay(){
-        if(Buyer.currentBuyer.getBalance()<User.currentUser.getCart().totalAmount- User.currentUser.getCart().discountAmount)
+        if(Buyer.currentBuyer==null)
         return false;
         else return true;
     }
     public void createLogs(){
-        BuyLog buyLog = new BuyLog(totalAmount,discountAmount,goods,buyerName);
+        HashMap<Seller,HashMap<Good,Integer>> logs = new HashMap<>();
+        for (Good g:
+             User.currentUser.getCart().getGoods()) {
+            if(logs.keySet().contains(g.getSeller())) {
+                HashMap<Good, Integer> currentGoods = logs.get(g.getSeller());
+                if(currentGoods.containsValue(g))
+                    currentGoods.put(g,currentGoods.get(g)+1);
+                else currentGoods.put(g,1);
+                logs.put(g.getSeller(),currentGoods);
+            }
+            else
+            {
+                HashMap<Good,Integer> goods = new HashMap<Good,Integer>(){
+                    {
+                        put(g,1);      
+                    }
+                };
+                logs.put(g.getSeller(),goods);
+            }
+        }
+        for(Map.Entry<Seller, HashMap<Good, Integer>> entry : logs.entrySet()) {
+            Seller key = entry.getKey();
+            HashMap<Good,Integer> value = entry.getValue();
+            int totalAmount = 0;
+            int saleAmount = 0;
+            for(Map.Entry<Good,Integer> entry2 : value.entrySet()) {
+               Good key2 = entry2.getKey();
+               int value2 = entry2.getValue();
+               totalAmount+=key2.getAmountAfterSale();
+               saleAmount+=key2.getsalePercentageAmount()*key2.getPrice()/100;
+            }
+            BuyLog buyLog = new BuyLog(totalAmount-discountAmount,discountAmount,value,key.getUsername());
+            SellLog sellLog = new SellLog(totalAmount,saleAmount,value,Buyer.currentBuyer.getUsername());
+            Buyer.currentBuyer.addMyLogs(buyLog);
+            Seller.currentSeller.addMySellLog(sellLog);
+            ManageInfo.allBuyLogs.add(buyLog);
+            ManageInfo.allSellLogs.add(sellLog);
+        }
+        }
     }
-}

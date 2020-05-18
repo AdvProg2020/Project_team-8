@@ -132,8 +132,8 @@ public class PurchaseMenu extends Menu {
                 if(menuChanger == 0) purchase().run();
                 else if (menuChanger==1) this.parentMenu.run();
                 else if(menuChanger==2) {
-                    if(true)
-                        throw ViewException.insufficientFunds();
+                    if(!CartManaging.pay())
+                        throw ViewException.notLogedIn();
                     else{
                         ConsoleDesign.printColorFull(ConsoleDesign.YELLOW,"paied successfully");
                         this.parentMenu.parentMenu.run();

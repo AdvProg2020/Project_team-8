@@ -6,7 +6,7 @@ public class User {
     public enum UserType {
         BUYER, SELLER, MANAGER
     }
-    protected Cart cart;
+    protected Cart cart = new Cart();
     protected String username;
     protected String firstName;
     protected String lastName;
@@ -16,7 +16,7 @@ public class User {
     private int credit;
     private UserType type;
     public static ArrayList<User> users = ManageInfo.allUsers;
-    public static User currentUser;
+    public static User currentUser = new User();
 
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         this.username = userName;
@@ -27,6 +27,9 @@ public class User {
         this.password = passWord;
         users.add(this);
     }
+   public User(){
+
+   }
 
     public Cart getCart() {
         return cart;

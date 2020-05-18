@@ -8,7 +8,6 @@ import Model.Manager;
 import Model.Seller;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
@@ -139,6 +138,7 @@ public class ManagerMenu extends Menu{
                         break;
                     case 1 :
                         System.out.println("Enter Username :");
+                        ConsoleCmd.scanner.nextLine();
                         username = ConsoleCmd.scanner.nextLine();
                         while (!LoginOrRegisterManaging.isThereUsernameWithThisName(username)) {
                             try {
@@ -153,6 +153,7 @@ public class ManagerMenu extends Menu{
                         break;
                     case 2 :
                         System.out.println("Enter Username :");
+                        ConsoleCmd.scanner.nextLine();
                         username = ConsoleCmd.scanner.nextLine();
                         while (!LoginOrRegisterManaging.isThereUsernameWithThisName(username)) {
                             try {
@@ -294,9 +295,9 @@ public class ManagerMenu extends Menu{
                     code = ConsoleCmd.scanner.nextInt();
                 }
                 System.out.println("Enter premier date :");
-                Date startDate = new Date();
+                long startDate = ConsoleCmd.scanner.nextLong();
                 System.out.println("Enter final date :");
-                Date endDate = new Date();
+                long endDate = ConsoleCmd.scanner.nextLong();
                 System.out.println("Enter discount's percentage :");
                 int percentage = ConsoleCmd.scanner.nextInt();
                 while (percentage < 0 || percentage > 100) {
@@ -375,14 +376,14 @@ public class ManagerMenu extends Menu{
                                 break;
                             case 1 :
                                 System.out.println("Enter new Date :");
-                                Date newStartDate = new Date();
+                                long newStartDate = ConsoleCmd.scanner.nextLong();
                                 ManagerManaging.editDiscountCodeDate("startDate", newStartDate);
                                 System.out.println("Edited Successfully");
                                 this.run();
                                 break;
                             case 2 :
                                 System.out.println("Enter new Date :");
-                                Date newEndDate = new Date();
+                                long newEndDate = ConsoleCmd.scanner.nextLong();;
                                 ManagerManaging.editDiscountCodeDate("endDate", newEndDate);
                                 System.out.println("Edited Successfully");
                                 this.run();
@@ -411,6 +412,7 @@ public class ManagerMenu extends Menu{
                                 break;
                             case 5 :
                                 System.out.println("Enter new username");
+                                ConsoleCmd.scanner.nextLine();
                                 String username = ConsoleCmd.scanner.nextLine();
                                 while (!LoginOrRegisterManaging.isThereUsernameWithThisName(username) ||
                                 ManagerManaging.doesThisPersonHaveThisCode(code, username)) {
@@ -559,6 +561,7 @@ public class ManagerMenu extends Menu{
                         break;
                     case 1 :
                         System.out.println("Enter category's name :");
+                        ConsoleCmd.scanner.nextLine();
                         String category = ConsoleCmd.scanner.nextLine();
                         while (!ManagerManaging.isThereSuchCategory(category)) {
                             try {
@@ -580,6 +583,7 @@ public class ManagerMenu extends Menu{
                                 break;
                             case 1 :
                                 System.out.println("Enter new name");
+                                ConsoleCmd.scanner.nextLine();
                                 String change = ConsoleCmd.scanner.nextLine();
                                 while (ManagerManaging.isThereSuchCategory(change)) {
                                     try {
@@ -595,6 +599,7 @@ public class ManagerMenu extends Menu{
                                 break;
                             case 2 :
                                 System.out.println("Enter new attribute");
+                                ConsoleCmd.scanner.nextLine();
                                 change = ConsoleCmd.scanner.nextLine();
                                 ManagerManaging.editCategory("specialAttributes", category, change);
                                 System.out.println("Attribute added Successfully");
@@ -602,6 +607,7 @@ public class ManagerMenu extends Menu{
                                 break;
                             case 3 :
                                 System.out.println("Enter new product");
+                                ConsoleCmd.scanner.nextLine();
                                 change = ConsoleCmd.scanner.nextLine();
                                 while (ManagerManaging.isThereSuchGoodInCategory(category, change)) {
                                     try {
@@ -626,6 +632,7 @@ public class ManagerMenu extends Menu{
                         break;
                     case 2 :
                         System.out.println("Enter new categories Name :");
+                        ConsoleCmd.scanner.nextLine();
                         String name = ConsoleCmd.scanner.nextLine();
                         while (ManagerManaging.isThereSuchCategory(name)) {
                             try {
@@ -644,6 +651,7 @@ public class ManagerMenu extends Menu{
                         break;
                     case 3 :
                         System.out.println("Enter category's Name :");
+                        ConsoleCmd.scanner.nextLine();
                         name = ConsoleCmd.scanner.nextLine();
                         while (!ManagerManaging.isThereSuchCategory(name)) {
                             try {

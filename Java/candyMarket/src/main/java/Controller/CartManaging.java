@@ -53,12 +53,10 @@ public class CartManaging {
     {
         if(!User.currentUser.getCart().canPay())
             return false;
-        else User.currentUser.getCart().pay();
+        User.currentUser.getCart().createLogs();
         return true;
-
     }
     public static void purchase() {
         User.currentUser.getCart().setBuySituation(CartSituation.CONFIRMATION);
-        User.currentUser.getCart().createLogs();
     }
 }
