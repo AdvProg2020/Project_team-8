@@ -1,7 +1,12 @@
 package View;
 
 
+import Controller.BuyerManaging;
 import Controller.LoginOrRegisterManaging;
+import Controller.ManagerManaging;
+import Controller.SellerManaging;
+import Model.Buyer;
+import Model.Seller;
 
 import javax.swing.text.View;
 import java.util.ArrayList;
@@ -21,12 +26,16 @@ public class LoginOrRegister extends Menu {
 
     @Override
     public void run() throws ViewException {
-        if (!(user == LoginType.DEFAULT))
-            this.parentMenu.subMenus.get(2).run();
-        else
+        if (!(user == LoginType.DEFAULT)) {
+            this.setName("Clients Menu");
+            this.parentMenu.subMenus.put(10, logout());
+            this.parentMenu.subMenus.get(5).run();
+        }
+        else {
+            this.setName("LoginOrRegister");
             super.run();
+        }
     }
-
 
     private Menu RegisterNewPerson() {
         return new Menu("Register", this) {
@@ -207,6 +216,56 @@ public class LoginOrRegister extends Menu {
                 }
                 System.out.println("Login Successfully");
                 this.parentMenu.run();
+            }
+        };
+    }
+
+    public Menu logout() {
+        return new Menu("logout", this.parentMenu) {
+            @Override
+            public void show() {
+                System.out.println(this.getName());
+                System.out.println("0. back");
+                System.out.println("1. continue logging out");
+            }
+
+            @Override
+            public void execute() throws ViewException {
+                int menuChanger = ConsoleCmd.scanner.nextInt();
+                switch (menuChanger) {
+                    case 0 :
+                        this.parentMenu.run();
+                        break;
+                    case 1 :
+                        switch (user){
+                            case SELLER :
+                                SellerManaging.logout();
+                                System.out.println("Logged out Successfully");
+                                user = LoginType.DEFAULT;
+                                parentMenu.subMenus.remove(10);
+                                parentMenu.subMenus.get(1).run();
+                            case BUYER :
+                                BuyerManaging.logout();
+                                System.out.println("Logged out Successfully");
+                                user = LoginType.DEFAULT;
+                                parentMenu.subMenus.remove(10);
+                                parentMenu.subMenus.get(1).run();
+                            case MANAGER:
+                                ManagerManaging.logout();
+                                System.out.println("Logged out Successfully");
+                                user = LoginType.DEFAULT;
+                                parentMenu.subMenus.remove(10);
+                                parentMenu.subMenus.get(1).run();
+                        }
+                        break;
+                    default :
+                        try{
+                            throw ViewException.invalidNumber();
+                        }catch (ViewException e) {
+                            System.out.println(ViewException.invalidNumber().getMessage());
+                            this.run();
+                        }
+                }
             }
         };
     }

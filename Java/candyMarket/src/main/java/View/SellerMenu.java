@@ -242,15 +242,7 @@ public class SellerMenu extends Menu {
                 System.out.println("Enter brand of the product :");
                 String brand = ConsoleCmd.scanner.nextLine();
                 System.out.println("Enter price for your product :");
-                int price = 0;
-                while (true) {
-                    try {
-                        price = ConsoleCmd.scanner.nextInt();
-                        break;
-                    }catch (InputMismatchException e) {
-                        System.out.println(ConsoleDesign.RED + "Error : " + ConsoleDesign.WHITE+ "You Must Enter A Number");
-                    }
-                }
+                int price = ConsoleCmd.scanner.nextInt();
                 System.out.println("Enter stock of your product :");
                 int stock = ConsoleCmd.scanner.nextInt();
                 System.out.println("Enter the category it belongs :");
@@ -408,7 +400,7 @@ public class SellerMenu extends Menu {
                         SellerManaging.logout();
                         System.out.println("Logged out Successfully");
                         user = LoginType.DEFAULT;
-                        this.parentMenu.parentMenu.parentMenu.run();
+                        this.parentMenu.parentMenu.parentMenu.subMenus.get(1).run();
                         break;
                     default :
                         try{
