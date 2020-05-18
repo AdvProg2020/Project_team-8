@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/GoodManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/GoodManaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/ManagerManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/ManagerManaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/ManagerMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +74,7 @@
       <workItem from="1589707395468" duration="13398000" />
       <workItem from="1589794966270" duration="578000" />
       <workItem from="1589795790945" duration="12963000" />
-      <workItem from="1589831771698" duration="7914000" />
+      <workItem from="1589831771698" duration="9264000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -192,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589811958207</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="update menu changing">
+      <created>1589839989731</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1589839989731</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +216,8 @@
     <MESSAGE value="show orders in BuyerMenu" />
     <MESSAGE value="finalize BuyerMenu" />
     <MESSAGE value="fix bugs in some Menus" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs in some Menus" />
+    <MESSAGE value="update menu changing" />
+    <option name="LAST_COMMIT_MESSAGE" value="update menu changing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589837117546">
@@ -224,10 +228,10 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589811956724">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589839987237">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589811956724" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589839987237" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588513942136">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -277,11 +281,19 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1589832465283" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589811965296">
+    <state x="121" y="50" key="MergeDialog" timestamp="1589840419472">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419472" />
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1589840419485">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419485" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589840441493">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1589763404146" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589811965296" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589840441493" />
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1589794979638">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

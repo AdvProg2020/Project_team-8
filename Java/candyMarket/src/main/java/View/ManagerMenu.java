@@ -575,8 +575,7 @@ public class ManagerMenu extends Menu{
                         System.out.println("chose what you want to change\n" +
                                 "0. break\n" +
                                 "1. name\n" +
-                                "2. special attributes\n" +
-                                "3. good");
+                                "2. special attributes\n");
                         int edit = ConsoleCmd.scanner.nextInt();
                         switch (edit) {
                             case 0 :
@@ -606,22 +605,6 @@ public class ManagerMenu extends Menu{
                                 System.out.println("Attribute added Successfully");
                                 this.run();
                                 break;
-                            case 3 :
-                                System.out.println("Enter new product");
-                                ConsoleCmd.scanner.nextLine();
-                                change = ConsoleCmd.scanner.nextLine();
-                                while (ManagerManaging.isThereSuchGoodInCategory(category, change)) {
-                                    try {
-                                        throw ViewException.existingGoodInCategory();
-                                    }catch (ViewException e) {
-                                        System.out.println(ViewException.existingGoodInCategory().getMessage());
-                                    }
-                                    change = ConsoleCmd.scanner.nextLine();
-                                }
-                                ManagerManaging.editCategory("goods", category, change);
-                                System.out.println("Product added Successfully");
-                                this.run();
-                                break;
                             default :
                                 try {
                                     throw ViewException.invalidNumber();
@@ -643,10 +626,28 @@ public class ManagerMenu extends Menu{
                             }
                             name = ConsoleCmd.scanner.nextLine();
                         }
-                        System.out.println("to add goods and attributes on category go to edit category");
-                        ArrayList<Good> goods = new ArrayList<>();
+                        System.out.println("If you want this category to be subcategory of another category, Enter that category's name \n" +
+                                " (if you don't want it to be a subcategory Enter \"null\") :");
+                        String subCategoryOf = ConsoleCmd.scanner.nextLine();
+                        while (!ManagerManaging.isThereSuchCategory(subCategoryOf) &&
+                                !subCategoryOf.equalsIgnoreCase("null")) {
+                            try {
+                                throw ViewException.notExistingCategory();
+                            }catch (ViewException e) {
+                                System.out.println(ViewException.notExistingCategory().getMessage());
+                            }
+                            subCategoryOf = ConsoleCmd.scanner.nextLine();
+                        }
                         ArrayList<String> attributes = new ArrayList<>();
-                        ManagerManaging.addCategory(name, goods, attributes);
+                        System.out.println("Enter attributes of this product, when done enter \"done\" :");
+                        while (true) {
+                            String note = ConsoleCmd.scanner.nextLine();
+                            if (note.equalsIgnoreCase("done"))
+                                break;
+                            else
+                                attributes.add(note);
+                        }
+                        ManagerManaging.addCategory(name, subCategoryOf, attributes);
                         System.out.println("Category added Successfully");
                         this.run();
                         break;

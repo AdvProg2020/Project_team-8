@@ -119,7 +119,7 @@ public class ManagerManaging {
         ;
     }
 
-    public static void addCategory(String name, ArrayList<Good> goods, ArrayList<String> Attributes) {
+    public static void addCategory(String categoryName, String subCategoryOf, ArrayList<String> note) {
         ;
     }
 
