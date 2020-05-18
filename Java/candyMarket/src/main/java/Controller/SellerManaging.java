@@ -49,8 +49,8 @@ public class SellerManaging {
         return false;
     }
 
-    public static boolean addProduct(ArrayList<String> details) {
-        return false;
+    public static void addProduct(String name, String brand, int price, int stock, String category, String categorySpecialAttributes, String detailInfo) {
+        ;
     }
 
     public static boolean removeProduct(int id) {
