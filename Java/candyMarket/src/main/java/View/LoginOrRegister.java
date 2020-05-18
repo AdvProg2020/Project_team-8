@@ -124,7 +124,6 @@ public class LoginOrRegister extends Menu {
                                     info.put("workType", "workshop");
                                     break;
                             }
-                            ConsoleCmd.scanner.nextLine();
                             System.out.println("Enter your workplace name :");
                             ConsoleCmd.scanner.nextLine();
                             String companyName = ConsoleCmd.scanner.nextLine();

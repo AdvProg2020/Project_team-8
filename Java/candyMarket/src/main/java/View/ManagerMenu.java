@@ -123,6 +123,7 @@ public class ManagerMenu extends Menu{
                 System.out.println(this.getName());
                 ArrayList<String> allUsers = ManagerManaging.showAllUsers();
                 System.out.println(allUsers);
+                System.out.println("0. back");
             }
 
             @Override

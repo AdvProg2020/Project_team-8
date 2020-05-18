@@ -2,7 +2,9 @@ package View;
 
 import Controller.BuyerManaging;
 import Controller.ManagerManaging;
+import Model.Buyer;
 
+import javax.crypto.spec.PSource;
 import java.util.HashMap;
 
 public class BuyerMenu extends Menu {
@@ -10,6 +12,8 @@ public class BuyerMenu extends Menu {
         super(name, parentMenu);
         HashMap<Integer, Menu> subMenus = new HashMap<>();
         subMenus.put(1, viewPersonalInfo());
+        subMenus.put(2, new PurchaseMenu("Cart Menu", this));
+        subMenus.put(3, viewOrders());
         this.setSubMenus(subMenus);
     }
 
@@ -98,6 +102,75 @@ public class BuyerMenu extends Menu {
                     }
                 } else if (menuChanger == 0)
                     this.parentMenu.run();
+            }
+        };
+    }
+
+    private Menu viewOrders() {
+        return new Menu("View Orders", this) {
+            @Override
+            public void show() {
+                System.out.println(this.getName());
+                System.out.println(BuyerManaging.viewOrders());
+                System.out.println("0. back\n" +
+                        "1. show order\n" +
+                        "2. rate a product");
+            }
+
+            @Override
+            public void execute() throws ViewException {
+                int menuChanger = ConsoleCmd.scanner.nextInt();
+                switch (menuChanger) {
+                    case 0 :
+                        this.parentMenu.run();
+                        break;
+                    case 1 :
+                        System.out.println("Enter a product ID :");
+                        int id = ConsoleCmd.scanner.nextInt();
+                        while (!BuyerManaging.isBuyerBoughtProductWithId(id)) {
+                            try {
+                                throw ViewException.invalidIDNumberForBuyer();
+                            }catch (ViewException e) {
+                                System.out.println(ViewException.invalidIDNumberForBuyer().getMessage());
+                            }
+                            id =  ConsoleCmd.scanner.nextInt();
+                        }
+                        System.out.println(BuyerManaging.showOrder(id));
+                        this.run();
+                        break;
+                    case 2 :
+                        System.out.println("Enter a product ID :");
+                        id = ConsoleCmd.scanner.nextInt();
+                        while (!BuyerManaging.isBuyerBoughtProductWithId(id)) {
+                            try {
+                                throw ViewException.invalidIDNumberForBuyer();
+                            }catch (ViewException e) {
+                                System.out.println(ViewException.invalidIDNumberForBuyer().getMessage());
+                            }
+                            id =  ConsoleCmd.scanner.nextInt();
+                        }
+                        System.out.println("Choose a number between 1 - 5 for rating :");
+                        int score = ConsoleCmd.scanner.nextInt();
+                        while (score < 1 || score > 5) {
+                            try {
+                                throw ViewException.invalidScoreNumber();
+                            }catch (ViewException e) {
+                                System.out.println(ViewException.invalidScoreNumber().getMessage());
+                            }
+                            score = ConsoleCmd.scanner.nextInt();
+                        }
+                        BuyerManaging.rateProduct(id, score);
+                        System.out.println("You have rated item #" + id + " : " + score);
+                        this.run();
+                        break;
+                    default :
+                        try {
+                            throw ViewException.invalidNumber();
+                        }catch (ViewException e) {
+                            System.out.println(ViewException.invalidNumber().getMessage());
+                        }
+                        this.run();
+                }
             }
         };
     }

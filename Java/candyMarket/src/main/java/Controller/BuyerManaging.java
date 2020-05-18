@@ -22,16 +22,7 @@ public class BuyerManaging {
         ;
     }
 
-
-    public static void receiverInfo() {
-        ;
-    }
-
-    public static boolean discountCodeEntry() {
-        return false;
-    }
-
-    public static boolean payment() {
+    public static boolean isBuyerBoughtProductWithId(int id) {
         return false;
     }
 
@@ -39,12 +30,12 @@ public class BuyerManaging {
         return null;
     }
 
-    public static Good showOrder() {
+    public static String showOrder(int id) {
         return null;
     }
 
-    public static boolean rateProduct() {
-        return false;
+    public static void rateProduct(int id, int score) {
+        ;
     }
 
     public static int viewBalance() {
