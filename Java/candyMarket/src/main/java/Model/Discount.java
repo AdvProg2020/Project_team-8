@@ -5,13 +5,13 @@ import java.util.Date;
 
 public class Discount {
     private int code;
-    private Date startDate;
-    private Date endDate;
+    private long startDate;
+    private long endDate;
     private int percentReduction;
     private int maxReductionAmount;
     private int usageNumber;
     private ArrayList<User> users;
-    public Discount(int code, Date startDate, Date endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
+    public Discount(int code, long startDate, long endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
         this.code = code;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -27,19 +27,19 @@ public class Discount {
         this.code = code;
     }
 
-    public Date getStartDate() {
+    public long getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(long startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public long getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(long endDate) {
         this.endDate = endDate;
     }
 
