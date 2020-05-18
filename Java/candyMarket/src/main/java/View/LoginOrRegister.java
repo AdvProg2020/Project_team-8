@@ -69,7 +69,7 @@ public class LoginOrRegister extends Menu {
                     }catch (ViewException e) {
                         if (!emailValidation(email))
                             System.out.println(ViewException.invalidEmailFormat().getMessage());
-                        if (LoginOrRegisterManaging.isThereUsernameWithThisName(email))
+                        if (LoginOrRegisterManaging.isThereASameEmail(email))
                             System.out.println(ViewException.existingEmail().getMessage());
                     }
                     email = ConsoleCmd.scanner.nextLine();
@@ -124,7 +124,6 @@ public class LoginOrRegister extends Menu {
                                     info.put("workType", "workshop");
                                     break;
                             }
-                            ConsoleCmd.scanner.nextLine();
                             System.out.println("Enter your workplace name :");
                             String companyName = ConsoleCmd.scanner.nextLine();
                             info.put("companyName", companyName);

@@ -1,12 +1,16 @@
 package View;
 
+import Controller.ManagerManaging;
 import Controller.SellerManaging;
 import Model.Seller;
+import com.sun.tools.jconsole.JConsoleContext;
 
 import javax.swing.text.View;
 import java.beans.XMLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -105,6 +109,7 @@ public class SellerMenu extends Menu {
                             }catch (ViewException e) {
                                 System.out.println(ViewException.invalidNumber().getMessage());
                             }
+                            this.run();
                     }
                 } else if (menuChanger == 0)
                     this.parentMenu.run();
@@ -184,8 +189,8 @@ public class SellerMenu extends Menu {
 
             @Override
             public void execute() throws ViewException {
-                System.out.println("1. view Product" +
-                        "2. view buyers" +
+                System.out.println("1. view Product\n" +
+                        "2. view buyers\n" +
                         "3. edit");
                 int menuChanger = ConsoleCmd.scanner.nextInt();
                 int id;
@@ -230,17 +235,43 @@ public class SellerMenu extends Menu {
 
             @Override
             public void execute() throws ViewException {
-                System.out.println("enter fields of product");
+                System.out.println("Enter the name of product :");
                 ConsoleCmd.scanner.nextLine();
-                String command = ConsoleCmd.scanner.nextLine();
-                ArrayList<String> newProduct = new ArrayList<String>();
-                if (command.charAt(0) == '0') {
+                String name = ConsoleCmd.scanner.nextLine();
+                if (name.charAt(0) == '0' && name.length() == 1)
                     this.parentMenu.run();
+                System.out.println("Enter brand of the product :");
+                String brand = ConsoleCmd.scanner.nextLine();
+                System.out.println("Enter price for your product :");
+                int price = 0;
+                while (true) {
+                    try {
+                        price = ConsoleCmd.scanner.nextInt();
+                        break;
+                    }catch (InputMismatchException e) {
+                        System.out.println(ConsoleDesign.RED + "Error : " + ConsoleDesign.WHITE+ "You Must Enter A Number");
+                    }
                 }
-                else {
-                    newProduct.add(command);
+                System.out.println("Enter stock of your product :");
+                int stock = ConsoleCmd.scanner.nextInt();
+                System.out.println("Enter the category it belongs :");
+                ConsoleCmd.scanner.nextLine();
+                String category = ConsoleCmd.scanner.nextLine();
+                while (!ManagerManaging.isThereSuchCategory(category)) {
+                    try {
+                        throw ViewException.notExistingCategory();
+                    }catch (ViewException e) {
+                        System.out.println(ViewException.notExistingCategory().getMessage());
+                    }
+                    category = ConsoleCmd.scanner.nextLine();
                 }
-                System.out.println(SellerManaging.addProduct(newProduct));
+                System.out.println("Enter special attributes");
+                String categorySpecialAttributes = ConsoleCmd.scanner.nextLine();
+                System.out.println("Enter details of the product");
+                String detailInfo = ConsoleCmd.scanner.nextLine();
+//                ArrayList<String> newProduct = new ArrayList<String>();
+                SellerManaging.addProduct(name, brand, price, stock, category, categorySpecialAttributes, detailInfo);
+                System.out.println("Product added successfully");
                 this.parentMenu.run();
             }
         };

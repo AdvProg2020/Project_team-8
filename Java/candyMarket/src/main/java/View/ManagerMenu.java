@@ -108,6 +108,7 @@ public class ManagerMenu extends Menu{
                             }catch (ViewException e) {
                                 System.out.println(ViewException.invalidNumber().getMessage());
                             }
+                            this.run();
                     }
                 } else if (menuChanger == 0)
                     this.parentMenu.run();
@@ -122,6 +123,7 @@ public class ManagerMenu extends Menu{
                 System.out.println(this.getName());
                 ArrayList<String> allUsers = ManagerManaging.showAllUsers();
                 System.out.println(allUsers);
+                System.out.println("0. back");
             }
 
             @Override
@@ -197,7 +199,7 @@ public class ManagerMenu extends Menu{
                             }catch (ViewException e) {
                                 if (!emailValidation(email))
                                     System.out.println(ViewException.invalidEmailFormat().getMessage());
-                                if (LoginOrRegisterManaging.isThereUsernameWithThisName(email))
+                                if (LoginOrRegisterManaging.isThereASameEmail(email))
                                     System.out.println(ViewException.existingEmail().getMessage());
                             }
                             email = ConsoleCmd.scanner.nextLine();

@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Buyer;
+import Model.Discount;
 import Model.Good;
 
 import java.util.ArrayList;
@@ -9,34 +10,20 @@ import java.util.Scanner;
 
 public class BuyerManaging {
     private static Buyer buyer;
-    private static Scanner scanner;
 
     public static void setBuyer() {
         ;
-    }
-
-    public static void setScanner(Scanner scanner) {
-        BuyerManaging.scanner = scanner;
     }
 
     public static String showPersonalInfo(){
         return null;
     }
 
-    public static boolean editAFieldOfOfInfo() {
-        return false;
-    }
-
-
-    public static void receiverInfo() {
+    public static void editAFieldOfOfInfo(String toBeEditedField, String newField) {
         ;
     }
 
-    public static boolean discountCodeEntry() {
-        return false;
-    }
-
-    public static boolean payment() {
+    public static boolean isBuyerBoughtProductWithId(int id) {
         return false;
     }
 
@@ -44,19 +31,24 @@ public class BuyerManaging {
         return null;
     }
 
-    public static Good showOrder() {
+    public static String showOrder(int id) {
         return null;
     }
 
-    public static boolean rateProduct() {
-        return false;
+    public static void rateProduct(int id, int score) {
+        ;
     }
 
     public static int viewBalance() {
         return 0;
     }
 
-    public static ArrayList<String> viewDiscountCodes() {
+    public static ArrayList<Discount> viewDiscountCodes() {
+        //add a toString method to Discount in model
         return null;
+    }
+
+    public static void logout() {
+        ;
     }
 }

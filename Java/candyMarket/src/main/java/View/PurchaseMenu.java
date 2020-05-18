@@ -35,12 +35,14 @@ public class PurchaseMenu extends Menu {
     }
     private Menu showProducts() {
         return new Menu("Show Products",this) {
-            menuType menuType;
+            menuType menuType = PurchaseMenu.menuType.CHOOSE;
             ArrayList<String> products  = CartManaging.showProductsFromCart();
             @Override
             public void show() {
+                ArrayList<String> products  = CartManaging.showProductsFromCart();
                 System.out.println(this.getName());
                 System.out.println("0. back");
+                System.out.println(menuType.toString()+" MODE ");
                 System.out.println("press + for increase type");
                 System.out.println("press - for decrease type");
                 System.out.println("press c for choose type");
@@ -52,12 +54,13 @@ public class PurchaseMenu extends Menu {
             }
             @Override
             public void execute() throws ViewException {
-                String line = ConsoleCmd.scanner.nextLine();
-                if(line == "+")
+                String line =  ConsoleCmd.scanner.nextLine();
+                if(line .equals("")) line = ConsoleCmd.scanner.nextLine();
+                if(line.equals("+"))
                     menuType = PurchaseMenu.menuType.INCREASE;
-                else if(line == "-")
+                else if(line.equals("-"))
                     menuType = PurchaseMenu.menuType.DECREASE;
-                else if(line=="c")
+                else if(line.equals("c"))
                     menuType = PurchaseMenu.menuType.CHOOSE;
                 else {
                     int menuChanger = Integer.parseInt(line);
@@ -67,11 +70,17 @@ public class PurchaseMenu extends Menu {
                         if(menuType == PurchaseMenu.menuType.CHOOSE)
                         new ProductMenu(this, products.get(menuChanger));
                         else if(menuType == PurchaseMenu.menuType.INCREASE)
-                            CartManaging.increaseProductNumberInCart(products.get(menuChanger));
-                        else
+                            if(!CartManaging.increaseProductNumberInCart(products.get(menuChanger)))
+                                throw ViewException.outOfStock();
+                            else
+                        System.out.println("successfully increased");
+                        else {
                             CartManaging.decreaseProductNumberInCart(products.get(menuChanger));
+                            System.out.println("successfully decreased");
+                        }
                     }
                 }
+                run();
             }
         };
     }

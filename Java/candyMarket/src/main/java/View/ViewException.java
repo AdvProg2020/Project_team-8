@@ -6,6 +6,9 @@ public class ViewException extends Exception {
     public static ViewException notLogedIn(){
         return new ViewException("You should login for pay your cart");
     }
+    public static ViewException outOfStock(){
+        return new ViewException("There is no more of this good");
+    }
     public static ViewException cantComment(){
         return new ViewException("you should buy the good at first");
     }
@@ -57,8 +60,14 @@ public class ViewException extends Exception {
     public static ViewException invalidIDNumber(){
         return new ViewException("Invalid id number, please try again :");
     }
+    public static ViewException invalidIDNumberForBuyer(){
+        return new ViewException("Invalid id number, either you have not purchased this item or this id does not exist, please try again :");
+    }
     public static ViewException invalidDiscountPercentage(){
         return new ViewException("Percentage must be between 0 and 100, please try again :");
+    }
+    public static ViewException invalidScoreNumber(){
+        return new ViewException("Score must be between 1 and 5, please try again :");
     }
 
     public ViewException (String msg){
