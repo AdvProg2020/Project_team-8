@@ -12,7 +12,9 @@ public class Good {
     public void setDateModified(long dateModified) {
         this.dateModified = dateModified;
     }
-
+    public int getPriceAfterSale(){
+        return (int) (price*(1-(double)salePercentageAmount/100));
+    }
     private long dateModified;
     private int salePercentageAmount;
     private int id;
@@ -156,8 +158,5 @@ public class Good {
 
     public void setSeller(Seller seller) {
         this.seller = seller;
-    }
-    public int getAmountAfterSale(){
-        return (int) (price*(1-(double)getsalePercentageAmount()/100));
     }
 }
