@@ -92,9 +92,6 @@ public class Manager extends User {
 
     }
 
-    public void addCategory() {
-
-    }
 
     public void removeCategory(Category category) {
 

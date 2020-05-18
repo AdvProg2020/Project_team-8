@@ -10,10 +10,10 @@ public class Category {
     private ArrayList<String> specialAttributes;
     static ArrayList<Category> categories = ManageInfo.allCategories;
 
-    public Category(String name, ArrayList<Good> goods, ArrayList<String> specialAttributes) {
+    public Category(String name, ArrayList<String> specialAttributes) {
         this.name = name;
-        this.goods = goods;
         this.specialAttributes = specialAttributes;
+        categories.add(this);
     }
 
     public String getName() {

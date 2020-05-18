@@ -112,15 +112,19 @@ public class ManagerManaging {
     }
 
     public static boolean isThereSuchGoodInCategory(String categoryName, String goodName) {
-        return false;
+        return Category.isThisProductInCategory(Category.getCategoryByName(categoryName), goodName);
     }
 
-    public static void editCategory(String toBeEditedField, String categoryName, String newField) {
+    public static void editCategory(String toBeEditedField, String categoryName, ArrayList<String> newField) {
         ;
     }
 
-    public static void addCategory(String name, ArrayList<Good> goods, ArrayList<String> Attributes) {
-        ;
+    public static void addCategory(String categoryName, String subCategoryOf, ArrayList<String> note) {
+        new Category(categoryName, note);
+        if (!subCategoryOf.equals("null")) {
+            Category.getCategoryByName(subCategoryOf).setSubCategory(Category.getCategoryByName(categoryName));
+        }
+
     }
 
     public static void removeCategory(String name) {

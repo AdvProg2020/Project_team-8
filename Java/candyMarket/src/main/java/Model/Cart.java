@@ -149,7 +149,7 @@ public class Cart {
                Good key2 = entry2.getKey();
                int value2 = entry2.getValue();
                totalAmount+=key2.getPriceAfterSale();
-               saleAmount+=key2.getsalePercentageAmount()*key2.getPrice()/100;
+               saleAmount+=key2.getSalePercentageAmount()*key2.getPrice()/100;
             }
             BuyLog buyLog = new BuyLog(totalAmount-discountAmount,discountAmount,value,key.getUsername());
             SellLog sellLog = new SellLog(totalAmount,saleAmount,value,Buyer.currentBuyer.getUsername());
