@@ -80,8 +80,12 @@ public class Manager extends User {
 
 
 
-    public ArrayList<String> viewAllCategories() {
-        return null;
+    public static ArrayList<String> viewAllCategories() {
+        ArrayList<String> categoriesName = new ArrayList<>();
+        for (Category category : Category.categories) {
+            categoriesName.add(category.getName());
+        }
+        return categoriesName;
     }
 
     public void editCategory(Category category) {

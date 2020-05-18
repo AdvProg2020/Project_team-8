@@ -104,11 +104,11 @@ public class ManagerManaging {
     }
 
     public static ArrayList<String> manageCategories() {
-        return null;
+        return Manager.viewAllCategories();
     }
 
     public static boolean isThereSuchCategory(String categoryName) {
-        return false;
+        return Category.isThisCategoryExist(categoryName);
     }
 
     public static boolean isThereSuchGoodInCategory(String categoryName, String goodName) {
