@@ -51,7 +51,7 @@ public class LoginOrRegister extends Menu {
                     }
                     username = ConsoleCmd.scanner.nextLine();
                 }
-                info.put("username", username);
+                info.put("username", username.trim());
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 info.put("password", password);
@@ -69,7 +69,7 @@ public class LoginOrRegister extends Menu {
                     }catch (ViewException e) {
                         if (!emailValidation(email))
                             System.out.println(ViewException.invalidEmailFormat().getMessage());
-                        if (LoginOrRegisterManaging.isThereUsernameWithThisName(email))
+                        if (LoginOrRegisterManaging.isThereASameEmail(email))
                             System.out.println(ViewException.existingEmail().getMessage());
                     }
                     email = ConsoleCmd.scanner.nextLine();
@@ -179,7 +179,7 @@ public class LoginOrRegister extends Menu {
             public void execute() throws ViewException {
                 System.out.println("Enter A UserName :");
                 ConsoleCmd.scanner.nextLine();
-                String username = ConsoleCmd.scanner.nextLine();
+                String username = ConsoleCmd.scanner.nextLine().trim();
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 int type = 0;
@@ -190,7 +190,7 @@ public class LoginOrRegister extends Menu {
                         System.out.println(ViewException.invalidLogin().getMessage());
                     }
                     System.out.println("Enter A UserName :");
-                    username = ConsoleCmd.scanner.nextLine();
+                    username = ConsoleCmd.scanner.nextLine().trim();
                     System.out.println("Enter your Password :");
                     password = ConsoleCmd.scanner.nextLine();
                 }

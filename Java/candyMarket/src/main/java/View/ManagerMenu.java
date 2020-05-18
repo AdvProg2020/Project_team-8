@@ -131,7 +131,6 @@ public class ManagerMenu extends Menu{
                 System.out.println("1. view user\n" +
                         "2. delete user\n" +
                         "3. create manager profile");
-                ConsoleCmd.scanner.next();
                 int menuChanger = ConsoleCmd.scanner.nextInt();
                 String username;
                 switch (menuChanger) {
@@ -200,7 +199,7 @@ public class ManagerMenu extends Menu{
                             }catch (ViewException e) {
                                 if (!emailValidation(email))
                                     System.out.println(ViewException.invalidEmailFormat().getMessage());
-                                if (LoginOrRegisterManaging.isThereUsernameWithThisName(email))
+                                if (LoginOrRegisterManaging.isThereASameEmail(email))
                                     System.out.println(ViewException.existingEmail().getMessage());
                             }
                             email = ConsoleCmd.scanner.nextLine();

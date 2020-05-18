@@ -185,8 +185,8 @@ public class SellerMenu extends Menu {
 
             @Override
             public void execute() throws ViewException {
-                System.out.println("1. view Product" +
-                        "2. view buyers" +
+                System.out.println("1. view Product\n" +
+                        "2. view buyers\n" +
                         "3. edit");
                 int menuChanger = ConsoleCmd.scanner.nextInt();
                 int id;
