@@ -82,7 +82,7 @@ public class Buyer extends User {
     public ArrayList<BuyLog> getMyLogs() {
         return myLogs;
     }
-
+    
     public void setMyLogs(ArrayList<BuyLog> myLogs) {
         this.myLogs = myLogs;
     }
