@@ -215,7 +215,7 @@ public class ManagerMenu extends Menu{
                             phoneNumber = ConsoleCmd.scanner.nextLine();
                         }
                         info.put("phoneNumber", phoneNumber);
-                        info.put("type", "Manager");
+                        info.put("type", "manager");
                         LoginOrRegisterManaging.register(info);
                         System.out.println("Registered Successfully");
                         this.run();

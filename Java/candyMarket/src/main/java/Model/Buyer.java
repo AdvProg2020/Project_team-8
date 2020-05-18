@@ -23,14 +23,6 @@ public class Buyer extends User {
         this.cart = cart;
     }
 
-    public int getBalance() {
-        return balance;
-    }
-
-    public void setBalance(int balance) {
-        this.balance = balance;
-    }
-
     public static void CreateNewBuyer() {
 
     }

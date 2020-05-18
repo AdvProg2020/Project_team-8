@@ -35,10 +35,6 @@ public class ManagerManaging {
         Manager.deleteUser(username);
     }
 
-    public static void createNewManager(HashMap<String, String> info) {
-        ;
-    }
-
     public static HashMap<Integer, String> manageAllProducts() {
         return null;
     }
