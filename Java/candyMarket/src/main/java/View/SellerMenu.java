@@ -105,6 +105,7 @@ public class SellerMenu extends Menu {
                             }catch (ViewException e) {
                                 System.out.println(ViewException.invalidNumber().getMessage());
                             }
+                            this.run();
                     }
                 } else if (menuChanger == 0)
                     this.parentMenu.run();
