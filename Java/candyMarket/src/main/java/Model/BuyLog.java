@@ -42,6 +42,7 @@ public class BuyLog {
         this.discountAmount = discountAmount;
     }
 
+
     public CartSituation getBuySituation() {
         return buySituation;
     }

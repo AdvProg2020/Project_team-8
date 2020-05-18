@@ -133,13 +133,13 @@ public class User {
         return null;
     }
 
-    public String viewUserPersonalInfo(User user) {
-        return "Username: " + user.getUsername() + "\n"
-                + "Password: " + user.getPassword() + "\n"
-                + "First name: " + user.getFirstName() + "\n"
-                + "Last name: " + user.getLastName() + "\n"
-                + "Email: " + user.getEmail() + "\n"
-                + "Phone number" + user.getPhoneNumber() + "\n";
+    public String viewUserPersonalInfo() {
+        return "Username: " + this.getUsername() + "\n"
+                + "Password: " + this.getPassword() + "\n"
+                + "First name: " + this.getFirstName() + "\n"
+                + "Last name: " + this.getLastName() + "\n"
+                + "Email: " + this.getEmail() + "\n"
+                + "Phone number" + this.getPhoneNumber() + "\n";
     }
 
     public void editPersonalInfo(String toBeEditedField, String newField) {

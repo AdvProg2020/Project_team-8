@@ -1,7 +1,9 @@
 package Controller;
 
+import Model.Buyer;
 import Model.Good;
 import Model.Seller;
+import Model.User;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -16,11 +18,11 @@ public class SellerManaging {
     }
 
     public static String viewPersonalInfo() {
-        return null;
+        return User.currentUser.viewUserPersonalInfo();
     }
 
-    public static boolean editFieldOfInfo(String toBeEditedField,String newField) {
-        return true;
+    public static void editFieldOfInfo(String toBeEditedField,String newField) {
+        User.currentUser.editPersonalInfo(toBeEditedField, newField);
     }
 
     public static String viewCompaniesInfo() {
@@ -80,6 +82,7 @@ public class SellerManaging {
     }
 
     public static void logout() {
-
+        User.currentUser = null;
+        Buyer.currentBuyer = null;
     }
 }

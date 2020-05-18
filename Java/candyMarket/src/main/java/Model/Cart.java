@@ -1,10 +1,5 @@
 package Model;
 
-import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
-
-import javax.jws.soap.SOAPBinding;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -49,6 +44,24 @@ public class Cart {
         if(discountAmount > discount.getMaxReductionAmount()) discountAmount=discount.getMaxReductionAmount();
         totalAmount -= discountAmount;
     }
+
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 
     public int getTotalAmount() {
         return totalAmount;

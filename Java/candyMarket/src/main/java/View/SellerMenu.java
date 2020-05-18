@@ -80,23 +80,23 @@ public class SellerMenu extends Menu {
                     }
                     switch (selectedFieldToBeEdited) {
                         case 1:
-                            System.out.println(SellerManaging.editFieldOfInfo("firstName", newField));
+                            SellerManaging.editFieldOfInfo("firstName", newField);
                             this.run();
                             break;
                         case 2:
-                            System.out.println(SellerManaging.editFieldOfInfo("lastName", newField));
+                            SellerManaging.editFieldOfInfo("lastName", newField);
                             this.run();
                             break;
                         case 3:
-                            System.out.println(SellerManaging.editFieldOfInfo("email", newField));
+                            SellerManaging.editFieldOfInfo("email", newField);
                             this.run();
                             break;
                         case 4:
-                            System.out.println(SellerManaging.editFieldOfInfo("telephoneNumber", newField));
+                            SellerManaging.editFieldOfInfo("telephoneNumber", newField);
                             this.run();
                             break;
                         case 5:
-                            System.out.println(SellerManaging.editFieldOfInfo("password", newField));
+                            SellerManaging.editFieldOfInfo("password", newField);
                             this.run();
                             break;
                         default:
