@@ -1,8 +1,10 @@
 package View;
 
+import Model.ManageInfo;
+
 public class ViewException extends Exception {
-    public static ViewException insufficientFunds(){
-        return new ViewException("Insufficient funds");
+    public static ViewException notLogedIn(){
+        return new ViewException("You should login for pay your cart");
     }
     public static ViewException cantComment(){
         return new ViewException("you should buy the good at first");

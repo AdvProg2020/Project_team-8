@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 public class Buyer extends User {
     private ArrayList<BuyLog> myBuyLog;
-    private Cart cart;
     private ArrayList<Discount> myDiscounts;
     private ArrayList<BuyLog> myLogs;
     private int balance;
     public static Buyer currentBuyer;
-    public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, UserType type) {
-        super(userName, firstName, lastName, email, phoneNumber, passWord, type);
+    public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
+        super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.balance=0;
     }
 
@@ -74,4 +73,22 @@ public class Buyer extends User {
     }
 
 
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public ArrayList<BuyLog> getMyLogs() {
+        return myLogs;
+    }
+
+    public void setMyLogs(ArrayList<BuyLog> myLogs) {
+        this.myLogs = myLogs;
+    }
+    public void addMyLogs(BuyLog buyLog) {
+        this.myBuyLog.add(buyLog);
+    }
 }

@@ -11,17 +11,18 @@ public class BuyLog {
     private long date;
     private int totalAmount;
     private int discountAmount;
-    private HashMap<Integer,Good> goods;
+    private HashMap<Good,Integer> goods;
     private String buyerName;
     private CartSituation buySituation;
 
-    public BuyLog(int totalAmount, int discountAmount, HashMap<Integer,Good> goods, String sellerName) {
+    public BuyLog(int totalAmount, int discountAmount, HashMap<Good,Integer> goods, String sellerName) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
         this.goods = goods;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.CONFIRMATION;
+        this.id = ManageInfo.allBuyLogs.size();
     }
 
 
@@ -39,22 +40,6 @@ public class BuyLog {
 
     public void setDiscountAmount(int discountAmount) {
         this.discountAmount = discountAmount;
-    }
-
-    public ArrayList<Good> getGoods() {
-        return goods;
-    }
-
-    public void setGoods(ArrayList<Good> goods) {
-        this.goods = goods;
-    }
-
-    public String getSellerName() {
-        return SellerName;
-    }
-
-    public void setSellerName(String sellerName) {
-        SellerName = sellerName;
     }
 
     public CartSituation getBuySituation() {
