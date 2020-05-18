@@ -126,6 +126,7 @@ public class ManagerManaging {
     }
 
     public static void logout() {
-
+        User.currentUser = null;
+        Manager.currentManager = null;
     }
 }

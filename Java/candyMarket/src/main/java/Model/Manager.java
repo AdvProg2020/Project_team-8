@@ -30,14 +30,11 @@ public class Manager extends User {
     }
 
     public static String viewUser(String username) {
-        return User.getUserByUsername(username).viewUserPersonalInfo();
+        return User.getUserByUsername(username).viewUserPersonalInfo() + User.getUserByUsername(username).getType() + "\n";
     }
 
     public static void deleteUser(String username) {
         User.users.remove(User.getUserByUsername(username));
-    }
-    public void createNewManager() {
-
     }
 
     public ArrayList<String> viewAllGoods() {
@@ -73,15 +70,34 @@ public class Manager extends User {
     }
 
     public ArrayList<String> viewAllRequests() {
-        return null;
+        ArrayList<String> allRequests = new ArrayList<>();
+        for (Request request : Request.requests) {
+            allRequests.add(request.getRequest());
+        }
+        return allRequests;
     }
 
     public ArrayList<String> viewRequestDetails(Request request) {
-        return null;
+        ArrayList<String> details = new ArrayList<>();
+        switch (request.requestType) {
+            case SELLER_REGISTER:
+                details.add(request.viewSellerRegisterDetails());
+                break;
+        }
+
+        return details;
     }
 
-    public boolean replyRequest(Request request) {
-        return true;
+    public void acceptRequest(Request request) {
+        switch (request.requestType) {
+            case SELLER_REGISTER:
+                request.getSeller().confirmSeller();
+                break;
+        }
+    }
+
+    public void declineRequest(Request request) {
+        
     }
 
     public ArrayList<String> viewAllCategories() {

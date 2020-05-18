@@ -1,17 +1,25 @@
 package Model;
 
+import java.nio.channels.SelectableChannel;
 import java.util.ArrayList;
 
 public class Request {
-    enum requestType{
+    public enum requestType{
         CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
     }
+    requestType requestType;
     private Good good;
     private Sale sale;
     private int requestId;
     private Seller seller;
     private String request;
-    ArrayList<Request> requests = ManageInfo.allRequests;
+    public static ArrayList<Request> requests = ManageInfo.allRequests;
+
+    public Request(Request.requestType requestType) {
+        this.requestType = requestType;
+        requests.add(this);
+        this.requestId = requests.size();
+    }
 
     public Good getGood() {
         return good;
@@ -31,6 +39,20 @@ public class Request {
 
     public String getRequest() {
         return request;
+    }
+
+    public void createRegisterSellerRequest(Seller seller) {
+        this.request = "(requestID: " + this.requestId + ") register seller";
+        this.seller = seller;
+    }
+
+    public String viewSellerRegisterDetails() {
+        return this.seller.viewUserPersonalInfo() +"\n" + this.seller.viewCompanyInformation();
+    }
+
+    public void createAddProductRequest(Good good) {
+        this.request = "(requestID: " + this.requestId + ") add product";
+        this.good = good;
     }
 
     public void sellerAddGood(Good good) {
