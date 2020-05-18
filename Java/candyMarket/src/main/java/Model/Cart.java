@@ -1,15 +1,13 @@
 package Model;
 
-import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Cart {
     private String address;
     private HashMap<Good,Integer> howManyGoods;
-    private ArrayList<Good> goods;
+    private HashMap<Good, Integer> goods;
     private String buyerName;
     private CartSituation buySituation;
     private String phoneNumber;
@@ -24,10 +22,6 @@ public class Cart {
         this.goods = goods;
     }
 
-    private HashMap<Good,Integer> goods = new HashMap<>();
-    private String buyerName;
-    private CartSituation buySituation;
-
 
     public void addDiscount(Discount discount){
         discountAmount = totalAmount* discount.getPercentReduction()/100;
@@ -36,7 +30,21 @@ public class Cart {
     }
 
 
+    public String getAddress() {
+        return address;
+    }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     public int getTotalAmount() {
         return totalAmount;
@@ -71,7 +79,7 @@ public class Cart {
         this.buySituation = buySituation;
     }
     public Boolean canPay(){
-        if(Buyer.currentBuyer==null)
+        if(UserHandler.currentBuyer==null)
         return false;
         else return true;
     }
@@ -125,12 +133,12 @@ public class Cart {
                Good key2 = entry2.getKey();
                int value2 = entry2.getValue();
                totalAmount+=key2.getPriceAfterSale();
-               saleAmount+=key2.getsalePercentageAmount()*key2.getPrice()/100;
+               saleAmount+=key2.getSalePercentageAmount()*key2.getPrice()/100;
             }
             BuyLog buyLog = new BuyLog(totalAmount-discountAmount,discountAmount,value,key.getUsername());
-            SellLog sellLog = new SellLog(totalAmount,saleAmount,value,Buyer.currentBuyer.getUsername());
-            Buyer.currentBuyer.addMyLogs(buyLog);
-            Seller.currentSeller.addMySellLog(sellLog);
+            SellLog sellLog = new SellLog(totalAmount,saleAmount,value,UserHandler.currentBuyer.getUsername());
+            UserHandler.currentBuyer.addMyLogs(buyLog);
+            UserHandler.currentSeller.addMySellLog(sellLog);
             ManageInfo.allBuyLogs.add(buyLog);
             ManageInfo.allSellLogs.add(sellLog);
         }

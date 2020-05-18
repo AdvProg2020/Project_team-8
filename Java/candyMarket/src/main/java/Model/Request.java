@@ -49,6 +49,9 @@ public class Request {
     public String viewSellerRegisterDetails() {
         return this.seller.viewUserPersonalInfo() +"\n" + this.seller.viewCompanyInformation();
     }
+    public String viewAddProductDetail() {
+        return this.good.viewProductDetails();
+    }
 
     public void createAddProductRequest(Good good) {
         this.request = "add product";
@@ -59,6 +62,8 @@ public class Request {
         switch (request.requestType) {
             case SELLER_REGISTER:
                 return request.viewSellerRegisterDetails();
+            case CREATE_GOOD:
+                return request.viewAddProductDetail();
         }
 
         return null;
@@ -73,7 +78,11 @@ public class Request {
     }
 
     public void declineRequest() {
-
+        switch (this.requestType) {
+            case SELLER_REGISTER:
+                User.users.remove(this.getSeller());
+                break;
+        }
     }
 
     public void sellerAddGood(Good good) {

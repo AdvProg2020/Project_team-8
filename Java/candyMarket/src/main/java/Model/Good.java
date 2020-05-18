@@ -1,20 +1,8 @@
 package Model;
 
-import java.sql.Time;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Good {
-    public long getDateModified() {
-        return dateModified;
-    }
-
-    public void setDateModified(long dateModified) {
-        this.dateModified = dateModified;
-    }
-    public int getPriceAfterSale(){
-        return (int) (price*(1-(double)salePercentageAmount/100));
-    }
     private long dateModified;
     private int salePercentageAmount;
     private int id;
@@ -31,6 +19,9 @@ public class Good {
     private int averageScore;
     private ArrayList<Opinion> opinions;
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
+    public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
+    public static ArrayList<Good> confirmedGoods = ManageInfo.allGoods;
+
     public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
         this.name = name;
         this.brand = brand;
@@ -42,6 +33,22 @@ public class Good {
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
         this.dateModified = System.currentTimeMillis();
+        this.situation = ItemCreationSituation.CREATING_CHECK;
+        this.id = 0;
+        this.averageScore = 0;
+        unconfirmedGoods.add(this);
+    }
+
+    public long getDateModified() {
+        return dateModified;
+    }
+
+    public void setDateModified(long dateModified) {
+        this.dateModified = dateModified;
+    }
+
+    public int getPriceAfterSale(){
+        return (int) (price*(1-(double)salePercentageAmount/100));
     }
 
     public int getStock() {
@@ -135,6 +142,7 @@ public class Good {
     public static Good getGoodById(int goodId) {
         return null;
     }
+
     public static Good getGoodByName(String name,ArrayList<Good> goods) {
         for (Good g:
              goods) {
@@ -144,11 +152,11 @@ public class Good {
         return null;
     }
 
-    public int getsalePercentageAmount() {
+    public int getSalePercentageAmount() {
         return salePercentageAmount;
     }
 
-    public void setsalePercentageAmount(int salePercentageAmount) {
+    public void setSalePercentageAmount(int salePercentageAmount) {
         this.salePercentageAmount = salePercentageAmount;
     }
 
@@ -158,5 +166,26 @@ public class Good {
 
     public void setSeller(Seller seller) {
         this.seller = seller;
+    }
+
+    public String viewProductDetails() {
+        return "ProductID: " + this.getId() + "\n" +
+                "Situation: " + this.getSituation() + "\n" +
+                "Name: " + this.getName() + "\n" +
+                "Brand: " + this.getBrand() + "\n" +
+                "Price: " + this.getPrice() + "\n" +
+                "Seller: " + this.getSeller().viewCompanyInformation() +
+                "Stock: " + this.getStock() + "\n" +
+                "Category: " + this.getCategory().getName() + "\n" +
+                "Category special attributes: " + this.getCategorySpecialAttributes() + "\n" +
+                "Detail info: " + this.detailInfo + "\n" +
+                "Average score: " + this.averageScore + "\n" +
+                "Opinions: " + this.getOpinions().toString() + "\n";
+
+    }
+
+    public void confirmProduct() {
+        confirmedGoods.add(this);
+        this.id = confirmedGoods.size();
     }
 }

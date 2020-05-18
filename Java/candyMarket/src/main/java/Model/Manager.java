@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Manager extends User {
     public static Manager currentManager;
@@ -35,6 +36,14 @@ public class Manager extends User {
 
     public static void deleteUser(String username) {
         User.users.remove(User.getUserByUsername(username));
+    }
+
+    public static HashMap<Integer, String> viewAllRequests() {
+        HashMap<Integer, String> requests = new HashMap<>();
+        for (Request request : Request.requests) {
+            requests.put(request.getRequestId(), request.getRequest());
+        }
+        return requests;
     }
 
     public ArrayList<String> viewAllGoods() {

@@ -40,13 +40,13 @@ public class LoginOrRegisterManaging {
         if (currentUser.isUsernameAndPasswordCorrect(username, password)) {
             switch (currentUser.getType()) {
                 case BUYER:
-                    Buyer.currentBuyer = (Buyer) User.getUserByUsername(username);
+                    UserHandler.currentBuyer = (Buyer) User.getUserByUsername(username);
                     return 1;
                 case SELLER:
-                    Seller.currentSeller = (Seller) User.getUserByUsername(username);
+                    UserHandler.currentSeller = (Seller) User.getUserByUsername(username);
                     return 2;
                 case MANAGER:
-                    Manager.currentManager = (Manager) User.getUserByUsername(username);
+                    UserHandler.currentManager = (Manager) User.getUserByUsername(username);
                     return 3;
             }
         }

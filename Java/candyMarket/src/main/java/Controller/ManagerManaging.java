@@ -16,11 +16,11 @@ public class ManagerManaging {
     }
 
     public static String showPersonalInfo(){
-        return Manager.currentManager.viewUserPersonalInfo();
+        return UserHandler.currentManager.viewUserPersonalInfo();
     }
 
     public static void editAFieldOfOfInfo(String toBeEditedField, String newField) {
-        Manager.currentManager.editPersonalInfo(toBeEditedField, newField);
+        UserHandler.currentManager.editPersonalInfo(toBeEditedField, newField);
     }
 
     public static ArrayList<String> showAllUsers() {
@@ -84,11 +84,7 @@ public class ManagerManaging {
     }
 
     public static HashMap<Integer, String> manageRequests() {
-        HashMap<Integer, String> requests = new HashMap<>();
-        for (Request request : Request.requests) {
-            requests.put(request.getRequestId(), request.getRequest());
-        }
-        return requests;
+        return Manager.viewAllRequests();
     }
 
     public static boolean isThereRequestWithID(int id) {
@@ -132,7 +128,7 @@ public class ManagerManaging {
     }
 
     public static void logout() {
-        User.currentUser = null;
-        Manager.currentManager = null;
+        UserHandler.currentUser = null;
+        UserHandler.currentManager = null;
     }
 }
