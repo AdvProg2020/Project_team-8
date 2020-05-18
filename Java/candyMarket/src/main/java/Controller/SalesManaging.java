@@ -15,10 +15,10 @@ public class SalesManaging {
         ArrayList<String> viewGoods = new ArrayList<String>();
         for (Good g:
                 Good.fixedGoods) {
-            if(g.getsalePercentageAmount()==0) continue;
+            if(g.getSalePercentageAmount()==0) continue;
             String line = "name : "+g.getName()+" | ";
             line+= "before price : "+g.getPrice()+" | ";
-            line+= "after price : "+g.getPrice()*(1-g.getsalePercentageAmount())+" | ";
+            line+= "after price : "+g.getPrice()*(1-g.getSalePercentageAmount())+" | ";
             viewGoods.add(g.getName());
         }
         return viewGoods;
