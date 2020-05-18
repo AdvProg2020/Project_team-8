@@ -51,7 +51,7 @@ public class LoginOrRegister extends Menu {
                     }
                     username = ConsoleCmd.scanner.nextLine();
                 }
-                info.put("username", username.trim());
+                info.put("username", username);
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 info.put("password", password);
@@ -179,7 +179,7 @@ public class LoginOrRegister extends Menu {
             public void execute() throws ViewException {
                 System.out.println("Enter A UserName :");
                 ConsoleCmd.scanner.nextLine();
-                String username = ConsoleCmd.scanner.nextLine().trim();
+                String username = ConsoleCmd.scanner.nextLine();
                 System.out.println("Enter your Password :");
                 String password = ConsoleCmd.scanner.nextLine();
                 int type = 0;
@@ -190,7 +190,7 @@ public class LoginOrRegister extends Menu {
                         System.out.println(ViewException.invalidLogin().getMessage());
                     }
                     System.out.println("Enter A UserName :");
-                    username = ConsoleCmd.scanner.nextLine().trim();
+                    username = ConsoleCmd.scanner.nextLine();
                     System.out.println("Enter your Password :");
                     password = ConsoleCmd.scanner.nextLine();
                 }

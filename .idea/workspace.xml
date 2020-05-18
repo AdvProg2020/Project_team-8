@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/SellerMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <workItem from="1589670057134" duration="10400000" />
       <workItem from="1589707395468" duration="13398000" />
       <workItem from="1589794966270" duration="578000" />
-      <workItem from="1589795790945" duration="6938000" />
+      <workItem from="1589795790945" duration="7310000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -173,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589810775487</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix bugs in some Menus">
+      <created>1589811837815</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1589811837815</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +198,8 @@
     <MESSAGE value="fix a bug in personal info of Manager and Seller" />
     <MESSAGE value="show orders in BuyerMenu" />
     <MESSAGE value="finalize BuyerMenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize BuyerMenu" />
+    <MESSAGE value="fix bugs in some Menus" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs in some Menus" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589810459924">
@@ -204,10 +210,10 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589810773752">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589811835268">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589810773752" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589811835268" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588513942136">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
