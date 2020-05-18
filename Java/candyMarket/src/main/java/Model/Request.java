@@ -42,7 +42,7 @@ public class Request {
     }
 
     public void createRegisterSellerRequest(Seller seller) {
-        this.request = "(requestID: " + this.requestId + ") register seller";
+        this.request = "register seller";
         this.seller = seller;
     }
 
@@ -51,8 +51,29 @@ public class Request {
     }
 
     public void createAddProductRequest(Good good) {
-        this.request = "(requestID: " + this.requestId + ") add product";
+        this.request = "add product";
         this.good = good;
+    }
+
+    public static String viewDetails(Request request) {
+        switch (request.requestType) {
+            case SELLER_REGISTER:
+                return request.viewSellerRegisterDetails();
+        }
+
+        return null;
+    }
+
+    public void acceptRequest() {
+        switch (this.requestType) {
+            case SELLER_REGISTER:
+                this.getSeller().confirmSeller();
+                break;
+        }
+    }
+
+    public void declineRequest() {
+
     }
 
     public void sellerAddGood(Good good) {
@@ -63,10 +84,18 @@ public class Request {
 
     }
     public static Boolean isThereRequestWithId(int id){
-        return null;
+        for (Request request : requests) {
+            if (request.requestId == id)
+                return true;
+        }
+        return false;
     }
 
     public static Request getRequestById(int requestId){
+        for (Request request : requests) {
+            if (request.requestId == requestId)
+                return request;
+        }
         return null;
     }
 

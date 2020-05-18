@@ -69,36 +69,7 @@ public class Manager extends User {
 
     }
 
-    public ArrayList<String> viewAllRequests() {
-        ArrayList<String> allRequests = new ArrayList<>();
-        for (Request request : Request.requests) {
-            allRequests.add(request.getRequest());
-        }
-        return allRequests;
-    }
 
-    public ArrayList<String> viewRequestDetails(Request request) {
-        ArrayList<String> details = new ArrayList<>();
-        switch (request.requestType) {
-            case SELLER_REGISTER:
-                details.add(request.viewSellerRegisterDetails());
-                break;
-        }
-
-        return details;
-    }
-
-    public void acceptRequest(Request request) {
-        switch (request.requestType) {
-            case SELLER_REGISTER:
-                request.getSeller().confirmSeller();
-                break;
-        }
-    }
-
-    public void declineRequest(Request request) {
-        
-    }
 
     public ArrayList<String> viewAllCategories() {
         return null;
