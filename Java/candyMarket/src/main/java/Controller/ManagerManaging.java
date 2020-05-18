@@ -16,11 +16,11 @@ public class ManagerManaging {
     }
 
     public static String showPersonalInfo(){
-        return UserHandler.currentManager.viewUserPersonalInfo();
+        return Manager.currentManager.viewUserPersonalInfo();
     }
 
     public static void editAFieldOfOfInfo(String toBeEditedField, String newField) {
-        UserHandler.currentManager.editPersonalInfo(toBeEditedField, newField);
+        Manager.currentManager.editPersonalInfo(toBeEditedField, newField);
     }
 
     public static ArrayList<String> showAllUsers() {
@@ -84,23 +84,21 @@ public class ManagerManaging {
     }
 
     public static HashMap<Integer, String> manageRequests() {
-        return Manager.viewAllRequests();
+        return null;
     }
 
-    public static boolean isThereRequestWithID(int id) {
-        return Request.isThereRequestWithId(id);
-    }
+    public static boolean isThereRequestWithID(int id) {return false;}
 
     public static String requestDetails(int id) {
-        return Request.viewDetails(Request.getRequestById(id));
+        return null;
     }
 
     public static void acceptRequest(int id) {
-        Request.getRequestById(id).acceptRequest();
+        ;
     }
 
     public static void rejectRequest(int id) {
-        Request.getRequestById(id).declineRequest();
+        ;
     }
 
     public static ArrayList<String> manageCategories() {
@@ -128,7 +126,6 @@ public class ManagerManaging {
     }
 
     public static void logout() {
-        UserHandler.currentUser = null;
-        UserHandler.currentManager = null;
+
     }
 }

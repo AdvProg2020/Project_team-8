@@ -1,5 +1,7 @@
 package Model;
 
+import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
+import sun.management.snmp.jvminstr.JvmMemPoolEntryImpl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,29 +9,10 @@ import java.util.Map;
 
 public class Cart {
     private String address;
-    private HashMap<Good,Integer> howManyGoods;
-    private HashMap<Good, Integer> goods;
     private String buyerName;
     private CartSituation buySituation;
     private String phoneNumber;
     private int totalAmount = 0;
-    private int discountAmount = 0;
-
-    public HashMap<Good, Integer> getGoods() {
-        return goods;
-    }
-
-    public void setGoods(HashMap<Good, Integer> goods) {
-        this.goods = goods;
-    }
-
-
-    public void addDiscount(Discount discount){
-        discountAmount = totalAmount* discount.getPercentReduction()/100;
-        if(discountAmount > discount.getMaxReductionAmount()) discountAmount=discount.getMaxReductionAmount();
-        totalAmount -= discountAmount;
-    }
-
 
     public String getAddress() {
         return address;
@@ -46,6 +29,25 @@ public class Cart {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    private int discountAmount = 0;
+
+    public HashMap<Good, Integer> getGoods() {
+        return goods;
+    }
+
+    public void setGoods(HashMap<Good, Integer> goods) {
+        this.goods = goods;
+    }
+
+    private HashMap<Good,Integer> goods = new HashMap<>();
+
+    public void addDiscount(Discount discount){
+        discountAmount = totalAmount* discount.getPercentReduction()/100;
+        if(discountAmount > discount.getMaxReductionAmount()) discountAmount=discount.getMaxReductionAmount();
+        totalAmount -= discountAmount;
+    }
+
     public void pay(){
         for (Good g:
              goods.keySet()) {
@@ -149,7 +151,7 @@ public class Cart {
                Good key2 = entry2.getKey();
                int value2 = entry2.getValue();
                totalAmount+=key2.getPriceAfterSale();
-               saleAmount+=key2.getSalePercentageAmount()*key2.getPrice()/100;
+               saleAmount+=key2.getsalePercentageAmount()*key2.getPrice()/100;
             }
             BuyLog buyLog = new BuyLog(totalAmount-discountAmount,discountAmount,value,key.getUsername());
             SellLog sellLog = new SellLog(totalAmount,saleAmount,value,Buyer.currentBuyer.getUsername());

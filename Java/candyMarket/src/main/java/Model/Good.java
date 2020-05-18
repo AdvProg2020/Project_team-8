@@ -22,6 +22,15 @@ public class Good {
     private String name;
     private String brand;
     private int price;
+
+    public ArrayList<Buyer> getBuyers() {
+        return buyers;
+    }
+
+    public void setBuyers(ArrayList<Buyer> buyers) {
+        this.buyers = buyers;
+    }
+
     private ArrayList<Buyer> buyers;
     private Seller seller;
     private int stock;
@@ -31,9 +40,9 @@ public class Good {
     private int averageScore;
     private ArrayList<Comment> comments;
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
-    public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
-    public static ArrayList<Good> confirmedGoods = ManageInfo.allGoods;
-
+    public void addBuyers(Buyer b){
+        buyers.add(b);
+    }
     public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
         this.name = name;
         this.brand = brand;
@@ -88,6 +97,7 @@ public class Good {
     }
 
 
+
     public ItemCreationSituation getSituation() {
         return situation;
     }
@@ -131,11 +141,6 @@ public class Good {
     public static Good getGoodById(int goodId) {
         return null;
     }
-
-    public void addBuyers(Buyer b){
-        buyers.add(b);
-    }
-
     public static Good getGoodByName(String name,ArrayList<Good> goods) {
         for (Good g:
              goods) {
@@ -145,11 +150,11 @@ public class Good {
         return null;
     }
 
-    public int getSalePercentageAmount() {
+    public int getsalePercentageAmount() {
         return salePercentageAmount;
     }
 
-    public void setSalePercentageAmount(int salePercentageAmount) {
+    public void setsalePercentageAmount(int salePercentageAmount) {
         this.salePercentageAmount = salePercentageAmount;
     }
 
@@ -159,27 +164,6 @@ public class Good {
 
     public void setSeller(Seller seller) {
         this.seller = seller;
-    }
-
-    public String viewProductDetails() {
-        return "ProductID: " + this.getId() + "\n" +
-                "Situation: " + this.getSituation() + "\n" +
-                "Name: " + this.getName() + "\n" +
-                "Brand: " + this.getBrand() + "\n" +
-                "Price: " + this.getPrice() + "\n" +
-                "Seller: " + this.getSeller().viewCompanyInformation() +
-                "Stock: " + this.getStock() + "\n" +
-                "Category: " + this.getCategory().getName() + "\n" +
-                "Category special attributes: " + this.getCategorySpecialAttributes() + "\n" +
-                "Detail info: " + this.detailInfo + "\n" +
-                "Average score: " + this.averageScore + "\n" +
-                "Opinions: " + this.getComments().toString() + "\n";
-
-    }
-
-    public void confirmProduct() {
-        confirmedGoods.add(this);
-        this.id = confirmedGoods.size();
     }
 
     public ArrayList<Comment> getComments() {

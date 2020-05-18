@@ -8,7 +8,7 @@ public class Category {
     private Category subCategory;
     private ArrayList<Good> goods;
     private ArrayList<String> specialAttributes;
-    static ArrayList<Category> categories = ManageInfo.allCategories;
+    ArrayList<Category> categories = ManageInfo.allCategories;
 
     public Category(String name, ArrayList<Good> goods, ArrayList<String> specialAttributes) {
         this.name = name;
@@ -46,13 +46,5 @@ public class Category {
 
     public void setSpecialAttributes(ArrayList<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
-    }
-
-    public static Category getCategoryByName(String categoryName) {
-        for (Category category : categories) {
-            if (category.getName().equals(categoryName))
-                return category;
-        }
-        return null;
     }
 }

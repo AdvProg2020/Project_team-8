@@ -1,6 +1,9 @@
 package Controller;
 
-import Model.*;
+import Model.Buyer;
+import Model.Good;
+import Model.Seller;
+import Model.User;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -15,15 +18,15 @@ public class SellerManaging {
     }
 
     public static String viewPersonalInfo() {
-        return UserHandler.currentUser.viewUserPersonalInfo();
+        return User.currentUser.viewUserPersonalInfo();
     }
 
     public static void editFieldOfInfo(String toBeEditedField,String newField) {
-        UserHandler.currentUser.editPersonalInfo(toBeEditedField, newField);
+        User.currentUser.editPersonalInfo(toBeEditedField, newField);
     }
 
     public static String viewCompaniesInfo() {
-        return UserHandler.currentSeller.viewCompanyInformation();
+        return Seller.currentSeller.viewCompanyInformation();
     }
 
     public static ArrayList<String> viewSalesHistory() {
@@ -47,7 +50,7 @@ public class SellerManaging {
     }
 
     public static void addProduct(String name, String brand, int price, int stock, String category, String categorySpecialAttributes, String detailInfo) {
-        (new Request(Request.requestType.CREATE_GOOD)).createAddProductRequest(new Good(name, brand, price, seller, stock, Category.getCategoryByName(category), categorySpecialAttributes, detailInfo));
+        ;
     }
 
     public static boolean removeProduct(int id) {
@@ -79,7 +82,7 @@ public class SellerManaging {
     }
 
     public static void logout() {
-        UserHandler.currentUser = null;
-        UserHandler.currentBuyer = null;
+        User.currentUser = null;
+        Buyer.currentBuyer = null;
     }
 }
