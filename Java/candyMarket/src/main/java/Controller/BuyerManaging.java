@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Buyer;
+import Model.Discount;
 import Model.Good;
 
 import java.util.ArrayList;
@@ -42,7 +43,12 @@ public class BuyerManaging {
         return 0;
     }
 
-    public static ArrayList<String> viewDiscountCodes() {
+    public static ArrayList<Discount> viewDiscountCodes() {
+        //add a toString method to Discount in model
         return null;
+    }
+
+    public static void logout() {
+        ;
     }
 }

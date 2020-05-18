@@ -2,7 +2,9 @@ package View;
 
 import Controller.BuyerManaging;
 import Controller.ManagerManaging;
+import Controller.SellerManaging;
 import Model.Buyer;
+import Model.Discount;
 
 import javax.crypto.spec.PSource;
 import java.util.HashMap;
@@ -14,6 +16,9 @@ public class BuyerMenu extends Menu {
         subMenus.put(1, viewPersonalInfo());
         subMenus.put(2, new PurchaseMenu("Cart Menu", this));
         subMenus.put(3, viewOrders());
+        subMenus.put(4, viewBalance());
+        subMenus.put(5, viewDiscountCodes());
+        subMenus.put(6, logout());
         this.setSubMenus(subMenus);
     }
 
@@ -175,5 +180,68 @@ public class BuyerMenu extends Menu {
         };
     }
 
+    private Menu viewBalance() {
+        return new Menu("View Balance", this) {
+            @Override
+            public void show() {
+                System.out.println(BuyerManaging.viewBalance());
+                System.out.println("0. back");
+            }
 
+            @Override
+            public void execute() throws ViewException {
+                super.execute();
+            }
+        };
+    }
+
+    private Menu viewDiscountCodes() {
+        return new Menu("View Discount Codes", this) {
+            @Override
+            public void show() {
+                System.out.println(this.getName());
+                System.out.println(BuyerManaging.viewDiscountCodes());
+                System.out.println("0. back");
+            }
+
+            @Override
+            public void execute() throws ViewException {
+                super.execute();
+            }
+        };
+    }
+
+    private Menu logout() {
+        return new Menu("logout", this) {
+            @Override
+            public void show() {
+                System.out.println(this.getName());
+                System.out.println("0. back");
+                System.out.println("1. continue logging out");
+            }
+
+            @Override
+            public void execute() throws ViewException {
+                int menuChanger = ConsoleCmd.scanner.nextInt();
+                switch (menuChanger) {
+                    case 0 :
+                        this.parentMenu.run();
+                        break;
+                    case 1 :
+                        BuyerManaging.logout();
+                        System.out.println("Logged out Successfully");
+                        user = LoginType.DEFAULT;
+                        this.parentMenu.parentMenu.parentMenu.run();
+                        break;
+                    default :
+                        try{
+                            throw ViewException.invalidNumber();
+                        }catch (ViewException e) {
+                            System.out.println(ViewException.invalidNumber().getMessage());
+                            this.run();
+                        }
+                }
+            }
+        };
+    }
 }
