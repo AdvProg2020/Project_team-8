@@ -1,5 +1,7 @@
 package Model;
 
+import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,14 +16,17 @@ public class Cart {
     private int totalAmount = 0;
     private int discountAmount = 0;
 
-
-    public ArrayList<Good> getGoods() {
+    public HashMap<Good, Integer> getGoods() {
         return goods;
     }
 
-    public void setGoods(ArrayList<Good> goods) {
+    public void setGoods(HashMap<Good, Integer> goods) {
         this.goods = goods;
     }
+
+    private HashMap<Good,Integer> goods = new HashMap<>();
+    private String buyerName;
+    private CartSituation buySituation;
 
 
     public void addDiscount(Discount discount){
@@ -31,21 +36,6 @@ public class Cart {
     }
 
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
 
     public int getTotalAmount() {
@@ -85,22 +75,42 @@ public class Cart {
         return false;
         else return true;
     }
+    public boolean increaseProduct(Good good){
+        if(good.getStock()==0)
+            return false;
+        if(goods.get(good) == null)
+            goods.put(good,1);
+        else
+        goods.put(good,goods.get(good)+1);
+        good.setStock(good.getStock()-1);
+        UserHandler.currentCart.setTotalAmount(UserHandler.currentCart.getTotalAmount()+good.getPriceAfterSale());
+        return true;
+    }
+    public void decreaseProduct(Good good){
+        if(goods.get(good)<=1)
+            goods.remove(good);
+        else
+            goods.put(good,goods.get(good)-1);
+        good.setStock(good.getStock()+1);
+        UserHandler.currentCart.setTotalAmount(UserHandler.currentCart.getTotalAmount()-good.getPriceAfterSale());
+    }
     public void createLogs(){
         HashMap<Seller,HashMap<Good,Integer>> logs = new HashMap<>();
-        for (Good g:
-             User.currentUser.getCart().getGoods()) {
+        for(Map.Entry<Good,Integer> entry : goods.entrySet()) {
+            Good g = entry.getKey();
+            int gNum = entry.getValue();
             if(logs.keySet().contains(g.getSeller())) {
                 HashMap<Good, Integer> currentGoods = logs.get(g.getSeller());
                 if(currentGoods.containsValue(g))
-                    currentGoods.put(g,currentGoods.get(g)+1);
-                else currentGoods.put(g,1);
+                    currentGoods.put(g,currentGoods.get(g)+gNum);
+                else currentGoods.put(g,gNum);
                 logs.put(g.getSeller(),currentGoods);
             }
             else
             {
                 HashMap<Good,Integer> goods = new HashMap<Good,Integer>(){
                     {
-                        put(g,1);      
+                        put(g,gNum);
                     }
                 };
                 logs.put(g.getSeller(),goods);
@@ -114,7 +124,7 @@ public class Cart {
             for(Map.Entry<Good,Integer> entry2 : value.entrySet()) {
                Good key2 = entry2.getKey();
                int value2 = entry2.getValue();
-               totalAmount+=key2.getAmountAfterSale();
+               totalAmount+=key2.getPriceAfterSale();
                saleAmount+=key2.getsalePercentageAmount()*key2.getPrice()/100;
             }
             BuyLog buyLog = new BuyLog(totalAmount-discountAmount,discountAmount,value,key.getUsername());

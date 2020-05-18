@@ -6,35 +6,40 @@ import Model.*;
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
 import java.util.HashMap;
+import java.util.Map;
 
 public class CartManaging {
     public static void viewCart() {
 
     }
     public static void receiveInformation(String address,String phoneNumber){
-        User.currentUser.getCart().setAddress(address);
-        User.currentUser.getCart().setPhoneNumber(phoneNumber);
-        User.currentUser.getCart().setBuySituation(CartSituation.SHIPPING);
+        UserHandler.currentCart.setAddress(address);
+        UserHandler.currentCart.setPhoneNumber(phoneNumber);
+        UserHandler.currentCart.setBuySituation(CartSituation.SHIPPING);
     }
     public static ArrayList<String> showProductsFromCart() {
-        return null;
+        ArrayList<String> show = new ArrayList<>();
+        for (Map.Entry<Good,Integer> entry : UserHandler.currentCart.getGoods().entrySet()){
+            show.add(entry.getKey().getName()+"  :  "+entry.getValue().toString());
+        }
+        return show;
     }
 
     public static Good viewProductIdFromCart() {
         return null;
     }
-
-    public static int increaseProductNumberInCart(String good) {
-        return 0;
+    public static boolean increaseProductNumberInCart(String goodName)
+    {
+        Good good = Good.getGoodByName(goodName,ManageInfo.allGoods);
+        return UserHandler.currentCart.increaseProduct(good);
     }
-    public static int decreaseProductNumberInCart(String good) {
-
-        return 0;
+    public static void decreaseProductNumberInCart(String goodName) {
+        Good good = Good.getGoodByName(goodName,ManageInfo.allGoods);
+        UserHandler.currentCart.decreaseProduct(good);
     }
 
     public static int showTotalPrice() {
-
-        return 0;
+        return UserHandler.currentCart.getTotalAmount();
     }
     public static boolean addDiscountCode(String code)
     {
@@ -46,17 +51,17 @@ public class CartManaging {
             if(!discount.getUsers().contains(User.currentUser))
                 return false;
         //Success
-        User.currentUser.getCart().addDiscount(discount);
+        UserHandler.currentCart.addDiscount(discount);
         return true;
     }
     public static boolean pay()
     {
-        if(!User.currentUser.getCart().canPay())
+        if(!UserHandler.currentCart.canPay())
             return false;
-        User.currentUser.getCart().createLogs();
+        UserHandler.currentCart.createLogs();
         return true;
     }
     public static void purchase() {
-        User.currentUser.getCart().setBuySituation(CartSituation.CONFIRMATION);
+        UserHandler.currentCart.setBuySituation(CartSituation.CONFIRMATION);
     }
 }
