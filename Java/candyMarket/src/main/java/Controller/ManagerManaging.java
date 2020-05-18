@@ -54,7 +54,7 @@ public class ManagerManaging {
         return false;
     }
 
-    public static void createDiscountCode(int code, Date start, Date end, int percentage, int max, ArrayList<String> users) {
+    public static void createDiscountCode(int code, long start, long end, int percentage, int max, ArrayList<String> users) {
         ;
     }
 
@@ -66,7 +66,7 @@ public class ManagerManaging {
         return null;
     }
 
-    public static void editDiscountCodeDate(String toBeEditedField, Date newDate) {
+    public static void editDiscountCodeDate(String toBeEditedField, long newDate) {
         ;
     }
 
