@@ -14,11 +14,11 @@ public class Request {
     ArrayList<Request> requests = ManageInfo.allRequests;
     static requestType requestType;
 
-    public Request(String request, Request.requestType requestType) {
-        this.request = request;
-        this.requestType = requestType;
-        this.id=ManageInfo.allRequests.size();
-    }
+    //public Request(String request, Request.requestType requestType) {
+      //  this.request = request;
+        //this.requestType = requestType;
+        //this.id=ManageInfo.allRequests.size();
+    //}
 
     public Good getGood() {
         return good;
