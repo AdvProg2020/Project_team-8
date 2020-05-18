@@ -9,22 +9,17 @@ import java.util.Scanner;
 
 public class BuyerManaging {
     private static Buyer buyer;
-    private static Scanner scanner;
 
     public static void setBuyer() {
         ;
-    }
-
-    public static void setScanner(Scanner scanner) {
-        BuyerManaging.scanner = scanner;
     }
 
     public static String showPersonalInfo(){
         return null;
     }
 
-    public static boolean editAFieldOfOfInfo() {
-        return false;
+    public static void editAFieldOfOfInfo(String toBeEditedField, String newField) {
+        ;
     }
 
 
