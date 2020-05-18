@@ -1,9 +1,9 @@
 package Controller;
 
-import Model.FilterAndSort;
-import Model.Good;
-import Model.Opinion;
+import Model.*;
+import com.sun.xml.internal.ws.server.ServerRtException;
 
+import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -29,8 +29,8 @@ public class GoodManaging {
         return data;
     }
 
-    public static boolean addProductToCart(String name) {
-        return false;
+    public static boolean addProductToCart(String goodName) {
+        return CartManaging.increaseProductNumberInCart(goodName);
     }
 
     public static void selectSellerToBuyFrom() {
@@ -73,13 +73,20 @@ public class GoodManaging {
         return data;
     }
 
-    public static String showComments() {
-        return null;
+    public static ArrayList<String> showComments(String goodName) {
+        ArrayList<String> show = new ArrayList<>();
+        Good good = Good.getGoodByName(goodName, ManageInfo.allGoods);
+        for (Comment c:
+             good.getComments()){
+            if(c.getSituation()== Comment.OpinionSituation.CONFIRMED) show.add(c.toString());
+        }
+        return show;
     }
-    public static void addComment(String title , String content){
-
-    }
-    public static boolean CanComment() {
-        return false;
+    public static boolean addComment(String goodName, String title , String content){
+        if(Buyer.currentBuyer == null) return false;
+        Good good = Good.getGoodByName(goodName, ManageInfo.allGoods);
+        if(!good.getBuyers().contains(good)) return false;
+        UserHandler.currentBuyer.addComment(good,title,content);
+        return true;
     }
 }

@@ -1,6 +1,7 @@
 package Model;
 
 import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
+import sun.management.snmp.jvminstr.JvmMemPoolEntryImpl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,12 +9,27 @@ import java.util.Map;
 
 public class Cart {
     private String address;
-    private HashMap<Good,Integer> howManyGoods;
-    private ArrayList<Good> goods;
     private String buyerName;
     private CartSituation buySituation;
     private String phoneNumber;
     private int totalAmount = 0;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     private int discountAmount = 0;
 
     public HashMap<Good, Integer> getGoods() {
@@ -25,9 +41,6 @@ public class Cart {
     }
 
     private HashMap<Good,Integer> goods = new HashMap<>();
-    private String buyerName;
-    private CartSituation buySituation;
-
 
     public void addDiscount(Discount discount){
         discountAmount = totalAmount* discount.getPercentReduction()/100;
@@ -35,8 +48,21 @@ public class Cart {
         totalAmount -= discountAmount;
     }
 
-
-
+    public void pay(){
+        for (Good g:
+             goods.keySet()) {
+            g.addBuyers(UserHandler.currentBuyer);
+        }
+        resetCart();
+    }
+    public void resetCart(){
+        address = null;
+        buyerName = null;
+        phoneNumber = null;
+        totalAmount = 0;
+        discountAmount = 0;
+        goods = new HashMap<>();
+    }
 
     public int getTotalAmount() {
         return totalAmount;

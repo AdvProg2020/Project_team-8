@@ -22,6 +22,15 @@ public class Good {
     private String name;
     private String brand;
     private int price;
+
+    public ArrayList<Buyer> getBuyers() {
+        return buyers;
+    }
+
+    public void setBuyers(ArrayList<Buyer> buyers) {
+        this.buyers = buyers;
+    }
+
     private ArrayList<Buyer> buyers;
     private Seller seller;
     private int stock;
@@ -29,8 +38,11 @@ public class Good {
     private String categorySpecialAttributes;
     private String detailInfo;
     private int averageScore;
-    private ArrayList<Opinion> opinions;
+    private ArrayList<Comment> comments;
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
+    public void addBuyers(Buyer b){
+        buyers.add(b);
+    }
     public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
         this.name = name;
         this.brand = brand;
@@ -84,13 +96,7 @@ public class Good {
         this.averageScore = averageScore;
     }
 
-    public ArrayList<Opinion> getOpinions() {
-        return opinions;
-    }
 
-    public void setOpinions(ArrayList<Opinion> opinions) {
-        this.opinions = opinions;
-    }
 
     public ItemCreationSituation getSituation() {
         return situation;
@@ -158,5 +164,13 @@ public class Good {
 
     public void setSeller(Seller seller) {
         this.seller = seller;
+    }
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
     }
 }

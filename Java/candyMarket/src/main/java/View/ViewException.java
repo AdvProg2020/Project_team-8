@@ -6,6 +6,10 @@ public class ViewException extends Exception {
     public static ViewException notLogedIn(){
         return new ViewException("You should login for pay your cart");
     }
+    public static ViewException emptyCart(){
+        return new ViewException("your cart is empty");
+    }
+
     public static ViewException outOfStock(){
         return new ViewException("There is no more of this good");
     }

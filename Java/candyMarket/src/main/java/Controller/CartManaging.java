@@ -59,9 +59,13 @@ public class CartManaging {
         if(!UserHandler.currentCart.canPay())
             return false;
         UserHandler.currentCart.createLogs();
+        UserHandler.currentCart.pay();
         return true;
     }
-    public static void purchase() {
+    public static boolean purchase() {
+        if(UserHandler.currentCart.getTotalAmount() == 0)
+            return false;
         UserHandler.currentCart.setBuySituation(CartSituation.CONFIRMATION);
+        return true;
     }
 }

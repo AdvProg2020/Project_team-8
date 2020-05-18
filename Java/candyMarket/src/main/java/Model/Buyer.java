@@ -22,7 +22,11 @@ public class Buyer extends User {
     public void setCart(Cart cart) {
         this.cart = cart;
     }
-
+    public void addComment(Good good,String title,String content){
+        Comment comment = new Comment(UserHandler.currentUser,good,content,title);
+        Request request = new Request(comment.toString(), Request.requestType.ADD_COMMENT);
+        ManageInfo.allRequests.add(request);
+    }
     public static void CreateNewBuyer() {
 
     }

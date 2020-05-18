@@ -18,9 +18,33 @@ public class ProductMenu extends Menu {
         subMenus.put(2,attributes());
         subMenus.put(3,compare());
         subMenus.put(4,comments());
+        subMenus.put(5,addToCart());
         this.setSubMenus(subMenus);
     }
+    private Menu addToCart() {
+        return new Menu("Add to cart or increase it",this) {
+            @Override
+            public void show() {
+                System.out.println(this.getName());
+                System.out.println("0. back");
+            }
 
+            @Override
+            public void execute() throws ViewException {
+                int menuChanger = ConsoleCmd.scanner.nextInt();
+                if(menuChanger==0)
+                    this.parentMenu.run();
+                    else if (menuChanger == 1){
+                        if (!GoodManaging.addProductToCart(goodName))
+                            throw ViewException.outOfStock()
+                                    ;
+                        else ConsoleDesign.printColorFull(ConsoleDesign.YELLOW, "successfully added to cart");
+                        this.parentMenu.run();
+                }
+                else throw ViewException.invalidNumber();
+            }
+        };
+    }
     private Menu digest() {
         return new Menu("Digest",this) {
             @Override
@@ -111,7 +135,10 @@ public class ProductMenu extends Menu {
             @Override
             public void show() {
                 System.out.println(this.getName());
-                ConsoleDesign.printColorFull(ConsoleDesign.BLUE,GoodManaging.showComments());
+                for (String s:
+                        GoodManaging.showComments(goodName)) {
+                    ConsoleDesign.printColorFull(ConsoleDesign.BLUE,s);
+                }
                 System.out.println(ConsoleDesign.divider);
                 System.out.println("0. back");
                 System.out.println("1. add comment");
@@ -122,15 +149,15 @@ public class ProductMenu extends Menu {
                 if(menuChanger == 0)
                     this.parentMenu.run();
                 else if(menuChanger == 1){
-                    if(!GoodManaging.CanComment())
-                        throw ViewException.cantComment();
                     String title;
                     String content;
                     ConsoleDesign.printColorFull(ConsoleDesign.GREEN,"please enter Title : ");
                     title = ConsoleCmd.scanner.nextLine();
                     ConsoleDesign.printColorFull(ConsoleDesign.GREEN,"please enter Content : ");
                     content = ConsoleCmd.scanner.nextLine();
-                    GoodManaging.addComment(title,content);
+                    GoodManaging.addComment(goodName,title,content);
+                    if(!GoodManaging.addComment(goodName,title,content))
+                        throw ViewException.cantComment();
                     ConsoleDesign.printColorFull(ConsoleDesign.YELLOW,"you commented successfully");
                     this.parentMenu.run();
                 }

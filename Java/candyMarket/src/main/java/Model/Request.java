@@ -4,14 +4,21 @@ import java.util.ArrayList;
 
 public class Request {
     enum requestType{
-        CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
+        CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE,ADD_COMMENT
     }
     private Good good;
     private Sale sale;
-    private int requestId;
+    private int id;
     private Seller seller;
     private String request;
     ArrayList<Request> requests = ManageInfo.allRequests;
+    static requestType requestType;
+
+    public Request(String request, Request.requestType requestType) {
+        this.request = request;
+        this.requestType = requestType;
+        this.id=ManageInfo.allRequests.size();
+    }
 
     public Good getGood() {
         return good;
@@ -19,10 +26,6 @@ public class Request {
 
     public Sale getSale() {
         return sale;
-    }
-
-    public int getRequestId() {
-        return requestId;
     }
 
     public Seller getSeller() {
