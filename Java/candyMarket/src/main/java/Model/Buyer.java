@@ -9,8 +9,10 @@ public class Buyer extends User {
     private ArrayList<BuyLog> myLogs;
     private int balance;
     public static Buyer currentBuyer;
+
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
+        this.setType(UserType.BUYER);
         this.balance=0;
     }
 

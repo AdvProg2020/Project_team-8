@@ -3,22 +3,38 @@ package Model;
 import java.util.ArrayList;
 
 public class Manager extends User {
+    public static Manager currentManager;
+
     public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
-        User.users.add(this);
         this.setType(UserType.MANAGER);
     }
-    public static Manager currentManager;
-    public ArrayList<String> viewAllUsers() {
-        return null;
+
+    public static boolean isThisTheFirstManager() {
+        int managerCounter = 0;
+        for (User user : User.users) {
+            if (user.getType().equals(UserType.MANAGER))
+                managerCounter++;
+        }
+        if (managerCounter == 0)
+            return true;
+        return false;
     }
 
-    public ArrayList<String> viewUser(String username) {
-        return null;
+    public static ArrayList<String> viewAllUsers() {
+        ArrayList<String> allUsers = new ArrayList<>();
+        for (User user : User.users) {
+            allUsers.add(user.getUsername());
+        }
+        return allUsers;
     }
 
-    public void deleteUser(String username) {
+    public static String viewUser(String username) {
+        return User.getUserByUsername(username).viewUserPersonalInfo();
+    }
 
+    public static void deleteUser(String username) {
+        User.users.remove(User.getUserByUsername(username));
     }
     public void createNewManager() {
 

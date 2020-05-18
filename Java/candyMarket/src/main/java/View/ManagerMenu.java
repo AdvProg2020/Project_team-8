@@ -121,7 +121,7 @@ public class ManagerMenu extends Menu{
             @Override
             public void show() {
                 System.out.println(this.getName());
-                ArrayList<String> allUsers = ManagerManaging.manageUsers();
+                ArrayList<String> allUsers = ManagerManaging.showAllUsers();
                 System.out.println(allUsers);
             }
 
@@ -130,6 +130,7 @@ public class ManagerMenu extends Menu{
                 System.out.println("1. view user\n" +
                         "2. delete user\n" +
                         "3. create manager profile");
+                ConsoleCmd.scanner.next();
                 int menuChanger = ConsoleCmd.scanner.nextInt();
                 String username;
                 switch (menuChanger) {

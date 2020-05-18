@@ -95,10 +95,10 @@ public class LoginOrRegister extends Menu {
                     type = ConsoleCmd.scanner.nextInt();
                     switch (type) {
                         case 1:
-                            info.put("type", "Buyer");
+                            info.put("type", "buyer");
                             break;
                         case 2:
-                            info.put("type", "Seller");
+                            info.put("type", "seller");
                             int workType = 0;
                             System.out.println("Enter a type :\n" +
                                     "1. company\n" +
@@ -124,13 +124,14 @@ public class LoginOrRegister extends Menu {
                                     info.put("workType", "workshop");
                                     break;
                             }
+                            ConsoleCmd.scanner.nextLine();
                             System.out.println("Enter your workplace name :");
                             String companyName = ConsoleCmd.scanner.nextLine();
                             info.put("companyName", companyName);
                             break;
                         case 3:
                             if (checkForExistingManager)
-                                info.put("type", "Manager");
+                                info.put("type", "manager");
                             else {
                                 try {
                                     throw ViewException.existingManager();

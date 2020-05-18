@@ -15,7 +15,7 @@ public class LoginOrRegisterManaging {
     }
 
     public static boolean isThisTheFirstManager() {
-        return false;
+        return Manager.isThisTheFirstManager();
     }
 
     public static boolean isThereASameEmail(String requestedMail) {
@@ -26,7 +26,6 @@ public class LoginOrRegisterManaging {
         switch (info.get("type")) {
             case "seller":
                 new Seller(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"), info.get("companyName"), info.get("workType"));
-
                 break;
             case "buyer":
                 new Buyer(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"));
@@ -35,17 +34,21 @@ public class LoginOrRegisterManaging {
                 new Manager(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"));
                 break;
         }
+        login(info.get("username"), info.get("password"));
     }
 
     public static int login(String username, String password) {
         User currentUser = User.getUserByUsername(username);
         if (currentUser.isUsernameAndPasswordCorrect(username, password)) {
-            switch (currentUser.getUsername()) {
-                case "buyer":
+            switch (currentUser.getType()) {
+                case BUYER:
+                    Buyer.currentBuyer = (Buyer) User.getUserByUsername(username);
                     return 1;
-                case "seller":
+                case SELLER:
+                    Seller.currentSeller = (Seller) User.getUserByUsername(username);
                     return 2;
-                case "manager":
+                case MANAGER:
+                    Manager.currentManager = (Manager) User.getUserByUsername(username);
                     return 3;
             }
         }

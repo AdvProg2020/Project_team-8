@@ -9,12 +9,12 @@ public class Seller extends User {
     private String sellerCompanyName;
     String workType;
     public static ArrayList<Seller> sellers;
+   public static Seller currentSeller;
 
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName, String workType) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.sellerCompanyName = sellerCompanyName;
         this.workType = workType;
-        User.users.add(this);
         this.setType(UserType.SELLER);
     }
 
@@ -54,8 +54,8 @@ public class Seller extends User {
 
     }
 
-    public String viewCompanyInformation(Seller seller) {
-        return "Company name: " + seller.getSellerCompanyName() + "\n";
+    public String viewCompanyInformation() {
+        return "Company name: " + this.getSellerCompanyName() + "\n";
     }
 
     public ArrayList<String> viewSalesHistory(Seller seller) {
