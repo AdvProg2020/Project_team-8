@@ -115,7 +115,7 @@ public class ManagerManaging {
         return false;
     }
 
-    public static void editCategory(String toBeEditedField, String categoryName, String newField) {
+    public static void editCategory(String toBeEditedField, String categoryName, ArrayList<String> newField) {
         ;
     }
 
