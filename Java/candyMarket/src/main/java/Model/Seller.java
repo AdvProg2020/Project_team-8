@@ -9,24 +9,25 @@ public class Seller extends User {
     private String sellerCompanyName;
     String workType;
     public static Seller currentSeller;
-    public static ArrayList<Seller> getSellers() {
-        return sellers;
-    }
-    public void addMySellLog(SellLog sellLog){
-        mySellLog.add(sellLog);
-    }
-    public static void setSellers(ArrayList<Seller> sellers) {
-        Seller.sellers = sellers;
-    }
-
     public static ArrayList<Seller> sellers;
 
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName, String workType) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.sellerCompanyName = sellerCompanyName;
         this.workType = workType;
-        User.users.add(this);
         this.setType(UserType.SELLER);
+    }
+
+    public static ArrayList<Seller> getSellers() {
+        return sellers;
+    }
+
+    public void addMySellLog(SellLog sellLog){
+        mySellLog.add(sellLog);
+    }
+
+    public static void setSellers(ArrayList<Seller> sellers) {
+        Seller.sellers = sellers;
     }
 
     public ArrayList<Sale> getMySales() {
@@ -65,8 +66,8 @@ public class Seller extends User {
 
     }
 
-    public String viewCompanyInformation(Seller seller) {
-        return "Company name: " + seller.getSellerCompanyName() + "\n";
+    public String viewCompanyInformation() {
+        return "Company name: " + this.getSellerCompanyName() + "\n";
     }
 
     public ArrayList<String> viewSalesHistory(Seller seller) {

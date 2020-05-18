@@ -60,8 +60,14 @@ public class ViewException extends Exception {
     public static ViewException invalidIDNumber(){
         return new ViewException("Invalid id number, please try again :");
     }
+    public static ViewException invalidIDNumberForBuyer(){
+        return new ViewException("Invalid id number, either you have not purchased this item or this id does not exist, please try again :");
+    }
     public static ViewException invalidDiscountPercentage(){
         return new ViewException("Percentage must be between 0 and 100, please try again :");
+    }
+    public static ViewException invalidScoreNumber(){
+        return new ViewException("Score must be between 1 and 5, please try again :");
     }
 
     public ViewException (String msg){

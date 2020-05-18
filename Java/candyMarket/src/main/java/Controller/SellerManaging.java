@@ -26,7 +26,7 @@ public class SellerManaging {
     }
 
     public static String viewCompaniesInfo() {
-        return null;
+        return Seller.currentSeller.viewCompanyInformation();
     }
 
     public static ArrayList<String> viewSalesHistory() {

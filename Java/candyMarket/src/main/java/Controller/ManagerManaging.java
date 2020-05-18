@@ -2,6 +2,7 @@ package Controller;
 
 import Model.*;
 
+import javax.print.attribute.standard.MediaName;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -15,27 +16,23 @@ public class ManagerManaging {
     }
 
     public static String showPersonalInfo(){
-        return null;
+        return Manager.currentManager.viewUserPersonalInfo();
     }
 
     public static void editAFieldOfOfInfo(String toBeEditedField, String newField) {
-        ;
+        Manager.currentManager.editPersonalInfo(toBeEditedField, newField);
     }
 
-    public static ArrayList<String> manageUsers() {
-        return null;
+    public static ArrayList<String> showAllUsers() {
+        return Manager.viewAllUsers();
     }
 
     public static String viewUser(String username) {
-        return null;
+        return Manager.viewUser(username);
     }
 
     public static void deleteUser(String username) {
-        ;
-    }
-
-    public static void createNewManager(HashMap<String, String> info) {
-        ;
+        Manager.deleteUser(username);
     }
 
     public static HashMap<Integer, String> manageAllProducts() {
@@ -54,7 +51,7 @@ public class ManagerManaging {
         return false;
     }
 
-    public static void createDiscountCode(int code, Date start, Date end, int percentage, int max, ArrayList<String> users) {
+    public static void createDiscountCode(int code, long start, long end, int percentage, int max, ArrayList<String> users) {
         ;
     }
 
@@ -66,7 +63,7 @@ public class ManagerManaging {
         return null;
     }
 
-    public static void editDiscountCodeDate(String toBeEditedField, Date newDate) {
+    public static void editDiscountCodeDate(String toBeEditedField, long newDate) {
         ;
     }
 

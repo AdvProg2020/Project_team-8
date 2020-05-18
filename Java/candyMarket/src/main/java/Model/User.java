@@ -3,7 +3,7 @@ package Model;
 import java.util.ArrayList;
 
 public class User {
-    enum UserType {
+    public enum UserType {
         BUYER, SELLER, MANAGER
     }
     protected Cart cart = new Cart();

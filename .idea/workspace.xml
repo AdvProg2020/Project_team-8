@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_gilecode_yagson_yagson_0_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0_M1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/LoginOrRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/View/ManagerMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +19,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1bAcRWYn6Fc1VwkR7Jdq6aPmHh0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,6 +30,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Java/OnlineShop" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -90,7 +70,8 @@
       <workItem from="1589610181041" duration="3274000" />
       <workItem from="1589670057134" duration="10400000" />
       <workItem from="1589707395468" duration="13398000" />
-      <workItem from="1589758262885" duration="1204000" />
+      <workItem from="1589794966270" duration="578000" />
+      <workItem from="1589795790945" duration="7310000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -155,7 +136,49 @@
       <option name="project" value="LOCAL" />
       <updated>1589725158196</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Manager manageUsers (model)&#10;Fix LoginOrRegisterManaging (controller)&#10;Edit field &amp; view field">
+      <created>1589763341856</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589763341856</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add personal info of buyer in View">
+      <created>1589796165467</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589796165467</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix a bug in personal info of Manager and Seller">
+      <created>1589796266407</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589796266407</updated>
+    </task>
+    <task id="LOCAL-00013" summary="show orders in BuyerMenu">
+      <created>1589800507207</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1589800507207</updated>
+    </task>
+    <task id="LOCAL-00014" summary="finalize BuyerMenu">
+      <created>1589810775487</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589810775487</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix bugs in some Menus">
+      <created>1589811837815</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1589811837815</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,70 +193,86 @@
     <MESSAGE value="finalize Register and Login Menus v2" />
     <MESSAGE value="finalize Register and Login Menus v3" />
     <MESSAGE value="finalize Register and Login Menus v4" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize Register and Login Menus v4" />
+    <MESSAGE value="Manager manageUsers (model)&#10;Fix LoginOrRegisterManaging (controller)&#10;Edit field &amp; view field" />
+    <MESSAGE value="add personal info of buyer in View" />
+    <MESSAGE value="fix a bug in personal info of Manager and Seller" />
+    <MESSAGE value="show orders in BuyerMenu" />
+    <MESSAGE value="finalize BuyerMenu" />
+    <MESSAGE value="fix bugs in some Menus" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs in some Menus" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589731568856">
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1589810459924">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1589731568856" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1589810459924" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="116" y="0" key="CommitChangelistDialog2" timestamp="1589759552980">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589811835268">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="116" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589759552980" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1589811835268" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1588513942136">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588078365417" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1588513942136" />
-    <state width="1237" height="140" key="GridCell.Tab.0.bottom" timestamp="1589758669010">
+    <state width="1237" height="322" key="GridCell.Tab.0.bottom" timestamp="1589811719726">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state width="1237" height="140" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589758669010" />
-    <state width="1237" height="140" key="GridCell.Tab.0.center" timestamp="1589758669010">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589764715466" />
+    <state width="1237" height="322" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589811719726" />
+    <state width="1237" height="322" key="GridCell.Tab.0.center" timestamp="1589811719725">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state width="1237" height="140" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1589758669010" />
-    <state width="1237" height="140" key="GridCell.Tab.0.left" timestamp="1589758669008">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589764715466" />
+    <state width="1237" height="322" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1589811719725" />
+    <state width="1237" height="322" key="GridCell.Tab.0.left" timestamp="1589811719725">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state width="1237" height="140" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1589758669008" />
-    <state width="1237" height="140" key="GridCell.Tab.0.right" timestamp="1589758669010">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589764715466" />
+    <state width="1237" height="322" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1589811719725" />
+    <state width="1237" height="322" key="GridCell.Tab.0.right" timestamp="1589811719725">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state width="1237" height="140" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1589758669010" />
-    <state width="1237" height="199" key="GridCell.Tab.1.bottom" timestamp="1589682405296">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589764715466" />
+    <state width="1237" height="322" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1589811719725" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1589764715463">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589764715463" />
     <state width="1237" height="199" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1237" height="199" key="GridCell.Tab.1.center" timestamp="1589682405295">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1589764715463">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1589764715463" />
     <state width="1237" height="199" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1237" height="199" key="GridCell.Tab.1.left" timestamp="1589682405295">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1589764715463">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1589764715463" />
     <state width="1237" height="199" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1237" height="199" key="GridCell.Tab.1.right" timestamp="1589682405295">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1589764715463">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1589764715463" />
     <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589759570470">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589810783730">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589759570470" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1589707394626">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1589763404146" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589810783730" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1589794979638">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589794979638" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707394626" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1589707905054">
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1589810866980">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707905054" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589810866979" />
     <state x="91" y="36" key="new project wizard" timestamp="1588513960615">
       <screen x="0" y="0" width="1280" height="683" />
     </state>

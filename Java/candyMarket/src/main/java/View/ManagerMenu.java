@@ -8,7 +8,6 @@ import Model.Manager;
 import Model.Seller;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
@@ -109,6 +108,7 @@ public class ManagerMenu extends Menu{
                             }catch (ViewException e) {
                                 System.out.println(ViewException.invalidNumber().getMessage());
                             }
+                            this.run();
                     }
                 } else if (menuChanger == 0)
                     this.parentMenu.run();
@@ -121,8 +121,9 @@ public class ManagerMenu extends Menu{
             @Override
             public void show() {
                 System.out.println(this.getName());
-                ArrayList<String> allUsers = ManagerManaging.manageUsers();
+                ArrayList<String> allUsers = ManagerManaging.showAllUsers();
                 System.out.println(allUsers);
+                System.out.println("0. back");
             }
 
             @Override
@@ -198,7 +199,7 @@ public class ManagerMenu extends Menu{
                             }catch (ViewException e) {
                                 if (!emailValidation(email))
                                     System.out.println(ViewException.invalidEmailFormat().getMessage());
-                                if (LoginOrRegisterManaging.isThereUsernameWithThisName(email))
+                                if (LoginOrRegisterManaging.isThereASameEmail(email))
                                     System.out.println(ViewException.existingEmail().getMessage());
                             }
                             email = ConsoleCmd.scanner.nextLine();
@@ -215,7 +216,7 @@ public class ManagerMenu extends Menu{
                             phoneNumber = ConsoleCmd.scanner.nextLine();
                         }
                         info.put("phoneNumber", phoneNumber);
-                        info.put("type", "Manager");
+                        info.put("type", "manager");
                         LoginOrRegisterManaging.register(info);
                         System.out.println("Registered Successfully");
                         this.run();
@@ -295,9 +296,9 @@ public class ManagerMenu extends Menu{
                     code = ConsoleCmd.scanner.nextInt();
                 }
                 System.out.println("Enter premier date :");
-                Date startDate = new Date();
+                long startDate = ConsoleCmd.scanner.nextLong();
                 System.out.println("Enter final date :");
-                Date endDate = new Date();
+                long endDate = ConsoleCmd.scanner.nextLong();
                 System.out.println("Enter discount's percentage :");
                 int percentage = ConsoleCmd.scanner.nextInt();
                 while (percentage < 0 || percentage > 100) {
@@ -376,14 +377,14 @@ public class ManagerMenu extends Menu{
                                 break;
                             case 1 :
                                 System.out.println("Enter new Date :");
-                                Date newStartDate = new Date();
+                                long newStartDate = ConsoleCmd.scanner.nextLong();
                                 ManagerManaging.editDiscountCodeDate("startDate", newStartDate);
                                 System.out.println("Edited Successfully");
                                 this.run();
                                 break;
                             case 2 :
                                 System.out.println("Enter new Date :");
-                                Date newEndDate = new Date();
+                                long newEndDate = ConsoleCmd.scanner.nextLong();;
                                 ManagerManaging.editDiscountCodeDate("endDate", newEndDate);
                                 System.out.println("Edited Successfully");
                                 this.run();

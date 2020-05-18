@@ -69,7 +69,7 @@ public class LoginOrRegister extends Menu {
                     }catch (ViewException e) {
                         if (!emailValidation(email))
                             System.out.println(ViewException.invalidEmailFormat().getMessage());
-                        if (LoginOrRegisterManaging.isThereUsernameWithThisName(email))
+                        if (LoginOrRegisterManaging.isThereASameEmail(email))
                             System.out.println(ViewException.existingEmail().getMessage());
                     }
                     email = ConsoleCmd.scanner.nextLine();
@@ -95,10 +95,10 @@ public class LoginOrRegister extends Menu {
                     type = ConsoleCmd.scanner.nextInt();
                     switch (type) {
                         case 1:
-                            info.put("type", "Buyer");
+                            info.put("type", "buyer");
                             break;
                         case 2:
-                            info.put("type", "Seller");
+                            info.put("type", "seller");
                             int workType = 0;
                             System.out.println("Enter a type :\n" +
                                     "1. company\n" +
@@ -131,7 +131,7 @@ public class LoginOrRegister extends Menu {
                             break;
                         case 3:
                             if (checkForExistingManager)
-                                info.put("type", "Manager");
+                                info.put("type", "manager");
                             else {
                                 try {
                                     throw ViewException.existingManager();
