@@ -23,8 +23,6 @@ public class PurchaseMenu extends Menu {
     }
     private Menu showTotalPrice() {
         return new Menu("Show Total price",this) {
-            menuType menuType;
-            ArrayList<String> products  = CartManaging.showProductsFromCart();
             @Override
             public void show() {
                 System.out.println(this.getName());
@@ -88,7 +86,8 @@ public class PurchaseMenu extends Menu {
         return new Menu("Purchase",this) {
             @Override
             public void run() throws ViewException {
-                CartManaging.purchase();
+                if(!CartManaging.purchase())
+                throw ViewException.emptyCart();
                 receiverInformation().run();
                 discountCode().run();
                 payment().run();

@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class Request {
     public enum requestType{
-        CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
+        CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE,ADD_COMMENT
     }
-    requestType requestType;
+    public static requestType requestType;
     private Good good;
     private Sale sale;
     private int requestId;
@@ -74,6 +74,8 @@ public class Request {
             case SELLER_REGISTER:
                 this.getSeller().confirmSeller();
                 break;
+            case CREATE_GOOD:
+                this.getGood().confirmProduct();
         }
     }
 
@@ -81,6 +83,9 @@ public class Request {
         switch (this.requestType) {
             case SELLER_REGISTER:
                 User.users.remove(this.getSeller());
+                break;
+            case CREATE_GOOD:
+                Good.unconfirmedGoods.remove(this.getGood());
                 break;
         }
     }

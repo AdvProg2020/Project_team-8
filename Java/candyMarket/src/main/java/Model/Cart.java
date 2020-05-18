@@ -1,6 +1,7 @@
 package Model;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,6 +46,21 @@ public class Cart {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+    public void pay(){
+        for (Good g:
+             goods.keySet()) {
+            g.addBuyers(UserHandler.currentBuyer);
+        }
+        resetCart();
+    }
+    public void resetCart(){
+        address = null;
+        buyerName = null;
+        phoneNumber = null;
+        totalAmount = 0;
+        discountAmount = 0;
+        goods = new HashMap<>();
+    }
 
     public int getTotalAmount() {
         return totalAmount;
@@ -79,7 +95,7 @@ public class Cart {
         this.buySituation = buySituation;
     }
     public Boolean canPay(){
-        if(UserHandler.currentBuyer==null)
+        if(Buyer.currentBuyer==null)
         return false;
         else return true;
     }
@@ -136,9 +152,9 @@ public class Cart {
                saleAmount+=key2.getSalePercentageAmount()*key2.getPrice()/100;
             }
             BuyLog buyLog = new BuyLog(totalAmount-discountAmount,discountAmount,value,key.getUsername());
-            SellLog sellLog = new SellLog(totalAmount,saleAmount,value,UserHandler.currentBuyer.getUsername());
-            UserHandler.currentBuyer.addMyLogs(buyLog);
-            UserHandler.currentSeller.addMySellLog(sellLog);
+            SellLog sellLog = new SellLog(totalAmount,saleAmount,value,Buyer.currentBuyer.getUsername());
+            Buyer.currentBuyer.addMyLogs(buyLog);
+            Seller.currentSeller.addMySellLog(sellLog);
             ManageInfo.allBuyLogs.add(buyLog);
             ManageInfo.allSellLogs.add(sellLog);
         }

@@ -1,8 +1,20 @@
 package Model;
 
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Good {
+    public long getDateModified() {
+        return dateModified;
+    }
+
+    public void setDateModified(long dateModified) {
+        this.dateModified = dateModified;
+    }
+    public int getPriceAfterSale(){
+        return (int) (price*(1-(double)salePercentageAmount/100));
+    }
     private long dateModified;
     private int salePercentageAmount;
     private int id;
@@ -17,7 +29,7 @@ public class Good {
     private String categorySpecialAttributes;
     private String detailInfo;
     private int averageScore;
-    private ArrayList<Opinion> opinions;
+    private ArrayList<Comment> comments;
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
     public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
     public static ArrayList<Good> confirmedGoods = ManageInfo.allGoods;
@@ -33,22 +45,6 @@ public class Good {
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
         this.dateModified = System.currentTimeMillis();
-        this.situation = ItemCreationSituation.CREATING_CHECK;
-        this.id = 0;
-        this.averageScore = 0;
-        unconfirmedGoods.add(this);
-    }
-
-    public long getDateModified() {
-        return dateModified;
-    }
-
-    public void setDateModified(long dateModified) {
-        this.dateModified = dateModified;
-    }
-
-    public int getPriceAfterSale(){
-        return (int) (price*(1-(double)salePercentageAmount/100));
     }
 
     public int getStock() {
@@ -91,13 +87,6 @@ public class Good {
         this.averageScore = averageScore;
     }
 
-    public ArrayList<Opinion> getOpinions() {
-        return opinions;
-    }
-
-    public void setOpinions(ArrayList<Opinion> opinions) {
-        this.opinions = opinions;
-    }
 
     public ItemCreationSituation getSituation() {
         return situation;
@@ -143,6 +132,10 @@ public class Good {
         return null;
     }
 
+    public void addBuyers(Buyer b){
+        buyers.add(b);
+    }
+
     public static Good getGoodByName(String name,ArrayList<Good> goods) {
         for (Good g:
              goods) {
@@ -180,12 +173,20 @@ public class Good {
                 "Category special attributes: " + this.getCategorySpecialAttributes() + "\n" +
                 "Detail info: " + this.detailInfo + "\n" +
                 "Average score: " + this.averageScore + "\n" +
-                "Opinions: " + this.getOpinions().toString() + "\n";
+                "Opinions: " + this.getComments().toString() + "\n";
 
     }
 
     public void confirmProduct() {
         confirmedGoods.add(this);
         this.id = confirmedGoods.size();
+    }
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
     }
 }

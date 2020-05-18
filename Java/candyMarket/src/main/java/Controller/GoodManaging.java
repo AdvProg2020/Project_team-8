@@ -1,7 +1,9 @@
 package Controller;
 
+import Model.FilterAndSort;
 import Model.Good;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GoodManaging {

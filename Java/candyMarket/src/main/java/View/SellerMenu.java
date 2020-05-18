@@ -3,7 +3,6 @@ package View;
 import Controller.ManagerManaging;
 import Controller.SellerManaging;
 import Model.Seller;
-import com.sun.tools.jconsole.JConsoleContext;
 
 import javax.swing.text.View;
 import java.beans.XMLEncoder;
