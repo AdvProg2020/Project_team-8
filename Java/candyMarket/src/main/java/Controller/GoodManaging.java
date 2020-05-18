@@ -22,7 +22,7 @@ public class GoodManaging {
         Good good = Good.getGoodByName(goodName,Good.fixedGoods);
         String data = "info: "+good.getDetailInfo()+"\n";
         data+="price : "+good.getPrice()+"\n";
-        data+="discount : "+good.getsalePercentageAmount()+"%"+"\n";
+        data+="discount : "+good.getSalePercentageAmount()+"%"+"\n";
         data+="category : "+good.getCategory().getName()+"\n";
         data+="score : "+good.getAverageScore()+"\100"+"\n";
         return data;
@@ -41,7 +41,7 @@ public class GoodManaging {
         Good good = Good.getGoodByName(goodName,Good.fixedGoods);
         String data = "info | price | discount | category | score ";
         data += "\n";
-        data+=good.getDetailInfo()+" | "+good.getPrice()+" | "+good.getsalePercentageAmount()
+        data+=good.getDetailInfo()+" | "+good.getPrice()+" | "+good.getSalePercentageAmount()
                 +" | "+good.getCategory()+" | "+good.getAverageScore();
         data+="\n\n\n";
         data+="brand | stock | categoryAttributes | goodSituation ";
@@ -56,10 +56,10 @@ public class GoodManaging {
         Good good2 = Good.getGoodByName(goodName2,Good.fixedGoods);
         String data = "info | price | discount | category | score ";
         data += "\n";
-        data+=good1.getDetailInfo()+" | "+good1.getPrice()+" | "+good1.getsalePercentageAmount()
+        data+=good1.getDetailInfo()+" | "+good1.getPrice()+" | "+good1.getSalePercentageAmount()
                 +" | "+good1.getCategory()+" | "+good1.getAverageScore();
         data += "\n";
-        data+=good2.getDetailInfo()+" | "+good2.getPrice()+" | "+good2.getsalePercentageAmount()
+        data+=good2.getDetailInfo()+" | "+good2.getPrice()+" | "+good2.getSalePercentageAmount()
                 +" | "+good2.getCategory()+" | "+good2.getAverageScore();
         data+="\n\n\n";
         data+="brand | stock | categoryAttributes | goodSituation ";

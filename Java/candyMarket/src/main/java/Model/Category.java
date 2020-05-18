@@ -8,7 +8,7 @@ public class Category {
     private Category subCategory;
     private ArrayList<Good> goods;
     private ArrayList<String> specialAttributes;
-    ArrayList<Category> categories = ManageInfo.allCategories;
+    static ArrayList<Category> categories = ManageInfo.allCategories;
 
     public Category(String name, ArrayList<Good> goods, ArrayList<String> specialAttributes) {
         this.name = name;
@@ -46,5 +46,30 @@ public class Category {
 
     public void setSpecialAttributes(ArrayList<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
+    }
+
+    public static Category getCategoryByName(String categoryName) {
+        for (Category category : categories) {
+            if (category.getName().equals(categoryName))
+                return category;
+        }
+        return null;
+    }
+
+    public static boolean isThisCategoryExist(String categoryName) {
+        for (Category category : categories) {
+            if (category.getName().equals(categoryName))
+                return true;
+        }
+
+        return false;
+    }
+
+    public static boolean isThisProductInCategory (Category category, String productName) {
+        for (Good productInCategory : category.getGoods()) {
+            if (productInCategory.getName().equals(productName))
+                return true;
+        }
+        return false;
     }
 }

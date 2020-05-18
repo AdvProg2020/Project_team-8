@@ -16,11 +16,11 @@ public class ManagerManaging {
     }
 
     public static String showPersonalInfo(){
-        return Manager.currentManager.viewUserPersonalInfo();
+        return UserHandler.currentManager.viewUserPersonalInfo();
     }
 
     public static void editAFieldOfOfInfo(String toBeEditedField, String newField) {
-        Manager.currentManager.editPersonalInfo(toBeEditedField, newField);
+        UserHandler.currentManager.editPersonalInfo(toBeEditedField, newField);
     }
 
     public static ArrayList<String> showAllUsers() {
@@ -84,29 +84,31 @@ public class ManagerManaging {
     }
 
     public static HashMap<Integer, String> manageRequests() {
-        return null;
+        return Manager.viewAllRequests();
     }
 
-    public static boolean isThereRequestWithID(int id) {return false;}
+    public static boolean isThereRequestWithID(int id) {
+        return Request.isThereRequestWithId(id);
+    }
 
     public static String requestDetails(int id) {
-        return null;
+        return Request.viewDetails(Request.getRequestById(id));
     }
 
     public static void acceptRequest(int id) {
-        ;
+        Request.getRequestById(id).acceptRequest();
     }
 
     public static void rejectRequest(int id) {
-        ;
+        Request.getRequestById(id).declineRequest();
     }
 
     public static ArrayList<String> manageCategories() {
-        return null;
+        return Manager.viewAllCategories();
     }
 
     public static boolean isThereSuchCategory(String categoryName) {
-        return false;
+        return Category.isThisCategoryExist(categoryName);
     }
 
     public static boolean isThereSuchGoodInCategory(String categoryName, String goodName) {
@@ -126,6 +128,7 @@ public class ManagerManaging {
     }
 
     public static void logout() {
-
+        UserHandler.currentUser = null;
+        UserHandler.currentManager = null;
     }
 }

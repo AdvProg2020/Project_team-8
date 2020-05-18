@@ -1,10 +1,7 @@
 package Controller;
 
 
-import Model.Buyer;
-import Model.Manager;
-import Model.Seller;
-import Model.User;
+import Model.*;
 
 import java.util.HashMap;
 
@@ -26,6 +23,7 @@ public class LoginOrRegisterManaging {
         switch (info.get("type")) {
             case "seller":
                 new Seller(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"), info.get("companyName"), info.get("workType"));
+                (new Request(Request.requestType.SELLER_REGISTER)).createRegisterSellerRequest((Seller) User.getUserByUsername(info.get("username")));
                 break;
             case "buyer":
                 new Buyer(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"));
@@ -42,13 +40,13 @@ public class LoginOrRegisterManaging {
         if (currentUser.isUsernameAndPasswordCorrect(username, password)) {
             switch (currentUser.getType()) {
                 case BUYER:
-                    Buyer.currentBuyer = (Buyer) User.getUserByUsername(username);
+                    UserHandler.currentBuyer = (Buyer) User.getUserByUsername(username);
                     return 1;
                 case SELLER:
-                    Seller.currentSeller = (Seller) User.getUserByUsername(username);
+                    UserHandler.currentSeller = (Seller) User.getUserByUsername(username);
                     return 2;
                 case MANAGER:
-                    Manager.currentManager = (Manager) User.getUserByUsername(username);
+                    UserHandler.currentManager = (Manager) User.getUserByUsername(username);
                     return 3;
             }
         }

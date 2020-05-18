@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Manager extends User {
     public static Manager currentManager;
@@ -30,14 +31,19 @@ public class Manager extends User {
     }
 
     public static String viewUser(String username) {
-        return User.getUserByUsername(username).viewUserPersonalInfo();
+        return User.getUserByUsername(username).viewUserPersonalInfo() + User.getUserByUsername(username).getType() + "\n";
     }
 
     public static void deleteUser(String username) {
         User.users.remove(User.getUserByUsername(username));
     }
-    public void createNewManager() {
 
+    public static HashMap<Integer, String> viewAllRequests() {
+        HashMap<Integer, String> requests = new HashMap<>();
+        for (Request request : Request.requests) {
+            requests.put(request.getRequestId(), request.getRequest());
+        }
+        return requests;
     }
 
     public ArrayList<String> viewAllGoods() {
@@ -72,20 +78,14 @@ public class Manager extends User {
 
     }
 
-    public ArrayList<String> viewAllRequests() {
-        return null;
-    }
 
-    public ArrayList<String> viewRequestDetails(Request request) {
-        return null;
-    }
 
-    public boolean replyRequest(Request request) {
-        return true;
-    }
-
-    public ArrayList<String> viewAllCategories() {
-        return null;
+    public static ArrayList<String> viewAllCategories() {
+        ArrayList<String> categoriesName = new ArrayList<>();
+        for (Category category : Category.categories) {
+            categoriesName.add(category.getName());
+        }
+        return categoriesName;
     }
 
     public void editCategory(Category category) {

@@ -7,15 +7,17 @@ public class Seller extends User {
     private ArrayList<Good> myGoods;
     private ArrayList<SellLog> mySellLog;
     private String sellerCompanyName;
-    String workType;
+    private String workType;
     public static Seller currentSeller;
     public static ArrayList<Seller> sellers;
+    private boolean confirmedSeller;
 
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName, String workType) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.sellerCompanyName = sellerCompanyName;
         this.workType = workType;
         this.setType(UserType.SELLER);
+        this.confirmedSeller = false;
     }
 
     public static ArrayList<Seller> getSellers() {
@@ -115,5 +117,9 @@ public class Seller extends User {
         return null;
     }
 
-    
+    public void confirmSeller() {
+        this.confirmedSeller = true;
+    }
+
+
 }
