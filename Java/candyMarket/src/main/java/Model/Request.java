@@ -7,7 +7,8 @@ public class Request {
     public enum requestType{
         CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE,ADD_COMMENT
     }
-    public static requestType requestType;
+    public requestType requestType;
+    public static requestType type;
     private Good good;
     private Sale sale;
     private int requestId;
@@ -59,6 +60,7 @@ public class Request {
     }
 
     public static String viewDetails(Request request) {
+        System.out.println(requests.toString());
         switch (request.requestType) {
             case SELLER_REGISTER:
                 return request.viewSellerRegisterDetails();
@@ -77,6 +79,7 @@ public class Request {
             case CREATE_GOOD:
                 this.getGood().confirmProduct();
         }
+        requests.remove(this);
     }
 
     public void declineRequest() {
@@ -88,6 +91,7 @@ public class Request {
                 Good.unconfirmedGoods.remove(this.getGood());
                 break;
         }
+        requests.remove(this);
     }
 
     public void sellerAddGood(Good good) {
