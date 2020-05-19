@@ -3,7 +3,7 @@ package View;
 import java.util.HashMap;
 
 public abstract class Menu {
-    private String name;
+    protected String name;
     protected Menu parentMenu;
     protected HashMap<Integer, Menu> subMenus;
     protected static LoginType user = LoginType.DEFAULT;
@@ -23,6 +23,10 @@ public abstract class Menu {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void show() {
