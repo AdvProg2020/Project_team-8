@@ -3,9 +3,17 @@ package Model;
 import java.util.ArrayList;
 
 public class Buyer extends User {
-    private ArrayList<BuyLog> myBuyLog;
-    private ArrayList<Discount> myDiscounts;
-    private ArrayList<BuyLog> myLogs;
+    public ArrayList<Discount> getMyDiscounts() {
+        return myDiscounts;
+    }
+
+    public void setMyDiscounts(ArrayList<Discount> myDiscounts) {
+        this.myDiscounts = myDiscounts;
+    }
+
+    private ArrayList<Discount> myDiscounts = new ArrayList<>();
+    private ArrayList<BuyLog> myLogs = new ArrayList<>();
+    private ArrayList<Good> boughtGoods = new ArrayList<>();
     private int balance;
     public static Buyer currentBuyer;
 
@@ -18,7 +26,14 @@ public class Buyer extends User {
     public Cart getCart() {
         return cart;
     }
-
+    public BuyLog getBuyLogById(int id){
+        for (BuyLog b:
+             myLogs) {
+            if(b.getId()==id)
+                return b;
+        }
+        return null;
+    }
     public void setCart(Cart cart) {
         this.cart = cart;
     }
@@ -82,11 +97,27 @@ public class Buyer extends User {
     public ArrayList<BuyLog> getMyLogs() {
         return myLogs;
     }
-    
+
     public void setMyLogs(ArrayList<BuyLog> myLogs) {
         this.myLogs = myLogs;
     }
     public void addMyLogs(BuyLog buyLog) {
-        this.myBuyLog.add(buyLog);
+        this.myLogs.add(buyLog);
+    }
+
+    public ArrayList<Good> getBoughtGoods() {
+        return boughtGoods;
+    }
+
+    public void setBoughtGoods(ArrayList<Good> boughtGoods) {
+        this.boughtGoods = boughtGoods;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 }

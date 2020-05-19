@@ -8,7 +8,10 @@ public class Good {
     public long getDateModified() {
         return dateModified;
     }
-
+    public void addScore(Score score){
+        averageScore = averageScore*scores.size()+score.getScore()/(scores.size()+1);
+        scores.add(score);
+    }
     public void setDateModified(long dateModified) {
         this.dateModified = dateModified;
     }
@@ -29,6 +32,7 @@ public class Good {
     private String categorySpecialAttributes;
     private String detailInfo;
     private int averageScore;
+    private ArrayList<Score> scores = new ArrayList<>();
     private ArrayList<Comment> comments;
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
     public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
@@ -78,7 +82,6 @@ public class Good {
     public void setCategorySpecialAttributes(String categorySpecialAttributes) {
         this.categorySpecialAttributes = categorySpecialAttributes;
     }
-
     public String getDetailInfo() {
         return detailInfo;
     }
@@ -196,5 +199,13 @@ public class Good {
 
     public void setComments(ArrayList<Comment> comments) {
         this.comments = comments;
+    }
+
+    public ArrayList<Score> getScores() {
+        return scores;
+    }
+
+    public void setScores(ArrayList<Score> scores) {
+        this.scores = scores;
     }
 }

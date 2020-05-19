@@ -139,7 +139,7 @@ public class User {
                 + "First name: " + this.getFirstName() + "\n"
                 + "Last name: " + this.getLastName() + "\n"
                 + "Email: " + this.getEmail() + "\n"
-                + "Phone number" + this.getPhoneNumber() + "\n";
+                + "Phone number:" + this.getPhoneNumber() + "\n";
     }
 
     public void editPersonalInfo(String toBeEditedField, String newField) {
