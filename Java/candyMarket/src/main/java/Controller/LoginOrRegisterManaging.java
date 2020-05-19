@@ -23,7 +23,7 @@ public class LoginOrRegisterManaging {
         switch (info.get("type")) {
             case "seller":
                 new Seller(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"), info.get("companyName"), info.get("workType"));
-                (new Request(Request.requestType.SELLER_REGISTER)).createRegisterSellerRequest((Seller) User.getUserByUsername(info.get("username")));
+                (new Request(Request.type.SELLER_REGISTER)).createRegisterSellerRequest((Seller) User.getUserByUsername(info.get("username")));
                 break;
             case "buyer":
                 new Buyer(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"));

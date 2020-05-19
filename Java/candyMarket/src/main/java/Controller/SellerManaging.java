@@ -47,7 +47,7 @@ public class SellerManaging {
     }
 
     public static void addProduct(String name, String brand, int price, int stock, String category, String categorySpecialAttributes, String detailInfo) {
-        (new Request(Request.requestType.CREATE_GOOD)).createAddProductRequest(new Good(name, brand, price, seller, stock, Category.getCategoryByName(category), categorySpecialAttributes, detailInfo));
+        (new Request(Request.type.CREATE_GOOD)).createAddProductRequest(new Good(name, brand, price, seller, stock, Category.getCategoryByName(category), categorySpecialAttributes, detailInfo));
     }
 
     public static boolean removeProduct(int id) {
