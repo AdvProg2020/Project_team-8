@@ -49,7 +49,9 @@ public class Cart {
         for (Good g:
              goods.keySet()) {
             g.addBuyers(UserHandler.currentBuyer);
+            UserHandler.currentBuyer.getBoughtGoods().add(g);
         }
+        UserHandler.currentBuyer.setBalance(UserHandler.currentBuyer.getBalance()-UserHandler.currentCart.getTotalAmount());
         resetCart();
     }
     public void resetCart(){
@@ -96,6 +98,7 @@ public class Cart {
     public Boolean canPay(){
         if(Buyer.currentBuyer==null)
         return false;
+        if(Buyer.currentBuyer.getBalance()<UserHandler.currentCart.getTotalAmount()) return false;
         else return true;
     }
     public boolean increaseProduct(Good good){

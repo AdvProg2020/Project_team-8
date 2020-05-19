@@ -3,10 +3,12 @@ package View;
 import Controller.BuyerManaging;
 import Controller.ManagerManaging;
 import Controller.SellerManaging;
+import Controller.UserManaging;
 import Model.Buyer;
 import Model.Discount;
 
 import javax.crypto.spec.PSource;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BuyerMenu extends Menu {
@@ -16,9 +18,10 @@ public class BuyerMenu extends Menu {
         subMenus.put(1, viewPersonalInfo());
         subMenus.put(2, new PurchaseMenu("Cart Menu", this));
         subMenus.put(3, viewOrders());
-        subMenus.put(4, viewBalance());
-        subMenus.put(5, viewDiscountCodes());
-        subMenus.put(6, logout());
+        subMenus.put(4, rateProducts());
+        subMenus.put(5, viewBalance());
+        subMenus.put(6, viewDiscountCodes());
+        subMenus.put(7, logout());
         this.setSubMenus(subMenus);
     }
 
@@ -44,7 +47,7 @@ public class BuyerMenu extends Menu {
             @Override
             public void show() {
                 System.out.println("Your personal information:");
-                String info = BuyerManaging.showPersonalInfo();
+                String info = UserManaging.showPersonalInfo();
                 System.out.println(info);
                 System.out.println("0. back");
                 System.out.println("1. edit");
@@ -116,16 +119,22 @@ public class BuyerMenu extends Menu {
             @Override
             public void show() {
                 System.out.println(this.getName());
+                System.out.println("0. back");
+                System.out.println(ConsoleDesign.divider);
                 System.out.println(BuyerManaging.viewOrders());
-                System.out.println("0. back\n" +
-                        "1. show order\n" +
-                        "2. rate a product");
             }
 
             @Override
             public void execute() throws ViewException {
                 int menuChanger = ConsoleCmd.scanner.nextInt();
-                switch (menuChanger) {
+                if(menuChanger == 0)
+                    this.parentMenu.run();
+                else {
+                    String order = BuyerManaging.ShowOrder(menuChanger);
+                    if(order == null) throw ViewException.invalidNumber();
+                    viewOrder(order).run();
+                }
+                /*switch (menuChanger) {
                     case 0 :
                         this.parentMenu.run();
                         break;
@@ -175,22 +184,57 @@ public class BuyerMenu extends Menu {
                             System.out.println(ViewException.invalidNumber().getMessage());
                         }
                         this.run();
+                }*/
+            }
+        };
+    }
+    private Menu viewOrder(String order) {
+        return new Menu("View Order", this) {
+            @Override
+            public void show() {
+                System.out.println(order);
+                System.out.println("0. back");
+            }
+        };
+    }
+    private Menu rateProducts(){
+        return new Menu("Rate Products",this) {
+            ArrayList<String> products;
+            @Override
+            public void show() {
+                System.out.println(this.getName());
+                System.out.println("0. back");
+                products = BuyerManaging.showBoughtProducts();
+                for (String s:
+                     products) {
+                    System.out.println(products.indexOf(s)+1+" : "+s);
+                }
+            }
+
+            @Override
+            public void execute() throws ViewException {
+                int menuChanger = ConsoleCmd.scanner.nextInt();
+                if(menuChanger == 0)
+                    this.parentMenu.run();
+                else if (menuChanger>products.size()) throw ViewException.invalidNumber();
+                else {
+                    System.out.println("please rate from 1 to 5");
+                    int score = ConsoleCmd.scanner.nextInt();
+                    if(score>5 || score<1)
+                        throw ViewException.invalidScoreNumber();
+                    BuyerManaging.rateProduct(products.get(menuChanger-1),score);
+                    ConsoleDesign.printColorFull(ConsoleDesign.YELLOW,"you rated successfully");
+                    this.parentMenu.run();
                 }
             }
         };
     }
-
     private Menu viewBalance() {
         return new Menu("View Balance", this) {
             @Override
             public void show() {
                 System.out.println(BuyerManaging.viewBalance());
                 System.out.println("0. back");
-            }
-
-            @Override
-            public void execute() throws ViewException {
-                super.execute();
             }
         };
     }
@@ -202,11 +246,6 @@ public class BuyerMenu extends Menu {
                 System.out.println(this.getName());
                 System.out.println(BuyerManaging.viewDiscountCodes());
                 System.out.println("0. back");
-            }
-
-            @Override
-            public void execute() throws ViewException {
-                super.execute();
             }
         };
     }
@@ -228,7 +267,7 @@ public class BuyerMenu extends Menu {
                         this.parentMenu.run();
                         break;
                     case 1 :
-                        BuyerManaging.logout();
+                        UserManaging.logout();
                         System.out.println("Logged out Successfully");
                         user = LoginType.DEFAULT;
                         this.parentMenu.parentMenu.parentMenu.run();

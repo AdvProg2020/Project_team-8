@@ -3,11 +3,13 @@ package Model;
 public class Comment {
     @Override
     public String toString() {
-        return "Comment" +" | "+
-                "user : " + user +" | "+
-                "content : " + content + " | " +
-                "title : " + title ;
+        return "Comment{" +
+                "user=" + user +
+                ", content='" + content + '\'' +
+                ", title='" + title + '\'' +
+                '}';
     }
+
     public static enum OpinionSituation{
         CONFIRMING,CONFIRMED,NOT_CONFIRMED
     }

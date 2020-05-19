@@ -2,6 +2,7 @@ package View;
 
 import Controller.ManagerManaging;
 import Controller.SellerManaging;
+import Controller.UserManaging;
 import Model.Seller;
 
 import javax.swing.text.View;
@@ -54,7 +55,7 @@ public class SellerMenu extends Menu {
             @Override
             public void show() {
                 System.out.println("Your personal information:");
-                String info = SellerManaging.viewPersonalInfo();
+                String info = UserManaging.showPersonalInfo();
                 System.out.println(info);
                 System.out.println("0. back");
                 System.out.println("1. edit");

@@ -1,11 +1,11 @@
 package Model;
 
 public class Score {
-    private User user;
+    private Buyer user;
     private int score;
     private Good good;
 
-    public Score(User user, int score, Good good) {
+    public Score(Buyer user, int score, Good good) {
         this.user = user;
         this.score = score;
         this.good = good;
@@ -15,7 +15,7 @@ public class Score {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Buyer user) {
         this.user = user;
     }
 

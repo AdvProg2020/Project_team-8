@@ -3,6 +3,8 @@ package View;
 import Controller.BuyerManaging;
 import Controller.ManagerManaging;
 import Controller.SellerManaging;
+import Controller.UserManaging;
+import Model.User;
 
 import java.util.HashMap;
 
@@ -62,10 +64,6 @@ public class ClientsMenu extends Menu {
 
     //Seller
 
-    private Menu viewSellersPersonalInfo() {
-        String personalInfo = SellerManaging.viewPersonalInfo();
-        return null;
-    }
 
     private Menu viewCompaniesInfo() {
         return null;
@@ -103,7 +101,7 @@ public class ClientsMenu extends Menu {
     //Buyer
 
     private Menu viewBuyersPersonalInfo() {
-        String personalInfo = BuyerManaging.showPersonalInfo();
+        String personalInfo = UserManaging.showPersonalInfo();
         return null;
     }
 

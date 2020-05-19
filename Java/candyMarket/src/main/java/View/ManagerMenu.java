@@ -575,7 +575,7 @@ public class ManagerMenu extends Menu{
                         System.out.println("chose what you want to change\n" +
                                 "0. break\n" +
                                 "1. name\n" +
-                                "2. special attributes\n");
+                                "3. special attributes\n");
                         int edit = ConsoleCmd.scanner.nextInt();
                         switch (edit) {
                             case 0 :
@@ -584,6 +584,7 @@ public class ManagerMenu extends Menu{
                             case 1 :
                                 System.out.println("Enter new name");
                                 ConsoleCmd.scanner.nextLine();
+                                ArrayList<String> changing = new ArrayList<>();
                                 String change = ConsoleCmd.scanner.nextLine();
                                 while (ManagerManaging.isThereSuchCategory(change)) {
                                     try {
@@ -593,16 +594,40 @@ public class ManagerMenu extends Menu{
                                     }
                                     change = ConsoleCmd.scanner.nextLine();
                                 }
-                                ManagerManaging.editCategory("name", category, change);
+                                changing.add(change);
+                                ManagerManaging.editCategory("categoryName", category, changing);
                                 System.out.println("Name Changed Successfully");
                                 this.run();
                                 break;
                             case 2 :
-                                System.out.println("Enter new attribute");
+                                System.out.println("Enter new name");
                                 ConsoleCmd.scanner.nextLine();
                                 change = ConsoleCmd.scanner.nextLine();
-                                ManagerManaging.editCategory("specialAttributes", category, change);
-                                System.out.println("Attribute added Successfully");
+                                while (!ManagerManaging.isThereSuchCategory(change)) {
+                                    try {
+                                        throw ViewException.notExistingCategory();
+                                    }catch (ViewException e) {
+                                        System.out.println(ViewException.notExistingCategory().getMessage());
+                                    }
+                                    change = ConsoleCmd.scanner.nextLine();
+                                }
+                                changing.add(change);
+                                ManagerManaging.editCategory("subCategoryOf", category, changing);
+                                System.out.println("Changed Successfully");
+                                this.run();
+                                break;
+                            case 3 :
+                                System.out.println("Enter new attributes, when done enter \"done\" :");
+                                ConsoleCmd.scanner.nextLine();
+                                while (true) {
+                                    String note = ConsoleCmd.scanner.nextLine();
+                                    if (note.equalsIgnoreCase("done"))
+                                        break;
+                                    else
+                                        changing.add(note);
+                                }
+                                ManagerManaging.editCategory("note", category, changing);
+                                System.out.println("Attribute changed Successfully");
                                 this.run();
                                 break;
                             default :

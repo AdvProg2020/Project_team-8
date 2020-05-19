@@ -11,6 +11,17 @@ public class Discount {
     private int maxReductionAmount;
     private int usageNumber;
     private ArrayList<User> users;
+
+    @Override
+    public String toString() {
+        return "Discount{" +
+                "code=" + code +
+                ", percentReduction=" + percentReduction +
+                ", maxReductionAmount=" + maxReductionAmount +
+                ", usageNumber=" + usageNumber +
+                '}';
+    }
+
     public Discount(int code, long startDate, long endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
         this.code = code;
         this.startDate = startDate;
