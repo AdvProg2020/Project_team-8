@@ -115,7 +115,7 @@ public class ManagerManaging {
         return Category.isThisProductInCategory(Category.getCategoryByName(categoryName), goodName);
     }
 
-    public static void editCategory(String toBeEditedField, String categoryName, ArrayList<String> newField) {
+    public static void editCategory(String toBeEditedField, String categoryName, String newField) {
         ;
     }
 

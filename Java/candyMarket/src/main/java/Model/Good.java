@@ -41,10 +41,14 @@ public class Good {
         this.seller= seller;
         this.stock = stock;
         this.category = category;
+        this.situation = ItemCreationSituation.CREATING_CHECK;
         this.categorySpecialAttributes = categorySpecialAttributes;
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
+        this.averageScore = 0;
         this.dateModified = System.currentTimeMillis();
+        unconfirmedGoods.add(this);
+        this.id = unconfirmedGoods.size();
     }
 
     public ArrayList<Buyer> getBuyers() {
