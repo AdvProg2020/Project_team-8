@@ -601,6 +601,7 @@ public class ManagerMenu extends Menu{
                                 break;
                             case 2 :
                                 System.out.println("Enter new name");
+                                changing = new ArrayList<>();
                                 ConsoleCmd.scanner.nextLine();
                                 change = ConsoleCmd.scanner.nextLine();
                                 while (!ManagerManaging.isThereSuchCategory(change)) {
@@ -618,6 +619,7 @@ public class ManagerMenu extends Menu{
                                 break;
                             case 3 :
                                 System.out.println("Enter new attributes, when done enter \"done\" :");
+                                changing = new ArrayList<>();
                                 ConsoleCmd.scanner.nextLine();
                                 while (true) {
                                     String note = ConsoleCmd.scanner.nextLine();
