@@ -245,7 +245,7 @@ public class LoginOrRegister extends Menu {
                                 parentMenu.subMenus.remove(10);
                                 parentMenu.subMenus.get(1).run();
                             case BUYER :
-                                BuyerManaging.logout();
+                                //BuyerManaging.logout();
                                 System.out.println("Logged out Successfully");
                                 user = LoginType.DEFAULT;
                                 parentMenu.subMenus.remove(10);
