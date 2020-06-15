@@ -1,4 +1,5 @@
-package GraphicView;
+package GraphicController;
 
 public class MainMenuController {
+
 }

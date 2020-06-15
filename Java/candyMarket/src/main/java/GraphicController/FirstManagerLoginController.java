@@ -1,4 +1,4 @@
-package GraphicView;
+package GraphicController;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
