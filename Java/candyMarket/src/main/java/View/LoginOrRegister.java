@@ -1,10 +1,7 @@
 package View;
 
 
-import Controller.BuyerManaging;
-import Controller.LoginOrRegisterManaging;
-import Controller.ManagerManaging;
-import Controller.SellerManaging;
+import Controller.*;
 import Model.Buyer;
 import Model.Seller;
 
@@ -245,7 +242,7 @@ public class LoginOrRegister extends Menu {
                                 parentMenu.subMenus.remove(10);
                                 parentMenu.subMenus.get(1).run();
                             case BUYER :
-                                BuyerManaging.logout();
+                                UserManaging.logout();
                                 System.out.println("Logged out Successfully");
                                 user = LoginType.DEFAULT;
                                 parentMenu.subMenus.remove(10);
