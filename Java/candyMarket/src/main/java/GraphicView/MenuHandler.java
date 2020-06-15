@@ -3,6 +3,7 @@ package GraphicView;
 import com.sun.tools.javac.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -25,7 +26,7 @@ public class MenuHandler {
         Parent root = null;
         FXMLLoader fxmlLoader = new FXMLLoader();
         try {
-            InputStream inputStream = new FileInputStream("C:/Users/Asus/Documents/GitHub/ApProject/Java/candyMarket/src/main/java/GraphicView/" +
+            InputStream inputStream = new FileInputStream("Java\\candyMarket\\src\\main\\java\\GraphicView\\" +
                     fxml+".fxml");
             root = fxmlLoader.load(inputStream);
         } catch (IOException e) {
@@ -79,7 +80,9 @@ public class MenuHandler {
         return vBox;
     }
     public static VBox getRightBox() {
-        VBox VBox = new VBox();
+        Button loginBtn = new Button("Login/Register");
+        loginBtn.setPrefHeight(1000);
+        VBox VBox = new VBox(loginBtn);
         VBox.setPadding(new Insets(15, 12, 15, 12));
         VBox.setSpacing(10);
         VBox.setStyle("-fx-background-color: yellowgreen;");
@@ -88,6 +91,7 @@ public class MenuHandler {
     public static HBox getButtomBox() {
         HBox HBox = new HBox();
         HBox.setPadding(new Insets(15, 12, 15, 12));
+
         HBox.setSpacing(10);
         HBox.setStyle("-fx-background-color: pink;");
         return HBox;
