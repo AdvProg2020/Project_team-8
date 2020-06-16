@@ -1,27 +1,52 @@
+import GraphicController.BorderPaneController;
+import GraphicView.CustomButton;
 import GraphicView.MenuHandler;
-import View.ConsoleDesign;
-import View.MainMenu;
-import View.Menu;
-import View.ViewException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public class Main extends Application {
+    public static String fxmlPath = "Java\\candyMarket\\src" +
+            "\\main\\java\\GraphicView\\";
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        MenuHandler.createButtons();
         MenuHandler.currentWindow = primaryStage;
-        MenuHandler.changeScene("MainMenu");
+        Parent root = null;
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        try {
+            InputStream inputStream = new FileInputStream(fxmlPath + "BorderPane" + ".fxml");
+            root = fxmlLoader.load(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        MenuHandler.currentWindow.setMinHeight(500);
+        MenuHandler.currentWindow.setMinWidth(1000);
+        MenuHandler.currentWindow.setMaxHeight(500);
+        MenuHandler.currentWindow.setMaxWidth(1000);
+        MenuHandler.currentWindow.setTitle("Menu");
+        MenuHandler.currentScene = new Scene(root, 300, 200);
+        MenuHandler.currentScene.getRoot().requestFocus();
+        MenuHandler.currentWindow.setScene(MenuHandler.currentScene);
+        MenuHandler.currentWindow.setResizable(false);
+        MenuHandler.currentWindow.centerOnScreen();
+        MenuHandler.currentWindow.show();
+        ArrayList<Button> buttons = new ArrayList<>();
+        buttons.add(MenuHandler.goodsMenuBtn);
+        buttons.add(MenuHandler.exitBtn);
+        BorderPaneController.setOptionBar(buttons);
     }
 }
