@@ -6,23 +6,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GraphicController.BorderPaneController"
-            prefHeight="400.0" prefWidth="600.0" >
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.BorderPaneController">
     <left>
-        <VBox styleClass="myOptionBar" fx:id="optionBar">
+        <VBox fx:id="optionBar" styleClass="myOptionBar">
 
         </VBox>
     </left>
-    <right>
-        <Button fx:id="loginRegisterBtn" text="loginRegister" onMouseClicked="#loginRegisterBtnOnClick">
-
-        </Button>
-
-    </right>
     <bottom>
 
 
     </bottom>
+   <right>
+      <HBox prefHeight="400.0" prefWidth="158.0" BorderPane.alignment="CENTER">
+         <children>
+              <Button mnemonicParsing="false" text="Login" onMouseClicked="#loginBtnClick" />
+              <Button fx:id="loginRegisterBtn" onMouseClicked="#loginRegisterBtnOnClick" text="Register" />
+         </children>
+      </HBox>
+   </right>
 </BorderPane>

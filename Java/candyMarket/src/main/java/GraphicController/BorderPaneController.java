@@ -42,4 +42,9 @@ public class BorderPaneController {
     public void loginRegisterBtnOnClick(MouseEvent mouseEvent) {
         MenuHandler.createStageWithScene("RegisterMenu");
     }
+
+
+    public void loginBtnClick(MouseEvent mouseEvent) {
+        MenuHandler.createStageWithScene("LoginMenu");
+    }
 }
