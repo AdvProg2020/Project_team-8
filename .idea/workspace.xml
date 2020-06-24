@@ -22,92 +22,40 @@
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/BuyerManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/CartManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/GoodManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/GoodsManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/LoginOrRegisterManaging$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/LoginOrRegisterManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/ManagerManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/SalesManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/SellerManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Controller/UserManaging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/BorderPaneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/GoodsMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/MainMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/ManagerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/RegisterMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/BorderPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/BorderPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/CustomButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/MenuHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/PrimaryMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/RegisterMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/RegisterMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/BuyLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Buyer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Cart$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Cart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Comment$OpinionSituation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/FileHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/FilterAndSort$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/FilterAndSort$filtersTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/FilterAndSort$sortsTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/FilterAndSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Good.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/ManageInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Request$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Request$requestType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Sale.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Score.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/SellLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Seller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/SortComparators$SortAlphabetically.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/SortComparators$SortDateModified.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/SortComparators$SortPrice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/SortComparators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/User$UserType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/UserHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/BuyerMenu$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/BuyerMenu$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/BuyerMenu$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/BuyerMenu$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/BuyerMenu$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/BuyerMenu$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/BuyerMenu$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/BuyerMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ClientsMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/LoginOrRegister$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/LoginOrRegister$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/LoginOrRegister$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/LoginOrRegister$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/LoginOrRegister.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/MainMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ManagerMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SellerMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Discount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/ChooseBrand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/ChooseCategories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/ChoosePrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/Filtering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/Sorting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$menuType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SalesMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SalesMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ViewException.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +81,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -145,7 +97,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.15632184" />
   </component>
@@ -201,7 +153,7 @@
       <workItem from="1592329295443" duration="13888000" />
       <workItem from="1592997861612" duration="386000" />
       <workItem from="1593000628209" duration="6944000" />
-      <workItem from="1593032404050" duration="7576000" />
+      <workItem from="1593032404050" duration="8834000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -350,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593034106706</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="filerHandler json and write and read file">
+      <created>1593040745522</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1593040745522</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +346,8 @@
     <MESSAGE value="update menu changing" />
     <MESSAGE value="complete adding category for managerMenu" />
     <MESSAGE value="fix pom.xml and Gson works" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix pom.xml and Gson works" />
+    <MESSAGE value="filerHandler json and write and read file" />
+    <option name="LAST_COMMIT_MESSAGE" value="filerHandler json and write and read file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1592219098177">
@@ -412,19 +372,19 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1592339369951" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593034105172">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593040742508">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593034105172" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1592245779601" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="395" y="55" key="DetectedRootsChooserDialog/0.0.1280.683@0.0.1280.683" timestamp="1592071705791" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1593040288052">
+    <state x="421" y="68" key="FileChooserDialogImpl" timestamp="1593041171818">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593040288052" />
+    <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593041171818" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
     <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1593040039852">
       <screen x="0" y="0" width="1280" height="680" />
@@ -480,10 +440,14 @@
     </state>
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046273" />
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419485" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1593040322639">
+    <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593040322639" />
+    <state x="314" y="39" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1593041148078" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1593041905787">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593041905787" />
     <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1592076197171" />
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1593033946494">
       <screen x="0" y="0" width="1280" height="680" />
@@ -499,6 +463,10 @@
     </state>
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707394626" />
+    <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593041894737">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1593041894737" />
     <state x="347" y="44" width="587" height="592" key="find.popup" timestamp="1592228754152">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
