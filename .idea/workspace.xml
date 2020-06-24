@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +113,7 @@
       <workItem from="1592997861612" duration="386000" />
       <workItem from="1593000628209" duration="6944000" />
       <workItem from="1593032404050" duration="1662000" />
+      <workItem from="1593034292150" duration="260000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -395,11 +394,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593034085690">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593034549802">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034085690" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1593034549802" />
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1593032403932">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
