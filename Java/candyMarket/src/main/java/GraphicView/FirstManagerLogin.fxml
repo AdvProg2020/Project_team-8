@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.FirstManagerLoginController">
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.FirstManagerLoginController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="144.0" layoutY="81.0" prefHeight="435.0" prefWidth="513.0" spacing="10.0">
          <children>
@@ -93,4 +93,4 @@
          </opaqueInsets>
       </VBox>
    </children>
-</AnchorPane>
+</GridPane>

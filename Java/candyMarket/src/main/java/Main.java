@@ -1,11 +1,13 @@
 import GraphicController.BorderPaneController;
 import GraphicView.CustomButton;
 import GraphicView.MenuHandler;
+import Model.Manager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
 import javafx.stage.Stage;
 
 import java.io.BufferedInputStream;
@@ -44,9 +46,8 @@ public class Main extends Application {
         MenuHandler.currentWindow.setResizable(false);
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
-        ArrayList<Button> buttons = new ArrayList<>();
-        buttons.add(MenuHandler.goodsMenuBtn);
-        buttons.add(MenuHandler.exitBtn);
-        BorderPaneController.setOptionBar(buttons);
+        //if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
+        //else
+            MenuHandler.changeScene("MainMenu");
     }
 }

@@ -16,6 +16,9 @@
         </VBox>
     </left>
     <right>
+        <Button fx:id="loginRegisterBtn" text="loginRegister" onMouseClicked="#loginRegisterBtnOnClick">
+
+        </Button>
 
     </right>
     <bottom>
