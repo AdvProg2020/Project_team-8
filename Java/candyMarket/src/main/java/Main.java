@@ -48,6 +48,6 @@ public class Main extends Application {
         MenuHandler.currentWindow.show();
         //if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
-            MenuHandler.changeScene("MainMenu");
+            MenuHandler.changeScene("MainMenu",MenuHandler.currentWindow);
     }
 }

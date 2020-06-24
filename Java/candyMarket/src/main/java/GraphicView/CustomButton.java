@@ -13,7 +13,7 @@ public class CustomButton extends Button {
         this.setText(buttonText);
         this.gridPaneNameOpen = gridPaneNameOpen;
         this.optionBarButtons = optionBarButtons;
-        this.setOnMouseClicked(actionEvent -> MenuHandler.changeScene(gridPaneNameOpen));
+        this.setOnMouseClicked(actionEvent -> MenuHandler.changeScene(gridPaneNameOpen,MenuHandler.currentWindow));
     }
     private String gridPaneNameOpen;
     ArrayList<Button> optionBarButtons;

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.LoginMenuController">
+   <top>
+      <Label alignment="TOP_LEFT" prefHeight="150.0" text="Login" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <GridPane hgap="10.0" maxHeight="300.0" maxWidth="500.0" prefHeight="112.0" prefWidth="500.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="121.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="379.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Username : " />
+            <Label text="Password ; " GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" fx:id="username"/>
+            <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="errorMessage" text="Lable" />
+            <Button onAction="#LoggingIn" mnemonicParsing="false" text="Button" />
+         </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>
