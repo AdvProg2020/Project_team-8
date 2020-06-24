@@ -5,7 +5,7 @@ package Model;
 public class FileHandler {
 
     public static void getDataFromFiles() {
-
+        
     }
 
     public static void setDataIntoFiles() {
