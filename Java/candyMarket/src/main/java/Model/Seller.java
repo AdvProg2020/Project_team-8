@@ -7,15 +7,13 @@ public class Seller extends User {
     private ArrayList<Good> myGoods;
     private ArrayList<SellLog> mySellLog;
     private String sellerCompanyName;
-    private String workType;
     public static Seller currentSeller;
     public static ArrayList<Seller> sellers;
     private boolean confirmedSeller;
 
-    public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName, String workType) {
+    public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName  ) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.sellerCompanyName = sellerCompanyName;
-        this.workType = workType;
         this.setType(UserType.SELLER);
         this.confirmedSeller = false;
     }

@@ -27,10 +27,11 @@ public class MenuHandler {
     public static VBox currentOptionBar;
     public static String currentParentMenuName;
     public static String currentMenuName;
+    public static Stage secondCurrentWindow;
     public static String fxmlPath = "Java\\candyMarket\\src" +
             "\\main\\java\\GraphicView\\";
     public static String fxmlPath2 = "C:/Users/Asus/Documents/GitHub/ApProject/Java/candyMarket/src/main/java/GraphicView/";
-    public static void changeScene(String fxml) {
+    public static void changeScene(String fxml,Stage stage) {
         Pane root = null;
         FXMLLoader fxmlLoader = new FXMLLoader();
         try {
@@ -43,7 +44,7 @@ public class MenuHandler {
         currentScene = new Scene(root, 300, 200);
         currentScene.getRoot().requestFocus();
 
-        ((BorderPane)currentWindow.getScene().getRoot()).setCenter(((GridPane)currentScene.getRoot()));
+        ((BorderPane)stage.getScene().getRoot()).setCenter(((GridPane)currentScene.getRoot()));
     }
     public static void createStageWithScene(String fxml){
         Pane root = null;
@@ -55,6 +56,7 @@ public class MenuHandler {
             e.printStackTrace();
         }
         Stage stage = new Stage();
+        secondCurrentWindow = stage;
         stage.setTitle("My New Stage Title");
         stage.setScene(new Scene(root, 450, 450));
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -70,11 +72,11 @@ public class MenuHandler {
         viewPersonalInfoBtn = new CustomButton("ViewPersonalInfo","PersonalInfo",buttons);
         backBtn =new Button("Back");
         backBtn.setOnMouseClicked(actionEvent -> {
-            MenuHandler.changeScene("MainMenu");
+            MenuHandler.changeScene("MainMenu",currentWindow);
         });
         clientMenuBtn = new Button("ClientMenu");
         clientMenuBtn.setOnAction(actionEvent -> {
-            MenuHandler.changeScene("MainMenu");
+            MenuHandler.changeScene("MainMenu",currentWindow);
 
         });
         exitBtn =new Button("Exit");

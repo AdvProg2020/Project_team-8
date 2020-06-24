@@ -22,7 +22,7 @@ public class LoginOrRegisterManaging {
     public static void register(HashMap<String, String> info) {
         switch (info.get("type")) {
             case "seller":
-                new Seller(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"), info.get("companyName"), info.get("workType"));
+                //new Seller(info.get("username"), info.get("firstName"), info.get("lastName"), info.get("email"), info.get("phoneNumber"), info.get("password"), info.get("companyName"), info.get("workType"));
                 (new Request(Request.type.SELLER_REGISTER)).createRegisterSellerRequest((Seller) User.getUserByUsername(info.get("username")));
                 break;
             case "buyer":

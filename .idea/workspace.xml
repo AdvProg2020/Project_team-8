@@ -20,26 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ManagerMenu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/PrimaryMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/GetSellerProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ShowUserAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ShowUserAttributes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/getSellerProperties.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BorderPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BorderPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/GoodsMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/GoodsMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/BorderPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/BorderPane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Controller/LoginOrRegisterManaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/RegisterMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/RegisterMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CustomButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CustomButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/FirstManagerLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/FirstManagerLogin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/RegisterMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/RegisterMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/BorderPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/BorderPaneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/GoodsMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/GoodsMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/MainMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/ManagerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/BorderPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/BorderPane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Seller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/RegisterMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/RegisterMenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/CustomButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/CustomButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/FirstManagerLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/FirstManagerLogin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/MenuHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/RegisterMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/RegisterMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +125,7 @@
       <workItem from="1592071162577" duration="7760000" />
       <workItem from="1592218698971" duration="21488000" />
       <workItem from="1592329295443" duration="13888000" />
-      <workItem from="1592997861612" duration="386000" />
+      <workItem from="1592997861612" duration="15531000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -304,10 +300,10 @@
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1592220084873" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1592088967857" />
-    <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1592397747363">
+    <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1593009715633">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1592397747363" />
+    <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1593009715633" />
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1592092051466" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
       <screen x="0" y="0" width="1280" height="683" />
@@ -325,30 +321,30 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="395" y="55" key="DetectedRootsChooserDialog/0.0.1280.683@0.0.1280.683" timestamp="1592071705791" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1592583916181">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1593000759584">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1592583916181" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593000759584" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1592583917868">
+    <state width="1237" height="165" key="GridCell.Tab.0.bottom" timestamp="1593013116652">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592583917868" />
+    <state width="1237" height="165" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593013116652" />
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1592583917868">
+    <state width="1237" height="165" key="GridCell.Tab.0.center" timestamp="1593013116651">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592583917868" />
+    <state width="1237" height="165" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593013116651" />
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1592583917868">
+    <state width="1237" height="165" key="GridCell.Tab.0.left" timestamp="1593013116651">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592583917868" />
+    <state width="1237" height="165" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593013116651" />
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1592583917868">
+    <state width="1237" height="165" key="GridCell.Tab.0.right" timestamp="1593013116651">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592583917868" />
+    <state width="1237" height="165" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593013116651" />
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1592583917868">
       <screen x="0" y="0" width="1280" height="680" />
@@ -409,6 +405,10 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="91" y="36" key="new project wizard/0.0.1280.683@0.0.1280.683" timestamp="1588513960615" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1592999348496">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1592999348496" />
     <state x="303" y="3" width="672" height="676" key="search.everywhere.popup" timestamp="1592335509872">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

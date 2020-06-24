@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ShowUserAttributes">
+                <Label fx:id="UserNameLBL" layoutX="148.0" layoutY="93.0" prefHeight="17.0" prefWidth="284.0" text="UserName : " />
+                <Label fx:id="NameLBL" layoutX="148.0" layoutY="131.0" prefHeight="17.0" prefWidth="284.0" text="Name :" />
+                <Label fx:id="LastNameLBL" layoutX="148.0" layoutY="165.0" prefHeight="17.0" prefWidth="284.0" text="LastName :" />
+                <Label fx:id="EmailLBL" layoutX="148.0" layoutY="200.0" prefHeight="17.0" prefWidth="284.0" text="Email : " />
+                <Label fx:id="PhoneNumberLBL" layoutX="148.0" layoutY="236.0" prefHeight="17.0" prefWidth="284.0" text="PhoneNumber :" />
+                <Label fx:id="PasswordLBL" layoutX="148.0" layoutY="272.0" prefHeight="17.0" prefWidth="284.0" text="PassWord : " />
+                <Label fx:id="UserTypeLBL" layoutX="196.0" layoutY="46.0" prefHeight="34.0" prefWidth="261.0" text="UserType :" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Label>
+                <Label fx:id="CompanyLBL" layoutX="148.0" layoutY="309.0" prefHeight="17.0" prefWidth="284.0" text="Company : " visible="false" />
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+</GridPane>
