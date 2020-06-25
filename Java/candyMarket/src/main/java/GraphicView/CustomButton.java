@@ -9,14 +9,12 @@ import java.util.ArrayList;
 public class CustomButton extends Button {
 
 
-    public CustomButton(String buttonText,String gridPaneNameOpen, ArrayList<Button> optionBarButtons) {
+    public CustomButton(String buttonText,String gridPaneNameOpen) {
         this.setText(buttonText);
         this.gridPaneNameOpen = gridPaneNameOpen;
-        this.optionBarButtons = optionBarButtons;
         this.setOnMouseClicked(actionEvent -> MenuHandler.changeScene(gridPaneNameOpen,MenuHandler.currentWindow));
     }
     private String gridPaneNameOpen;
-    ArrayList<Button> optionBarButtons;
     public String getGridPaneNameOpen() {
         return gridPaneNameOpen;
     }

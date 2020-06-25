@@ -10,10 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.stage.Stage;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.net.URL;
+import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class Main extends Application {
@@ -49,5 +48,7 @@ public class Main extends Application {
         //if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
             MenuHandler.changeScene("MainMenu",MenuHandler.currentWindow);
+
+
     }
 }

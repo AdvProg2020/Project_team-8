@@ -15,6 +15,7 @@ public class GoodsMenuController extends PrimaryMenu {
     public ArrayList<Button> getOptionBarButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
         buttons.add(MenuHandler.backBtn);
+        buttons.add(MenuHandler.viewGoods);
         return buttons;
     }
 

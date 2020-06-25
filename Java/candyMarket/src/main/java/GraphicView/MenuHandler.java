@@ -19,6 +19,8 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class MenuHandler {
@@ -44,7 +46,7 @@ public class MenuHandler {
         currentScene = new Scene(root, 300, 200);
         currentScene.getRoot().requestFocus();
 
-        ((BorderPane)stage.getScene().getRoot()).setCenter(((GridPane)currentScene.getRoot()));
+        ((BorderPane)stage.getScene().getRoot()).setCenter((currentScene.getRoot()));
     }
     public static void createStageWithScene(String fxml){
         Pane root = null;
@@ -67,9 +69,10 @@ public class MenuHandler {
     public static Button exitBtn;
     public static Button goodsMenuBtn;
     public static Button clientMenuBtn;
+    public static Button viewGoods;
     public static void createButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
-        viewPersonalInfoBtn = new CustomButton("ViewPersonalInfo","PersonalInfo",buttons);
+        viewPersonalInfoBtn = new CustomButton("ViewPersonalInfo","PersonalInfo");
         backBtn =new Button("Back");
         backBtn.setOnMouseClicked(actionEvent -> {
             MenuHandler.changeScene("MainMenu",currentWindow);
@@ -83,6 +86,7 @@ public class MenuHandler {
         exitBtn.setOnAction(actionEvent -> Platform.exit());
         buttons.clear();
         buttons.add(backBtn);
-        goodsMenuBtn = new CustomButton("GoodsMenu","GoodsMenu",buttons);
+        viewGoods = new CustomButton("ViewGoods","ViewGoods");
+        goodsMenuBtn = new CustomButton("GoodsMenu","GoodsMenu");
     }
 }
