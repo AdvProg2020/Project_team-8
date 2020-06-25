@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
-public class BuyerProfileController implements Initializable {
+public class ProfileController implements Initializable {
     @FXML private TextField username;
     @FXML private PasswordField password;
     @FXML private TextField firstName;
@@ -60,12 +60,12 @@ public class BuyerProfileController implements Initializable {
         } else {
             errorMessage.setStyle("-fx-background-color: #00ff00;");
             errorMessage.setText("Updated");
-            UserHandler.currentBuyer.setUsername(usernameText);
-            UserHandler.currentBuyer.setPassword(passwordText);
-            UserHandler.currentBuyer.setFirstName(firstNameText);
-            UserHandler.currentBuyer.setLastName(lastNameText);
-            UserHandler.currentBuyer.setEmail(emailText);
-            UserHandler.currentBuyer.setPhoneNumber(phoneNumberText);
+            UserHandler.currentUser.setUsername(usernameText);
+            UserHandler.currentUser.setPassword(passwordText);
+            UserHandler.currentUser.setFirstName(firstNameText);
+            UserHandler.currentUser.setLastName(lastNameText);
+            UserHandler.currentUser.setEmail(emailText);
+            UserHandler.currentUser.setPhoneNumber(phoneNumberText);
         }
     }
 
