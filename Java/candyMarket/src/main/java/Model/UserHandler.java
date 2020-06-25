@@ -18,12 +18,15 @@ public  class UserHandler {
                 switch (currentUser.getType()) {
                         case BUYER:
                                 currentBuyer = (Buyer)user;
+                                Buyer.currentBuyer = currentBuyer;
                                 break;
                         case SELLER:
                                 currentSeller = (Seller)user;
+                                Seller.currentSeller = currentSeller;
                                 break;
                         case MANAGER:
                                 currentManager = (Manager)user;
+                                Manager.currentManager = currentManager;
                                 break;
                 }
         }
@@ -33,5 +36,8 @@ public  class UserHandler {
                 currentManager = null;
                 currentBuyer = null;
                 currentSeller = null;
+                Seller.currentSeller = null;
+                Buyer.currentBuyer = null;
+                Manager.currentManager = null;
         }
 }
