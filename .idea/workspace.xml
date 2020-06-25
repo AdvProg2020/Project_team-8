@@ -34,6 +34,42 @@
       <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/CustomButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/CustomButton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/GraphicView/MenuHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_team-8/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Discount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/ChooseBrand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/ChooseCategories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/ChoosePrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/Filtering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/FilterMenus/Sorting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/GoodsMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ProductMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu$menuType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/PurchaseMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SalesMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/SalesMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ViewException.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +95,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/libraries/controlsfx-11.0.0-RC2.jar!/" />
+    <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="project.structure.side.proportion" value="0.15632184" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -82,7 +127,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Project_team-8" />
-      <option name="VM_PARAMETERS" value="--module-path /JavaFxFiles/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml  " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,6 +169,9 @@
       <workItem from="1592218698971" duration="21488000" />
       <workItem from="1592329295443" duration="13888000" />
       <workItem from="1592997861612" duration="27130000" />
+      <workItem from="1592997861612" duration="386000" />
+      <workItem from="1593000628209" duration="6944000" />
+      <workItem from="1593032404050" duration="8834000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -251,23 +299,52 @@
       <option name="project" value="LOCAL" />
       <updated>1589841524576</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix pom.xml and Gson works">
+      <created>1593033735339</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1593033735339</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix pom.xml and Gson works">
+      <created>1593033783900</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1593033783900</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix pom.xml and Gson works">
+      <created>1593034106706</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1593034106706</updated>
+    </task>
+    <task id="LOCAL-00022" summary="filerHandler json and write and read file">
+      <created>1593040745522</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1593040745522</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="make runnable" />
@@ -286,22 +363,28 @@
     <MESSAGE value="fix bugs in some Menus" />
     <MESSAGE value="update menu changing" />
     <MESSAGE value="complete adding category for managerMenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete adding category for managerMenu" />
+    <MESSAGE value="fix pom.xml and Gson works" />
+    <MESSAGE value="filerHandler json and write and read file" />
+    <option name="LAST_COMMIT_MESSAGE" value="filerHandler json and write and read file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1592219098177">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1592219098177" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592220084873">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593040179070">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1592220084873" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593040179070" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1592088967857" />
     <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1593038357996">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1593038357996" />
+    <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1592397747363">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1592397747363" />
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1592092051466" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
       <screen x="0" y="0" width="1280" height="683" />
@@ -311,9 +394,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1592339369951" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1589841522508">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593040742508">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1592245779601" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
@@ -343,6 +427,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593045369981" />
+    <state x="421" y="68" key="FileChooserDialogImpl" timestamp="1593041171818">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593041171818" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1593040039852">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593040039852" />
+    <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1593040039852">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593040039852" />
+    <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1593040039852">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593040039852" />
+    <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1593040039852">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593040039852" />
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1592583917868">
       <screen x="0" y="0" width="1280" height="680" />
@@ -368,45 +476,60 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1589832465283" />
-    <state x="121" y="50" key="MergeDialog" timestamp="1589840419472">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="121" y="50" key="MergeDialog" timestamp="1593034046263">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046263" />
     <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419472" />
-    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1589840419485">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593034046273">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046273" />
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419485" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1593045621204">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593045621204" />
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1592076197171" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589841953191">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1589763404146" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1589794979638">
+    <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589794979638" />
+    <state x="314" y="39" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1593041148078" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1593041905787">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593041905787" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1592076197171" />
+    <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1593033946494">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593034111139">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1593032403932">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707394626" />
+    <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593041894737">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1593041894737" />
     <state x="347" y="44" width="587" height="592" key="find.popup" timestamp="1592228754152">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="44" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1592228754152" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1589841943867">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593033787588">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589841943867" />
     <state x="91" y="36" key="new project wizard" timestamp="1588513960615">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="91" y="36" key="new project wizard/0.0.1280.683@0.0.1280.683" timestamp="1588513960615" />
-    <state x="297" y="151" key="run.anything.popup" timestamp="1592999348496">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1592999348496" />
     <state x="303" y="3" width="672" height="676" key="search.everywhere.popup" timestamp="1592335509872">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
