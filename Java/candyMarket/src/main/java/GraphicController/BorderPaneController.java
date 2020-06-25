@@ -2,6 +2,7 @@ package GraphicController;
 
 import GraphicView.CustomButton;
 import GraphicView.MenuHandler;
+import Model.UserHandler;
 import View.Menu;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -24,6 +25,7 @@ public class BorderPaneController {
 
     public VBox optionBar;
     public Button loginRegisterButton;
+    public Button loginButton;
 
     public static void setOptionBar(ArrayList<Button> buttons) {
         /*for (CustomButton b:
@@ -40,11 +42,28 @@ public class BorderPaneController {
         ((BorderPane)MenuHandler.currentWindow.getScene().getRoot()).setLeft((VBox)node);
     }
     public void loginRegisterBtnOnClick(MouseEvent mouseEvent) {
-        MenuHandler.createStageWithScene("RegisterMenu");
+        if (loginRegisterButton.getText().equals("Register"))
+            MenuHandler.createStageWithScene("RegisterMenu");
+        else {
+            UserHandler.loggingOut();
+            logout();
+        }
+    }
+
+    private void logout() {
+        loginRegisterButton.setText("Register");
+        loginButton.setVisible(true);
+        loginButton.setDisable(false);
     }
 
 
     public void loginBtnClick(MouseEvent mouseEvent) {
         MenuHandler.createStageWithScene("LoginMenu");
+    }
+
+    public void loginSituation() {
+        loginRegisterButton.setText("Logout");
+        loginButton.setVisible(false);
+        loginButton.setDisable(true);
     }
 }

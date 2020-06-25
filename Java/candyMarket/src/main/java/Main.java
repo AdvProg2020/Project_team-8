@@ -45,10 +45,10 @@ public class Main extends Application {
         MenuHandler.currentWindow.setResizable(false);
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
-        //if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
-        //else
+        new Manager("king", "kin", "gro", "k@gmail.com", "+98142", "kingg");
+        if(Manager.isThisTheFirstManager())
+            MenuHandler.createStageWithScene("FirstManagerLogin");
+        else
             MenuHandler.changeScene("MainMenu",MenuHandler.currentWindow);
-
-
     }
 }

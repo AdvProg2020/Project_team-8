@@ -1,6 +1,7 @@
 package GraphicController;
 
 import Model.User;
+import Model.UserHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -34,7 +35,8 @@ public class LoginMenuController implements Initializable {
             errorMessage.setText("Wrong Password!");
         }
         else {
-
+            errorMessage.setText("");
+            UserHandler.loggingIn(User.getUserByUsername(usernameText));
         }
     }
 }

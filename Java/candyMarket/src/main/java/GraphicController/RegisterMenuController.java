@@ -72,7 +72,7 @@ public class RegisterMenuController implements Initializable {
              else {
                 errorMessage.setText("");
                 if (typeValue.equals("Buyer")) {
-                    MenuHandler.changeScene("ShowUserProperties", MenuHandler.secondCurrentWindow);
+                    MenuHandler.changeScene("ShowUserAttributes", MenuHandler.secondCurrentWindow);
                     stepType = step.SHOWINFO;
                 } else {
                     MenuHandler.changeScene("getSellerProperties", MenuHandler.secondCurrentWindow);
