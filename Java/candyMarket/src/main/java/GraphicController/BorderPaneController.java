@@ -5,6 +5,7 @@ import GraphicView.MenuHandler;
 import Model.UserHandler;
 import View.Menu;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,7 +20,9 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class BorderPaneController {
 
@@ -65,5 +68,12 @@ public class BorderPaneController {
         loginRegisterButton.setText("Logout");
         loginButton.setVisible(false);
         loginButton.setDisable(true);
+    }
+
+    public void buttonConfiguration(URL url, ResourceBundle resourceBundle) {
+        if (UserHandler.isLogeIn())
+            loginSituation();
+        else
+            logout();
     }
 }

@@ -6,7 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.BorderPaneController">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="GraphicController.BorderPaneController">
     <left>
         <VBox fx:id="optionBar" styleClass="myOptionBar">
 
@@ -19,8 +20,8 @@
    <right>
       <HBox prefHeight="400.0" prefWidth="158.0" BorderPane.alignment="CENTER">
          <children>
-              <Button mnemonicParsing="false" text="Login" onMouseClicked="#loginBtnClick" />
-              <Button fx:id="loginRegisterBtn" onMouseClicked="#loginRegisterBtnOnClick" text="Register" />
+              <Button fx:id="loginButton" mnemonicParsing="false" text="Login" onMouseClicked="#loginBtnClick" />
+              <Button fx:id="loginRegisterButton" onMouseClicked="#loginRegisterBtnOnClick" text="Register" />
          </children>
       </HBox>
    </right>

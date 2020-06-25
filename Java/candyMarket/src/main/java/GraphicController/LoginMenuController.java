@@ -1,10 +1,12 @@
 package GraphicController;
 
+import GraphicView.MenuHandler;
 import Model.User;
 import Model.UserHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -17,6 +19,7 @@ public class LoginMenuController implements Initializable {
     @FXML private TextField username;
     @FXML private PasswordField password;
 
+    @FXML private Button loginButton;
     @FXML private Label errorMessage;
 
     @Override
@@ -35,8 +38,18 @@ public class LoginMenuController implements Initializable {
             errorMessage.setText("Wrong Password!");
         }
         else {
-            errorMessage.setText("");
-            UserHandler.loggingIn(User.getUserByUsername(usernameText));
+            if (loginButton.getText().equals("Login")) {
+                errorMessage.setStyle("-fx-background-color: #00ff00");
+                errorMessage.setText("Logged in successfully");
+                UserHandler.loggingIn(User.getUserByUsername(usernameText));
+                loginButton.setText("Continue");
+                username.setDisable(true);
+                password.setDisable(true);
+            }
+            else {
+                MenuHandler.secondCurrentWindow.close();
+
+            }
         }
     }
 }
