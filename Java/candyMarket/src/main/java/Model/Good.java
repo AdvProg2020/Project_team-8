@@ -212,4 +212,41 @@ public class Good {
     public void setScores(ArrayList<Score> scores) {
         this.scores = scores;
     }
+
+    public static void removeProduct(Good good) {
+        for (Good unconfirmedGood : unconfirmedGoods) {
+            if (unconfirmedGood == good) {
+                unconfirmedGoods.remove(unconfirmedGood);
+                break;
+            }
+        }
+        for (Good confirmedGood : confirmedGoods) {
+            if (confirmedGood == good) {
+                confirmedGoods.remove(confirmedGood);
+                break;
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Good{" +
+                "dateModified=" + dateModified +
+                ", salePercentageAmount=" + salePercentageAmount +
+                ", id=" + id +
+                ", situation=" + situation +
+                ", name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
+                ", price=" + price +
+                ", buyers=" + buyers +
+                ", seller=" + seller +
+                ", stock=" + stock +
+                ", category=" + category +
+                ", categorySpecialAttributes='" + categorySpecialAttributes + '\'' +
+                ", detailInfo='" + detailInfo + '\'' +
+                ", averageScore=" + averageScore +
+                ", scores=" + scores +
+                ", comments=" + comments +
+                '}';
+    }
 }

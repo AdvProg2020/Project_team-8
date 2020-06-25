@@ -15,7 +15,7 @@ public class BuyLog {
     private String buyerName;
     private CartSituation buySituation;
 
-    public BuyLog(int totalAmount, int discountAmount, HashMap<Good,Integer> goods, String sellerName) {
+    public BuyLog(int totalAmount, int discountAmount, HashMap<Good,Integer> goods, String buyerName) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
