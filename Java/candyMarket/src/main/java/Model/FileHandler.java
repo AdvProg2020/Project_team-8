@@ -1,22 +1,18 @@
 package Model;
 
 
-import com.google.gson.Gson;
-import com.google.gson.*;
+//import com.google.gson.Gson;
 
-import javax.print.attribute.standard.MediaName;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Scanner;
+//mport java.io.FileWriter;
+//import java.io.IOException;
+//import java.io.Reader;
+//import java.nio.file.Files;
+//import java.nio.file.Paths;
+//import java.util.ArrayList;
 
 
 public class FileHandler {
-    private static Gson categoriesJson;
+    /*private static Gson categoriesJson;
     private static Gson requestJson;
     private static Gson goodsJson;
     private static Gson buyLogsJson;
@@ -85,6 +81,6 @@ public class FileHandler {
     private static void writeFiles() throws IOException {
         usersFile.write(String.valueOf(usersJson));
         usersFile.close();
-    }
-
+   }
+*/
 }

@@ -15,9 +15,6 @@ public class User {
     protected String password;
     private int credit;
     private UserType type;
-    public static ArrayList<User> users = ManageInfo.allUsers;
-    public static User currentUser = new User();
-
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         this.username = userName;
         this.firstName = firstName;
@@ -25,14 +22,14 @@ public class User {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.password = passWord;
-        users.add(this);
+        ManageInfo.allUsers.add(this);
     }
    public User(){
 
    }
 
     public static ArrayList<User> getUsers() {
-        return users;
+        return ManageInfo.allUsers;
     }
 
     public Cart getCart() {
@@ -100,7 +97,7 @@ public class User {
     }
 
     public static boolean isThereUserWithUsername(String userName) {
-        for (User user : users) {
+        for (User user : ManageInfo.allUsers) {
             if (user.getUsername().equals(userName))
                 return true;
         }
@@ -108,7 +105,7 @@ public class User {
     }
 
     public static boolean isThereUserWithEmail(String email) {
-        for (User user : users) {
+        for (User user : ManageInfo.allUsers) {
             if (user.getEmail().equals(email))
                 return true;
         }
@@ -117,9 +114,9 @@ public class User {
 
     public boolean isUsernameAndPasswordCorrect(String username, String passWord) {
         if (isThereUserWithUsername(username)) {
-            for (User user : users) {
+            for (User user : ManageInfo.allUsers) {
                 if (user.getPassword().equals(passWord)) {
-                    currentUser = this;
+                    UserHandler.setCurrentUser(this);
                     return true;
                 }
                 else
@@ -130,7 +127,7 @@ public class User {
     }
 
     public static User getUserByUsername(String username) {
-        for (User user : users) {
+        for (User user : ManageInfo.allUsers) {
             if (user.getUsername().equals(username))
                 return user;
         }
@@ -149,24 +146,24 @@ public class User {
     public void editPersonalInfo(String toBeEditedField, String newField) {
         switch (toBeEditedField) {
             case "password":
-                currentUser.setPassword(newField);
+                UserHandler.getCurrentUser().setPassword(newField);
                 break;
             case "firstName":
-                currentUser.setFirstName(newField);
+                UserHandler.getCurrentUser().setFirstName(newField);
                 break;
             case "lastName":
-                currentUser.setLastName(newField);
+                UserHandler.getCurrentUser().setLastName(newField);
                 break;
             case "email":
-                currentUser.setEmail(newField);
+                UserHandler.getCurrentUser().setEmail(newField);
                 break;
             case "phoneNumber":
-                currentUser.setPhoneNumber(newField);
+                UserHandler.getCurrentUser().setPhoneNumber(newField);
                 break;
         }
     }
 
     public static void deleteUser(User user) {
-        users.remove(user);
+        ManageInfo.allUsers.remove(user);
     }
 }

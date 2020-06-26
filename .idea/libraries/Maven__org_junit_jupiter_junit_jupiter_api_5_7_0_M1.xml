@@ -7,7 +7,9 @@
       <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.7.0-M1/junit-jupiter-api-5.7.0-M1-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/javafx-sdk-11.0.2/lib" />
       <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.7.0-M1/junit-jupiter-api-5.7.0-M1-sources.jar!/" />
     </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
   </library>
 </component>

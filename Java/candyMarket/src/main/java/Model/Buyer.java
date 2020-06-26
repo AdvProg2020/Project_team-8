@@ -39,7 +39,7 @@ public class Buyer extends User {
     }
 
     public void addComment(Good good,String title,String content){
-        Comment comment = new Comment(UserHandler.currentUser,good,content,title);
+        Comment comment = new Comment(UserHandler.getCurrentUser(),good,content,title);
         //Request request = new Request(comment.toString(), Request.requestType.ADD_COMMENT);
         //ManageInfo.allRequests.add(request);
     }

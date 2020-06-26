@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="GraphicController.BorderPaneController">
+<BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@CssFiles/BorderPane.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.BorderPaneController">
+
     <left>
         <VBox fx:id="optionBar" styleClass="myOptionBar">
 
         </VBox>
     </left>
-    <bottom>
+    <right>
+        <AnchorPane fx:id="rightPane" styleClass="myRightPane">
+            <VBox fx:id="userLoginBar" alignment="TOP_RIGHT">
+                <children>
+                    <Button fx:id="logInBtn" mnemonicParsing="false" onMouseClicked="#loginBtnClick" styleClass="myRightButton" text="Login" />
+                    <Button fx:id="registerBtn" onMouseClicked="#registerBtnOnClick" styleClass="myRightButton" text="Register" />
+                </children>
+            </VBox>
+            <VBox fx:id="userLogOutBar" alignment="TOP_RIGHT" >
+                <children>
+                    <Button fx:id="logOutBtn" mnemonicParsing="false" onMouseClicked="#logOutBtnOnClick" styleClass="myRightButton" text="LogOut" />
+                </children>
+            </VBox>
+        </AnchorPane>
+    </right>
+    <center>
+        <AnchorPane fx:id="centerPane">
 
+        </AnchorPane>
+    </center>
 
-    </bottom>
-   <right>
-      <HBox prefHeight="400.0" prefWidth="158.0" BorderPane.alignment="CENTER">
-         <children>
-              <Button fx:id="loginButton" mnemonicParsing="false" text="Login" onMouseClicked="#loginBtnClick" />
-              <Button fx:id="loginRegisterButton" onMouseClicked="#loginRegisterBtnOnClick" text="Register" />
-         </children>
-      </HBox>
-   </right>
 </BorderPane>

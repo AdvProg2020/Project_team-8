@@ -1,5 +1,7 @@
 package GraphicController;
 
+import GraphicView.MenuHandler;
+import Model.Manager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -49,6 +51,8 @@ public class FirstManagerLoginController implements Initializable {
         }
         else {
             errorMessage.setText("");
+            new Manager(usernameText,firstNameText,lastNameText,emailText,phoneNumberText,passwordText);
+            MenuHandler.secondCurrentWindow.close();
         }
     }
 

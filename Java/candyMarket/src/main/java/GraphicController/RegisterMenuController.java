@@ -1,5 +1,6 @@
 package GraphicController;
 
+import GraphicView.CustomBorderPaneMenus;
 import GraphicView.MenuHandler;
 import Model.Buyer;
 import Model.Seller;
@@ -15,7 +16,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
-public class RegisterMenuController implements Initializable {
+public class RegisterMenuController extends CustomBorderPaneMenus implements Initializable {
 
     @FXML private TextField username;
     @FXML private PasswordField password;
@@ -72,10 +73,10 @@ public class RegisterMenuController implements Initializable {
              else {
                 errorMessage.setText("");
                 if (typeValue.equals("Buyer")) {
-                    MenuHandler.changeScene("ShowUserAttributes", MenuHandler.secondCurrentWindow);
+                    RegisterMenuController.registerMenuController.setCenter("ShowUserAttributes");
                     stepType = step.SHOWINFO;
                 } else {
-                    MenuHandler.changeScene("getSellerProperties", MenuHandler.secondCurrentWindow);
+                    RegisterMenuController.registerMenuController.setCenter("getSellerProperties");
                     stepType  = step.GETSELLERINFO;
                 }
             }
@@ -83,7 +84,7 @@ public class RegisterMenuController implements Initializable {
         else if(stepType == step.GETSELLERINFO){
             if(GetSellerProperties.getSellerProperties.companyTXT.getText().equals("")) return;
             companyName = GetSellerProperties.getSellerProperties.companyTXT.getText();
-            MenuHandler.changeScene("ShowUserAttributes",MenuHandler.secondCurrentWindow);
+            RegisterMenuController.registerMenuController.setCenter("ShowUserAttributes");
             RegisterMenuController.registerMenuController.stepType = RegisterMenuController.step.SHOWINFO;
         }
         else {
