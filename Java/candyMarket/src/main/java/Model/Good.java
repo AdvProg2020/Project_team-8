@@ -56,6 +56,7 @@ public class Good {
         unconfirmedGoods.add(this);
         this.id = unconfirmedGoods.size();
         this.dateCreated = System.currentTimeMillis();
+        ManageInfo.allGoods.add(this);
     }
     public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo, Image image) {
         this.name = name;
@@ -74,6 +75,7 @@ public class Good {
         this.id = unconfirmedGoods.size();
         this.image = image;
         this.dateCreated = System.currentTimeMillis();
+        ManageInfo.allGoods.add(this);
     }
 
     public static ArrayList<Good> getConfirmedGoods() {

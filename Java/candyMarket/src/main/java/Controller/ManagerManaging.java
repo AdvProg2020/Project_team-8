@@ -120,7 +120,7 @@ public class ManagerManaging {
     }
 
     public static void addCategory(String categoryName, String subCategoryOf, ArrayList<String> note) {
-        new Category(categoryName, note);
+        new Category(categoryName, "");
         if (!subCategoryOf.equals("null")) {
             Category.getCategoryByName(subCategoryOf).setSubCategory(Category.getCategoryByName(categoryName));
         }
