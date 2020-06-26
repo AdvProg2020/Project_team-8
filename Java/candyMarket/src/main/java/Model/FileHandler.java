@@ -1,86 +1,182 @@
 package Model;
 
 
-//import com.google.gson.Gson;
+import com.google.gson.Gson;
 
-//mport java.io.FileWriter;
-//import java.io.IOException;
-//import java.io.Reader;
-//import java.nio.file.Files;
-//import java.nio.file.Paths;
-//import java.util.ArrayList;
+import java.io.*;
+import java.util.Scanner;
 
 
 public class FileHandler {
-    /*private static Gson categoriesJson;
-    private static Gson requestJson;
-    private static Gson goodsJson;
-    private static Gson buyLogsJson;
-    private static Gson sellLogs;
-    private static Gson usersJson;
-    private static Gson brandsJson;
-    private static Gson discountCodes;
+    private static Gson usersJson = new Gson();
+    private static Gson sellLogsJson = new Gson();
+    private static Gson buyLogsJson = new Gson();
+    private static Gson categoriesJson = new Gson();
+    private static Gson brandsJson = new Gson();
+    private static Gson requestsJson = new Gson();
+    private static Gson goodsJson = new Gson();
+    private static Gson discountsJson = new Gson();
 
-    private static FileWriter categoriesFile;
-    private static FileWriter goodsFile;
-    private static FileWriter sellLogsFile;
-    private static FileWriter usersFile;
-    private static FileWriter buyLogsFile;
-    private static FileWriter brandsFile;
-    private static FileWriter discountsFile;
-    private static FileWriter requestFile;
+    private static File usersFile = new File("Resources\\users.txt");
+    private static File sellLogsFile = new File("Resources\\sellLogs.txt");
+    private static File buyLogsFile = new File("Resources\\buyLogs.txt");
+    private static File categoriesFile = new File("Resources\\categories.txt");
+    private static File brandsFile = new File("Resources\\brands.txt");
+    private static File requestsFile = new File("Resources\\requests.txt");
+    private static File goodsFile = new File("Resources\\goods.txt");
+    private static File discountsFile = new File("Resources\\discounts.txt");
 
 
     public static void getDataFromFiles() throws IOException {
-        Reader reader = Files.newBufferedReader(Paths.get("users.txt"));
-        ManageInfo.allUsers.clear();
-        ManageInfo.allUsers.addAll(usersJson.fromJson(reader, ArrayList.class));
+        loadUsersData();
+        loadSellLogsData();
+        loadBuyLogsData();
+        loadCategoriesData();
+        loadBrandsData();
+        loadRequestFile();
+        loadGoodsData();
+        loadDiscountsData();
     }
 
     public static void setDataIntoFiles() throws IOException {
-        createJson();
-        createFile();
-        writeFiles();
+        writeUsersFiles();
+        writeSellLog();
+        writeBuyLog();
+        writeCategories();
+        writeBrands();
+        writeRequest();
+        writeGoods();
+        writeDiscounts();
     }
 
-    private static void createJson () {
-        categoriesJson = new Gson();
-        categoriesJson.toJson(ManageInfo.allCategories);
-        requestJson = new Gson();
-        requestJson.toJson(ManageInfo.allRequests);
-        goodsJson = new Gson();
-        goodsJson.toJson(ManageInfo.allGoods);
-        buyLogsJson = new Gson();
-        buyLogsJson.toJson(ManageInfo.allBuyLogs);
-        sellLogs = new Gson();
-        sellLogs.toJson(ManageInfo.allSellLogs);
-        usersJson = new Gson();
-        usersJson.toJson(ManageInfo.allUsers);
-        brandsJson = new Gson();
-        brandsJson.toJson(ManageInfo.allBrands);
-        discountCodes = new Gson();
-        discountCodes.toJson(ManageInfo.allDiscounts);
-    }
 
-    private static void createFile() throws IOException {
-        try {
-            categoriesFile = new FileWriter("categories.txt");
-            usersFile = new FileWriter("users.txt", false);
-            brandsFile = new FileWriter("brands.txt");
-            buyLogsFile = new FileWriter("buyLogs.txt");
-            sellLogsFile = new FileWriter("sellLogs.txt");
-            goodsFile = new FileWriter("goods.txt");
-            discountsFile = new FileWriter("discounts.txt");
-            requestFile = new FileWriter("requests.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
+    private static void writeUsersFiles() throws IOException {
+        FileWriter writer = new FileWriter(usersFile);
+        for (User user : ManageInfo.allUsers) {
+            writer.append(usersJson.toJson(user) + "\n");
         }
-
+        writer.close();
     }
 
-    private static void writeFiles() throws IOException {
-        usersFile.write(String.valueOf(usersJson));
-        usersFile.close();
-   }
-*/
+    private static void loadUsersData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(usersFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allUsers.add(usersJson.fromJson(fileReader.nextLine(), User.class));
+        }
+    }
+
+    private static void writeSellLog() throws IOException {
+        FileWriter writer = new FileWriter(sellLogsFile);
+        for (SellLog sellLog : ManageInfo.allSellLogs) {
+            writer.append(sellLogsJson.toJson(sellLog) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadSellLogsData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(sellLogsFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allSellLogs.add(sellLogsJson.fromJson(fileReader.nextLine(), SellLog.class));
+        }
+    }
+
+    private static void writeBuyLog() throws IOException {
+        FileWriter writer = new FileWriter(buyLogsFile);
+        for (BuyLog buyLog : ManageInfo.allBuyLogs) {
+            writer.append(buyLogsJson.toJson(buyLog) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadBuyLogsData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(buyLogsFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allBuyLogs.add(buyLogsJson.fromJson(fileReader.nextLine(), BuyLog.class));
+        }
+    }
+
+    private static void writeCategories() throws IOException {
+        FileWriter writer = new FileWriter(categoriesFile);
+        for (Category category : ManageInfo.allCategories) {
+            writer.append(categoriesJson.toJson(category) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadCategoriesData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(categoriesFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allCategories.add(categoriesJson.fromJson(fileReader.nextLine(), Category.class));
+        }
+    }
+
+    private static void writeBrands() throws IOException {
+        FileWriter writer = new FileWriter(brandsFile);
+        for (String brand : ManageInfo.allBrands) {
+            writer.append(brandsJson.toJson(brand) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadBrandsData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(brandsFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allBrands.add(brandsJson.fromJson(fileReader.nextLine(), String.class));
+        }
+    }
+
+    private static void writeRequest() throws IOException {
+        FileWriter writer = new FileWriter(requestsFile);
+        for (Request request : ManageInfo.allRequests) {
+            writer.append(requestsJson.toJson(request) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadRequestFile() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(requestsFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allRequests.add(requestsJson.fromJson(fileReader.nextLine(), Request.class));
+        }
+    }
+
+    private static void writeGoods() throws IOException {
+        FileWriter writer = new FileWriter(goodsFile);
+        for (Good good : ManageInfo.allGoods) {
+            writer.append(requestsJson.toJson(good) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadGoodsData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(goodsFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allGoods.add(goodsJson.fromJson(fileReader.nextLine(), Good.class));
+        }
+    }
+
+    private static void writeDiscounts() throws IOException {
+        FileWriter writer = new FileWriter(discountsFile);
+        for (Discount discount : ManageInfo.allDiscounts) {
+            writer.append(requestsJson.toJson(discount) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadDiscountsData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(discountsFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allDiscounts.add(discountsJson.fromJson(fileReader.nextLine(), Discount.class));
+        }
+    }
+
+
 }
