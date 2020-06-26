@@ -75,6 +75,11 @@ public class Good {
         this.image = image;
         this.dateCreated = System.currentTimeMillis();
     }
+
+    public static ArrayList<Good> getConfirmedGoods() {
+        return confirmedGoods;
+    }
+
     public ArrayList<Buyer> getBuyers() {
         return buyers;
     }

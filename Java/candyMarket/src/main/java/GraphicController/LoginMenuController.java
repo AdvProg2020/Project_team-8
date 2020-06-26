@@ -5,9 +5,13 @@ import GraphicView.MenuHandler;
 import Model.User;
 import Model.UserHandler;
 import View.MainMenu;
+import GraphicView.MenuHandler;
+import Model.User;
+import Model.UserHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -22,6 +26,7 @@ public class LoginMenuController extends CustomBorderPaneMenus implements Initia
     @FXML private TextField username;
     @FXML private PasswordField password;
 
+    @FXML private Button loginButton;
     @FXML private Label errorMessage;
 
     @Override

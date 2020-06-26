@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="GraphicController.ClientsProfileForManagerController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="98.0" layoutY="22.0" prefHeight="557.0" prefWidth="604.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" text="List of Clients">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="tableView" onMouseClicked="#userClickedOnTable" prefHeight="418.0" prefWidth="604.0">
+                    <columns>
+                        <TableColumn fx:id="usernameColumn" prefWidth="128.0" text="Username" />
+                        <TableColumn fx:id="firstNameColumn" prefWidth="152.0" text="First Name" />
+                        <TableColumn fx:id="lastNameColumn" prefWidth="170.0" text="Last Name" />
+                        <TableColumn fx:id="typeColumn" prefWidth="104.0" text="Type" />
+                    </columns>
+                </TableView>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="240.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Clients(s) " />
+                        <Button fx:id="detailedEditClientButton" mnemonicParsing="false" onAction="#changeSceneToDetailedPersonView" text="Detailed Client View" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

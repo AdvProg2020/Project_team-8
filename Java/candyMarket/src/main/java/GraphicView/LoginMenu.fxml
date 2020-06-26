@@ -8,9 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.LoginMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.LoginMenuController">
    <top>
       <Label alignment="TOP_LEFT" prefHeight="150.0" text="Login" BorderPane.alignment="CENTER">
          <font>
@@ -32,7 +30,7 @@
          <children>
             <Label text="Username : " />
             <Label text="Password ; " GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" fx:id="username"/>
+            <TextField fx:id="username" GridPane.columnIndex="1" />
             <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
@@ -42,7 +40,7 @@
       <HBox prefHeight="100.0" prefWidth="200.0" spacing="400.0" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="errorMessage" text="Lable" />
-            <Button onAction="#LoggingIn" mnemonicParsing="false" text="Button" />
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#LoggingIn" text="Login" />
          </children>
          <padding>
             <Insets left="40.0" />

@@ -24,6 +24,14 @@ public class User {
         this.password = passWord;
         ManageInfo.allUsers.add(this);
     }
+   public User(){
+
+   }
+
+    public static ArrayList<User> getUsers() {
+        return users;
+    }
+
     public Cart getCart() {
         return cart;
     }
@@ -155,5 +163,7 @@ public class User {
         }
     }
 
-
+    public static void deleteUser(User user) {
+        users.remove(user);
+    }
 }

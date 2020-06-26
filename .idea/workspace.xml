@@ -122,7 +122,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39195403" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -351,23 +351,52 @@
       <option name="project" value="LOCAL" />
       <updated>1593040745522</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="login/register">
+      <created>1593120155215</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1593120155215</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add Personal Info Pages">
+      <created>1593123188879</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1593123188880</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix Personal Info Pages">
+      <created>1593126259793</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1593126259793</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add client details for manager page">
+      <created>1593129900262</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1593129900262</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="make runnable" />
@@ -388,9 +417,17 @@
     <MESSAGE value="complete adding category for managerMenu" />
     <MESSAGE value="fix pom.xml and Gson works" />
     <MESSAGE value="filerHandler json and write and read file" />
-    <option name="LAST_COMMIT_MESSAGE" value="filerHandler json and write and read file" />
+    <MESSAGE value="login/register" />
+    <MESSAGE value="add Personal Info Pages" />
+    <MESSAGE value="fix Personal Info Pages" />
+    <MESSAGE value="add client details for manager page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add client details for manager page" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="360" y="0" width="575" height="683" key="#Main" timestamp="1593109668622">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="360" y="0" width="575" height="683" key="#Main/0.0.1280.683@0.0.1280.683" timestamp="1593109668622" />
     <state x="121" y="0" key="#Project_Structure" timestamp="1592219098177">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -433,7 +470,7 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1592245779601" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1593129898909" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -510,8 +547,8 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593034111139">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593129913443">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
@@ -523,7 +560,7 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707394626" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1593168788356" />
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593041894737">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

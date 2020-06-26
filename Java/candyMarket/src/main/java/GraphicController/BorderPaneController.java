@@ -77,4 +77,17 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
     public void loginBtnClick(MouseEvent mouseEvent) {
         MenuHandler.createStageWithScene("LoginMenu");
     }
+
+    public void loginSituation() {
+        loginRegisterButton.setText("Logout");
+        loginButton.setVisible(false);
+        loginButton.setDisable(true);
+    }
+
+    public void buttonConfiguration(URL url, ResourceBundle resourceBundle) {
+        if (UserHandler.isLogeIn())
+            loginSituation();
+        else
+            logout();
+    }
 }
