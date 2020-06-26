@@ -1,12 +1,14 @@
 package Model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Discount {
+    private static ArrayList<Discount> discounts =  ManageInfo.allDiscounts;
     private int code;
-    private long startDate;
-    private long endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private int percentReduction;
     private int maxReductionAmount;
     private int usageNumber;
@@ -22,14 +24,20 @@ public class Discount {
                 '}';
     }
 
-    public Discount(int code, long startDate, long endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
+    public Discount(int code, LocalDate startDate, LocalDate endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
         this.code = code;
         this.startDate = startDate;
         this.endDate = endDate;
         this.percentReduction = percentReduction;
         this.maxReductionAmount = maxReductionAmount;
         this.usageNumber = usageNumber;
+        discounts.add(this);
     }
+
+    public static ArrayList<Discount> getDiscounts() {
+        return discounts;
+    }
+
     public int getCode() {
         return code;
     }
@@ -38,19 +46,19 @@ public class Discount {
         this.code = code;
     }
 
-    public long getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(long startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public long getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(long endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
@@ -95,5 +103,9 @@ public class Discount {
 
     public static Boolean isDiscountWithId(String id) {
         return null;
+    }
+
+    public static void removeCode(Discount code) {
+        discounts.remove(code);
     }
 }
