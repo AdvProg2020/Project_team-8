@@ -1,7 +1,10 @@
 import GraphicController.BorderPaneController;
 import GraphicView.CustomButton;
 import GraphicView.MenuHandler;
+import Model.FileHandler;
+import Model.ManageInfo;
 import Model.Manager;
+import Model.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,17 +13,20 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.stage.Stage;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
             "\\main\\java\\GraphicView\\";
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileHandler.getDataFromFiles();
+        for (User user : ManageInfo.allUsers) {
+            System.out.println(user.getUsername());
+        }
+        new User("sh", "a","a", "a", "a", "aa");
         launch(args);
+        FileHandler.setDataIntoFiles();
     }
 
     @Override
