@@ -162,7 +162,18 @@ public class User {
                 break;
         }
     }
-
+    public boolean isManager(){
+        if(type==UserType.MANAGER) return true;
+        return false;
+    }
+    public boolean isBuyer(){
+        if(type==UserType.BUYER) return true;
+        return false;
+    }
+    public boolean isSeller(){
+        if(type==UserType.SELLER) return true;
+        return false;
+    }
     public static void deleteUser(User user) {
         ManageInfo.allUsers.remove(user);
     }

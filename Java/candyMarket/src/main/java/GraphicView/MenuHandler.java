@@ -1,6 +1,7 @@
 package GraphicView;
 
 import GraphicController.BorderPaneController;
+import Model.UserHandler;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -49,12 +50,15 @@ public class MenuHandler {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();
     }
-    public static Button viewPersonalInfoBtn;
     public static Button backBtn;
     public static Button exitBtn;
     public static Button goodsMenuBtn;
     public static Button clientMenuBtn;
     public static Button viewGoods;
+    public static Button viewPersonalInfoBtn;
+    public static Button clientManagingBtn;
+    public static Button productManagingBtn;
+    public static Button discountManagingBtn;
     public static void createButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
         viewPersonalInfoBtn = new CustomButton("ViewPersonalInfo","PersonalInfo");
@@ -64,7 +68,7 @@ public class MenuHandler {
         });
         clientMenuBtn = new CustomButton("ClientMenu");
         clientMenuBtn.setOnAction(actionEvent -> {
-            BorderPaneController.borderPaneController.setCenter("MainMenu");
+            clientMenuBtnOnClick();
 
         });
         exitBtn =new CustomButton("Exit");
@@ -73,5 +77,15 @@ public class MenuHandler {
         buttons.add(backBtn);
         viewGoods = new CustomButton("ViewGoods","ViewGoods");
         goodsMenuBtn = new CustomButton("GoodsMenu","GoodsMenu");
+        clientManagingBtn = new CustomButton("ClientManaging","");
+        productManagingBtn = new CustomButton("ProductManaging","");
+        discountManagingBtn = new CustomButton("DiscountManaging","");
+    }
+    private static void clientMenuBtnOnClick(){
+        if(UserHandler.isLogeIn())
+        {
+            if(UserHandler.getCurrentUser().isManager())
+                BorderPaneController.borderPaneController.setCenter("ManagerMenu");
+        }
     }
 }
