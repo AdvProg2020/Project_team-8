@@ -1,7 +1,7 @@
 import GraphicController.BorderPaneController;
 import GraphicView.MenuHandler;
 import GraphicView.PathHandler;
-import Model.Manager;
+import Model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,8 +13,10 @@ import java.io.*;
 public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
             "\\main\\java\\GraphicView\\";
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileHandler.getDataFromFiles();
         launch(args);
+        FileHandler.setDataIntoFiles();
     }
 
     @Override
@@ -29,10 +31,10 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        MenuHandler.currentWindow.setMinHeight(500);
-        MenuHandler.currentWindow.setMinWidth(1000);
-        MenuHandler.currentWindow.setMaxHeight(500);
-        MenuHandler.currentWindow.setMaxWidth(1000);
+        MenuHandler.currentWindow.setMinHeight(600);
+        MenuHandler.currentWindow.setMinWidth(1200);
+        MenuHandler.currentWindow.setMaxHeight(600);
+        MenuHandler.currentWindow.setMaxWidth(1200);
         MenuHandler.currentWindow.setTitle("Menu");
         MenuHandler.currentScene = new Scene(root, 300, 200);
         MenuHandler.currentScene.getRoot().requestFocus();
@@ -40,11 +42,23 @@ public class Main extends Application {
         MenuHandler.currentWindow.setResizable(false);
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
-        new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
+        debug();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
         BorderPaneController.borderPaneController.setCenter("MainMenu");
 
 
+    }
+    private static void debug(){
+        new Category("people",null);
+        new Category("food",null);
+        new Category("fruits",null);
+        new Good("Mz","MzBrand",100,null,1,Category.getCategoryByName("people"),"","");
+        new Good("Arash","ArashBrand",100,null,1,Category.getCategoryByName("people"),"","");
+        new Good("Reza","RezaBrand",200,null,1,Category.getCategoryByName("people"),"","");
+        new Good("Reza2","RezaBrand",200,null,1,Category.getCategoryByName("people"),"","");
+        new Good("Pizza","FastFood420",1000,null,4,Category.getCategoryByName("food"),"","");
+        new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
+        BorderPaneController.borderPaneController.login("admin");
     }
 }

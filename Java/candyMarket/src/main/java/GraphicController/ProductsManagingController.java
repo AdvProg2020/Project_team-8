@@ -1,6 +1,7 @@
 package GraphicController;
 
 import Model.Good;
+import Model.ManageInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -34,7 +35,7 @@ public class ProductsManagingController implements Initializable {
     public ObservableList<Good> getClients()
     {
         ObservableList<Good> goods = FXCollections.observableArrayList();
-        goods.addAll(Good.getConfirmedGoods());
+        goods.addAll(ManageInfo.allGoods);
 
         return goods;
     }

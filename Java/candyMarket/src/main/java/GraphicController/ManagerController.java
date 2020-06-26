@@ -16,11 +16,11 @@ public class ManagerController extends PrimaryMenu {
 
     @Override
     public ArrayList<Button> getOptionBarButtons() {
-        ArrayList<Button>  buttons = new ArrayList<>();
+        ArrayList<Button> buttons = new ArrayList<>();
         buttons.add(MenuHandler.viewPersonalInfoBtn);
         buttons.add(MenuHandler.discountManagingBtn);
         buttons.add(MenuHandler.productManagingBtn);
         buttons.add(MenuHandler.backBtn);
-        return null;
+        return buttons;
     }
 }
