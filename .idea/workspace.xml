@@ -20,137 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/BuyerManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/BuyerManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/CartManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/CartManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/GoodManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/GoodManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/GoodsManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/GoodsManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/LoginOrRegisterManaging$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/LoginOrRegisterManaging$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/LoginOrRegisterManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/LoginOrRegisterManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/ManagerManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/ManagerManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/SalesManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/SalesManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/SellerManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/SellerManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/UserManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/UserManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/META-INF/candyMarket.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/BuyLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/BuyLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Cart$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Cart$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/CartSituation.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/CartSituation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Comment$OpinionSituation.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Comment$OpinionSituation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Discount.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Discount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Filter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Filter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$filtersTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$filtersTypes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$sortsTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$sortsTypes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Functions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/ItemCreationSituation.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/ItemCreationSituation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/ManageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/ManageInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$requestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$requestType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Sale.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Sale.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Score.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Score.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SellLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SellLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Seller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators$SortAlphabetically.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators$SortAlphabetically.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators$SortDateModified.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators$SortDateModified.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators$SortPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators$SortPrice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User$UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User$UserType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/BuyerMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ClientsMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ClientsMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ConsoleCmd.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ConsoleCmd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ConsoleDesign.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ConsoleDesign.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/ChooseBrand.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/ChooseBrand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/ChooseCategories.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/ChooseCategories.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/ChoosePrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/ChoosePrice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/Filtering.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/Filtering.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/Sorting.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/FilterMenus/Sorting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/GoodsMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginOrRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/LoginType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ManagerMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ProductMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$menuType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu$menuType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/PurchaseMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SalesMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SalesMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SalesMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SalesMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/SellerMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ViewException.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/View/ViewException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/test-classes/FilterAndSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/test-classes/FilterAndSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/FirstManagerLoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/GetSellerProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/PersonalInfoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/RegisterMenuController$step.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/GraphicController/ShowUserAttributes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/CartSituation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/Functions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/Model/ItemCreationSituation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ConsoleCmd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/ConsoleDesign.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_team-8/View/LoginType.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +124,7 @@
       <workItem from="1593032404050" duration="9328000" />
       <workItem from="1593084254518" duration="1112000" />
       <workItem from="1593085390829" duration="12512000" />
-      <workItem from="1593172454847" duration="3468000" />
+      <workItem from="1593172454847" duration="5168000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -415,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593041942962</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="read and write in files for users">
+      <created>1593176110620</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1593176110621</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +333,8 @@
     <MESSAGE value="fix pom.xml and Gson works" />
     <MESSAGE value="filerHandler json and write and read file" />
     <MESSAGE value="javaFx bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="javaFx bugs fixed" />
+    <MESSAGE value="read and write in files for users" />
+    <option name="LAST_COMMIT_MESSAGE" value="read and write in files for users" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="0" width="575" height="680" key="#Main" timestamp="1593090199867">
@@ -491,10 +371,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593089942692" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593041941820">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593176108070">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593041941820" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593176108070" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1592245779601" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
@@ -590,10 +470,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="44" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1592228754152" />
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593041948727">
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593176594724">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593041948727" />
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593176594724" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589841943867" />
     <state x="91" y="36" key="new project wizard" timestamp="1588513960615">
       <screen x="0" y="0" width="1280" height="683" />

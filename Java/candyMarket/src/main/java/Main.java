@@ -21,10 +21,6 @@ public class Main extends Application {
             "\\main\\java\\GraphicView\\";
     public static void main(String[] args) throws IOException {
         FileHandler.getDataFromFiles();
-        for (User user : ManageInfo.allUsers) {
-            System.out.println(user.getUsername());
-        }
-        new User("sh", "a","a", "a", "a", "aa");
         launch(args);
         FileHandler.setDataIntoFiles();
     }
