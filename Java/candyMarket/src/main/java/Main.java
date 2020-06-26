@@ -1,10 +1,7 @@
 import GraphicController.BorderPaneController;
 import GraphicView.MenuHandler;
 import GraphicView.PathHandler;
-import Model.Category;
-import Model.Good;
-import Model.Manager;
-import Model.UserHandler;
+import Model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,8 +13,10 @@ import java.io.*;
 public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
             "\\main\\java\\GraphicView\\";
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileHandler.getDataFromFiles();
         launch(args);
+        FileHandler.setDataIntoFiles();
     }
 
     @Override
