@@ -15,6 +15,7 @@ public class FileHandler {
     private static Gson brandsJson = new Gson();
     private static Gson requestsJson = new Gson();
     private static Gson goodsJson = new Gson();
+    private static Gson discountsJson = new Gson();
 
     private static File usersFile = new File("Resources\\users.txt");
     private static File sellLogsFile = new File("Resources\\sellLogs.txt");
@@ -23,6 +24,7 @@ public class FileHandler {
     private static File brandsFile = new File("Resources\\brands.txt");
     private static File requestsFile = new File("Resources\\requests.txt");
     private static File goodsFile = new File("Resources\\goods.txt");
+    private static File discountsFile = new File("Resources\\discounts.txt");
 
 
     public static void getDataFromFiles() throws IOException {
@@ -33,6 +35,7 @@ public class FileHandler {
         loadBrandsData();
         loadRequestFile();
         loadGoodsData();
+        loadDiscountsData();
     }
 
     public static void setDataIntoFiles() throws IOException {
@@ -43,6 +46,7 @@ public class FileHandler {
         writeBrands();
         writeRequest();
         writeGoods();
+        writeDiscounts();
     }
 
 
@@ -157,5 +161,22 @@ public class FileHandler {
             ManageInfo.allGoods.add(goodsJson.fromJson(fileReader.nextLine(), Good.class));
         }
     }
+
+    private static void writeDiscounts() throws IOException {
+        FileWriter writer = new FileWriter(discountsFile);
+        for (Discount discount : ManageInfo.allDiscounts) {
+            writer.append(requestsJson.toJson(discount) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadDiscountsData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(discountsFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allDiscounts.add(discountsJson.fromJson(fileReader.nextLine(), Discount.class));
+        }
+    }
+
 
 }
