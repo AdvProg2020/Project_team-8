@@ -7,10 +7,10 @@ public class Category {
     private String name;
     private Category subCategory;
     private ArrayList<Good> goods;
-    private ArrayList<String> specialAttributes;
+    private String specialAttributes;
     static ArrayList<Category> categories = ManageInfo.allCategories;
 
-    public Category(String name, ArrayList<String> specialAttributes) {
+    public Category(String name, String specialAttributes) {
         this.name = name;
         this.specialAttributes = specialAttributes;
         categories.add(this);
@@ -40,11 +40,11 @@ public class Category {
         this.goods = goods;
     }
 
-    public ArrayList<String> getSpecialAttributes() {
+    public String getSpecialAttributes() {
         return specialAttributes;
     }
 
-    public void setSpecialAttributes(ArrayList<String> specialAttributes) {
+    public void setSpecialAttributes(String specialAttributes) {
         this.specialAttributes = specialAttributes;
     }
 
