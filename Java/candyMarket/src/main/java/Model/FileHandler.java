@@ -11,20 +11,26 @@ public class FileHandler {
     private static Gson usersJson = new Gson();
     private static Gson sellLogsJson = new Gson();
     private static Gson buyLogsJson = new Gson();
+    private static Gson categoriesJson = new Gson();
 
     private static File usersFile = new File("Resources\\users.txt");
     private static File sellLogsFile = new File("Resources\\sellLogs.txt");
     private static File buyLogsFile = new File("Resources\\buyLogs.txt");
+    private static File categoriesFile = new File("Resources\\categories.txt");
 
 
     public static void getDataFromFiles() throws IOException {
         loadUsersData();
         loadSellLogsData();
+        loadBuyLogsData();
+        loadCategoriesData();
     }
 
     public static void setDataIntoFiles() throws IOException {
         writeUsersFiles();
         writeSellLog();
+        writeBuyLog();
+        writeCategories();
     }
 
 
@@ -73,6 +79,22 @@ public class FileHandler {
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
             ManageInfo.allBuyLogs.add(buyLogsJson.fromJson(fileReader.nextLine(), BuyLog.class));
+        }
+    }
+
+    private static void writeCategories() throws IOException {
+        FileWriter writer = new FileWriter(categoriesFile);
+        for (Category category : ManageInfo.allCategories) {
+            writer.append(categoriesJson.toJson(category) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadCategoriesData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(categoriesFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allCategories.add(categoriesJson.fromJson(fileReader.nextLine(), Category.class));
         }
     }
 
