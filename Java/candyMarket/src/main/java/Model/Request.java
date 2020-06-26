@@ -85,7 +85,7 @@ public class Request {
     public void declineRequest() {
         switch (this.requestType) {
             case SELLER_REGISTER:
-                User.users.remove(this.getSeller());
+                ManageInfo.allUsers.remove(this.getSeller());
                 break;
             case CREATE_GOOD:
                 Good.unconfirmedGoods.remove(this.getGood());

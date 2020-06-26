@@ -37,14 +37,17 @@ public class Buyer extends User {
     public void setCart(Cart cart) {
         this.cart = cart;
     }
+
     public void addComment(Good good,String title,String content){
-        Comment comment = new Comment(UserHandler.currentUser,good,content,title);
+        Comment comment = new Comment(UserHandler.getCurrentUser(),good,content,title);
         //Request request = new Request(comment.toString(), Request.requestType.ADD_COMMENT);
         //ManageInfo.allRequests.add(request);
     }
-    public static void CreateNewBuyer() {
 
+    public static void CreateNewBuyer() {
+        //??
     }
+
     public ArrayList<String> viewCart(Cart cart) {
         return null;
     }
@@ -82,7 +85,9 @@ public class Buyer extends User {
     }
 
     public void rate(Good good, int score) {
-
+        ArrayList<Score> scores = good.getScores();
+        scores.add(new Score(this, score, good));
+        good.setScores(scores);
     }
 
     public String viewBuyerBalance() {
@@ -90,7 +95,11 @@ public class Buyer extends User {
     }
 
     public ArrayList<String> viewAllDiscountsCode() {
-        return null;
+        ArrayList<String> disCode = new ArrayList<>();
+        for (Discount discount : myDiscounts) {
+            disCode.add(discount.toString());
+        }
+        return disCode;
     }
 
 

@@ -16,6 +16,7 @@ public class Seller extends User {
         this.sellerCompanyName = sellerCompanyName;
         this.setType(UserType.SELLER);
         this.confirmedSeller = false;
+        sellers.add(this);
     }
 
     public static ArrayList<Seller> getSellers() {
@@ -71,19 +72,32 @@ public class Seller extends User {
     }
 
     public ArrayList<String> viewSalesHistory(Seller seller) {
-        return null;
+        ArrayList<String> mySellHistory = new ArrayList<>();
+        for (SellLog log : mySellLog) {
+            mySellHistory.add(log.toString());
+        }
+        return mySellHistory;
     }
 
     public ArrayList<String> viewAllGoods() {
-        return null;
+        ArrayList<String> myAllGoods = new ArrayList<>();
+        for (Good good : myGoods) {
+            myAllGoods.add(good.toString());
+        }
+        return myAllGoods;
     }
 
-    public ArrayList<String> viewGoodId(Good good) {
-        return null;
+    public String viewGoodId(Good good) {
+        return good.toString();
     }
 
     public ArrayList<String> viewBuyers(Good good) {
-        return null;
+        ArrayList<Buyer> buyers = good.getBuyers();
+        ArrayList<String> toStringBuyers = new ArrayList<>();
+        for (Buyer buyer : buyers) {
+            toStringBuyers.add(buyer.getUsername());
+        }
+        return toStringBuyers;
     }
 
     public void editGood(Good good) {
@@ -91,26 +105,29 @@ public class Seller extends User {
     }
 
     public void addGood() {
-
+       //??
     }
 
-    public void removeGood(Good good){
-
-    }
     public ArrayList<String> viewSales() {
-        return null;
+        ArrayList<String> myAllSales = new ArrayList<>();
+        for (Sale sale : mySales) {
+            myAllSales.add(sale.toString());
+        }
+        return myAllSales;
     }
 
-    public ArrayList<String> viewSale(Sale sale) {
-        return null;
+    public String viewSale(Sale sale) {
+        return sale.toString();
+
     }
     public void editSale(Sale sale) {
 
     }
 
     public void addSale(Sale sale) {
-
+        //??
     }
+
     public String viewBalance() {
         return null;
     }

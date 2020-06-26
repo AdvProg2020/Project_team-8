@@ -18,15 +18,7 @@
                            <Font size="18.0" />
                        </font>
       </Label>
-      <TextField GridPane.columnIndex="1" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label fx:id="CompanyLBL" text="Company :" GridPane.rowIndex="7" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
    </children>
          <columnConstraints>
             <ColumnConstraints maxWidth="402.0" minWidth="138.0" prefWidth="146.0" />

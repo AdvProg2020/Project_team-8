@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.controlsfx.control.CheckComboBox?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ViewGoodsController">
+    <top>
+        <HBox prefHeight="32.0" prefWidth="431.0" spacing="200.0">
+            <children>
+                <ChoiceBox fx:id="sortChoiceBox"  value="Order By" />
+
+            </children>
+            <padding>
+                <Insets left="100.0" />
+            </padding>
+        </HBox>
+    </top>
+    <left>
+        <VBox>
+            <children>
+                <Label text="Select Category" />
+                <ListView prefHeight="400.0" prefWidth="56.0" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <ScrollPane fx:id="scrollPane">
+
+        </ScrollPane>
+    </center>
+    <bottom>
+        <HBox spacing="200.0">
+            <Button text="next">
+
+            </Button>
+            <Button text="previous">
+
+            </Button>
+            <Button text="UpdateList" fx:id="updateListBtn" onMouseClicked="#onUpdateListBtnClick">
+
+            </Button>
+        </HBox>
+    </bottom>
+    <right>
+        <VBox>
+
+        </VBox>
+    </right>
+</BorderPane>

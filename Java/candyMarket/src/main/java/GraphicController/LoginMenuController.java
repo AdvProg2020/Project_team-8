@@ -1,21 +1,32 @@
 package GraphicController;
 
+import GraphicView.CustomBorderPaneMenus;
+import GraphicView.MenuHandler;
 import Model.User;
+import Model.UserHandler;
+import View.MainMenu;
+import GraphicView.MenuHandler;
+import Model.User;
+import Model.UserHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginMenuController implements Initializable {
+public class LoginMenuController extends CustomBorderPaneMenus implements Initializable {
 
     @FXML private TextField username;
     @FXML private PasswordField password;
 
+    @FXML private Button loginButton;
     @FXML private Label errorMessage;
 
     @Override
@@ -34,7 +45,8 @@ public class LoginMenuController implements Initializable {
             errorMessage.setText("Wrong Password!");
         }
         else {
-
+            BorderPaneController.borderPaneController.login(usernameText);
+            MenuHandler.secondCurrentWindow.close();
         }
     }
 }

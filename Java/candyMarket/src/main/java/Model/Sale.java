@@ -70,4 +70,16 @@ public class Sale {
     public static Sale getSaleById(int id){
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "Sale{" +
+                "situation=" + situation +
+                ", id=" + id +
+                ", goods=" + goods +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", salePercentageAmount=" + salePercentageAmount +
+                '}';
+    }
 }

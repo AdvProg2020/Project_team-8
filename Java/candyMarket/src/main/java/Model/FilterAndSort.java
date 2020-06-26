@@ -11,7 +11,7 @@ import java.util.Collections;
 
 public class FilterAndSort {
     public static ArrayList<Filter> filters = FilterAndSort.createAllFilters();
-    public static FilterAndSort.sortsTypes sortsType = sortsTypes.ALPHABETICALLY;
+    public static FilterAndSort.sortsTypes sortsType = sortsTypes.DATE_CREATED;
     public static Boolean sortDescendingMode = false;
     public static ArrayList<Filter> brands = FilterAndSort.createAllFilters(GoodsManaging.ViewBrands());
     public static ArrayList<Filter> categories = FilterAndSort.createAllFilters(GoodsManaging.viewCategories());
@@ -38,7 +38,7 @@ public class FilterAndSort {
         IS_EXIST,CHOOSE_BRANDS,CHOOSE_PRICE_RANGE,CHOOSE_CATEGORIES
     }
     public static enum sortsTypes{
-        DESCENDING_MODE,PRICE,ALPHABETICALLY,DATE_MODIFIED
+        PRICE,ALPHABETICALLY,DATE_MODIFIED,DATE_CREATED
     }
     public static ArrayList<Good> sortGoods(ArrayList<Good> goods){
         switch (sortsType) {
@@ -51,10 +51,21 @@ public class FilterAndSort {
             case DATE_MODIFIED:
                 Collections.sort(goods, new SortComparators.SortDateModified());
                 break;
+            case DATE_CREATED:
+                Collections.sort(goods, new SortComparators.SortDateCreated());
+                break;
             }
                 if(sortDescendingMode)
                     Collections.reverse(goods);
                 return  goods;
+        }
+        public static ArrayList<String> getSortsType(){
+            ArrayList<String> sorts = new ArrayList<>();
+            for (sortsTypes s:
+                 sortsTypes.values()) {
+                sorts.add(s.toString());
+            }
+            return sorts;
         }
     public static ArrayList<Good> filterGoods(ArrayList<Good> goods){
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
