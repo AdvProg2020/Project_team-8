@@ -20,29 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/CssFiles/GoodsMenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/Photos/WithoutImage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/CategoryManagingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/CategoryManagingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/DiscountCodeDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/DiscountCodeDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/DiscountCodeManagingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/DiscountCodeManagingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ProductsManagingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ProductsManagingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ViewGoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ViewGoodsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/BorderPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/BorderPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CustomGoodBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CustomGoodBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ManagerMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ManagerMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CategoryManaging.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CategoryManaging.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/DiscountCodeManaging.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/DiscountCodeManaging.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ViewGoods.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ViewGoods.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Good.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/Photos/MainBackGround.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/Photos/MainBackGround.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/DiscountCodeManagingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/DiscountCodeManagingController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ManagerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ProductsManagingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ProductsManagingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ViewGoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ViewGoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/CustomGoodBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/CustomGoodBox.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Discount.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Discount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Photos/MainBackGround.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Photos/MainBackGround.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,16 +81,16 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Photos" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\MainBorderPane" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
     </key>
   </component>
   <component name="RunManager">
@@ -341,14 +332,7 @@
       <option name="project" value="LOCAL" />
       <updated>1593129900262</updated>
     </task>
-    <task id="LOCAL-00027" summary="add edit discount code for manager page">
-      <created>1593183213563</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1593183213563</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,13 +343,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="make runnable" />
@@ -390,8 +373,7 @@
     <MESSAGE value="add Personal Info Pages" />
     <MESSAGE value="fix Personal Info Pages" />
     <MESSAGE value="add client details for manager page" />
-    <MESSAGE value="add edit discount code for manager page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add edit discount code for manager page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add client details for manager page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1593176867518">
@@ -412,11 +394,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1593093420947" />
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1593185206582">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1593125269608">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1593125269608" />
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1593185206582" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1592092051466" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -451,25 +433,25 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593105729370" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1237" height="103" key="GridCell.Tab.0.bottom" timestamp="1593185893116">
+    <state width="1237" height="103" key="GridCell.Tab.0.bottom" timestamp="1593187394625">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="103" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593185893116" />
+    <state width="1237" height="103" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593187394625" />
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1237" height="103" key="GridCell.Tab.0.center" timestamp="1593185893116">
+    <state width="1237" height="103" key="GridCell.Tab.0.center" timestamp="1593187394625">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="103" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593185893116" />
+    <state width="1237" height="103" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593187394625" />
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="103" key="GridCell.Tab.0.left" timestamp="1593185893116">
+    <state width="1237" height="103" key="GridCell.Tab.0.left" timestamp="1593187394625">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="103" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593185893116" />
+    <state width="1237" height="103" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593187394625" />
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="103" key="GridCell.Tab.0.right" timestamp="1593185893116">
+    <state width="1237" height="103" key="GridCell.Tab.0.right" timestamp="1593187394625">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="103" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593185893116" />
+    <state width="1237" height="103" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593187394625" />
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
     <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593139804308">
       <screen x="0" y="0" width="1280" height="680" />
@@ -518,11 +500,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593183236587">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593129913443">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1593183236587" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1593125982030">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -545,6 +527,10 @@
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589841943867" />
+    <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187317087">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="435" y="185" key="git4idea.ui.GitTagDialog/0.0.1280.680@0.0.1280.680" timestamp="1593187317087" />
     <state x="91" y="0" key="new project wizard" timestamp="1593135585610">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

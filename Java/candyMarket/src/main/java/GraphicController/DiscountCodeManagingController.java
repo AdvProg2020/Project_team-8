@@ -1,5 +1,6 @@
 package GraphicController;
 
+import GraphicView.MenuHandler;
 import Model.Discount;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 
 import java.net.URL;
@@ -17,7 +19,7 @@ import java.util.ResourceBundle;
 
 public class DiscountCodeManagingController implements Initializable {
     public static DiscountCodeManagingController discountCodeManagingController;
-    @FXML private static TableView<Discount> tableView;
+    @FXML public   TableView<Discount> tableView;
     @FXML private TableColumn<Discount, Integer> codeColumn;
     @FXML private TableColumn<Discount, LocalDate> initialDateColumn;
     @FXML private TableColumn<Discount, LocalDate> endDateColumn;
@@ -37,8 +39,10 @@ public class DiscountCodeManagingController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        createDiscountTable();
+    }
+    public void createDiscountTable(){
         discountCodeManagingController = this;
-
         codeColumn.setCellValueFactory(new PropertyValueFactory<Discount, Integer>("code"));
         initialDateColumn.setCellValueFactory(new PropertyValueFactory<Discount, LocalDate>("startDate"));
         endDateColumn.setCellValueFactory(new PropertyValueFactory<Discount, LocalDate>("endDate"));
@@ -52,7 +56,6 @@ public class DiscountCodeManagingController implements Initializable {
 
         this.detailedDiscountViewButton.setDisable(true);
     }
-
     public ObservableList<Discount> getCodes()
     {
         ObservableList<Discount> codes = FXCollections.observableArrayList();
@@ -93,12 +96,16 @@ public class DiscountCodeManagingController implements Initializable {
     }
 
 
-    public static Discount getDiscount() {
+    public Discount getDiscount() {
         return tableView.getSelectionModel().getSelectedItem();
     }
 
     public void userClickedOnTable()
     {
         this.detailedDiscountViewButton.setDisable(false);
+    }
+
+    public void editingOnClick(MouseEvent mouseEvent) {
+        MenuHandler.createStageWithScene("DiscountCodeDetails");
     }
 }

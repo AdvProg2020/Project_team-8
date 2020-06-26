@@ -46,7 +46,7 @@
                     <children>
                         <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Code(s) " />
                         <Button onAction="#newCodeButtonPushed" mnemonicParsing="false" text="Add new Discount Code" />
-                        <Button fx:id="detailedDiscountViewButton" mnemonicParsing="false" text="Editing" />
+                        <Button fx:id="detailedDiscountViewButton" mnemonicParsing="false" text="Editing" onMouseClicked="#editingOnClick" />
                     </children>
                 </HBox>
             </children>
