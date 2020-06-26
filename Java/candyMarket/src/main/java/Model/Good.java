@@ -55,6 +55,10 @@ public class Good {
         this.id = unconfirmedGoods.size();
     }
 
+    public static ArrayList<Good> getConfirmedGoods() {
+        return confirmedGoods;
+    }
+
     public ArrayList<Buyer> getBuyers() {
         return buyers;
     }

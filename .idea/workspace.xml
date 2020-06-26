@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ClientsProfileForManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ClientsProfileForManager.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ProductsManagingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ProductsManaging.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ClientsProfileForManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ClientsProfileForManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Good.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3229885" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -126,7 +127,8 @@
       <workItem from="1593032404050" duration="8834000" />
       <workItem from="1593047633295" duration="479000" />
       <workItem from="1593100135320" duration="4048000" />
-      <workItem from="1593109197994" duration="11314000" />
+      <workItem from="1593109197994" duration="14238000" />
+      <workItem from="1593168690394" duration="1978000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -303,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593126259793</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add client details for manager page">
+      <created>1593129900262</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1593129900262</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +353,8 @@
     <MESSAGE value="login/register" />
     <MESSAGE value="add Personal Info Pages" />
     <MESSAGE value="fix Personal Info Pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Personal Info Pages" />
+    <MESSAGE value="add client details for manager page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add client details for manager page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="0" width="575" height="683" key="#Main" timestamp="1593109668622">
@@ -377,11 +387,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1592339369951" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593126257773">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593129898909">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1593126257773" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1593129898909" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -391,26 +401,26 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593047852362" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1593109521649" />
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1593120185996">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1593139278837">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="45" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593047603427" />
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1593120185996" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1593120185995">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1593139278837" />
+    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1593139278836">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="45" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593047603427" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1593120185995" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1593120185995">
+    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1593139278836" />
+    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1593139278836">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="45" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593047603427" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1593120185995" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1593120185996">
+    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1593139278836" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1593139278836">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="45" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593047603427" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1593120185996" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1593139278836" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1592583917868">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -449,25 +459,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="314" y="39" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1593041148078" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1593110248625">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1593131749359">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593047852847" />
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1593110248625" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1593131749359" />
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1593033946494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593126270986">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593129913443">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1593126270986" />
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1593032403932">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1593129913443" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1593168788357">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707394626" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1593168788356" />
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593041894737">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -476,20 +486,20 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="44" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1592228754152" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1593126263792">
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1593129906517">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1593126263792" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1593129906517" />
     <state x="91" y="36" key="new project wizard" timestamp="1588513960615">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="91" y="36" key="new project wizard/0.0.1280.683@0.0.1280.683" timestamp="1588513960615" />
-    <state x="303" y="3" width="672" height="676" key="search.everywhere.popup" timestamp="1592335509872">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1593131742747">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="303" y="3" width="672" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1592335509872" />
-    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1589670451097" />
+    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1593131742747" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ApProject$Main.ic" NAME="Main Coverage Results" MODIFIED="1592397832356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -52,10 +52,8 @@ public class ClientsProfileForManagerController implements Initializable {
         ObservableList<User> selectedRows, allPeople;
         allPeople = tableView.getItems();
 
-        //this gives us the rows that were selected
         selectedRows = tableView.getSelectionModel().getSelectedItems();
 
-        //loop over the selected rows and remove the Person objects from the table
         for (User user: selectedRows)
         {
             User.deleteUser(User.getUserByUsername(user.getUsername()));
