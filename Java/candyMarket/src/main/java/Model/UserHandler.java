@@ -1,7 +1,18 @@
 package Model;
 
-public  class UserHandler {
-        public static User currentUser;
+import GraphicController.BorderPaneController;
+
+public class UserHandler {
+        public static User getCurrentUser() {
+                return currentUser;
+        }
+
+        public static void setCurrentUser(User currentUser) {
+                UserHandler.currentUser = currentUser;
+                BorderPaneController.borderPaneController.currentUserName = currentUser.getUsername();
+        }
+
+        private static User currentUser;
         public static Cart currentCart;
         public static Buyer currentBuyer;
         public static Seller currentSeller;
@@ -13,7 +24,8 @@ public  class UserHandler {
                 currentCart = new Cart();
         }
 
-        public static void loggingIn(User user) {
+        public static void loggingIn(String userName) {
+                User user = User.getUserByUsername(userName);
                 currentUser = user;
                 switch (currentUser.getType()) {
                         case BUYER:

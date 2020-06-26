@@ -13,6 +13,6 @@ public abstract class PrimaryMenu implements Initializable {
     public abstract ArrayList<Button> getOptionBarButtons();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        BorderPaneController.setOptionBar(getOptionBarButtons());
+        BorderPaneController.setLeft(getOptionBarButtons());
     }
 }

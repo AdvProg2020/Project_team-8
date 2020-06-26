@@ -48,7 +48,7 @@ public class CartManaging {
         if(discount==null)
         return false;
         else
-            if(!discount.getUsers().contains(User.currentUser))
+            if(!discount.getUsers().contains(UserHandler.getCurrentUser()))
                 return false;
         //Success
         UserHandler.currentCart.addDiscount(discount);

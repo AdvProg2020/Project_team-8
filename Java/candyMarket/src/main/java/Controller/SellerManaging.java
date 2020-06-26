@@ -15,11 +15,11 @@ public class SellerManaging {
     }
 
     public static String viewPersonalInfo() {
-        return UserHandler.currentUser.viewUserPersonalInfo();
+        return UserHandler.getCurrentUser().viewUserPersonalInfo();
     }
 
     public static void editFieldOfInfo(String toBeEditedField,String newField) {
-        UserHandler.currentUser.editPersonalInfo(toBeEditedField, newField);
+        UserHandler.getCurrentUser().editPersonalInfo(toBeEditedField, newField);
     }
 
     public static String viewCompaniesInfo() {
@@ -79,7 +79,7 @@ public class SellerManaging {
     }
 
     public static void logout() {
-        UserHandler.currentUser = null;
+        UserHandler.setCurrentUser(null);
         UserHandler.currentBuyer = null;
     }
 }

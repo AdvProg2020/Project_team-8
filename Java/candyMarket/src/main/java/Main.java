@@ -1,19 +1,14 @@
 import GraphicController.BorderPaneController;
-import GraphicView.CustomButton;
 import GraphicView.MenuHandler;
+import GraphicView.PathHandler;
 import Model.Manager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
 import javafx.stage.Stage;
 
 import java.io.*;
-import java.net.URL;
-import java.nio.file.Path;
-import java.util.ArrayList;
 
 public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
@@ -29,7 +24,7 @@ public class Main extends Application {
         Parent root = null;
         FXMLLoader fxmlLoader = new FXMLLoader();
         try {
-            InputStream inputStream = new FileInputStream(fxmlPath + "BorderPane" + ".fxml");
+            InputStream inputStream = new FileInputStream(PathHandler.fxmlPath + "BorderPane" + ".fxml");
             root = fxmlLoader.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
@@ -45,9 +40,9 @@ public class Main extends Application {
         MenuHandler.currentWindow.setResizable(false);
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
-        //if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
+        if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
-            MenuHandler.changeScene("MainMenu",MenuHandler.currentWindow);
+        BorderPaneController.borderPaneController.setCenter("MainMenu");
 
 
     }

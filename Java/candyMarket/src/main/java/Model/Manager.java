@@ -13,7 +13,7 @@ public class Manager extends User {
 
     public static boolean isThisTheFirstManager() {
         int managerCounter = 0;
-        for (User user : User.users) {
+        for (User user : ManageInfo.allUsers) {
             if (user.getType().equals(UserType.MANAGER))
                 managerCounter++;
         }
@@ -24,7 +24,7 @@ public class Manager extends User {
 
     public static ArrayList<String> viewAllUsers() {
         ArrayList<String> allUsers = new ArrayList<>();
-        for (User user : User.users) {
+        for (User user : ManageInfo.allUsers) {
             allUsers.add(user.getUsername());
         }
         return allUsers;
@@ -35,7 +35,7 @@ public class Manager extends User {
     }
 
     public static void deleteUser(String username) {
-        User.users.remove(User.getUserByUsername(username));
+        ManageInfo.allUsers.remove(User.getUserByUsername(username));
     }
 
     public static HashMap<Integer, String> viewAllRequests() {

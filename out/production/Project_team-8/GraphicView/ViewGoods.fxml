@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
 <?import org.controlsfx.control.CheckComboBox?>
-
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ViewGoodsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ViewGoodsController">
     <top>
         <HBox prefHeight="32.0" prefWidth="431.0" spacing="200.0">
             <children>
-                <ChoiceBox value="Order By" />
-                <CheckComboBox value="Filter"/>
+                <ChoiceBox fx:id="sortChoiceBox"  value="Order By" />
+
             </children>
             <padding>
                 <Insets left="100.0" />
@@ -30,4 +25,27 @@
             </children>
         </VBox>
     </left>
+    <center>
+        <ScrollPane fx:id="scrollPane">
+
+        </ScrollPane>
+    </center>
+    <bottom>
+        <HBox spacing="200.0">
+            <Button text="next">
+
+            </Button>
+            <Button text="previous">
+
+            </Button>
+            <Button text="UpdateList" fx:id="updateListBtn" onMouseClicked="#onUpdateListBtnClick">
+
+            </Button>
+        </HBox>
+    </bottom>
+    <right>
+        <VBox>
+
+        </VBox>
+    </right>
 </BorderPane>

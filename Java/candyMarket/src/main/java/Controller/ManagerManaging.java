@@ -132,7 +132,7 @@ public class ManagerManaging {
     }
 
     public static void logout() {
-        UserHandler.currentUser = null;
+        UserHandler.setCurrentUser(null);
         UserHandler.currentManager = null;
     }
 }

@@ -14,7 +14,7 @@ public class BuyerManaging {
     }
 
     public static String showPersonalInfo(){
-        return UserHandler.currentUser.viewUserPersonalInfo();
+        return UserHandler.getCurrentUser().viewUserPersonalInfo();
     }
 
     public static void editAFieldOfOfInfo(String toBeEditedField, String newField) {

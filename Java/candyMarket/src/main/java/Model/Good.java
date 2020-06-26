@@ -1,9 +1,10 @@
 package Model;
 
+import java.awt.*;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
-
+import javafx.scene.image.Image;
 public class Good {
     public long getDateModified() {
         return dateModified;
@@ -37,7 +38,8 @@ public class Good {
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
     public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
     public static ArrayList<Good> confirmedGoods = ManageInfo.allGoods;
-
+    private Image image;
+    private long dateCreated;
     public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
         this.name = name;
         this.brand = brand;
@@ -53,8 +55,26 @@ public class Good {
         this.dateModified = System.currentTimeMillis();
         unconfirmedGoods.add(this);
         this.id = unconfirmedGoods.size();
+        this.dateCreated = System.currentTimeMillis();
     }
-
+    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo, Image image) {
+        this.name = name;
+        this.brand = brand;
+        this.price = price;
+        this.seller= seller;
+        this.stock = stock;
+        this.category = category;
+        this.situation = ItemCreationSituation.CREATING_CHECK;
+        this.categorySpecialAttributes = categorySpecialAttributes;
+        this.detailInfo = detailInfo;
+        this.salePercentageAmount = 0;
+        this.averageScore = 0;
+        this.dateModified = System.currentTimeMillis();
+        unconfirmedGoods.add(this);
+        this.id = unconfirmedGoods.size();
+        this.image = image;
+        this.dateCreated = System.currentTimeMillis();
+    }
     public ArrayList<Buyer> getBuyers() {
         return buyers;
     }
@@ -102,7 +122,11 @@ public class Good {
         this.averageScore = averageScore;
     }
 
-
+    public boolean hasImage(){
+        if(image!=null)
+            return true;
+        return false;
+    }
     public ItemCreationSituation getSituation() {
         return situation;
     }
@@ -248,5 +272,21 @@ public class Good {
                 ", scores=" + scores +
                 ", comments=" + comments +
                 '}';
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public long getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(long dateCreated) {
+        this.dateCreated = dateCreated;
     }
 }
