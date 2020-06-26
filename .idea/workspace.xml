@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +122,7 @@
       <workItem from="1593032404050" duration="9328000" />
       <workItem from="1593084254518" duration="1112000" />
       <workItem from="1593085390829" duration="12512000" />
-      <workItem from="1593172454847" duration="6488000" />
+      <workItem from="1593172454847" duration="7012000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -307,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593178265496</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add requests file">
+      <created>1593179008756</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1593179008756</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +355,9 @@
     <MESSAGE value="read and write in files for users" />
     <MESSAGE value="Add buyLog and sellLog files" />
     <MESSAGE value="Add categories files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add categories files" />
+    <MESSAGE value="Add requests files" />
+    <MESSAGE value="Add requests file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add requests file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="0" width="575" height="680" key="#Main" timestamp="1593090199867">
@@ -386,10 +394,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593089942692" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593178264671">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593179007892">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593178264671" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593179007892" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1592245779601" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />

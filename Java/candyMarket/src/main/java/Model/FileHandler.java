@@ -14,6 +14,7 @@ public class FileHandler {
     private static Gson categoriesJson = new Gson();
     private static Gson brandsJson = new Gson();
     private static Gson requestsJson = new Gson();
+    private static Gson goodsJson = new Gson();
 
     private static File usersFile = new File("Resources\\users.txt");
     private static File sellLogsFile = new File("Resources\\sellLogs.txt");
@@ -21,6 +22,7 @@ public class FileHandler {
     private static File categoriesFile = new File("Resources\\categories.txt");
     private static File brandsFile = new File("Resources\\brands.txt");
     private static File requestsFile = new File("Resources\\requests.txt");
+    private static File goodsFile = new File("Resources\\goods.txt");
 
 
     public static void getDataFromFiles() throws IOException {
@@ -30,6 +32,7 @@ public class FileHandler {
         loadCategoriesData();
         loadBrandsData();
         loadRequestFile();
+        loadGoodsData();
     }
 
     public static void setDataIntoFiles() throws IOException {
@@ -39,6 +42,7 @@ public class FileHandler {
         writeCategories();
         writeBrands();
         writeRequest();
+        writeGoods();
     }
 
 
@@ -127,6 +131,7 @@ public class FileHandler {
         for (Request request : ManageInfo.allRequests) {
             writer.append(requestsJson.toJson(request) + "\n");
         }
+        writer.close();
     }
 
     private static void loadRequestFile() throws FileNotFoundException {
@@ -134,6 +139,22 @@ public class FileHandler {
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
             ManageInfo.allRequests.add(requestsJson.fromJson(fileReader.nextLine(), Request.class));
+        }
+    }
+
+    private static void writeGoods() throws IOException {
+        FileWriter writer = new FileWriter(goodsFile);
+        for (Good good : ManageInfo.allGoods) {
+            writer.append(requestsJson.toJson(good) + "\n");
+        }
+        writer.close();
+    }
+
+    private static void loadGoodsData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(goodsFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            ManageInfo.allGoods.add(goodsJson.fromJson(fileReader.nextLine(), Good.class));
         }
     }
 
