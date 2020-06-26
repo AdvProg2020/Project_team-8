@@ -14,6 +14,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.EventListener;
 
 public class MenuHandler {
     public static Stage currentWindow;
@@ -61,7 +62,7 @@ public class MenuHandler {
     public static Button discountManagingBtn;
     public static void createButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
-        viewPersonalInfoBtn = new CustomButton("ViewPersonalInfo","PersonalInfo");
+        viewPersonalInfoBtn = new CustomButton("ViewPersonalInfo","Profile");
         backBtn =new CustomButton("Back");
         backBtn.setOnMouseClicked(actionEvent -> {
             BorderPaneController.borderPaneController.setCenter("MainMenu");
@@ -77,9 +78,9 @@ public class MenuHandler {
         buttons.add(backBtn);
         viewGoods = new CustomButton("ViewGoods","ViewGoods");
         goodsMenuBtn = new CustomButton("GoodsMenu","GoodsMenu");
-        clientManagingBtn = new CustomButton("ClientManaging","");
-        productManagingBtn = new CustomButton("ProductManaging","");
-        discountManagingBtn = new CustomButton("DiscountManaging","");
+        clientManagingBtn = new CustomButton("ClientManaging","ClientsProfileForManager");
+        productManagingBtn = new CustomButton("ProductManaging","ProductsManaging");
+        discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
     }
     private static void clientMenuBtnOnClick(){
         if(UserHandler.isLogeIn())
@@ -87,5 +88,6 @@ public class MenuHandler {
             if(UserHandler.getCurrentUser().isManager())
                 BorderPaneController.borderPaneController.setCenter("ManagerMenu");
         }
+        else BorderPaneController.borderPaneController.loginBtnClick(null);
     }
 }
