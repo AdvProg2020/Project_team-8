@@ -16,7 +16,8 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class DiscountCodeManagingController implements Initializable {
-    @FXML private TableView<Discount> tableView;
+    public static DiscountCodeManagingController discountCodeManagingController;
+    @FXML private static TableView<Discount> tableView;
     @FXML private TableColumn<Discount, Integer> codeColumn;
     @FXML private TableColumn<Discount, LocalDate> initialDateColumn;
     @FXML private TableColumn<Discount, LocalDate> endDateColumn;
@@ -36,6 +37,8 @@ public class DiscountCodeManagingController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        discountCodeManagingController = this;
+
         codeColumn.setCellValueFactory(new PropertyValueFactory<Discount, Integer>("code"));
         initialDateColumn.setCellValueFactory(new PropertyValueFactory<Discount, LocalDate>("startDate"));
         endDateColumn.setCellValueFactory(new PropertyValueFactory<Discount, LocalDate>("endDate"));
@@ -87,6 +90,11 @@ public class DiscountCodeManagingController implements Initializable {
 
             tableView.getItems().add(newCode);
         }
+    }
+
+
+    public static Discount getDiscount() {
+        return tableView.getSelectionModel().getSelectedItem();
     }
 
     public void userClickedOnTable()
