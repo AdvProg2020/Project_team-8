@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="" />
+    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +126,9 @@
       <workItem from="1593085390829" duration="12512000" />
       <workItem from="1593172454847" duration="9694000" />
       <workItem from="1593182211030" duration="396000" />
-      <workItem from="1593182755468" duration="1167000" />
+      <workItem from="1593182755468" duration="2080000" />
+      <workItem from="1593185282952" duration="587000" />
+      <workItem from="1593185894746" duration="497000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -334,7 +340,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593183789660</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix pull bugs">
+      <created>1593184355601</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1593184355601</updated>
+    </task>
+    <task id="LOCAL-00032" summary="workspace bug fixed">
+      <created>1593184445254</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1593184445254</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,8 +374,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make clients menu(start)" />
-    <MESSAGE value="Finalize Registering (on View)" />
     <MESSAGE value="Update SellersMenu v2" />
     <MESSAGE value="finalize Register and Login Menus" />
     <MESSAGE value="finalize Register and Login Menus v2" />
@@ -379,7 +397,9 @@
     <MESSAGE value="Add requests file" />
     <MESSAGE value="Add goods file" />
     <MESSAGE value="Add discounts file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add discounts file" />
+    <MESSAGE value="fix pull bugs" />
+    <MESSAGE value="workspace bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace bug fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="0" width="575" height="680" key="#Main" timestamp="1593090199867">
@@ -390,10 +410,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1592219098177" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593090131825">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593186205056">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593090131825" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593186205056" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1592088967857" />
     <state x="869" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1592397747363">
       <screen x="0" y="0" width="1280" height="680" />
@@ -416,19 +436,19 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593089942692" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593184354104">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593186403884">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593184354104" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593186403884" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1592245779601" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="395" y="55" key="DetectedRootsChooserDialog/0.0.1280.683@0.0.1280.683" timestamp="1592071705791" />
-    <state x="421" y="68" key="FileChooserDialogImpl" timestamp="1593090113692">
+    <state x="421" y="68" key="FileChooserDialogImpl" timestamp="1593186086508">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593090113692" />
+    <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593186086508" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
     <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1593182606557">
       <screen x="0" y="0" width="1280" height="680" />
@@ -474,24 +494,24 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1589832465283" />
-    <state x="121" y="50" key="MergeDialog" timestamp="1593042001399">
+    <state x="121" y="50" key="MergeDialog" timestamp="1593184556414">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593042001399" />
+    <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593184556414" />
     <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419472" />
-    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593042001403">
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593184575795">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593042001403" />
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593184575795" />
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419485" />
     <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="314" y="39" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1593041148078" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1593090162165">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1593186231315">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593090162165" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593186231315" />
     <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1592076197171" />
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1593033946494">
       <screen x="0" y="0" width="1280" height="680" />
@@ -502,10 +522,10 @@
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593042011101" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1593182757341">
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1593185894517">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593182757341" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593185894517" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1589707394626" />
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593090106500">
       <screen x="0" y="0" width="1280" height="680" />
@@ -515,10 +535,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="44" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1592228754152" />
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593184361570">
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593184450992">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593184361570" />
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593184450992" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589841943867" />
     <state x="91" y="36" key="new project wizard" timestamp="1588513960615">
       <screen x="0" y="0" width="1280" height="683" />
