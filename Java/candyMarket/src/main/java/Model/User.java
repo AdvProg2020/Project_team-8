@@ -29,7 +29,7 @@ public class User {
    }
 
     public static ArrayList<User> getUsers() {
-        return users;
+        return ManageInfo.allUsers;
     }
 
     public Cart getCart() {
@@ -164,6 +164,6 @@ public class User {
     }
 
     public static void deleteUser(User user) {
-        users.remove(user);
+        ManageInfo.allUsers.remove(user);
     }
 }

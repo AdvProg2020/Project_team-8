@@ -26,12 +26,12 @@ public class ProfileController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        username.setText(UserHandler.currentUser.getUsername());
-        password.setText(UserHandler.currentUser.getPassword());
-        firstName.setText(UserHandler.currentUser.getFirstName());
-        lastName.setText(UserHandler.currentUser.getLastName());
-        email.setText(UserHandler.currentUser.getEmail());
-        phoneNumber.setText(UserHandler.currentUser.getPhoneNumber());
+        username.setText(UserHandler.getCurrentUser().getUsername());
+        password.setText(UserHandler.getCurrentUser().getPassword());
+        firstName.setText(UserHandler.getCurrentUser().getFirstName());
+        lastName.setText(UserHandler.getCurrentUser().getLastName());
+        email.setText(UserHandler.getCurrentUser().getEmail());
+        phoneNumber.setText(UserHandler.getCurrentUser().getPhoneNumber());
 
         errorMessage.setText("");
     }
@@ -60,12 +60,12 @@ public class ProfileController implements Initializable {
         } else {
             errorMessage.setStyle("-fx-background-color: #00ff00;");
             errorMessage.setText("Updated");
-            UserHandler.currentUser.setUsername(usernameText);
-            UserHandler.currentUser.setPassword(passwordText);
-            UserHandler.currentUser.setFirstName(firstNameText);
-            UserHandler.currentUser.setLastName(lastNameText);
-            UserHandler.currentUser.setEmail(emailText);
-            UserHandler.currentUser.setPhoneNumber(phoneNumberText);
+            UserHandler.getCurrentUser().setUsername(usernameText);
+            UserHandler.getCurrentUser().setPassword(passwordText);
+            UserHandler.getCurrentUser().setFirstName(firstNameText);
+            UserHandler.getCurrentUser().setLastName(lastNameText);
+            UserHandler.getCurrentUser().setEmail(emailText);
+            UserHandler.getCurrentUser().setPhoneNumber(phoneNumberText);
         }
     }
 
