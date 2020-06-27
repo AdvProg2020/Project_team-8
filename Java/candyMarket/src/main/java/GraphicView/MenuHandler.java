@@ -60,6 +60,7 @@ public class MenuHandler {
     public static Button clientManagingBtn;
     public static Button productManagingBtn;
     public static Button discountManagingBtn;
+    public static Button categoryManagingBtn;
     public static void createButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
         viewPersonalInfoBtn = new CustomButton("ViewPersonalInfo","Profile");
@@ -81,6 +82,8 @@ public class MenuHandler {
         clientManagingBtn = new CustomButton("ClientManaging","ClientsProfileForManager");
         productManagingBtn = new CustomButton("ProductManaging","ProductsManaging");
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
+        discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
+        categoryManagingBtn = new CustomButton("CategoryManaging","CategoryManaging");
     }
     private static void clientMenuBtnOnClick(){
         if(UserHandler.isLogeIn())

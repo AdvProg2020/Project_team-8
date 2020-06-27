@@ -26,7 +26,7 @@ public class DiscountCodeDetailsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        discount = DiscountCodeManagingController.getDiscount();
+        discount = DiscountCodeManagingController.discountCodeManagingController.getDiscount();
 
         code.setText(Integer.toString(discount.getCode()));
         percentage.setText(Integer.toString(discount.getPercentReduction()));
@@ -58,5 +58,6 @@ public class DiscountCodeDetailsController implements Initializable {
             errorMessage.setStyle("-fx-background-color: #ff0000;");
             errorMessage.setText("enter a valid number");
         }
+        DiscountCodeManagingController.discountCodeManagingController.createDiscountTable();
     }
 }
