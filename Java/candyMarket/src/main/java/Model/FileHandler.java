@@ -4,6 +4,7 @@ package Model;
 import com.google.gson.Gson;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -177,6 +178,5 @@ public class FileHandler {
             ManageInfo.allDiscounts.add(discountsJson.fromJson(fileReader.nextLine(), Discount.class));
         }
     }
-
 
 }
