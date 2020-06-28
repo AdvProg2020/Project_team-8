@@ -1,3 +1,9 @@
 {"name":"people"}
 {"name":"food"}
-{"name":"fruits","specialAttributes":"hello hello"}
+{"name":"fruits"}
+{"name":"people"}
+{"name":"food"}
+{"name":"fruits"}
+{"name":"people"}
+{"name":"food"}
+{"name":"fruits"}

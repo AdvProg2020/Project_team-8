@@ -213,7 +213,9 @@ public class FileHandler {
         FileInputStream fileInputStream = new FileInputStream(goodsFile);
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
-            ManageInfo.allGoods.add(goodsJson.fromJson(fileReader.nextLine(), Good.class));
+            Good good = goodsJson.fromJson(fileReader.nextLine(), Good.class);
+            good.setCategory(Category.getCategoryByName(good.getCategory().getName()));
+            ManageInfo.allGoods.add(good);
         }
     }
 
