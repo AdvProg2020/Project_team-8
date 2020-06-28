@@ -1,1 +1,0 @@
-{"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"admin","firstName":"kin","lastName":"gro","email":"k@gmail.com","phoneNumber":"+98142","password":"admin","credit":0,"type":"MANAGER"}

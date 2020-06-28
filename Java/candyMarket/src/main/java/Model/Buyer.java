@@ -21,6 +21,8 @@ public class Buyer extends User {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.setType(UserType.BUYER);
         this.balance=0;
+        ManageInfo.allBuyers.add(this);
+        ManageInfo.allUsers.add(this);
     }
 
     public Cart getCart() {

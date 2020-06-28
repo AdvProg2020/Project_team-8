@@ -17,7 +17,9 @@ public class FileHandler {
     private static Gson requestsJson = new Gson();
     private static Gson goodsJson = new Gson();
     private static Gson discountsJson = new Gson();
-
+    private static File managersFile = new File("Resources\\managers.txt");
+    private static File buyersFile = new File("Resources\\buyers.txt");
+    private static File sellersFile = new File("Resources\\sellers.txt");
     private static File usersFile = new File("Resources\\users.txt");
     private static File sellLogsFile = new File("Resources\\sellLogs.txt");
     private static File buyLogsFile = new File("Resources\\buyLogs.txt");
@@ -29,7 +31,9 @@ public class FileHandler {
 
 
     public static void getDataFromFiles() throws IOException {
-        loadUsersData();
+        loadManagersData();
+        loadSellersData();
+        loadBuyersData();
         loadSellLogsData();
         loadBuyLogsData();
         loadCategoriesData();
@@ -40,7 +44,9 @@ public class FileHandler {
     }
 
     public static void setDataIntoFiles() throws IOException {
-        writeUsersFiles();
+        writeManagersFiles();
+        writeBuyersFiles();
+        writeSellersFiles();
         writeSellLog();
         writeBuyLog();
         writeCategories();
@@ -50,7 +56,54 @@ public class FileHandler {
         writeDiscounts();
     }
 
-
+    private static void writeManagersFiles() throws IOException {
+        FileWriter writer = new FileWriter(managersFile);
+        for (Manager manager : ManageInfo.allManagers) {
+            writer.append(usersJson.toJson(manager) + "\n");
+        }
+        writer.close();
+    }
+    private static void loadManagersData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(managersFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            Manager manager = usersJson.fromJson(fileReader.nextLine(), Manager.class);
+            ManageInfo.allManagers.add(manager);
+            ManageInfo.allUsers.add(manager);
+        }
+    }
+    private static void writeSellersFiles() throws IOException {
+        FileWriter writer = new FileWriter(sellersFile);
+        for (Seller seller : ManageInfo.allSellers) {
+            writer.append(usersJson.toJson(seller) + "\n");
+        }
+        writer.close();
+    }
+    private static void loadSellersData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(sellersFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            Seller seller = usersJson.fromJson(fileReader.nextLine(), Seller.class);
+            ManageInfo.allSellers.add(seller);
+            ManageInfo.allUsers.add(seller);
+        }
+    }
+    private static void writeBuyersFiles() throws IOException {
+        FileWriter writer = new FileWriter(buyersFile);
+        for (Buyer buyer : ManageInfo.allBuyers) {
+            writer.append(usersJson.toJson(buyer) + "\n");
+        }
+        writer.close();
+    }
+    private static void loadBuyersData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(sellersFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            Buyer buyer = usersJson.fromJson(fileReader.nextLine(), Buyer.class);
+            ManageInfo.allBuyers.add(buyer);
+            ManageInfo.allUsers.add(buyer);
+        }
+    }
     private static void writeUsersFiles() throws IOException {
         FileWriter writer = new FileWriter(usersFile);
         for (User user : ManageInfo.allUsers) {
@@ -63,7 +116,8 @@ public class FileHandler {
         FileInputStream fileInputStream = new FileInputStream(usersFile);
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
-            ManageInfo.allUsers.add(usersJson.fromJson(fileReader.nextLine(), User.class));
+            User user = usersJson.fromJson(fileReader.nextLine(), User.class);
+            ManageInfo.allUsers.add(user);
         }
     }
 

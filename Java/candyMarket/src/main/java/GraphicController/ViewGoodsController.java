@@ -4,8 +4,6 @@ import GraphicView.CustomButton;
 import GraphicView.CustomGoodBox;
 import GraphicView.MenuHandler;
 import Model.*;
-import View.MainMenu;
-import View.Menu;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -29,6 +27,7 @@ public class ViewGoodsController implements Initializable {
     public ScrollPane categoriesScrollPane;
     ArrayList<CustomGoodBox> goodBoxes = new ArrayList<>();
     ArrayList<Good> goods = new ArrayList<>();
+    ArrayList<CheckBox> checkBoxes = new ArrayList<>();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         goods = ManageInfo.allGoods;
@@ -39,18 +38,18 @@ public class ViewGoodsController implements Initializable {
     }
     private void setCategoryScrollPane(){
         ArrayList<Category> categories = ManageInfo.allCategories;
-        ArrayList<CheckBox> checkBoxes = createCheckBoxes(categories);
+        checkBoxes = createCheckBoxes(categories);
         VBox vBox = new VBox();
         vBox.setSpacing(5);
         for (CheckBox c:
              checkBoxes) {
+            c.setSelected(true);
             vBox.getChildren().add(c);
         }
         categoriesScrollPane.setContent(vBox);
     }
     private void setGoodsScrollPane(){
         VBox allGoods = new VBox();
-        goods = FilterAndSort.sortGoods(goods);
         goodBoxes = createGoodBoxes(goods);
         for(int i=0;i<goodBoxes.size();i+=2){
             HBox hBox = new HBox();
@@ -91,6 +90,14 @@ public class ViewGoodsController implements Initializable {
             if(s.toString().equals(sortChoiceBox.getValue()))
                 FilterAndSort.sortsType = s;
                 }
+        for (CheckBox c:
+             checkBoxes) {
+            Category category = Category.getCategoryByName(c.getText());
+            if(c.isSelected() && FilterAndSort.categories.contains(category)) FilterAndSort.categories.add(category);
+            else FilterAndSort.categories.remove(category);
+        }
+        goods = FilterAndSort.sortGoods(goods);
+        goods = FilterAndSort.categoryFilter(goods);
         setGoodsScrollPane();
     }
 }

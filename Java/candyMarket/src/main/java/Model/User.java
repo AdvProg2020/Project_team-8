@@ -22,7 +22,6 @@ public class User {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.password = passWord;
-        ManageInfo.allUsers.add(this);
     }
    public User(){
 
