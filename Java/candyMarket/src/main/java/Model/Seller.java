@@ -9,7 +9,6 @@ public class Seller extends User {
     private String sellerCompanyName;
     private int balance;
     public static Seller currentSeller;
-    public static ArrayList<Seller> sellers;
     private boolean confirmedSeller;
 
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName  ) {
@@ -17,28 +16,15 @@ public class Seller extends User {
         this.sellerCompanyName = sellerCompanyName;
         this.setType(UserType.SELLER);
         this.confirmedSeller = false;
-        sellers.add(this);
+        ManageInfo.allSellers.add(this);
+        ManageInfo.allUsers.add(this);
     }
 
-    public void setBalance(int balance) {
-        this.balance = balance;
-    }
-
-    public int getBalance() {
-        return balance;
-    }
-
-    public static ArrayList<Seller> getSellers() {
-        return sellers;
-    }
 
     public void addMySellLog(SellLog sellLog){
         mySellLog.add(sellLog);
     }
 
-    public static void setSellers(ArrayList<Seller> sellers) {
-        Seller.sellers = sellers;
-    }
 
     public ArrayList<Sale> getMySales() {
         return mySales;

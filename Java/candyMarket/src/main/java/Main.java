@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
@@ -42,12 +44,10 @@ public class Main extends Application {
         MenuHandler.currentWindow.setResizable(false);
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
+        BorderPaneController.borderPaneController.setCenter("MainMenu");
         //debug();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
-        BorderPaneController.borderPaneController.setCenter("MainMenu");
-
-
     }
     private static void debug(){
         new Category("people",null);

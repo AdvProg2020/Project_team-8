@@ -1,39 +1,15 @@
 package Model;
 
-import Controller.GoodsManaging;
-import View.FilterMenus.ChooseBrand;
-import View.FilterMenus.ChooseCategories;
-import View.FilterMenus.ChoosePrice;
-import View.ViewException;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class FilterAndSort {
-    public static ArrayList<Filter> filters = FilterAndSort.createAllFilters();
     public static FilterAndSort.sortsTypes sortsType = sortsTypes.DATE_CREATED;
     public static Boolean sortDescendingMode = false;
-    public static ArrayList<Filter> brands = FilterAndSort.createAllFilters(GoodsManaging.ViewBrands());
-    public static ArrayList<Filter> categories = FilterAndSort.createAllFilters(GoodsManaging.viewCategories());
+    public static ArrayList<String> brands = new ArrayList<>();
+    public static ArrayList<Category> categories = new ArrayList<>();
     public static int minPrice;
     public static int maxPrice;
-    public static ArrayList<Filter> createAllFilters(){
-        ArrayList<Filter> filters = new ArrayList<Filter>();
-        filters.add(new Filter(1));
-        filters.add(new ChooseBrand(2));
-        filters.add(new ChoosePrice(3));
-        filters.add(new ChooseCategories(4));
-        return filters;
-    }
-    public static ArrayList<Filter> createAllFilters(ArrayList<String> options){
-        ArrayList<Filter> filters = new ArrayList<Filter>();
-        for (int i=0;i<options.size();i++){
-            filters.add(new Filter(i+1,options.get(i)));
-        }
-        return filters;
-    }
-
-
     public static enum filtersTypes{
         IS_EXIST,CHOOSE_BRANDS,CHOOSE_PRICE_RANGE,CHOOSE_CATEGORIES
     }
@@ -67,24 +43,7 @@ public class FilterAndSort {
             }
             return sorts;
         }
-    public static ArrayList<Good> filterGoods(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
-        for (Filter f:
-             filters) {
-            if(f.isEnable()){
-                if (filtersTypes.IS_EXIST.toString().equals(f.getName())) {
-                    filteredGoods = isExistFilter(filteredGoods);
-                } else if (filtersTypes.CHOOSE_BRANDS.toString().equals(f.getName())) {
-                    filteredGoods = brandFilter(filteredGoods);
-                } else if (filtersTypes.CHOOSE_CATEGORIES.toString().equals(f.getName())) {
-                    filteredGoods = categoryFilter(filteredGoods);
-                } else if (filtersTypes.CHOOSE_PRICE_RANGE.toString().equals(f.getName())) {
-                    filteredGoods = priceFilter(filteredGoods);
-                }
-            }
-        }
-        return filteredGoods;
-    }
+
     public static ArrayList<Good> isExistFilter(ArrayList<Good> goods){
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
@@ -98,8 +57,8 @@ public class FilterAndSort {
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
-            if(!isBrandOrCategory(g.getBrand(),brands))
-                filteredGoods.remove(g);
+            if(brands.contains(g.getBrand()))
+                filteredGoods.add(g);
         }
         return filteredGoods;
     }
@@ -107,8 +66,8 @@ public class FilterAndSort {
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
-            if(!isBrandOrCategory(g.getCategory().getName(),categories))
-                filteredGoods.remove(g);
+            if(categories.contains(g.getCategory()))
+                filteredGoods.add(g);
         }
         return filteredGoods;
     }
@@ -127,19 +86,6 @@ public class FilterAndSort {
     public ArrayList<Sale> filterSales(ArrayList<Sale> sales){
         return null;
     }
-    public static Filter getFilterById(int id,ArrayList<Filter> filters) throws ViewException {
-        for (Filter f:
-                filters) {
-            if(f.getId() == id) return f;
-        }
-        throw ViewException.invalidNumber();
-    }
-    public static Boolean isBrandOrCategory(String name,ArrayList<Filter> items){
-        for (Filter f:
-             items) {
-            if(f.getName()==name && f.isEnable()) return true;
-        }
-        return false;
-    }
+
 
 }

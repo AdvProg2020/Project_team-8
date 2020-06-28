@@ -2,7 +2,6 @@ package GraphicController;
 
 import GraphicView.MenuHandler;
 import GraphicView.PrimaryMenu;
-import View.Menu;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 

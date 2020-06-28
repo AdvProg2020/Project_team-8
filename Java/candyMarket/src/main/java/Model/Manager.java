@@ -9,15 +9,12 @@ public class Manager extends User {
     public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.setType(UserType.MANAGER);
+        ManageInfo.allManagers.add(this);
+        ManageInfo.allUsers.add(this);
     }
 
     public static boolean isThisTheFirstManager() {
-        int managerCounter = 0;
-        for (User user : ManageInfo.allUsers) {
-            if (user.getType().equals(UserType.MANAGER))
-                managerCounter++;
-        }
-        if (managerCounter == 0)
+        if(ManageInfo.allManagers.isEmpty())
             return true;
         return false;
     }
