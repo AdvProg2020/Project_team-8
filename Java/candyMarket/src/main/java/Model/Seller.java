@@ -7,6 +7,7 @@ public class Seller extends User {
     private ArrayList<Good> myGoods;
     private ArrayList<SellLog> mySellLog;
     private String sellerCompanyName;
+    private int balance;
     public static Seller currentSeller;
     public static ArrayList<Seller> sellers;
     private boolean confirmedSeller;
@@ -17,6 +18,14 @@ public class Seller extends User {
         this.setType(UserType.SELLER);
         this.confirmedSeller = false;
         sellers.add(this);
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public int getBalance() {
+        return balance;
     }
 
     public static ArrayList<Seller> getSellers() {
