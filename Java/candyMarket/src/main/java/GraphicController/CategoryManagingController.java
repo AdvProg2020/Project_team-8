@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
@@ -31,6 +32,10 @@ public class CategoryManagingController implements Initializable {
         specialAttributesColumn.setCellValueFactory(new PropertyValueFactory<Category, String>("specialAttributes"));
 
         tableView.setItems(getCategories());
+
+        tableView.setEditable(true);
+        nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        specialAttributesColumn.setCellFactory(TextFieldTableCell.forTableColumn());
 
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
@@ -68,5 +73,16 @@ public class CategoryManagingController implements Initializable {
     }
 
     public void userClickedOnTable(MouseEvent mouseEvent) {
+    }
+
+
+    public void changeCategoryNameCellEvent(TableColumn.CellEditEvent<Category, String> editedCell) {
+        Category category = tableView.getSelectionModel().getSelectedItem();
+        category.setName(editedCell.getNewValue());
+    }
+
+    public void changeSpecialAttNameCellEvent(TableColumn.CellEditEvent<Category, String> editedCell) {
+        Category category = tableView.getSelectionModel().getSelectedItem();
+        category.setSpecialAttributes(editedCell.getNewValue());
     }
 }

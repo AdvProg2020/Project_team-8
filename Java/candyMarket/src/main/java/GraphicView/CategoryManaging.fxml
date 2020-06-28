@@ -19,8 +19,8 @@
                 </Label>
                 <TableView fx:id="tableView" onMouseClicked="#userClickedOnTable" prefHeight="286.0" prefWidth="786.0">
                <columns>
-                  <TableColumn fx:id="nameColumn" prefWidth="159.0" text="Category" />
-                  <TableColumn fx:id="specialAttributesColumn" prefWidth="626.0" text="Special Attributes" />
+                  <TableColumn fx:id="nameColumn" prefWidth="159.0" text="Category" onEditCommit="#changeCategoryNameCellEvent"/>
+                  <TableColumn fx:id="specialAttributesColumn" prefWidth="626.0" text="Special Attributes" onEditCommit="#changeSpecialAttNameCellEvent"/>
                </columns>
                 </TableView>
                 <HBox alignment="TOP_CENTER" prefHeight="150.0" prefWidth="786.0" spacing="40.0">

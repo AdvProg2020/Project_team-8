@@ -51,8 +51,6 @@ public class ProfileController implements Initializable {
                 firstNameText.length() == 0 || lastNameText.length() == 0 ||
                 emailText.length() == 0 || phoneNumberText.length() == 0) {
             errorMessage.setText("Please complete all fields");
-        } else if (User.isThereUserWithUsername(usernameText)) {
-            errorMessage.setText("Username already exists, please try again");
         } else if (!emailValidation(emailText)) {
             errorMessage.setText("Please enter a correct form of E-mail");
         } else if (!phoneValidation(phoneNumberText)) {

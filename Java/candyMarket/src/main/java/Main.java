@@ -42,7 +42,7 @@ public class Main extends Application {
         MenuHandler.currentWindow.setResizable(false);
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
-        debug();
+        //debug();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
         BorderPaneController.borderPaneController.setCenter("MainMenu");
