@@ -25,6 +25,13 @@ public class Seller extends User {
         mySellLog.add(sellLog);
     }
 
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
 
     public ArrayList<Sale> getMySales() {
         return mySales;
