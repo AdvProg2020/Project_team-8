@@ -81,7 +81,8 @@ public class SellerProductHandlingController implements Initializable {
             int stockText = Integer.parseInt(stockField.getText());
             Category categoryValue = categoryChoiceBox.getValue();
             String detailsText = details.getText();
-            new Good(goodNameText, brandText ,priceText, UserHandler.currentSeller, stockText, categoryValue, detailsText);
+            Good good = new Good(goodNameText, brandText ,priceText, UserHandler.currentSeller, stockText, categoryValue, detailsText);
+            UserHandler.currentSeller.addGood(good);
             errorMessage.setStyle("-fx-background-color: #00ff00;");
             errorMessage.setText("Your request has been sent");
         }catch (Exception e) {

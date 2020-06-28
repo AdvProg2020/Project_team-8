@@ -42,8 +42,8 @@
                 <HBox alignment="CENTER" prefHeight="93.0" prefWidth="604.0" spacing="10.0">
                     <children>
                         <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Product(s) " />
-                  <Button onAction="#showBuyers" mnemonicParsing="false" text="Show Buyers" />
-                  <Button fx:id="showBuyersButton" onAction="#requestNewProduct" mnemonicParsing="false" text="Request New Product" />
+                  <Button fx:id="showBuyersButton" onAction="#showBuyers" mnemonicParsing="false" text="Show Buyers" />
+                  <Button onAction="#requestNewProduct" mnemonicParsing="false" text="Request New Product" />
                   <Button onAction="#editing" mnemonicParsing="false" text="Edit" />
                     </children>
                 </HBox>

@@ -16,6 +16,8 @@ public class Seller extends User {
         this.sellerCompanyName = sellerCompanyName;
         this.setType(UserType.SELLER);
         this.confirmedSeller = false;
+        this.mySellLog = new ArrayList<>();
+        this.myGoods = new ArrayList<>();
         ManageInfo.allSellers.add(this);
         ManageInfo.allUsers.add(this);
     }
@@ -106,8 +108,8 @@ public class Seller extends User {
 
     }
 
-    public void addGood() {
-       //??
+    public void addGood(Good good) {
+       myGoods.add(good);
     }
 
     public ArrayList<String> viewSales() {

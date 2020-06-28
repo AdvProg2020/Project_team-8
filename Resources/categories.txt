@@ -1,9 +1,1 @@
-{"name":"people"}
-{"name":"food"}
-{"name":"fruits"}
-{"name":"people"}
-{"name":"food"}
-{"name":"fruits"}
-{"name":"people"}
-{"name":"food"}
-{"name":"fruits"}
+{"name":"file","specialAttributes":"hello"}
