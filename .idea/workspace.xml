@@ -21,21 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/BuyerManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/BuyerManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/CartManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/CartManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/SellerManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/SellerManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/UserManaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Controller/UserManaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/MainMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$sortsTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort$sortsTypes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FilterAndSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/SortComparators.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/categories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/goods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/goods.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,16 +71,16 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Photos" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\MainBorderPane" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
     </key>
   </component>
   <component name="RunManager">
@@ -151,6 +139,8 @@
       <workItem from="1593095463014" duration="280000" />
       <workItem from="1593098062029" duration="31416000" />
       <workItem from="1593168736940" duration="7161000" />
+      <workItem from="1593233035416" duration="52000" />
+      <workItem from="1593235040160" duration="1986000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -338,7 +328,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -409,10 +399,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.680@0.0.1280.680" timestamp="1593088346109" />
-    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593121371386">
+    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593235852757">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1593121371386" />
+    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1593235852757" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593178199704">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -520,10 +510,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1593041894737" />
-    <state x="347" y="44" width="587" height="592" key="find.popup" timestamp="1593187563756">
+    <state x="347" y="44" width="587" height="592" key="find.popup" timestamp="1593236019447">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="347" y="44" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1593187563756" />
+    <state x="347" y="44" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1593236019447" />
     <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593033787588">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -533,10 +523,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="435" y="185" key="git4idea.ui.GitTagDialog/0.0.1280.680@0.0.1280.680" timestamp="1593187629573" />
-    <state x="91" y="0" key="new project wizard" timestamp="1593135585610">
+    <state x="91" y="0" key="new project wizard" timestamp="1593233083467">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1593135585610" />
+    <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1593233083467" />
     <state x="91" y="36" key="new project wizard/0.0.1280.683@0.0.1280.683" timestamp="1588513960615" />
     <state x="303" y="3" width="672" height="676" key="search.everywhere.popup" timestamp="1593185719997">
       <screen x="0" y="0" width="1280" height="680" />

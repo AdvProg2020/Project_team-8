@@ -1,0 +1,3 @@
+{"name":"people"}
+{"name":"food"}
+{"name":"fruits"}
