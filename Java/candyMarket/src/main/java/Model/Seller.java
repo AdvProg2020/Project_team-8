@@ -7,6 +7,7 @@ public class Seller extends User {
     private ArrayList<Good> myGoods;
     private ArrayList<SellLog> mySellLog;
     private String sellerCompanyName;
+    private int balance;
     public static Seller currentSeller;
     private boolean confirmedSeller;
 
@@ -24,6 +25,13 @@ public class Seller extends User {
         mySellLog.add(sellLog);
     }
 
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
 
     public ArrayList<Sale> getMySales() {
         return mySales;
@@ -130,5 +138,8 @@ public class Seller extends User {
         this.confirmedSeller = true;
     }
 
+    public void removeProduct(Good good) {
+        myGoods.remove(good);
+    }
 
 }

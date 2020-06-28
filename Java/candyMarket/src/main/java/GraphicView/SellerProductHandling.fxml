@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="GraphicController.SellerProductHandlingController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="98.0" layoutY="22.0" prefHeight="520.0" prefWidth="604.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" text="List of Clients">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="tableView" onMouseClicked="#userClickedOnTable" prefHeight="228.0" prefWidth="604.0">
+                    <columns>
+                        <TableColumn fx:id="productNameColumn" prefWidth="198.0" text="Product's Name" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="167.0" text="Category" />
+                        <TableColumn fx:id="priceColumn" prefWidth="171.0" text="Price" />
+                    </columns>
+                </TableView>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="604.0">
+               <children>
+                  <TextField fx:id="goodNameField" promptText="Name" />
+                  <TextField fx:id="brandField" promptText="Brand" />
+                  <TextField fx:id="priceField" promptText="Price" />
+               </children>
+            </HBox>
+            <HBox prefHeight="79.0" prefWidth="604.0">
+               <children>
+                  <ChoiceBox fx:id="categoryChoiceBox" prefHeight="39.0" prefWidth="199.0" />
+                  <TextField fx:id="stockField" prefHeight="39.0" prefWidth="204.0" promptText="Stock" />
+                  <TextArea fx:id="details" prefHeight="200.0" prefWidth="200.0" promptText="Details" />
+               </children>
+            </HBox>
+                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="604.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Product(s) " />
+                  <Button onAction="#showBuyers" mnemonicParsing="false" text="Show Buyers" />
+                  <Button fx:id="showBuyersButton" onAction="#requestNewProduct" mnemonicParsing="false" text="Request New Product" />
+                  <Button onAction="#editing" mnemonicParsing="false" text="Edit" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+      <Label fx:id="errorMessage" layoutX="98.0" layoutY="542.0" text="Label" />
+    </children>
+</AnchorPane>
