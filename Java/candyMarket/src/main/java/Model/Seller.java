@@ -138,5 +138,8 @@ public class Seller extends User {
         this.confirmedSeller = true;
     }
 
+    public void removeProduct(Good good) {
+        myGoods.remove(good);
+    }
 
 }

@@ -25,7 +25,7 @@
                 </TableView>
                 <HBox alignment="TOP_CENTER" prefHeight="150.0" prefWidth="786.0" spacing="40.0">
                     <children>
-                        <TextField fx:id="categoryNameField" prefWidth="175.0" promptText="code" />
+                        <TextField fx:id="categoryNameField" prefWidth="175.0" promptText="Category Name" />
                   <TextArea fx:id="specialAttributesField" prefHeight="200.0" prefWidth="200.0" promptText="Special Attributes" />
                     </children>
                 </HBox>

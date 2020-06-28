@@ -1,2 +1,0 @@
-{"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"a","firstName":"a","lastName":"a","email":"r@t.com","phoneNumber":"+98213123","password":"r","credit":0,"type":"MANAGER"}
-{"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"reza","firstName":"reza","lastName":"erfan","email":"r@gmail.com","phoneNumber":"+981234","password":"1","credit":0,"type":"BUYER"}
