@@ -1,0 +1,1 @@
+{"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"a","firstName":"ali","lastName":"aliian","email":"a@yahoo.com","phoneNumber":"+981742","password":"a","credit":0,"type":"MANAGER"}
