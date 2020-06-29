@@ -2,14 +2,20 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class FilterAndSort {
     public static FilterAndSort.sortsTypes sortsType = sortsTypes.DATE_CREATED;
     public static Boolean sortDescendingMode = false;
-    public static ArrayList<String> brands = new ArrayList<>();
-    public static ArrayList<Category> categories = new ArrayList<>();
-    public static int minPrice;
-    public static int maxPrice;
+    public static ArrayList<String> brandsFilter = new ArrayList<>();
+    public static ArrayList<Category> categoriesFilter  = new ArrayList<>();
+    public static int minPriceFilter = 0;
+    public static int maxPriceFilter = 10000;
+    public static boolean isBrandFilterOn = false;
+    public static boolean isCategoryFilterOn = false;
+    public static boolean isPriceFilterOn = false;
+    public static boolean isAvailableFilterOn = false;
+    public static boolean isOffFilterOn = false;
     public static enum filtersTypes{
         IS_EXIST,CHOOSE_BRANDS,CHOOSE_PRICE_RANGE,CHOOSE_CATEGORIES
     }
@@ -43,21 +49,28 @@ public class FilterAndSort {
             }
             return sorts;
         }
-
-    public static ArrayList<Good> isExistFilter(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
+    public static ArrayList<Good> availableProductsFilter(ArrayList<Good> goods){
         for (Good g:
              goods) {
             if(g.getStock()==0)
+                goods.remove(g);
+        }
+        return goods;
+    }
+    public static ArrayList<Good> offProductsFilter(ArrayList<Good> goods){
+        ArrayList<Good> filteredGoods = new ArrayList<Good>();
+        for (Good g:
+                goods) {
+            if(g.getSalePercentageAmount()==0)
                 filteredGoods.remove(g);
         }
-        return filteredGoods;
+        return goods;
     }
     public static ArrayList<Good> brandFilter(ArrayList<Good> goods){
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
-            if(brands.contains(g.getBrand()))
+            if(brandsFilter.contains(g.getBrand()))
                 filteredGoods.add(g);
         }
         return filteredGoods;
@@ -66,19 +79,17 @@ public class FilterAndSort {
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
-            if(categories.contains(g.getCategory()))
+            if(categoriesFilter.contains(g.getCategory()))
                 filteredGoods.add(g);
         }
         return filteredGoods;
     }
     public static ArrayList<Good> priceFilter(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
-        for (Good g:
-                goods) {
-            if(g.getPrice()>maxPrice || g.getPrice()<minPrice)
-                filteredGoods.remove(g);
+        for (int i = 0; i <goods.size() ; i++) {
+            if(goods.get(i).getPrice()>maxPriceFilter || goods.get(i).getPrice()<minPriceFilter)
+                goods.remove(goods.get(i));
         }
-        return filteredGoods;
+        return goods;
     }
     public ArrayList<Sale> sortSales(ArrayList<Sale> sales){
         return null;

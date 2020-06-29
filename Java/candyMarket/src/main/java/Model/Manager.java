@@ -79,7 +79,7 @@ public class Manager extends User {
 
     public static ArrayList<String> viewAllCategories() {
         ArrayList<String> categoriesName = new ArrayList<>();
-        for (Category category : Category.categories) {
+        for (Category category : ManageInfo.allCategories) {
             categoriesName.add(category.getName());
         }
         return categoriesName;

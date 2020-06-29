@@ -8,24 +8,77 @@
     <top>
         <HBox alignment="TOP_CENTER" prefHeight="32.0" prefWidth="431.0" spacing="200.0">
             <children>
-                <ChoiceBox fx:id="sortChoiceBox" value="Order By">
-               <padding>
-                  <Insets right="100.0" top="5.0" />
-               </padding></ChoiceBox>
+
 
             </children>
         </HBox>
     </top>
     <left>
-        <VBox>
+        <VBox spacing="20">
             <children>
-                <Label text="Select Category" />
-                <ScrollPane fx:id="categoriesScrollPane">
+                <VBox>
+                    <children>
+                        <Label text="sort By">
+                        </Label>
+                        <ChoiceBox fx:id="sortChoiceBox" value="Order By">
+                            <padding>
+                                <Insets right="100.0" top="5.0" />
+                            </padding></ChoiceBox>
+                    </children>
+                </VBox>
+                <VBox spacing="10">
+                    <CheckBox fx:id="filterByAvailableProductsCheckBox" text="show available products" >
+                    </CheckBox>
+                    <CheckBox fx:id="filterByOffProductsCheckBox" text="show products with off" >
+                    </CheckBox>
+                </VBox>
+                <VBox spacing="10">
+                    <children>
+                        <HBox spacing="5">
+                            <Label text="filter by brands" />
+                            <CheckBox fx:id="filterByBrandCheckBox" >
 
-                </ScrollPane>
+                            </CheckBox>
+                        </HBox>
+                        <ScrollPane fx:id="brandScrollPane">
+                        </ScrollPane>
+                    </children>
+                </VBox>
+                <VBox spacing="10">
+                    <children>
+                        <HBox spacing="5">
+                            <Label text="filter by categories" />
+                            <CheckBox fx:id="filterByCategoryCheckBox" >
+
+                            </CheckBox>
+                        </HBox>
+                        <ScrollPane fx:id="categoriesScrollPane">
+                        </ScrollPane>
+                    </children>
+                </VBox>
+                <VBox spacing="10">
+                    <children>
+                        <HBox spacing="5">
+                            <Label text="filter by price" />
+                            <CheckBox fx:id="filterByPriceCheckBox">
+
+                            </CheckBox>
+                        </HBox>
+                            <HBox spacing="5">
+                                <Label text="from : ">
+
+                                </Label>
+                                <TextField maxWidth="50" fx:id="minimumPriceTxt"/>
+                                <Label text="To : ">
+
+                                </Label>
+                                <TextField maxWidth="50" fx:id="maximumPriceTxt"/>
+                            </HBox>
+                    </children>
+                </VBox>
             </children>
          <padding>
-            <Insets right="50.0" />
+            <Insets left="20.0" right="20.0" />
          </padding>
         </VBox>
     </left>
@@ -36,7 +89,7 @@
     </center>
     <bottom>
         <HBox alignment="CENTER" spacing="200.0">
-            <Button fx:id="updateListBtn" onMouseClicked="#onUpdateListBtnClick" prefHeight="25.0" prefWidth="135.0" text="UpdateList">
+            <Button fx:id="updateListBtn" onMouseClicked="#onUpdateListBtnClick" prefHeight="25.0" prefWidth="135.0" text="UpdateAndSaveList">
 
             </Button>
         </HBox>

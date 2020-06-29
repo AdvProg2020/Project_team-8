@@ -56,14 +56,17 @@ public class MenuHandler {
     public static Button goodsMenuBtn;
     public static Button clientMenuBtn;
     public static Button viewGoods;
-    public static Button viewPersonalInfoBtn;
+    public static Button viewProfileBtn;
     public static Button clientManagingBtn;
     public static Button productManagingBtn;
     public static Button discountManagingBtn;
     public static Button categoryManagingBtn;
+    public static Button viewBuyerPersonalInfoBtn;
+    public static Button viewSellerPersonalInfoBtn;
+    public static Button sellerProductManagingBtn;
     public static void createButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
-        viewPersonalInfoBtn = new CustomButton("ViewPersonalInfo","Profile");
+        viewProfileBtn = new CustomButton("ViewProfile","Profile");
         backBtn =new CustomButton("Back");
         backBtn.setOnMouseClicked(actionEvent -> {
             BorderPaneController.borderPaneController.setCenter("MainMenu");
@@ -73,7 +76,7 @@ public class MenuHandler {
             clientMenuBtnOnClick();
 
         });
-        exitBtn =new CustomButton("Exit");
+        exitBtn =new CustomButton("SaveAndExit");
         exitBtn.setOnAction(actionEvent -> Platform.exit());
         buttons.clear();
         buttons.add(backBtn);
@@ -84,12 +87,19 @@ public class MenuHandler {
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
         categoryManagingBtn = new CustomButton("CategoryManaging","CategoryManaging");
+        viewBuyerPersonalInfoBtn = new CustomButton("ViewPersonalInfo","BuyerPersonalInfo");
+        viewSellerPersonalInfoBtn = new CustomButton("ViewPersonalInfo","SellerPersonalInfo");
+        sellerProductManagingBtn = new CustomButton("ProductManaging","SellerProductHandling");
     }
     private static void clientMenuBtnOnClick(){
         if(UserHandler.isLogeIn())
         {
             if(UserHandler.getCurrentUser().isManager())
                 BorderPaneController.borderPaneController.setCenter("ManagerMenu");
+            else if(UserHandler.getCurrentUser().isSeller())
+                BorderPaneController.borderPaneController.setCenter("SellerMenu");
+            else if(UserHandler.getCurrentUser().isBuyer())
+                BorderPaneController.borderPaneController.setCenter("BuyerMenu");
         }
         else BorderPaneController.borderPaneController.loginBtnClick(null);
     }

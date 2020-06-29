@@ -21,6 +21,7 @@ public class Buyer extends User {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.setType(UserType.BUYER);
         this.balance=0;
+        this.myLogs = new ArrayList<>();
         ManageInfo.allBuyers.add(this);
         ManageInfo.allUsers.add(this);
     }
