@@ -1,25 +1,36 @@
 package Model;
 
-import java.nio.channels.SelectableChannel;
 import java.util.ArrayList;
 
 public class Request {
-    public enum requestType{
-        CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE,ADD_COMMENT
+    public static enum requestType{
+        CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
     }
-    public requestType requestType;
+    public static requestType requestType;
     public static requestType type;
     private Good good;
     private Sale sale;
     private int requestId;
     private Seller seller;
-    private String request;
+    private String requestCommand;
     public static ArrayList<Request> requests = ManageInfo.allRequests;
 
     public Request(Request.requestType requestType) {
         this.requestType = requestType;
         requests.add(this);
         this.requestId = requests.size();
+    }
+
+    public void setGood(Good good) {
+        this.good = good;
+    }
+
+    public void setSale(Sale sale) {
+        this.sale = sale;
+    }
+
+    public void setSeller(Seller seller) {
+        this.seller = seller;
     }
 
     public Good getGood() {
@@ -38,12 +49,12 @@ public class Request {
         return seller;
     }
 
-    public String getRequest() {
-        return request;
+    public String getRequestCommand() {
+        return requestCommand;
     }
 
     public void createRegisterSellerRequest(Seller seller) {
-        this.request = "register seller";
+        this.requestCommand = "Register seller";
         this.seller = seller;
     }
 
@@ -55,17 +66,16 @@ public class Request {
     }
 
     public void createAddProductRequest(Good good) {
-        this.request = "add product";
+        this.requestCommand = "Add product";
         this.good = good;
     }
 
-    public static String viewDetails(Request request) {
-        System.out.println(requests.toString());
-        switch (request.requestType) {
+    public String viewInfo() {
+        switch (this.requestType) {
             case SELLER_REGISTER:
-                return request.viewSellerRegisterDetails();
+                return this.viewSellerRegisterDetails();
             case CREATE_GOOD:
-                return request.viewAddProductDetail();
+                return this.viewAddProductDetail();
         }
 
         return null;

@@ -18,8 +18,6 @@ public class Seller extends User {
         this.confirmedSeller = false;
         this.mySellLog = new ArrayList<>();
         this.myGoods = new ArrayList<>();
-        ManageInfo.allSellers.add(this);
-        ManageInfo.allUsers.add(this);
     }
 
 

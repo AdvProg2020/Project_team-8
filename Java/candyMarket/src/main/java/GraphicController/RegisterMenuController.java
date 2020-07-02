@@ -3,6 +3,7 @@ package GraphicController;
 import GraphicView.CustomBorderPaneMenus;
 import GraphicView.MenuHandler;
 import Model.Buyer;
+import Model.Request;
 import Model.Seller;
 import Model.User;
 import javafx.event.ActionEvent;
@@ -88,8 +89,11 @@ public class RegisterMenuController extends CustomBorderPaneMenus implements Ini
             RegisterMenuController.registerMenuController.stepType = RegisterMenuController.step.SHOWINFO;
         }
         else {
-            if(typeValue.equals("Seller"))
-                new Seller(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText,companyName);
+            if(typeValue.equals("Seller")) {
+                new Request(Request.requestType.SELLER_REGISTER).setSeller(new Seller(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText, companyName));
+                
+            }
+                //new Seller(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText,companyName);
             else new Buyer(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText);
             MenuHandler.secondCurrentWindow.close();
         }
