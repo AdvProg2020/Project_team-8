@@ -21,18 +21,6 @@ public class Request {
         this.requestId = requests.size();
     }
 
-    public void setGood(Good good) {
-        this.good = good;
-    }
-
-    public void setSale(Sale sale) {
-        this.sale = sale;
-    }
-
-    public void setSeller(Seller seller) {
-        this.seller = seller;
-    }
-
     public Good getGood() {
         return good;
     }

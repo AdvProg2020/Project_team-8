@@ -1,0 +1,1 @@
+{"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"admin","firstName":"admin","lastName":"admin","email":"sh@c.com","phoneNumber":"+981111","password":"1","credit":0,"type":"MANAGER"}

@@ -20,25 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerRequestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/RequestViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ManagerRequestMenu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/RequestView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/RegisterMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/RegisterMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/RequestViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/RequestViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Seller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/BuyLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/BuyLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/buyers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/buyers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/categories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/discounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/discounts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/goods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/goods.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/RegisterMenuController$step.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/RegisterMenuController$step.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/RegisterMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/RegisterMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$requestType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$requestType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Seller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/managers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/managers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/sellers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/sellers.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593129900262</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="create seller request graphic and model">
+      <created>1593685222417</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1593685222417</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +388,8 @@
     <MESSAGE value="add Personal Info Pages" />
     <MESSAGE value="fix Personal Info Pages" />
     <MESSAGE value="add client details for manager page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add client details for manager page" />
+    <MESSAGE value="create seller request graphic and model" />
+    <option name="LAST_COMMIT_MESSAGE" value="create seller request graphic and model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1593176867518">
@@ -429,10 +435,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593086131481" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593040742508">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593685220564">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593685220564" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1593129898909" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
@@ -443,25 +449,25 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593679240503" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1593679256665">
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1593685452581">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593679256665" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593685452581" />
     <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1593658701093" />
-    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1593679256665">
+    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1593685452580">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593679256665" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593685452580" />
     <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1593658701093" />
-    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1593679256665">
+    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1593685452580">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593679256665" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593685452580" />
     <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1593658701092" />
-    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1593679256665">
+    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1593685452580">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593679256665" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593685452580" />
     <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1593658701093" />
     <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593372937777">
       <screen x="0" y="0" width="1280" height="680" />

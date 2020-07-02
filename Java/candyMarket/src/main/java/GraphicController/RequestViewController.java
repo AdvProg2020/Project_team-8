@@ -4,7 +4,6 @@ import Model.Request;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.*;
 import javafx.scene.control.Label;
 
 import java.awt.*;
