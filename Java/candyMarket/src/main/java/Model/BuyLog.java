@@ -23,8 +23,13 @@ public class BuyLog {
         this.buyerName = buyerName;
         this.buySituation = CartSituation.CONFIRMATION;
         this.id = ManageInfo.allBuyLogs.size();
+        ManageInfo.allBuyLogs.add(this);
     }
 
+
+    public String getBuyerName() {
+        return buyerName;
+    }
 
     public int getTotalAmount() {
         return totalAmount;
@@ -53,5 +58,13 @@ public class BuyLog {
 
     public int getId() {
         return id;
+    }
+
+    public ArrayList<Good> getGoods() {
+        ArrayList<Good> purchasedGoods = new ArrayList<>();
+        for (Good good : goods.keySet()) {
+            purchasedGoods.add(good);
+        }
+        return purchasedGoods;
     }
 }

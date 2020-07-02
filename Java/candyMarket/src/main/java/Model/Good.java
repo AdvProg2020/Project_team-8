@@ -33,7 +33,16 @@ public class Good {
     private String categorySpecialAttributes;
     private String detailInfo;
     private int averageScore;
-    private ArrayList<Score> scores = new ArrayList<>();
+    private ArrayList<Score> scores = new ArrayList<>() {
+        @Override
+        public String toString() {
+            int a = 0;
+            for (Score score : scores) {
+                a += score.getScore();
+            }
+            return "" + a/scores.size();
+        }
+    };
     private ArrayList<Comment> comments;
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
     public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
