@@ -2,10 +2,7 @@ package GraphicController;
 
 import GraphicView.MenuHandler;
 import GraphicView.PathHandler;
-import Model.Category;
-import Model.Good;
-import Model.ManageInfo;
-import Model.UserHandler;
+import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -73,6 +70,7 @@ public class GoodAttributesEditor implements Initializable {
                 errorMessage.setText("Update Request has been sent");
                 if (good == null) {
                     good = new Good(nameText, brandText, priceText, UserHandler.currentSeller, stockText, categoryValue, detailText, photoUrl);
+                    new Request(Request.requestType.CREATE_GOOD).createAddProductRequest(good);
                 } else {
                     good.setName(nameText);
                     good.setBrand(brandText);

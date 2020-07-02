@@ -34,9 +34,6 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.password = passWord;
     }
-   public User(){
-
-   }
 
     public static ArrayList<User> getUsers() {
         return ManageInfo.allUsers;

@@ -9,17 +9,13 @@ public class Seller extends User {
     private String sellerCompanyName;
     private int balance;
     public static Seller currentSeller;
-    private boolean confirmedSeller;
 
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName  ) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.sellerCompanyName = sellerCompanyName;
         this.setType(UserType.SELLER);
-        this.confirmedSeller = false;
         this.mySellLog = new ArrayList<>();
         this.myGoods = new ArrayList<>();
-        ManageInfo.allSellers.add(this);
-        ManageInfo.allUsers.add(this);
     }
     public void addMySellLog(SellLog sellLog){
         mySellLog.add(sellLog);
@@ -130,10 +126,6 @@ public class Seller extends User {
 
     public String viewBalance() {
         return null;
-    }
-
-    public void confirmSeller() {
-        this.confirmedSeller = true;
     }
 
     public void removeProduct(Good good) {

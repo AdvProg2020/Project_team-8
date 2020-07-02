@@ -43,9 +43,6 @@ public class Good {
         }
     };
     private ArrayList<Comment> comments;
-    public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
-    public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
-    public static ArrayList<Good> confirmedGoods = ManageInfo.allGoods;
     private String image;
     private long dateCreated;
     public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image) {
@@ -60,18 +57,11 @@ public class Good {
         this.salePercentageAmount = 0;
         this.averageScore = 0;
         this.dateModified = System.currentTimeMillis();
-        unconfirmedGoods.add(this);
-        this.id = unconfirmedGoods.size();
-        if(image!=null) this.image = image;
+        comments = new ArrayList<>();
+        if (image!= null) this.image = image;
         this.dateCreated = System.currentTimeMillis();
-        ManageInfo.allGoods.add(this);
-        if(seller !=null)
-            seller.addGood(this);
     }
 
-    public static ArrayList<Good> getConfirmedGoods() {
-        return confirmedGoods;
-    }
 
     public ArrayList<Buyer> getBuyers() {
         return buyers;
@@ -203,12 +193,6 @@ public class Good {
                 "Detail info: " + this.detailInfo + "\n" +
                 "Average score: " + this.averageScore + "\n" +
                 "Opinions: " + this.getComments().toString() + "\n";
-
-    }
-
-    public void confirmProduct() {
-        confirmedGoods.add(this);
-        this.id = confirmedGoods.size();
     }
 
     public ArrayList<Comment> getComments() {
@@ -227,17 +211,10 @@ public class Good {
         this.scores = scores;
     }
 
-    public static void removeProduct(Good good) {
-        for (Good unconfirmedGood : unconfirmedGoods) {
-            if (unconfirmedGood == good) {
-                unconfirmedGoods.remove(unconfirmedGood);
-                break;
-            }
-        }
-        for (Good confirmedGood : confirmedGoods) {
-            if (confirmedGood == good) {
-                confirmedGoods.remove(confirmedGood);
-                break;
+    public static void removeProduct(Good toNeRemovedGood) {
+        for (Good good : ManageInfo.allGoods) {
+            if (toNeRemovedGood.equals(good)) {
+                ManageInfo.allGoods.remove(toNeRemovedGood);
             }
         }
     }

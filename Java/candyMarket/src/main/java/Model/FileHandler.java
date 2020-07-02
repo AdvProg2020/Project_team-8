@@ -209,7 +209,7 @@ public class FileHandler {
     private static void writeDiscounts() throws IOException {
         FileWriter writer = new FileWriter(discountsFile);
         for (Discount discount : ManageInfo.allDiscounts) {
-            writer.append(requestsJson.toJson(discount) + "\n");
+            writer.append(discountsJson.toJson(discount) + "\n");
         }
         writer.close();
     }
