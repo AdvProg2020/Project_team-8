@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Buyer extends User {
     public ArrayList<Discount> getMyDiscounts() {
@@ -16,14 +17,21 @@ public class Buyer extends User {
     private ArrayList<Good> boughtGoods = new ArrayList<>();
     private int balance;
     public static Buyer currentBuyer;
+    public HashMap<Good, Integer> toBuy;
 
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.setType(UserType.BUYER);
         this.balance=0;
         this.myLogs = new ArrayList<>();
+        for (BuyLog buyLog : ManageInfo.allBuyLogs) {
+            if (buyLog.getBuyerName().equals(userName)) {
+                myLogs.add(buyLog);
+            }
+        }
         ManageInfo.allBuyers.add(this);
         ManageInfo.allUsers.add(this);
+        toBuy = new HashMap<>();
     }
 
     public Cart getCart() {
