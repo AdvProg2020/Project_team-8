@@ -1,0 +1,1 @@
+{"balance":0,"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"b","firstName":"b","lastName":"b","email":"b@d.com","phoneNumber":"111111111","password":"b","credit":0,"type":"SELLER"}
