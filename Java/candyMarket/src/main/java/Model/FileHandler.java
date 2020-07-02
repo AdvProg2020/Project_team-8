@@ -39,7 +39,6 @@ public class FileHandler {
         loadSellLogsData();
         loadBuyLogsData();
         loadCategoriesData();
-        loadBrandsData();
         loadRequestFile();
         loadDiscountsData();
     }
@@ -51,7 +50,6 @@ public class FileHandler {
         writeSellLog();
         writeBuyLog();
         writeCategories();
-        writeBrands();
         writeRequest();
         writeGoods();
         writeDiscounts();
@@ -171,22 +169,6 @@ public class FileHandler {
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
             ManageInfo.allCategories.add(categoriesJson.fromJson(fileReader.nextLine(), Category.class));
-        }
-    }
-
-    private static void writeBrands() throws IOException {
-        FileWriter writer = new FileWriter(brandsFile);
-        for (String brand : ManageInfo.allBrands) {
-            writer.append(brandsJson.toJson(brand) + "\n");
-        }
-        writer.close();
-    }
-
-    private static void loadBrandsData() throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream(brandsFile);
-        Scanner fileReader = new Scanner(fileInputStream);
-        while (fileReader.hasNextLine()) {
-            ManageInfo.allBrands.add(brandsJson.fromJson(fileReader.nextLine(), String.class));
         }
     }
 

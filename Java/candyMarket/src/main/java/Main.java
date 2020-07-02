@@ -45,7 +45,8 @@ public class Main extends Application {
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
         BorderPaneController.borderPaneController.setCenter("MainMenu");
-        //debug();
+        //addSellerAndStuff();
+        //addItemsFirstStart();
         //test();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
@@ -53,7 +54,13 @@ public class Main extends Application {
     private static void test(){
 
     }
-    private static void debug(){
+    private static void addSellerAndStuff(){
+        Seller seller = new Seller("kirFurush","kir","kir","s@s.com","31231","kir","kirCompany");
+        new Category("KosSher",null);
+        new Good("kir","kirBrand",10,seller,1,Category.getCategoryByName("kosSher"),"kirrrrrrr",null);
+        new Good("kir2","kirBrand",20,seller,1,Category.getCategoryByName("kosSher"),"kirrrrrrr",null);
+    }
+    private static void addItemsFirstStart(){
         new Category("people",null);
         new Category("food",null);
         new Category("fruits",null);
@@ -64,7 +71,7 @@ public class Main extends Application {
         new Good("Reza","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
         new Good("Reza2","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
         new Good("Pizza","FastFood420",1000,seller,4,Category.getCategoryByName("food"),"",null);
-        //new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
-        //BorderPaneController.borderPaneController.login("admin");
+        new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
+        BorderPaneController.borderPaneController.login("admin");
     }
 }

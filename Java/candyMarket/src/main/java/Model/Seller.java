@@ -139,5 +139,14 @@ public class Seller extends User {
     public void removeProduct(Good good) {
         myGoods.remove(good);
     }
+    public static ArrayList<String> getAllBrands(){
+        ArrayList<String> brands = new ArrayList<>();
+        for (Good good:
+             ManageInfo.allGoods) {
+            if(!brands.contains(good.getBrand()))
+                brands.add(good.getBrand());
+        }
+        return brands;
+    }
 
 }

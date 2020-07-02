@@ -66,6 +66,8 @@ public class GoodAttributesEditor implements Initializable {
                 Functions.showDialog("good with this name already exist",true);
             else if(categoryValue == null)
                 Functions.showDialog("please choose a category",true);
+            else if(brandText == "" || nameText=="" || detailText=="")
+                Functions.showDialog("please set all fields",true);
             else {
                 errorMessage.setStyle("-fx-background-color: #00ff00;");
                 errorMessage.setText("Update Request has been sent");
@@ -81,13 +83,13 @@ public class GoodAttributesEditor implements Initializable {
                     good.setImage(photoUrl);
                 }
                 Functions.showDialog("your request has been sent",false);
+                SellerProductHandlingController.sellerProductHandlingController.initialize(null,null);
+                MenuHandler.secondCurrentWindow.close();
             }
         }catch (Exception e) {
             errorMessage.setStyle("-fx-background-color: #ff0000;");
             errorMessage.setText("Invalid Change!");
         }
-        SellerProductHandlingController.sellerProductHandlingController.setCurrentGood(good);
-        SellerProductHandlingController.sellerProductHandlingController.initialize(null,null);
     }
     public void choosePhotoOnClick(ActionEvent actionEvent) {
         FileChooser fileChooser = Functions.prepareFileChooser();

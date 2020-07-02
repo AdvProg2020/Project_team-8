@@ -80,7 +80,7 @@ public class ViewGoodsController implements Initializable {
         maximumPriceTxt.setText(String.valueOf(FilterAndSort.maxPriceFilter));
     }
     private void setBrandScrollPane() {
-        ArrayList<String> brands = ManageInfo.allBrands;
+        ArrayList<String> brands = Seller.getAllBrands();
         brandCheckBoxes = createBrandCheckBoxes(brands);
         VBox vBox = new VBox();
         vBox.setSpacing(5);
