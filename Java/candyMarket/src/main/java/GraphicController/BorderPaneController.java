@@ -64,6 +64,7 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         userLoginBar.toFront();
         userLoginBar.setVisible(true);
         userLogOutBar.setVisible(false);
+        setCenter("MainMenu");
     }
     public void registerBtnOnClick(MouseEvent mouseEvent) {
         MenuHandler.createStageWithScene("RegisterMenu");
