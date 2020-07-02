@@ -51,7 +51,7 @@ public class ProfileController implements Initializable {
         if(UserHandler.getCurrentUser().getUserPhoto() == null){
             Image image = new Image(PathHandler.userWithoutImageUrl);
             profileImg.setImage(image);
-        }else profileImg.setImage(UserHandler.getCurrentUser().getUserPhoto());
+        }else profileImg.setImage(new Image(UserHandler.getCurrentUser().getUserPhoto()));
     }
     public void editing(ActionEvent actionEvent) {
         String usernameText = username.getText();
@@ -99,8 +99,9 @@ public class ProfileController implements Initializable {
         File selectedDir = fileChooser.showOpenDialog(MenuHandler.currentWindow);
         File imageFile = new File(selectedDir.getAbsolutePath());
         Image profileImage;
-        profileImage = new Image(String.valueOf(Functions.changePathToUrl(String.valueOf(imageFile))));
-        UserHandler.getCurrentUser().setUserPhoto(profileImage);
+        String url = String.valueOf(Functions.changePathToUrl(String.valueOf(imageFile)));
+        profileImage = new Image(url);
+        UserHandler.getCurrentUser().setUserPhoto(url);
         profileImg.setImage(profileImage);
     }
 

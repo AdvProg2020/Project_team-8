@@ -1,54 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="GraphicController.SellerProductHandlingController">
+<AnchorPane  onMousePressed="#userClickedOnTable" id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.SellerProductHandlingController">
     <children>
-        <VBox alignment="TOP_CENTER" layoutX="98.0" layoutY="22.0" prefHeight="520.0" prefWidth="604.0" spacing="10.0">
-            <children>
-                <Label alignment="CENTER" text="List of Clients">
-                    <font>
-                        <Font name="System Bold Italic" size="18.0" />
-                    </font>
-                </Label>
-                <TableView fx:id="tableView" onMouseClicked="#userClickedOnTable" prefHeight="228.0" prefWidth="604.0">
+        <VBox alignment="CENTER" />
+        <VBox layoutX="210.0" layoutY="81.0" prefHeight="254.0" prefWidth="603.0" spacing="10.0">
+                <children>
+
+                <TableView onMousePressed="#userClickedOnTable" fx:id="tableView"  prefHeight="283.0" prefWidth="603.0">
                     <columns>
-                        <TableColumn fx:id="productNameColumn" prefWidth="198.0" text="Product's Name" />
-                        <TableColumn fx:id="categoryColumn" prefWidth="167.0" text="Category" />
-                        <TableColumn fx:id="priceColumn" prefWidth="171.0" text="Price" />
+                        <TableColumn fx:id="productNameColumn" prefWidth="254.0" text="Product's Name" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="184.00003051757812" text="Category" />
+                        <TableColumn fx:id="priceColumn" prefWidth="150.66668701171875" text="Price" />
                     </columns>
                 </TableView>
-            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="604.0">
-               <children>
-                  <TextField fx:id="goodNameField" promptText="Name" />
-                  <TextField fx:id="brandField" promptText="Brand" />
-                  <TextField fx:id="priceField" promptText="Price" />
-               </children>
-            </HBox>
-            <HBox prefHeight="79.0" prefWidth="604.0">
-               <children>
-                  <ChoiceBox fx:id="categoryChoiceBox" prefHeight="39.0" prefWidth="199.0" />
-                  <TextField fx:id="stockField" prefHeight="39.0" prefWidth="204.0" promptText="Stock" />
-                  <TextArea fx:id="details" prefHeight="200.0" prefWidth="200.0" promptText="Details" />
-               </children>
-            </HBox>
-                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="604.0" spacing="10.0">
-                    <children>
-                        <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Product(s) " />
-                  <Button fx:id="showBuyersButton" onAction="#showBuyers" mnemonicParsing="false" text="Show Buyers" />
-                  <Button onAction="#requestNewProduct" mnemonicParsing="false" text="Request New Product" />
-                  <Button onAction="#editing" mnemonicParsing="false" text="Edit" />
-                    </children>
-                </HBox>
+
             </children>
         </VBox>
-      <Label fx:id="errorMessage" layoutX="98.0" layoutY="542.0" text="Label" />
+      <Label fx:id="errorMessage" layoutX="386.0" layoutY="381.0" />
+        <VBox alignment="CENTER" layoutX="21.0" layoutY="143.0" spacing="10">
+            <children>
+                <Button fx:id="deleteProductBtn" disable="true" mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Product(s) " />
+                <Button fx:id="editProductBtn" disable="true" mnemonicParsing="false" onAction="#editing" prefHeight="25.0" prefWidth="174.0" text="Edit Product" />
+                <Button fx:id="showBuyersButton" disable="true" layoutX="824.0" layoutY="416.0" mnemonicParsing="false" onAction="#showBuyers" prefHeight="59.0" prefWidth="146.0" text="Show Buyers" />
+            </children>
+        </VBox>
+        <VBox />
+        <Button fx:id="addProductBtn" layoutX="306.0" layoutY="377.0" mnemonicParsing="false" onAction="#addProductOnClick" prefHeight="42.0" prefWidth="411.0" text="Add Product" />
+         <Label alignment="CENTER" layoutX="472.0" layoutY="39.0" text="List of Clients">
+             <font>
+                 <Font name="System Bold Italic" size="18.0" />
+             </font>
+         </Label>
+
     </children>
+
 </AnchorPane>

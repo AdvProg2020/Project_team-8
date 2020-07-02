@@ -85,7 +85,7 @@ public class MenuHandler {
         viewGoods = new CustomButton("ViewGoods","ViewGoods");
         goodsMenuBtn = new CustomButton("GoodsMenu","GoodsMenu");
         clientManagingBtn = new CustomButton("ClientManaging","ClientsProfileForManager");
-        productManagingBtn = new CustomButton("ProductManaging","ProductsManaging");
+        productManagingBtn = new CustomButton("ProductsManaging","ProductsManaging");
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
         categoryManagingBtn = new CustomButton("CategoryManaging","CategoryManaging");

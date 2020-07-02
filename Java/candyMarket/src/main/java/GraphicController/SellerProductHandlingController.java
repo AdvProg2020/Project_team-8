@@ -1,6 +1,7 @@
 package GraphicController;
 
 import GraphicView.MenuHandler;
+import GraphicView.PathHandler;
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,41 +11,45 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SellerProductHandlingController implements Initializable {
     public static SellerProductHandlingController sellerProductHandlingController;
+    public ImageView goodImg;
+    public Button addProductBtn;
+    public Button editProductBtn;
+    public Button deleteProductBtn;
 
     @FXML private TableView<Good> tableView;
     @FXML private TableColumn<Good, String> productNameColumn;
     @FXML private TableColumn<Good, String> categoryColumn;
     @FXML private TableColumn<Good, Integer> priceColumn;
 
-    @FXML private TextField goodNameField;
-    @FXML private TextField priceField;
-    @FXML private TextField brandField;
-    @FXML private TextField stockField;
-    @FXML private TextArea details;
-    @FXML private ChoiceBox<Category> categoryChoiceBox;
+
 
     @FXML private Label errorMessage;
     @FXML private Button showBuyersButton;
-
+    private String goodName;
+    private String goodPrice;
+    private String goodBrand;
+    private String goodStock;
+    private Category goodCategory;
+    private String goodDetail;
+    private Good currentGood;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sellerProductHandlingController = this;
         productNameColumn.setCellValueFactory(new PropertyValueFactory<Good, String>("name"));
         categoryColumn.setCellValueFactory(new PropertyValueFactory<Good, String>("category"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<Good, Integer>("price"));
-
         tableView.setItems(getGoods());
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        showBuyersButton.setDisable(true);
-
-        categoryChoiceBox.getItems().addAll(ManageInfo.allCategories);
     }
 
     public ObservableList<Good> getGoods()
@@ -56,7 +61,16 @@ public class SellerProductHandlingController implements Initializable {
     }
 
     public void userClickedOnTable(MouseEvent mouseEvent) {
-        showBuyersButton.setDisable(false);
+        if(tableView.getSelectionModel().getSelectedItem()==null){
+            showBuyersButton.setDisable(true);
+            deleteProductBtn.setDisable(true);
+            editProductBtn.setDisable(true);
+        }
+        else {
+            showBuyersButton.setDisable(false);
+            deleteProductBtn.setDisable(false);
+            editProductBtn.setDisable(false);
+        }
     }
 
     public void deleteButtonPushed()
@@ -74,23 +88,6 @@ public class SellerProductHandlingController implements Initializable {
         }
     }
 
-    public void requestNewProduct(ActionEvent actionEvent) {
-        try {
-            String goodNameText = goodNameField.getText();
-            String brandText = brandField.getText();
-            int priceText = Integer.parseInt(priceField.getText());
-            int stockText = Integer.parseInt(stockField.getText());
-            Category categoryValue = categoryChoiceBox.getValue();
-            String detailsText = details.getText();
-            new Request(Request.requestType.CREATE_GOOD).createAddProductRequest(new Good(goodNameText, brandText ,priceText, UserHandler.currentSeller, stockText, categoryValue, detailsText, "a", null));
-            //UserHandler.currentSeller.addGood(new Good(goodNameText, brandText ,priceText, UserHandler.currentSeller, stockText, categoryValue, detailsText));
-            errorMessage.setStyle("-fx-background-color: #00ff00;");
-            errorMessage.setText("Your request has been sent");
-        }catch (Exception e) {
-            errorMessage.setStyle("-fx-background-color: #ff0000;");
-            errorMessage.setText("Enter All Fields Correctly");
-        }
-    }
 
     public void showBuyers(ActionEvent actionEvent) {
         Good good = tableView.getSelectionModel().getSelectedItem();
@@ -103,6 +100,37 @@ public class SellerProductHandlingController implements Initializable {
     }
 
     public void editing(ActionEvent actionEvent) {
+        if(tableView.getSelectionModel().getSelectedItem()!=null) {
+                    currentGood =tableView.getSelectionModel().getSelectedItem();
+                    MenuHandler.createStageWithScene("GoodEditing");
+        }
+    }
+
+    public void choosePhotoOnClick(ActionEvent actionEvent) {
+        FileChooser fileChooser = Functions.prepareFileChooser();
+        File selectedDir = fileChooser.showOpenDialog(MenuHandler.currentWindow);
+        File imageFile = new File(selectedDir.getAbsolutePath());
+        Image profileImage;
+        profileImage = new Image(String.valueOf(Functions.changePathToUrl(String.valueOf(imageFile))));
+        //setProductImage
+        goodImg.setImage(profileImage);
+    }
+
+    public void deletePhotoOnClick(ActionEvent actionEvent) {
+        Image image = new Image(PathHandler.withoutImageUrl);
+        goodImg.setImage(image);
+    }
+
+    public void addProductOnClick(ActionEvent actionEvent) {
+        currentGood = null;
         MenuHandler.createStageWithScene("GoodEditing");
+    }
+
+    public Good getCurrentGood() {
+        return currentGood;
+    }
+
+    public void setCurrentGood(Good currentGood) {
+        this.currentGood = currentGood;
     }
 }

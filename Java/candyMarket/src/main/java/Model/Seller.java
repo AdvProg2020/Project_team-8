@@ -17,8 +17,6 @@ public class Seller extends User {
         this.mySellLog = new ArrayList<>();
         this.myGoods = new ArrayList<>();
     }
-
-
     public void addMySellLog(SellLog sellLog){
         mySellLog.add(sellLog);
     }
@@ -103,11 +101,9 @@ public class Seller extends User {
     public void editGood(Good good) {
 
     }
-
     public void addGood(Good good) {
        myGoods.add(good);
     }
-
     public ArrayList<String> viewSales() {
         ArrayList<String> myAllSales = new ArrayList<>();
         for (Sale sale : mySales) {

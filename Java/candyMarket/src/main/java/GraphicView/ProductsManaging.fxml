@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -22,8 +23,8 @@
                 </TableView>
                 <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="240.0">
                     <children>
+                    
                         <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Product(s) " />
-                  <Button mnemonicParsing="false" text="Choose Photo" onAction="#choosePhotoOnClick"/>
                     </children>
                 </HBox>
             </children>

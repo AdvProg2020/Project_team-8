@@ -17,6 +17,7 @@ public class FileHandler {
     private static Gson requestsJson = new Gson();
     private static Gson goodsJson = new Gson();
     private static Gson discountsJson = new Gson();
+    private static Gson sellersJson = new Gson();
     private static File managersFile = new File("Resources\\managers.txt");
     private static File buyersFile = new File("Resources\\buyers.txt");
     private static File sellersFile = new File("Resources\\sellers.txt");
@@ -75,7 +76,7 @@ public class FileHandler {
     private static void writeSellersFiles() throws IOException {
         FileWriter writer = new FileWriter(sellersFile);
         for (Seller seller : ManageInfo.allSellers) {
-            writer.append(usersJson.toJson(seller) + "\n");
+            writer.append(sellersJson.toJson(seller) + "\n");
         }
         writer.close();
     }
@@ -83,7 +84,7 @@ public class FileHandler {
         FileInputStream fileInputStream = new FileInputStream(sellersFile);
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
-            Seller seller = usersJson.fromJson(fileReader.nextLine(), Seller.class);
+            Seller seller = sellersJson.fromJson(fileReader.nextLine(), Seller.class);
             ManageInfo.allSellers.add(seller);
             ManageInfo.allUsers.add(seller);
         }
