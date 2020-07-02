@@ -278,5 +278,10 @@ public class Good {
     public void setDateCreated(long dateCreated) {
         this.dateCreated = dateCreated;
     }
+    public static boolean isGoodWithName(String name){
+        if(ManageInfo.allUsers.contains(name))
+            return true;
+        return false;
+    }
 
 }

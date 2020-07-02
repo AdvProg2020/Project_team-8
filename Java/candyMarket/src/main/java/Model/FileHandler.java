@@ -32,6 +32,7 @@ public class FileHandler {
 
 
     public static void getDataFromFiles() throws IOException {
+        loadGoodsData();
         loadManagersData();
         loadSellersData();
         loadBuyersData();
@@ -40,7 +41,6 @@ public class FileHandler {
         loadCategoriesData();
         loadBrandsData();
         loadRequestFile();
-        loadGoodsData();
         loadDiscountsData();
     }
 
@@ -87,6 +87,10 @@ public class FileHandler {
             Seller seller = sellersJson.fromJson(fileReader.nextLine(), Seller.class);
             ManageInfo.allSellers.add(seller);
             ManageInfo.allUsers.add(seller);
+            for (Good good:seller.getMyGoods()
+                 ) {
+                good = Good.getGoodByName(good.getName(),ManageInfo.allGoods);
+            }
         }
     }
     private static void writeBuyersFiles() throws IOException {

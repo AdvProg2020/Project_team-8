@@ -51,11 +51,7 @@ public class Main extends Application {
         //else
     }
     private static void test(){
-        Seller seller = (Seller) User.getUserByUsername("a");
-        Good good = seller.getMyGoods().get(0);
-        System.out.println(good.getImage());
-        Good good1 = Good.getGoodByName(good.getName(),ManageInfo.allGoods);
-        System.out.println(good1.getImage());
+
     }
     private static void debug(){
         new Category("people",null);

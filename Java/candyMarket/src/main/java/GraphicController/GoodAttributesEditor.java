@@ -62,21 +62,26 @@ public class GoodAttributesEditor implements Initializable {
             String brandText = brandField.getText();
             String detailText = detailField.getText();
             Category categoryValue = categoryChoiceBox.getValue();
-            errorMessage.setStyle("-fx-background-color: #00ff00;");
-            errorMessage.setText("Update Request has been sent");
-            if(good == null){
-                good = new Good(nameText,brandText,priceText, UserHandler.currentSeller,stockText,categoryValue,detailText,photoUrl);
-            }else {
-                good.setName(nameText);
-                good.setBrand(brandText);
-                good.setPrice(priceText);
-                good.setStock(stockText);
-                good.setDetailInfo(detailText);
-                good.setCategory(categoryValue);
-                good.setImage(photoUrl);
+            if(Good.isGoodWithName(nameText))
+                Functions.showDialog("good with this name already exist",true);
+            else if(categoryValue == null)
+                Functions.showDialog("please choose a category",true);
+            else {
+                errorMessage.setStyle("-fx-background-color: #00ff00;");
+                errorMessage.setText("Update Request has been sent");
+                if (good == null) {
+                    good = new Good(nameText, brandText, priceText, UserHandler.currentSeller, stockText, categoryValue, detailText, photoUrl);
+                } else {
+                    good.setName(nameText);
+                    good.setBrand(brandText);
+                    good.setPrice(priceText);
+                    good.setStock(stockText);
+                    good.setDetailInfo(detailText);
+                    good.setCategory(categoryValue);
+                    good.setImage(photoUrl);
+                }
+                Functions.showDialog("your request has been sent",false);
             }
-            errorMessage.setStyle("-fx-background-color: #00ff00;");
-            errorMessage.setText("Your request has been sent");
         }catch (Exception e) {
             errorMessage.setStyle("-fx-background-color: #ff0000;");
             errorMessage.setText("Invalid Change!");

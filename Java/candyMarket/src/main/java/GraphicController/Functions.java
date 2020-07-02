@@ -1,9 +1,12 @@
 package GraphicController;
 
+import javafx.scene.control.Alert;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import org.hibernate.boot.archive.internal.UrlInputStreamAccess;
 
 import java.io.File;
+import java.lang.reflect.Array;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -25,5 +28,12 @@ public class Functions {
             e.printStackTrace();
         }
         return url;
+    }
+    public static void showDialog(String text, boolean isError){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        if(!isError)
+            alert.setAlertType(Alert.AlertType.CONFIRMATION);
+        alert.setContentText(text);
+        alert.show();
     }
 }
