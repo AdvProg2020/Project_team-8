@@ -27,10 +27,9 @@ public class Good {
     private String brand;
     private int price;
     private ArrayList<Buyer> buyers;
-    private Seller seller;
+    private String sellerName;
     private int stock;
     private Category category;
-    private String categorySpecialAttributes;
     private String detailInfo;
     private int averageScore;
     private ArrayList<Score> scores = new ArrayList<>() {
@@ -47,13 +46,13 @@ public class Good {
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
     public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
     public static ArrayList<Good> confirmedGoods = ManageInfo.allGoods;
-    private Image image;
+    private String image;
     private long dateCreated;
-    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo) {
+    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image) {
         this.name = name;
         this.brand = brand;
         this.price = price;
-        this.seller= seller;
+        this.sellerName= seller.getUsername();
         this.stock = stock;
         this.category = category;
         this.situation = ItemCreationSituation.CREATING_CHECK;
@@ -63,27 +62,11 @@ public class Good {
         this.dateModified = System.currentTimeMillis();
         unconfirmedGoods.add(this);
         this.id = unconfirmedGoods.size();
+        if(image!=null) this.image = image;
         this.dateCreated = System.currentTimeMillis();
         ManageInfo.allGoods.add(this);
-    }
-    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo, Image image) {
-        this.name = name;
-        this.brand = brand;
-        this.price = price;
-        this.seller= seller;
-        this.stock = stock;
-        this.category = category;
-        this.situation = ItemCreationSituation.CREATING_CHECK;
-        this.categorySpecialAttributes = categorySpecialAttributes;
-        this.detailInfo = detailInfo;
-        this.salePercentageAmount = 0;
-        this.averageScore = 0;
-        this.dateModified = System.currentTimeMillis();
-        unconfirmedGoods.add(this);
-        this.id = unconfirmedGoods.size();
-        this.image = image;
-        this.dateCreated = System.currentTimeMillis();
-        ManageInfo.allGoods.add(this);
+        if(seller !=null)
+            seller.addGood(this);
     }
 
     public static ArrayList<Good> getConfirmedGoods() {
@@ -114,13 +97,6 @@ public class Good {
         this.category = category;
     }
 
-    public String getCategorySpecialAttributes() {
-        return categorySpecialAttributes;
-    }
-
-    public void setCategorySpecialAttributes(String categorySpecialAttributes) {
-        this.categorySpecialAttributes = categorySpecialAttributes;
-    }
     public String getDetailInfo() {
         return detailInfo;
     }
@@ -208,11 +184,11 @@ public class Good {
     }
 
     public Seller getSeller() {
-        return seller;
+        return (Seller) User.getUserByUsername(sellerName);
     }
 
     public void setSeller(Seller seller) {
-        this.seller = seller;
+        this.sellerName = seller.getUsername();
     }
 
     public String viewProductDetails() {
@@ -224,7 +200,6 @@ public class Good {
                 "Seller: " + this.getSeller().viewCompanyInformation() +
                 "Stock: " + this.getStock() + "\n" +
                 "Category: " + this.getCategory().getName() + "\n" +
-                "Category special attributes: " + this.getCategorySpecialAttributes() + "\n" +
                 "Detail info: " + this.detailInfo + "\n" +
                 "Average score: " + this.averageScore + "\n" +
                 "Opinions: " + this.getComments().toString() + "\n";
@@ -278,10 +253,9 @@ public class Good {
                 ", brand='" + brand + '\'' +
                 ", price=" + price +
                 ", buyers=" + buyers +
-                ", seller=" + seller +
+                ", seller=" + sellerName +
                 ", stock=" + stock +
                 ", category=" + category +
-                ", categorySpecialAttributes='" + categorySpecialAttributes + '\'' +
                 ", detailInfo='" + detailInfo + '\'' +
                 ", averageScore=" + averageScore +
                 ", scores=" + scores +
@@ -289,11 +263,11 @@ public class Good {
                 '}';
     }
 
-    public Image getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Image image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

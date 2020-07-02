@@ -5,11 +5,11 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 
 public class User {
-    public Image getUserPhoto() {
+    public String getUserPhoto() {
         return userPhoto;
     }
 
-    public void setUserPhoto(Image userPhoto) {
+    public void setUserPhoto(String userPhoto) {
         this.userPhoto = userPhoto;
     }
 
@@ -25,7 +25,7 @@ public class User {
     protected String password;
     private int credit;
     private UserType type;
-    private Image userPhoto;
+    private String userPhoto;
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         this.username = userName;
         this.firstName = firstName;

@@ -1,6 +1,7 @@
 package GraphicController;
 
 import GraphicView.MenuHandler;
+import GraphicView.PathHandler;
 import Model.Good;
 import Model.ManageInfo;
 import Model.UserHandler;
@@ -12,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -19,6 +21,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ProductsManagingController implements Initializable {
+    public ImageView goodImg;
     @FXML private TableView<Good> tableView;
     @FXML private TableColumn<Good, String> productNameColumn;
     @FXML private TableColumn<Good, String> categoryColumn;
@@ -29,12 +32,18 @@ public class ProductsManagingController implements Initializable {
         productNameColumn.setCellValueFactory(new PropertyValueFactory<Good, String>("name"));
         categoryColumn.setCellValueFactory(new PropertyValueFactory<Good, String>("category"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<Good, Integer>("price"));
-
         tableView.setItems(getClients());
-
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        setGoodImg();
     }
 
+    private void setGoodImg() {
+        //if notnull
+        //........
+        //if null
+        Image image = new Image(PathHandler.withoutImageUrl);
+        goodImg.setImage(image);
+    }
     public ObservableList<Good> getClients()
     {
         ObservableList<Good> goods = FXCollections.observableArrayList();
@@ -57,13 +66,5 @@ public class ProductsManagingController implements Initializable {
         }
     }
 
-    public void choosePhotoOnClick(ActionEvent actionEvent) {
-        FileChooser fileChooser = Functions.prepareFileChooser();
-        File selectedDir = fileChooser.showOpenDialog(MenuHandler.currentWindow);
-        File imageFile = new File(selectedDir.getAbsolutePath());
-        Image profileImage;
-        profileImage = new Image(String.valueOf(Functions.changePathToUrl(String.valueOf(imageFile))));
-        UserHandler.getCurrentUser().setUserPhoto(profileImage);
-        //profileImg.setImage(profileImage);
-    }
+
 }
