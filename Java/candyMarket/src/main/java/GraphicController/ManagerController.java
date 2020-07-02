@@ -2,7 +2,6 @@ package GraphicController;
 
 import GraphicView.MenuHandler;
 import GraphicView.PrimaryMenu;
-import View.Menu;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -17,7 +16,7 @@ public class ManagerController extends PrimaryMenu {
     @Override
     public ArrayList<Button> getOptionBarButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
-        buttons.add(MenuHandler.viewPersonalInfoBtn);
+        buttons.add(MenuHandler.viewProfileBtn);
         buttons.add(MenuHandler.discountManagingBtn);
         buttons.add(MenuHandler.productManagingBtn);
         buttons.add(MenuHandler.categoryManagingBtn);

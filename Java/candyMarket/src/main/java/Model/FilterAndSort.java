@@ -1,39 +1,21 @@
 package Model;
 
-import Controller.GoodsManaging;
-import View.FilterMenus.ChooseBrand;
-import View.FilterMenus.ChooseCategories;
-import View.FilterMenus.ChoosePrice;
-import View.ViewException;
-
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class FilterAndSort {
-    public static ArrayList<Filter> filters = FilterAndSort.createAllFilters();
     public static FilterAndSort.sortsTypes sortsType = sortsTypes.DATE_CREATED;
     public static Boolean sortDescendingMode = false;
-    public static ArrayList<Filter> brands = FilterAndSort.createAllFilters(GoodsManaging.ViewBrands());
-    public static ArrayList<Filter> categories = FilterAndSort.createAllFilters(GoodsManaging.viewCategories());
-    public static int minPrice;
-    public static int maxPrice;
-    public static ArrayList<Filter> createAllFilters(){
-        ArrayList<Filter> filters = new ArrayList<Filter>();
-        filters.add(new Filter(1));
-        filters.add(new ChooseBrand(2));
-        filters.add(new ChoosePrice(3));
-        filters.add(new ChooseCategories(4));
-        return filters;
-    }
-    public static ArrayList<Filter> createAllFilters(ArrayList<String> options){
-        ArrayList<Filter> filters = new ArrayList<Filter>();
-        for (int i=0;i<options.size();i++){
-            filters.add(new Filter(i+1,options.get(i)));
-        }
-        return filters;
-    }
-
-
+    public static ArrayList<String> brandsFilter = new ArrayList<>();
+    public static ArrayList<Category> categoriesFilter  = new ArrayList<>();
+    public static int minPriceFilter = 0;
+    public static int maxPriceFilter = 10000;
+    public static boolean isBrandFilterOn = false;
+    public static boolean isCategoryFilterOn = false;
+    public static boolean isPriceFilterOn = false;
+    public static boolean isAvailableFilterOn = false;
+    public static boolean isOffFilterOn = false;
     public static enum filtersTypes{
         IS_EXIST,CHOOSE_BRANDS,CHOOSE_PRICE_RANGE,CHOOSE_CATEGORIES
     }
@@ -67,39 +49,29 @@ public class FilterAndSort {
             }
             return sorts;
         }
-    public static ArrayList<Good> filterGoods(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
-        for (Filter f:
-             filters) {
-            if(f.isEnable()){
-                if (filtersTypes.IS_EXIST.toString().equals(f.getName())) {
-                    filteredGoods = isExistFilter(filteredGoods);
-                } else if (filtersTypes.CHOOSE_BRANDS.toString().equals(f.getName())) {
-                    filteredGoods = brandFilter(filteredGoods);
-                } else if (filtersTypes.CHOOSE_CATEGORIES.toString().equals(f.getName())) {
-                    filteredGoods = categoryFilter(filteredGoods);
-                } else if (filtersTypes.CHOOSE_PRICE_RANGE.toString().equals(f.getName())) {
-                    filteredGoods = priceFilter(filteredGoods);
-                }
-            }
-        }
-        return filteredGoods;
-    }
-    public static ArrayList<Good> isExistFilter(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
+    public static ArrayList<Good> availableProductsFilter(ArrayList<Good> goods){
         for (Good g:
              goods) {
             if(g.getStock()==0)
+                goods.remove(g);
+        }
+        return goods;
+    }
+    public static ArrayList<Good> offProductsFilter(ArrayList<Good> goods){
+        ArrayList<Good> filteredGoods = new ArrayList<Good>();
+        for (Good g:
+                goods) {
+            if(g.getSalePercentageAmount()==0)
                 filteredGoods.remove(g);
         }
-        return filteredGoods;
+        return goods;
     }
     public static ArrayList<Good> brandFilter(ArrayList<Good> goods){
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
-            if(!isBrandOrCategory(g.getBrand(),brands))
-                filteredGoods.remove(g);
+            if(brandsFilter.contains(g.getBrand()))
+                filteredGoods.add(g);
         }
         return filteredGoods;
     }
@@ -107,19 +79,17 @@ public class FilterAndSort {
         ArrayList<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
-            if(!isBrandOrCategory(g.getCategory().getName(),categories))
-                filteredGoods.remove(g);
+            if(categoriesFilter.contains(g.getCategory()))
+                filteredGoods.add(g);
         }
         return filteredGoods;
     }
     public static ArrayList<Good> priceFilter(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
-        for (Good g:
-                goods) {
-            if(g.getPrice()>maxPrice || g.getPrice()<minPrice)
-                filteredGoods.remove(g);
+        for (int i = 0; i <goods.size() ; i++) {
+            if(goods.get(i).getPrice()>maxPriceFilter || goods.get(i).getPrice()<minPriceFilter)
+                goods.remove(goods.get(i));
         }
-        return filteredGoods;
+        return goods;
     }
     public ArrayList<Sale> sortSales(ArrayList<Sale> sales){
         return null;
@@ -127,19 +97,6 @@ public class FilterAndSort {
     public ArrayList<Sale> filterSales(ArrayList<Sale> sales){
         return null;
     }
-    public static Filter getFilterById(int id,ArrayList<Filter> filters) throws ViewException {
-        for (Filter f:
-                filters) {
-            if(f.getId() == id) return f;
-        }
-        throw ViewException.invalidNumber();
-    }
-    public static Boolean isBrandOrCategory(String name,ArrayList<Filter> items){
-        for (Filter f:
-             items) {
-            if(f.getName()==name && f.isEnable()) return true;
-        }
-        return false;
-    }
+
 
 }

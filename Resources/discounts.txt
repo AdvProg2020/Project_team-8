@@ -1,0 +1,1 @@
+{"code":2,"startDate":{"year":2020,"month":6,"day":2},"endDate":{"year":2020,"month":6,"day":17},"percentReduction":2,"maxReductionAmount":2,"usageNumber":2}

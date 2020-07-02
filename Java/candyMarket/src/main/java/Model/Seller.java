@@ -7,8 +7,8 @@ public class Seller extends User {
     private ArrayList<Good> myGoods;
     private ArrayList<SellLog> mySellLog;
     private String sellerCompanyName;
+    private int balance;
     public static Seller currentSeller;
-    public static ArrayList<Seller> sellers;
     private boolean confirmedSeller;
 
     public Seller(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord, String sellerCompanyName  ) {
@@ -16,19 +16,23 @@ public class Seller extends User {
         this.sellerCompanyName = sellerCompanyName;
         this.setType(UserType.SELLER);
         this.confirmedSeller = false;
-        sellers.add(this);
+        this.mySellLog = new ArrayList<>();
+        this.myGoods = new ArrayList<>();
+        ManageInfo.allSellers.add(this);
+        ManageInfo.allUsers.add(this);
     }
 
-    public static ArrayList<Seller> getSellers() {
-        return sellers;
-    }
 
     public void addMySellLog(SellLog sellLog){
         mySellLog.add(sellLog);
     }
 
-    public static void setSellers(ArrayList<Seller> sellers) {
-        Seller.sellers = sellers;
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public int getBalance() {
+        return balance;
     }
 
     public ArrayList<Sale> getMySales() {
@@ -104,8 +108,8 @@ public class Seller extends User {
 
     }
 
-    public void addGood() {
-       //??
+    public void addGood(Good good) {
+       myGoods.add(good);
     }
 
     public ArrayList<String> viewSales() {
@@ -136,5 +140,8 @@ public class Seller extends User {
         this.confirmedSeller = true;
     }
 
+    public void removeProduct(Good good) {
+        myGoods.remove(good);
+    }
 
 }

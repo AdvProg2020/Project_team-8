@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
@@ -42,22 +44,20 @@ public class Main extends Application {
         MenuHandler.currentWindow.setResizable(false);
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
-        debug();
+        BorderPaneController.borderPaneController.setCenter("MainMenu");
+        //debug();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
-        BorderPaneController.borderPaneController.setCenter("MainMenu");
-
-
     }
     private static void debug(){
         new Category("people",null);
         new Category("food",null);
         new Category("fruits",null);
-        new Good("Mz","MzBrand",100,null,1,Category.getCategoryByName("people"),"","");
-        new Good("Arash","ArashBrand",100,null,1,Category.getCategoryByName("people"),"","");
-        new Good("Reza","RezaBrand",200,null,1,Category.getCategoryByName("people"),"","");
-        new Good("Reza2","RezaBrand",200,null,1,Category.getCategoryByName("people"),"","");
-        new Good("Pizza","FastFood420",1000,null,4,Category.getCategoryByName("food"),"","");
+        new Good("Mz","MzBrand",100,null,1,Category.getCategoryByName("people"),"");
+        new Good("Arash","ArashBrand",100,null,1,Category.getCategoryByName("people"),"");
+        new Good("Reza","RezaBrand",200,null,1,Category.getCategoryByName("people"),"");
+        new Good("Reza2","RezaBrand",200,null,1,Category.getCategoryByName("people"),"");
+        new Good("Pizza","FastFood420",1000,null,4,Category.getCategoryByName("food"),"");
         //new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
         //BorderPaneController.borderPaneController.login("admin");
     }

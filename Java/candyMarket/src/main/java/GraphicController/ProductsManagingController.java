@@ -1,17 +1,20 @@
 package GraphicController;
 
+import GraphicView.MenuHandler;
 import Model.Good;
 import Model.ManageInfo;
+import Model.UserHandler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.stage.FileChooser;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -52,5 +55,15 @@ public class ProductsManagingController implements Initializable {
             Good.removeProduct(good);
             allGoods.remove(good);
         }
+    }
+
+    public void choosePhotoOnClick(ActionEvent actionEvent) {
+        FileChooser fileChooser = Functions.prepareFileChooser();
+        File selectedDir = fileChooser.showOpenDialog(MenuHandler.currentWindow);
+        File imageFile = new File(selectedDir.getAbsolutePath());
+        Image profileImage;
+        profileImage = new Image(String.valueOf(Functions.changePathToUrl(String.valueOf(imageFile))));
+        UserHandler.getCurrentUser().setUserPhoto(profileImage);
+        //profileImg.setImage(profileImage);
     }
 }

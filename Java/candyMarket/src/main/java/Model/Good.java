@@ -33,14 +33,23 @@ public class Good {
     private String categorySpecialAttributes;
     private String detailInfo;
     private int averageScore;
-    private ArrayList<Score> scores = new ArrayList<>();
+    private ArrayList<Score> scores = new ArrayList<>() {
+        @Override
+        public String toString() {
+            int a = 0;
+            for (Score score : scores) {
+                a += score.getScore();
+            }
+            return "" + a/scores.size();
+        }
+    };
     private ArrayList<Comment> comments;
     public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
     public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
     public static ArrayList<Good> confirmedGoods = ManageInfo.allGoods;
     private Image image;
     private long dateCreated;
-    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo) {
+    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo) {
         this.name = name;
         this.brand = brand;
         this.price = price;
@@ -48,7 +57,6 @@ public class Good {
         this.stock = stock;
         this.category = category;
         this.situation = ItemCreationSituation.CREATING_CHECK;
-        this.categorySpecialAttributes = categorySpecialAttributes;
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
         this.averageScore = 0;
@@ -296,4 +304,5 @@ public class Good {
     public void setDateCreated(long dateCreated) {
         this.dateCreated = dateCreated;
     }
+
 }

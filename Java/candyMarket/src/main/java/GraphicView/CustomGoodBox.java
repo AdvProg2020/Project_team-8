@@ -44,7 +44,7 @@ public class CustomGoodBox extends VBox {
         } catch (MalformedURLException e) {
             System.out.println("invalidPath");;
         }
-        photoIMG.setImage(new Image(url));
+        photoIMG.setImage(new Image(PathHandler.withoutImageUrl));
         nameLBL.setText("GoodName : "+name);
         priceLBL.setText("Price : "+String.valueOf(price));
         scoreLBL.setText("Score : "+String.valueOf(score));

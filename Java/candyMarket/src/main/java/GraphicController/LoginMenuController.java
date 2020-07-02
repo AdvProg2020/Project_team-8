@@ -4,7 +4,6 @@ import GraphicView.CustomBorderPaneMenus;
 import GraphicView.MenuHandler;
 import Model.User;
 import Model.UserHandler;
-import View.MainMenu;
 import GraphicView.MenuHandler;
 import Model.User;
 import Model.UserHandler;

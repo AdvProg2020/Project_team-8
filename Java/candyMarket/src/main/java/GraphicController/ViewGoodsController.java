@@ -4,14 +4,10 @@ import GraphicView.CustomButton;
 import GraphicView.CustomGoodBox;
 import GraphicView.MenuHandler;
 import Model.*;
-import View.MainMenu;
-import View.Menu;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -21,36 +17,92 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
+import java.util.logging.Filter;
 
 public class ViewGoodsController implements Initializable {
     public ChoiceBox sortChoiceBox;
     public Button updateListBtn;
     public ScrollPane goodsScrollPane;
     public ScrollPane categoriesScrollPane;
+    public CheckBox filterByBrandCheckBox;
+    public ScrollPane brandScrollPane;
+    public CheckBox filterByCategoryCheckBox;
+    public CheckBox filterByAvailableProductsCheckBox;
+    public CheckBox filterByOffProductsCheckBox;
+    public TextField minimumPriceTxt;
+    public TextField maximumPriceTxt;
+    public CheckBox filterByPriceCheckBox;
     ArrayList<CustomGoodBox> goodBoxes = new ArrayList<>();
     ArrayList<Good> goods = new ArrayList<>();
+    ArrayList<CheckBox> categoryCheckBoxes = new ArrayList<>();
+    ArrayList<CheckBox> brandCheckBoxes = new ArrayList<>();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        goods = ManageInfo.allGoods;
         sortChoiceBox.getItems().addAll(FilterAndSort.getSortsType());
         sortChoiceBox.setValue("DATE_CREATED");
-        setGoodsScrollPane();
+        setBrandScrollPane();
         setCategoryScrollPane();
+        updateCheckBoxes();
+        onUpdateListBtnClick(null);
+        setGoodsScrollPane();
     }
-    private void setCategoryScrollPane(){
-        ArrayList<Category> categories = ManageInfo.allCategories;
-        ArrayList<CheckBox> checkBoxes = createCheckBoxes(categories);
+    private CheckBox getCheckBoxByText(ArrayList<CheckBox> checkBoxes,String text){
+        for (CheckBox c:
+             checkBoxes) {
+            if(c.getText().equals(text))
+                return c;
+        }
+        return null;
+    }
+    private void updateCheckBoxes(){
+        if(FilterAndSort.isAvailableFilterOn)
+            filterByAvailableProductsCheckBox.setSelected(true);
+        if(FilterAndSort.isBrandFilterOn)
+            filterByBrandCheckBox.setSelected(true);
+        if(FilterAndSort.isCategoryFilterOn)
+            filterByCategoryCheckBox.setSelected(true);
+        if(FilterAndSort.isPriceFilterOn)
+            filterByPriceCheckBox.setSelected(true);
+        if(FilterAndSort.isOffFilterOn)
+            filterByOffProductsCheckBox.setSelected(true);
+        for (Category c:
+             FilterAndSort.categoriesFilter) {
+            CheckBox checkBox = getCheckBoxByText(categoryCheckBoxes,c.getName());
+            checkBox.setSelected(true);
+        }
+        for (String s:
+                FilterAndSort.brandsFilter) {
+            CheckBox checkBox = getCheckBoxByText(brandCheckBoxes,s);
+            checkBox.setSelected(true);
+        }
+        minimumPriceTxt.setText(String.valueOf(FilterAndSort.minPriceFilter));
+        maximumPriceTxt.setText(String.valueOf(FilterAndSort.maxPriceFilter));
+    }
+    private void setBrandScrollPane() {
+        ArrayList<String> brands = ManageInfo.allBrands;
+        brandCheckBoxes = createBrandCheckBoxes(brands);
         VBox vBox = new VBox();
         vBox.setSpacing(5);
         for (CheckBox c:
-             checkBoxes) {
+                brandCheckBoxes) {
+            vBox.getChildren().add(c);
+        }
+        brandScrollPane.setContent(vBox);
+    }
+    private void setCategoryScrollPane(){
+        ArrayList<Category> categories = new ArrayList<>();
+        categories.addAll(ManageInfo.allCategories);
+        categoryCheckBoxes = createCategoryCheckBoxes(categories);
+        VBox vBox = new VBox();
+        vBox.setSpacing(5);
+        for (CheckBox c:
+             categoryCheckBoxes) {
             vBox.getChildren().add(c);
         }
         categoriesScrollPane.setContent(vBox);
     }
     private void setGoodsScrollPane(){
         VBox allGoods = new VBox();
-        goods = FilterAndSort.sortGoods(goods);
         goodBoxes = createGoodBoxes(goods);
         for(int i=0;i<goodBoxes.size();i+=2){
             HBox hBox = new HBox();
@@ -75,22 +127,88 @@ public class ViewGoodsController implements Initializable {
         }
         return customGoodBoxes;
     }
-    private ArrayList<CheckBox> createCheckBoxes(ArrayList<Category> categories){
-        ArrayList<CheckBox> checkBoxes = new ArrayList<>();
+    private ArrayList<CheckBox> createCategoryCheckBoxes(ArrayList<Category> categories){
+        ArrayList<CheckBox> categoryCheckBoxes = new ArrayList<>();
         for (Category c:
              categories) {
             CheckBox checkBox = new CheckBox();
             checkBox.setText(c.getName());
-            checkBoxes.add(checkBox);
+            categoryCheckBoxes.add(checkBox);
         }
-        return checkBoxes;
+        return categoryCheckBoxes;
     }
-    public void onUpdateListBtnClick(MouseEvent mouseEvent) {
+    private ArrayList<CheckBox> createBrandCheckBoxes(ArrayList<String> brands){
+        ArrayList<CheckBox> brandCheckBoxes = new ArrayList<>();
+        for (String s:
+                brands) {
+            CheckBox checkBox = new CheckBox();
+            checkBox.setText(s);
+            brandCheckBoxes.add(checkBox);
+        }
+        return brandCheckBoxes;
+    }
+    private void filterByBrand(){
+        for (CheckBox c:
+                brandCheckBoxes) {
+            String brand = c.getText();
+            if(c.isSelected() && !FilterAndSort.brandsFilter.contains(brand)) FilterAndSort.brandsFilter.add(brand);
+            else if(!c.isSelected()) FilterAndSort.brandsFilter.remove(brand); }
+        goods = FilterAndSort.brandFilter(goods);
+    }
+    private void filterByCategory(){
+        for (CheckBox c:
+                categoryCheckBoxes) {
+            Category category = Category.getCategoryByName(c.getText());
+            if(c.isSelected() && !FilterAndSort.categoriesFilter.contains(category)) FilterAndSort.categoriesFilter.add(category);
+            else if(!c.isSelected()) FilterAndSort.categoriesFilter.remove(category);
+        }
+        goods = FilterAndSort.categoryFilter(goods);
+    }
+    private void filterByAvailableProducts(){
+        goods = FilterAndSort.availableProductsFilter(goods);
+    }
+    private void filterByOffProducts(){
+        goods = FilterAndSort.offProductsFilter(goods);
+    }
+    private void filterByPrice(){
+        int minPrice = Integer.parseInt(minimumPriceTxt.getText());
+        int maxPrice = Integer.parseInt(maximumPriceTxt.getText());
+        FilterAndSort.minPriceFilter = minPrice;
+        FilterAndSort.maxPriceFilter =  maxPrice;
+        goods = FilterAndSort.priceFilter(goods);
+    }
+    private void sortGoods(){
         for (FilterAndSort.sortsTypes s:
                 FilterAndSort.sortsTypes.values()) {
             if(s.toString().equals(sortChoiceBox.getValue()))
                 FilterAndSort.sortsType = s;
-                }
+        }
+        goods = FilterAndSort.sortGoods(goods);
+    }
+    public void onUpdateListBtnClick(MouseEvent mouseEvent) {
+        goods.clear();
+        goods.addAll(ManageInfo.allGoods);
+        sortGoods();
+        if(filterByPriceCheckBox.isSelected()){
+            filterByPrice();
+            FilterAndSort.isPriceFilterOn = true;
+        }else FilterAndSort.isPriceFilterOn = false;
+        if(filterByBrandCheckBox.isSelected()){
+            filterByBrand();
+            FilterAndSort.isBrandFilterOn = true;
+        }else FilterAndSort.isBrandFilterOn = false;
+        if(filterByCategoryCheckBox.isSelected()){
+            filterByCategory();
+            FilterAndSort.isCategoryFilterOn = true;
+        }else FilterAndSort.isCategoryFilterOn = false;
+        if(filterByAvailableProductsCheckBox.isSelected()){
+            filterByAvailableProducts();
+            FilterAndSort.isAvailableFilterOn = true;
+        }else FilterAndSort.isAvailableFilterOn = false;
+        if(filterByOffProductsCheckBox.isSelected()){
+            filterByOffProducts();
+            FilterAndSort.isOffFilterOn = true;
+        }else FilterAndSort.isOffFilterOn = false;
         setGoodsScrollPane();
     }
 }

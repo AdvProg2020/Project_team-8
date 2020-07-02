@@ -1,0 +1,1 @@
+{"myGoods":[],"mySellLog":[],"sellerCompanyName":"a","balance":0,"confirmedSeller":false,"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"a","firstName":"a","lastName":"a","email":"a@a.com","phoneNumber":"2132","password":"a","credit":0,"type":"SELLER"}
