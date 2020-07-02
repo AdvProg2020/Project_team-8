@@ -7,18 +7,16 @@ public class Request {
         CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
     }
     public static requestType requestType;
-    public static requestType type;
     private Good good;
     private Sale sale;
     private int requestId;
     private Seller seller;
     private String requestCommand;
-    public static ArrayList<Request> requests = ManageInfo.allRequests;
 
     public Request(Request.requestType requestType) {
         this.requestType = requestType;
-        requests.add(this);
-        this.requestId = requests.size();
+        ManageInfo.allRequests.add(this);
+        this.requestId = ManageInfo.allRequests.size();
     }
 
     public Good getGood() {
@@ -65,31 +63,23 @@ public class Request {
             case CREATE_GOOD:
                 return this.viewAddProductDetail();
         }
-
         return null;
     }
 
     public void acceptRequest() {
         switch (this.requestType) {
             case SELLER_REGISTER:
-                this.getSeller().confirmSeller();
+                ManageInfo.allSellers.add(this.getSeller());
+                ManageInfo.allUsers.add(this.getSeller());
                 break;
             case CREATE_GOOD:
                 this.getGood().confirmProduct();
         }
-        requests.remove(this);
+        ManageInfo.allRequests.remove(this);
     }
 
     public void declineRequest() {
-        switch (this.requestType) {
-            case SELLER_REGISTER:
-                ManageInfo.allUsers.remove(this.getSeller());
-                break;
-            case CREATE_GOOD:
-                Good.unconfirmedGoods.remove(this.getGood());
-                break;
-        }
-        requests.remove(this);
+        ManageInfo.allRequests.remove(this);
     }
 
     public void sellerAddGood(Good good) {
@@ -100,7 +90,7 @@ public class Request {
 
     }
     public static Boolean isThereRequestWithId(int id){
-        for (Request request : requests) {
+        for (Request request : ManageInfo.allRequests) {
             if (request.requestId == id)
                 return true;
         }
@@ -108,7 +98,7 @@ public class Request {
     }
 
     public static Request getRequestById(int requestId){
-        for (Request request : requests) {
+        for (Request request : ManageInfo.allRequests) {
             if (request.requestId == requestId)
                 return request;
         }

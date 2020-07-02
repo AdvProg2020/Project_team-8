@@ -2,6 +2,7 @@ package GraphicController;
 
 import GraphicView.MenuHandler;
 import Model.Discount;
+import Model.ManageInfo;
 import Model.Manager;
 import Model.Request;
 import javafx.collections.FXCollections;
@@ -39,7 +40,7 @@ public class ManagerRequestController implements Initializable {
 
     private ObservableList<Request> getRequests() {
         ObservableList<Request> requests = FXCollections.observableArrayList();
-        requests.addAll(Request.requests);
+        requests.addAll(ManageInfo.allRequests);
 
         return requests;
     }

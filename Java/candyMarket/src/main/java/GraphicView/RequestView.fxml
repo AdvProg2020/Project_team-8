@@ -17,8 +17,8 @@
         <AnchorPane BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="info" layoutX="133.0" layoutY="42.0" prefHeight="220.0" prefWidth="336.0" />
-            <Button fx:id="acceptButton" onAction="#acceptRequest" layoutX="189.0" layoutY="302.0" mnemonicParsing="false" text="Accept" />
-            <Button fx:id="declineButton" onAction="#declineRequest" layoutX="334.0" layoutY="302.0" mnemonicParsing="false" text="Decline" />
+            <Button fx:id="acceptButton" layoutX="143.0" layoutY="302.0" mnemonicParsing="false" onAction="#acceptRequest" text="Accept" />
+            <Button fx:id="declineButton" layoutX="273.0" layoutY="302.0" mnemonicParsing="false" onAction="#declineRequest" text="Decline" />
          </children></AnchorPane>
    </center>
 

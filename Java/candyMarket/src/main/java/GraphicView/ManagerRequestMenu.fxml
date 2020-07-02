@@ -15,11 +15,12 @@
     </top>
 
     <center>
-        <TableView fx:id="tableView">
-         <columns>
-            <TableColumn fx:id="idColumn" prefWidth="107.3333410024643" text="Id" />
-            <TableColumn fx:id="requestCommandColumn" prefWidth="490.66666412353516" text="Request Command" />
-         </columns></TableView>
+            <TableView fx:id="tableView">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="107.3333410024643" text="Id" />
+                    <TableColumn fx:id="requestCommandColumn" prefWidth="490.66666412353516" text="Request Command" />
+                </columns>
+            </TableView>
     </center>
    <bottom>
        <AnchorPane>

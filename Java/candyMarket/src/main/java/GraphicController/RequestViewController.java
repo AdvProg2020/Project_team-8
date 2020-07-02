@@ -1,9 +1,11 @@
 package GraphicController;
 
+import Model.Manager;
 import Model.Request;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 
 import java.awt.*;
@@ -20,8 +22,13 @@ public class RequestViewController implements Initializable {
     }
 
     public void acceptRequest(ActionEvent actionEvent) {
+        Request.getRequestById(ManagerRequestController.getId()).acceptRequest();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setContentText("confirm");
+        alert.show();
     }
 
     public void declineRequest(ActionEvent actionEvent) {
+        Request.getRequestById(ManagerRequestController.getId()).declineRequest();
     }
 }
