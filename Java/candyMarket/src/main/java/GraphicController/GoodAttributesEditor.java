@@ -2,10 +2,7 @@ package GraphicController;
 
 import GraphicView.MenuHandler;
 import GraphicView.PathHandler;
-import Model.Category;
-import Model.Good;
-import Model.ManageInfo;
-import Model.UserHandler;
+import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -55,7 +52,6 @@ public class GoodAttributesEditor implements Initializable {
     }
 
     public void confirm(ActionEvent actionEvent) {
-        try {
             int priceText = Integer.parseInt(priceField.getText());
             int stockText = Integer.parseInt(stockField.getText());
             String nameText = nameField.getText();
@@ -66,6 +62,7 @@ public class GoodAttributesEditor implements Initializable {
             errorMessage.setText("Update Request has been sent");
             if(good == null){
                 good = new Good(nameText,brandText,priceText, UserHandler.currentSeller,stockText,categoryValue,detailText,photoUrl);
+                new Request(Request.requestType.CREATE_GOOD).createAddProductRequest(good);
             }else {
                 good.setName(nameText);
                 good.setBrand(brandText);
@@ -77,10 +74,7 @@ public class GoodAttributesEditor implements Initializable {
             }
             errorMessage.setStyle("-fx-background-color: #00ff00;");
             errorMessage.setText("Your request has been sent");
-        }catch (Exception e) {
-            errorMessage.setStyle("-fx-background-color: #ff0000;");
-            errorMessage.setText("Invalid Change!");
-        }
+
         SellerProductHandlingController.sellerProductHandlingController.setCurrentGood(good);
         SellerProductHandlingController.sellerProductHandlingController.initialize(null,null);
     }

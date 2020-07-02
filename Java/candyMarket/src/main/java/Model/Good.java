@@ -57,10 +57,9 @@ public class Good {
         this.salePercentageAmount = 0;
         this.averageScore = 0;
         this.dateModified = System.currentTimeMillis();
-        this.id = ManageInfo.allGoods.size();
+        comments = new ArrayList<>();
         if (image!= null) this.image = image;
         this.dateCreated = System.currentTimeMillis();
-        ManageInfo.allGoods.add(this);
         if(seller !=null)
             seller.addGood(this);
     }
@@ -196,7 +195,6 @@ public class Good {
                 "Detail info: " + this.detailInfo + "\n" +
                 "Average score: " + this.averageScore + "\n" +
                 "Opinions: " + this.getComments().toString() + "\n";
-
     }
 
     public ArrayList<Comment> getComments() {
