@@ -60,8 +60,6 @@ public class Good {
         comments = new ArrayList<>();
         if (image!= null) this.image = image;
         this.dateCreated = System.currentTimeMillis();
-        if(seller !=null)
-            seller.addGood(this);
     }
 
 

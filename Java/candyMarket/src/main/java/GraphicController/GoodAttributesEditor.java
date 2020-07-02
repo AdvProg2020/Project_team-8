@@ -84,7 +84,6 @@ public class GoodAttributesEditor implements Initializable {
             errorMessage.setStyle("-fx-background-color: #ff0000;");
             errorMessage.setText("Invalid Change!");
         }
-        SellerProductHandlingController.sellerProductHandlingController.setCurrentGood(good);
         SellerProductHandlingController.sellerProductHandlingController.initialize(null,null);
     }
     public void choosePhotoOnClick(ActionEvent actionEvent) {

@@ -12,11 +12,12 @@ public class Request {
     private int requestId;
     private Seller seller;
     private String requestCommand;
+    private static int lastId = 0;
 
     public Request(Request.requestType requestType) {
         this.requestType = requestType;
         ManageInfo.allRequests.add(this);
-        this.requestId = ManageInfo.allRequests.get(ManageInfo.allRequests.size() - 1).getRequestId() + 1;
+        this.requestId = lastId++;
     }
 
     public Good getGood() {
@@ -74,6 +75,7 @@ public class Request {
                 break;
             case CREATE_GOOD:
                 ManageInfo.allGoods.add(this.getGood());
+                this.getGood().getSeller().addGood(this.getGood());
                 break;
         }
         ManageInfo.allRequests.remove(this);
