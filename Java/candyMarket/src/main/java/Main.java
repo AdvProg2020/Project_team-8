@@ -46,13 +46,24 @@ public class Main extends Application {
         MenuHandler.currentWindow.show();
         BorderPaneController.borderPaneController.setCenter("MainMenu");
         //debug();
+        //test();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
+    }
+    private static void test(){
+
     }
     private static void debug(){
         new Category("people",null);
         new Category("food",null);
         new Category("fruits",null);
+        //
+        Seller seller = new Seller("a","a","a","a@a.com","31231","a","a");
+        new Good("Mz","MzBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Arash","ArashBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Reza","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Reza2","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Pizza","FastFood420",1000,seller,4,Category.getCategoryByName("food"),"",null);
         //new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
         //BorderPaneController.borderPaneController.login("admin");
     }
