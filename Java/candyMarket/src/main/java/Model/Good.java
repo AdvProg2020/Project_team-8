@@ -44,28 +44,9 @@ public class Good {
         }
     };
     private ArrayList<Comment> comments;
-    public static ArrayList<Good> fixedGoods = new ArrayList<Good>();
-    public static ArrayList<Good> unconfirmedGoods = new ArrayList<>();
-    public static ArrayList<Good> confirmedGoods = ManageInfo.allGoods;
     private Image image;
     private long dateCreated;
-    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo) {
-        this.name = name;
-        this.brand = brand;
-        this.price = price;
-        this.seller= seller;
-        this.stock = stock;
-        this.category = category;
-        this.situation = ItemCreationSituation.CREATING_CHECK;
-        this.detailInfo = detailInfo;
-        this.salePercentageAmount = 0;
-        this.averageScore = 0;
-        this.dateModified = System.currentTimeMillis();
-        unconfirmedGoods.add(this);
-        this.id = unconfirmedGoods.size();
-        this.dateCreated = System.currentTimeMillis();
-        ManageInfo.allGoods.add(this);
-    }
+
     public Good(String name, String brand, int price, Seller seller, int stock, Category category, String categorySpecialAttributes, String detailInfo, Image image) {
         this.name = name;
         this.brand = brand;
@@ -79,16 +60,11 @@ public class Good {
         this.salePercentageAmount = 0;
         this.averageScore = 0;
         this.dateModified = System.currentTimeMillis();
-        unconfirmedGoods.add(this);
-        this.id = unconfirmedGoods.size();
+        this.id = ManageInfo.allGoods.size();
         this.image = image;
         this.dateCreated = System.currentTimeMillis();
-        ManageInfo.allGoods.add(this);
     }
 
-    public static ArrayList<Good> getConfirmedGoods() {
-        return confirmedGoods;
-    }
 
     public ArrayList<Buyer> getBuyers() {
         return buyers;
@@ -231,10 +207,6 @@ public class Good {
 
     }
 
-    public void confirmProduct() {
-        confirmedGoods.add(this);
-        this.id = confirmedGoods.size();
-    }
 
     public ArrayList<Comment> getComments() {
         return comments;
@@ -252,17 +224,10 @@ public class Good {
         this.scores = scores;
     }
 
-    public static void removeProduct(Good good) {
-        for (Good unconfirmedGood : unconfirmedGoods) {
-            if (unconfirmedGood == good) {
-                unconfirmedGoods.remove(unconfirmedGood);
-                break;
-            }
-        }
-        for (Good confirmedGood : confirmedGoods) {
-            if (confirmedGood == good) {
-                confirmedGoods.remove(confirmedGood);
-                break;
+    public static void removeProduct(Good toNeRemovedGood) {
+        for (Good good : ManageInfo.allGoods) {
+            if (toNeRemovedGood.equals(good)) {
+                ManageInfo.allGoods.remove(toNeRemovedGood);
             }
         }
     }

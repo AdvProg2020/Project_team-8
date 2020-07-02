@@ -16,7 +16,7 @@ public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
             "\\main\\java\\GraphicView\\";
     public static void main(String[] args) throws IOException {
-        FileHandler.getDataFromFiles();
+        //FileHandler.getDataFromFiles();
         launch(args);
         FileHandler.setDataIntoFiles();
     }
@@ -53,11 +53,6 @@ public class Main extends Application {
         new Category("people",null);
         new Category("food",null);
         new Category("fruits",null);
-        new Good("Mz","MzBrand",100,null,1,Category.getCategoryByName("people"),"");
-        new Good("Arash","ArashBrand",100,null,1,Category.getCategoryByName("people"),"");
-        new Good("Reza","RezaBrand",200,null,1,Category.getCategoryByName("people"),"");
-        new Good("Reza2","RezaBrand",200,null,1,Category.getCategoryByName("people"),"");
-        new Good("Pizza","FastFood420",1000,null,4,Category.getCategoryByName("food"),"");
         //new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
         //BorderPaneController.borderPaneController.login("admin");
     }

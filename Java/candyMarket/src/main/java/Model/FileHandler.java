@@ -204,7 +204,7 @@ public class FileHandler {
     private static void writeGoods() throws IOException {
         FileWriter writer = new FileWriter(goodsFile);
         for (Good good : ManageInfo.allGoods) {
-            writer.append(requestsJson.toJson(good) + "\n");
+            writer.append(goodsJson.toJson(good) + "\n");
         }
         writer.close();
     }
@@ -222,7 +222,7 @@ public class FileHandler {
     private static void writeDiscounts() throws IOException {
         FileWriter writer = new FileWriter(discountsFile);
         for (Discount discount : ManageInfo.allDiscounts) {
-            writer.append(requestsJson.toJson(discount) + "\n");
+            writer.append(discountsJson.toJson(discount) + "\n");
         }
         writer.close();
     }

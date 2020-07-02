@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
@@ -81,8 +82,8 @@ public class SellerProductHandlingController implements Initializable {
             int stockText = Integer.parseInt(stockField.getText());
             Category categoryValue = categoryChoiceBox.getValue();
             String detailsText = details.getText();
-            Good good = new Good(goodNameText, brandText ,priceText, UserHandler.currentSeller, stockText, categoryValue, detailsText);
-            UserHandler.currentSeller.addGood(good);
+            new Request(Request.requestType.CREATE_GOOD).createAddProductRequest(new Good(goodNameText, brandText ,priceText, UserHandler.currentSeller, stockText, categoryValue, detailsText, "a", null));
+            //UserHandler.currentSeller.addGood(new Good(goodNameText, brandText ,priceText, UserHandler.currentSeller, stockText, categoryValue, detailsText));
             errorMessage.setStyle("-fx-background-color: #00ff00;");
             errorMessage.setText("Your request has been sent");
         }catch (Exception e) {

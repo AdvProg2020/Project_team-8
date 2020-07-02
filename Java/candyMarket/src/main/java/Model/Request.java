@@ -16,7 +16,7 @@ public class Request {
     public Request(Request.requestType requestType) {
         this.requestType = requestType;
         ManageInfo.allRequests.add(this);
-        this.requestId = ManageInfo.allRequests.size();
+        this.requestId = ManageInfo.allRequests.get(ManageInfo.allRequests.size() - 1).getRequestId() + 1;
     }
 
     public Good getGood() {
@@ -73,7 +73,8 @@ public class Request {
                 ManageInfo.allUsers.add(this.getSeller());
                 break;
             case CREATE_GOOD:
-                this.getGood().confirmProduct();
+                ManageInfo.allGoods.add(this.getGood());
+                break;
         }
         ManageInfo.allRequests.remove(this);
     }
