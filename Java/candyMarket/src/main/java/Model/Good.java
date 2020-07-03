@@ -26,7 +26,7 @@ public class Good {
     private String name;
     private String brand;
     private int price;
-    private ArrayList<Buyer> buyers;
+    private ArrayList<String> buyers;
     private String sellerName;
     private int stock;
     private String category;
@@ -62,17 +62,16 @@ public class Good {
         this.buyers = new ArrayList<>();
         comments = new ArrayList<>();
         if (image!= null) this.image = image;
-        seller.addGood(this);
         this.dateCreated = System.currentTimeMillis();
     }
 
 
     public ArrayList<Buyer> getBuyers() {
-        return buyers;
-    }
-
-    public void setBuyers(ArrayList<Buyer> buyers) {
-        this.buyers = buyers;
+        ArrayList<Buyer> orginalBuyers = new ArrayList<>();
+        for (String buyer : buyers) {
+            orginalBuyers.add((Buyer) Buyer.getUserByUsername(buyer));
+        }
+        return orginalBuyers;
     }
 
     public int getStock() {
@@ -100,7 +99,13 @@ public class Good {
     }
 
     public int getAverageScore() {
-        return averageScore;
+        if(scores.size()==0)
+            return 0;
+        int rate = 0;
+        for (Score score : scores) {
+            rate+=score.getScore();
+        }
+        return rate/scores.size();
     }
 
     public void setAverageScore(int averageScore) {
@@ -157,7 +162,7 @@ public class Good {
     }
 
     public void addBuyers(Buyer b){
-        buyers.add(b);
+        buyers.add(b.getUsername());
     }
 
     public static Good getGoodByName(String name,ArrayList<Good> goods) {

@@ -99,7 +99,7 @@ public class FileHandler {
         writer.close();
     }
     private static void loadBuyersData() throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream(sellersFile);
+        FileInputStream fileInputStream = new FileInputStream(buyersFile);
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
             Buyer buyer = usersJson.fromJson(fileReader.nextLine(), Buyer.class);

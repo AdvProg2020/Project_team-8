@@ -70,17 +70,6 @@ public class CategoryManagingController implements Initializable {
         }
     }
 
-    public void newCodeButtonPushed()
-    {
-        if (categoryNameField.getText().length() > 0) {
-            String categoryNameText = categoryNameField.getText();
-            String specialAttributesText = specialAttributesField.getText();
-
-            Category newCategory = new Category(categoryNameText, specialAttributesText);
-
-            tableView.getItems().add(newCategory);
-        }
-    }
 
     public void userClickedOnTable(MouseEvent mouseEvent) {
     }

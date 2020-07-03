@@ -17,8 +17,6 @@ public class Buyer extends User {
     private ArrayList<Good> boughtGoods = new ArrayList<>();
     private int balance;
     public static Buyer currentBuyer;
-    public HashMap<Good, Integer> toBuy;
-
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.setType(UserType.BUYER);
@@ -31,7 +29,6 @@ public class Buyer extends User {
         }
         ManageInfo.allBuyers.add(this);
         ManageInfo.allUsers.add(this);
-        toBuy = new HashMap<>();
     }
 
     public Cart getCart() {

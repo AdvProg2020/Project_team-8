@@ -70,5 +70,11 @@ public class GoodMenuController implements Initializable {
     }
 
     public void addToCartClick(ActionEvent actionEvent) {
+        if(good.getStock()<=0){
+            Functions.showDialog("out of stock",true);
+        }else {
+            Cart.addGood(good);
+            Functions.showDialog("Added Successfully", false);
+        }
     }
 }

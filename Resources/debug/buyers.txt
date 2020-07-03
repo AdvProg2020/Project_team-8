@@ -1,0 +1,1 @@
+{"myDiscounts":[],"myLogs":[],"boughtGoods":[],"balance":0,"toBuy":{},"cart":{},"username":"b","firstName":"b","lastName":"b","email":"b@b.com","phoneNumber":"423432","password":"b","credit":0,"type":"BUYER"}
