@@ -60,13 +60,18 @@ public class CartController implements Initializable {
 
     public void paying(ActionEvent actionEvent) {
         if (!UserHandler.isLogeIn()) {
-            MenuHandler.createStageWithScene("LoginMenu");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("You Must Log-in First");
+            alert.show();
+        } else if (UserHandler.isManager() || UserHandler.isSeller()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Only a buyer can purchase Items");
+            alert.show();
         } else if (Cart.getGoods().size() == 0) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Cart is Empty");
             alert.show();
         } else {
-            MenuHandler.secondCurrentWindow.close();
             MenuHandler.createStageWithScene("Pay");
         }
     }

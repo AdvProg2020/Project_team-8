@@ -12,7 +12,7 @@ public class Discount {
     private int percentReduction;
     private int maxReductionAmount;
     private int usageNumber;
-    private ArrayList<User> users;
+    private ArrayList<String> buyers;
 
     @Override
     public String toString() {
@@ -86,14 +86,23 @@ public class Discount {
         this.usageNumber = usageNumber;
     }
 
-    public ArrayList<User> getUsers() {
-        return users;
+    public ArrayList<Buyer> getUsers() {
+        ArrayList<Buyer> buyersOrginal = new ArrayList<>();
+        for (String s:
+             buyers) {
+             buyersOrginal.add((Buyer) Buyer.getUserByUsername(s));
+        }
+        return buyersOrginal;
     }
 
-    public void setUsers(ArrayList<User> users) {
-        this.users = users;
+    public void setBuyers(ArrayList<Buyer> buyers) {
+        ArrayList<String> buyersString = new ArrayList<>();
+        for (Buyer b:
+                buyers) {
+            buyersString.add(b.getUsername());
+        }
+        this.buyers = buyersString;
     }
-
     public static Discount getDiscountById(String id) {
         return null;
     }

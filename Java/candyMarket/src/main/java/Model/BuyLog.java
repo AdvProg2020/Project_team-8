@@ -3,6 +3,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 public class BuyLog {
     private String address;
@@ -11,7 +12,7 @@ public class BuyLog {
     private long date;
     private int totalAmount;
     private int discountAmount;
-    private HashMap<Good,Integer> goods;
+    private HashMap<String,Integer> goods;
     private String buyerName;
     private CartSituation buySituation;
 
@@ -19,7 +20,15 @@ public class BuyLog {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
-        this.goods = goods;
+        HashMap<String,Integer> goodsString = new HashMap<>();
+        for(Map.Entry<Good, Integer> entry : goods.entrySet()) {
+            Good key = entry.getKey();
+            int value = entry.getValue();
+            goodsString.put(key.getName(),value);
+            // do what you have to do here
+            // In your case, another loop.
+        }
+        this.goods = goodsString;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.CONFIRMATION;
         this.id = ManageInfo.allBuyLogs.size();
@@ -61,8 +70,8 @@ public class BuyLog {
 
     public ArrayList<Good> getGoods() {
         ArrayList<Good> purchasedGoods = new ArrayList<>();
-        for (Good good : goods.keySet()) {
-            purchasedGoods.add(good);
+        for (String good : goods.keySet()) {
+            purchasedGoods.add(Good.getGoodByName(good,ManageInfo.allGoods));
         }
         return purchasedGoods;
     }

@@ -3,6 +3,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 public class SellLog {
     private String address;
@@ -11,15 +12,15 @@ public class SellLog {
     private long date;
     private int totalAmount;
     private int saleAmount;
-    private HashMap<Good,Integer> goods;
+    private HashMap<String,Integer> goods;
 
     {
         new HashMap<>() {
             @Override
             public String toString() {
                 String string = new String();
-                for (Good good : goods.keySet()) {
-                    string = good.getName() + ", ";
+                for (String good : goods.keySet()) {
+                    string = good + ", ";
                 }
                 return string;
             }
@@ -33,7 +34,15 @@ public class SellLog {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.saleAmount = saleAmount;
-        this.goods = goods;
+        HashMap<String,Integer> goodsString = new HashMap<>();
+        for(Map.Entry<Good, Integer> entry : goods.entrySet()) {
+            Good key = entry.getKey();
+            int value = entry.getValue();
+            goodsString.put(key.getName(),value);
+            // do what you have to do here
+            // In your case, another loop.
+        }
+        this.goods = goodsString;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.CONFIRMATION;
         this.id = ManageInfo.allBuyLogs.size();
@@ -48,7 +57,15 @@ public class SellLog {
     }
 
     public HashMap<Good, Integer> getGoods() {
-        return goods;
+        HashMap<Good,Integer> goodsOrginal = new HashMap<>();
+        for(Map.Entry<String, Integer> entry : goods.entrySet()) {
+            String key = entry.getKey();
+            int value = entry.getValue();
+            goodsOrginal.put(Good.getGoodByName(key,ManageInfo.allGoods),value);
+            // do what you have to do here
+            // In your case, another loop.
+        }
+        return goodsOrginal;
     }
 
     public String getPhoneNumber() {

@@ -26,12 +26,13 @@ public class Good {
     private String name;
     private String brand;
     private int price;
-    private ArrayList<Buyer> buyers;
+    private ArrayList<String> buyers;
     private String sellerName;
     private int stock;
-    private Category category;
+    private String category;
     private String detailInfo;
     private int averageScore;
+    private ArrayList<String> specialAttributes;
     private ArrayList<Score> scores = new ArrayList<>() {
         @Override
         public String toString() {
@@ -45,30 +46,32 @@ public class Good {
     private ArrayList<Comment> comments;
     private String image;
     private long dateCreated;
-    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image) {
+    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image,ArrayList<String> specialAttributes) {
+        this.specialAttributes = specialAttributes;
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.sellerName= seller.getUsername();
         this.stock = stock;
-        this.category = category;
+        this.category = category.getName();
+        this.situation = ItemCreationSituation.CREATING_CHECK;
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
         this.averageScore = 0;
         this.dateModified = System.currentTimeMillis();
+        this.buyers = new ArrayList<>();
         comments = new ArrayList<>();
         if (image!= null) this.image = image;
-        seller.addGood(this);
         this.dateCreated = System.currentTimeMillis();
     }
 
 
     public ArrayList<Buyer> getBuyers() {
-        return buyers;
-    }
-
-    public void setBuyers(ArrayList<Buyer> buyers) {
-        this.buyers = buyers;
+        ArrayList<Buyer> orginalBuyers = new ArrayList<>();
+        for (String buyer : buyers) {
+            orginalBuyers.add((Buyer) Buyer.getUserByUsername(buyer));
+        }
+        return orginalBuyers;
     }
 
     public int getStock() {
@@ -80,11 +83,11 @@ public class Good {
     }
 
     public Category getCategory() {
-        return category;
+        return Category.getCategoryByName(category);
     }
 
     public void setCategory(Category category) {
-        this.category = category;
+        this.category = category.getName();
     }
 
     public String getDetailInfo() {
@@ -96,7 +99,13 @@ public class Good {
     }
 
     public int getAverageScore() {
-        return averageScore;
+        if(scores.size()==0)
+            return 0;
+        int rate = 0;
+        for (Score score : scores) {
+            rate+=score.getScore();
+        }
+        return rate/scores.size();
     }
 
     public void setAverageScore(int averageScore) {
@@ -153,7 +162,7 @@ public class Good {
     }
 
     public void addBuyers(Buyer b){
-        buyers.add(b);
+        buyers.add(b.getUsername());
     }
 
     public static Good getGoodByName(String name,ArrayList<Good> goods) {
@@ -261,4 +270,11 @@ public class Good {
         return false;
     }
 
+    public ArrayList<String> getSpecialAttributes() {
+        return specialAttributes;
+    }
+
+    public void setSpecialAttributes(ArrayList<String> specialAttributes) {
+        this.specialAttributes = specialAttributes;
+    }
 }

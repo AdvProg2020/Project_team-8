@@ -1,12 +1,11 @@
 package GraphicController;
 
-import Model.Category;
-import Model.Discount;
-import Model.Good;
-import Model.ManageInfo;
+import GraphicView.MenuHandler;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -16,30 +15,41 @@ import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class CategoryManagingController implements Initializable {
-    @FXML private TableView<Category> tableView;
-    @FXML private TableColumn<Category, String> nameColumn;
-    @FXML private TableColumn<Category, String> specialAttributesColumn;
+    public Button editCategoryBtn;
+    public Button deleteCategoryBtn;
 
-    @FXML private TextField categoryNameField;
-    @FXML private TextArea specialAttributesField;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        nameColumn.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
-        specialAttributesColumn.setCellValueFactory(new PropertyValueFactory<Category, String>("specialAttributes"));
-
-        tableView.setItems(getCategories());
-
-        tableView.setEditable(true);
-        nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        specialAttributesColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-
-        tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    public TableView<Category> getTableView() {
+        return tableView;
     }
 
+    public void setTableView(TableView<Category> tableView) {
+        this.tableView = tableView;
+    }
+
+    @FXML private TableView<Category> tableView;
+    @FXML private TableColumn<Category, String> nameColumn;
+    @FXML private TableColumn<Category, ArrayList<String>> propertiesColumn;
+
+    @FXML private TextField categoryNameField;
+    private boolean editMode;
+    public static CategoryManagingController categoryManagingController;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        categoryManagingController=this;
+        nameColumn.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
+        propertiesColumn.setCellValueFactory(new PropertyValueFactory<Category, ArrayList<String>>("specialAttributes"));
+        tableView.setItems(getCategories());
+        tableView.setEditable(true);
+        nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    }
+    public String getCategoryName(){
+        return categoryNameField.getText();
+    }
     private ObservableList<Category> getCategories() {
         ObservableList<Category> categories = FXCollections.observableArrayList();
         categories.addAll(ManageInfo.allCategories);
@@ -55,22 +65,11 @@ public class CategoryManagingController implements Initializable {
 
         for (Category category: selectedRows)
         {
-            ManageInfo.allCategories.remove(category);
+            UserHandler.currentManager.removeCategory(category);
             allCategories.remove(category);
         }
     }
 
-    public void newCodeButtonPushed()
-    {
-        if (categoryNameField.getText().length() > 0) {
-            String categoryNameText = categoryNameField.getText();
-            String specialAttributesText = specialAttributesField.getText();
-
-            Category newCategory = new Category(categoryNameText, specialAttributesText);
-
-            tableView.getItems().add(newCategory);
-        }
-    }
 
     public void userClickedOnTable(MouseEvent mouseEvent) {
     }
@@ -81,8 +80,31 @@ public class CategoryManagingController implements Initializable {
         category.setName(editedCell.getNewValue());
     }
 
-    public void changeSpecialAttNameCellEvent(TableColumn.CellEditEvent<Category, String> editedCell) {
-        Category category = tableView.getSelectionModel().getSelectedItem();
-        category.setSpecialAttributes(editedCell.getNewValue());
+
+    public void newCategoryButtonPushed(ActionEvent actionEvent) {
+        editMode = false;
+        if(categoryNameField.getText().equals(""))
+            Functions.showDialog("please enter category name",true);
+        else
+            MenuHandler.createStageWithScene("CategoryAddProperties");
+    }
+
+    public void onMousePressed(MouseEvent mouseEvent) {
+        if(tableView.getSelectionModel().getSelectedItem()!=null){
+            editCategoryBtn.setDisable(false);
+            deleteCategoryBtn.setDisable(false);
+        }
+    }
+    public void editCategoryClick(ActionEvent actionEvent) {
+        editMode = true;
+        MenuHandler.createStageWithScene("CategoryAddProperties");
+    }
+
+    public boolean isEditMode() {
+        return editMode;
+    }
+
+    public void setEditMode(boolean editMode) {
+        this.editMode = editMode;
     }
 }

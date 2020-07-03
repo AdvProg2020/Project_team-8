@@ -1,0 +1,1 @@
+{"cart":{},"username":"admin","firstName":"admin","lastName":"admin","email":"admin@admin.com","phoneNumber":"+98432432","password":"admin","credit":0,"type":"MANAGER"}
