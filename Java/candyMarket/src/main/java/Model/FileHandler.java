@@ -71,26 +71,7 @@ public class FileHandler {
             ManageInfo.allUsers.add(manager);
         }
     }
-    private static void writeSellersFiles() throws IOException {
-        FileWriter writer = new FileWriter(sellersFile);
-        for (Seller seller : ManageInfo.allSellers) {
-            writer.append(sellersJson.toJson(seller) + "\n");
-        }
-        writer.close();
-    }
-    private static void loadSellersData() throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream(sellersFile);
-        Scanner fileReader = new Scanner(fileInputStream);
-        while (fileReader.hasNextLine()) {
-            Seller seller = sellersJson.fromJson(fileReader.nextLine(), Seller.class);
-            ManageInfo.allSellers.add(seller);
-            ManageInfo.allUsers.add(seller);
-            for (Good good:seller.getMyGoods()
-                 ) {
-                good = Good.getGoodByName(good.getName(),ManageInfo.allGoods);
-            }
-        }
-    }
+
     private static void writeBuyersFiles() throws IOException {
         FileWriter writer = new FileWriter(buyersFile);
         for (Buyer buyer : ManageInfo.allBuyers) {
@@ -219,6 +200,27 @@ public class FileHandler {
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
             ManageInfo.allDiscounts.add(discountsJson.fromJson(fileReader.nextLine(), Discount.class));
+        }
+    }
+
+    private static void writeSellersFiles() throws IOException {
+        FileWriter writer = new FileWriter(sellersFile);
+        for (Seller seller : ManageInfo.allSellers) {
+            writer.append(sellersJson.toJson(seller) + "\n");
+        }
+        writer.close();
+    }
+    private static void loadSellersData() throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(sellersFile);
+        Scanner fileReader = new Scanner(fileInputStream);
+        while (fileReader.hasNextLine()) {
+            Seller seller = sellersJson.fromJson(fileReader.nextLine(), Seller.class);
+            ManageInfo.allSellers.add(seller);
+            ManageInfo.allUsers.add(seller);
+            for (Good good:seller.getMyGoods()
+            ) {
+                good = Good.getGoodByName(good.getName(),ManageInfo.allGoods);
+            }
         }
     }
 

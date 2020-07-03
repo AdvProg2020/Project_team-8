@@ -40,7 +40,7 @@ public class ManagerRequestController implements Initializable {
 
     private ObservableList<Request> getRequests() {
         ObservableList<Request> requests = FXCollections.observableArrayList();
-        requests.addAll(ManageInfo.allRequests);
+        requests.addAll(Request.getUncheckedRequests());
 
         return requests;
     }
