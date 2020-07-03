@@ -14,13 +14,16 @@
             <Font name="System Bold Italic" size="21.0" />
          </font>
       </Label>
-      <Label fx:id="balance" layoutX="104.0" layoutY="77.0" text="0" />
+      <Label fx:id="balance" layoutX="104.0" layoutY="77.0" text="0">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
       <Label layoutX="14.0" layoutY="113.0" text="Discount Codes:">
          <font>
             <Font name="System Bold Italic" size="21.0" />
          </font>
       </Label>
-       <TableView fx:id="tableView" layoutX="7.0" layoutY="152.0" prefHeight="387.0" prefWidth="786.0">
+       <TableView fx:id="tableView" layoutX="7.0" layoutY="152.0" prefHeight="367.0" prefWidth="786.0">
            <columns>
                <TableColumn fx:id="codeColumn" prefWidth="136.0" text="Code" />
                <TableColumn fx:id="initialDateColumn" prefWidth="160.0" text="Initial Date" />
@@ -35,5 +38,7 @@
             <Font name="System Bold Italic" size="26.0" />
          </font>
       </Label>
+      <TextField fx:id="amountField" layoutX="400.0" layoutY="537.0" promptText="Increase Balance Amount" />
+      <Button onAction="#increaseBalance" layoutX="652.0" layoutY="537.0" mnemonicParsing="false" text="Increase" />
    </children>
 </AnchorPane>

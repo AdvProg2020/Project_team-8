@@ -70,8 +70,11 @@ public class Cart {
         return totalAmount;
     }
 
-    public static void setTotalAmount(int totalAmount1) {
-        totalAmount = totalAmount1;
+    public static void setTotalAmount() {
+        totalAmount = 0;
+        for (Good good : goods.keySet()) {
+            totalAmount += good.getPrice()*goods.get(good) ;
+        }
     }
 
     public static int getDiscountAmount() {
@@ -113,7 +116,6 @@ public class Cart {
         else
             goods.put(good, goods.get(good) + 1);
         good.setStock(good.getStock() - 1);
-        UserHandler.currentCart.setTotalAmount(UserHandler.currentCart.getTotalAmount() + good.getPriceAfterSale());
         return true;
     }
 
@@ -123,7 +125,6 @@ public class Cart {
         else
             goods.put(good,goods.get(good)-1);
         good.setStock(good.getStock()+1);
-        UserHandler.currentCart.setTotalAmount(UserHandler.currentCart.getTotalAmount()-good.getPriceAfterSale());
     }
 
     public static void createLogs(){

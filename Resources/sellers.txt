@@ -1,2 +1,0 @@
-{"myGoods":[],"mySellLog":[],"sellerCompanyName":"shahrAfroozan","balance":0,"confirmedSeller":false,"cart":{},"username":"a","firstName":"a","lastName":"a","email":"a@seller.com","phoneNumber":"+9812341","password":"a","credit":0,"type":"SELLER"}
-{"myGoods":[],"mySellLog":[],"sellerCompanyName":"bCompany","balance":0,"confirmedSeller":false,"cart":{},"username":"b","firstName":"ali","lastName":"b","email":"b@seller.com","phoneNumber":"12575621","password":"b","credit":0,"type":"SELLER"}

@@ -141,6 +141,10 @@ public class Buyer extends User {
         this.balance = balance;
     }
 
+    public void addBalance(int balance) {
+        this.balance += balance;
+    }
+
     @Override
     public String toString() {
         return username;

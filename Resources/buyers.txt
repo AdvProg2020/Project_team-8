@@ -1,2 +1,1 @@
-{"balance":0,"cart":{},"username":"a","firstName":"a","lastName":"a","email":"a@seller.com","phoneNumber":"+9812341","password":"a","credit":0,"type":"SELLER"}
-{"balance":0,"cart":{},"username":"b","firstName":"ali","lastName":"b","email":"b@seller.com","phoneNumber":"12575621","password":"b","credit":0,"type":"SELLER"}
+{"myDiscounts":[],"myLogs":[],"boughtGoods":[],"balance":3000,"toBuy":{},"cart":{},"username":"b","firstName":"b","lastName":"b","email":"b@buyer.com","phoneNumber":"123123412","password":"b","credit":0,"type":"BUYER"}
