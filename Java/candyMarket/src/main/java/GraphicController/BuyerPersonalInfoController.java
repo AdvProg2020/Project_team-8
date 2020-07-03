@@ -4,12 +4,10 @@ import Model.Discount;
 import Model.UserHandler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -26,6 +24,8 @@ public class BuyerPersonalInfoController implements Initializable {
     @FXML private TableColumn<Discount, Integer> usageTimeColumn;
 
     @FXML private Label balance;
+
+    @FXML private TextField amountField;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -49,5 +49,19 @@ public class BuyerPersonalInfoController implements Initializable {
         codes.addAll(UserHandler.currentBuyer.getMyDiscounts());
 
         return codes;
+    }
+
+    public void increaseBalance(ActionEvent actionEvent) {
+        try {
+           UserHandler.currentBuyer.addBalance(Integer.parseInt(amountField.getText()));
+           balance.setText(Integer.toString(UserHandler.currentBuyer.getBalance()));
+           Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+           alert.setContentText("Balance Increased");
+           alert.show();
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Enter A Valid Number");
+            alert.show();
+        }
     }
 }

@@ -44,6 +44,7 @@ public class CustomGoodCart extends HBox {
                 HashMap<Good, Integer> goodIntegerHashMap = Cart.getGoods();
                 goodIntegerHashMap.put(good, Cart.getGoods().get(good) + 1);
                 totalPrice.setText(Integer.toString(Cart.getGoods().get(good) * good.getPrice()));
+                CartController.cartController.setTotalPriceLabel();
                 Cart.setGoods(goodIntegerHashMap);
             }
         });
@@ -52,11 +53,12 @@ public class CustomGoodCart extends HBox {
             HashMap<Good, Integer> goodIntegerHashMap = Cart.getGoods();
             if (Cart.getGoods().get(good) - 1 == 0) {
                 goodIntegerHashMap.remove(good);
-                CartController.deleteProduct(this);
+                CartController.cartController.deleteProduct(this);
             } else {
                 goodIntegerHashMap.put(good, Cart.getGoods().get(good) - 1);
                 totalPrice.setText(Integer.toString(Cart.getGoods().get(good) * good.getPrice()));
             }
+            CartController.cartController.setTotalPriceLabel();
             Cart.setGoods(goodIntegerHashMap);
         });
         totalPrice.setText(Integer.toString(Cart.getGoods().get(good) * good.getPrice()));

@@ -16,7 +16,7 @@ public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
             "\\main\\java\\GraphicView\\";
     public static void main(String[] args) throws IOException {
-        FileHandler.getDataFromFiles();
+        //FileHandler.getDataFromFiles();
         launch(args);
         FileHandler.setDataIntoFiles();
     }
@@ -45,7 +45,7 @@ public class Main extends Application {
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
         BorderPaneController.borderPaneController.setCenter("MainMenu");
-        //debug();
+        debug();
         //test();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
@@ -54,19 +54,17 @@ public class Main extends Application {
 
     }
     private static void debug(){
-//        new Category("people",null);
-//        new Category("food",null);
-//        new Category("fruits",null);
-//        //
-//        Seller seller = new Seller("a","a","a","a@a.com","31231","a","a");
-//        new Good("Mz","MzBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
-//        new Good("Arash","ArashBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
-//        new Good("Reza","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
-//        new Good("Reza2","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
-//        new Good("Pizza","FastFood420",1000,seller,4,Category.getCategoryByName("food"),"",null);
+        new Category("people",null);
+        new Category("food",null);
+        new Category("fruits",null);
+        //
+        Seller seller = new Seller("a","a","a","a@a.com","31231","a","a");
+        new Good("Mz","MzBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Arash","ArashBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Reza","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Reza2","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
+        Cart.addGood(new Good("Pizza","FastFood420",1000,seller,4,Category.getCategoryByName("food"),"",null));
         //new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
         //BorderPaneController.borderPaneController.login("admin");
-        new Manager("admin", "a", "a" ,"s@a.com", "999999", "admin");
-        Seller seller = new Seller("b", "b", "b", "b@s.com", "6666666", "b", "salam");
     }
 }
