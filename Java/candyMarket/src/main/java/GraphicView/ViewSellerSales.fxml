@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ViewSellerSalesController">
+   <top>
+      <Label text="Show Sale" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="322.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="salePercentColumn" prefWidth="75.0" text="Sale Percent" />
+          <TableColumn fx:id="startTimeColumn" prefWidth="75.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="75.0" text="End Time" />
+            <TableColumn fx:id="productsOnSaleColumn" prefWidth="372.33331298828125" text="Products On This Sale" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+       <AnchorPane>
+      <Button layoutX="192.0" mnemonicParsing="false" text="Delete" BorderPane.alignment="CENTER" />
+         <Button layoutX="361.0" mnemonicParsing="false" text="Button" />
+       </AnchorPane>
+   </bottom>
+</BorderPane>

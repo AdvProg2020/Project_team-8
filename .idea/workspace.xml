@@ -20,21 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/SellerRequestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/SellerRequestView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/SaleSellerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ViewSellerSalesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/SaleSellerMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ViewSellerSales.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerRequestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/SellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/SellerProductHandlingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/SellerProductHandlingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ManagerRequestMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ManagerRequestMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Good.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Seller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ManagerRequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ManagerRequestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/SellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/SellerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/SellerProductHandlingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/SellerProductHandlingController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Sale.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Sale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Seller.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +55,9 @@
       <list>
         <option value="Interface" />
         <option value="CSS File" />
+        <option value="Enum" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -83,16 +92,16 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Photos" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\MainBorderPane" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
     </key>
   </component>
   <component name="RunManager">
@@ -388,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593739425784</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="debug">
+      <created>1593755411302</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1593755411302</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,10 +468,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1593093420947" />
-    <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1593743583694">
+    <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1593768316645">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1593743583694" />
+    <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1593768316645" />
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1592092051466" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
       <screen x="0" y="0" width="1280" height="683" />
@@ -465,22 +481,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.680@0.0.1280.680" timestamp="1593088346109" />
-    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593235852757">
+    <state x="418" y="210" width="445" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593755541944">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1593235852757" />
-    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593352286328">
+    <state x="418" y="210" width="445" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1593755541944" />
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593755933481">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593352286328" />
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593755933481" />
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1593086131481">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593086131481" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593739424996">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593755406895">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593739424996" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593755406895" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1593129898909" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
@@ -495,25 +511,25 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593372139005" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1593749894678">
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1593768327353">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593749894678" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593768327353" />
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1593749894678">
+    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1593768327353">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593749894678" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593768327353" />
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1593749894677">
+    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1593768327352">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593749894677" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593768327352" />
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1593749894678">
+    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1593768327353">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593749894678" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593768327353" />
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
     <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593725741596">
       <screen x="0" y="0" width="1280" height="680" />
@@ -539,15 +555,15 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1589832465283" />
-    <state x="121" y="50" key="MergeDialog" timestamp="1593739459883">
+    <state x="121" y="50" key="MergeDialog" timestamp="1593755455064">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593739459883" />
+    <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593755455064" />
     <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419472" />
-    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593739465125">
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593755460310">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593739465125" />
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593755460310" />
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419485" />
     <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
@@ -562,10 +578,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593732293761">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593755467252">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593732293761" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593755467252" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1593125982030">
       <screen x="0" y="0" width="1280" height="680" />
@@ -584,10 +600,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="347" y="44" width="742" height="606" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1593731199853" />
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593739433092">
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593755427073">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593739433092" />
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593755427073" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589841943867" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />

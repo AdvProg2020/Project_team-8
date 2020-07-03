@@ -16,7 +16,7 @@ public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
             "\\main\\java\\GraphicView\\";
     public static void main(String[] args) throws IOException {
-        //FileHandler.getDataFromFiles();
+        FileHandler.getDataFromFiles();
         launch(args);
         FileHandler.setDataIntoFiles();
     }

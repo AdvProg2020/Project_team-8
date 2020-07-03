@@ -52,7 +52,6 @@ public class Good {
         this.sellerName= seller.getUsername();
         this.stock = stock;
         this.category = category;
-        this.situation = ItemCreationSituation.CREATING_CHECK;
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
         this.averageScore = 0;

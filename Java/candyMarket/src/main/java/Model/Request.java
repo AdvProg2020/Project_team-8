@@ -19,13 +19,11 @@ public class Request {
     private String requestCommand;
     private static int lastId = 0;
     public static ArrayList<Request> sellersRequest;
-    public static ArrayList<Request> managerRequest = ManageInfo.allRequests;
 
     public Request(Request.requestType requestType) {
         this.requestState = state.CHECKING;
         this.requestType = requestType;
-        //ManageInfo.allRequests.add(this);
-        managerRequest.add(this);
+        ManageInfo.allRequests.add(this);
         this.requestId = ++lastId;
         this.stateString = "checking";
     }
@@ -128,13 +126,23 @@ public class Request {
                 ManageInfo.allGoods.add(this.getGood());
                 break;
         }
-        managerRequest.remove(this);
+        this.requestState = state.ACCEPTED;
         stateString = "accepted";
     }
 
     public void declineRequest() {
-        managerRequest.remove(this);
+        this.requestState = state.DECLINED;
         stateString = "declined";
+    }
+
+    public static ArrayList<Request> getUncheckedRequests() {
+        ArrayList<Request> uncheckedRequests = new ArrayList<>();
+        for (Request request : ManageInfo.allRequests) {
+            if (request.requestState.equals(state.CHECKING)) {
+                uncheckedRequests.add(request);
+            }
+        }
+        return uncheckedRequests;
     }
 
     public void sellerAddGood(Good good) {
@@ -163,8 +171,10 @@ public class Request {
     public static void setSellerRequest() {
         sellersRequest = new ArrayList<>();
         for (Request request : ManageInfo.allRequests) {
-            if (UserHandler.currentSeller == request.good.getSeller()) {
-                sellersRequest.add(request);
+            if (request.good != null) {
+                if (UserHandler.currentSeller == request.good.getSeller()) {
+                    sellersRequest.add(request);
+                }
             }
         }
     }
@@ -173,9 +183,6 @@ public class Request {
 
     }
     public void sellerAddSale(Sale sale) {
-
-    }
-    public void sellerEditGood(Good good) {
 
     }
 
