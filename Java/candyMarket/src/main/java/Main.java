@@ -64,7 +64,7 @@ public class Main extends Application {
         new Good("Reza","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
         new Good("Reza2","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
         Cart.addGood(new Good("Pizza","FastFood420",1000,seller,4,Category.getCategoryByName("food"),"",null));
-        //new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
+        new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
         //BorderPaneController.borderPaneController.login("admin");
     }
 }

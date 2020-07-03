@@ -12,6 +12,7 @@ public class Cart {
     private static int totalAmount = 0;
     private static int discountAmount = 0;
     private static HashMap<Good,Integer> goods = new HashMap<>();
+    private static String fxml;
 
 
     public static String getAddress() {
@@ -19,6 +20,14 @@ public class Cart {
     }
 
     public static void setAddress(String address1) { address = address1;
+    }
+
+    public static void setFxml(String fxml) {
+        Cart.fxml = fxml;
+    }
+
+    public static String getFxml() {
+        return fxml;
     }
 
     public static String getPhoneNumber() {
@@ -75,6 +84,14 @@ public class Cart {
         for (Good good : goods.keySet()) {
             totalAmount += good.getPrice()*goods.get(good) ;
         }
+    }
+
+    public static void setTotalAmountWithDiscount() {
+        totalAmount = 0;
+        for (Good good : goods.keySet()) {
+            totalAmount += good.getPrice()*goods.get(good) ;
+        }
+        totalAmount = totalAmount * ((100 - discountAmount) / 100);
     }
 
     public static int getDiscountAmount() {

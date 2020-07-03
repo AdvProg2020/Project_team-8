@@ -35,10 +35,10 @@
         </AnchorPane>
     </center>
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="600.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="990.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="cartImage" onMouseClicked="#Buying" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="profileImage" onMouseClicked="#viewProfile" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="cartImage" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#Buying" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="profileImage" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#viewProfile" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
    </top>
