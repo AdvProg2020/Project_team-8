@@ -31,7 +31,13 @@ public class SellerProductHandlingController implements Initializable {
     @FXML private TableColumn<Good, String> categoryColumn;
     @FXML private TableColumn<Good, Integer> priceColumn;
 
+    public TableView<Good> getTableView() {
+        return tableView;
+    }
 
+    public void setTableView(TableView<Good> tableView) {
+        this.tableView = tableView;
+    }
 
     @FXML private Label errorMessage;
     @FXML private Button showBuyersButton;
@@ -90,9 +96,7 @@ public class SellerProductHandlingController implements Initializable {
 
 
     public void showBuyers(ActionEvent actionEvent) {
-        Good good = tableView.getSelectionModel().getSelectedItem();
-        errorMessage.setStyle("-fx-background-color: #dbf2ff;");
-        errorMessage.setText(good.getBuyers().toString());
+       MenuHandler.createStageWithScene("ShowBuyersOfGood");
     }
 
     public Good getGood() {

@@ -7,18 +7,26 @@ public class Category {
     private String name;
     private Category subCategory;
     private ArrayList<Good> goods;
-    private String specialAttributes;
-
-    public Category(String name, String specialAttributes) {
+    private ArrayList<String> specialAttributes;
+        public Category(String name, ArrayList<String> attributes) {
         this.name = name;
-        this.specialAttributes = specialAttributes;
+        specialAttributes = new ArrayList<>(){
+            @Override
+            public String toString() {
+                String string="";
+                for (String s:
+                     this) {
+                    string+=" | "+s;
+                }
+                return string;
+            }
+        };
+        this.specialAttributes.addAll(attributes);
         ManageInfo.allCategories.add(this);
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -30,7 +38,6 @@ public class Category {
     public void setSubCategory(Category subCategory) {
         this.subCategory = subCategory;
     }
-
     public ArrayList<Good> getGoods() {
         return goods;
     }
@@ -39,11 +46,11 @@ public class Category {
         this.goods = goods;
     }
 
-    public String getSpecialAttributes() {
+    public ArrayList<String> getSpecialAttributes() {
         return specialAttributes;
     }
 
-    public void setSpecialAttributes(String specialAttributes) {
+    public void setSpecialAttributes(ArrayList<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
     }
 

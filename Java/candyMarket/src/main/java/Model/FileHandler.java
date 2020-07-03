@@ -32,13 +32,13 @@ public class FileHandler {
 
 
     public static void getDataFromFiles() throws IOException {
+        loadCategoriesData();
         loadGoodsData();
         loadManagersData();
         loadSellersData();
         loadBuyersData();
         loadSellLogsData();
         loadBuyLogsData();
-        loadCategoriesData();
         loadRequestFile();
         loadDiscountsData();
     }

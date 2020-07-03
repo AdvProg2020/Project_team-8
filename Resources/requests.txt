@@ -1,1 +1,0 @@
-{"good":{"dateModified":1593729203839,"salePercentageAmount":0,"id":0,"situation":"CREATING_CHECK","name":"c","brand":"cccc","price":10000,"sellerName":"b","stock":100,"category":{"name":"cat","specialAttributes":"hich"},"detailInfo":"aaaaaaaaaaaa","averageScore":0,"scores":[],"dateCreated":1593729203839},"requestId":1,"requestCommand":"Add product"}

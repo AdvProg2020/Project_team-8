@@ -52,13 +52,21 @@ public class Main extends Application {
         //else
     }
     private static void test(){
-
+        System.out.println(ManageInfo.allGoods.get(0).getCategory());
     }
     private static void addSellerAndStuff(){
-        Seller seller = new Seller("kirFurush","kir","kir","s@s.com","31231","kir","kirCompany");
-        new Category("KosSher",null);
-        new Good("kir","kirBrand",10,seller,1,Category.getCategoryByName("kosSher"),"kirrrrrrr",null);
-        new Good("kir2","kirBrand",20,seller,1,Category.getCategoryByName("kosSher"),"kirrrrrrr",null);
+        Seller seller = new Seller("a","a","a","a@a.com","31231","a","a");
+        ManageInfo.allSellers.add(seller);
+        ManageInfo.allUsers.add(seller);
+        ArrayList<String> attributes = new ArrayList<>();
+        attributes.add("weight");
+        Category category = new Category("food",attributes);
+        attributes.clear();
+        attributes.add("50");
+        Good good = new Good("a","a",2,seller,2,category,"dsadsasad",null,attributes);
+        ManageInfo.allGoods.add(good);
+        seller.addGood(good);
+        //System.out.println(ManageInfo.allGoods.get(0).getCategory());
     }
     private static void addItemsFirstStart(){
         new Category("people",null);
@@ -66,11 +74,13 @@ public class Main extends Application {
         new Category("fruits",null);
         //
         Seller seller = new Seller("a","a","a","a@a.com","31231","a","a");
-        new Good("Mz","MzBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
-        new Good("Arash","ArashBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
-        new Good("Reza","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
-        new Good("Reza2","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
-        new Good("Pizza","FastFood420",1000,seller,4,Category.getCategoryByName("food"),"",null);
+        ManageInfo.allSellers.add(seller);
+        ManageInfo.allUsers.add(seller);
+        new Good("Mz","MzBrand",100,seller,1,Category.getCategoryByName("people"),"",null,null);
+        new Good("Arash","ArashBrand",100,seller,1,Category.getCategoryByName("people"),"",null,null);
+        new Good("Reza","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null,null);
+        new Good("Reza2","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null,null);
+        new Good("Pizza","FastFood420",1000,seller,4,Category.getCategoryByName("food"),"",null,null);
         new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
         BorderPaneController.borderPaneController.login("admin");
     }

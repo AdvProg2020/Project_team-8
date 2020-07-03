@@ -29,9 +29,10 @@ public class Good {
     private ArrayList<Buyer> buyers;
     private String sellerName;
     private int stock;
-    private Category category;
+    private String category;
     private String detailInfo;
     private int averageScore;
+    private ArrayList<String> specialAttributes;
     private ArrayList<Score> scores = new ArrayList<>() {
         @Override
         public String toString() {
@@ -45,18 +46,20 @@ public class Good {
     private ArrayList<Comment> comments;
     private String image;
     private long dateCreated;
-    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image) {
+    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image,ArrayList<String> specialAttributes) {
+        this.specialAttributes = specialAttributes;
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.sellerName= seller.getUsername();
         this.stock = stock;
-        this.category = category;
+        this.category = category.getName();
         this.situation = ItemCreationSituation.CREATING_CHECK;
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
         this.averageScore = 0;
         this.dateModified = System.currentTimeMillis();
+        this.buyers = new ArrayList<>();
         comments = new ArrayList<>();
         if (image!= null) this.image = image;
         this.dateCreated = System.currentTimeMillis();
@@ -80,11 +83,11 @@ public class Good {
     }
 
     public Category getCategory() {
-        return category;
+        return Category.getCategoryByName(category);
     }
 
     public void setCategory(Category category) {
-        this.category = category;
+        this.category = category.getName();
     }
 
     public String getDetailInfo() {
@@ -261,4 +264,11 @@ public class Good {
         return false;
     }
 
+    public ArrayList<String> getSpecialAttributes() {
+        return specialAttributes;
+    }
+
+    public void setSpecialAttributes(ArrayList<String> specialAttributes) {
+        this.specialAttributes = specialAttributes;
+    }
 }

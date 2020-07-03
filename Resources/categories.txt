@@ -1,3 +1,1 @@
-{"name":"people"}
-{"name":"food"}
-{"name":"fruits"}
+{"name":"food","specialAttributes":["weight"]}

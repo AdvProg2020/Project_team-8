@@ -34,16 +34,8 @@ public class ProductsManagingController implements Initializable {
         priceColumn.setCellValueFactory(new PropertyValueFactory<Good, Integer>("price"));
         tableView.setItems(getClients());
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        setGoodImg();
     }
 
-    private void setGoodImg() {
-        //if notnull
-        //........
-        //if null
-        Image image = new Image(PathHandler.withoutImageUrl);
-        goodImg.setImage(image);
-    }
     public ObservableList<Good> getClients()
     {
         ObservableList<Good> goods = FXCollections.observableArrayList();
