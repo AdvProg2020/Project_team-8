@@ -17,7 +17,7 @@ public class CustomGoodBox extends VBox {
     Label priceLBL;
     //Rating ratingBAR;
     Label scoreLBL;
-    public  CustomGoodBox(String name,int score,int price,Image image){
+    public CustomGoodBox(String name,int score,int price,Image image){
         photoIMG = new ImageView();
         photoIMG.setFitWidth(100);
         photoIMG.setFitHeight(100);
@@ -44,7 +44,7 @@ public class CustomGoodBox extends VBox {
         } catch (MalformedURLException e) {
             System.out.println("invalidPath");;
         }
-        photoIMG.setImage(new Image(url));
+        photoIMG.setImage(new Image(PathHandler.withoutImageUrl));
         nameLBL.setText("GoodName : "+name);
         priceLBL.setText("Price : "+String.valueOf(price));
         scoreLBL.setText("Score : "+String.valueOf(score));

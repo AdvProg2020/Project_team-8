@@ -1,25 +1,23 @@
 package Model;
 
-import java.nio.channels.SelectableChannel;
 import java.util.ArrayList;
 
 public class Request {
-    public enum requestType{
-        CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE,ADD_COMMENT
+    public static enum requestType{
+        CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
     }
-    public requestType requestType;
-    public static requestType type;
+    public static requestType requestType;
     private Good good;
     private Sale sale;
     private int requestId;
     private Seller seller;
-    private String request;
-    public static ArrayList<Request> requests = ManageInfo.allRequests;
+    private String requestCommand;
+    private static int lastId = 0;
 
     public Request(Request.requestType requestType) {
         this.requestType = requestType;
-        requests.add(this);
-        this.requestId = requests.size();
+        ManageInfo.allRequests.add(this);
+        this.requestId = lastId++;
     }
 
     public Good getGood() {
@@ -38,12 +36,12 @@ public class Request {
         return seller;
     }
 
-    public String getRequest() {
-        return request;
+    public String getRequestCommand() {
+        return requestCommand;
     }
 
     public void createRegisterSellerRequest(Seller seller) {
-        this.request = "register seller";
+        this.requestCommand = "Register seller";
         this.seller = seller;
     }
 
@@ -55,43 +53,36 @@ public class Request {
     }
 
     public void createAddProductRequest(Good good) {
-        this.request = "add product";
+        this.requestCommand = "Add product";
         this.good = good;
     }
 
-    public static String viewDetails(Request request) {
-        System.out.println(requests.toString());
-        switch (request.requestType) {
+    public String viewInfo() {
+        switch (this.requestType) {
             case SELLER_REGISTER:
-                return request.viewSellerRegisterDetails();
+                return this.viewSellerRegisterDetails();
             case CREATE_GOOD:
-                return request.viewAddProductDetail();
+                return this.viewAddProductDetail();
         }
-
         return null;
     }
 
     public void acceptRequest() {
         switch (this.requestType) {
             case SELLER_REGISTER:
-                this.getSeller().confirmSeller();
+                ManageInfo.allSellers.add(this.getSeller());
+                ManageInfo.allUsers.add(this.getSeller());
                 break;
             case CREATE_GOOD:
-                this.getGood().confirmProduct();
+                ManageInfo.allGoods.add(this.getGood());
+                this.getGood().getSeller().addGood(this.getGood());
+                break;
         }
-        requests.remove(this);
+        ManageInfo.allRequests.remove(this);
     }
 
     public void declineRequest() {
-        switch (this.requestType) {
-            case SELLER_REGISTER:
-                ManageInfo.allUsers.remove(this.getSeller());
-                break;
-            case CREATE_GOOD:
-                Good.unconfirmedGoods.remove(this.getGood());
-                break;
-        }
-        requests.remove(this);
+        ManageInfo.allRequests.remove(this);
     }
 
     public void sellerAddGood(Good good) {
@@ -102,7 +93,7 @@ public class Request {
 
     }
     public static Boolean isThereRequestWithId(int id){
-        for (Request request : requests) {
+        for (Request request : ManageInfo.allRequests) {
             if (request.requestId == id)
                 return true;
         }
@@ -110,7 +101,7 @@ public class Request {
     }
 
     public static Request getRequestById(int requestId){
-        for (Request request : requests) {
+        for (Request request : ManageInfo.allRequests) {
             if (request.requestId == requestId)
                 return request;
         }

@@ -19,29 +19,6 @@ public class Manager extends User {
         return false;
     }
 
-    public static ArrayList<String> viewAllUsers() {
-        ArrayList<String> allUsers = new ArrayList<>();
-        for (User user : ManageInfo.allUsers) {
-            allUsers.add(user.getUsername());
-        }
-        return allUsers;
-    }
-
-    public static String viewUser(String username) {
-        return User.getUserByUsername(username).viewUserPersonalInfo() + User.getUserByUsername(username).getType() + "\n";
-    }
-
-    public static void deleteUser(String username) {
-        ManageInfo.allUsers.remove(User.getUserByUsername(username));
-    }
-
-    public static HashMap<Integer, String> viewAllRequests() {
-        HashMap<Integer, String> requests = new HashMap<>();
-        for (Request request : Request.requests) {
-            requests.put(request.getRequestId(), request.getRequest());
-        }
-        return requests;
-    }
 
     public ArrayList<String> viewAllGoods() {
         return null;
@@ -56,41 +33,6 @@ public class Manager extends User {
     }
 
     private void setUsersWhoGetDiscount(Discount discount) {
-
-    }
-
-    public ArrayList<String> viewAllDiscountCodes() {
-        return null;
-    }
-
-    public ArrayList<String> viewDiscountCode(String code) {
-        return null;
-    }
-
-    public void editDiscountCode(String code) {
-
-    }
-
-    public void removeDiscountCode(String code) {
-
-    }
-
-
-
-    public static ArrayList<String> viewAllCategories() {
-        ArrayList<String> categoriesName = new ArrayList<>();
-        for (Category category : ManageInfo.allCategories) {
-            categoriesName.add(category.getName());
-        }
-        return categoriesName;
-    }
-
-    public void editCategory(Category category) {
-
-    }
-
-
-    public void removeCategory(Category category) {
 
     }
 

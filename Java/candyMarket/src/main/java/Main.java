@@ -33,9 +33,9 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        MenuHandler.currentWindow.setMinHeight(700);
+        MenuHandler.currentWindow.setMinHeight(600);
         MenuHandler.currentWindow.setMinWidth(1200);
-        MenuHandler.currentWindow.setMaxHeight(700);
+        MenuHandler.currentWindow.setMaxHeight(600);
         MenuHandler.currentWindow.setMaxWidth(1200);
         MenuHandler.currentWindow.setTitle("Menu");
         MenuHandler.currentScene = new Scene(root, 300, 200);
@@ -45,20 +45,26 @@ public class Main extends Application {
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
         BorderPaneController.borderPaneController.setCenter("MainMenu");
-        debug();
+        //debug();
+        //test();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
+    }
+    private static void test(){
+
     }
     private static void debug(){
         new Category("people",null);
         new Category("food",null);
         new Category("fruits",null);
-        new Good("Arash","ArashBrand",100,null,1,Category.getCategoryByName("people"),"");
-        new Good("Reza","RezaBrand",200,null,1,Category.getCategoryByName("people"),"");
-        new Good("Reza2","RezaBrand",200,null,1,Category.getCategoryByName("people"),"");
-        Cart.addGood(new Good("Mz","MzBrand",100,null,4,Category.getCategoryByName("people"),""));
-        Cart.addGood(new Good("Pizza","FastFood420",1000,null,4,Category.getCategoryByName("food"),""));
-        //new Manager("admin", "kin", "gro", "k@gmail.com","+98142", "admin");
+        //
+        Seller seller = new Seller("a","a","a","a@a.com","31231","a","a");
+        new Good("Mz","MzBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Arash","ArashBrand",100,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Reza","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Reza2","RezaBrand",200,seller,1,Category.getCategoryByName("people"),"",null);
+        new Good("Pizza","FastFood420",1000,seller,4,Category.getCategoryByName("food"),"",null);
+        //new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
         //BorderPaneController.borderPaneController.login("admin");
     }
 }

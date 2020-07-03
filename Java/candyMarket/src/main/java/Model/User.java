@@ -1,8 +1,18 @@
 package Model;
 
+import javafx.scene.image.Image;
+
 import java.util.ArrayList;
 
 public class User {
+    public String getUserPhoto() {
+        return userPhoto;
+    }
+
+    public void setUserPhoto(String userPhoto) {
+        this.userPhoto = userPhoto;
+    }
+
     public enum UserType {
         BUYER, SELLER, MANAGER
     }
@@ -15,6 +25,7 @@ public class User {
     protected String password;
     private int credit;
     private UserType type;
+    private String userPhoto;
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         this.username = userName;
         this.firstName = firstName;
@@ -23,9 +34,6 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.password = passWord;
     }
-   public User(){
-
-   }
 
     public static ArrayList<User> getUsers() {
         return ManageInfo.allUsers;

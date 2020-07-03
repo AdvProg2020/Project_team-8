@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -120,8 +121,9 @@ public class ViewGoodsController implements Initializable {
              goods) {
             CustomGoodBox goodBox;
             if(g.hasImage()) {
-                goodBox = new CustomGoodBox(g.getName(), g.getAverageScore(), g.getPrice(), g.getImage());
+                goodBox = new CustomGoodBox(g.getName(), g.getAverageScore(), g.getPrice(), new Image(g.getImage()));
             }
+
             else goodBox = new CustomGoodBox(g.getName(), g.getAverageScore(), g.getPrice());
             customGoodBoxes.add(goodBox);
         }

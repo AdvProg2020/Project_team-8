@@ -17,6 +17,7 @@ public class FileHandler {
     private static Gson requestsJson = new Gson();
     private static Gson goodsJson = new Gson();
     private static Gson discountsJson = new Gson();
+    private static Gson sellersJson = new Gson();
     private static File managersFile = new File("Resources\\managers.txt");
     private static File buyersFile = new File("Resources\\buyers.txt");
     private static File sellersFile = new File("Resources\\sellers.txt");
@@ -31,6 +32,7 @@ public class FileHandler {
 
 
     public static void getDataFromFiles() throws IOException {
+        loadGoodsData();
         loadManagersData();
         loadSellersData();
         loadBuyersData();
@@ -39,7 +41,6 @@ public class FileHandler {
         loadCategoriesData();
         loadBrandsData();
         loadRequestFile();
-        loadGoodsData();
         loadDiscountsData();
     }
 
@@ -75,7 +76,7 @@ public class FileHandler {
     private static void writeSellersFiles() throws IOException {
         FileWriter writer = new FileWriter(sellersFile);
         for (Seller seller : ManageInfo.allSellers) {
-            writer.append(usersJson.toJson(seller) + "\n");
+            writer.append(sellersJson.toJson(seller) + "\n");
         }
         writer.close();
     }
@@ -83,9 +84,13 @@ public class FileHandler {
         FileInputStream fileInputStream = new FileInputStream(sellersFile);
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
-            Seller seller = usersJson.fromJson(fileReader.nextLine(), Seller.class);
+            Seller seller = sellersJson.fromJson(fileReader.nextLine(), Seller.class);
             ManageInfo.allSellers.add(seller);
             ManageInfo.allUsers.add(seller);
+            for (Good good:seller.getMyGoods()
+                 ) {
+                good = Good.getGoodByName(good.getName(),ManageInfo.allGoods);
+            }
         }
     }
     private static void writeBuyersFiles() throws IOException {
@@ -204,7 +209,7 @@ public class FileHandler {
     private static void writeGoods() throws IOException {
         FileWriter writer = new FileWriter(goodsFile);
         for (Good good : ManageInfo.allGoods) {
-            writer.append(requestsJson.toJson(good) + "\n");
+            writer.append(goodsJson.toJson(good) + "\n");
         }
         writer.close();
     }
@@ -222,7 +227,7 @@ public class FileHandler {
     private static void writeDiscounts() throws IOException {
         FileWriter writer = new FileWriter(discountsFile);
         for (Discount discount : ManageInfo.allDiscounts) {
-            writer.append(requestsJson.toJson(discount) + "\n");
+            writer.append(discountsJson.toJson(discount) + "\n");
         }
         writer.close();
     }
