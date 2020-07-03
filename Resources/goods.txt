@@ -1,0 +1,1 @@
+{"dateModified":1593772748012,"salePercentageAmount":0,"id":0,"situation":"CREATING_CHECK","name":"rea","brand":"rezaBrand","price":200,"buyers":[],"sellerName":"s","stock":1,"category":"People","detailInfo":"dsadsa","averageScore":0,"specialAttributes":["43","34"],"scores":[],"comments":[],"dateCreated":1593772748012}

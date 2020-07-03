@@ -18,8 +18,17 @@ public class Manager extends User {
             return true;
         return false;
     }
-
-
+    public void removeCategory(Category category){
+        for (Good good:
+                ManageInfo.allGoods) {
+            if(good.getCategory() == category) {
+                Seller seller = good.getSeller();
+                seller.removeProduct(good);
+                ManageInfo.allGoods.remove(good);
+            }
+        }
+        ManageInfo.allCategories.remove(category);
+    }
     public ArrayList<String> viewAllGoods() {
         return null;
     }

@@ -1,22 +1,22 @@
 package Model;
 
 public class Score {
-    private Buyer user;
+    private String user;
     private int score;
-    private Good good;
+    private String good;
 
     public Score(Buyer user, int score, Good good) {
-        this.user = user;
+        this.user = user.getUsername();
         this.score = score;
-        this.good = good;
+        this.good = good.getName();
     }
 
-    public User getUser() {
-        return user;
+    public Buyer getUser() {
+        return (Buyer) Buyer.getUserByUsername(user);
     }
 
     public void setUser(Buyer user) {
-        this.user = user;
+        this.user = user.getUsername();
     }
 
     public int getScore() {
@@ -28,10 +28,9 @@ public class Score {
     }
 
     public Good getGood() {
-        return good;
+        return Good.getGoodByName(good,ManageInfo.allGoods);
     }
-
     public void setGood(Good good) {
-        this.good = good;
+        this.good = good.getName();
     }
 }

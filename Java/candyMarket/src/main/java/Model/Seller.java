@@ -16,8 +16,6 @@ public class Seller extends User {
         this.setType(UserType.SELLER);
         this.mySellLog = new ArrayList<>();
         this.myGoods = new ArrayList<>();
-        ManageInfo.allSellers.add(this);
-        ManageInfo.allUsers.add(this);
     }
     public void addMySellLog(SellLog sellLog){
         mySellLog.add(sellLog);
@@ -132,6 +130,15 @@ public class Seller extends User {
 
     public void removeProduct(Good good) {
         myGoods.remove(good);
+    }
+    public static ArrayList<String> getAllBrands(){
+        ArrayList<String> brands = new ArrayList<>();
+        for (Good good:
+             ManageInfo.allGoods) {
+            if(!brands.contains(good.getBrand()))
+                brands.add(good.getBrand());
+        }
+        return brands;
     }
 
 }

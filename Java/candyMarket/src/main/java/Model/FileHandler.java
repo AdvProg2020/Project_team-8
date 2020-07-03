@@ -32,14 +32,13 @@ public class FileHandler {
 
 
     public static void getDataFromFiles() throws IOException {
+        loadCategoriesData();
         loadGoodsData();
         loadManagersData();
         loadSellersData();
         loadBuyersData();
         loadSellLogsData();
         loadBuyLogsData();
-        loadCategoriesData();
-        loadBrandsData();
         loadRequestFile();
         loadDiscountsData();
     }
@@ -51,7 +50,6 @@ public class FileHandler {
         writeSellLog();
         writeBuyLog();
         writeCategories();
-        writeBrands();
         writeRequest();
         writeGoods();
         writeDiscounts();
@@ -101,7 +99,7 @@ public class FileHandler {
         writer.close();
     }
     private static void loadBuyersData() throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream(sellersFile);
+        FileInputStream fileInputStream = new FileInputStream(buyersFile);
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
             Buyer buyer = usersJson.fromJson(fileReader.nextLine(), Buyer.class);
@@ -171,22 +169,6 @@ public class FileHandler {
         Scanner fileReader = new Scanner(fileInputStream);
         while (fileReader.hasNextLine()) {
             ManageInfo.allCategories.add(categoriesJson.fromJson(fileReader.nextLine(), Category.class));
-        }
-    }
-
-    private static void writeBrands() throws IOException {
-        FileWriter writer = new FileWriter(brandsFile);
-        for (String brand : ManageInfo.allBrands) {
-            writer.append(brandsJson.toJson(brand) + "\n");
-        }
-        writer.close();
-    }
-
-    private static void loadBrandsData() throws FileNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream(brandsFile);
-        Scanner fileReader = new Scanner(fileInputStream);
-        while (fileReader.hasNextLine()) {
-            ManageInfo.allBrands.add(brandsJson.fromJson(fileReader.nextLine(), String.class));
         }
     }
 
