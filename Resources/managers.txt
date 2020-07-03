@@ -1,1 +1,1 @@
-{"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"admin","firstName":"a","lastName":"a","email":"a@s.com","phoneNumber":"+98111111","password":"admin","credit":0,"type":"MANAGER"}
+{"cart":{"totalAmount":0,"discountAmount":0,"goods":{}},"username":"admin","firstName":"a","lastName":"a","email":"a@l.com","phoneNumber":"+981111111","password":"admin","credit":0,"type":"MANAGER"}

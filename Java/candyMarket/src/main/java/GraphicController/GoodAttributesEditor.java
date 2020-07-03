@@ -37,6 +37,7 @@ public class GoodAttributesEditor implements Initializable {
         if(SellerProductHandlingController.sellerProductHandlingController.getCurrentGood() != null){
             good = SellerProductHandlingController.sellerProductHandlingController.getCurrentGood();
             nameField.setText(good.getName());
+            nameField.setDisable(true);
             brandField.setText(good.getBrand());
             priceField.setText(Integer.toString(good.getPrice()));
             stockField.setText(Integer.toString(good.getStock()));
@@ -70,13 +71,7 @@ public class GoodAttributesEditor implements Initializable {
                     good = new Good(nameText, brandText, priceText, UserHandler.currentSeller, stockText, categoryValue, detailText, photoUrl);
                     new Request(Request.requestType.CREATE_GOOD).createAddProductRequest(good);
                 } else {
-                    good.setName(nameText);
-                    good.setBrand(brandText);
-                    good.setPrice(priceText);
-                    good.setStock(stockText);
-                    good.setDetailInfo(detailText);
-                    good.setCategory(categoryValue);
-                    good.setImage(photoUrl);
+                    new Request(Request.requestType.EDIT_GOOD).createEditProductRequest(new Good(good.getName(), brandText, priceText, good.getSeller(), stockText, categoryValue, detailText, photoUrl));
                 }
                 Functions.showDialog("your request has been sent",false);
             }

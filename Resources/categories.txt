@@ -1,1 +1,1 @@
-{"name":"cat","specialAttributes":"hich"}
+{"name":"category1","specialAttributes":"ffff"}

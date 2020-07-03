@@ -17,7 +17,7 @@ public class Request {
     public Request(Request.requestType requestType) {
         this.requestType = requestType;
         ManageInfo.allRequests.add(this);
-        this.requestId = lastId++;
+        this.requestId = ++lastId;
     }
 
     public Good getGood() {
@@ -57,11 +57,18 @@ public class Request {
         this.good = good;
     }
 
+    public void createEditProductRequest(Good good) {
+        this.requestCommand = "Edit product";
+        this.good = good;
+    }
+
     public String viewInfo() {
         switch (this.requestType) {
             case SELLER_REGISTER:
                 return this.viewSellerRegisterDetails();
             case CREATE_GOOD:
+                return this.viewAddProductDetail();
+            case EDIT_GOOD:
                 return this.viewAddProductDetail();
         }
         return null;
@@ -76,6 +83,20 @@ public class Request {
             case CREATE_GOOD:
                 ManageInfo.allGoods.add(this.getGood());
                 this.getGood().getSeller().addGood(this.getGood());
+                break;
+            case EDIT_GOOD:
+                Good goodToBeRemoved = null;
+                for (Good good : ManageInfo.allGoods) {
+                    if (good.getName().equals(this.getGood().getName())) {
+                        goodToBeRemoved = good;
+                    }
+                }
+                ManageInfo.allGoods.remove(goodToBeRemoved);
+                goodToBeRemoved.getSeller().getMyGoods().add(this.getGood());
+                ArrayList<Good> goods = goodToBeRemoved.getSeller().getMyGoods();
+                goods.remove(goodToBeRemoved);
+                goodToBeRemoved.getSeller().setMyGoods(goods);
+                ManageInfo.allGoods.add(this.getGood());
                 break;
         }
         ManageInfo.allRequests.remove(this);
