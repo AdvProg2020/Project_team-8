@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.DiscountCodeManagingController">
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.DiscountCodeManagingController">
     <children>
         <VBox alignment="TOP_CENTER" layoutX="7.0" layoutY="22.0" prefHeight="573.0" prefWidth="786.0" spacing="10.0">
             <children>
@@ -17,7 +17,7 @@
                         <Font name="System Bold Italic" size="18.0" />
                     </font>
                 </Label>
-                <TableView fx:id="tableView" onMouseClicked="#userClickedOnTable" prefHeight="286.0" prefWidth="786.0">
+                <TableView fx:id="tableView" onMouseClicked="#userClickedOnTable" prefHeight="273.0" prefWidth="786.0">
                     <columns>
                         <TableColumn fx:id="codeColumn" prefWidth="136.0" text="Code" />
                         <TableColumn fx:id="initialDateColumn" prefWidth="160.0" text="Initial Date" />
@@ -27,14 +27,14 @@
                         <TableColumn fx:id="usageTimeColumn" prefWidth="75.0" text="HMT" />
                     </columns>
                 </TableView>
-            <HBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="786.0" spacing="40.0">
+            <HBox alignment="TOP_CENTER" prefHeight="44.0" prefWidth="786.0" spacing="40.0">
                <children>
                    <TextField fx:id="codeField" prefWidth="175.0" promptText="code" />
                    <DatePicker fx:id="initializeDatePicker" prefWidth="175.0" promptText="Initialize Date" />
                    <DatePicker fx:id="endDatePicker" prefWidth="175.0" promptText="End Date" />
                </children>
             </HBox>
-                <HBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="786.0" spacing="40.0">
+                <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="786.0" spacing="40.0">
                    <children>
                        <TextField fx:id="percentageField" prefWidth="175.0" promptText="Percentage" />
                        <TextField fx:id="maxAmountField" prefWidth="175.0" promptText="Max Discount Amount" />
@@ -42,11 +42,11 @@
                    </children>
                 </HBox>
             <HBox />
-                <HBox alignment="TOP_CENTER" prefHeight="68.0" prefWidth="786.0" spacing="70.0">
+                <HBox alignment="TOP_CENTER" prefHeight="43.0" prefWidth="786.0" spacing="70.0">
                     <children>
                         <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Code(s) " />
-                        <Button onAction="#newCodeButtonPushed" mnemonicParsing="false" text="Add new Discount Code" />
-                        <Button fx:id="detailedDiscountViewButton" mnemonicParsing="false" text="Editing" onMouseClicked="#editingOnClick" />
+                        <Button mnemonicParsing="false" onAction="#newCodeButtonPushed" text="Add new Discount Code" />
+                        <Button fx:id="detailedDiscountViewButton" mnemonicParsing="false" onMouseClicked="#editingOnClick" text="Editing" />
                     </children>
                 </HBox>
             </children>

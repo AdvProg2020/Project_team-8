@@ -33,9 +33,9 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        MenuHandler.currentWindow.setMinHeight(700);
+        MenuHandler.currentWindow.setMinHeight(650);
         MenuHandler.currentWindow.setMinWidth(1200);
-        MenuHandler.currentWindow.setMaxHeight(700);
+        MenuHandler.currentWindow.setMaxHeight(650);
         MenuHandler.currentWindow.setMaxWidth(1200);
         MenuHandler.currentWindow.setTitle("Menu");
         MenuHandler.currentScene = new Scene(root, 300, 200);

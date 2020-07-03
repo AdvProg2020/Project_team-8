@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" onMousePressed="#onMousePressed" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.CategoryManagingController">
+<AnchorPane id="AnchorPane" onMousePressed="#onMousePressed" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.CategoryManagingController">
     <children>
         <VBox alignment="TOP_CENTER" layoutX="165.0" layoutY="22.0" prefHeight="573.0" prefWidth="628.0" spacing="10.0">
             <children>

@@ -32,6 +32,7 @@ public class RegisterMenuController extends CustomBorderPaneMenus implements Ini
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         stepType = step.GETUSERINFO;
+        errorMessage.setStyle("-fx-background-color: #ff0000");
         errorMessage.setText("");
         registerMenuController = this;
     }

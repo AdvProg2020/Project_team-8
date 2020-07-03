@@ -36,6 +36,8 @@ public class ShowUserAttributes implements Initializable {
         if(isSeller) {
             CompanyLBL.setVisible(true);
             CompanyLBL.setText(RegisterMenuController.registerMenuController.companyName);
+        }else {
+            CompanyLBL.setVisible(false);
         }
     }
 }
