@@ -39,6 +39,11 @@ public class PayController implements Initializable {
                 if (discount.getCode() == codeText) {
                     Cart.setDiscountAmount(discount.getPercentReduction());
                     Cart.setTotalAmountWithDiscount();
+                    discount.setUsageNumber(discount.getUsageNumber() - 1);
+                    if (discount.getUsageNumber() == 0) {
+                        ManageInfo.allDiscounts.remove(discount);
+                        UserHandler.currentBuyer.removeDiscount(discount);
+                    }
                     totalAmountLabel.setText(Integer.toString(Cart.getTotalAmount()));
                     discountBtn.setDisable(true);
                     discountField.setDisable(true);

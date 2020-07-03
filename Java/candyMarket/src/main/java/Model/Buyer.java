@@ -112,6 +112,10 @@ public class Buyer extends User {
         good.setScores(scores);
     }
 
+    public void removeDiscount(Discount discount) {
+        myDiscounts.remove(discount);
+    }
+
     public String viewBuyerBalance() {
         return null;
     }

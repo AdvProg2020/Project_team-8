@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="add client details for manager page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BorderPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BorderPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/LoginMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/LoginMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ShowUserAttributes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ShowUserAttributes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,12 +336,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="make runnable" />
