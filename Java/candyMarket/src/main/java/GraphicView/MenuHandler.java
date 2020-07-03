@@ -47,7 +47,7 @@ public class MenuHandler {
         Stage stage = new Stage();
         secondCurrentWindow = stage;
         stage.setTitle("My New Stage Title");
-        stage.setScene(new Scene(root, 450, 450));
+        stage.setScene(new Scene(root, 800, 600));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();
     }
@@ -62,9 +62,11 @@ public class MenuHandler {
     public static Button discountManagingBtn;
     public static Button categoryManagingBtn;
     public static Button viewBuyerPersonalInfoBtn;
+    public static Button viewBuyerBuyLogBtn;
     public static Button viewSellerPersonalInfoBtn;
     public static Button sellerProductManagingBtn;
     public static Button requestsBtn;
+    public static Button sellerRequestsBtn;
 
     public static void createButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
@@ -90,11 +92,13 @@ public class MenuHandler {
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
         categoryManagingBtn = new CustomButton("CategoryManaging","CategoryManaging");
         viewBuyerPersonalInfoBtn = new CustomButton("ViewPersonalInfo","BuyerPersonalInfo");
+        viewBuyerBuyLogBtn = new CustomButton("PurchasedProducts", "PurchasedProducts");
         viewSellerPersonalInfoBtn = new CustomButton("ViewPersonalInfo","SellerPersonalInfo");
         sellerProductManagingBtn = new CustomButton("ProductManaging","SellerProductHandling");
         requestsBtn = new CustomButton("Requests", "ManagerRequestMenu");
+        sellerRequestsBtn = new CustomButton("Requests", "SellerRequestView");
     }
-    private static void clientMenuBtnOnClick(){
+    public static void clientMenuBtnOnClick(){
         if(UserHandler.isLogeIn())
         {
             if(UserHandler.getCurrentUser().isManager())

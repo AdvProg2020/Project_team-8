@@ -12,6 +12,20 @@ public class SellLog {
     private int totalAmount;
     private int saleAmount;
     private HashMap<Good,Integer> goods;
+
+    {
+        new HashMap<>() {
+            @Override
+            public String toString() {
+                String string = new String();
+                for (Good good : goods.keySet()) {
+                    string = good.getName() + ", ";
+                }
+                return string;
+            }
+        };
+    }
+
     private String buyerName;
     private CartSituation buySituation;
 
@@ -25,6 +39,25 @@ public class SellLog {
         this.id = ManageInfo.allBuyLogs.size();
     }
 
+    public String getBuyerName() {
+        return buyerName;
+    }
+
+    public int getSaleAmount() {
+        return saleAmount;
+    }
+
+    public HashMap<Good, Integer> getGoods() {
+        return goods;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
 
     public int getTotalAmount() {
         return totalAmount;

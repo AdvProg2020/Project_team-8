@@ -75,6 +75,7 @@
         <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -365,7 +366,56 @@
       <option name="project" value="LOCAL" />
       <updated>1593129900262</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="debug">
+      <created>1593732283040</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1593732283040</updated>
+    </task>
+    <task id="LOCAL-00028" summary="debug">
+      <created>1593739194797</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1593739194797</updated>
+    </task>
+    <task id="LOCAL-00029" summary="debug">
+      <created>1593739242368</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1593739242368</updated>
+    </task>
+    <task id="LOCAL-00030" summary="debug">
+      <created>1593739298476</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1593739298476</updated>
+    </task>
+    <task id="LOCAL-00031" summary="debug">
+      <created>1593739328639</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1593739328639</updated>
+    </task>
+    <task id="LOCAL-00032" summary="debug">
+      <created>1593739391645</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1593739391645</updated>
+    </task>
+    <task id="LOCAL-00033" summary="debug">
+      <created>1593739425784</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1593739425784</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,15 +502,19 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593086131481" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593040742508">
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593739424996">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593739424996" />
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1593129898909" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="395" y="55" key="DetectedRootsChooserDialog/0.0.1280.683@0.0.1280.683" timestamp="1592071705791" />
+    <state x="0" y="50" key="DiffContextDialog" timestamp="1593739296029">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="50" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1593739296029" />
     <state x="421" y="68" key="FileChooserDialogImpl" timestamp="1593372139005">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -510,15 +564,15 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1589832465283" />
-    <state x="121" y="50" key="MergeDialog" timestamp="1593034046263">
+    <state x="121" y="50" key="MergeDialog" timestamp="1593739459883">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046263" />
+    <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593739459883" />
     <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419472" />
-    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593034046273">
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593739465125">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046273" />
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593739465125" />
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419485" />
     <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
@@ -533,10 +587,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593129913443">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593732293761">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593732293761" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1593125982030">
       <screen x="0" y="0" width="1280" height="680" />
@@ -558,7 +612,7 @@
     <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593033787588">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593739433092" />
     <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589841943867" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />

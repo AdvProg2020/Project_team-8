@@ -26,7 +26,6 @@ public class BuyLog {
         ManageInfo.allBuyLogs.add(this);
     }
 
-
     public String getBuyerName() {
         return buyerName;
     }

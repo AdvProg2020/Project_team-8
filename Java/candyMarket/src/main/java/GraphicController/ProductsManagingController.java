@@ -21,7 +21,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ProductsManagingController implements Initializable {
-    public ImageView goodImg;
     @FXML private TableView<Good> tableView;
     @FXML private TableColumn<Good, String> productNameColumn;
     @FXML private TableColumn<Good, String> categoryColumn;

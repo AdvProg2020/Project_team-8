@@ -121,6 +121,7 @@ public class Buyer extends User {
     public void setMyLogs(ArrayList<BuyLog> myLogs) {
         this.myLogs = myLogs;
     }
+
     public void addMyLogs(BuyLog buyLog) {
         this.myLogs.add(buyLog);
     }
@@ -139,6 +140,10 @@ public class Buyer extends User {
 
     public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    public void addBalance(int balance) {
+        this.balance += balance;
     }
 
     @Override

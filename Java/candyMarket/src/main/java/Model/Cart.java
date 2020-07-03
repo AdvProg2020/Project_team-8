@@ -5,47 +5,58 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Cart {
-    private String address;
-    private String buyerName;
-    private CartSituation buySituation;
-    private String phoneNumber;
-    private int totalAmount = 0;
+    private static String address;
+    private static String buyerName;
+    private static CartSituation buySituation;
+    private static String phoneNumber;
+    private static int totalAmount = 0;
+    private static int discountAmount = 0;
+    private static HashMap<Good,Integer> goods = new HashMap<>();
+    private static String fxml;
 
-    public String getAddress() {
+
+    public static String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public static void setAddress(String address1) { address = address1;
     }
 
-    public String getPhoneNumber() {
+    public static void setFxml(String fxml) {
+        Cart.fxml = fxml;
+    }
+
+    public static String getFxml() {
+        return fxml;
+    }
+
+    public static String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public static void setPhoneNumber(String phoneNumber1) {
+        phoneNumber = phoneNumber1;
     }
 
-    private int discountAmount = 0;
-
-    public HashMap<Good, Integer> getGoods() {
+    public static HashMap<Good, Integer> getGoods() {
         return goods;
     }
 
-    public void setGoods(HashMap<Good, Integer> goods) {
-        this.goods = goods;
+    public static void addGood(Good good) {
+        goods.put(good, 1);
     }
 
-    private HashMap<Good,Integer> goods = new HashMap<>();
+    public static void setGoods(HashMap<Good, Integer> goods1) {
+        goods = goods1;
+    }
 
-    public void addDiscount(Discount discount){
+    public static void addDiscount(Discount discount){
         discountAmount = totalAmount* discount.getPercentReduction()/100;
         if(discountAmount > discount.getMaxReductionAmount()) discountAmount=discount.getMaxReductionAmount();
         totalAmount -= discountAmount;
     }
 
-    public void pay(){
+    public static void pay(){
         for (Good g:
              goods.keySet()) {
             g.addBuyers(UserHandler.currentBuyer);
@@ -54,7 +65,8 @@ public class Cart {
         UserHandler.currentBuyer.setBalance(UserHandler.currentBuyer.getBalance()-UserHandler.currentCart.getTotalAmount());
         resetCart();
     }
-    public void resetCart(){
+
+    public static void resetCart(){
         address = null;
         buyerName = null;
         phoneNumber = null;
@@ -63,64 +75,76 @@ public class Cart {
         goods = new HashMap<>();
     }
 
-    public int getTotalAmount() {
+    public static int getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(int totalAmount) {
-        this.totalAmount = totalAmount;
+    public static void setTotalAmount() {
+        totalAmount = 0;
+        for (Good good : goods.keySet()) {
+            totalAmount += good.getPrice()*goods.get(good) ;
+        }
     }
 
-    public int getDiscountAmount() {
+    public static void setTotalAmountWithDiscount() {
+        totalAmount = 0;
+        for (Good good : goods.keySet()) {
+            totalAmount += good.getPrice()*goods.get(good) ;
+        }
+        totalAmount = totalAmount * ((100 - discountAmount) / 100);
+    }
+
+    public static int getDiscountAmount() {
         return discountAmount;
     }
 
-    public void setDiscountAmount(int discountAmount) {
-        this.discountAmount = discountAmount;
+    public static void setDiscountAmount(int discountAmount1) {
+        discountAmount = discountAmount1;
     }
 
-
-    public String getBuyerName() {
+    public static String getBuyerName() {
         return buyerName;
     }
 
-    public void setBuyerName(String sellerName) {
+    public static void setBuyerName(String sellerName) {
         buyerName = buyerName;
     }
 
-    public CartSituation getBuySituation() {
+    public static CartSituation getBuySituation() {
         return buySituation;
     }
 
-    public void setBuySituation(CartSituation buySituation) {
-        this.buySituation = buySituation;
+    public static void setBuySituation(CartSituation buySituation1) {
+        buySituation = buySituation1;
     }
-    public Boolean canPay(){
+
+    public static Boolean canPay(){
         if(Buyer.currentBuyer==null)
         return false;
         if(Buyer.currentBuyer.getBalance()<UserHandler.currentCart.getTotalAmount()) return false;
         else return true;
     }
-    public boolean increaseProduct(Good good){
-        if(good.getStock()==0)
+
+    public static boolean increaseProduct(Good good) {
+        if (good.getStock() == 0)
             return false;
-        if(goods.get(good) == null)
-            goods.put(good,1);
+        if (goods.get(good) == null)
+            goods.put(good, 1);
         else
-        goods.put(good,goods.get(good)+1);
-        good.setStock(good.getStock()-1);
-        UserHandler.currentCart.setTotalAmount(UserHandler.currentCart.getTotalAmount()+good.getPriceAfterSale());
+            goods.put(good, goods.get(good) + 1);
+        good.setStock(good.getStock() - 1);
         return true;
     }
-    public void decreaseProduct(Good good){
+
+    public static void decreaseProduct(Good good){
         if(goods.get(good)<=1)
             goods.remove(good);
         else
             goods.put(good,goods.get(good)-1);
         good.setStock(good.getStock()+1);
-        UserHandler.currentCart.setTotalAmount(UserHandler.currentCart.getTotalAmount()-good.getPriceAfterSale());
     }
-    public void createLogs(){
+
+    public static void createLogs(){
         HashMap<Seller,HashMap<Good,Integer>> logs = new HashMap<>();
         for(Map.Entry<Good,Integer> entry : goods.entrySet()) {
             Good g = entry.getKey();
@@ -161,4 +185,4 @@ public class Cart {
             ManageInfo.allSellLogs.add(sellLog);
         }
         }
-    }
+}

@@ -62,6 +62,7 @@ public class Good {
         this.buyers = new ArrayList<>();
         comments = new ArrayList<>();
         if (image!= null) this.image = image;
+        seller.addGood(this);
         this.dateCreated = System.currentTimeMillis();
     }
 
