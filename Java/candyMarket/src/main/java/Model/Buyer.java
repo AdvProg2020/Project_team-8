@@ -121,6 +121,7 @@ public class Buyer extends User {
     public void setMyLogs(ArrayList<BuyLog> myLogs) {
         this.myLogs = myLogs;
     }
+
     public void addMyLogs(BuyLog buyLog) {
         this.myLogs.add(buyLog);
     }

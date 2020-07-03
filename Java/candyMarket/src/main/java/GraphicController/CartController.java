@@ -8,12 +8,14 @@ import Model.UserHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
+import java.security.AllPermission;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -59,8 +61,13 @@ public class CartController implements Initializable {
     public void paying(ActionEvent actionEvent) {
         if (!UserHandler.isLogeIn()) {
             MenuHandler.createStageWithScene("LoginMenu");
+        } else if (Cart.getGoods().size() == 0) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Cart is Empty");
+            alert.show();
         } else {
-            ;
+            MenuHandler.secondCurrentWindow.close();
+            MenuHandler.createStageWithScene("Pay");
         }
     }
 }

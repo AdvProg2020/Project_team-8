@@ -62,6 +62,7 @@ public class MenuHandler {
     public static Button discountManagingBtn;
     public static Button categoryManagingBtn;
     public static Button viewBuyerPersonalInfoBtn;
+    public static Button viewBuyerBuyLogBtn;
     public static Button viewSellerPersonalInfoBtn;
     public static Button sellerProductManagingBtn;
     public static Button requestsBtn;
@@ -90,6 +91,7 @@ public class MenuHandler {
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
         categoryManagingBtn = new CustomButton("CategoryManaging","CategoryManaging");
         viewBuyerPersonalInfoBtn = new CustomButton("ViewPersonalInfo","BuyerPersonalInfo");
+        viewBuyerBuyLogBtn = new CustomButton("PurchasedProducts", "PurchasedProducts");
         viewSellerPersonalInfoBtn = new CustomButton("ViewPersonalInfo","SellerPersonalInfo");
         sellerProductManagingBtn = new CustomButton("ProductManaging","SellerProductHandling");
         requestsBtn = new CustomButton("Requests", "ManagerRequestMenu");

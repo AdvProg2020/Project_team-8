@@ -16,6 +16,8 @@ public class Seller extends User {
         this.setType(UserType.SELLER);
         this.mySellLog = new ArrayList<>();
         this.myGoods = new ArrayList<>();
+        ManageInfo.allSellers.add(this);
+        ManageInfo.allUsers.add(this);
     }
     public void addMySellLog(SellLog sellLog){
         mySellLog.add(sellLog);

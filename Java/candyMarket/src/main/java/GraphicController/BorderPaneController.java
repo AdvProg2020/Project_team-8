@@ -98,7 +98,7 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
 
 
     public void Buying(MouseEvent mouseEvent) {
-        this.setCenter("Cart");
+        MenuHandler.createStageWithScene("Cart");
     }
 
     public void viewProfile(MouseEvent mouseEvent) {
