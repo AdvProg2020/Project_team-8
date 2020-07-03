@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -74,14 +75,21 @@ public class MenuHandler {
         backBtn =new CustomButton("Back");
         backBtn.setOnMouseClicked(actionEvent -> {
             BorderPaneController.borderPaneController.setCenter("MainMenu");
+            MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+            mediaPlayer.play();
         });
         clientMenuBtn = new CustomButton("ClientMenu");
         clientMenuBtn.setOnAction(actionEvent -> {
             clientMenuBtnOnClick();
-
+            MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+            mediaPlayer.play();
         });
         exitBtn =new CustomButton("SaveAndExit");
-        exitBtn.setOnAction(actionEvent -> Platform.exit());
+        exitBtn.setOnAction(actionEvent -> {
+            MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+            mediaPlayer.play();
+            Platform.exit();
+        });
         buttons.clear();
         buttons.add(backBtn);
         viewGoods = new CustomButton("ViewGoods","ViewGoods");
@@ -99,6 +107,9 @@ public class MenuHandler {
         sellerRequestsBtn = new CustomButton("Requests", "SellerRequestView");
     }
     public static void clientMenuBtnOnClick(){
+        MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+        mediaPlayer.play();
+
         if(UserHandler.isLogeIn())
         {
             if(UserHandler.getCurrentUser().isManager())

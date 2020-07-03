@@ -35,10 +35,10 @@ public class FileHandler {
         loadCategoriesData();
         loadGoodsData();
         loadManagersData();
-        loadSellersData();
-        loadBuyersData();
         loadSellLogsData();
         loadBuyLogsData();
+        loadSellersData();
+        loadBuyersData();
         loadRequestFile();
         loadDiscountsData();
     }

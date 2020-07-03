@@ -38,7 +38,7 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Button layoutX="646.0" layoutY="458.0" mnemonicParsing="false" onAction="#pay" prefHeight="76.0" prefWidth="78.0" style="-fx-background-radius: 100;" text="Pay" />
-      <Button layoutX="562.0" layoutY="458.0" mnemonicParsing="false" onAction="#back" prefHeight="76.0" prefWidth="78.0" style="-fx-background-radius: 100;" text="Back" />
+      <Button layoutX="646.0" layoutY="458.0" mnemonicParsing="false" onAction="#pay" prefHeight="76.0" prefWidth="78.0" text="Pay" />
+      <Button layoutX="562.0" layoutY="458.0" mnemonicParsing="false" onAction="#back" prefHeight="76.0" prefWidth="78.0" text="Back" />
    </children>
 </AnchorPane>

@@ -2,6 +2,8 @@ package GraphicView;
 
 import GraphicController.BorderPaneController;
 import javafx.scene.control.Button;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -18,7 +20,11 @@ public class CustomButton extends Button {
         this.getStyleClass().add("myButton");
         this.setText(buttonText);
         this.gridPaneNameOpen = gridPaneNameOpen;
-        this.setOnMouseClicked(actionEvent -> BorderPaneController.borderPaneController.setCenter(gridPaneNameOpen));
+        this.setOnMouseClicked(actionEvent -> {
+            BorderPaneController.borderPaneController.setCenter(gridPaneNameOpen);
+            MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+            mediaPlayer.play();
+        });
     }
     public CustomButton(String buttonText){
         try {

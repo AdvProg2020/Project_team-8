@@ -2,6 +2,7 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 public class Buyer extends User {
     public ArrayList<Discount> getMyDiscounts() {
@@ -27,10 +28,23 @@ public class Buyer extends User {
                 myLogs.add(buyLog);
             }
         }
+        myDiscounts = new ArrayList<>();
         ManageInfo.allBuyers.add(this);
         ManageInfo.allUsers.add(this);
+        getDiscountCodeRandom();
     }
-
+    private void getDiscountCodeRandom(){
+        Random rand = new Random();
+        int size = ManageInfo.allDiscounts.size();
+        if(size==0) return;
+        int randNumber;
+        randNumber = rand.nextInt(100);
+        if(randNumber % 1 == 0) {
+            randNumber = rand.nextInt(size);
+            Discount discount = ManageInfo.allDiscounts.get(randNumber);
+            myDiscounts.add(discount);
+        }
+    }
     public Cart getCart() {
         return cart;
     }

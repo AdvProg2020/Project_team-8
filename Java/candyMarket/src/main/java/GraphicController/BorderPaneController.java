@@ -11,10 +11,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.scene.media.MediaPlayer;
 
+import javax.print.attribute.standard.Media;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -82,8 +85,12 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         userLoginBar.setVisible(true);
         userLogOutBar.setVisible(false);
         setCenter("MainMenu");
+        MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+        mediaPlayer.play();
     }
     public void registerBtnOnClick(MouseEvent mouseEvent) {
+        MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+        mediaPlayer.play();
         MenuHandler.createStageWithScene("RegisterMenu");
     }
     public void login(String currentUserName){
@@ -93,15 +100,21 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         userLogOutBar.setVisible(true);
     }
     public void loginBtnClick(MouseEvent mouseEvent) {
+        MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+        mediaPlayer.play();
         MenuHandler.createStageWithScene("LoginMenu");
     }
 
 
     public void Buying(MouseEvent mouseEvent) {
+        MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+        mediaPlayer.play();
         MenuHandler.createStageWithScene("Cart");
     }
 
     public void viewProfile(MouseEvent mouseEvent) {
+        MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+        mediaPlayer.play();
         if (UserHandler.isLogeIn()) {
             this.setCenter("Profile");
             MenuHandler.clientMenuBtnOnClick();
