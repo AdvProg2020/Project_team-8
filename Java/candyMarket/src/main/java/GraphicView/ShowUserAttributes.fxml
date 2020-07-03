@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane style="-fx-background-color:
-            linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
-            #2193b0,
-            #6dd5ed,
-            radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ShowUserAttributes">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color:             linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),             #2193b0,             #6dd5ed,             radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ShowUserAttributes">
    <children>
       <GridPane layoutX="296.0" layoutY="93.0" prefHeight="336.0" prefWidth="143.0">
          <children>
@@ -44,7 +39,7 @@
             <Blend />
          </effect>
       </GridPane>
-      <Label layoutX="294.0" layoutY="429.0" text="Press Enter To Countinue" textFill="RED">
+      <Label layoutX="250.0" layoutY="429.0" prefHeight="27.0" prefWidth="291.0" text="Press Enter  For Being Registered" textFill="RED">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

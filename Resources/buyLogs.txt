@@ -4,3 +4,5 @@
 {"id":2,"date":1593779567150,"totalAmount":200,"discountAmount":0,"goods":{"rea":1},"buyerName":"b4","buySituation":"CONFIRMATION"}
 {"id":4,"date":1593779702996,"totalAmount":400,"discountAmount":0,"goods":{"rea":2},"buyerName":"b4","buySituation":"CONFIRMATION"}
 {"id":4,"date":1593779702996,"totalAmount":400,"discountAmount":0,"goods":{"rea":2},"buyerName":"b4","buySituation":"CONFIRMATION"}
+{"id":6,"date":1593781560485,"totalAmount":0,"discountAmount":50,"goods":{"rea":1},"buyerName":"b4","buySituation":"CONFIRMATION"}
+{"id":6,"date":1593781560485,"totalAmount":0,"discountAmount":50,"goods":{"rea":1},"buyerName":"b4","buySituation":"CONFIRMATION"}

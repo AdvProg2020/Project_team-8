@@ -95,6 +95,7 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
     }
     public void login(String currentUserName){
         UserHandler.loggingIn(currentUserName);
+        Functions.showDialog("successfully logged in",false);
         userLogOutBar.toFront();
         userLoginBar.setVisible(false);
         userLogOutBar.setVisible(true);
@@ -109,6 +110,7 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
     public void Buying(MouseEvent mouseEvent) {
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
         mediaPlayer.play();
+        MenuHandler.secondCurrentWindow.close();
         MenuHandler.createStageWithScene("Cart");
     }
 

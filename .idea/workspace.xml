@@ -19,26 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
+    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="add client details for manager page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BorderPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BorderPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BuyerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/SellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CustomButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CustomButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/MenuHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/PathHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/PathHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/Pay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/Pay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/BuyLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/BuyLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Discount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/SellLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/SellLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/BuyLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/BuyLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/LoginMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/LoginMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ShowUserAttributes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ShowUserAttributes.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +144,7 @@
       <workItem from="1593235040160" duration="1986000" />
       <workItem from="1593349956749" duration="24562000" />
       <workItem from="1593663739513" duration="5737000" />
-      <workItem from="1593671881549" duration="66457000" />
+      <workItem from="1593671881549" duration="68251000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -353,13 +339,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="make runnable" />
@@ -448,45 +433,45 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593372139005" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom" timestamp="1593779941051">
+    <state width="1237" height="203" key="GridCell.Tab.0.bottom" timestamp="1593781945489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593779941051" />
+    <state width="1237" height="203" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1237" height="112" key="GridCell.Tab.0.center" timestamp="1593779941051">
+    <state width="1237" height="203" key="GridCell.Tab.0.center" timestamp="1593781945488">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593779941051" />
+    <state width="1237" height="203" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593781945488" />
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="112" key="GridCell.Tab.0.left" timestamp="1593779941051">
+    <state width="1237" height="203" key="GridCell.Tab.0.left" timestamp="1593781945488">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593779941051" />
+    <state width="1237" height="203" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593781945488" />
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="112" key="GridCell.Tab.0.right" timestamp="1593779941051">
+    <state width="1237" height="203" key="GridCell.Tab.0.right" timestamp="1593781945488">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593779941051" />
+    <state width="1237" height="203" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593781945488" />
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593758517917">
+    <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593781945489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593758517917" />
+    <state width="1237" height="203" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
     <state width="1237" height="199" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1237" height="203" key="GridCell.Tab.1.center" timestamp="1593758517917">
+    <state width="1237" height="203" key="GridCell.Tab.1.center" timestamp="1593781945489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1593758517917" />
+    <state width="1237" height="203" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
     <state width="1237" height="199" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1237" height="203" key="GridCell.Tab.1.left" timestamp="1593758517917">
+    <state width="1237" height="203" key="GridCell.Tab.1.left" timestamp="1593781945489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1593758517917" />
+    <state width="1237" height="203" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
     <state width="1237" height="199" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1237" height="203" key="GridCell.Tab.1.right" timestamp="1593758517917">
+    <state width="1237" height="203" key="GridCell.Tab.1.right" timestamp="1593781945489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1593758517917" />
+    <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
     <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1589832465283">
       <screen x="0" y="0" width="1280" height="683" />
@@ -533,10 +518,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1593041894737" />
-    <state x="595" y="51" width="587" height="592" key="find.popup" timestamp="1593773718999">
+    <state x="595" y="51" width="587" height="592" key="find.popup" timestamp="1593780340358">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="595" y="51" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1593773718999" />
+    <state x="595" y="51" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1593780340358" />
     <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593033787588">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
