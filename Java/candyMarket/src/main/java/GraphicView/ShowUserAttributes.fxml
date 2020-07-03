@@ -6,10 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane layoutX="140.0" layoutY="132.0" prefHeight="336.0" prefWidth="521.0" style="-fx-border-color: #ffffff;">
+      <GridPane layoutX="41.0" layoutY="55.0" prefHeight="336.0" prefWidth="521.0" style="-fx-border-color: #ffffff;">
          <children>
             <Label fx:id="UserNameLBL" layoutX="148.0" layoutY="93.0" prefHeight="17.0" prefWidth="284.0" text="UserName : " />
             <Label fx:id="NameLBL" layoutX="148.0" layoutY="131.0" prefHeight="17.0" prefWidth="284.0" text="Name :" GridPane.rowIndex="2" />

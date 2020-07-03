@@ -21,15 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/GoodAttributesEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/GoodAttributesEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Good.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/GoodAttributesEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/GoodAttributesEditor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ProductsManagingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ProductsManagingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ShowUserAttributes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ShowUserAttributes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/Photos/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/Photos/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/BorderPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/BorderPaneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ProductsManagingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/ProductsManagingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicView/MenuHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Good.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Photos/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Photos/Thumbs.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,16 +79,16 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Photos" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\MainBorderPane" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicView\CssFiles" />
     </key>
   </component>
   <component name="RunManager">
@@ -436,26 +438,26 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593372139005" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1593731930503">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="126" key="GridCell.Tab.0.bottom" timestamp="1593738714435">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593731930503" />
-    <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1593731930503">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="126" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1593738714435" />
+    <state width="1237" height="126" key="GridCell.Tab.0.center" timestamp="1593738714434">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593731930503" />
-    <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1593731930503">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="126" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1593738714434" />
+    <state width="1237" height="126" key="GridCell.Tab.0.left" timestamp="1593738714433">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593731930503" />
-    <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1593731930503">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="126" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1593738714433" />
+    <state width="1237" height="126" key="GridCell.Tab.0.right" timestamp="1593738714434">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593731930503" />
-    <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
+    <state width="1237" height="126" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1593738714434" />
     <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593725741596">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
