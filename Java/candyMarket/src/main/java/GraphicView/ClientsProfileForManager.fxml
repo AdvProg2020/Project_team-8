@@ -7,8 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="GraphicController.ClientsProfileForManagerController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ClientsProfileForManagerController">
     <children>
         <VBox alignment="TOP_CENTER" layoutX="98.0" layoutY="22.0" prefHeight="557.0" prefWidth="604.0" spacing="10.0">
             <children>
@@ -25,10 +24,11 @@
                         <TableColumn fx:id="typeColumn" prefWidth="104.0" text="Type" />
                     </columns>
                 </TableView>
-                <HBox prefHeight="100.0" prefWidth="200.0" spacing="240.0">
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="45.0">
                     <children>
                         <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Clients(s) " />
                         <Button fx:id="detailedEditClientButton" mnemonicParsing="false" onAction="#changeSceneToDetailedPersonView" text="Detailed Client View" />
+                  <Button onAction="#createNewManager" mnemonicParsing="false" text="Create Manager" />
                     </children>
                 </HBox>
             </children>

@@ -1,5 +1,7 @@
 package GraphicController;
 
+import GraphicView.MenuHandler;
+import Model.Discount;
 import Model.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,6 +19,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ClientsProfileForManagerController implements Initializable {
+    public static ClientsProfileForManagerController  clientsProfileForManagerController;
     @FXML private TableView<User> tableView;
     @FXML private TableColumn<User, String> usernameColumn;
     @FXML private TableColumn<User, String> firstNameColumn;
@@ -27,6 +30,7 @@ public class ClientsProfileForManagerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        clientsProfileForManagerController = this;
         usernameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("username"));
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("lastName"));
@@ -45,6 +49,10 @@ public class ClientsProfileForManagerController implements Initializable {
         client.addAll(User.getUsers());
 
         return client;
+    }
+
+    public User getUser() {
+        return tableView.getSelectionModel().getSelectedItem();
     }
 
     public void deleteButtonPushed()
@@ -66,6 +74,10 @@ public class ClientsProfileForManagerController implements Initializable {
     }
 
     public void changeSceneToDetailedPersonView(ActionEvent actionEvent) {
-        //??
+        MenuHandler.createStageWithScene("ManagerProfileEditing");
+    }
+
+    public void createNewManager(ActionEvent actionEvent) {
+        MenuHandler.createStageWithScene("FirstManagerLogin");
     }
 }

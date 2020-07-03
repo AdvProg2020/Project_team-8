@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 
@@ -28,6 +29,8 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
     public VBox userLogOutBar;
     public VBox userLoginBar;
     public BorderPane borderPane;
+    public ImageView cartImage;
+    public ImageView profileImage;
     public static void setLeft(ArrayList<Button> buttons) {
         Node node = ((BorderPane)MenuHandler.currentWindow.getScene().getRoot()).getLeft();
         ((VBox)node).getChildren().clear();
@@ -46,6 +49,20 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
             e.printStackTrace();
         }
         Image image = null;
+        Image imageCart = null;
+        Image imageProfile = null;
+        try {
+            imageCart = new Image(String.valueOf(new File(PathHandler.resourcePath+"Photos\\Shopping-Cart-PNG.png").toURI().toURL()));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        cartImage.setImage(imageCart);
+        try {
+            imageProfile = new Image(String.valueOf(new File(PathHandler.resourcePath+"Photos\\profile-buttons-png-3.png").toURI().toURL()));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        profileImage.setImage(imageProfile);
         try {
             image = new Image(String.valueOf(new File(PathHandler.resourcePath+"Photos\\MainBackGround.jpg").toURI().toURL()));
         } catch (MalformedURLException e) {
@@ -80,4 +97,17 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
     }
 
 
+    public void Buying(MouseEvent mouseEvent) {
+        this.setCenter("Cart");
+    }
+
+    public void viewProfile(MouseEvent mouseEvent) {
+        if (UserHandler.isLogeIn()) {
+            this.setCenter("Profile");
+            MenuHandler.clientMenuBtnOnClick();
+        }
+        else {
+            MenuHandler.createStageWithScene("LoginMenu");
+        }
+    }
 }

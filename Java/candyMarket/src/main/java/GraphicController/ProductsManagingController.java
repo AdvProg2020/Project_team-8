@@ -21,7 +21,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ProductsManagingController implements Initializable {
-    public ImageView goodImg;
     @FXML private TableView<Good> tableView;
     @FXML private TableColumn<Good, String> productNameColumn;
     @FXML private TableColumn<Good, String> categoryColumn;
@@ -34,16 +33,8 @@ public class ProductsManagingController implements Initializable {
         priceColumn.setCellValueFactory(new PropertyValueFactory<Good, Integer>("price"));
         tableView.setItems(getClients());
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        setGoodImg();
     }
 
-    private void setGoodImg() {
-        //if notnull
-        //........
-        //if null
-        Image image = new Image(PathHandler.withoutImageUrl);
-        goodImg.setImage(image);
-    }
     public ObservableList<Good> getClients()
     {
         ObservableList<Good> goods = FXCollections.observableArrayList();

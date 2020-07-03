@@ -62,7 +62,7 @@ public class CategoryManagingController implements Initializable {
 
     public void newCodeButtonPushed()
     {
-        if (categoryNameField.getText().length() > 0 && specialAttributesField.getText().length() > 0) {
+        if (categoryNameField.getText().length() > 0) {
             String categoryNameText = categoryNameField.getText();
             String specialAttributesText = specialAttributesField.getText();
 
