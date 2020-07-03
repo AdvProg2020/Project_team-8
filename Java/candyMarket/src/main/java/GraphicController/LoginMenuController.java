@@ -30,6 +30,7 @@ public class LoginMenuController extends CustomBorderPaneMenus implements Initia
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        errorMessage.setStyle("-fx-background-color: #ff0000");
         errorMessage.setText("");
     }
 

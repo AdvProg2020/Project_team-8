@@ -9,7 +9,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.LoginMenuController">
+<BorderPane style="-fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
+            #2193b0,
+            #6dd5ed,
+            radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.LoginMenuController">
    <top>
       <Label alignment="TOP_LEFT" prefHeight="150.0" text="Login" BorderPane.alignment="CENTER">
          <font>

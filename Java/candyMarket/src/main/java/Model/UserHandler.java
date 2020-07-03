@@ -17,12 +17,14 @@ public class UserHandler {
         public static Buyer currentBuyer;
         public static Seller currentSeller;
         public static Manager currentManager;
+
         public static boolean isLogeIn(){
                 return currentUser != null;
         }
-        public static void start(){
-                currentCart = new Cart();
-        }
+
+        public static boolean isManager() {return currentManager != null;}
+
+        public static boolean isSeller() {return currentSeller != null;}
 
         public static void loggingIn(String userName) {
                 User user = User.getUserByUsername(userName);

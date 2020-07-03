@@ -8,7 +8,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.DiscountCodeDetailsController">
+<AnchorPane style="-fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
+            #2193b0,
+            #6dd5ed,
+            radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.DiscountCodeDetailsController">
     <children>
         <Label layoutX="222.0" layoutY="14.0" text="Discount info">
             <font>

@@ -9,7 +9,11 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
+<AnchorPane style="-fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
+            #2193b0,
+            #6dd5ed,
+            radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
             xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="GraphicController.FirstManagerLoginController">
    <children>
@@ -17,7 +21,7 @@
          <children>
             <VBox alignment="TOP_CENTER" layoutX="144.0" layoutY="81.0" prefHeight="435.0" prefWidth="513.0" spacing="10.0" GridPane.columnIndex="1">
                <children>
-                  <Label text="First Manager Register">
+                  <Label text="Manager Register">
                      <font>
                         <Font name="Arial Bold Italic" size="26.0" />
                      </font>

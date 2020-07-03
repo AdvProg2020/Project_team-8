@@ -6,9 +6,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane style="-fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
+            #2193b0,
+            #6dd5ed,
+            radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ShowUserAttributes">
    <children>
-      <GridPane layoutX="41.0" layoutY="55.0" prefHeight="336.0" prefWidth="521.0" style="-fx-border-color: #ffffff;">
+      <GridPane layoutX="296.0" layoutY="93.0" prefHeight="336.0" prefWidth="143.0">
          <children>
             <Label fx:id="UserNameLBL" layoutX="148.0" layoutY="93.0" prefHeight="17.0" prefWidth="284.0" text="UserName : " />
             <Label fx:id="NameLBL" layoutX="148.0" layoutY="131.0" prefHeight="17.0" prefWidth="284.0" text="Name :" GridPane.rowIndex="2" />
@@ -25,7 +29,6 @@
          </children>
          <columnConstraints>
             <ColumnConstraints maxWidth="402.0" minWidth="138.0" prefWidth="146.0" />
-            <ColumnConstraints maxWidth="364.0" minWidth="10.0" prefWidth="356.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="40.0" />
@@ -41,5 +44,10 @@
             <Blend />
          </effect>
       </GridPane>
+      <Label layoutX="294.0" layoutY="429.0" text="Press Enter To Countinue" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
