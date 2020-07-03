@@ -6,6 +6,7 @@ import Model.ManageInfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -45,6 +46,11 @@ public class GoodEditingController implements Initializable {
             int priceText = Integer.parseInt(priceField.getText());
             int stockText = Integer.parseInt(stockField.getText());
             String nameText = nameField.getText();
+            for (Good good : ManageInfo.allGoods) {
+                if (good.getName().equalsIgnoreCase(nameText)) {
+                    throw new Exception();
+                }
+            }
             String brandText = brandField.getText();
             String detailText = detailField.getText();
             Category categoryValue = categoryChoiceBox.getValue();
@@ -57,6 +63,7 @@ public class GoodEditingController implements Initializable {
             good.setDetailInfo(detailText);
             good.setCategory(categoryValue);
         }catch (Exception e) {
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
             errorMessage.setStyle("-fx-background-color: #ff0000;");
             errorMessage.setText("Invalid Change!");
         }

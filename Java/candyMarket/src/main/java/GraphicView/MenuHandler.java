@@ -47,7 +47,7 @@ public class MenuHandler {
         Stage stage = new Stage();
         secondCurrentWindow = stage;
         stage.setTitle("My New Stage Title");
-        stage.setScene(new Scene(root, 450, 450));
+        stage.setScene(new Scene(root, 800, 600));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();
     }
@@ -91,7 +91,7 @@ public class MenuHandler {
         viewSellerPersonalInfoBtn = new CustomButton("ViewPersonalInfo","SellerPersonalInfo");
         sellerProductManagingBtn = new CustomButton("ProductManaging","SellerProductHandling");
     }
-    private static void clientMenuBtnOnClick(){
+    public static void clientMenuBtnOnClick(){
         if(UserHandler.isLogeIn())
         {
             if(UserHandler.getCurrentUser().isManager())

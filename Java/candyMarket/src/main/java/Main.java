@@ -33,9 +33,9 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        MenuHandler.currentWindow.setMinHeight(600);
+        MenuHandler.currentWindow.setMinHeight(700);
         MenuHandler.currentWindow.setMinWidth(1200);
-        MenuHandler.currentWindow.setMaxHeight(600);
+        MenuHandler.currentWindow.setMaxHeight(700);
         MenuHandler.currentWindow.setMaxWidth(1200);
         MenuHandler.currentWindow.setTitle("Menu");
         MenuHandler.currentScene = new Scene(root, 300, 200);
@@ -45,7 +45,7 @@ public class Main extends Application {
         MenuHandler.currentWindow.centerOnScreen();
         MenuHandler.currentWindow.show();
         BorderPaneController.borderPaneController.setCenter("MainMenu");
-        //debug();
+        debug();
         if(Manager.isThisTheFirstManager()) MenuHandler.createStageWithScene("FirstManagerLogin");
         //else
     }
@@ -53,12 +53,12 @@ public class Main extends Application {
         new Category("people",null);
         new Category("food",null);
         new Category("fruits",null);
-        new Good("Mz","MzBrand",100,null,1,Category.getCategoryByName("people"),"");
         new Good("Arash","ArashBrand",100,null,1,Category.getCategoryByName("people"),"");
         new Good("Reza","RezaBrand",200,null,1,Category.getCategoryByName("people"),"");
         new Good("Reza2","RezaBrand",200,null,1,Category.getCategoryByName("people"),"");
-        new Good("Pizza","FastFood420",1000,null,4,Category.getCategoryByName("food"),"");
-        //new Manager("admin", "kin", "gro", "k@gmail.com", "+98142", "admin");
+        Cart.addGood(new Good("Mz","MzBrand",100,null,4,Category.getCategoryByName("people"),""));
+        Cart.addGood(new Good("Pizza","FastFood420",1000,null,4,Category.getCategoryByName("food"),""));
+        //new Manager("admin", "kin", "gro", "k@gmail.com","+98142", "admin");
         //BorderPaneController.borderPaneController.login("admin");
     }
 }

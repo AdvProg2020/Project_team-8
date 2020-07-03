@@ -12,7 +12,7 @@
     <children>
         <VBox alignment="TOP_CENTER" layoutX="98.0" layoutY="22.0" prefHeight="557.0" prefWidth="604.0" spacing="10.0">
             <children>
-                <Label alignment="CENTER" text="List of Clients">
+                <Label alignment="CENTER" text="List of Products">
                     <font>
                         <Font name="System Bold Italic" size="18.0" />
                     </font>
