@@ -1,1 +1,0 @@
-{"name":"People","specialAttributes":["ghad","vazn"]}
