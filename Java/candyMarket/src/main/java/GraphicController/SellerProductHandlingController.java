@@ -82,9 +82,7 @@ public class SellerProductHandlingController implements Initializable {
 
         for (Good good: selectedRows)
         {
-            Good.removeProduct(good);
-            UserHandler.currentSeller.removeProduct(good);
-            allGoods.remove(good);
+            new Request(Request.requestType.REMOVE_GOOD).createDeleteProductRequest(good);
         }
     }
 

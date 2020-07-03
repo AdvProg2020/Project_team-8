@@ -18,14 +18,14 @@
             <TableView fx:id="tableView">
                 <columns>
                     <TableColumn fx:id="idColumn" prefWidth="107.3333410024643" text="Id" />
-                    <TableColumn fx:id="requestCommandColumn" prefWidth="490.66666412353516" text="Request Command" />
+                    <TableColumn fx:id="requestCommandColumn" prefWidth="417.66666412353516" text="Request Command" />
                 </columns>
             </TableView>
     </center>
    <bottom>
        <AnchorPane>
            <children>
-               <Button onAction="#getRequestInfo" layoutX="310.0" mnemonicParsing="false" text="See info" BorderPane.alignment="CENTER" />
+               <Button layoutX="310.0" mnemonicParsing="false" onAction="#getRequestInfo" text="See info" BorderPane.alignment="CENTER" />
             <TextField fx:id="selectedId" layoutX="131.0" promptText="Id" />
            </children>
        </AnchorPane>

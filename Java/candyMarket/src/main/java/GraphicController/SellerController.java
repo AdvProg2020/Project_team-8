@@ -13,6 +13,7 @@ public class SellerController extends PrimaryMenu {
         buttons.add(MenuHandler.viewProfileBtn);
         buttons.add(MenuHandler.viewSellerPersonalInfoBtn);
         buttons.add(MenuHandler.sellerProductManagingBtn);
+        buttons.add(MenuHandler.sellerRequestsBtn);
         buttons.add(MenuHandler.backBtn);
         return buttons;
     }
