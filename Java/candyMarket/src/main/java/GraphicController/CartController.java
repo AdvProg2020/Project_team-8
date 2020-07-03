@@ -72,7 +72,6 @@ public class CartController implements Initializable {
             alert.setContentText("Cart is Empty");
             alert.show();
         } else {
-            MenuHandler.secondCurrentWindow.close();
             MenuHandler.createStageWithScene("Pay");
         }
     }
