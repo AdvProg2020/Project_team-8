@@ -4,6 +4,8 @@ import GraphicView.CustomButton;
 import GraphicView.CustomGoodBox;
 import GraphicView.MenuHandler;
 import Model.*;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,7 +42,31 @@ public class ViewGoodsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sortChoiceBox.getItems().addAll(FilterAndSort.getSortsType());
-        sortChoiceBox.setValue("DATE_CREATED");
+        //sortChoiceBox.setValue("DATE_CREATED");
+        filterByOffProductsCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                onUpdateListBtnClick(null);
+            }
+        });
+        filterByPriceCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                onUpdateListBtnClick(null);
+            }
+        });
+        filterByBrandCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                onUpdateListBtnClick(null);
+            }
+        });
+        filterByCategoryCheckBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                onUpdateListBtnClick(null);
+            }
+        });
         setBrandScrollPane();
         setCategoryScrollPane();
         updateCheckBoxes();
@@ -213,4 +239,5 @@ public class ViewGoodsController implements Initializable {
         }else FilterAndSort.isOffFilterOn = false;
         setGoodsScrollPane();
     }
+
 }

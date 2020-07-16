@@ -37,13 +37,18 @@ public class PayController implements Initializable {
             boolean hasCode = false;
             for (Discount discount : discounts) {
                 if (discount.getCode() == codeText) {
-                    Cart.setDiscountAmount(discount.getPercentReduction());
-                    Cart.setTotalAmountWithDiscount();
-                    totalAmountLabel.setText(Integer.toString(Cart.getTotalAmount()));
-                    discountBtn.setDisable(true);
-                    discountField.setDisable(true);
-                    hasCode = true;
-                    break;
+                    if (discount.getUsageNumber() <= 0) {
+                        Functions.showDialog("you have used your discounts", true);
+                    } else {
+                        Cart.setDiscountAmount(discount.getPercentReduction());
+                        Cart.setTotalAmountWithDiscount();
+                        discount.setUsageNumber(discount.getUsageNumber() - 1);
+                        totalAmountLabel.setText(Integer.toString(Cart.getTotalAmount()));
+                        discountBtn.setDisable(true);
+                        discountField.setDisable(true);
+                        hasCode = true;
+                        break;
+                    }
                 }
             }
             if (!hasCode) {

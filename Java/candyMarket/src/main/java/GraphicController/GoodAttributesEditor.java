@@ -2,7 +2,7 @@ package GraphicController;
 
 import GraphicView.CategoryPropertiesBox;
 import GraphicView.MenuHandler;
-import GraphicView.PathHandler;
+import PathHandler.PathHandler;
 import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +13,6 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 

@@ -66,8 +66,8 @@ public class Buyer extends User {
         //ManageInfo.allRequests.add(request);
     }
 
-    public static void CreateNewBuyer() {
-        //??
+    public static void register(String userName,String firstName,String lastName,String email,String phone,String pass){
+        new Buyer(userName, firstName, lastName, email, phone, pass);
     }
 
     public ArrayList<String> viewCart(Cart cart) {

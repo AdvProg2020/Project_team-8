@@ -91,7 +91,7 @@ public class Cart {
         for (Good good : goods.keySet()) {
             totalAmount += good.getPrice()*goods.get(good) ;
         }
-        totalAmount = totalAmount * ((100 - discountAmount) / 100);
+        totalAmount = (int) (totalAmount *  ((double)(100 - (double)discountAmount) / 100));
     }
 
     public static int getDiscountAmount() {

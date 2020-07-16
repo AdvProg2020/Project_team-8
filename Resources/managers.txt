@@ -1,1 +1,2 @@
-{"cart":{},"username":"admin","firstName":"admin","lastName":"admin","email":"admin@admin.com","phoneNumber":"+98432432","password":"admin","credit":0,"type":"MANAGER"}
+{"cart":{},"username":"m","firstName":"m","lastName":"m","email":"mmm@mmm.com","phoneNumber":"+983223","password":"mm","credit":0,"type":"MANAGER"}
+{"cart":{},"username":"m2","firstName":"m2","lastName":"m2","email":"m2@mmm.com","phoneNumber":"+9843432","password":"m2","credit":0,"type":"MANAGER"}

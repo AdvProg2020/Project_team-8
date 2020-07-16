@@ -1,8 +1,7 @@
 package GraphicController;
 
 import GraphicView.MenuHandler;
-import GraphicView.PathHandler;
-import Model.User;
+import PathHandler.PathHandler;
 import Model.UserHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,11 +12,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 
 import java.io.File;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;

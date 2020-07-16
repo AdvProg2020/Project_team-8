@@ -2,10 +2,7 @@ package GraphicController;
 
 import GraphicView.CustomBorderPaneMenus;
 import GraphicView.MenuHandler;
-import Model.Buyer;
-import Model.Request;
-import Model.Seller;
-import Model.User;
+import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -94,7 +91,8 @@ public class RegisterMenuController extends CustomBorderPaneMenus implements Ini
                 new Request(Request.requestType.SELLER_REGISTER).createRegisterSellerRequest(new Seller(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText, companyName));
             }
                 //new Seller(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText,companyName);
-            else new Buyer(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText);
+            else
+                Buyer.register(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText);
             MenuHandler.secondCurrentWindow.close();
         }
     }

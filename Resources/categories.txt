@@ -1,1 +1,3 @@
-{"name":"People","specialAttributes":["ghad","vazn"]}
+{"name":"Food","specialAttributes":["kaleri"]}
+{"name":"Pushak","specialAttributes":["andaze","jens","hajm"]}
+{"name":"Fruit","specialAttributes":["color"]}

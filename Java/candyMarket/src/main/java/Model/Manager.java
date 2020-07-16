@@ -29,10 +29,12 @@ public class Manager extends User {
         }
         ManageInfo.allCategories.remove(category);
     }
+    public static void register(String userName,String firstName,String lastName,String email,String phone,String pass){
+        new Manager(userName,firstName,lastName,email,phone,pass);
+    }
     public ArrayList<String> viewAllGoods() {
         return null;
     }
-
     public void removeGood(int goodId) {
 
     }

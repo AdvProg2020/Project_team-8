@@ -27,7 +27,6 @@ public class LoginMenuController extends CustomBorderPaneMenus implements Initia
 
     @FXML private Button loginButton;
     @FXML private Label errorMessage;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         errorMessage.setStyle("-fx-background-color: #ff0000");

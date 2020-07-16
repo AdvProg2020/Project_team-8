@@ -3,19 +3,18 @@ package GraphicView;
 import GraphicController.GoodMenuController;
 import Model.Good;
 import Model.ManageInfo;
+import PathHandler.PathHandler;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 //import org.controlsfx.control.Rating;
 
-import java.awt.event.MouseEvent;
 import java.io.File;
 import java.net.MalformedURLException;
-import java.net.URL;
+
 public class CustomGoodBox extends VBox {
     ImageView photoIMG;
     Label nameLBL;

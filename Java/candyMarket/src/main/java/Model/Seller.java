@@ -111,7 +111,10 @@ public class Seller extends User {
         }
         return myAllSales;
     }
-
+    public static void registerConfirmation(Seller seller){
+        ManageInfo.allSellers.add(seller);
+        ManageInfo.allUsers.add(seller);
+    }
     public String viewSale(Sale sale) {
         return sale.toString();
 

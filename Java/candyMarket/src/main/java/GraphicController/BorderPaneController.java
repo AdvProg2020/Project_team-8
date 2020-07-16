@@ -2,7 +2,7 @@ package GraphicController;
 
 import GraphicView.CustomBorderPaneMenus;
 import GraphicView.MenuHandler;
-import GraphicView.PathHandler;
+import PathHandler.PathHandler;
 import Model.UserHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -13,11 +13,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.media.MediaPlayer;
 
-import javax.print.attribute.standard.Media;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 

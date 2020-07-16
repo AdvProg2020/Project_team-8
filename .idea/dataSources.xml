@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="ApProjectDataBase" uuid="e4480c6c-2e56-4015-8e59-3a147a7b5483">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\ApProjectDataBase.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Mydb" uuid="9e0ea55a-ad86-4f44-b1d9-2daafa72f362">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\Mydb.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

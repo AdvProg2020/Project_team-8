@@ -20,23 +20,23 @@
                     <children>
                         <Label text="sort By">
                         </Label>
-                        <ChoiceBox fx:id="sortChoiceBox" value="Order By">
+                        <ChoiceBox onAction="#onUpdateListBtnClick" fx:id="sortChoiceBox" value="Order By">
                             <padding>
                                 <Insets right="100.0" top="5.0" />
                             </padding></ChoiceBox>
                     </children>
                 </VBox>
                 <VBox spacing="10">
-                    <CheckBox fx:id="filterByAvailableProductsCheckBox" text="show available products" >
+                    <CheckBox onAction="#onUpdateListBtnClick" fx:id="filterByAvailableProductsCheckBox" text="show available products" >
                     </CheckBox>
-                    <CheckBox fx:id="filterByOffProductsCheckBox" text="show products with off" >
+                    <CheckBox onAction="#onUpdateListBtnClick" fx:id="filterByOffProductsCheckBox" text="show products with off" >
                     </CheckBox>
                 </VBox>
                 <VBox spacing="10">
                     <children>
                         <HBox spacing="5">
                             <Label text="filter by brands" />
-                            <CheckBox fx:id="filterByBrandCheckBox" >
+                            <CheckBox onAction="#onUpdateListBtnClick" fx:id="filterByBrandCheckBox" >
 
                             </CheckBox>
                         </HBox>
@@ -48,7 +48,7 @@
                     <children>
                         <HBox spacing="5">
                             <Label text="filter by categories" />
-                            <CheckBox fx:id="filterByCategoryCheckBox" >
+                            <CheckBox onAction="#onUpdateListBtnClick" fx:id="filterByCategoryCheckBox" >
 
                             </CheckBox>
                         </HBox>
@@ -60,7 +60,7 @@
                     <children>
                         <HBox spacing="5">
                             <Label text="filter by price" />
-                            <CheckBox fx:id="filterByPriceCheckBox">
+                            <CheckBox onAction="#onUpdateListBtnClick" fx:id="filterByPriceCheckBox">
 
                             </CheckBox>
                         </HBox>

@@ -16,4 +16,7 @@
          <TableColumn prefWidth="150.0" text="Column X" fx:id="lastNameColumn"/>
          <TableColumn prefWidth="150.0" text="Column X" fx:id="balanceColumn" />
       </columns></TableView>
+    <Label fx:id="label">
+
+    </Label>
 </AnchorPane>
