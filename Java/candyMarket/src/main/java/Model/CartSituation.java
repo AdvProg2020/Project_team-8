@@ -1,5 +1,5 @@
 package Model;
 
 public enum CartSituation {
-    SHIPPING,CONFIRMATION,PAYMENT
+    ON_THE_WAY, AT_DESTINATION
 }

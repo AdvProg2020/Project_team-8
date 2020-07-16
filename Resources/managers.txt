@@ -1,0 +1,1 @@
+{"cart":{},"username":"m","firstName":"m","lastName":"m","email":"m@tic.com","phoneNumber":"+98124141","password":"m","credit":0,"type":"MANAGER"}

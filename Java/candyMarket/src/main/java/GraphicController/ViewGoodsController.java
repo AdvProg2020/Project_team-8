@@ -41,7 +41,7 @@ public class ViewGoodsController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sortChoiceBox.getItems().addAll(FilterAndSort.getSortsType());
         sortChoiceBox.setValue("DATE_CREATED");
-        setBrandScrollPane();
+        //setBrandScrollPane();
         setCategoryScrollPane();
         updateCheckBoxes();
         onUpdateListBtnClick(null);
@@ -79,7 +79,7 @@ public class ViewGoodsController implements Initializable {
         minimumPriceTxt.setText(String.valueOf(FilterAndSort.minPriceFilter));
         maximumPriceTxt.setText(String.valueOf(FilterAndSort.maxPriceFilter));
     }
-    private void setBrandScrollPane() {
+    /*private void setBrandScrollPane() {
         ArrayList<String> brands = Seller.getAllBrands();
         brandCheckBoxes = createBrandCheckBoxes(brands);
         VBox vBox = new VBox();
@@ -89,7 +89,7 @@ public class ViewGoodsController implements Initializable {
             vBox.getChildren().add(c);
         }
         brandScrollPane.setContent(vBox);
-    }
+    }*/
     private void setCategoryScrollPane(){
         ArrayList<Category> categories = new ArrayList<>();
         categories.addAll(ManageInfo.allCategories);

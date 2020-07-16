@@ -1,0 +1,1 @@
+{"dateModified":1593796300851,"salePercentageAmount":0,"id":0,"situation":"CREATING_CHECK","name":"portegul","brand":"bar","price":100,"buyers":[],"sellerName":"s","stock":7,"category":"Food","detailInfo":"asdfa","averageScore":0,"specialAttributes":["100","orange"],"scores":[],"comments":[],"dateCreated":1593796300851}

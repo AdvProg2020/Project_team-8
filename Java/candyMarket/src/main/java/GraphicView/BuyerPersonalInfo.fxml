@@ -38,7 +38,6 @@
             <Font name="System Bold Italic" size="26.0" />
          </font>
       </Label>
-      <TextField fx:id="amountField" layoutX="393.0" layoutY="454.0" promptText="Increase Balance Amount" />
-      <Button layoutX="645.0" layoutY="454.0" mnemonicParsing="false" onAction="#increaseBalance" text="Increase" />
+      <Button layoutX="630.0" layoutY="455.0" mnemonicParsing="false" onAction="#increaseBalance" text="Increase Balance" />
    </children>
 </AnchorPane>
