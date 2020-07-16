@@ -1,1 +1,1 @@
-{"id":2,"date":1593796456407,"totalAmount":300,"saleAmount":0,"goods":{"portegul":3},"buyerName":"b","buySituation":"CONFIRMATION"}
+{"id":2,"date":1593796456407,"totalAmount":300,"saleAmount":0,"goods":{"portegul":3},"buyerName":"b"}
