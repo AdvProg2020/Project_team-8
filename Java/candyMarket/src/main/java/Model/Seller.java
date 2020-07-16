@@ -16,6 +16,7 @@ public class Seller extends User {
         this.setType(UserType.SELLER);
         this.mySellLog = new ArrayList<>();
         this.myGoods = new ArrayList<>();
+        this.mySales = new ArrayList<>();
     }
     public void addMySellLog(SellLog sellLog){
         mySellLog.add(sellLog);
@@ -123,10 +124,6 @@ public class Seller extends User {
 
     }
 
-    public void addSale(Sale sale) {
-        //??
-    }
-
     public String viewBalance() {
         return null;
     }
@@ -134,14 +131,8 @@ public class Seller extends User {
     public void removeProduct(Good good) {
         myGoods.remove(good);
     }
-    public static ArrayList<String> getAllBrands(){
-        ArrayList<String> brands = new ArrayList<>();
-        for (Good good:
-             ManageInfo.allGoods) {
-            if(!brands.contains(good.getBrand()))
-                brands.add(good.getBrand());
-        }
-        return brands;
-    }
 
+    public void addSale(Sale sale) {
+        this.mySales.add(sale);
+    }
 }

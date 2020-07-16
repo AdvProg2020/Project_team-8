@@ -68,6 +68,8 @@ public class MenuHandler {
     public static Button sellerProductManagingBtn;
     public static Button requestsBtn;
     public static Button sellerRequestsBtn;
+    public static Button sellerCreateSaleBtn;
+    public static Button sellerShowSaleBtn;
 
     public static void createButtons() {
         ArrayList<Button> buttons = new ArrayList<>();
@@ -105,6 +107,8 @@ public class MenuHandler {
         sellerProductManagingBtn = new CustomButton("ProductManaging","SellerProductHandling");
         requestsBtn = new CustomButton("Requests", "ManagerRequestMenu");
         sellerRequestsBtn = new CustomButton("Requests", "SellerRequestView");
+        sellerCreateSaleBtn = new CustomButton("Create Sale", "SaleSellerMenu");
+        sellerShowSaleBtn = new CustomButton("Show Sale", "ViewSellerSales");
     }
     public static void clientMenuBtnOnClick(){
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);

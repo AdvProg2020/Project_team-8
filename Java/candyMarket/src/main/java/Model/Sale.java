@@ -1,54 +1,47 @@
 package Model;
 
+import java.awt.image.AreaAveragingScaleFilter;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Sale {
-    private ItemCreationSituation situation;
-    private int id;
-    private ArrayList<Good> goods;
-    private Date startTime;
-    private Date endTime;
-    private int salePercentageAmount;
 
-    public Sale(ItemCreationSituation situation, int id, Date startTime, Date endTime, int amount) {
-        this.situation = situation;
-        this.id = id;
+    private ArrayList<Good> goods;
+    private LocalDate startTime;
+    private LocalDate endTime;
+    private int salePercentageAmount;
+    public static ArrayList<String> productsOnSaleName;
+
+    public Sale(LocalDate startTime, LocalDate endTime, int amount) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.salePercentageAmount = amount;
+        UserHandler.currentSeller.addSale(this);
     }
 
-    public ItemCreationSituation getSituation() {
-        return situation;
-    }
-
-    public void setSituation(ItemCreationSituation situation) {
-        this.situation = situation;
-    }
-
-    public Date getStartTime() {
+    public LocalDate getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(LocalDate startTime) {
         this.startTime = startTime;
     }
 
-    public Date getEndTime() {
+    public LocalDate getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(LocalDate endTime) {
         this.endTime = endTime;
     }
 
-    public int getAmount() {
+    public int getSalePercentageAmount() {
         return salePercentageAmount;
     }
 
-    public void setAmount(int amount) {
-        this.salePercentageAmount = amount;
+    public void setSalePercentageAmount(int salePercentageAmount) {
+        this.salePercentageAmount = salePercentageAmount;
     }
 
     public ArrayList<Good> getGoods() {
@@ -56,26 +49,22 @@ public class Sale {
     }
 
     public void setGoods(ArrayList<Good> goods) {
+        productsOnSaleName = new ArrayList<>();
         this.goods = goods;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public static Boolean isSaleWithId(int id){
-        return null;
-    }
-
-    public static Sale getSaleById(int id){
-        return null;
+        for (Good good : ManageInfo.allGoods) {
+            for (Good good1 : goods) {
+                if (good == good1) {
+                    productsOnSaleName.add(good.getName());
+                    good.setSalePercentageAmount(this.salePercentageAmount);
+                    good.setPrice(good.getPriceAfterSale());
+                }
+            }
+        }
     }
 
     @Override
     public String toString() {
         return "Sale{" +
-                "situation=" + situation +
-                ", id=" + id +
                 ", goods=" + goods +
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
