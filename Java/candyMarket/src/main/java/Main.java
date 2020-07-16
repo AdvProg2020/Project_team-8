@@ -1,7 +1,7 @@
 import GraphicController.BorderPaneController;
 import GraphicView.MenuHandler;
-import GraphicView.PathHandler;
 import Model.*;
+import PathHandler.PathHandler;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main extends Application {

@@ -1,7 +1,6 @@
 package GraphicController;
 
-import GraphicView.CustomGoodBox;
-import GraphicView.PathHandler;
+import PathHandler.PathHandler;
 import Model.Cart;
 import Model.Good;
 import javafx.event.ActionEvent;
@@ -12,9 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
-import java.awt.*;
 import java.io.File;
-import java.io.FileInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 

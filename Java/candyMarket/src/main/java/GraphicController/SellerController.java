@@ -1,9 +1,8 @@
 package GraphicController;
 
 import GraphicView.MenuHandler;
-import GraphicView.PathHandler;
+import PathHandler.PathHandler;
 import GraphicView.PrimaryMenu;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;

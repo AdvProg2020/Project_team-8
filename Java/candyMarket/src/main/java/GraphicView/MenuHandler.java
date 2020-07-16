@@ -2,6 +2,7 @@ package GraphicView;
 
 import GraphicController.BorderPaneController;
 import Model.UserHandler;
+import PathHandler.PathHandler;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,7 +16,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.EventListener;
 
 public class MenuHandler {
     public static Stage currentWindow;

@@ -20,9 +20,9 @@ import java.util.ResourceBundle;
 public class PurchasedProductsController implements Initializable {
     public static PurchasedProductsController purchasedProductsController;
     @FXML private TableView<BuyLog> buyLogTableView;
-    @FXML private TableColumn<BuyLog, HashMap<Good, Integer>> productColumn;
-    @FXML private TableColumn<BuyLog, Integer> priceColumn;
-    @FXML private TableColumn<BuyLog, Integer> discountColumn;
+    @FXML private TableColumn<String, HashMap<String, Integer>> productColumn;
+    @FXML private TableColumn<String, Integer> priceColumn;
+    @FXML private TableColumn<String, Integer> discountColumn;
 
     @FXML private Button showLogButton;
 
@@ -32,9 +32,9 @@ public class PurchasedProductsController implements Initializable {
 
         showLogButton.setDisable(true);
 
-        productColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, HashMap<Good, Integer>>("goods"));
-        priceColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, Integer>("totalAmount"));
-        discountColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, Integer>("discountAmount"));
+        productColumn.setCellValueFactory(new PropertyValueFactory<String, HashMap<String, Integer>>("goods"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<String, Integer>("totalAmount"));
+        discountColumn.setCellValueFactory(new PropertyValueFactory<String, Integer>("discountAmount"));
 
         buyLogTableView.setItems(getLog());
     }

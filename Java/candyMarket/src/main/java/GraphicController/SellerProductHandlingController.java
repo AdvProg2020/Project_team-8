@@ -1,7 +1,7 @@
 package GraphicController;
 
 import GraphicView.MenuHandler;
-import GraphicView.PathHandler;
+import PathHandler.PathHandler;
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

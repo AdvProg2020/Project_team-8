@@ -1,8 +1,8 @@
 package GraphicView;
 
 import GraphicController.BorderPaneController;
+import PathHandler.PathHandler;
 import javafx.scene.control.Button;
-import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 import java.io.File;

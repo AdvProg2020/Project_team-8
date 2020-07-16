@@ -96,8 +96,7 @@ public class Request {
     public void acceptRequest() {
         switch (this.requestType) {
             case SELLER_REGISTER:
-                ManageInfo.allSellers.add(this.getSeller());
-                ManageInfo.allUsers.add(this.getSeller());
+                Seller.registerConfirmation(this.getSeller());
                 break;
             case CREATE_GOOD:
                 ManageInfo.allGoods.add(this.getGood());
