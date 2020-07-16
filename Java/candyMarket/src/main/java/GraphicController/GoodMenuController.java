@@ -1,5 +1,7 @@
 package GraphicController;
 
+import GraphicView.MenuHandler;
+import Model.Comment;
 import PathHandler.PathHandler;
 import Model.Cart;
 import Model.Good;
@@ -73,5 +75,10 @@ public class GoodMenuController implements Initializable {
             Cart.addGood(good);
             Functions.showDialog("Added Successfully", false);
         }
+    }
+
+    public void commentsClicked(ActionEvent actionEvent) {
+        Comment.sortComments();
+        MenuHandler.createStageWithScene("CommentsPage");
     }
 }

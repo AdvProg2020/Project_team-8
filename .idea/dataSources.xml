@@ -13,5 +13,25 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\Mydb.db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Hibernate Maps:hibernate.cfg.xml/Hibernate" uuid="fec97716-7503-4e05-ba78-01dace2a9009">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/My Tablet/Downloads/daneshga/Term 2/AP/Project/Phase 2/new5/Java/candyMarket/src/main/resources/Hibernate Maps/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:mydb.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Hibernate Maps:manager.cfg.xml/Hibernate" uuid="ddf255c4-add3-49ed-a948-c4da5c3bc36a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/My Tablet/Downloads/daneshga/Term 2/AP/Project/Phase 2/new5/Java/candyMarket/src/main/resources/Hibernate Maps/manager.cfg.xml</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:mydb.db</jdbc-url>
+    </data-source>
   </component>
 </project>
