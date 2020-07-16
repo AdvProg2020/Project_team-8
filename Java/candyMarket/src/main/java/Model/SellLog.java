@@ -44,7 +44,7 @@ public class SellLog {
         }
         this.goods = goodsString;
         this.buyerName = buyerName;
-        this.buySituation = CartSituation.CONFIRMATION;
+        this.buySituation = CartSituation.ON_THE_WAY;
         this.id = ManageInfo.allBuyLogs.size();
     }
 
