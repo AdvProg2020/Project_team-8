@@ -1,22 +1,33 @@
 package Server.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Score {
-    private String user;
+    @Id
+    private int id;
+    @ManyToOne
+    private Buyer buyer;
     private int score;
-    private String good;
+    @ManyToOne
+    private Good good;
 
-    public Score(Buyer user, int score, Good good) {
-        this.user = user.getUsername();
+    public Score(Buyer buyer, int score, Good good) {
+        this.buyer = buyer;
         this.score = score;
-        this.good = good.getName();
+        this.good = good;
+        this.id = ManageInfo.allScores.size();
+        ManageInfo.allScores.add(this);
     }
-
+    public Score(){}
     public Buyer getUser() {
-        return (Buyer) Buyer.getUserByUsername(user);
+        return buyer;
     }
 
-    public void setUser(Buyer user) {
-        this.user = user.getUsername();
+    public void setUser(Buyer buyer) {
+        this.buyer = buyer;
     }
 
     public int getScore() {
@@ -28,9 +39,17 @@ public class Score {
     }
 
     public Good getGood() {
-        return Good.getGoodByName(good, ManageInfo.allGoods);
+        return good;
     }
     public void setGood(Good good) {
-        this.good = good.getName();
+        this.good = good;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

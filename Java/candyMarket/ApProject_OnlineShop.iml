@@ -11,6 +11,7 @@
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/Hibernate Maps/hibernate.cfg.xml" />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/Hibernate Maps/manager.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$USER_HOME$/IdeaProjects/testHibernate/src/main/resources/hibernate.cfg.xml" />
       </configuration>
     </facet>
@@ -36,6 +37,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.4.14.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.32.3" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.13" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
@@ -79,5 +82,16 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:11" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-media:11" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-media:win:11" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-search-orm:5.11.5.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-search-engine:5.11.5.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-misc:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-common:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-facet:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queries:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queryparser:5.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging-processor:2.1.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging-annotations:2.1.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.jdeparser:jdeparser:2.0.2.Final" level="project" />
   </component>
 </module>

@@ -1,13 +1,20 @@
 package Server.Model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
-
+@Entity
 public class Category {
+    @Id
     private String name;
-    private Category subCategory;
-    private ArrayList<Good> goods;
-    private ArrayList<String> specialAttributes;
+    @ElementCollection(targetClass = Good.class)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "Category_Good_map")
+    private List<Good> goods;
+    @ElementCollection
+    private List<String> specialAttributes;
+    public Category(){}
         public Category(String name, ArrayList<String> attributes) {
         this.name = name;
         specialAttributes = new ArrayList<>(){
@@ -32,15 +39,10 @@ public class Category {
         this.name = name;
     }
 
-    public Category getSubCategory() {
-        return subCategory;
-    }
-
-    public void setSubCategory(Category subCategory) {
-        this.subCategory = subCategory;
-    }
     public ArrayList<Good> getGoods() {
-        return goods;
+            ArrayList<Good> goods = new ArrayList<>();
+            goods.addAll(this.goods);
+            return goods;
     }
 
     public void setGoods(ArrayList<Good> goods) {
@@ -48,7 +50,9 @@ public class Category {
     }
 
     public ArrayList<String> getSpecialAttributes() {
-        return specialAttributes;
+            ArrayList<String> specialAttributes = new ArrayList<>();
+            specialAttributes.addAll(this.specialAttributes);
+            return specialAttributes;
     }
 
     public void setSpecialAttributes(ArrayList<String> specialAttributes) {

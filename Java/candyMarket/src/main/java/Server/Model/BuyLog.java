@@ -1,33 +1,33 @@
 package Server.Model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
+@Entity
 public class BuyLog {
     private String address;
     private String phoneNumber;
+    @Id
     private int id;
     private long date;
     private int totalAmount;
     private int discountAmount;
-    private HashMap<String,Integer> goods;
+    @ElementCollection
+    @JoinTable(name = "BuyLog_Good_map")
+    @MapKeyClass(Good.class)
+    @MapKeyColumn(name = "Good_Name")
+    @Column(name = "Number")
+    private Map<Good,Integer> goods;
     private String buyerName;
+    @Enumerated(EnumType.STRING)
     private CartSituation buySituation;
-
+    public BuyLog(){}
     public BuyLog(int totalAmount, int discountAmount, HashMap<Good,Integer> goods, String buyerName) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
-        HashMap<String,Integer> goodsString = new HashMap<>();
-        for(Map.Entry<Good, Integer> entry : goods.entrySet()) {
-            Good key = entry.getKey();
-            int value = entry.getValue();
-            goodsString.put(key.getName(),value);
-            // do what you have to do here
-            // In your case, another loop.
-        }
-        this.goods = goodsString;
+        this.goods = goods;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.CONFIRMATION;
         this.id = ManageInfo.allBuyLogs.size();
@@ -69,8 +69,8 @@ public class BuyLog {
 
     public ArrayList<Good> getGoods() {
         ArrayList<Good> purchasedGoods = new ArrayList<>();
-        for (String good : goods.keySet()) {
-            purchasedGoods.add(Good.getGoodByName(good, ManageInfo.allGoods));
+        for (Good good : goods.keySet()) {
+            purchasedGoods.add(good);
         }
         return purchasedGoods;
     }

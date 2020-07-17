@@ -2,11 +2,13 @@ import GraphicController.BorderPaneController;
 import GraphicView.MenuHandler;
 import Model.*;
 import PathHandler.PathHandler;
+import Server.DataHandler.DBManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.hibernate.Hibernate;
 
 import java.io.*;
 import java.util.ArrayList;

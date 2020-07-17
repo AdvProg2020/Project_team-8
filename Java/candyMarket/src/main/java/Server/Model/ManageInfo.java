@@ -7,10 +7,13 @@ public class ManageInfo {
     public static ArrayList<Request> allRequests = new ArrayList<Request>();
     public static ArrayList<BuyLog> allBuyLogs = new ArrayList<BuyLog>();
     public static ArrayList<SellLog> allSellLogs = new ArrayList<SellLog>();
-    public static ArrayList<User> allUsers = new ArrayList<User>();
+    public static ArrayList<User> allUsers = new ArrayList<>();
     public static ArrayList<Manager> allManagers = new ArrayList<Manager>();
     public static ArrayList<Buyer> allBuyers = new ArrayList<Buyer>();
     public static ArrayList<Seller> allSellers = new ArrayList<Seller>();
     public static ArrayList<Discount> allDiscounts = new ArrayList<Discount>();
     public static ArrayList<Good> allGoods = new ArrayList<Good>();
+    public static ArrayList<Sale> allSales = new ArrayList<Sale>();
+    public static ArrayList<Score> allScores = new ArrayList<Score>();
+    public static ArrayList<Comment> allComments = new ArrayList<Comment>();
 }

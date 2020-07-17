@@ -86,7 +86,7 @@ public class MenuHandler {
             MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
             mediaPlayer.play();
         });
-        exitBtn =new CustomButton("SaveAndExit");
+        exitBtn =new CustomButton("saveObjectAndExit");
         exitBtn.setOnAction(actionEvent -> {
             MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
             mediaPlayer.play();

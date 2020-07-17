@@ -65,6 +65,5 @@ public class ServerSocket {
         String url = PathHandler.resourceURL+"ApProjectDataBase.db";
         Connection connection = DriverManager.getConnection("jdbc:sqlite:"+url);
         Statement statement = connection.createStatement();
-
     }
 }

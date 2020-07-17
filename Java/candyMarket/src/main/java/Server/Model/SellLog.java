@@ -1,46 +1,46 @@
 package Server.Model;
 
+import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.HashMap;
 import java.util.Map;
-
+@Entity
 public class SellLog {
     private String address;
     private String phoneNumber;
+    @Id
     private int id;
     private long date;
     private int totalAmount;
     private int saleAmount;
-    private HashMap<String,Integer> goods;
+    @ElementCollection
+    @JoinTable(name = "SellLog_Good_map")
+    @MapKeyClass(Good.class)
+    @MapKeyColumn(name = "Good_Name")
+    @Column(name = "Number")
+    private Map<Good, Integer> goods;
 
     {
         new HashMap<>() {
             @Override
             public String toString() {
                 String string = new String();
-                for (String good : goods.keySet()) {
-                    string = good + ", ";
+                for (Good good : goods.keySet()) {
+                    string = good.getName() + ", ";
                 }
                 return string;
             }
         };
     }
-
     private String buyerName;
+    @Enumerated(EnumType.STRING)
     private CartSituation buySituation;
-
+    public SellLog(){}
     public SellLog(int totalAmount, int saleAmount, HashMap<Good, Integer> goods, String buyerName) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.saleAmount = saleAmount;
-        HashMap<String,Integer> goodsString = new HashMap<>();
-        for(Map.Entry<Good, Integer> entry : goods.entrySet()) {
-            Good key = entry.getKey();
-            int value = entry.getValue();
-            goodsString.put(key.getName(),value);
-            // do what you have to do here
-            // In your case, another loop.
-        }
-        this.goods = goodsString;
+        this.goods = goods;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.CONFIRMATION;
         this.id = ManageInfo.allBuyLogs.size();
@@ -55,15 +55,7 @@ public class SellLog {
     }
 
     public HashMap<Good, Integer> getGoods() {
-        HashMap<Good,Integer> goodsOrginal = new HashMap<>();
-        for(Map.Entry<String, Integer> entry : goods.entrySet()) {
-            String key = entry.getKey();
-            int value = entry.getValue();
-            goodsOrginal.put(Good.getGoodByName(key, ManageInfo.allGoods),value);
-            // do what you have to do here
-            // In your case, another loop.
-        }
-        return goodsOrginal;
+        return (HashMap<Good, Integer>) goods;
     }
 
     public String getPhoneNumber() {
