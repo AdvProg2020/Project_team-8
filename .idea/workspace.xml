@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="add client details for manager page">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_14_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="add client details for manager page" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -213,7 +210,7 @@
       <workItem from="1594815257943" duration="20393000" />
       <workItem from="1594914853043" duration="8690000" />
       <workItem from="1594924470688" duration="9742000" />
-      <workItem from="1594997963915" duration="6434000" />
+      <workItem from="1594997963915" duration="7057000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -511,25 +508,25 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594922801484" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1237" height="108" key="GridCell.Tab.0.bottom" timestamp="1595004790997">
+    <state width="1237" height="108" key="GridCell.Tab.0.bottom" timestamp="1595004959343">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="108" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595004790997" />
+    <state width="1237" height="108" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595004959343" />
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1237" height="108" key="GridCell.Tab.0.center" timestamp="1595004790997">
+    <state width="1237" height="108" key="GridCell.Tab.0.center" timestamp="1595004959343">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="108" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595004790997" />
+    <state width="1237" height="108" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595004959343" />
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="108" key="GridCell.Tab.0.left" timestamp="1595004790997">
+    <state width="1237" height="108" key="GridCell.Tab.0.left" timestamp="1595004959343">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="108" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595004790997" />
+    <state width="1237" height="108" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595004959343" />
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="108" key="GridCell.Tab.0.right" timestamp="1595004790997">
+    <state width="1237" height="108" key="GridCell.Tab.0.right" timestamp="1595004959343">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="108" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595004790997" />
+    <state width="1237" height="108" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595004959343" />
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
     <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593781945489">
       <screen x="0" y="0" width="1280" height="680" />
