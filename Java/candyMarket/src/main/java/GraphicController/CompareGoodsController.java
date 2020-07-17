@@ -6,6 +6,7 @@ import PathHandler.PathHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -67,14 +68,18 @@ public class CompareGoodsController implements Initializable {
             scoreLbl.setFont(Font.font ("Verdana", 20));
             stockLbl.setFont(Font.font ("Verdana", 20));
             sellerNameLbl.setFont(Font.font ("Verdana", 20));
+            secondaryGoodPrimeAttributes.setAlignment(Pos.TOP_CENTER);
             secondaryGoodPrimeAttributes.getChildren().addAll(imageView,nameLbl,priceLbl,scoreLbl,stockLbl,sellerNameLbl);
             VBox vBox = new VBox();
+            vBox.setMinWidth(311);
+            vBox.setMaxWidth(311);
             for (String s: good.getSpecialAttributes()) {
                 String categoryAttribute = good.getCategory().getSpecialAttributes().get(good.getSpecialAttributes().indexOf(s));
                 Label label = new Label(categoryAttribute + "     :     " + s);
                 label.setFont(Font.font("Verdana", 20));
                 vBox.getChildren().add(label);
             }
+            vBox.setAlignment(Pos.TOP_CENTER);
             secondaryGoodScrollPane.setContent(vBox);
         }
     }
@@ -97,10 +102,13 @@ public class CompareGoodsController implements Initializable {
         scoreLbl.setFont(Font.font ("Verdana", 20));
         stockLbl.setFont(Font.font ("Verdana", 20));
         sellerNameLbl.setFont(Font.font ("Verdana", 20));
+        primeGoodPrimeAttributes.setAlignment(Pos.TOP_CENTER);
         primeGoodPrimeAttributes.getChildren().addAll(imageView,nameLbl,priceLbl,scoreLbl,stockLbl,sellerNameLbl);
     }
     private void createSpecialProperties(){
         VBox vBox = new VBox();
+        vBox.setMinWidth(311);
+        vBox.setMaxWidth(311);
         for (String s:
                 primeGood.getSpecialAttributes()) {
             String categoryAttribute = primeGood.getCategory().getSpecialAttributes().get(primeGood.getSpecialAttributes().indexOf(s));
@@ -108,6 +116,7 @@ public class CompareGoodsController implements Initializable {
             label.setFont(Font.font ("Verdana", 20));
             vBox.getChildren().add(label);
         }
+        vBox.setAlignment(Pos.TOP_CENTER);
         primeGoodScrollPane.setContent(vBox);
     }
 }
