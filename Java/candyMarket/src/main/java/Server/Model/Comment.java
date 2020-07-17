@@ -1,5 +1,10 @@
 package Server.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Comment {
     @Override
     public String toString() {
@@ -10,10 +15,22 @@ public class Comment {
                 '}';
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public static enum OpinionSituation{
         CONFIRMING,CONFIRMED,NOT_CONFIRMED
     }
+    @Id
+    private int id;
+    @ManyToOne
     private User user;
+    @ManyToOne
     private Good good;
     private String content;
     private String title;
@@ -35,13 +52,15 @@ public class Comment {
     }
 
     private OpinionSituation situation;
-
+    public Comment(){}
     public Comment(User user, Good good, String content, String title) {
         this.user = user;
         this.good = good;
         this.content = content;
         this.title = title;
         this.situation = OpinionSituation.CONFIRMED;
+        this.id = ManageInfo.allComments.size();
+        ManageInfo.allComments.add(this);
     }
 
     public User getUser() {

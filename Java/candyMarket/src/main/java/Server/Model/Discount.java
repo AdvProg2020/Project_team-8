@@ -1,18 +1,24 @@
 package Server.Model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
+@Entity
 public class Discount {
     private static ArrayList<Discount> discounts =  ManageInfo.allDiscounts;
+    @Id
     private int code;
     private LocalDate startDate;
     private LocalDate endDate;
     private int percentReduction;
     private int maxReductionAmount;
     private int usageNumber;
-    private ArrayList<String> buyers;
-
+    @ElementCollection(targetClass = Buyer.class)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "Discount_Buyer_map")
+    private List<Buyer> buyers;
     @Override
     public String toString() {
         return "Discount{" +
@@ -22,7 +28,7 @@ public class Discount {
                 ", usageNumber=" + usageNumber +
                 '}';
     }
-
+    public Discount(){}
     public Discount(int code, LocalDate startDate, LocalDate endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
         this.code = code;
         this.startDate = startDate;
@@ -86,21 +92,13 @@ public class Discount {
     }
 
     public ArrayList<Buyer> getUsers() {
-        ArrayList<Buyer> buyersOrginal = new ArrayList<>();
-        for (String s:
-             buyers) {
-             buyersOrginal.add((Buyer) Buyer.getUserByUsername(s));
-        }
-        return buyersOrginal;
+        ArrayList<Buyer> buyers = new ArrayList<>();
+        buyers.addAll(this.buyers);
+        return  buyers;
     }
 
     public void setBuyers(ArrayList<Buyer> buyers) {
-        ArrayList<String> buyersString = new ArrayList<>();
-        for (Buyer b:
-                buyers) {
-            buyersString.add(b.getUsername());
-        }
-        this.buyers = buyersString;
+        this.buyers = buyers;
     }
     public static Discount getDiscountById(String id) {
         return null;

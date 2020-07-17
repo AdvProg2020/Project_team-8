@@ -23,7 +23,6 @@ public class User {
     protected String email;
     protected String phoneNumber;
     protected String password;
-    private int credit;
     private UserType type;
     private String userPhoto;
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {

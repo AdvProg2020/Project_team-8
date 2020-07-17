@@ -1,21 +1,35 @@
 package Server.Model;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 @Entity
 public class Buyer extends User {
     public ArrayList<Discount> getMyDiscounts() {
-        return myDiscounts;
+        ArrayList<Discount> discounts = new ArrayList<>();
+        discounts.addAll(myDiscounts);
+        return discounts;
     }
 
     public void setMyDiscounts(ArrayList<Discount> myDiscounts) {
         this.myDiscounts = myDiscounts;
     }
-    public Buyer(){}
-    private ArrayList<Discount> myDiscounts;
-    private ArrayList<BuyLog> myLogs;
-    private ArrayList<Good> boughtGoods;
+    public Buyer(){
+
+    }
+    @ElementCollection(targetClass = Discount.class)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "Buyer_Discount_map")
+    private List<Discount> myDiscounts;
+    @ElementCollection(targetClass = BuyLog.class)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "Buyer_BuyLog_map")
+    private List<BuyLog> myLogs;
+    @ElementCollection(targetClass = Good.class)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "Buyer_Good_map")
+    private List<Good> boughtGoods;
     private int balance;
     public static Buyer currentBuyer;
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
@@ -126,7 +140,9 @@ public class Buyer extends User {
 
 
     public ArrayList<BuyLog> getMyLogs() {
-        return myLogs;
+        ArrayList<BuyLog> arrayList= new ArrayList<>();
+        arrayList.addAll(myLogs);
+        return arrayList;
     }
 
     public void setMyLogs(ArrayList<BuyLog> myLogs) {
@@ -138,7 +154,9 @@ public class Buyer extends User {
     }
 
     public ArrayList<Good> getBoughtGoods() {
-        return boughtGoods;
+        ArrayList<Good> goods = new ArrayList<>();
+        goods.addAll(boughtGoods);
+        return goods;
     }
 
     public void setBoughtGoods(ArrayList<Good> boughtGoods) {
@@ -161,4 +179,5 @@ public class Buyer extends User {
     public String toString() {
         return username;
     }
+
 }

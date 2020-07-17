@@ -65,7 +65,15 @@ public class Seller extends User {
     public static void createNewSeller() {
 
     }
-
+    public static ArrayList<String> getAllBrands(){
+        ArrayList<String> brands = new ArrayList<>();
+        for (Good good:
+                ManageInfo.allGoods) {
+            if(!brands.contains(good.getBrand()))
+                brands.add(good.getBrand());
+        }
+        return brands;
+    }
     public String viewCompanyInformation() {
         return "Company name: " + this.getSellerCompanyName() + "\n";
     }

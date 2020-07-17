@@ -1,8 +1,11 @@
 package Server.Model;
 
+import net.bytebuddy.implementation.bind.MethodDelegationBinder;
+
 import javax.persistence.*;
 import java.util.ArrayList;
-@MappedSuperclass
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
     public String getUserPhoto() {
         return userPhoto;
@@ -24,7 +27,7 @@ public class User {
     protected String email;
     protected String phoneNumber;
     protected String password;
-    private int credit;
+    @Enumerated(EnumType.STRING)
     private UserType type;
     private String userPhoto;
     public User(){}

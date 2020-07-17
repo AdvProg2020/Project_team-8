@@ -1,7 +1,13 @@
 package Server.Model;
 
-import java.util.ArrayList;
+import jdk.jfr.Enabled;
+import org.hibernate.sql.ordering.antlr.GeneratedOrderByFragmentParser;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
 public class Good {
     public long getDateModified() {
         return dateModified;
@@ -20,17 +26,27 @@ public class Good {
     private int salePercentageAmount;
     private int id;
     private ItemCreationSituation situation;
+    @Id
     private String name;
     private String brand;
     private int price;
-    private ArrayList<String> buyers;
-    private String sellerName;
+    @ElementCollection(targetClass = Buyer.class)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "Good_Buyer_map")
+    private List<Buyer> buyers;
+    @ManyToOne
+    private Seller seller;
     private int stock;
-    private String category;
+    @ManyToOne
+    private Category category;
     private String detailInfo;
     private int averageScore;
-    private ArrayList<String> specialAttributes;
-    private ArrayList<Score> scores = new ArrayList<>() {
+    @ElementCollection
+    private List<String> specialAttributes;
+    @ElementCollection(targetClass = Score.class)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "Good_Score_map")
+    private List<Score> scores = new ArrayList<>() {
         @Override
         public String toString() {
             int a = 0;
@@ -40,17 +56,21 @@ public class Good {
             return "" + a/scores.size();
         }
     };
-    private ArrayList<Comment> comments;
+    @ElementCollection(targetClass = Comment.class)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "Good_Comment_map")
+    private List<Comment> comments;
     private String image;
     private long dateCreated;
+    public Good(){}
     public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image,ArrayList<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
         this.name = name;
         this.brand = brand;
         this.price = price;
-        this.sellerName= seller.getUsername();
+        this.seller= seller;
         this.stock = stock;
-        this.category = category.getName();
+        this.category = category;
         this.situation = ItemCreationSituation.CREATING_CHECK;
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
@@ -64,11 +84,9 @@ public class Good {
 
 
     public ArrayList<Buyer> getBuyers() {
-        ArrayList<Buyer> orginalBuyers = new ArrayList<>();
-        for (String buyer : buyers) {
-            orginalBuyers.add((Buyer) Buyer.getUserByUsername(buyer));
-        }
-        return orginalBuyers;
+        ArrayList<Buyer> buyers = new ArrayList();
+        buyers.addAll(this.buyers);
+        return buyers;
     }
 
     public int getStock() {
@@ -80,11 +98,11 @@ public class Good {
     }
 
     public Category getCategory() {
-        return Category.getCategoryByName(category);
+        return category;
     }
 
     public void setCategory(Category category) {
-        this.category = category.getName();
+        this.category = category;
     }
 
     public String getDetailInfo() {
@@ -159,7 +177,7 @@ public class Good {
     }
 
     public void addBuyers(Buyer b){
-        buyers.add(b.getUsername());
+        buyers.add(b);
     }
 
     public static Good getGoodByName(String name, ArrayList<Good> goods) {
@@ -180,11 +198,11 @@ public class Good {
     }
 
     public Seller getSeller() {
-        return (Seller) User.getUserByUsername(sellerName);
+        return seller;
     }
 
     public void setSeller(Seller seller) {
-        this.sellerName = seller.getUsername();
+        this.seller=seller;
     }
 
     public String viewProductDetails() {
@@ -202,6 +220,8 @@ public class Good {
     }
 
     public ArrayList<Comment> getComments() {
+        ArrayList comments = new ArrayList();
+        comments.addAll(this.comments);
         return comments;
     }
 
@@ -210,6 +230,8 @@ public class Good {
     }
 
     public ArrayList<Score> getScores() {
+        ArrayList <Score> scores = new ArrayList();
+        scores.addAll(this.scores);
         return scores;
     }
 
@@ -236,7 +258,7 @@ public class Good {
                 ", brand='" + brand + '\'' +
                 ", price=" + price +
                 ", buyers=" + buyers +
-                ", seller=" + sellerName +
+                ", seller=" + seller.getUsername() +
                 ", stock=" + stock +
                 ", category=" + category +
                 ", detailInfo='" + detailInfo + '\'' +
@@ -268,7 +290,9 @@ public class Good {
     }
 
     public ArrayList<String> getSpecialAttributes() {
-        return specialAttributes;
+        ArrayList<String> strings = new ArrayList<>();
+        strings.addAll(specialAttributes);
+        return strings;
     }
 
     public void setSpecialAttributes(ArrayList<String> specialAttributes) {

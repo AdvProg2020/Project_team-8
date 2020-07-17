@@ -1,7 +1,8 @@
 package Server.Model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
-
+@Entity
 public class Request {
     public static enum requestType{
         CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
@@ -11,22 +12,26 @@ public class Request {
     }
     private String stateString;
     public state requestState;
+    @Enumerated(EnumType.STRING)
     public static requestType requestType;
+    @ManyToOne
     private Good good;
+    @ManyToOne
     private Sale sale;
+    @Id
     private int requestId;
+    @ManyToOne
     private Seller seller;
     private String requestCommand;
-    private static int lastId = 0;
     public static ArrayList<Request> sellersRequest;
     public static ArrayList<Request> managerRequest = ManageInfo.allRequests;
-
+    public Request(){}
     public Request(Request.requestType requestType) {
         this.requestState = state.CHECKING;
         this.requestType = requestType;
-        //ManageInfo.allRequests.add(this);
         managerRequest.add(this);
-        this.requestId = ++lastId;
+        this.requestId = ManageInfo.allRequests.size();
+        ManageInfo.allRequests.add(this);
         this.stateString = "checking";
     }
 

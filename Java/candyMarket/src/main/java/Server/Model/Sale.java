@@ -1,22 +1,26 @@
 package Server.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.Date;
-
+@Entity
 public class Sale {
     private ItemCreationSituation situation;
+    @Id
     private int id;
     private ArrayList<Good> goods;
     private Date startTime;
     private Date endTime;
     private int salePercentageAmount;
-
-    public Sale(ItemCreationSituation situation, int id, Date startTime, Date endTime, int amount) {
+    public Sale(){}
+    public Sale(ItemCreationSituation situation, Date startTime, Date endTime, int amount) {
         this.situation = situation;
-        this.id = id;
         this.startTime = startTime;
         this.endTime = endTime;
         this.salePercentageAmount = amount;
+        this.id = ManageInfo.allSales.size();
+        ManageInfo.allSales.add(this);
     }
 
     public ItemCreationSituation getSituation() {
