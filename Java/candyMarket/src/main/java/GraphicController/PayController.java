@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
@@ -78,6 +79,20 @@ public class PayController implements Initializable {
                 throw new NullPointerException();
             else {
                 UserHandler.currentBuyer.addBalance((-1) * Cart.getTotalAmount());
+                if (Cart.getTotalAmount() > 10000) {
+                    Random rand = new Random();
+                    int randNumber = rand.nextInt(ManageInfo.allDiscounts.size());
+                    Discount discount = ManageInfo.allDiscounts.get(randNumber);
+                    boolean added = false;
+                    for (Discount myDiscount : UserHandler.currentBuyer.getMyDiscounts()) {
+                        if (myDiscount == discount) {
+                            added = true;
+                            myDiscount.setUsageNumber(myDiscount.getUsageNumber() + 1);
+                        }
+                    }
+                    if (!added)
+                        UserHandler.currentBuyer.addDiscount(discount);
+                }
                 HashMap<Seller, HashMap<Good, Integer>> soldGoods = new HashMap<>();
                 HashMap<Good, Integer> boughtGoods;
                 boughtGoods = Cart.getGoods();

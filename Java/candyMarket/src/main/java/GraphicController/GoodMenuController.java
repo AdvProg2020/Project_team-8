@@ -81,4 +81,8 @@ public class GoodMenuController implements Initializable {
         Comment.sortComments();
         MenuHandler.createStageWithScene("CommentsPage");
     }
+
+    public void openComparePage(ActionEvent actionEvent) {
+        MenuHandler.createStageWithScene("CompareGoods");
+    }
 }

@@ -18,6 +18,7 @@ public class Buyer extends User {
     private ArrayList<Good> boughtGoods = new ArrayList<>();
     private int balance;
     public static Buyer currentBuyer;
+
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.setType(UserType.BUYER);
@@ -33,21 +34,28 @@ public class Buyer extends User {
         ManageInfo.allUsers.add(this);
         getDiscountCodeRandom();
     }
+
     private void getDiscountCodeRandom(){
         Random rand = new Random();
         int size = ManageInfo.allDiscounts.size();
         if(size==0) return;
         int randNumber;
         randNumber = rand.nextInt(100);
-        if(randNumber % 1 == 0) {
+        if(randNumber % 3 == 0) {
             randNumber = rand.nextInt(size);
             Discount discount = ManageInfo.allDiscounts.get(randNumber);
             myDiscounts.add(discount);
         }
     }
+
+    public void addDiscount(Discount discount) {
+        myDiscounts.add(discount);
+    }
+
     public Cart getCart() {
         return cart;
     }
+
     public BuyLog getBuyLogById(int id){
         for (BuyLog b:
              myLogs) {

@@ -41,7 +41,7 @@
                <Button onAction="#addToCartClick" prefHeight="22.0" prefWidth="170.0" text="addToCart">
 
             </Button>
-               <Button prefHeight="28.0" prefWidth="172.0" text="compareWithAnotherProduct">
+               <Button onAction="#openComparePage" prefHeight="28.0" prefWidth="172.0" text="compareWithAnotherProduct">
 
             </Button>
             <Button onAction="#commentsClicked" mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" text="Comments" />

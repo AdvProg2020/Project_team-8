@@ -1,1 +1,1 @@
-{"name":"Food","specialAttributes":["kaleri","color"]}
+{"name":"Food","specialAttributes":["calery","color"]}
