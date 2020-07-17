@@ -1,1 +1,1 @@
-{"cart":{},"username":"m","firstName":"m","lastName":"m","email":"user1@manager.com","phoneNumber":"+9812431243","password":"m","credit":0,"type":"MANAGER"}
+{"cart":{},"username":"m","firstName":"m","lastName":"m","email":"user1@manager.com","phoneNumber":"+9812431243","password":"m","type":"MANAGER"}

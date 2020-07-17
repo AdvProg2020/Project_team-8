@@ -80,4 +80,9 @@ public class ClientsProfileForManagerController implements Initializable {
     public void createNewManager(ActionEvent actionEvent) {
         MenuHandler.createStageWithScene("FirstManagerLogin");
     }
+
+    public void createNewSupporter(ActionEvent actionEvent) {
+        MenuHandler.createStageWithScene("AddNewSupporter");
+    }
+
 }

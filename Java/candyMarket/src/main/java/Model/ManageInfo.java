@@ -11,6 +11,7 @@ public class ManageInfo {
     public static ArrayList<Manager> allManagers = new ArrayList<Manager>();
     public static ArrayList<Buyer> allBuyers = new ArrayList<Buyer>();
     public static ArrayList<Seller> allSellers = new ArrayList<Seller>();
+    public static ArrayList<Supporter> allSupporters = new ArrayList<Supporter>();
     public static ArrayList<Discount> allDiscounts = new ArrayList<Discount>();
     public static ArrayList<Good> allGoods = new ArrayList<Good>();
     public static ArrayList<Comment> allComments = new ArrayList<Comment>();

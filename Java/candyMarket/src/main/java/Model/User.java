@@ -14,7 +14,7 @@ public class User {
     }
 
     public enum UserType {
-        BUYER, SELLER, MANAGER
+        BUYER, SELLER, MANAGER, SUPPORTER
     }
     protected Cart cart = new Cart();
     protected String username;
@@ -169,16 +169,16 @@ public class User {
         }
     }
     public boolean isManager(){
-        if(type==UserType.MANAGER) return true;
-        return false;
+        return type == UserType.MANAGER;
     }
     public boolean isBuyer(){
-        if(type==UserType.BUYER) return true;
-        return false;
+        return type == UserType.BUYER;
     }
     public boolean isSeller(){
-        if(type==UserType.SELLER) return true;
-        return false;
+        return type == UserType.SELLER;
+    }
+    public boolean isSupporter(){
+        return type == UserType.SUPPORTER;
     }
     public static void deleteUser(User user) {
         ManageInfo.allUsers.remove(user);
