@@ -49,7 +49,16 @@ public class Sale {
     }
 
     public void setGoods(ArrayList<Good> goods) {
-        productsOnSaleName = new ArrayList<>();
+        productsOnSaleName = new ArrayList<>() {
+            @Override
+            public String toString() {
+                String string = "";
+                for (String s : productsOnSaleName) {
+                    string = "| " + s;
+                }
+                return string;
+            }
+        };
         this.goods = goods;
         for (Good good : ManageInfo.allGoods) {
             for (Good good1 : goods) {

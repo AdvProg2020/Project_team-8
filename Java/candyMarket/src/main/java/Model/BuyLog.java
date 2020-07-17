@@ -30,7 +30,7 @@ public class BuyLog {
         }
         this.goods = goodsString;
         this.buyerName = buyerName;
-        this.buySituation = CartSituation.CONFIRMATION;
+        this.buySituation = CartSituation.ON_THE_WAY;
         this.id = ManageInfo.allBuyLogs.size();
         ManageInfo.allBuyLogs.add(this);
     }
@@ -55,6 +55,9 @@ public class BuyLog {
         this.discountAmount = discountAmount;
     }
 
+    public String getAddress() {
+        return address;
+    }
 
     public CartSituation getBuySituation() {
         return buySituation;

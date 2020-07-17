@@ -1,3 +1,1 @@
-{"name":"Food","specialAttributes":["kaleri"]}
-{"name":"Pushak","specialAttributes":["andaze","jens","hajm"]}
-{"name":"Fruit","specialAttributes":["color"]}
+{"name":"Food","specialAttributes":["calery","color"]}

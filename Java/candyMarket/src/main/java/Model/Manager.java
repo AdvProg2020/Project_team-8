@@ -5,6 +5,8 @@ import java.util.HashMap;
 
 public class Manager extends User {
     public static Manager currentManager;
+    public static int karmozd = 0;
+    public static int minWalletMoney = 0;
 
     public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);

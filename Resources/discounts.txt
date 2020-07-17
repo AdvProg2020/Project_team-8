@@ -1,1 +1,0 @@
-{"code":123,"startDate":{"year":2020,"month":6,"day":28},"endDate":{"year":2021,"month":7,"day":30},"percentReduction":50,"maxReductionAmount":100,"usageNumber":0}

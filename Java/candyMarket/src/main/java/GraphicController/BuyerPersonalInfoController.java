@@ -1,5 +1,6 @@
 package GraphicController;
 
+import GraphicView.MenuHandler;
 import Model.Discount;
 import Model.UserHandler;
 import javafx.collections.FXCollections;
@@ -25,8 +26,6 @@ public class BuyerPersonalInfoController implements Initializable {
 
     @FXML private Label balance;
 
-    @FXML private TextField amountField;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         balance.setText(Integer.toString(UserHandler.currentBuyer.getBalance()));
@@ -43,8 +42,7 @@ public class BuyerPersonalInfoController implements Initializable {
         tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 
-    public ObservableList<Discount> getCodes()
-    {
+    public ObservableList<Discount> getCodes() {
         ObservableList<Discount> codes = FXCollections.observableArrayList();
         codes.addAll(UserHandler.currentBuyer.getMyDiscounts());
 
@@ -52,16 +50,6 @@ public class BuyerPersonalInfoController implements Initializable {
     }
 
     public void increaseBalance(ActionEvent actionEvent) {
-        try {
-           UserHandler.currentBuyer.addBalance(Integer.parseInt(amountField.getText()));
-           balance.setText(Integer.toString(UserHandler.currentBuyer.getBalance()));
-           Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-           alert.setContentText("Balance Increased");
-           alert.show();
-        } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Enter A Valid Number");
-            alert.show();
-        }
+        MenuHandler.createStageWithScene("IncreaseWalletMoney");
     }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+            style="-fx-background-color:             linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),             #2193b0,             #6dd5ed,             radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.CommentsPageController">
+   <children>
+      <ScrollPane fx:id="scrollPane" layoutX="44.0" layoutY="76.0" prefHeight="369.0" prefWidth="713.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <Label layoutX="306.0" layoutY="21.0" text="Comment Section">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="459.0" text="New Comment:" />
+      <TextArea fx:id="commentText" layoutX="68.0" layoutY="486.0" prefHeight="88.0" prefWidth="624.0" />
+      <Button onAction="#sendComment" layoutX="692.0" layoutY="486.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="70.0" text="Send" />
+   </children>
+</AnchorPane>
