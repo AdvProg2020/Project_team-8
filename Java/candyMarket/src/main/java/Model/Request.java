@@ -1,7 +1,13 @@
 package Model;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
 import java.util.ArrayList;
+import java.util.List;
 
+@Entity
 public class Request {
     public static enum requestType{
         CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
@@ -10,21 +16,22 @@ public class Request {
         CHECKING,ACCEPTED,DECLINED
     }
     private String stateString;
+    @Enumerated(EnumType.STRING)
     public state requestState;
     public static requestType requestType;
-    private Good good;
-    private Sale sale;
+    private String good;
+    private Integer sale;
+    @Id
     private int requestId;
-    private Seller seller;
+    private String seller;
     private String requestCommand;
-    private static int lastId = 0;
-    public static ArrayList<Request> sellersRequest;
-
+    public static List<Request> sellersRequest;
+    public Request(){}
     public Request(Request.requestType requestType) {
         this.requestState = state.CHECKING;
         this.requestType = requestType;
+        this.requestId = ManageInfo.allRequests.size();
         ManageInfo.allRequests.add(this);
-        this.requestId = ++lastId;
         this.stateString = "checking";
     }
 
@@ -33,11 +40,11 @@ public class Request {
     }
 
     public Good getGood() {
-        return good;
+        return Good.getGoodByName(good, ManageInfo.allGoods);
     }
 
     public Sale getSale() {
-        return sale;
+        return Sale.getSaleById(sale);
     }
 
     public int getRequestId() {
@@ -45,7 +52,7 @@ public class Request {
     }
 
     public Seller getSeller() {
-        return seller;
+        return (Seller) Seller.getUserByUsername(seller);
     }
 
     public String getRequestCommand() {
@@ -53,29 +60,31 @@ public class Request {
     }
 
     public void createRegisterSellerRequest(Seller seller) {
-        this.seller = seller;
+        this.seller = seller.getUsername();
         this.requestCommand = "Register seller " + this.getSeller().getSellerCompanyName();
     }
 
     public String viewSellerRegisterDetails() {
-        return this.seller.viewUserPersonalInfo() +"\n" + this.seller.viewCompanyInformation();
+        Seller seller = (Seller) Seller.getUserByUsername(this.seller);
+        return seller.viewUserPersonalInfo() +"\n" + seller.viewCompanyInformation();
     }
     public String viewAddProductDetail() {
-        return this.good.viewProductDetails();
+        Good good = Good.getGoodByName(this.good, ManageInfo.allGoods);
+        return good.viewProductDetails();
     }
 
     public void createAddProductRequest(Good good) {
-        this.good = good;
+        this.good = good.getName();
         this.requestCommand = "Add product " + this.getGood().getName();
     }
 
     public void createEditProductRequest(Good good) {
-        this.good = good;
+        this.good = good.getName();
         this.requestCommand = "Edit product " + this.getGood().getName();
     }
 
     public void createDeleteProductRequest(Good good) {
-        this.good = good;
+        this.good = good.getName();
         this.requestCommand = "Delete product " + this.getGood().getName();
     }
 
@@ -110,18 +119,18 @@ public class Request {
                     }
                 }
                 ManageInfo.allGoods.remove(goodToBeRemoved);
-                goodToBeRemoved.getSeller().getMyGoods().add(this.getGood());
-                ArrayList<Good> goods = goodToBeRemoved.getSeller().getMyGoods();
+                goodToBeRemoved.getSeller().getGoods().add(this.getGood());
+                List<Good> goods = goodToBeRemoved.getSeller().getGoods();
                 goods.remove(goodToBeRemoved);
-                goodToBeRemoved.getSeller().setMyGoods(goods);
+                goodToBeRemoved.getSeller().setGoods(goods);
                 ManageInfo.allGoods.add(this.getGood());
                 break;
             case REMOVE_GOOD:
                 ManageInfo.allGoods.remove(this.getGood());
-                this.getGood().getSeller().getMyGoods().add(this.getGood());
-                ArrayList<Good> products = this.getSeller().getMyGoods();
+                this.getGood().getSeller().getGoods().add(this.getGood());
+                List<Good> products = this.getSeller().getGoods();
                 products.remove(this.getGood());
-                this.getGood().getSeller().setMyGoods(products);
+                this.getGood().getSeller().setGoods(products);
                 ManageInfo.allGoods.add(this.getGood());
                 break;
         }
@@ -134,8 +143,8 @@ public class Request {
         stateString = "declined";
     }
 
-    public static ArrayList<Request> getUncheckedRequests() {
-        ArrayList<Request> uncheckedRequests = new ArrayList<>();
+    public static List<Request> getUncheckedRequests() {
+        List<Request> uncheckedRequests = new ArrayList<>();
         for (Request request : ManageInfo.allRequests) {
             if (request.requestState.equals(state.CHECKING)) {
                 uncheckedRequests.add(request);
@@ -170,8 +179,8 @@ public class Request {
     public static void setSellerRequest() {
         sellersRequest = new ArrayList<>();
         for (Request request : ManageInfo.allRequests) {
-            if (request.good != null) {
-                if (UserHandler.currentSeller == request.good.getSeller()) {
+            if (request.getGood() != null) {
+                if (UserHandler.currentSeller == request.getGood().getSeller()) {
                     sellersRequest.add(request);
                 }
             }

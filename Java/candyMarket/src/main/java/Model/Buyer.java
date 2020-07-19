@@ -1,34 +1,41 @@
 package Model;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
+@Entity
 public class Buyer extends User {
-    public ArrayList<Discount> getMyDiscounts() {
-        return myDiscounts;
+    public List<Discount> getMyDiscounts() {
+        List<Discount> discounts = new ArrayList<>();
+        for (String discount : myDiscounts) {
+            discounts.add(Discount.getDiscountByCode(discount));
+        }
+        return discounts;
     }
-
-    public void setMyDiscounts(ArrayList<Discount> myDiscounts) {
-        this.myDiscounts = myDiscounts;
+    public void setMyDiscounts(List<Discount> myDiscounts) {
+        List<String> discounts = new ArrayList<>();
+        for (Discount discount : myDiscounts) {
+            discounts.add(discount.getCode());
+        }
+        this.myDiscounts = discounts;
     }
-
-    private ArrayList<Discount> myDiscounts = new ArrayList<>();
-    private ArrayList<BuyLog> myLogs = new ArrayList<>();
-    private ArrayList<Good> boughtGoods = new ArrayList<>();
+    @ElementCollection
+    private List<String> myDiscounts = new ArrayList<>();
+    @ElementCollection
+    private List<Integer> myLogs = new ArrayList<>();
+    @ElementCollection
+    private List<String> boughtGoods = new ArrayList<>();
     private int balance;
     public static Buyer currentBuyer;
-
+    public Buyer(){}
     public Buyer(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.setType(UserType.BUYER);
         this.balance=0;
         this.myLogs = new ArrayList<>();
-        for (BuyLog buyLog : ManageInfo.allBuyLogs) {
-            if (buyLog.getBuyerName().equals(userName)) {
-                myLogs.add(buyLog);
-            }
-        }
         myDiscounts = new ArrayList<>();
         ManageInfo.allBuyers.add(this);
         ManageInfo.allUsers.add(this);
@@ -44,32 +51,24 @@ public class Buyer extends User {
         if(randNumber % 3 == 0) {
             randNumber = rand.nextInt(size);
             Discount discount = ManageInfo.allDiscounts.get(randNumber);
-            myDiscounts.add(discount);
+            myDiscounts.add(discount.getCode());
         }
     }
 
     public void addDiscount(Discount discount) {
-        myDiscounts.add(discount);
+        myDiscounts.add(discount.getCode());
     }
 
     public Cart getCart() {
         return cart;
     }
 
-    public BuyLog getBuyLogById(int id){
-        for (BuyLog b:
-             myLogs) {
-            if(b.getId()==id)
-                return b;
-        }
-        return null;
-    }
     public void setCart(Cart cart) {
         this.cart = cart;
     }
 
-    public void addComment(Good good,String title,String content){
-        Comment comment = new Comment(UserHandler.getCurrentUser(),good,content,null);
+    public void addComment(Good good, String title, String brand){
+        Comment comment = new Comment(UserHandler.getCurrentUser(),good,brand,null);
         //Request request = new Request(comment.toString(), Request.requestType.ADD_COMMENT);
         //ManageInfo.allRequests.add(request);
     }
@@ -78,11 +77,11 @@ public class Buyer extends User {
         new Buyer(userName, firstName, lastName, email, phone, pass);
     }
 
-    public ArrayList<String> viewCart(Cart cart) {
+    public List<String> viewCart(Cart cart) {
         return null;
     }
 
-    public ArrayList<String> viewGoodsInCart(Cart cart) {
+    public List<String> viewGoodsInCart(Cart cart) {
         return null;
     }
 
@@ -110,12 +109,12 @@ public class Buyer extends User {
 
     }
 
-    public ArrayList<String> showOrders() {
+    public List<String> showOrders() {
         return null;
     }
 
     public void rate(Good good, int score) {
-        ArrayList<Score> scores = good.getScores();
+        List<Score> scores = good.getScores();
         scores.add(new Score(this, score, good));
         good.setScores(scores);
     }
@@ -128,33 +127,50 @@ public class Buyer extends User {
         return null;
     }
 
-    public ArrayList<String> viewAllDiscountsCode() {
-        ArrayList<String> disCode = new ArrayList<>();
-        for (Discount discount : myDiscounts) {
-            disCode.add(discount.toString());
+    public ArrayList<Discount> viewAllDiscountsCode() {
+        ArrayList<Discount> disCode = new ArrayList<>();
+        for (String discount : myDiscounts) {
+            disCode.add(Discount.getDiscountByCode(discount));
         }
         return disCode;
     }
 
 
-    public ArrayList<BuyLog> getMyLogs() {
-        return myLogs;
+    public List<BuyLog> getMyLogs() {
+        List<BuyLog> buyLogs = new ArrayList<>();
+        for (Integer myLog : myLogs) {
+            buyLogs.add(BuyLog.getBuyLogById(myLog));
+        }
+        return buyLogs;
     }
 
-    public void setMyLogs(ArrayList<BuyLog> myLogs) {
-        this.myLogs = myLogs;
+    public void setMyLogs(List<BuyLog> myLogs) {
+        List<Integer> buyLogs = new ArrayList<>();
+        for (BuyLog log : myLogs) {
+            buyLogs.add(log.getId());
+        }
+        this.myLogs = buyLogs;
     }
 
     public void addMyLogs(BuyLog buyLog) {
-        this.myLogs.add(buyLog);
+        this.myLogs.add(buyLog.getId());
     }
 
-    public ArrayList<Good> getBoughtGoods() {
-        return boughtGoods;
+    public List<Good> getBoughtGoods()
+    {
+        List<Good> goods = new ArrayList<>();
+        for (String good : boughtGoods) {
+            goods.add(Good.getGoodByName(good,ManageInfo.allGoods));
+        }
+        return goods;
     }
 
-    public void setBoughtGoods(ArrayList<Good> boughtGoods) {
-        this.boughtGoods = boughtGoods;
+    public void setBoughtGoods(List<Good> boughtGoods) {
+        List<String> goods = new ArrayList<>();
+        for (Good good : boughtGoods) {
+            goods.add(good.getName());
+        }
+        this.boughtGoods = goods;
     }
 
     public int getBalance() {

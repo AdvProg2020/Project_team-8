@@ -7,10 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ManagerPurchasedManagingController">
    <children>
-      <TableView fx:id="buyLogTableView" layoutX="65.0" layoutY="119.0" prefHeight="261.0" prefWidth="703.0">
+      <TableView fx:id="buyLogTableView" onMouseClicked="#serClickedOnTable" layoutX="65.0" layoutY="119.0" prefHeight="261.0" prefWidth="703.0">
          <columns>
             <TableColumn fx:id="productColumn" prefWidth="133.42630767822266" text="Product" />
             <TableColumn fx:id="amountColumn" minWidth="0.0" prefWidth="121.74101257324219" text="Amount" />
@@ -24,15 +23,17 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="karmozdField" layoutX="88.0" layoutY="444.0" text="0" />
-      <TextField fx:id="minWalletField" layoutX="334.0" layoutY="444.0" text="0" />
-      <Button onAction="#setNumbers" layoutX="584.0" layoutY="444.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="184.0" text="Set" />
-      <Label layoutX="89.0" layoutY="417.0" text="Karmozd:" />
-      <Label layoutX="334.0" layoutY="417.0" text="Min Wallet Amount:" />
+      <TextField fx:id="karmozdField" layoutX="88.0" layoutY="488.0" text="0" />
+      <TextField fx:id="minWalletField" layoutX="334.0" layoutY="488.0" text="0" />
+      <Button layoutX="584.0" layoutY="488.0" mnemonicParsing="false" onAction="#setNumbers" prefHeight="39.0" prefWidth="184.0" text="Set" />
+      <Label layoutX="89.0" layoutY="461.0" text="Karmozd:" />
+      <Label layoutX="334.0" layoutY="461.0" text="Min Wallet Amount:" />
       <Label layoutX="327.0" layoutY="12.0" text="Purchased Items">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
+      <ChoiceBox fx:id="situationChoiceBox" layoutX="334.0" layoutY="401.0" prefHeight="39.0" prefWidth="224.0" />
+      <Button onAction="#changeSendingSituation" fx:id="changeSituationBtn" layoutX="584.0" layoutY="401.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="184.0" text="Change Sutuation" />
    </children>
 </AnchorPane>

@@ -6,11 +6,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -28,6 +26,8 @@ public class ManagerPurchasedManagingController implements Initializable {
     @FXML private TextField karmozdField;
     @FXML private TextField minWalletField;
 
+    @FXML private ChoiceBox<CartSituation> situationChoiceBox;
+    @FXML private Button changeSituationBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -38,6 +38,9 @@ public class ManagerPurchasedManagingController implements Initializable {
         situationColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, CartSituation>("buySituation"));
 
         buyLogTableView.setItems(getLogs());
+
+        changeSituationBtn.setDisable(true);
+        situationChoiceBox.setDisable(true);
     }
 
     private ObservableList<BuyLog> getLogs() {
@@ -46,7 +49,6 @@ public class ManagerPurchasedManagingController implements Initializable {
 
         return logs;
     }
-
 
     public void setNumbers(ActionEvent actionEvent) {
         try {
@@ -63,6 +65,29 @@ public class ManagerPurchasedManagingController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("enter valid numbers");
             alert.show();
+        }
+    }
+
+    public void changeSendingSituation(ActionEvent actionEvent) {
+        if (situationChoiceBox.getValue() == CartSituation.AT_DESTINATION) {
+            BuyLog log = buyLogTableView.getSelectionModel().getSelectedItem();
+            log.setBuySituation(CartSituation.AT_DESTINATION);
+            buyLogTableView.setItems(getLogs());
+            changeSituationBtn.setDisable(true);
+            situationChoiceBox.setDisable(true);
+        }
+    }
+
+    public void serClickedOnTable(MouseEvent mouseEvent) {
+        BuyLog log = buyLogTableView.getSelectionModel().getSelectedItem();
+        if (log.getBuySituation() == CartSituation.ON_THE_WAY) {
+            situationChoiceBox.setDisable(false);
+            changeSituationBtn.setDisable(false);
+            situationChoiceBox.setValue(CartSituation.ON_THE_WAY);
+        } else {
+            situationChoiceBox.setValue(CartSituation.AT_DESTINATION);
+            situationChoiceBox.setDisable(true);
+            changeSituationBtn.setDisable(true);
         }
     }
 }

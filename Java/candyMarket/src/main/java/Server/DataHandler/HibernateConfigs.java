@@ -21,11 +21,11 @@ public class HibernateConfigs {
                     .addAnnotatedClass(Manager.class)
                     .addAnnotatedClass(Request.class)
                     .addAnnotatedClass(Sale.class)
+                    .addAnnotatedClass(Comment.class)
                     .addAnnotatedClass(Score.class)
                     .addAnnotatedClass(Seller.class)
                     .addAnnotatedClass(SellLog.class)
                     .addAnnotatedClass(Category.class)
-                    .addAnnotatedClass(Comment.class)
                     .buildSessionFactory();
         } catch (Exception e) {
             System.err.println("SessionFactory Creation Failed" + e);

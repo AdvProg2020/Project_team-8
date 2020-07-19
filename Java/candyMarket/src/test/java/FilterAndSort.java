@@ -1,6 +1,4 @@
-import Model.BuyLog;
 import Model.Buyer;
-import Model.User;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

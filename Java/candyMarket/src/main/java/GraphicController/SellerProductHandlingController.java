@@ -61,7 +61,7 @@ public class SellerProductHandlingController implements Initializable {
     public ObservableList<Good> getGoods()
     {
         ObservableList<Good> goods = FXCollections.observableArrayList();
-        goods.addAll(UserHandler.currentSeller.getMyGoods());
+        goods.addAll(UserHandler.currentSeller.getGoods());
 
         return goods;
     }

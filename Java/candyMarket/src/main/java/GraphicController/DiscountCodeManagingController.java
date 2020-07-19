@@ -2,6 +2,7 @@ package GraphicController;
 
 import GraphicView.MenuHandler;
 import Model.Discount;
+import Model.ManageInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -59,7 +60,7 @@ public class DiscountCodeManagingController implements Initializable {
     public ObservableList<Discount> getCodes()
     {
         ObservableList<Discount> codes = FXCollections.observableArrayList();
-        codes.addAll(Discount.getDiscounts());
+        codes.addAll(ManageInfo.allDiscounts);
 
         return codes;
     }
@@ -82,7 +83,7 @@ public class DiscountCodeManagingController implements Initializable {
         if (codeField.getText().length() > 0 && percentageField.getText().length() > 0 &&
         maxAmountField.getText().length() > 0 && usageField.getText().length() > 0 &&
         initializeDatePicker.getValue() != null  && endDatePicker.getValue() != null) {
-            Integer codeText = Integer.parseInt(codeField.getText());
+            String codeText =codeField.getText();
             Integer percentageText = Integer.parseInt(percentageField.getText());
             Integer maxAmountText = Integer.parseInt(maxAmountField.getText());
             Integer usageText = Integer.parseInt(usageField.getText());

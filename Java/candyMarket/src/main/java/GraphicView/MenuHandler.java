@@ -122,6 +122,8 @@ public class MenuHandler {
                 BorderPaneController.borderPaneController.setCenter("SellerMenu");
             else if(UserHandler.getCurrentUser().isBuyer())
                 BorderPaneController.borderPaneController.setCenter("BuyerMenu");
+            else if(UserHandler.getCurrentUser().isSupporter())
+                BorderPaneController.borderPaneController.setCenter("SupporterMenu");
         }
         else BorderPaneController.borderPaneController.loginBtnClick(null);
     }

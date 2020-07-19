@@ -17,6 +17,7 @@ public class UserHandler {
         public static Buyer currentBuyer;
         public static Seller currentSeller;
         public static Manager currentManager;
+        public static Supporter currentSupporter;
 
         public static boolean isLogeIn(){
                 return currentUser != null;
@@ -42,6 +43,10 @@ public class UserHandler {
                                 currentManager = (Manager)user;
                                 Manager.currentManager = currentManager;
                                 break;
+                        case SUPPORTER:
+                                currentSupporter = (Supporter)user;
+                                Supporter.currentSupporter = currentSupporter;
+                                break;
                 }
         }
 
@@ -50,8 +55,10 @@ public class UserHandler {
                 currentManager = null;
                 currentBuyer = null;
                 currentSeller = null;
+                currentSupporter = null;
                 Seller.currentSeller = null;
                 Buyer.currentBuyer = null;
                 Manager.currentManager = null;
+                Supporter.currentSupporter = null;
         }
 }

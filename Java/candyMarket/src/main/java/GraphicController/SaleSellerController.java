@@ -10,6 +10,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class SaleSellerController implements Initializable {
@@ -49,7 +50,7 @@ public class SaleSellerController implements Initializable {
     public void applySales(ActionEvent actionEvent) {
         ObservableList<Good> selectedProductsObservableList;
         selectedProductsObservableList = tableView1.getSelectionModel().getSelectedItems();
-        ArrayList<Good> selectedProducts = new ArrayList<>();
+        List<Good> selectedProducts = new ArrayList<>();
         for (Good good : selectedProductsObservableList) {
             selectedProducts.add(good);
             System.out.println(good.getName());

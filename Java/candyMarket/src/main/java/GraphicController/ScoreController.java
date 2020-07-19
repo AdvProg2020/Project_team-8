@@ -18,6 +18,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ScoreController implements Initializable {
@@ -25,7 +26,7 @@ public class ScoreController implements Initializable {
     @FXML private TableColumn<Good, String> nameColumn;
     @FXML private TableColumn<Good, String> brandColumn;
     @FXML private TableColumn<Good, Integer> priceColumn;
-    @FXML private TableColumn<Good, ArrayList<Score>> scoreColumn;
+    @FXML private TableColumn<Good, List<Score>> scoreColumn;
 
     @FXML private TextField scoreField;
     @FXML private Button scoreButton;
@@ -38,7 +39,7 @@ public class ScoreController implements Initializable {
         nameColumn.setCellValueFactory(new PropertyValueFactory<Good, String>("name"));
         brandColumn.setCellValueFactory(new PropertyValueFactory<Good, String>("brand"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<Good, Integer>("price"));
-        scoreColumn.setCellValueFactory(new PropertyValueFactory<Good, ArrayList<Score>>("scores"));
+        scoreColumn.setCellValueFactory(new PropertyValueFactory<Good, List<Score>>("scores"));
 
         goodTableView.setItems(getGoods());
     }

@@ -18,6 +18,7 @@ import javafx.scene.layout.VBox;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CommentsPageController implements Initializable {
@@ -30,13 +31,13 @@ public class CommentsPageController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         allComments = new VBox();
         allComments.setSpacing(5);
-        ArrayList<Comment> goodsComments = Comment.getGoodsComments(GoodMenuController.goodMenuController.getGood());
+        List<Comment> goodsComments = Comment.getGoodsComments(GoodMenuController.goodMenuController.getGood());
         comments = createCommentBoxes(goodsComments);
         allComments.getChildren().addAll(comments);
         scrollPane.setContent(allComments);
     }
 
-    private ArrayList<CustomComments> createCommentBoxes(ArrayList<Comment> goodsComments) {
+    private ArrayList<CustomComments> createCommentBoxes(List<Comment> goodsComments) {
         ArrayList<CustomComments> customComments = new ArrayList<>();
         for (Comment goodsComment : goodsComments) {
             customComments.add(new CustomComments(goodsComment));

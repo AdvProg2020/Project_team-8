@@ -4,7 +4,6 @@ package Model;
 import com.google.gson.Gson;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -217,9 +216,9 @@ public class FileHandler {
             Seller seller = sellersJson.fromJson(fileReader.nextLine(), Seller.class);
             ManageInfo.allSellers.add(seller);
             ManageInfo.allUsers.add(seller);
-            for (Good good:seller.getMyGoods()
+            for (Good good:seller.getGoods()
             ) {
-                good = Good.getGoodByName(good.getName(),ManageInfo.allGoods);
+                good = Good.getGoodByName(good.getName(), ManageInfo.allGoods);
             }
         }
     }

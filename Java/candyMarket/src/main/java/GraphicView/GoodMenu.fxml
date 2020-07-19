@@ -24,13 +24,13 @@
                     <Font name="Berlin Sans FB" size="18.0" />
                 </font></Label>
             <ScrollPane prefHeight="272.0" prefWidth="428.0">
-               <content>
+               <brand>
                    <VBox fx:id="specialGoodPropertiesVBox" alignment="CENTER" spacing="10">
                        <children>
 
                     </children>
                    </VBox>
-               </content>
+               </brand>
             </ScrollPane>
         </children>
     </VBox>

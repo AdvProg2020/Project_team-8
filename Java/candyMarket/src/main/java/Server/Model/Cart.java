@@ -61,7 +61,7 @@ public class Cart {
             g.addBuyers(UserHandler.currentBuyer);
             UserHandler.currentBuyer.getBoughtGoods().add(g);
         }
-        UserHandler.currentBuyer.setBalance(UserHandler.currentBuyer.getBalance()-UserHandler.currentCart.getTotalAmount());
+        UserHandler.currentBuyer.setBalance(UserHandler.currentBuyer.getBalance()- UserHandler.currentCart.getTotalAmount());
         resetCart();
     }
 
@@ -120,7 +120,7 @@ public class Cart {
     public static Boolean canPay(){
         if(Buyer.currentBuyer==null)
         return false;
-        if(Buyer.currentBuyer.getBalance()<UserHandler.currentCart.getTotalAmount()) return false;
+        if(Buyer.currentBuyer.getBalance()< UserHandler.currentCart.getTotalAmount()) return false;
         else return true;
     }
 

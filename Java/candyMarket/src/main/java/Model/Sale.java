@@ -1,25 +1,38 @@
 package Model;
 
-import java.awt.image.AreaAveragingScaleFilter;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.List;
 
+@Entity
 public class Sale {
-
-    private ArrayList<Good> goods;
+    @ElementCollection
+    private List<String> goods;
     private LocalDate startTime;
     private LocalDate endTime;
     private int salePercentageAmount;
-    public static ArrayList<String> productsOnSaleName;
-
+    public static List<String> productsOnSaleName;
+    @Id
+    private int id;
+    public Sale(){}
     public Sale(LocalDate startTime, LocalDate endTime, int amount) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.salePercentageAmount = amount;
+        this.id = ManageInfo.allSales.size();
+        ManageInfo.allSales.add(this);
         UserHandler.currentSeller.addSale(this);
     }
-
+    public static Sale getSaleById(int id){
+        for (Sale sale : ManageInfo.allSales) {
+            if(sale.id==id)
+                return sale;
+        }
+        return null;
+    }
     public LocalDate getStartTime() {
         return startTime;
     }
@@ -44,11 +57,15 @@ public class Sale {
         this.salePercentageAmount = salePercentageAmount;
     }
 
-    public ArrayList<Good> getGoods() {
+    public List<Good> getGoods() {
+        List<Good> goods = new ArrayList<>();
+        for (String good : this.goods) {
+            goods.add(Good.getGoodByName(good, ManageInfo.allGoods));
+        }
         return goods;
     }
 
-    public void setGoods(ArrayList<Good> goods) {
+    public void setGoods(List<Good> goods) {
         productsOnSaleName = new ArrayList<>() {
             @Override
             public String toString() {
@@ -59,7 +76,11 @@ public class Sale {
                 return string;
             }
         };
-        this.goods = goods;
+        List<String> goodsStr = new ArrayList<>();
+        for (Good good : goods) {
+            goodsStr.add(good.getName());
+        }
+        this.goods = goodsStr;
         for (Good good : ManageInfo.allGoods) {
             for (Good good1 : goods) {
                 if (good == good1) {
@@ -79,5 +100,13 @@ public class Sale {
                 ", endTime=" + endTime +
                 ", salePercentageAmount=" + salePercentageAmount +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

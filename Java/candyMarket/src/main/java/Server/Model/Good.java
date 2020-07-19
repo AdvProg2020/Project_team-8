@@ -1,12 +1,11 @@
 package Server.Model;
 
-import jdk.jfr.Enabled;
-import org.hibernate.sql.ordering.antlr.GeneratedOrderByFragmentParser;
-
-import javax.persistence.*;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.ArrayList;
 import java.util.List;
-
 @Entity
 public class Good {
     public long getDateModified() {
@@ -14,7 +13,7 @@ public class Good {
     }
     public void addScore(Score score){
         averageScore = averageScore*scores.size()+score.getScore()/(scores.size()+1);
-        scores.add(score);
+        scores.add(score.getId());
     }
     public void setDateModified(long dateModified) {
         this.dateModified = dateModified;
@@ -30,47 +29,39 @@ public class Good {
     private String name;
     private String brand;
     private int price;
-    @ElementCollection(targetClass = Buyer.class)
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinTable(name = "Good_Buyer_map")
-    private List<Buyer> buyers;
-    @ManyToOne
-    private Seller seller;
+    @ElementCollection
+    private List<String> buyers;
+    private String sellerName;
     private int stock;
-    @ManyToOne
-    private Category category;
+    private String category;
     private String detailInfo;
     private int averageScore;
     @ElementCollection
     private List<String> specialAttributes;
-    @ElementCollection(targetClass = Score.class)
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinTable(name = "Good_Score_map")
-    private List<Score> scores = new ArrayList<>() {
+    @ElementCollection
+    private List<Integer> scores = new ArrayList<>() {
         @Override
         public String toString() {
             int a = 0;
-            for (Score score : scores) {
-                a += score.getScore();
+            for (int score : scores) {
+                a += Score.getScoreById(score).getScore();
             }
             return "" + a/scores.size();
         }
     };
-    @ElementCollection(targetClass = Comment.class)
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinTable(name = "Good_Comment_map")
-    private List<Comment> comments;
+    @ElementCollection
+    private List<Integer> comments;
     private String image;
     private long dateCreated;
     public Good(){}
-    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image,ArrayList<String> specialAttributes) {
+    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image, List<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
         this.name = name;
         this.brand = brand;
         this.price = price;
-        this.seller= seller;
+        this.sellerName= seller.getUsername();
         this.stock = stock;
-        this.category = category;
+        this.category = category.getName();
         this.situation = ItemCreationSituation.CREATING_CHECK;
         this.detailInfo = detailInfo;
         this.salePercentageAmount = 0;
@@ -83,10 +74,12 @@ public class Good {
     }
 
 
-    public ArrayList<Buyer> getBuyers() {
-        ArrayList<Buyer> buyers = new ArrayList();
-        buyers.addAll(this.buyers);
-        return buyers;
+    public List<Buyer> getBuyers() {
+        List<Buyer> orginalBuyers = new ArrayList<>();
+        for (String buyer : buyers) {
+            orginalBuyers.add((Buyer) Buyer.getUserByUsername(buyer));
+        }
+        return orginalBuyers;
     }
 
     public int getStock() {
@@ -98,11 +91,11 @@ public class Good {
     }
 
     public Category getCategory() {
-        return category;
+        return Category.getCategoryByName(category);
     }
 
     public void setCategory(Category category) {
-        this.category = category;
+        this.category = category.getName();
     }
 
     public String getDetailInfo() {
@@ -117,8 +110,8 @@ public class Good {
         if(scores.size()==0)
             return 0;
         int rate = 0;
-        for (Score score : scores) {
-            rate+=score.getScore();
+        for (Integer score : scores) {
+            rate+=Score.getScoreById(score).getScore();
         }
         return rate/scores.size();
     }
@@ -177,10 +170,10 @@ public class Good {
     }
 
     public void addBuyers(Buyer b){
-        buyers.add(b);
+        buyers.add(b.getUsername());
     }
 
-    public static Good getGoodByName(String name, ArrayList<Good> goods) {
+    public static Good getGoodByName(String name, List<Good> goods) {
         for (Good g:
                 goods) {
             if(g.getName().equals(name))
@@ -198,11 +191,11 @@ public class Good {
     }
 
     public Seller getSeller() {
-        return seller;
+        return (Seller) User.getUserByUsername(sellerName);
     }
 
     public void setSeller(Seller seller) {
-        this.seller=seller;
+        this.sellerName = seller.getUsername();
     }
 
     public String viewProductDetails() {
@@ -219,24 +212,36 @@ public class Good {
                 "Opinions: " + this.getComments().toString() + "\n";
     }
 
-    public ArrayList<Comment> getComments() {
-        ArrayList comments = new ArrayList();
-        comments.addAll(this.comments);
+    public List<Comment> getComments() {
+        List<Comment> comments = new ArrayList<>();
+        for (Integer comment : this.comments) {
+            comments.add(Comment.getCommentById(comment));
+        }
         return comments;
     }
 
-    public void setComments(ArrayList<Comment> comments) {
-        this.comments = comments;
+    public void setComments(List<Comment> comments) {
+        List<Integer> cms = new ArrayList<>();
+        for (Comment comment : comments) {
+            cms.add(comment.getId());
+        }
+        this.comments = cms;
     }
 
-    public ArrayList<Score> getScores() {
-        ArrayList <Score> scores = new ArrayList();
-        scores.addAll(this.scores);
+    public List<Score> getScores() {
+        List<Score> scores = new ArrayList<>();
+        for (Integer score : this.scores) {
+            scores.add(Score.getScoreById(score));
+        }
         return scores;
     }
 
-    public void setScores(ArrayList<Score> scores) {
-        this.scores = scores;
+    public void setScores(List<Score> scores) {
+        List<Integer> scoresStr = new ArrayList<>();
+        for (Score score : scores) {
+            scoresStr.add(score.getId());
+        }
+        this.scores = scoresStr;
     }
 
     public static void removeProduct(Good toNeRemovedGood) {
@@ -258,7 +263,7 @@ public class Good {
                 ", brand='" + brand + '\'' +
                 ", price=" + price +
                 ", buyers=" + buyers +
-                ", seller=" + seller.getUsername() +
+                ", seller=" + sellerName +
                 ", stock=" + stock +
                 ", category=" + category +
                 ", detailInfo='" + detailInfo + '\'' +
@@ -289,13 +294,11 @@ public class Good {
         return false;
     }
 
-    public ArrayList<String> getSpecialAttributes() {
-        ArrayList<String> strings = new ArrayList<>();
-        strings.addAll(specialAttributes);
-        return strings;
+    public List<String> getSpecialAttributes() {
+        return specialAttributes;
     }
 
-    public void setSpecialAttributes(ArrayList<String> specialAttributes) {
+    public void setSpecialAttributes(List<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
     }
 }
