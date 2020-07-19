@@ -18,4 +18,5 @@ public class ManageInfo {
     public static List<Comment> allComments = new ArrayList<Comment>();
     public static List<Sale> allSales = new ArrayList<Sale>();
     public static List<Score> allScores = new ArrayList<Score>();
+    public static List<Supporter> allSupporters = new ArrayList();
 }

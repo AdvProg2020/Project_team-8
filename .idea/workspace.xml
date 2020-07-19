@@ -227,7 +227,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
         <option value="Interface" />
         <option value="Class" />
@@ -263,7 +262,6 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3321839" />
@@ -291,9 +289,9 @@
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DBHandler">
-    <configuration name="DBHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server.DataHandler.DBHandler" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="DataBase (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.DataHandler.DataBase" />
       <module name="ApProject_OnlineShop" />
       <extension name="coverage">
         <pattern>
@@ -343,7 +341,20 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Client.Main" />
       <module name="ApProject_OnlineShop" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.main" />
+      <module name="ApProject_OnlineShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -368,6 +379,7 @@
         <item itemvalue="Application.DataBaseHandler" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.DataBase" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
@@ -606,23 +618,66 @@
       <option name="project" value="LOCAL" />
       <updated>1593129900262</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add comment section">
+      <created>1594927350626</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1594927350626</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add compare section">
+      <created>1595000832014</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1595000832014</updated>
+    </task>
+    <task id="LOCAL-00029" summary="edit compare section">
+      <created>1595002154153</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1595002154153</updated>
+    </task>
+    <task id="LOCAL-00030" summary="edit compare section">
+      <created>1595006304688</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1595006304688</updated>
+    </task>
+    <task id="LOCAL-00031" summary="edit compare section">
+      <created>1595006326674</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1595006326674</updated>
+    </task>
+    <task id="LOCAL-00032" summary="edit compare section">
+      <created>1595006334939</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1595006334939</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -648,7 +703,10 @@
     <MESSAGE value="add Personal Info Pages" />
     <MESSAGE value="fix Personal Info Pages" />
     <MESSAGE value="add client details for manager page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add client details for manager page" />
+    <MESSAGE value="add comment section" />
+    <MESSAGE value="add compare section" />
+    <MESSAGE value="edit compare section" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit compare section" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="232" key="#Assign_Data_Sources" timestamp="1595101199990">
@@ -664,12 +722,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1592219098177" />
-    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1594724275130">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1594934449894">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594724275130" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594924487246">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.683@0.0.1280.683" timestamp="1594934449894" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594921837140">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1594924487246" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1592088967857" />
@@ -714,11 +773,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593086131481" />
-    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593040742508">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595006333959">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1593129898909" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595006333959" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -778,11 +837,11 @@
     </state>
     <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046263" />
     <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419472" />
-    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593034046273">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1595006357275">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046273" />
-    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419485" />
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595006357275" />
     <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -792,24 +851,28 @@
     </state>
     <state x="215" y="0" width="1038" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594825504420" />
     <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1592076197171" />
+    <state x="486" y="256" key="VCS.ChangelistChooser" timestamp="1594926976894">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="486" y="256" key="VCS.ChangelistChooser/0.0.1280.683@0.0.1280.683" timestamp="1594926976894" />
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1593033946494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593129913443">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595002171934">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1595002171934" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1593125982030">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="647" height="347" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1593125982030" />
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1593032403932">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1594997713191">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
-    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1593168788356" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1594997713191" />
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593041894737">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -822,7 +885,7 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589841943867" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595006345537" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -832,7 +895,7 @@
     </state>
     <state x="152" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1595070754662" />
     <state x="91" y="36" key="new project wizard/0.0.1280.683@0.0.1280.683" timestamp="1588513960615" />
-    <state x="282" y="67" width="700" height="530" key="recent.locations.popup" timestamp="1595004269049">
+    <state x="297" y="151" key="run.anything.popup" timestamp="1593672165547">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="282" y="67" width="700" height="530" key="recent.locations.popup/0.0.1280.680@0.0.1280.680" timestamp="1595004269049" />
