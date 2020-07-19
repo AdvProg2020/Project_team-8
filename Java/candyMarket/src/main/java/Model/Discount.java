@@ -1,19 +1,23 @@
 package Model;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.List;
 
+@Entity
 public class Discount {
-    private static ArrayList<Discount> discounts =  ManageInfo.allDiscounts;
-    private int code;
+    @Id
+    private String code;
     private LocalDate startDate;
     private LocalDate endDate;
     private int percentReduction;
     private int maxReductionAmount;
     private int usageNumber;
-    private ArrayList<String> buyers;
-
+    @ElementCollection
+    private List<String> buyers;
     @Override
     public String toString() {
         return "Discount{" +
@@ -23,26 +27,23 @@ public class Discount {
                 ", usageNumber=" + usageNumber +
                 '}';
     }
-
-    public Discount(int code, LocalDate startDate, LocalDate endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
+    public Discount(){}
+    public Discount(String code, LocalDate startDate, LocalDate endDate, int percentReduction, int maxReductionAmount, int usageNumber) {
         this.code = code;
         this.startDate = startDate;
         this.endDate = endDate;
         this.percentReduction = percentReduction;
         this.maxReductionAmount = maxReductionAmount;
         this.usageNumber = usageNumber;
-        discounts.add(this);
+        ManageInfo.allDiscounts.add(this);
     }
 
-    public static ArrayList<Discount> getDiscounts() {
-        return discounts;
-    }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -86,8 +87,8 @@ public class Discount {
         this.usageNumber = usageNumber;
     }
 
-    public ArrayList<Buyer> getUsers() {
-        ArrayList<Buyer> buyersOrginal = new ArrayList<>();
+    public List<Buyer> getUsers() {
+        List<Buyer> buyersOrginal = new ArrayList<>();
         for (String s:
              buyers) {
              buyersOrginal.add((Buyer) Buyer.getUserByUsername(s));
@@ -95,8 +96,8 @@ public class Discount {
         return buyersOrginal;
     }
 
-    public void setBuyers(ArrayList<Buyer> buyers) {
-        ArrayList<String> buyersString = new ArrayList<>();
+    public void setBuyers(List<Buyer> buyers) {
+        List<String> buyersString = new ArrayList<>();
         for (Buyer b:
                 buyers) {
             buyersString.add(b.getUsername());
@@ -115,6 +116,6 @@ public class Discount {
     }
 
     public static void removeCode(Discount code) {
-        discounts.remove(code);
+        ManageInfo.allDiscounts.remove(code);
     }
 }

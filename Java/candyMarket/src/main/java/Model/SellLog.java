@@ -1,18 +1,23 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.Date;
+import javax.persistence.*;
 import java.util.HashMap;
 import java.util.Map;
 
+@Entity
 public class SellLog {
     private String address;
     private String phoneNumber;
+    @Id
     private int id;
     private long date;
     private int totalAmount;
     private int saleAmount;
-    private HashMap<String,Integer> goods;
+    @ElementCollection
+    @JoinTable(name = "SellLog_Good")
+    @MapKeyColumn(name = "Good")
+    @Column(name = "mumber")
+    private Map<String,Integer> goods;
 
     {
         new HashMap<>() {
@@ -28,9 +33,16 @@ public class SellLog {
     }
 
     private String buyerName;
+    @Enumerated(EnumType.STRING)
     private CartSituation buySituation;
-
-    public SellLog(int totalAmount,int saleAmount, HashMap<Good, Integer> goods, String buyerName) {
+    public static SellLog getSellLogById(int id){
+        for (SellLog sellLog : ManageInfo.allSellLogs) {
+            if(sellLog.id==id) return sellLog;
+        }
+        return null;
+    }
+    public SellLog(){}
+    public SellLog(int totalAmount, int saleAmount, HashMap<Good, Integer> goods, String buyerName) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.saleAmount = saleAmount;
@@ -45,6 +57,7 @@ public class SellLog {
         this.goods = goodsString;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.ON_THE_WAY;
+        ManageInfo.allSellLogs.add(this);
         this.id = ManageInfo.allBuyLogs.size();
     }
 
@@ -61,7 +74,7 @@ public class SellLog {
         for(Map.Entry<String, Integer> entry : goods.entrySet()) {
             String key = entry.getKey();
             int value = entry.getValue();
-            goodsOrginal.put(Good.getGoodByName(key,ManageInfo.allGoods),value);
+            goodsOrginal.put(Good.getGoodByName(key, ManageInfo.allGoods),value);
             // do what you have to do here
             // In your case, another loop.
         }
@@ -83,7 +96,7 @@ public class SellLog {
     public void setTotalAmount(int totalAmount) {
         this.totalAmount = totalAmount;
     }
-    
+
     public CartSituation getBuySituation() {
         return buySituation;
     }

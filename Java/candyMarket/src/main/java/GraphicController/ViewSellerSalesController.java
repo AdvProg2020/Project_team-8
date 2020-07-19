@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewSellerSalesController implements Initializable {
@@ -21,7 +22,7 @@ public class ViewSellerSalesController implements Initializable {
     public TableColumn<Sale, Integer> salePercentColumn;
     public TableColumn<Sale, LocalDate> startTimeColumn;
     public TableColumn<Sale, LocalDate> endTimeColumn;
-    public TableColumn<Sale, ArrayList<String>> productsOnSaleColumn;
+    public TableColumn<Sale, List<String>> productsOnSaleColumn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -32,7 +33,7 @@ public class ViewSellerSalesController implements Initializable {
         salePercentColumn.setCellValueFactory(new PropertyValueFactory<Sale, Integer>("salePercentageAmount"));
         startTimeColumn.setCellValueFactory(new PropertyValueFactory<Sale, LocalDate>("startTime"));
         endTimeColumn.setCellValueFactory(new PropertyValueFactory<Sale, LocalDate>("endTime"));
-        productsOnSaleColumn.setCellValueFactory(new PropertyValueFactory<Sale, ArrayList<String>>("productsOnSaleName"));
+        productsOnSaleColumn.setCellValueFactory(new PropertyValueFactory<Sale, List<String>>("productsOnSaleName"));
 
         tableView.setItems(getSales());
     }

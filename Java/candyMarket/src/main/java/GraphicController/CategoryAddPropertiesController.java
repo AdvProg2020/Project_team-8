@@ -15,6 +15,7 @@ import javax.print.attribute.standard.MediaName;
 import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CategoryAddPropertiesController implements Initializable {
@@ -22,7 +23,7 @@ public class CategoryAddPropertiesController implements Initializable {
     public Button addPropertyBtn;
     public Button confirmBtn;
     public ScrollPane propertiesScrollPane;
-    private ArrayList<String> properties;
+    private List<String> properties;
     public static CategoryAddPropertiesController categoryAddPropertiesController;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,10 +41,10 @@ public class CategoryAddPropertiesController implements Initializable {
                propertyListUpdate();
            }
     }
-    public ArrayList<String> getProperties(){
+    public List<String> getProperties(){
         return properties;
     }
-    public void setProperties(ArrayList<String> properties){
+    public void setProperties(List<String> properties){
         this.properties = properties;
     }
     private void propertyListUpdate(){

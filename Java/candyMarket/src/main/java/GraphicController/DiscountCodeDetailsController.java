@@ -28,7 +28,7 @@ public class DiscountCodeDetailsController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         discount = DiscountCodeManagingController.discountCodeManagingController.getDiscount();
 
-        code.setText(Integer.toString(discount.getCode()));
+        code.setText(discount.getCode());
         percentage.setText(Integer.toString(discount.getPercentReduction()));
         max.setText(Integer.toString(discount.getMaxReductionAmount()));
         usage.setText(Integer.toString(discount.getUsageNumber()));
@@ -40,7 +40,7 @@ public class DiscountCodeDetailsController implements Initializable {
 
     public void editing(ActionEvent actionEvent) {
         try {
-            int codeText = Integer.parseInt(code.getText());
+            String codeText = code.getText();
             int percentageText = Integer.parseInt(percentage.getText());
             int maxText = Integer.parseInt(max.getText());
             int usageText = Integer.parseInt(usage.getText());

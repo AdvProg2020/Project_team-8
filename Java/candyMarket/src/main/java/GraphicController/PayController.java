@@ -9,10 +9,7 @@ import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class PayController implements Initializable {
@@ -32,12 +29,12 @@ public class PayController implements Initializable {
 
 
     public void setDiscountCode(ActionEvent actionEvent) {
-        ArrayList<Discount> discounts = UserHandler.currentBuyer.getMyDiscounts();
+        List<Discount> discounts = UserHandler.currentBuyer.getMyDiscounts();
         try {
-            int codeText = Integer.parseInt(discountField.getText());
+            String codeText = discountField.getText();
             boolean hasCode = false;
             for (Discount discount : discounts) {
-                if (discount.getCode() == codeText) {
+                if (discount.getCode().equals(codeText)) {
                     if (discount.getUsageNumber() <= 0) {
                         Functions.showDialog("you have used your discounts", true);
                     } else {

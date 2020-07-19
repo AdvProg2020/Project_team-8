@@ -84,7 +84,7 @@ public class RegisterMenuController extends CustomBorderPaneMenus implements Ini
             if(GetSellerProperties.getSellerProperties.companyTXT.getText().equals("")) return;
             companyName = GetSellerProperties.getSellerProperties.companyTXT.getText();
             RegisterMenuController.registerMenuController.setCenter("ShowUserAttributes");
-            RegisterMenuController.registerMenuController.stepType = RegisterMenuController.step.SHOWINFO;
+            RegisterMenuController.registerMenuController.stepType = step.SHOWINFO;
         }
         else {
             if(typeValue.equals("Seller")) {

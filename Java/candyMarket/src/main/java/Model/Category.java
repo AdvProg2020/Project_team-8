@@ -1,14 +1,21 @@
 package Model;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.ArrayList;
+import java.util.List;
 
-
+@Entity
 public class Category {
+    @Id
     private String name;
-    private Category subCategory;
-    private ArrayList<Good> goods;
-    private ArrayList<String> specialAttributes;
-        public Category(String name, ArrayList<String> attributes) {
+    @ElementCollection
+    private List<String> goods;
+    @ElementCollection
+    private List<String> specialAttributes;
+    public Category(){}
+        public Category(String name, List<String> attributes) {
         this.name = name;
         specialAttributes = new ArrayList<>(){
             @Override
@@ -31,26 +38,27 @@ public class Category {
         this.name = name;
     }
 
-    public Category getSubCategory() {
-        return subCategory;
-    }
-
-    public void setSubCategory(Category subCategory) {
-        this.subCategory = subCategory;
-    }
-    public ArrayList<Good> getGoods() {
+    public List<Good> getGoods() {
+        List<Good> goods = new ArrayList<>();
+        for (String good : this.goods) {
+            goods.add(Good.getGoodByName(good, ManageInfo.allGoods));
+        }
         return goods;
     }
 
-    public void setGoods(ArrayList<Good> goods) {
-        this.goods = goods;
+    public void setGoods(List<Good> goods) {
+        List<String> goodStr = new ArrayList<>();
+        for ( Good good : goods) {
+            goodStr.add(good.getName());
+        }
+        this.goods = goodStr;
     }
 
-    public ArrayList<String> getSpecialAttributes() {
+    public List<String> getSpecialAttributes() {
         return specialAttributes;
     }
 
-    public void setSpecialAttributes(ArrayList<String> specialAttributes) {
+    public void setSpecialAttributes(List<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
     }
 

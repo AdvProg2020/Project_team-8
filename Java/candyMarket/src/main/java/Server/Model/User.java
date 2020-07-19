@@ -1,9 +1,9 @@
 package Server.Model;
 
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
@@ -14,9 +14,9 @@ public class User {
     public void setUserPhoto(String userPhoto) {
         this.userPhoto = userPhoto;
     }
-
+    public User(){}
     public enum UserType {
-        BUYER, SELLER, MANAGER
+        BUYER, SELLER, MANAGER, SUPPORTER
     }
     @Transient
     protected Cart cart = new Cart();
@@ -27,10 +27,8 @@ public class User {
     protected String email;
     protected String phoneNumber;
     protected String password;
-    @Enumerated(EnumType.STRING)
     private UserType type;
     private String userPhoto;
-    public User(){}
     public User(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         this.username = userName;
         this.firstName = firstName;
@@ -40,7 +38,7 @@ public class User {
         this.password = passWord;
     }
 
-    public static ArrayList<User> getUsers() {
+    public static List<User> getUsers() {
         return ManageInfo.allUsers;
     }
 
@@ -175,16 +173,16 @@ public class User {
         }
     }
     public boolean isManager(){
-        if(type== UserType.MANAGER) return true;
-        return false;
+        return type == UserType.MANAGER;
     }
     public boolean isBuyer(){
-        if(type== UserType.BUYER) return true;
-        return false;
+        return type == UserType.BUYER;
     }
     public boolean isSeller(){
-        if(type== UserType.SELLER) return true;
-        return false;
+        return type == UserType.SELLER;
+    }
+    public boolean isSupporter(){
+        return type == UserType.SUPPORTER;
     }
     public static void deleteUser(User user) {
         ManageInfo.allUsers.remove(user);

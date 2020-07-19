@@ -2,13 +2,13 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
+import java.util.List;
 
 public class FilterAndSort {
-    public static FilterAndSort.sortsTypes sortsType = sortsTypes.DATE_CREATED;
+    public static sortsTypes sortsType = sortsTypes.DATE_CREATED;
     public static Boolean sortDescendingMode = false;
-    public static ArrayList<String> brandsFilter = new ArrayList<>();
-    public static ArrayList<Category> categoriesFilter  = new ArrayList<>();
+    public static List<String> brandsFilter = new ArrayList<>();
+    public static List<Category> categoriesFilter  = new ArrayList<>();
     public static int minPriceFilter = 0;
     public static int maxPriceFilter = 10000;
     public static boolean isBrandFilterOn = false;
@@ -22,7 +22,7 @@ public class FilterAndSort {
     public static enum sortsTypes{
         PRICE,ALPHABETICALLY,DATE_MODIFIED,DATE_CREATED
     }
-    public static ArrayList<Good> sortGoods(ArrayList<Good> goods){
+    public static List<Good> sortGoods(List<Good> goods){
         switch (sortsType) {
             case ALPHABETICALLY:
                 Collections.sort(goods, new SortComparators.SortAlphabetically());
@@ -41,15 +41,15 @@ public class FilterAndSort {
                     Collections.reverse(goods);
                 return  goods;
         }
-        public static ArrayList<String> getSortsType(){
-            ArrayList<String> sorts = new ArrayList<>();
+        public static List<String> getSortsType(){
+            List<String> sorts = new ArrayList<>();
             for (sortsTypes s:
                  sortsTypes.values()) {
                 sorts.add(s.toString());
             }
             return sorts;
         }
-    public static ArrayList<Good> availableProductsFilter(ArrayList<Good> goods){
+    public static List<Good> availableProductsFilter(List<Good> goods){
         for (Good g:
              goods) {
             if(g.getStock()==0)
@@ -57,8 +57,8 @@ public class FilterAndSort {
         }
         return goods;
     }
-    public static ArrayList<Good> offProductsFilter(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
+    public static List<Good> offProductsFilter(List<Good> goods){
+        List<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
             if(g.getSalePercentageAmount()==0)
@@ -66,8 +66,8 @@ public class FilterAndSort {
         }
         return goods;
     }
-    public static ArrayList<Good> brandFilter(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
+    public static List<Good> brandFilter(List<Good> goods){
+        List<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
             if(brandsFilter.contains(g.getBrand()))
@@ -75,8 +75,8 @@ public class FilterAndSort {
         }
         return filteredGoods;
     }
-    public static ArrayList<Good> categoryFilter(ArrayList<Good> goods){
-        ArrayList<Good> filteredGoods = new ArrayList<Good>();
+    public static List<Good> categoryFilter(List<Good> goods){
+        List<Good> filteredGoods = new ArrayList<Good>();
         for (Good g:
                 goods) {
             if(categoriesFilter.contains(g.getCategory()))
@@ -84,17 +84,17 @@ public class FilterAndSort {
         }
         return filteredGoods;
     }
-    public static ArrayList<Good> priceFilter(ArrayList<Good> goods){
+    public static List<Good> priceFilter(List<Good> goods){
         for (int i = 0; i <goods.size() ; i++) {
             if(goods.get(i).getPrice()>maxPriceFilter || goods.get(i).getPrice()<minPriceFilter)
                 goods.remove(goods.get(i));
         }
         return goods;
     }
-    public ArrayList<Sale> sortSales(ArrayList<Sale> sales){
+    public List<Sale> sortSales(List<Sale> sales){
         return null;
     }
-    public ArrayList<Sale> filterSales(ArrayList<Sale> sales){
+    public List<Sale> filterSales(List<Sale> sales){
         return null;
     }
 

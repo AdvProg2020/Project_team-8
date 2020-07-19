@@ -1,7 +1,6 @@
 package Server.Model;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.HashMap;
 import java.util.Map;
 @Entity
@@ -14,35 +13,50 @@ public class SellLog {
     private int totalAmount;
     private int saleAmount;
     @ElementCollection
-    @JoinTable(name = "SellLog_Good_map")
-    @MapKeyClass(Good.class)
-    @MapKeyColumn(name = "Good_Name")
-    @Column(name = "Number")
-    private Map<Good, Integer> goods;
+    @JoinTable(name = "SellLog_Good")
+    @MapKeyColumn(name = "Good")
+    @Column(name = "mumber")
+    private Map<String,Integer> goods;
 
     {
         new HashMap<>() {
             @Override
             public String toString() {
                 String string = new String();
-                for (Good good : goods.keySet()) {
-                    string = good.getName() + ", ";
+                for (String good : goods.keySet()) {
+                    string = good + ", ";
                 }
                 return string;
             }
         };
     }
+
     private String buyerName;
     @Enumerated(EnumType.STRING)
     private CartSituation buySituation;
+    public static SellLog getSellLogById(int id){
+        for (SellLog sellLog : ManageInfo.allSellLogs) {
+            if(sellLog.id==id) return sellLog;
+        }
+        return null;
+    }
     public SellLog(){}
     public SellLog(int totalAmount, int saleAmount, HashMap<Good, Integer> goods, String buyerName) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.saleAmount = saleAmount;
-        this.goods = goods;
+        HashMap<String,Integer> goodsString = new HashMap<>();
+        for(Map.Entry<Good, Integer> entry : goods.entrySet()) {
+            Good key = entry.getKey();
+            int value = entry.getValue();
+            goodsString.put(key.getName(),value);
+            // do what you have to do here
+            // In your case, another loop.
+        }
+        this.goods = goodsString;
         this.buyerName = buyerName;
-        this.buySituation = CartSituation.CONFIRMATION;
+        this.buySituation = CartSituation.ON_THE_WAY;
+        ManageInfo.allSellLogs.add(this);
         this.id = ManageInfo.allBuyLogs.size();
     }
 
@@ -55,7 +69,15 @@ public class SellLog {
     }
 
     public HashMap<Good, Integer> getGoods() {
-        return (HashMap<Good, Integer>) goods;
+        HashMap<Good,Integer> goodsOrginal = new HashMap<>();
+        for(Map.Entry<String, Integer> entry : goods.entrySet()) {
+            String key = entry.getKey();
+            int value = entry.getValue();
+            goodsOrginal.put(Good.getGoodByName(key, ManageInfo.allGoods),value);
+            // do what you have to do here
+            // In your case, another loop.
+        }
+        return goodsOrginal;
     }
 
     public String getPhoneNumber() {

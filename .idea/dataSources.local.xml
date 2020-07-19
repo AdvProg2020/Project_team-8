@@ -11,12 +11,12 @@
     </data-source>
     <data-source name="Hibernate Maps:hibernate.cfg.xml/Hibernate" uuid="fec97716-7503-4e05-ba78-01dace2a9009">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
-      <auth-required>false</auth-required>
+      <auth-provider>no-auth</auth-provider>
       <schema-mapping />
     </data-source>
     <data-source name="Hibernate Maps:manager.cfg.xml/Hibernate" uuid="ddf255c4-add3-49ed-a948-c4da5c3bc36a">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
-      <auth-required>false</auth-required>
+      <auth-provider>no-auth</auth-provider>
       <schema-mapping />
     </data-source>
   </component>

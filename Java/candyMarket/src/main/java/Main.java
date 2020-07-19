@@ -1,21 +1,21 @@
+
 import GraphicController.BorderPaneController;
 import GraphicView.MenuHandler;
 import Model.*;
 import PathHandler.PathHandler;
-import Server.DataHandler.DBManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.hibernate.Hibernate;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
-            "\\main\\java\\GraphicView\\";
+            "\\main\\java\\Client.GraphicView\\";
     public static void main(String[] args) throws IOException {
         FileHandler.getDataFromFiles();
         launch(args);
@@ -60,7 +60,7 @@ public class Main extends Application {
         Seller seller = new Seller("a","a","a","a@a.com","31231","a","a");
         ManageInfo.allSellers.add(seller);
         ManageInfo.allUsers.add(seller);
-        ArrayList<String> attributes = new ArrayList<>();
+        List<String> attributes = new ArrayList<>();
         attributes.add("weight");
         Category category = new Category("food",attributes);
         attributes.clear();

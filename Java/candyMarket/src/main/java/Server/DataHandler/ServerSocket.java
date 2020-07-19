@@ -5,7 +5,10 @@ import PathHandler.PathHandler;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.ProtocolException;
 import java.net.Socket;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -24,46 +27,45 @@ public class ServerSocket {
     private static File requestsFile = new File("Resources\\requests.txt");
     private static File goodsFile = new File("Resources\\goods.txt");
     private static File discountsFile = new File("Resources\\discounts.txt");
-    class RefreshThread extends Thread{
+    static class ClientListeningThread extends Thread{
         Socket clientSocket;
-        public RefreshThread(Socket clientSocket){
+        public ClientListeningThread(Socket clientSocket){
             this.clientSocket = clientSocket;
         }
         @Override
         public void run() {
             try {
-                refresh(clientSocket);
+                listenToClient(clientSocket);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
-    class clientThread extends Thread{
+    static class ClientThread extends Thread{
         @Override
         public void run() {
             while (true) {
                 Socket clientSocket;
                 try {
                     clientSocket = serverSocket.accept();
-                    RefreshThread refreshThread = new RefreshThread(clientSocket);
-                    refreshThread.start();
+                    ClientListeningThread clientListeningThread = new ClientListeningThread(clientSocket);
+                    clientListeningThread.start();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }
     }
-    private void refresh(Socket clientSocket) throws IOException {
-        DataInputStream dis = null;
-        dis =new DataInputStream(clientSocket.getInputStream());
-        while (true){
-            String str = dis.readUTF();
-            //do stuff
-        }
+    private static void listenToClient(Socket clientSocket) throws IOException {
+
     }
-    private void sendAllDataToClient(Socket clientSocket) throws SQLException {
-        String url = PathHandler.resourceURL+"ApProjectDataBase.db";
-        Connection connection = DriverManager.getConnection("jdbc:sqlite:"+url);
-        Statement statement = connection.createStatement();
+    public static void connectToClients(){
+        ClientThread clientThread = new ClientThread();
+        clientThread.start();
+    }
+    private void sendAllDataToClient(Socket clientSocket) throws SQLException, ProtocolException {
+       // HttpURLConnection connection = (HttpURLConnection) new URL("http://localhost:8080/Manager/" + name).openConnection();
+        //connection.setRequestMethod("GET");
+
     }
 }

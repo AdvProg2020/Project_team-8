@@ -13,9 +13,9 @@
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.CommentsPageController">
    <children>
       <ScrollPane fx:id="scrollPane" layoutX="44.0" layoutY="76.0" prefHeight="369.0" prefWidth="713.0">
-        <content>
+        <brand>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-        </content>
+        </brand>
       </ScrollPane>
       <Label layoutX="306.0" layoutY="21.0" text="Comment Section">
          <font>

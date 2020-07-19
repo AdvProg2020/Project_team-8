@@ -19,6 +19,7 @@ import javafx.stage.FileChooser;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class GoodAttributesEditor implements Initializable {
@@ -114,15 +115,15 @@ public class GoodAttributesEditor implements Initializable {
         isPhotoExist = false;
         goodImg.setImage(new Image(PathHandler.withoutImageUrl));
     }
-    private ArrayList<String> getProperties(){
-        ArrayList<String> propertiesStrings = new ArrayList<>();
+    private List<String> getProperties(){
+        List<String> propertiesStrings = new ArrayList<>();
         for (CategoryPropertiesBox c:
              properties) {
             propertiesStrings.add(c.getPropertyValue().getText());
         }
         return propertiesStrings;
     }
-    private void setProperties(ArrayList<String> propertiesString){
+    private void setProperties(List<String> propertiesString){
         VBox vBox = new VBox();
         vBox.setSpacing(10);
         ArrayList<CategoryPropertiesBox> categoryPropertiesBoxes = new ArrayList<>();
@@ -140,7 +141,7 @@ public class GoodAttributesEditor implements Initializable {
         properties = categoryPropertiesBoxes;
     }
     private boolean isAllPropertiesSet(){
-        ArrayList<String> propertiesStrings = new ArrayList<>();
+        List<String> propertiesStrings = new ArrayList<>();
         for (CategoryPropertiesBox c:
                 properties) {
             if(c.getPropertyValue().getText().equals(""))

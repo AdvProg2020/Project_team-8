@@ -19,6 +19,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Filter;
 
@@ -36,7 +37,7 @@ public class ViewGoodsController implements Initializable {
     public TextField maximumPriceTxt;
     public CheckBox filterByPriceCheckBox;
     ArrayList<CustomGoodBox> goodBoxes = new ArrayList<>();
-    ArrayList<Good> goods = new ArrayList<>();
+    List<Good> goods = new ArrayList<>();
     ArrayList<CheckBox> categoryCheckBoxes = new ArrayList<>();
     ArrayList<CheckBox> brandCheckBoxes = new ArrayList<>();
     @Override
@@ -106,7 +107,7 @@ public class ViewGoodsController implements Initializable {
         maximumPriceTxt.setText(String.valueOf(FilterAndSort.maxPriceFilter));
     }
     /*private void setBrandScrollPane() {
-        ArrayList<String> brands = Seller.getAllBrands();
+        List<String> brands = Seller.getAllBrands();
         brandCheckBoxes = createBrandCheckBoxes(brands);
         VBox vBox = new VBox();
         vBox.setSpacing(5);
@@ -114,10 +115,10 @@ public class ViewGoodsController implements Initializable {
                 brandCheckBoxes) {
             vBox.getChildren().add(c);
         }
-        brandScrollPane.setContent(vBox);
+        brandScrollPane.setbrand(vBox);
     }*/
     private void setCategoryScrollPane(){
-        ArrayList<Category> categories = new ArrayList<>();
+        List<Category> categories = new ArrayList<>();
         categories.addAll(ManageInfo.allCategories);
         categoryCheckBoxes = createCategoryCheckBoxes(categories);
         VBox vBox = new VBox();
@@ -141,7 +142,7 @@ public class ViewGoodsController implements Initializable {
         }
         goodsScrollPane.setContent(allGoods);
     }
-    private ArrayList<CustomGoodBox> createGoodBoxes(ArrayList<Good> goods){
+    private ArrayList<CustomGoodBox> createGoodBoxes(List<Good> goods){
         ArrayList<CustomGoodBox> customGoodBoxes = new ArrayList<>();
         for (Good g:
              goods) {
@@ -155,7 +156,7 @@ public class ViewGoodsController implements Initializable {
         }
         return customGoodBoxes;
     }
-    private ArrayList<CheckBox> createCategoryCheckBoxes(ArrayList<Category> categories){
+    private ArrayList<CheckBox> createCategoryCheckBoxes(List<Category> categories){
         ArrayList<CheckBox> categoryCheckBoxes = new ArrayList<>();
         for (Category c:
              categories) {
@@ -165,7 +166,7 @@ public class ViewGoodsController implements Initializable {
         }
         return categoryCheckBoxes;
     }
-    private ArrayList<CheckBox> createBrandCheckBoxes(ArrayList<String> brands){
+    private ArrayList<CheckBox> createBrandCheckBoxes(List<String> brands){
         ArrayList<CheckBox> brandCheckBoxes = new ArrayList<>();
         for (String s:
                 brands) {

@@ -1,6 +1,5 @@
 package Model;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,7 +61,7 @@ public class Cart {
             g.addBuyers(UserHandler.currentBuyer);
             UserHandler.currentBuyer.getBoughtGoods().add(g);
         }
-        UserHandler.currentBuyer.setBalance(UserHandler.currentBuyer.getBalance()-UserHandler.currentCart.getTotalAmount());
+        UserHandler.currentBuyer.setBalance(UserHandler.currentBuyer.getBalance()- UserHandler.currentCart.getTotalAmount());
         resetCart();
     }
 
@@ -121,7 +120,7 @@ public class Cart {
     public static Boolean canPay(){
         if(Buyer.currentBuyer==null)
         return false;
-        if(Buyer.currentBuyer.getBalance()<UserHandler.currentCart.getTotalAmount()) return false;
+        if(Buyer.currentBuyer.getBalance()< UserHandler.currentCart.getTotalAmount()) return false;
         else return true;
     }
 
@@ -178,7 +177,7 @@ public class Cart {
                saleAmount+=key2.getSalePercentageAmount()*key2.getPrice()/100;
             }
             BuyLog buyLog = new BuyLog(totalAmount-discountAmount,discountAmount,value,key.getUsername());
-            SellLog sellLog = new SellLog(totalAmount,saleAmount,value,Buyer.currentBuyer.getUsername());
+            SellLog sellLog = new SellLog(totalAmount,saleAmount,value, Buyer.currentBuyer.getUsername());
             Buyer.currentBuyer.addMyLogs(buyLog);
             Seller.currentSeller.addMySellLog(sellLog);
             ManageInfo.allBuyLogs.add(buyLog);

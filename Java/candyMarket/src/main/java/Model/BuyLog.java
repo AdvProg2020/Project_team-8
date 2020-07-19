@@ -1,21 +1,29 @@
 package Model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+@Entity
 public class BuyLog {
     private String address;
     private String phoneNumber;
+    @Id
     private int id;
     private long date;
     private int totalAmount;
     private int discountAmount;
-    private HashMap<String,Integer> goods;
+    @ElementCollection
+    @JoinTable(name = "BuyLog_Good")
+    @MapKeyColumn(name = "Good")
+    @Column(name = "mumber")
+    private Map<String,Integer> goods;
     private String buyerName;
+    @Enumerated(EnumType.STRING)
     private CartSituation buySituation;
-
+    public BuyLog(){}
     public BuyLog(int totalAmount, int discountAmount, HashMap<Good,Integer> goods, String buyerName) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
@@ -70,11 +78,16 @@ public class BuyLog {
     public int getId() {
         return id;
     }
-
-    public ArrayList<Good> getGoods() {
-        ArrayList<Good> purchasedGoods = new ArrayList<>();
+    public static BuyLog getBuyLogById(int id){
+        for (BuyLog buyLog : ManageInfo.allBuyLogs) {
+            if(buyLog.getId()==id) return buyLog;
+        }
+        return null;
+    }
+    public List<Good> getGoods() {
+        List<Good> purchasedGoods = new ArrayList<>();
         for (String good : goods.keySet()) {
-            purchasedGoods.add(Good.getGoodByName(good,ManageInfo.allGoods));
+            purchasedGoods.add(Good.getGoodByName(good, ManageInfo.allGoods));
         }
         return purchasedGoods;
     }

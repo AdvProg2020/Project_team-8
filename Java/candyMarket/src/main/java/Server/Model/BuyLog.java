@@ -3,6 +3,7 @@ package Server.Model;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 @Entity
 public class BuyLog {
@@ -14,11 +15,10 @@ public class BuyLog {
     private int totalAmount;
     private int discountAmount;
     @ElementCollection
-    @JoinTable(name = "BuyLog_Good_map")
-    @MapKeyClass(Good.class)
-    @MapKeyColumn(name = "Good_Name")
-    @Column(name = "Number")
-    private Map<Good,Integer> goods;
+    @JoinTable(name = "BuyLog_Good")
+    @MapKeyColumn(name = "Good")
+    @Column(name = "mumber")
+    private Map<String,Integer> goods;
     private String buyerName;
     @Enumerated(EnumType.STRING)
     private CartSituation buySituation;
@@ -27,9 +27,17 @@ public class BuyLog {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
-        this.goods = goods;
+        HashMap<String,Integer> goodsString = new HashMap<>();
+        for(Map.Entry<Good, Integer> entry : goods.entrySet()) {
+            Good key = entry.getKey();
+            int value = entry.getValue();
+            goodsString.put(key.getName(),value);
+            // do what you have to do here
+            // In your case, another loop.
+        }
+        this.goods = goodsString;
         this.buyerName = buyerName;
-        this.buySituation = CartSituation.CONFIRMATION;
+        this.buySituation = CartSituation.ON_THE_WAY;
         this.id = ManageInfo.allBuyLogs.size();
         ManageInfo.allBuyLogs.add(this);
     }
@@ -54,6 +62,9 @@ public class BuyLog {
         this.discountAmount = discountAmount;
     }
 
+    public String getAddress() {
+        return address;
+    }
 
     public CartSituation getBuySituation() {
         return buySituation;
@@ -66,11 +77,16 @@ public class BuyLog {
     public int getId() {
         return id;
     }
-
-    public ArrayList<Good> getGoods() {
-        ArrayList<Good> purchasedGoods = new ArrayList<>();
-        for (Good good : goods.keySet()) {
-            purchasedGoods.add(good);
+    public static BuyLog getBuyLogById(int id){
+        for (BuyLog buyLog : ManageInfo.allBuyLogs) {
+            if(buyLog.getId()==id) return buyLog;
+        }
+        return null;
+    }
+    public List<Good> getGoods() {
+        List<Good> purchasedGoods = new ArrayList<>();
+        for (String good : goods.keySet()) {
+            purchasedGoods.add(Good.getGoodByName(good, ManageInfo.allGoods));
         }
         return purchasedGoods;
     }

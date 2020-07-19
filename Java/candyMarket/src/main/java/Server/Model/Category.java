@@ -1,5 +1,8 @@
 package Server.Model;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,14 +11,12 @@ import java.util.List;
 public class Category {
     @Id
     private String name;
-    @ElementCollection(targetClass = Good.class)
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinTable(name = "Category_Good_map")
-    private List<Good> goods;
+    @ElementCollection
+    private List<String> goods;
     @ElementCollection
     private List<String> specialAttributes;
     public Category(){}
-        public Category(String name, ArrayList<String> attributes) {
+        public Category(String name, List<String> attributes) {
         this.name = name;
         specialAttributes = new ArrayList<>(){
             @Override
@@ -28,7 +29,6 @@ public class Category {
                 return string;
             }
         };
-        if(attributes!=null)
         this.specialAttributes.addAll(attributes);
         ManageInfo.allCategories.add(this);
     }
@@ -39,23 +39,27 @@ public class Category {
         this.name = name;
     }
 
-    public ArrayList<Good> getGoods() {
-            ArrayList<Good> goods = new ArrayList<>();
-            goods.addAll(this.goods);
-            return goods;
+    public List<Good> getGoods() {
+        List<Good> goods = new ArrayList<>();
+        for (String good : this.goods) {
+            goods.add(Good.getGoodByName(good,ManageInfo.allGoods));
+        }
+        return goods;
     }
 
-    public void setGoods(ArrayList<Good> goods) {
-        this.goods = goods;
+    public void setGoods(List<Good> goods) {
+        List<String> goodStr = new ArrayList<>();
+        for ( Good good : goods) {
+            goodStr.add(good.getName());
+        }
+        this.goods = goodStr;
     }
 
-    public ArrayList<String> getSpecialAttributes() {
-            ArrayList<String> specialAttributes = new ArrayList<>();
-            specialAttributes.addAll(this.specialAttributes);
-            return specialAttributes;
+    public List<String> getSpecialAttributes() {
+        return specialAttributes;
     }
 
-    public void setSpecialAttributes(ArrayList<String> specialAttributes) {
+    public void setSpecialAttributes(List<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
     }
 

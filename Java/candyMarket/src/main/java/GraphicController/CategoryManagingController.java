@@ -16,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CategoryManagingController implements Initializable {
@@ -32,7 +33,7 @@ public class CategoryManagingController implements Initializable {
 
     @FXML private TableView<Category> tableView;
     @FXML private TableColumn<Category, String> nameColumn;
-    @FXML private TableColumn<Category, ArrayList<String>> propertiesColumn;
+    @FXML private TableColumn<Category, List<String>> propertiesColumn;
 
     @FXML private TextField categoryNameField;
     private boolean editMode;
@@ -41,7 +42,7 @@ public class CategoryManagingController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         categoryManagingController=this;
         nameColumn.setCellValueFactory(new PropertyValueFactory<Category, String>("name"));
-        propertiesColumn.setCellValueFactory(new PropertyValueFactory<Category, ArrayList<String>>("specialAttributes"));
+        propertiesColumn.setCellValueFactory(new PropertyValueFactory<Category, List<String>>("specialAttributes"));
         tableView.setItems(getCategories());
         tableView.setEditable(true);
         nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());

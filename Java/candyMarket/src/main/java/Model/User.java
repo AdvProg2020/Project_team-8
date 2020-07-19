@@ -1,9 +1,10 @@
 package Model;
 
-import javafx.scene.image.Image;
+import javax.persistence.*;
+import java.util.List;
 
-import java.util.ArrayList;
-
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
     public String getUserPhoto() {
         return userPhoto;
@@ -12,11 +13,13 @@ public class User {
     public void setUserPhoto(String userPhoto) {
         this.userPhoto = userPhoto;
     }
-
+    public User(){}
     public enum UserType {
         BUYER, SELLER, MANAGER, SUPPORTER
     }
+    @Transient
     protected Cart cart = new Cart();
+    @Id
     protected String username;
     protected String firstName;
     protected String lastName;
@@ -34,7 +37,7 @@ public class User {
         this.password = passWord;
     }
 
-    public static ArrayList<User> getUsers() {
+    public static List<User> getUsers() {
         return ManageInfo.allUsers;
     }
 

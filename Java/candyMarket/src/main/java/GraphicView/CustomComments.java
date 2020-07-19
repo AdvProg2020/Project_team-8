@@ -16,21 +16,21 @@ import javafx.scene.text.Font;
 
 public class CustomComments extends VBox {
     Label user;
-    Label content;
+    Label brand;
     Label reply;
 
     public CustomComments(Comment comment) {
         this.setPadding(new Insets(0, 0, 0, comment.getLeftInsect()));
         user = new Label();
-        content = new Label();
+        brand = new Label();
         reply = new Label();
         user.setText("User: " + comment.getUser().getUsername());
-        content.setText("Content: " + comment.getContent());
+        brand.setText("brand: " + comment.getbrand());
         reply.setText("Reply");
         reply.setTextFill(Color.BLUE);
         reply.setUnderline(true);
         user.setFont(Font.font("Times New Roman", 18));
-        content.setFont(Font.font("Times New Roman", 18));
+        brand.setFont(Font.font("Times New Roman", 18));
         reply.setFont(Font.font("Times New Roman", 16));
         reply.setCursor(Cursor.HAND);
         reply.setOnMouseClicked((e) -> {
@@ -63,6 +63,6 @@ public class CustomComments extends VBox {
             });
         });
         setSpacing(5);
-        getChildren().addAll(user, content, reply);
+        getChildren().addAll(user, brand, reply);
     }
 }

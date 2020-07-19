@@ -8,6 +8,7 @@ import java.util.List;
 
 public class DBHandler {
     public static void loadData(){
+        HibernateConfigs.runDataBase();
         List<Manager> managers= DBManager.loadAllData(Manager.class);
         ManageInfo.allManagers.addAll(managers);
         List<Buyer> buyers = DBManager.loadAllData(Buyer.class);
@@ -37,9 +38,9 @@ public class DBHandler {
     }
 
     public static void main(String[] args) {
-        HibernateConfigs.runDataBase();
         //setBuyerDataTest();
         getDataTest();
+
     }
     public static void getDataTest(){
         loadData();
@@ -51,11 +52,14 @@ public class DBHandler {
             System.out.println(good.getCategory());
             System.out.println(good.getSeller());
         }
+        System.out.println(ManageInfo.allGoods.get(0).getCategory().getName());
+        ManageInfo.allCategories.get(0).setName("changed");
     }
     public static void setBuyerDataTest(){
+        HibernateConfigs.runDataBase();
         Buyer buyer = new Buyer("b","a","a","b","c","d");
         DBManager.saveObject(buyer);
-        ArrayList<String> at = new ArrayList<>();
+        List<String> at = new ArrayList<>();
         at.add("vazn");
         Category category = new Category("c",at);
         DBManager.saveObject(category);
