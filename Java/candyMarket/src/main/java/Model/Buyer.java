@@ -40,6 +40,7 @@ public class Buyer extends User {
         ManageInfo.allBuyers.add(this);
         ManageInfo.allUsers.add(this);
         getDiscountCodeRandom();
+        Chat.newBuyerAdded(userName);
     }
 
     private void getDiscountCodeRandom(){

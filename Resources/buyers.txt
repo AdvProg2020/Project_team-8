@@ -1,1 +1,1 @@
-{"myDiscounts":[],"myLogs":[],"boughtGoods":[],"balance":0,"cart":{},"username":"b","firstName":"b","lastName":"b","email":"user3@buyer.com","phoneNumber":"+982318724","password":"b","type":"BUYER"}
+{"myDiscounts":[],"myLogs":[],"boughtGoods":[],"balance":0,"cart":{},"username":"b","firstName":"b","lastName":"b","email":"b@buyer.com","phoneNumber":"214214","password":"b","type":"BUYER","userPhoto":"file:/C:/Users/My%20Tablet/Downloads/daneshga/Term%202/AP/Project/Phase%202/new5/Java/candyMarket/src/main/resources/Photos/UserWithoutImage.png"}

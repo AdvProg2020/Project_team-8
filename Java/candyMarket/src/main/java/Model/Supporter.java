@@ -12,10 +12,15 @@ public class Supporter extends User {
         this.setType(UserType.SUPPORTER);
         ManageInfo.allSupporters.add(this);
         ManageInfo.allUsers.add(this);
+        Chat.newSupporterAdded(userName);
     }
 
     public static void register(String userName, String firstName, String lastName, String email, String phone, String pass) {
         new Supporter(userName, firstName, lastName, email, phone, pass);
     }
 
+    @Override
+    public String toString() {
+        return "supporter: " + username;
+    }
 }

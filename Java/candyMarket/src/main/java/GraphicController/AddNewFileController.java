@@ -61,7 +61,7 @@ public class AddNewFileController implements Initializable {
             detailField.setText(good.getDetailInfo());
             errorMessage.setText("");
             categoryChoiceBox.setValue(good.getCategory().getName());
-            setProperties(good.getSpecialAttributes());
+            setProperties((ArrayList<String>) good.getSpecialAttributes());
             if(good.hasImage()){
                 goodImg.setImage(new Image(good.getImage()));
                 isPhotoExist =true;

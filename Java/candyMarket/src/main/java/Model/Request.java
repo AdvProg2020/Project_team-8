@@ -61,7 +61,7 @@ public class Request {
 
     public void createRegisterSellerRequest(Seller seller) {
         this.seller = seller.getUsername();
-        this.requestCommand = "Register seller " + this.getSeller().getSellerCompanyName();
+        this.requestCommand = "Register seller " + seller.getSellerCompanyName();
     }
 
     public String viewSellerRegisterDetails() {

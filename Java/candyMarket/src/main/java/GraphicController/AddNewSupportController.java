@@ -51,6 +51,7 @@ public class AddNewSupportController implements Initializable {
             errorMessage.setText("");
             Supporter.register(usernameText,firstNameText,lastNameText,emailText,phoneNumberText,passwordText);
             MenuHandler.secondCurrentWindow.close();
+            Functions.showDialog("Registered Successfully", false);
         }
     }
 

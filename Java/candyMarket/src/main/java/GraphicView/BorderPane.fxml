@@ -15,17 +15,18 @@
     <right>
         <AnchorPane fx:id="rightPane" styleClass="myRightPane">
            <children>
-               <VBox fx:id="userLoginBar" alignment="TOP_RIGHT">
+               <VBox fx:id="userLoginBar" alignment="TOP_RIGHT" maxHeight="450" minHeight="450">
                    <children>
                        <Button fx:id="logInBtn" mnemonicParsing="false" onMouseClicked="#loginBtnClick" styleClass="myRightButton" text="Login" />
                        <Button fx:id="registerBtn" onMouseClicked="#registerBtnOnClick" styleClass="myRightButton" text="Register" />
                    </children>
                </VBox>
-               <VBox fx:id="userLogOutBar" alignment="TOP_RIGHT">
+               <VBox fx:id="userLogOutBar" alignment="TOP_RIGHT" maxHeight="450" minHeight="450">
                    <children>
                        <Button fx:id="logOutBtn" mnemonicParsing="false" onMouseClicked="#logOutBtnOnClick" styleClass="myRightButton" text="LogOut" />
                    </children>
                </VBox>
+            <ImageView fx:id="chatImage" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#chatting" layoutY="420.0" pickOnBounds="true" preserveRatio="true" />
            </children>
         </AnchorPane>
     </right>

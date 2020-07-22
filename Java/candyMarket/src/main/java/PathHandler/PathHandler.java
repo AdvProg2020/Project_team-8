@@ -62,7 +62,7 @@ public class PathHandler {
         }
     }
     public static String fxmlPath = "Java\\candyMarket\\src" +
-            "\\main\\java\\Client\\Client.GraphicView\\";
+            "\\main\\java\\GraphicView\\";
     public static String userWithoutImageUrl;
     static {
         try {

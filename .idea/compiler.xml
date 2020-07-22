@@ -13,4 +13,9 @@
       <module name="ApProject_OnlineShop" target="11" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApProject_OnlineShop" options="--add-exports java.base/jdk.internal.jimage=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>

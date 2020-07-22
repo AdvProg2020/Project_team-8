@@ -1,5 +1,7 @@
 package Model;
 
+import PathHandler.PathHandler;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -35,6 +37,7 @@ public class User {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.password = passWord;
+        userPhoto = PathHandler.resourceURL+"Photos/UserWithoutImage.png";
     }
 
     public static List<User> getUsers() {
