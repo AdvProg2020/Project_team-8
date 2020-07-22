@@ -1,4 +1,4 @@
-import Model.Buyer;
+import Client.Model.Buyer;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

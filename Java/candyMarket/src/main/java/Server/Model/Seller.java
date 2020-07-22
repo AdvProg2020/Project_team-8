@@ -1,9 +1,12 @@
 package Server.Model;
 
+import Client.DataHandler.DataAccessor;
+
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
+
 @Entity
 public class Seller extends User {
     @ElementCollection
@@ -55,7 +58,7 @@ public class Seller extends User {
     public List<Good> getGoods() {
         List<Good> goods = new ArrayList<>();
         for (String good : this.myGoods) {
-            goods.add(Good.getGoodByName(good,ManageInfo.allGoods));
+            goods.add(Good.getGoodByName(good));
         }
         return goods;
     }
@@ -151,8 +154,7 @@ public class Seller extends User {
         return myAllSales;
     }
     public static void registerConfirmation(Seller seller){
-        ManageInfo.allSellers.add(seller);
-        ManageInfo.allUsers.add(seller);
+
     }
     public String viewSale(Sale sale) {
         return sale.toString();

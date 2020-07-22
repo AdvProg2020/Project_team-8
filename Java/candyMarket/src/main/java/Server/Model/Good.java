@@ -1,11 +1,13 @@
 package Server.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.ArrayList;
 import java.util.List;
+
 @Entity
 public class Good {
     public long getDateModified() {
@@ -18,6 +20,7 @@ public class Good {
     public void setDateModified(long dateModified) {
         this.dateModified = dateModified;
     }
+    @JsonIgnore
     public int getPriceAfterSale(){
         return (int) (price*(1-(double)salePercentageAmount/100));
     }
@@ -27,6 +30,29 @@ public class Good {
     private ItemCreationSituation situation;
     @Id
     private String name;
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setBuyers(List<String> buyers) {
+        this.buyers = buyers;
+    }
+
+    public String getSellerName() {
+        return sellerName;
+    }
+
+    public void setSellerName(String sellerName) {
+        this.sellerName = sellerName;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+
+
     private String brand;
     private int price;
     @ElementCollection
@@ -68,7 +94,9 @@ public class Good {
         this.averageScore = 0;
         this.dateModified = System.currentTimeMillis();
         this.buyers = new ArrayList<>();
-        comments = new ArrayList<>();
+        this.comments = new ArrayList<>();
+        this.specialAttributes = new ArrayList<>();
+        this.scores = new ArrayList<>();
         if (image!= null) this.image = image;
         this.dateCreated = System.currentTimeMillis();
     }
@@ -173,9 +201,9 @@ public class Good {
         buyers.add(b.getUsername());
     }
 
-    public static Good getGoodByName(String name, List<Good> goods) {
+    public static Good getGoodByName(String name) {
         for (Good g:
-                goods) {
+                ManageInfo.allGoods) {
             if(g.getName().equals(name))
                 return g;
         }

@@ -1,5 +1,7 @@
 package Server.Model;
 
+import Client.DataHandler.DataAccessor;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -23,8 +25,7 @@ public class Score {
         this.user = user.getUsername();
         this.score = score;
         this.good = good.getName();
-        this.id=ManageInfo.allScores.size();
-        ManageInfo.allScores.add(this);
+        this.id= ManageInfo.allScores.size();
     }
     public static Score getScoreById(int id){
         for (Score score : ManageInfo.allScores) {
@@ -50,7 +51,7 @@ public class Score {
     }
 
     public Good getGood() {
-        return Good.getGoodByName(good, ManageInfo.allGoods);
+        return Good.getGoodByName(good);
     }
     public void setGood(Good good) {
         this.good = good.getName();

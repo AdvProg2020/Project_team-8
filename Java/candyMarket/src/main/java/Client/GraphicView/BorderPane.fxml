@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.BorderPaneController">
+
+    <left>
+        <VBox fx:id="optionBar" styleClass="myOptionBar">
+
+        </VBox>
+    </left>
+    <right>
+        <AnchorPane fx:id="rightPane" styleClass="myRightPane">
+           <children>
+               <VBox fx:id="userLoginBar" alignment="TOP_RIGHT">
+                   <children>
+                       <Button fx:id="logInBtn" mnemonicParsing="false" onMouseClicked="#loginBtnClick" styleClass="myRightButton" text="Login" />
+                       <Button fx:id="registerBtn" onMouseClicked="#registerBtnOnClick" styleClass="myRightButton" text="Register" />
+                   </children>
+               </VBox>
+               <VBox fx:id="userLogOutBar" alignment="TOP_RIGHT">
+                   <children>
+                       <Button fx:id="logOutBtn" mnemonicParsing="false" onMouseClicked="#logOutBtnOnClick" styleClass="myRightButton" text="LogOut" />
+                   </children>
+               </VBox>
+           </children>
+        </AnchorPane>
+    </right>
+    <center>
+        <AnchorPane fx:id="centerPane">
+
+        </AnchorPane>
+    </center>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="990.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="cartImage" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#Buying" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="profileImage" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#viewProfile" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

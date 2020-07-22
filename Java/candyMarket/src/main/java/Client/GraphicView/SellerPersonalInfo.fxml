@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.SellerPersonalInfoController">
+   <children>
+      <Label layoutX="14.0" layoutY="48.0" text="Company Name: ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="companyName" layoutX="176.0" layoutY="50.0" text="cn" />
+      <Label layoutX="14.0" layoutY="84.0" text="Balance: ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="balance" layoutX="98.0" layoutY="86.0" text="0" />
+      <Label layoutX="357.0" layoutY="14.0" text="Details">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="116.0" text="Categories: ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+       <TableView fx:id="tableView" layoutX="8.0" layoutY="147.0" prefHeight="155.0" prefWidth="786.0">
+           <columns>
+               <TableColumn fx:id="nameColumn" prefWidth="159.0" text="Category" />
+               <TableColumn fx:id="specialAttributesColumn" prefWidth="626.0" text="Special Attributes" />
+           </columns>
+       </TableView>
+      <Label layoutX="14.0" layoutY="309.0" text="Sell Log: ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="sellLogTableView" layoutX="7.0" layoutY="339.0" prefHeight="176.0" prefWidth="786.0">
+        <columns>
+          <TableColumn fx:id="goodNameColumn" prefWidth="160.0" text="Product" />
+          <TableColumn fx:id="buyerNameColumn" minWidth="0.0" prefWidth="191.0" text="Buyer" />
+            <TableColumn fx:id="saleAmountColumn" prefWidth="215.0" text="Sale Amount" />
+            <TableColumn fx:id="totalAmountColumn" prefWidth="219.0" text="Total Amount" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

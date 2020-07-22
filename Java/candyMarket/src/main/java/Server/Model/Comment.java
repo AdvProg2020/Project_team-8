@@ -1,11 +1,12 @@
 package Server.Model;
 
-import org.hibernate.annotations.Type;
+import Client.DataHandler.DataAccessor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 @Entity
 public class Comment {
     public int getId() {
@@ -47,7 +48,6 @@ public class Comment {
             cmOrder = parentComment.cmOrder + 0.1;
         }
         this.id = ManageInfo.allComments.size();
-        ManageInfo.allComments.add(this);
     }
 
     public static void sortComments() {
@@ -98,7 +98,7 @@ public class Comment {
     }
 
     public Good getGood() {
-        return Good.getGoodByName(good,ManageInfo.allGoods);
+        return Good.getGoodByName(good);
     }
 
     public void setGood(Good good) {

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.BuyerPersonalInfoController">
+   <children>
+      <Label layoutX="14.0" layoutY="75.0" text="Balance: ">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="balance" layoutX="104.0" layoutY="77.0" text="0">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="113.0" text="Discount Codes:">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+       <TableView fx:id="tableView" layoutX="7.0" layoutY="152.0" prefHeight="296.0" prefWidth="786.0">
+           <columns>
+               <TableColumn fx:id="codeColumn" prefWidth="136.0" text="Code" />
+               <TableColumn fx:id="initialDateColumn" prefWidth="160.0" text="Initial Date" />
+               <TableColumn fx:id="endDateColumn" prefWidth="160.0" text="End Date" />
+               <TableColumn fx:id="percentageColumn" prefWidth="120.0" text="Percentage" />
+               <TableColumn fx:id="maxAmountColumn" prefWidth="139.0" text="Max Reduce" />
+               <TableColumn fx:id="usageTimeColumn" prefWidth="75.0" text="HMT" />
+           </columns>
+       </TableView>
+      <Label layoutX="357.0" layoutY="14.0" text="Details">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="630.0" layoutY="455.0" mnemonicParsing="false" onAction="#increaseBalance" text="Increase Balance" />
+   </children>
+</AnchorPane>

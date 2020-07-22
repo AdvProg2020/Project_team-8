@@ -1,11 +1,14 @@
 package Server.Model;
 
+import Client.DataHandler.DataAccessor;
+
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
 @Entity
 public class Discount {
     @Id
@@ -34,7 +37,7 @@ public class Discount {
         this.percentReduction = percentReduction;
         this.maxReductionAmount = maxReductionAmount;
         this.usageNumber = usageNumber;
-        ManageInfo.allDiscounts.add(this);
+        this.buyers = new ArrayList<>();
     }
 
 

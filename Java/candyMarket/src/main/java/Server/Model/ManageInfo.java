@@ -16,6 +16,6 @@ public class ManageInfo {
     public static List<Discount> allDiscounts = new ArrayList<Discount>();
     public static List<Good> allGoods = new ArrayList<Good>();
     public static List<Comment> allComments = new ArrayList<Comment>();
-    public static List<Sale> allSales = new ArrayList<Server.Model.Sale>();
-    public static List<Score> allScores = new ArrayList<Server.Model.Score>();
+    public static List<Sale> allSales = new ArrayList<Sale>();
+    public static List<Score> allScores = new ArrayList<Score>();
 }

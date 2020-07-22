@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.ProductsManagingController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="98.0" layoutY="22.0" prefHeight="557.0" prefWidth="604.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" text="List of Products">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="tableView" prefHeight="418.0" prefWidth="604.0">
+                    <columns>
+                        <TableColumn fx:id="productNameColumn" prefWidth="198.0" text="Product's Name" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="167.0" text="Category" />
+                        <TableColumn fx:id="priceColumn" prefWidth="171.0" text="Price" />
+                    </columns>
+                </TableView>
+                <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="240.0">
+                    <children>
+                    
+                        <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Product(s) " />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

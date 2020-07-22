@@ -1,10 +1,13 @@
 package Server.Model;
 
+import Client.DataHandler.DataAccessor;
+
 import javax.persistence.*;
 import java.util.HashMap;
 import java.util.Map;
+
 @Entity
-public class SellLog {
+public class SellLog{
     private String address;
     private String phoneNumber;
     @Id
@@ -56,7 +59,6 @@ public class SellLog {
         this.goods = goodsString;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.ON_THE_WAY;
-        ManageInfo.allSellLogs.add(this);
         this.id = ManageInfo.allBuyLogs.size();
     }
 
@@ -73,7 +75,7 @@ public class SellLog {
         for(Map.Entry<String, Integer> entry : goods.entrySet()) {
             String key = entry.getKey();
             int value = entry.getValue();
-            goodsOrginal.put(Good.getGoodByName(key, ManageInfo.allGoods),value);
+            goodsOrginal.put(Good.getGoodByName(key),value);
             // do what you have to do here
             // In your case, another loop.
         }

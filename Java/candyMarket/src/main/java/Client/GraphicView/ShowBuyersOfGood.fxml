@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.showBuyersOfGoodController">
+<Label layoutX="267.0" layoutY="22.0" text="Buyers">
+      <font>
+         <Font name="Berlin Sans FB" size="24.0" />
+      </font></Label>
+    <TableView fx:id="buyersTableView" layoutX="-2.0" layoutY="65.0" prefHeight="283.0" prefWidth="600.0">
+      <columns>
+         <TableColumn prefWidth="150.0" text="Column X" fx:id="userNameColumn" />
+         <TableColumn prefWidth="150.0" text="Column X" fx:id="firstNameColumn"/>
+         <TableColumn prefWidth="150.0" text="Column X" fx:id="lastNameColumn"/>
+         <TableColumn prefWidth="150.0" text="Column X" fx:id="balanceColumn" />
+      </columns></TableView>
+    <Label fx:id="label">
+
+    </Label>
+</AnchorPane>

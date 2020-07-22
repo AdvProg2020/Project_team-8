@@ -7,16 +7,17 @@ S.{json} //always get data returns value
 getAllData#from#{className}
 S.[json] //always get data returns value
 ------>
-C.setDataById#to#{className}#{json}
+C.setData#to#{className}#{json}
 //always errors check in project not server
 //every second client should be refresh if any changes from other clients applied
 //if any client want to set new data server should send that data to other clients
 //if client want to set new data it should be refreshed at first
 //so server should have set method but like this
+S.setData#to#{className}#{json}
 S.setData
-S.setDataById#to#{className}#{json}
-S.setDataById#to#{className}#{json}
-S.setDataById#to#{className}#{json}
+S.setData#to#{className}#{json}
+S.setData#to#{className}#{json}
+S.setData#to#{className}#{json}
 ...
 S.end
 

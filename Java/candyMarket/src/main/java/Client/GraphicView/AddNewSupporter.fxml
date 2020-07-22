@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+            style="-fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
+            #2193b0,
+            #6dd5ed,
+            radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.AddNewSupportController">
+    <children>
+        <GridPane layoutX="143.0" layoutY="67.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="448.0" minWidth="515.0" prefHeight="448.0" prefWidth="515.0">
+            <children>
+                <VBox alignment="TOP_CENTER" layoutX="144.0" layoutY="81.0" prefHeight="435.0" prefWidth="513.0" spacing="10.0" GridPane.columnIndex="1">
+                    <children>
+                        <Label text="Support Register">
+                            <font>
+                                <Font name="Arial Bold Italic" size="26.0" />
+                            </font>
+                        </Label>
+                        <Label />
+                        <VBox alignment="TOP_CENTER" prefHeight="265.0" prefWidth="513.0" spacing="5.0">
+                            <children>
+                                <HBox prefHeight="126.0" prefWidth="508.0">
+                                    <children>
+                                        <VBox alignment="TOP_CENTER" prefHeight="243.0" prefWidth="257.0" spacing="5.0">
+                                            <children>
+                                                <Label text="Username:">
+                                                    <font>
+                                                        <Font name="Arial Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="username" alignment="CENTER" />
+                                                <Label text="First Name:">
+                                                    <font>
+                                                        <Font name="Arial Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="firstName" alignment="CENTER" />
+                                            </children>
+                                            <opaqueInsets>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </opaqueInsets>
+                                        </VBox>
+                                        <VBox alignment="TOP_CENTER" prefHeight="401.0" prefWidth="256.5" spacing="5.0">
+                                            <children>
+                                                <Label text="Password:">
+                                                    <font>
+                                                        <Font name="Arial Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <PasswordField fx:id="password" alignment="CENTER" />
+                                                <Label text="Last Name:">
+                                                    <font>
+                                                        <Font name="Arial Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="lastName" alignment="CENTER" />
+                                            </children>
+                                            <opaqueInsets>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </opaqueInsets>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <Label text="Phone Number:">
+                                    <font>
+                                        <Font name="Arial Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="phoneNumber" alignment="CENTER" text="+98" />
+                                <Label text="Email:">
+                                    <font>
+                                        <Font name="Arial Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="email" alignment="CENTER" promptText="example@email.com" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets left="5.0" />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="5.0" />
+                            </padding>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#registering" text="Register" />
+                        <Label fx:id="errorMessage" style="-fx-background-color: #ff0000;" text="Label" textFill="WHITE" />
+                    </children>
+                    <opaqueInsets>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                    </opaqueInsets>
+                </VBox>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </children>
+</AnchorPane>

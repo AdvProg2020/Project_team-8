@@ -1,9 +1,13 @@
 package Server.Model;
 
-import javax.persistence.*;
+import Client.DataHandler.DataAccessor;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
 @Entity
 public class Buyer extends User {
     public List<Discount> getMyDiscounts() {
@@ -34,9 +38,8 @@ public class Buyer extends User {
         this.setType(UserType.BUYER);
         this.balance=0;
         this.myLogs = new ArrayList<>();
-        myDiscounts = new ArrayList<>();
-        ManageInfo.allBuyers.add(this);
-        ManageInfo.allUsers.add(this);
+        this.myDiscounts = new ArrayList<>();
+        this.boughtGoods = new ArrayList<>();
         getDiscountCodeRandom();
     }
 
@@ -158,7 +161,7 @@ public class Buyer extends User {
     {
         List<Good> goods = new ArrayList<>();
         for (String good : boughtGoods) {
-            goods.add(Good.getGoodByName(good,ManageInfo.allGoods));
+            goods.add(Good.getGoodByName(good));
         }
         return goods;
     }
