@@ -1,4 +1,8 @@
-package Model;
+package Client.Model;
+
+import Client.Model.Category;
+import Client.Model.Good;
+import Client.Model.Seller;
 
 import java.io.File;
 import java.util.ArrayList;

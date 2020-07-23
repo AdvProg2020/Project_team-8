@@ -1,9 +1,9 @@
-package GraphicController;
+package Client.GraphicController;
 
-import GraphicView.CategoryPropertiesBox;
-import GraphicView.MenuHandler;
-import Model.*;
-import PathHandler.PathHandler;
+import Client.GraphicView.CategoryPropertiesBox;
+import Client.GraphicView.MenuHandler;
+import Client.Model.*;
+import BothUtl.PathHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

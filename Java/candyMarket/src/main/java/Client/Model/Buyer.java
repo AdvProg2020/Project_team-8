@@ -1,7 +1,6 @@
 package Client.Model;
 
 import Client.Controller;
-import Client.DataHandler.DataAccessor;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;

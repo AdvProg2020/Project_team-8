@@ -1,8 +1,8 @@
-package GraphicController;
+package Client.GraphicController;
 
-import GraphicView.CustomChatMessages;
-import GraphicView.CustomProfileForChat;
-import Model.*;
+import Client.GraphicView.CustomChatMessages;
+import Client.GraphicView.CustomProfileForChat;
+import Client.Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

@@ -1,8 +1,8 @@
 package Client.Model;
 
+import BothUtl.PathHandler;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import PathHandler.PathHandler;
 
 import javax.persistence.*;
 import java.util.List;

@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.AddNewFileController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.AddNewFileController">
    <children>
       <Label fx:id="errorMessage" layoutX="93.0" layoutY="343.0" />
       <Button layoutX="142.0" layoutY="497.0" mnemonicParsing="false" onAction="#confirm" prefHeight="25.0" prefWidth="348.0" text="Confirm" />

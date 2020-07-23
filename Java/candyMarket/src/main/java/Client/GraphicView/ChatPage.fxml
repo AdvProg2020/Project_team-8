@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
             style="-fx-background-color:             linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),             #2193b0,             #6dd5ed,             radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphicController.ChatPageController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.ChatPageController">
     <children>
         <ScrollPane fx:id="chatScrollPane" layoutX="202.0" layoutY="76.0" prefHeight="369.0" prefWidth="555.0" />
         <Label alignment="CENTER" layoutX="333.0" layoutY="14.0" text="Chat Section">

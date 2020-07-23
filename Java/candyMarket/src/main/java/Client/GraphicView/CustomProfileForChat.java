@@ -1,7 +1,7 @@
-package GraphicView;
+package Client.GraphicView;
 
-import GraphicController.ChatPageController;
-import Model.User;
+import Client.GraphicController.ChatPageController;
+import Client.Model.User;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
 import javafx.scene.control.Label;
