@@ -1,1 +1,2 @@
-{"cart":{},"username":"m","firstName":"m","lastName":"m","email":"user1@manager.com","phoneNumber":"+9812431243","password":"m","type":"MANAGER"}
+{"cart":{},"username":"m","firstName":"m","lastName":"m","email":"user1@manager.com","phoneNumber":"+982141","password":"m","type":"MANAGER"}
+{"cart":{},"username":"m","firstName":"m","lastName":"m","email":"m@manager.com","phoneNumber":"+981241","password":"m","type":"MANAGER","userPhoto":"file:/C:/Users/My%20Tablet/Downloads/daneshga/Term%202/AP/Project/Phase%202/new5/Java/candyMarket/src/main/resources/Photos/UserWithoutImage.png"}

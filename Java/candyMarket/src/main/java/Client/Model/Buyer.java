@@ -43,6 +43,7 @@ public class Buyer extends User {
         this.boughtGoods = new ArrayList<>();
         Controller.saveOrUpdateObject(this);
         getDiscountCodeRandom();
+        Chat.newBuyerAdded(userName);
     }
 
     private void getDiscountCodeRandom(){

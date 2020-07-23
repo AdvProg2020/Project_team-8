@@ -32,6 +32,7 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
     public BorderPane borderPane;
     public ImageView cartImage;
     public ImageView profileImage;
+    public ImageView chatImage;
     public static void setLeft(ArrayList<Button> buttons) {
         Node node = ((BorderPane)MenuHandler.currentWindow.getScene().getRoot()).getLeft();
         ((VBox)node).getChildren().clear();
@@ -52,6 +53,7 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         Image image = null;
         Image imageCart = null;
         Image imageProfile = null;
+        Image imageChat = null;
         try {
             imageCart = new Image(String.valueOf(new File(PathHandler.resourcePath+"Photos\\Shopping-Cart-PNG.png").toURI().toURL()));
         } catch (MalformedURLException e) {
@@ -64,6 +66,14 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
             e.printStackTrace();
         }
         profileImage.setImage(imageProfile);
+        try {
+            imageChat = new Image(String.valueOf(new File(PathHandler.resourcePath+"Photos\\chatIcon.png").toURI().toURL()));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        chatImage.setImage(imageChat);
+        chatImage.setVisible(false);
+        chatImage.setDisable(true);
         try {
             image = new Image(String.valueOf(new File(PathHandler.resourcePath+"Photos\\MainBackGround.jpg").toURI().toURL()));
         } catch (MalformedURLException e) {
@@ -82,6 +92,8 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         userLoginBar.toFront();
         userLoginBar.setVisible(true);
         userLogOutBar.setVisible(false);
+        chatImage.setVisible(false);
+        chatImage.setDisable(true);
         setCenter("MainMenu");
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
         mediaPlayer.play();
@@ -97,6 +109,10 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         userLogOutBar.toFront();
         userLoginBar.setVisible(false);
         userLogOutBar.setVisible(true);
+        if (UserHandler.isSupporter() || UserHandler.isBuyer()) {
+            chatImage.setVisible(true);
+            chatImage.setDisable(false);
+        }
     }
     public void loginBtnClick(MouseEvent mouseEvent) {
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
@@ -122,5 +138,11 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         else {
             MenuHandler.createStageWithScene("LoginMenu");
         }
+    }
+
+    public void chatting(MouseEvent mouseEvent) {
+        MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
+        mediaPlayer.play();
+        MenuHandler.createStageWithScene("ChatPage");
     }
 }

@@ -134,4 +134,9 @@ public class SellerProductHandlingController implements Initializable {
     public void setCurrentGood(Good currentGood) {
         this.currentGood = currentGood;
     }
+
+    public void addFile(ActionEvent actionEvent) {
+        currentGood = null;
+        MenuHandler.createStageWithScene("AddNewFile");
+    }
 }

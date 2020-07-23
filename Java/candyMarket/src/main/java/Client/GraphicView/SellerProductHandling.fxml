@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -10,7 +11,7 @@
         <VBox layoutX="210.0" layoutY="81.0" prefHeight="254.0" prefWidth="603.0" spacing="10.0">
                 <children>
 
-                <TableView onMousePressed="#userClickedOnTable" fx:id="tableView"  prefHeight="283.0" prefWidth="603.0">
+                <TableView fx:id="tableView" onMousePressed="#userClickedOnTable" prefHeight="283.0" prefWidth="603.0">
                     <columns>
                         <TableColumn fx:id="productNameColumn" prefWidth="254.0" text="Product's Name" />
                         <TableColumn fx:id="categoryColumn" prefWidth="184.00003051757812" text="Category" />
@@ -35,6 +36,7 @@
                  <Font name="System Bold Italic" size="18.0" />
              </font>
          </Label>
+      <Button onAction="#addFile" layoutX="306.0" layoutY="425.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="411.0" text="Add File" />
 
     </children>
 

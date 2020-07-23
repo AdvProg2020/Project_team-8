@@ -366,10 +366,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
-        <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -776,8 +777,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="make runnable" />
-    <MESSAGE value="Make clients menu(start)" />
     <MESSAGE value="Finalize Registering (on View)" />
     <MESSAGE value="Update SellersMenu v2" />
     <MESSAGE value="finalize Register and Login Menus" />
@@ -801,10 +800,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="add client details for manager page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="540" y="232" key="#Assign_Data_Sources" timestamp="1595101199990">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="233" y="0" key="#Inspections" timestamp="1595175785603">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="540" y="232" key="#Assign_Data_Sources/0.0.1280.680@0.0.1280.680" timestamp="1595101199990" />
+    <state x="233" y="0" key="#Inspections/0.0.1280.683@0.0.1280.683" timestamp="1595175785603" />
     <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1593176867518">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -826,7 +825,7 @@
     <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595080058581">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1595080058581" />
+    <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1594725069925" />
     <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1593093420947">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -926,13 +925,13 @@
     </state>
     <state width="1237" height="176" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1595461465684" />
     <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state x="99" y="0" key="Maven.ArtifactSearchDialog" timestamp="1595091158640">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1594921403463">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="99" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1595091158640" />
-    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1589832465283" />
-    <state x="121" y="50" key="MergeDialog" timestamp="1593034046263">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="99" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1594823136195" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1594921403463" />
+    <state x="121" y="50" key="MergeDialog" timestamp="1595164879212">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046263" />
     <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419472" />
@@ -985,10 +984,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="435" y="185" key="git4idea.ui.GitTagDialog/0.0.1280.680@0.0.1280.680" timestamp="1593187629573" />
-    <state x="152" y="0" key="new project wizard" timestamp="1595070754662">
+    <state x="152" y="0" key="new project wizard" timestamp="1594825576224">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="152" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1595070754662" />
+    <state x="152" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1594825576224" />
     <state x="91" y="36" key="new project wizard/0.0.1280.683@0.0.1280.683" timestamp="1588513960615" />
     <state x="282" y="67" width="700" height="530" key="recent.locations.popup" timestamp="1595004269049">
       <screen x="0" y="0" width="1280" height="680" />

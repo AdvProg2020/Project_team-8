@@ -1,5 +1,7 @@
 package Client.Model;
 
+import jdk.internal.jimage.ImageStrings;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +14,12 @@ public class ManageInfo {
     public static List<Manager> allManagers = new ArrayList<Manager>();
     public static List<Buyer> allBuyers = new ArrayList<Buyer>();
     public static List<Seller> allSellers = new ArrayList<Seller>();
-    public static List<Supporter> allSupporters = new ArrayList<Supporter>();
     public static List<Discount> allDiscounts = new ArrayList<Discount>();
     public static List<Good> allGoods = new ArrayList<Good>();
     public static List<Comment> allComments = new ArrayList<Comment>();
     public static List<Sale> allSales = new ArrayList<Sale>();
     public static List<Score> allScores = new ArrayList<Score>();
+    public static List<Supporter> allSupporters = new ArrayList<Supporter>();
+    public static List<FileGood> allFileGoods = new ArrayList<FileGood>();
+    public static List<Chat> allChats = new ArrayList<Chat>();
 }

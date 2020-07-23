@@ -27,6 +27,10 @@ public class UserHandler {
 
         public static boolean isSeller() {return currentSeller != null;}
 
+        public static boolean isBuyer() {return currentBuyer != null;}
+
+        public static boolean isSupporter() {return currentSupporter != null;}
+
         public static void loggingIn(String userName) {
                 User user = User.getUserByUsername(userName);
                 currentUser = user;
