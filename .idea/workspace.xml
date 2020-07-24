@@ -20,47 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/ChatPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/ChatPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CustomChatMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CustomProfileForChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/Photos/chatIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/AddNewFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/AddNewFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/AddNewSupportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/AddNewSupportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BorderPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicController/BorderPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/BorderPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/BorderPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CommentsPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/GraphicView/CommentsPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/ManageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/ManageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Supporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/Supporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Model/UserHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/PathHandler/PathHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/PathHandler/PathHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/Photos/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/Photos/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/AddNewFileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/AddNewFileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/AddNewSupportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/AddNewSupportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/BorderPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/BorderPaneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/SellerProductHandlingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/SellerProductHandlingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileGood.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/FileGood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/ManageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/ManageInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Supporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Supporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User$UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User$UserType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/PathHandler/PathHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/PathHandler/PathHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/buyers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/buyers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/goods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/goods.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/managers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/managers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/requests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/requests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/sellers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/sellers.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +220,8 @@
       <workItem from="1594921470203" duration="12779000" />
       <workItem from="1594997712858" duration="17772000" />
       <workItem from="1595163215521" duration="17084000" />
-      <workItem from="1595339359501" duration="9276000" />
+      <workItem from="1595339359501" duration="10619000" />
+      <workItem from="1595589419157" duration="685000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -521,7 +482,28 @@
       <option name="project" value="LOCAL" />
       <updated>1595164819616</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add Supporter Chatting system">
+      <created>1595454309907</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1595454309907</updated>
+    </task>
+    <task id="LOCAL-00039" summary="add Supporter Chatting system">
+      <created>1595454323038</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1595454323038</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add Supporter Chatting system">
+      <created>1595454331430</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1595454331430</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +524,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Finalize Registering (on View)" />
     <MESSAGE value="Update SellersMenu v2" />
     <MESSAGE value="finalize Register and Login Menus" />
     <MESSAGE value="finalize Register and Login Menus v2" />
@@ -567,7 +548,8 @@
     <MESSAGE value="edit compare section" />
     <MESSAGE value="add Supporter as a useless user" />
     <MESSAGE value="add file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add file" />
+    <MESSAGE value="add Supporter Chatting system" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Supporter Chatting system" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Inspections" timestamp="1595175785603">
@@ -579,6 +561,10 @@
     </state>
     <state x="360" y="0" width="578" height="680" key="#Main/0.0.1280.680@0.0.1280.680" timestamp="1593176867518" />
     <state x="360" y="0" width="575" height="683" key="#Main/0.0.1280.683@0.0.1280.683" timestamp="1593109668622" />
+    <state x="233" y="0" key="#Notifications" timestamp="1595454372708">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="233" y="0" key="#Notifications/0.0.1280.683@0.0.1280.683" timestamp="1595454372708" />
     <state x="121" y="0" key="#Project_Structure" timestamp="1592219098177">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -630,11 +616,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593086131481" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595454322317">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595592288108">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595454322317" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595592288108" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -644,26 +630,26 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594662630612" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1595165814337" />
-    <state width="1237" height="124" key="GridCell.Tab.0.bottom" timestamp="1595454302099">
+    <state width="1237" height="124" key="GridCell.Tab.0.bottom" timestamp="1595465456481">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595454302099" />
-    <state width="1237" height="124" key="GridCell.Tab.0.center" timestamp="1595454302099">
+    <state width="1237" height="124" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595465456481" />
+    <state width="1237" height="124" key="GridCell.Tab.0.center" timestamp="1595465456481">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595454302099" />
-    <state width="1237" height="124" key="GridCell.Tab.0.left" timestamp="1595454302099">
+    <state width="1237" height="124" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595465456481" />
+    <state width="1237" height="124" key="GridCell.Tab.0.left" timestamp="1595465456481">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595454302099" />
-    <state width="1237" height="124" key="GridCell.Tab.0.right" timestamp="1595454302099">
+    <state width="1237" height="124" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595465456481" />
+    <state width="1237" height="124" key="GridCell.Tab.0.right" timestamp="1595465456481">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595454302099" />
+    <state width="1237" height="124" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595465456481" />
     <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593781945489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -708,6 +694,10 @@
     </state>
     <state x="215" y="0" width="1038" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594825504420" />
     <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1592076197171" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1595465442728">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1280.683@0.0.1280.683" timestamp="1595465442728" />
     <state x="486" y="256" key="VCS.ChangelistChooser" timestamp="1594926976894">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -716,20 +706,20 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595013794507">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595454349990">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1595013794507" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1595454349990" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1593125982030">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="647" height="347" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1593125982030" />
-    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1595339358816">
+    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1595589446474">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
-    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1595339358816" />
+    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1595589446474" />
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593041894737">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -738,11 +728,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="595" y="51" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1594824385210" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595164825429">
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595592266208">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595164825429" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595592266208" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -756,11 +746,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1593672165547" />
-    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1595175626736">
+    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1595465448900">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="303" y="3" width="672" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594835802527" />
-    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1595175626736" />
+    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1595465448900" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ApProject$Main.ic" NAME="Main Coverage Results" MODIFIED="1592397832356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
