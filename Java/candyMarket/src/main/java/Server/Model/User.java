@@ -1,12 +1,13 @@
 package Server.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class User {
+public class User  {
     public String getUserPhoto() {
         return userPhoto;
     }
@@ -19,6 +20,7 @@ public class User {
         BUYER, SELLER, MANAGER, SUPPORTER
     }
     @Transient
+    @JsonIgnore
     protected Cart cart = new Cart();
     @Id
     protected String username;

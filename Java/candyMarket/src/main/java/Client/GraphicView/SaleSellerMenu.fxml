@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.SaleSellerController">
+   <top>
+      <Label text="Create Sale" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <TableView fx:id="tableView1" prefHeight="340.0" prefWidth="201.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="productColumn1" prefWidth="78.66667175292969" text="Product" />
+          <TableColumn fx:id="priceColumn1" prefWidth="122.0" text="Price (before sale)" />
+        </columns>
+      </TableView>
+   </left>
+   <right>
+      <TableView fx:id="tableView2" prefHeight="357.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="productColumn2" prefWidth="101.33331549167633" text="Product" />
+          <TableColumn fx:id="priceColumn2" prefWidth="105.99999237060547" text="Price (after sale)" />
+        </columns>
+      </TableView>
+   </right>
+   <bottom>
+      <Button fx:id="applyButton" mnemonicParsing="false" onAction="#applySales" text="Apply" BorderPane.alignment="CENTER" />
+   </bottom>
+    <center>
+    <AnchorPane>
+      <TextField fx:id="salePercentAmount" layoutX="30.0" layoutY="44.0" prefHeight="25.0" prefWidth="128.0" promptText="Sale Percent Amount" BorderPane.alignment="CENTER" />
+         <DatePicker fx:id="startTime" layoutX="32.0" layoutY="144.0" prefHeight="25.0" prefWidth="127.0" promptText="Start Time" />
+         <DatePicker fx:id="endTime" layoutX="30.0" layoutY="192.0" prefHeight="25.0" prefWidth="131.0" promptText="End Time" />
+    </AnchorPane>
+    </center>
+</BorderPane>

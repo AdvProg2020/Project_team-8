@@ -1,9 +1,10 @@
 package Server.Model;
 
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
+import Client.DataHandler.DataAccessor;
 
-import javax.persistence.*;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class Category {
             }
         };
         this.specialAttributes.addAll(attributes);
-        ManageInfo.allCategories.add(this);
+        this.goods = new ArrayList<>();
     }
     public String getName() {
         return name;
@@ -42,7 +43,7 @@ public class Category {
     public List<Good> getGoods() {
         List<Good> goods = new ArrayList<>();
         for (String good : this.goods) {
-            goods.add(Good.getGoodByName(good,ManageInfo.allGoods));
+            goods.add(Good.getGoodByName(good));
         }
         return goods;
     }

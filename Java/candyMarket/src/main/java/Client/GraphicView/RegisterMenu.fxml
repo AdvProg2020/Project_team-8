@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane style="-fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
+            #2193b0,
+            #6dd5ed,
+            radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.RegisterMenuController">
+   <center>
+       <AnchorPane fx:id="centerPane">
+          <children>
+         <GridPane hgap="10.0" layoutX="156.0" layoutY="95.0" prefHeight="280.0" prefWidth="469.0" vgap="5.0">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="108.0" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="322.0" minWidth="10.0" prefWidth="322.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+             <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+             <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <Label text="Username:" />
+               <Label text="Password:" GridPane.rowIndex="1" />
+               <Label text="First Name:" GridPane.rowIndex="2" />
+               <Label text="Last Name:" GridPane.rowIndex="3" />
+               <Label text="Email:" GridPane.rowIndex="4" />
+               <Label text="Phone Number:" GridPane.rowIndex="5" />
+               <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <TextField fx:id="username" GridPane.columnIndex="1" />
+               <TextField fx:id="firstName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <TextField fx:id="lastName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               <TextField fx:id="phoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               <Label text="Type" GridPane.rowIndex="6" />
+               <ChoiceBox fx:id="type" prefHeight="39.0" prefWidth="329.0" value="select" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <effect>
+                     <InnerShadow color="WHITE" />
+                  </effect>
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Buyer" />
+                           <String fx:value="Seller" />
+                       </FXCollections>
+                   </items>
+               </ChoiceBox>
+            </children>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <BorderPane.margin>
+               <Insets bottom="50.0" right="50.0" />
+            </BorderPane.margin>
+         </GridPane>
+          </children>
+       </AnchorPane>
+   </center>
+    <bottom>
+        <HBox spacing="100.0" BorderPane.alignment="CENTER">
+            <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="491.0">
+               <children>
+                      <Label fx:id="errorMessage" prefHeight="27.0" prefWidth="309.0" textAlignment="CENTER" />
+               </children>
+               <opaqueInsets>
+                  <Insets left="40.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+               <children>
+                      <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#registering" prefHeight="39.0" prefWidth="83.0" text="Next" />
+               </children>
+            </VBox>
+            </children>
+        </HBox>
+    </bottom>
+   <padding>
+      <Insets bottom="20.0" right="20.0" top="10.0" />
+   </padding>
+   <top>
+      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="780.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Registering">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

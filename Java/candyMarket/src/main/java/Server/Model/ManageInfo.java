@@ -1,5 +1,8 @@
 package Server.Model;
 
+import Client.Model.Chat;
+import Client.Model.FileGood;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +19,8 @@ public class ManageInfo {
     public static List<Discount> allDiscounts = new ArrayList<Discount>();
     public static List<Good> allGoods = new ArrayList<Good>();
     public static List<Comment> allComments = new ArrayList<Comment>();
-    public static List<Sale> allSales = new ArrayList<Server.Model.Sale>();
-    public static List<Score> allScores = new ArrayList<Server.Model.Score>();
+    public static List<Sale> allSales = new ArrayList<Sale>();
+    public static List<Score> allScores = new ArrayList<Score>();
+    public static List<FileGood> allFileGoods = new ArrayList<FileGood>();
+    public static List<Chat> allChats = new ArrayList<Chat>();
 }

@@ -1,10 +1,13 @@
 package Server.Model;
 
+import Client.DataHandler.DataAccessor;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 @Entity
 public class BuyLog {
     private String address;
@@ -39,7 +42,6 @@ public class BuyLog {
         this.buyerName = buyerName;
         this.buySituation = CartSituation.ON_THE_WAY;
         this.id = ManageInfo.allBuyLogs.size();
-        ManageInfo.allBuyLogs.add(this);
     }
 
     public String getBuyerName() {
@@ -86,7 +88,7 @@ public class BuyLog {
     public List<Good> getGoods() {
         List<Good> purchasedGoods = new ArrayList<>();
         for (String good : goods.keySet()) {
-            purchasedGoods.add(Good.getGoodByName(good, ManageInfo.allGoods));
+            purchasedGoods.add(Good.getGoodByName(good));
         }
         return purchasedGoods;
     }

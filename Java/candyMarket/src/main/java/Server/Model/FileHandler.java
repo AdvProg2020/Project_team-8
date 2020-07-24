@@ -218,7 +218,7 @@ public class FileHandler {
             ManageInfo.allUsers.add(seller);
             for (Good good:seller.getGoods()
             ) {
-                good = Good.getGoodByName(good.getName(), ManageInfo.allGoods);
+                good = Good.getGoodByName(good.getName());
             }
         }
     }

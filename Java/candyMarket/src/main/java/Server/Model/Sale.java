@@ -1,12 +1,14 @@
 package Server.Model;
 
+import Client.DataHandler.DataAccessor;
+
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
 @Entity
 public class Sale {
     @ElementCollection
@@ -23,7 +25,7 @@ public class Sale {
         this.endTime = endTime;
         this.salePercentageAmount = amount;
         this.id = ManageInfo.allSales.size();
-        ManageInfo.allSales.add(this);
+        this.goods = new ArrayList<>();
         UserHandler.currentSeller.addSale(this);
     }
     public static Sale getSaleById(int id){
@@ -60,7 +62,7 @@ public class Sale {
     public List<Good> getGoods() {
         List<Good> goods = new ArrayList<>();
         for (String good : this.goods) {
-            goods.add(Good.getGoodByName(good,ManageInfo.allGoods));
+            goods.add(Good.getGoodByName(good));
         }
         return goods;
     }

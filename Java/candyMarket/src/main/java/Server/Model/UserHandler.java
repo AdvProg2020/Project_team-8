@@ -1,6 +1,6 @@
 package Server.Model;
 
-import GraphicController.BorderPaneController;
+import Client.GraphicController.BorderPaneController;
 
 public class UserHandler {
         public static User getCurrentUser() {

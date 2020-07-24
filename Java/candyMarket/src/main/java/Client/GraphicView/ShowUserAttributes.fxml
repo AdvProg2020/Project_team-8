@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color:             linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),             #2193b0,             #6dd5ed,             radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.ShowUserAttributes">
+   <children>
+      <GridPane layoutX="296.0" layoutY="93.0" prefHeight="336.0" prefWidth="143.0">
+         <children>
+            <Label fx:id="UserNameLBL" layoutX="148.0" layoutY="93.0" prefHeight="17.0" prefWidth="284.0" text="UserName : " />
+            <Label fx:id="NameLBL" layoutX="148.0" layoutY="131.0" prefHeight="17.0" prefWidth="284.0" text="Name :" GridPane.rowIndex="2" />
+            <Label fx:id="LastNameLBL" layoutX="148.0" layoutY="165.0" prefHeight="17.0" prefWidth="284.0" text="LastName :" GridPane.rowIndex="3" />
+            <Label fx:id="EmailLBL" layoutX="148.0" layoutY="200.0" prefHeight="17.0" prefWidth="284.0" text="Email : " GridPane.rowIndex="4" />
+            <Label fx:id="PhoneNumberLBL" layoutX="148.0" layoutY="236.0" prefHeight="17.0" prefWidth="284.0" text="PhoneNumber :" GridPane.rowIndex="5" />
+            <Label fx:id="PasswordLBL" layoutX="148.0" layoutY="272.0" prefHeight="17.0" prefWidth="284.0" text="PassWord : " GridPane.rowIndex="1" />
+            <Label fx:id="UserTypeLBL" layoutX="196.0" layoutY="46.0" prefHeight="34.0" prefWidth="402.0" text="UserType :" textAlignment="CENTER" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="CompanyLBL" text="Company :" GridPane.rowIndex="7" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints maxWidth="402.0" minWidth="138.0" prefWidth="146.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="40.0" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" />
+         </rowConstraints>
+         <effect>
+            <Blend />
+         </effect>
+      </GridPane>
+      <Label layoutX="250.0" layoutY="429.0" prefHeight="27.0" prefWidth="291.0" text="Press Enter  For Being Registered" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
