@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 public class Request {
-    public static enum requestType{
+    public static enum type{
         CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
     }
     public static enum state {
@@ -17,7 +17,8 @@ public class Request {
     private String stateString;
     @Enumerated(EnumType.STRING)
     public state requestState;
-    public static requestType requestType;
+    @Enumerated(EnumType.STRING)
+    public type requestType;
     @ManyToOne
     private Good good;
     @ManyToOne
@@ -38,7 +39,7 @@ public class Request {
     private String requestCommand;
     public static List<Request> sellersRequest;
     public Request(){}
-    public Request(Request.requestType requestType) {
+    public Request(type requestType) {
         this.requestState = state.CHECKING;
         this.requestType = requestType;
         this.requestId = ManageInfo.allRequests.size();

@@ -4,32 +4,40 @@ import Client.Model.*;
 
 public class DataAccessor {
     public static void deleteDataById(String className,String id){
-        if(className.equals("Manager"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+        if(className.equals("Manager")) {
+            ManageInfo.allManagers.remove(Manager.getUserByUsername(id));
+            ManageInfo.allUsers.remove(Manager.getUserByUsername(id));
+        }
         if(className.equals("Good"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
-        if(className.equals("Buyer"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
-        if(className.equals("Seller"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
-        if(className.equals("Supporter"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allGoods.remove(Good.getGoodByName(id));
+        if(className.equals("Buyer")) {
+            ManageInfo.allBuyers.remove(Buyer.getUserByUsername(id));
+            ManageInfo.allUsers.remove(Buyer.getUserByUsername(id));
+        }
+        if(className.equals("Seller")) {
+            ManageInfo.allSellers.remove(Seller.getUserByUsername(id));
+            ManageInfo.allUsers.remove(Seller.getUserByUsername(id));
+        }
+        if(className.equals("Supporter")) {
+            ManageInfo.allSupporters.remove(Supporter.getUserByUsername(id));
+            ManageInfo.allUsers.remove(Supporter.getUserByUsername(id));
+        }
         if(className.equals("Category"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allCategories.remove(Category.getCategoryByName(id));
         if(className.equals("Request"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allRequests.remove(Request.getRequestById(Integer.parseInt(id)));
         if(className.equals("Discount"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allDiscounts.remove(Discount.getDiscountByCode(id));
         if(className.equals("Comment"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allComments.remove(Comment.getCommentById(Integer.parseInt(id)));
         if(className.equals("Sale"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allSales.remove(Sale.getSaleById(Integer.parseInt(id)));
         if(className.equals("Score"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allScores.remove(Score.getScoreById(Integer.parseInt(id)));
         if(className.equals("BuyLog"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allBuyLogs.remove(BuyLog.getBuyLogById(Integer.parseInt(id)));
         if(className.equals("SellLog"))
-            Server.Model.ManageInfo.allManagers.remove(Server.Model.Manager.getUserByUsername(id));
+            ManageInfo.allSellLogs.remove(SellLog.getSellLogById(Integer.parseInt(id)));
     }
     public static void updateOrSaveObject(Object object){
         if(object instanceof Good)

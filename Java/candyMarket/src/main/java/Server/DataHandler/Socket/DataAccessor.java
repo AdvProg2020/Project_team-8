@@ -1,144 +1,202 @@
 package Server.DataHandler.Socket;
 
+import Server.DataHandler.DataBase.DBHandler;
 import Server.DataHandler.DataBase.DBManager;
 import Server.Model.*;
+import com.sun.webkit.graphics.WCFontCustomPlatformData;
 
 import java.util.List;
 
 public class DataAccessor {
     public static void deleteDataById(String className,String id){
-        if(className.equals("Manager"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Good"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Buyer"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Seller"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Supporter"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Category"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Request"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Discount"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Comment"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Sale"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("Score"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("BuyLog"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
-        if(className.equals("SellLog"))
-            DBManager.deleteObject(ManageInfo.allManagers.remove(Manager.getUserByUsername(id)));
+        if(className.equals("Manager")) {
+            DBManager.deleteObject(Manager.getUserByUsername(id));
+            ManageInfo.allManagers.remove(Manager.getUserByUsername(id));
+            ManageInfo.allUsers.remove(Manager.getUserByUsername(id));
+        }
+        if(className.equals("Good")) {
+            DBManager.deleteObject(Good.getGoodByName(id));
+            ManageInfo.allGoods.remove(Good.getGoodByName(id));
+        }
+        if(className.equals("Buyer")) {
+            DBManager.deleteObject(Buyer.getUserByUsername(id));
+            ManageInfo.allBuyers.remove(Buyer.getUserByUsername(id));
+            ManageInfo.allUsers.remove(Buyer.getUserByUsername(id));
+        }
+        if(className.equals("Seller")) {
+            DBManager.deleteObject(Seller.getUserByUsername(id));
+            ManageInfo.allSellers.remove(Seller.getUserByUsername(id));
+            ManageInfo.allUsers.remove(Seller.getUserByUsername(id));
+        }
+        if(className.equals("Supporter")) {
+            DBManager.deleteObject(Supporter.getUserByUsername(id));
+            ManageInfo.allSupporters.remove(Supporter.getUserByUsername(id));
+            ManageInfo.allUsers.remove(Supporter.getUserByUsername(id));
+        }
+        if(className.equals("Category")) {
+            DBManager.deleteObject(Category.getCategoryByName(id));
+            ManageInfo.allCategories.remove(Category.getCategoryByName(id));
+        }
+        if(className.equals("Request")) {
+            DBManager.deleteObject(Request.getRequestById(Integer.parseInt(id)));
+            ManageInfo.allRequests.remove(Request.getRequestById(Integer.parseInt(id)));
+        }
+        if(className.equals("Discount")) {
+            DBManager.deleteObject(Discount.getDiscountByCode(id));
+            ManageInfo.allDiscounts.remove(Discount.getDiscountByCode(id));
+        }
+        if(className.equals("Comment")) {
+            DBManager.deleteObject(Comment.getCommentById(Integer.parseInt(id)));
+            ManageInfo.allComments.remove(Comment.getCommentById(Integer.parseInt(id)));
+        }
+        if(className.equals("Sale")) {
+            DBManager.deleteObject(Integer.parseInt(id));
+            ManageInfo.allSales.remove(Sale.getSaleById(Integer.parseInt(id)));
+        }
+        if(className.equals("Score")) {
+            DBManager.deleteObject(Score.getScoreById(Integer.parseInt(id)));
+            ManageInfo.allScores.remove(Score.getScoreById(Integer.parseInt(id)));
+        }
+        if(className.equals("BuyLog")) {
+            DBManager.deleteObject(BuyLog.getBuyLogById(Integer.parseInt(id)));
+            ManageInfo.allBuyLogs.remove(BuyLog.getBuyLogById(Integer.parseInt(id)));
+        }
+        if(className.equals("SellLog")) {
+            DBManager.deleteObject(SellLog.getSellLogById(Integer.parseInt(id)));
+            ManageInfo.allSellLogs.remove(SellLog.getSellLogById(Integer.parseInt(id)));
+        }
     }
     public static void updateOrSaveObject(Object object){
-        DBManager.saveObject(object);
         if(object instanceof Good)
         {
             Good good = (Good) object;
             Good currentGood =  Good.getGoodByName(good.getName());
-            if (currentGood != null)
+            if (currentGood != null) {
+                DBManager.deleteObject(currentGood);
                 ManageInfo.allGoods.remove(currentGood);
+            }
             ManageInfo.allGoods.add(good);
         }
         else if(object instanceof Category)
         {
             Category category = (Category) object;
             Category currentCategory = Category.getCategoryByName(category.getName());
-            if (currentCategory != null)
+            if (currentCategory != null) {
+                DBManager.deleteObject(currentCategory);
                 ManageInfo.allCategories.remove(currentCategory);
+            }
             ManageInfo.allCategories.add(category);
         }
         else if(object instanceof BuyLog)
         {
             BuyLog buyLog = (BuyLog) object;
             BuyLog currentBuyLog = BuyLog.getBuyLogById(buyLog.getId());
-            if (currentBuyLog != null)
+            if (currentBuyLog != null) {
+                DBManager.deleteObject(currentBuyLog);
                 ManageInfo.allBuyLogs.remove(currentBuyLog);
+            }
             ManageInfo.allBuyLogs.add(buyLog);
         }
         else if(object instanceof SellLog)
         {
             SellLog sellLog = (SellLog) object;
             SellLog currentSellLog = SellLog.getSellLogById(sellLog.getId());
-            if (currentSellLog != null)
+            if (currentSellLog != null) {
+                DBManager.deleteObject(currentSellLog);
                 ManageInfo.allSellLogs.remove(currentSellLog);
+            }
             ManageInfo.allSellLogs.add(sellLog);
         }
         else if(object instanceof Comment)
         {
             Comment comment  = (Comment) object;
             Comment currentComment = Comment.getCommentById(comment.getId());
-            if (currentComment != null)
+            if (currentComment != null) {
+                DBManager.deleteObject(currentComment);
                 ManageInfo.allComments.remove(currentComment);
+            }
             ManageInfo.allComments.add(comment);
         }
         else if(object instanceof Score)
         {
             Score score = (Score) object;
             Score currentScore = Score.getScoreById(score.getId());
-            if (currentScore != null)
+            if (currentScore != null) {
+                DBManager.deleteObject(currentScore);
                 ManageInfo.allScores.remove(currentScore);
+            }
             ManageInfo.allScores.add(score);
         }
         else if(object instanceof Discount)
         {
             Discount discount = (Discount) object;
             Discount currentDiscount = Discount.getDiscountByCode(discount.getCode());
-            if (currentDiscount != null)
+            if (currentDiscount != null) {
+                DBManager.deleteObject(currentDiscount);
                 ManageInfo.allDiscounts.remove(currentDiscount);
+            }
             ManageInfo.allDiscounts.add(discount);
         }
         else if(object instanceof Seller)
         {
             Seller seller = (Seller) object;
             Seller currentSeller = (Seller) Seller.getUserByUsername(seller.getUsername());
-            if (currentSeller != null)
+            if (currentSeller != null) {
+                DBManager.deleteObject(currentSeller);
                 ManageInfo.allSellers.remove(currentSeller);
+            }
             ManageInfo.allSellers.add(seller);
         }
         else if(object instanceof Buyer)
         {
             Buyer buyer = (Buyer) object;
             Buyer currentBuyer = (Buyer) Buyer.getUserByUsername(buyer.getUsername());
-            if (currentBuyer != null)
+            if (currentBuyer != null) {
+                DBManager.deleteObject(currentBuyer);
                 ManageInfo.allBuyers.remove(currentBuyer);
+            }
             ManageInfo.allBuyers.add(buyer);
         }
         else if(object instanceof Manager)
         {
             Manager manager = (Manager) object;
             Manager currentManager = (Manager) Manager.getUserByUsername(manager.getUsername());
-            if (currentManager != null)
+            if (currentManager != null) {
+                DBManager.deleteObject(currentManager);
                 ManageInfo.allManagers.remove(currentManager);
+            }
             ManageInfo.allManagers.add(manager);
         }
         else if(object instanceof Supporter){
             Supporter supporter = (Supporter) object;
             Supporter currentSupporter = (Supporter) Supporter.getUserByUsername(supporter.getUsername());
-            if (currentSupporter != null)
+            if (currentSupporter != null) {
+                DBManager.deleteObject(currentSupporter);
                 ManageInfo.allSupporters.remove(currentSupporter);
+            }
             ManageInfo.allSupporters.add(supporter);
         }
         else if(object instanceof Request)
         {
             Request request = (Request) object;
             Request currentRequest = Request.getRequestById(request.getRequestId());
-            if (currentRequest != null)
+            if (currentRequest != null) {
+                DBManager.deleteObject(currentRequest);
                 ManageInfo.allRequests.remove(currentRequest);
+            }
             ManageInfo.allRequests.add(request);
         }
         else if(object instanceof Sale)
         {
             Sale sale = (Sale) object;
             Sale currentSale = Sale.getSaleById(sale.getId());
-            if (currentSale != null)
+            if (currentSale != null) {
+                DBManager.deleteObject(sale);
                 ManageInfo.allSales.remove(currentSale);
+            }
             ManageInfo.allSales.add(sale);
         }
+        DBManager.saveObject(object);
     }
     public static <T>List<T> getObjectsByClassName(String className){
         if(className.equals("Manager"))

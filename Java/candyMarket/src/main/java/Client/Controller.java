@@ -5,7 +5,9 @@ import Client.DataHandler.ClientSocket;
 import Client.DataHandler.DataAccessor;
 import Client.DataHandler.JsonHandler;
 import Client.DataHandler.MessageHandler;
+import Client.Model.*;
 
+import javax.xml.crypto.Data;
 import java.io.IOException;
 
 public class Controller {

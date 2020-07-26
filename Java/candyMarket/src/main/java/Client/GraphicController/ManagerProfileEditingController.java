@@ -1,5 +1,6 @@
 package Client.GraphicController;
 
+import Client.Controller;
 import Client.Model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -62,6 +63,7 @@ public class ManagerProfileEditingController implements Initializable {
             user.setLastName(lastNameText);
             user.setEmail(emailText);
             user.setPhoneNumber(phoneNumberText);
+            Controller.saveOrUpdateObject(user);
         }
     }
 

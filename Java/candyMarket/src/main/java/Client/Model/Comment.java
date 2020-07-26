@@ -40,7 +40,7 @@ public class Comment {
         this.good = good.getName();
         this.brand = brand;
         this.situation = OpinionSituation.CONFIRMED;
-        this.parentComment = parentComment.getId();
+        if(parentComment!=null)this.parentComment = parentComment.getId();
         if (this.parentComment == -1) {
             leftInsect = 0;
             cmOrder = mainOrder++;

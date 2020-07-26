@@ -85,7 +85,7 @@ public class RegisterMenuController extends CustomBorderPaneMenus implements Ini
         }
         else {
             if(typeValue.equals("Seller")) {
-                new Request(Request.requestType.SELLER_REGISTER).createRegisterSellerRequest(new Seller(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText, companyName));
+                new Request(Request.type.SELLER_REGISTER).createRegisterSellerRequest(new Seller(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText, companyName));
             }
                 //new Seller(usernameText, firstNameText, lastNameText, emailText, phoneNumberText, passwordText,companyName);
             else

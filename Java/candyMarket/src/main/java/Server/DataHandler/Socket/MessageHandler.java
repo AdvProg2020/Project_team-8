@@ -1,6 +1,8 @@
 package Server.DataHandler.Socket;
 
 import Server.Model.ManageInfo;
+import Server.Model.User;
+import Server.Model.UserHandler;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -52,10 +54,52 @@ public class MessageHandler {
                     String className = inputs[2];
                     JsonHandler.sendAllData(className,clientSocket);
                 }
-                else if(input.startsWith("C.disconnected")) {
-                    ServerSocket.clientSockets.remove(clientSocket);
-                    System.out.println("disconnected" + clientSocket);
+                else if(input.startsWith("C.getLoginUsers")){
+                    String json = JsonHandler.gson.toJson(UserHandler.onlineUsers);
+                    DataOutputStream dos =new DataOutputStream(clientSocket.getOutputStream());
+                    dos.writeUTF("S.login#"+json);
+                    dos.flush();
                 }
+                else if(input.startsWith("C.login"))
+                {
+                    String[] inputs = input.split("#");
+                    String json = inputs[1];
+                    User user = JsonHandler.gson.fromJson(json,User.class);
+                    UserHandler.onlineUsers.add(user);
+                    sendUserLoginMessageToAllClients(clientSocket,json);
+                }
+                else if(input.startsWith("C.logout")) {
+                    String[] inputs = input.split("#");
+                    String json = inputs[1];
+                    User user = JsonHandler.gson.fromJson(json,User.class);
+                    user = UserHandler.getOnlineUserByUserName(user.getUsername());
+                    UserHandler.onlineUsers.remove(user);
+                    sendUserLogoutMessageToAllClients(clientSocket,json);
+                }
+                else if(input.startsWith("C.disconnected")){
+                    ServerSocket.clientSockets.remove(clientSocket);
+                    System.out.println(clientSocket+"disconnected");
+                }
+            }
+        }
+    }
+    public static void sendUserLoginMessageToAllClients(Socket senderClient,String json) throws IOException {
+        DataOutputStream dos = null;
+        for (Socket clientSocket : ServerSocket.clientSockets) {
+            if (clientSocket != senderClient) {
+                dos =new DataOutputStream(clientSocket.getOutputStream());
+                dos.writeUTF("S.login#"+json);
+                dos.flush();
+            }
+        }
+    }
+    public static void sendUserLogoutMessageToAllClients(Socket senderClient,String json) throws IOException {
+        DataOutputStream dos = null;
+        for (Socket clientSocket : ServerSocket.clientSockets) {
+            if (clientSocket != senderClient) {
+                dos =new DataOutputStream(clientSocket.getOutputStream());
+                dos.writeUTF("S.logout#"+json);
+                dos.flush();
             }
         }
     }
@@ -64,7 +108,7 @@ public class MessageHandler {
         for (Socket clientSocket : ServerSocket.clientSockets) {
             if (clientSocket != senderClient) {
                 dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.deleteDataById#"+id+"#from"+className);
+                dos.writeUTF("S.deleteDataById#"+id+"#from#"+className);
                 dos.flush();
             }
         }

@@ -110,9 +110,12 @@ public class Discount {
         return null;
     }
     public static Discount getDiscountByCode(String code) {
+        for (Discount discount : ManageInfo.allDiscounts) {
+            if(discount.getCode().equals(code))
+                return discount;
+        }
         return null;
     }
-
     public static Boolean isDiscountWithId(String id) {
         return null;
     }

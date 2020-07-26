@@ -28,7 +28,7 @@ public class ClientSocket {
         return true;
     }
     public static void disconnectFromServer() throws IOException {
-        MessageHandler.sendDisconnectMessage();
+        MessageHandler.sendDisconnectedMessage();
         listenToServerThread.stop();
         clientSocket.close();
     }
@@ -46,6 +46,7 @@ public class ClientSocket {
         ManageInfo.allScores = JsonHandler.getAllData(Score[].class);
         ManageInfo.allBuyLogs = JsonHandler.getAllData(BuyLog[].class);
         ManageInfo.allSellLogs = JsonHandler.getAllData(SellLog[].class);
+        UserHandler.onlineUsers = MessageHandler.getLoginUsers();
         ManageInfo.allUsers.addAll(ManageInfo.allBuyers);
         ManageInfo.allUsers.addAll(ManageInfo.allManagers);
         ManageInfo.allUsers.addAll(ManageInfo.allSellers);

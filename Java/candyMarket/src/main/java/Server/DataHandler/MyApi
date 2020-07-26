@@ -20,4 +20,5 @@ S.setData#to#{className}#{json}
 S.setData#to#{className}#{json}
 ...
 S.end
-
+S.userLogin#{User}
+C.userLogin#{User}

@@ -1,8 +1,14 @@
 package Server.Model;
 
+import Client.DataHandler.MessageHandler;
 import Client.GraphicController.BorderPaneController;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserHandler {
+        public static List<User> onlineUsers = new ArrayList<>();
         public static User getCurrentUser() {
                 return currentUser;
         }
@@ -30,6 +36,12 @@ public class UserHandler {
         public static void loggingIn(String userName) {
                 User user = User.getUserByUsername(userName);
                 currentUser = user;
+                try {
+                        MessageHandler.sendLoginMessage();
+                } catch (IOException e) {
+                        e.printStackTrace();
+                }
+                onlineUsers.add(user);
                 switch (currentUser.getType()) {
                         case BUYER:
                                 currentBuyer = (Buyer)user;
@@ -49,8 +61,20 @@ public class UserHandler {
                                 break;
                 }
         }
-
+        public static User getOnlineUserByUserName(String username){
+                for (User onlineUser : onlineUsers) {
+                        if(onlineUser.username.equals(username))
+                                return onlineUser;
+                }
+                return null;
+        }
         public static void loggingOut() {
+                try {
+                        MessageHandler.sendLogoutMessage();
+                } catch (IOException e) {
+                        e.printStackTrace();
+                }
+                onlineUsers.remove(currentUser);
                 currentUser = null;
                 currentManager = null;
                 currentBuyer = null;

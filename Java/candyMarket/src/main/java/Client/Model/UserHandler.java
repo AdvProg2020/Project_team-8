@@ -1,8 +1,14 @@
 package Client.Model;
 
+import Client.DataHandler.MessageHandler;
 import Client.GraphicController.BorderPaneController;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserHandler {
+        public static List<User> onlineUsers = new ArrayList<>();
         public static User getCurrentUser() {
                 return currentUser;
         }
@@ -11,7 +17,6 @@ public class UserHandler {
                 UserHandler.currentUser = currentUser;
                 BorderPaneController.borderPaneController.currentUserName = currentUser.getUsername();
         }
-
         private static User currentUser;
         public static Cart currentCart;
         public static Buyer currentBuyer;
@@ -34,6 +39,12 @@ public class UserHandler {
         public static void loggingIn(String userName) {
                 User user = User.getUserByUsername(userName);
                 currentUser = user;
+                try {
+                        MessageHandler.sendLoginMessage();
+                } catch (IOException e) {
+                        e.printStackTrace();
+                }
+                onlineUsers.add(user);
                 switch (currentUser.getType()) {
                         case BUYER:
                                 currentBuyer = (Buyer)user;
@@ -45,7 +56,7 @@ public class UserHandler {
                                 break;
                         case MANAGER:
                                 currentManager = (Manager)user;
-                                Manager.currentManager = currentManager;
+                                currentManager = currentManager;
                                 break;
                         case SUPPORTER:
                                 currentSupporter = (Supporter)user;
@@ -55,6 +66,12 @@ public class UserHandler {
         }
 
         public static void loggingOut() {
+                try {
+                        MessageHandler.sendLogoutMessage();
+                } catch (IOException e) {
+                        e.printStackTrace();
+                }
+                onlineUsers.remove(currentUser);
                 currentUser = null;
                 currentManager = null;
                 currentBuyer = null;
@@ -64,5 +81,12 @@ public class UserHandler {
                 Buyer.currentBuyer = null;
                 Manager.currentManager = null;
                 Supporter.currentSupporter = null;
+        }
+        public static User getOnlineUserByUserName(String username){
+                for (User onlineUser : onlineUsers) {
+                        if(onlineUser.username.equals(username))
+                                return onlineUser;
+                }
+                return null;
         }
 }
