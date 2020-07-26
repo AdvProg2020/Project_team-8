@@ -6,13 +6,18 @@ import BothUtl.PathHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -25,6 +30,11 @@ public class GoodAttributesEditor implements Initializable {
     public ImageView goodImg;
     public ScrollPane propertiesScrollPane;
     private Good good;
+
+    File movie = null;
+    @FXML private Label fileLabel;
+    @FXML private Pane movieBox;
+    @FXML private MediaView mv;
 
     @FXML private TextField nameField;
     @FXML private TextField brandField;
@@ -83,10 +93,10 @@ public class GoodAttributesEditor implements Initializable {
                 errorMessage.setStyle("-fx-background-color: #00ff00;");
                 errorMessage.setText("Update Request has been sent");
                 if (good == null) {
-                    good = new Good(nameText, brandText, priceText, UserHandler.currentSeller, stockText, categoryValue, detailText, photoUrl,getProperties());
+                    good = new Good(nameText, brandText, priceText, UserHandler.currentSeller, stockText, categoryValue, detailText, photoUrl, movie.getPath(),getProperties());
                     new Request(Request.requestType.CREATE_GOOD).createAddProductRequest(good);
                 } else {
-                    new Request(Request.requestType.EDIT_GOOD).createEditProductRequest(new Good(good.getName(), brandText, priceText, good.getSeller(), stockText, categoryValue, detailText, photoUrl,getProperties()));
+                    new Request(Request.requestType.EDIT_GOOD).createEditProductRequest(new Good(good.getName(), brandText, priceText, good.getSeller(), stockText, categoryValue, detailText, photoUrl, movie.getPath(), getProperties()));
                 }
                 Functions.showDialog("your request has been sent",false);
                 SellerProductHandlingController.sellerProductHandlingController.initialize(null,null);
@@ -158,5 +168,38 @@ public class GoodAttributesEditor implements Initializable {
             properties.add(categoryPropertiesBox);
         }
         propertiesScrollPane.setContent(vBox);
+    }
+
+    public void chooseMovie(ActionEvent actionEvent) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(new File("C:\\"));
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Movies", "*.mp4", "*.mkv"));
+        movie = fileChooser.showOpenDialog(null);
+        if (movie != null) {
+            fileLabel.setText("File selected: " + movie.getName());
+            Media m = new Media(movie.toURI().toString());
+            MediaPlayer mp = new MediaPlayer(m);
+            mv = new MediaView(mp);
+            var ref = new Object() {
+                boolean playing = false;
+            };
+            mv.setOnMouseClicked(e -> {
+                if (!ref.playing) {
+                    mp.play();
+                    ref.playing = true;
+                }
+                else {
+                    mp.pause();
+                    ref.playing = false;
+                }
+            });
+            movieBox.setMaxWidth(275);
+            movieBox.setMaxHeight(170);
+            movieBox.getChildren().removeAll();
+            movieBox.getChildren().add(mv);
+        }
+        else {
+            fileLabel.setText("File selection cancelled.");
+        }
     }
 }

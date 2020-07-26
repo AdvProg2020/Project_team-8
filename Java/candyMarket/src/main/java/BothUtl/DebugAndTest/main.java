@@ -26,7 +26,7 @@ public class main {
         Seller seller = new Seller("Arash","a","a","a","234","456","sttt");
         ManageInfo.allUsers.add(seller);
         ManageInfo.allSellers.add(seller);
-        Good good = new Good("Shalvar","dash st",12,seller,90,category,"fdsds",null,strings);
+        Good good = new Good("Shalvar","dash st",12,seller,90,category,"fdsds",null,null,strings);
         ManageInfo.allGoods.add(good);
     }
     private static <T>List<T> getObjectsByClassName(){

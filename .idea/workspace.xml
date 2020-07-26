@@ -20,7 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/DebugAndTest/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/DebugAndTest/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/PathHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/PathHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AddNewFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AddNewFileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodAttributesEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodAttributesEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/GoodEditing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/GoodEditing.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/GoodMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/GoodMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/FileGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/FileGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/GoodAttributesEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/GoodAttributesEditor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Supporter.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +80,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3321839" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -108,13 +121,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataBase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataBase" />
-      <module name="ApProject_OnlineShop" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DataBaseHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.DataHandler.DataBaseHandler" />
       <module name="ApProject_OnlineShop" />
@@ -138,6 +144,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client.Main" />
+      <module name="ApProject_OnlineShop" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client.Main" />
+      <module name="ApProject_OnlineShop" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.main" />
       <module name="ApProject_OnlineShop" />
@@ -152,7 +186,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DataBase" />
       <item itemvalue="Application.DataBase (1)" />
       <item itemvalue="Application.DataBaseHandler" />
       <item itemvalue="Application.Main" />
@@ -161,10 +194,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.DataBaseHandler" />
-        <item itemvalue="Application.DataBase (1)" />
-        <item itemvalue="Application.DataBase" />
         <item itemvalue="Application.main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.DataBaseHandler" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +254,8 @@
       <workItem from="1594997712858" duration="17772000" />
       <workItem from="1595163215521" duration="17084000" />
       <workItem from="1595339359501" duration="10619000" />
-      <workItem from="1595589419157" duration="685000" />
+      <workItem from="1595589419157" duration="6811000" />
+      <workItem from="1595769666784" duration="9734000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -503,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595454331430</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add Supporter Chatting system">
+      <created>1595592299011</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1595592299011</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,11 +597,15 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="0" key="#Inspections/0.0.1280.683@0.0.1280.683" timestamp="1595175785603" />
-    <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1593176867518">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1595594201477">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="360" y="0" width="578" height="680" key="#Main/0.0.1280.680@0.0.1280.680" timestamp="1593176867518" />
-    <state x="360" y="0" width="575" height="683" key="#Main/0.0.1280.683@0.0.1280.683" timestamp="1593109668622" />
+    <state x="360" y="0" width="575" height="683" key="#Main/0.0.1280.683@0.0.1280.683" timestamp="1595594201477" />
+    <state x="360" y="11" width="759" height="660" key="#Main_(1)" timestamp="1595777472974">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="360" y="11" width="759" height="660" key="#Main_(1)/0.0.1280.683@0.0.1280.683" timestamp="1595777472974" />
     <state x="233" y="0" key="#Notifications" timestamp="1595454372708">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -574,19 +619,20 @@
     </state>
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594724275130" />
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.683@0.0.1280.683" timestamp="1595019519967" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594921837140">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595784403075">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593777397286" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1594921837140" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1595784403075" />
     <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594725069925">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1594725069925" />
-    <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1593093420947">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1595784393888">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1593093420947" />
+    <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.683@0.0.1280.683" timestamp="1595784393888" />
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1595185415889">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -596,10 +642,11 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1593088346109">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1595594010081">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.680@0.0.1280.680" timestamp="1593088346109" />
+    <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.683@0.0.1280.683" timestamp="1595594010081" />
     <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594726044167">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -616,11 +663,15 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593086131481" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595592288108">
+    <state x="360" y="11" key="#main" timestamp="1595777182090">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="360" y="11" key="#main/0.0.1280.683@0.0.1280.683" timestamp="1595777182090" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595592296765">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595592288108" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595592296765" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -630,26 +681,26 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594662630612" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1595165814337" />
-    <state width="1237" height="124" key="GridCell.Tab.0.bottom" timestamp="1595465456481">
+    <state width="1237" height="124" key="GridCell.Tab.0.bottom" timestamp="1595787270525">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595465456481" />
-    <state width="1237" height="124" key="GridCell.Tab.0.center" timestamp="1595465456481">
+    <state width="1237" height="124" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595787270525" />
+    <state width="1237" height="124" key="GridCell.Tab.0.center" timestamp="1595787270525">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595465456481" />
-    <state width="1237" height="124" key="GridCell.Tab.0.left" timestamp="1595465456481">
+    <state width="1237" height="124" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595787270525" />
+    <state width="1237" height="124" key="GridCell.Tab.0.left" timestamp="1595787270524">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595465456481" />
-    <state width="1237" height="124" key="GridCell.Tab.0.right" timestamp="1595465456481">
+    <state width="1237" height="124" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595787270524" />
+    <state width="1237" height="124" key="GridCell.Tab.0.right" timestamp="1595787270525">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595465456481" />
+    <state width="1237" height="124" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595787270525" />
     <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1593781945489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -680,20 +731,20 @@
     </state>
     <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046263" />
     <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595164879212" />
-    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1595164882962">
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1595592318973">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046273" />
-    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595164882962" />
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595592318973" />
     <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="314" y="39" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1593041148078" />
-    <state x="215" y="0" width="1038" height="680" key="SettingsEditor" timestamp="1594825504420">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="121" y="0" width="1038" height="680" key="SettingsEditor" timestamp="1595783672822">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="215" y="0" width="1038" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594825504420" />
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1592076197171" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1595783672821" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1595465442728">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -715,11 +766,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="647" height="347" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1593125982030" />
-    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1595589446474">
+    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1595769666524">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
-    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1595589446474" />
+    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1595769666524" />
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593041894737">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -728,11 +779,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="595" y="51" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1594824385210" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595592266208">
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595592306543">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595592266208" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595592306543" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
