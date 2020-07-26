@@ -65,6 +65,10 @@ public class DataAccessor {
             DBManager.deleteObject(SellLog.getSellLogById(Integer.parseInt(id)));
             ManageInfo.allSellLogs.remove(SellLog.getSellLogById(Integer.parseInt(id)));
         }
+        if(className.equals("Chat")) {
+            DBManager.deleteObject(Chat.getChatById(Integer.parseInt(id)));
+            ManageInfo.allChats.remove(Chat.getChatById(Integer.parseInt(id)));
+        }
     }
     public static void updateOrSaveObject(Object object){
         if(object instanceof Good)
@@ -196,6 +200,16 @@ public class DataAccessor {
             }
             ManageInfo.allSales.add(sale);
         }
+        else if(object instanceof Chat)
+        {
+            Chat chat = (Chat) object;
+            Chat currentChat = Chat.getChatById(chat.getId());
+            if (currentChat != null) {
+                DBManager.deleteObject(chat);
+                ManageInfo.allChats.remove(currentChat);
+            }
+            ManageInfo.allChats.add(chat);
+        }
         DBManager.saveObject(object);
     }
     public static <T>List<T> getObjectsByClassName(String className){
@@ -227,6 +241,8 @@ public class DataAccessor {
             return (List<T>) ManageInfo.allSales;
         else if(className.equals("Score"))
             return (List<T>) ManageInfo.allScores;
+        else if(className.equals("Chat"))
+            return (List<T>) ManageInfo.allChats;
         else return null;
     }
     public static Object sendObject(String name,String id){
@@ -281,6 +297,10 @@ public class DataAccessor {
         else if(name.equals("Request")){
             Request request = Request.getRequestById(Integer.parseInt(id));
             return request;
+        }
+        else if(name.equals("Chat")){
+            Chat chat = Chat.getChatById(Integer.parseInt(id));
+            return chat;
         }
         return null;
     }

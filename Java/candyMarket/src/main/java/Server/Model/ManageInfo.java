@@ -1,7 +1,7 @@
 package Server.Model;
 
-import Client.Model.Chat;
-import Client.Model.FileGood;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
