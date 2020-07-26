@@ -46,6 +46,7 @@ public class ClientSocket {
         ManageInfo.allScores = JsonHandler.getAllData(Score[].class);
         ManageInfo.allBuyLogs = JsonHandler.getAllData(BuyLog[].class);
         ManageInfo.allSellLogs = JsonHandler.getAllData(SellLog[].class);
+        ManageInfo.allChats = JsonHandler.getAllData(Chat[].class);
         UserHandler.onlineUsers = MessageHandler.getLoginUsers();
         ManageInfo.allUsers.addAll(ManageInfo.allBuyers);
         ManageInfo.allUsers.addAll(ManageInfo.allManagers);

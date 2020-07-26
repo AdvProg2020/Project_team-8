@@ -38,6 +38,8 @@ public class DataAccessor {
             ManageInfo.allBuyLogs.remove(BuyLog.getBuyLogById(Integer.parseInt(id)));
         if(className.equals("SellLog"))
             ManageInfo.allSellLogs.remove(SellLog.getSellLogById(Integer.parseInt(id)));
+        if(className.equals("Chat"))
+            ManageInfo.allChats.remove(Chat.getChatById(Integer.parseInt(id)));
     }
     public static void updateOrSaveObject(Object object){
         if(object instanceof Good)
@@ -147,6 +149,13 @@ public class DataAccessor {
                 ManageInfo.allSales.remove(currentSale);
             ManageInfo.allSales.add(sale);
         }
+        else if(object instanceof Chat){
+            Chat chat = (Chat) object;
+            Chat currentChat = Chat.getChatById(chat.getId());
+            if(currentChat!=null)
+                ManageInfo.allChats.remove(currentChat);
+            ManageInfo.allChats.add(chat);
+        }
     }
     public static Object sendObject(String name,String id){
         if(name.equals("Manager")){
@@ -200,6 +209,10 @@ public class DataAccessor {
         else if(name.equals("Request")){
             Request request = Request.getRequestById(Integer.parseInt(id));
             return request;
+        }
+        else if(name.equals("Chat")){
+            Chat chat = Chat.getChatById(Integer.parseInt(id));
+            return chat;
         }
         return null;
     }

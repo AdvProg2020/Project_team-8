@@ -1,4 +1,6 @@
-package Client.Model;
+package Server.Model;
+
+
 
 import Client.Controller;
 
@@ -31,8 +33,8 @@ public class Chat {
         return supporter;
     }
 
-    public List<String> getTexts() {
-        return texts;
+    public ArrayList<String> getTexts() {
+        return (ArrayList<String>) texts;
     }
 
     public void addText(String sender, String text) {
@@ -40,7 +42,6 @@ public class Chat {
             texts.add("b" + text);
         if (sender.equals(supporter))
             texts.add("s" + text);
-        Controller.saveOrUpdateObject(this);
     }
 
     public static Chat getChatByBuyerSupporter(String buyer, String supporter) {

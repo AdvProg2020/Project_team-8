@@ -39,12 +39,12 @@ public class DBHandler {
         ManageInfo.allUsers.addAll(users);
         List<Supporter> supporters = DBManager.loadAllData(Supporter.class);
         ManageInfo.allSupporters.addAll(supporters);
+        ManageInfo.allChats = DBManager.loadAllData(Chat.class);
     }
 
     public static void main(String[] args) {
         //setBuyerDataTest();
         getDataTest();
-
     }
     public static void getDataTest(){
         loadData();
