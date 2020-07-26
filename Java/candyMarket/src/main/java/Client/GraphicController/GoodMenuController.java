@@ -5,12 +5,19 @@ import Client.Model.Comment;
 import BothUtl.PathHandler;
 import Client.Model.Cart;
 import Client.Model.Good;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
@@ -41,13 +48,35 @@ public class GoodMenuController implements Initializable {
         createSummaryProperties();
     }
     private void createSummaryProperties(){
+        ScrollPane scrollPane = new ScrollPane();
+        final DoubleProperty zoomProperty = new SimpleDoubleProperty(200);
         Image image = new Image(String.valueOf(new File(PathHandler.withoutImageUrl)));
         if (good.hasImage())
             image = new Image(good.getImage());
         ImageView imageView = new ImageView();
-        imageView.setFitWidth(100);
-        imageView.setFitHeight(100);
+        zoomProperty.addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable arg0) {
+                imageView.setFitWidth(zoomProperty.get() * 4);
+                imageView.setFitHeight(zoomProperty.get() * 3);
+            }
+        });
+        scrollPane.addEventFilter(ScrollEvent.ANY, new EventHandler<ScrollEvent>() {
+            @Override
+            public void handle(ScrollEvent event) {
+                if (event.getDeltaY() > 0) {
+                    zoomProperty.set(zoomProperty.get() * 1.1);
+                } else if (event.getDeltaY() < 0) {
+                    zoomProperty.set(zoomProperty.get() / 1.1);
+                }
+            }
+        });
         imageView.setImage(image);
+        imageView.preserveRatioProperty().set(true);
+        scrollPane.setContent(imageView);
+        scrollPane.setMinWidth(100);
+        scrollPane.setMaxWidth(250);
+        scrollPane.setMinHeight(150);
         Media media;
         if (good.hasMovie()) {
             media = new Media(new File(good.getMovie()).toURI().toString());
@@ -81,7 +110,7 @@ public class GoodMenuController implements Initializable {
         scoreLbl.setFont(Font.font ("Verdana", 20));
         stockLbl.setFont(Font.font ("Verdana", 20));
         sellerNameLbl.setFont(Font.font ("Verdana", 20));
-        summaryGoodPropertiesVBox.getChildren().addAll(imageView,nameLbl,priceLbl,scoreLbl,stockLbl,sellerNameLbl);
+        summaryGoodPropertiesVBox.getChildren().addAll(scrollPane,nameLbl,priceLbl,scoreLbl,stockLbl,sellerNameLbl);
     }
     private void createSpecialProperties(){
         for (String s:

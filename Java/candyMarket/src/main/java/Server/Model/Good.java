@@ -78,9 +78,10 @@ public class Good {
     @ElementCollection
     private List<Integer> comments;
     private String image;
+    private String movie;
     private long dateCreated;
     public Good(){}
-    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image, List<String> specialAttributes) {
+    public Good(String name, String brand, int price, Seller seller, int stock, Category category, String detailInfo, String image, String movie, List<String> specialAttributes) {
         this.specialAttributes = specialAttributes;
         this.name = name;
         this.brand = brand;
@@ -97,6 +98,7 @@ public class Good {
         this.comments = new ArrayList<>();
         this.scores = new ArrayList<>();
         if (image!= null) this.image = image;
+        if (movie!= null) this.movie = movie;
         this.dateCreated = System.currentTimeMillis();
     }
 
@@ -152,6 +154,19 @@ public class Good {
             return true;
         return false;
     }
+
+    public boolean hasMovie() {
+        return movie != null;
+    }
+
+    public String getMovie() {
+        return movie;
+    }
+
+    public void setMovie(String movie) {
+        this.movie = movie;
+    }
+
     public ItemCreationSituation getSituation() {
         return situation;
     }

@@ -94,9 +94,9 @@ public class GoodAttributesEditor implements Initializable {
                 errorMessage.setText("Update Request has been sent");
                 if (good == null) {
                     good = new Good(nameText, brandText, priceText, UserHandler.currentSeller, stockText, categoryValue, detailText, photoUrl, movie.getPath(),getProperties());
-                    new Request(Request.requestType.CREATE_GOOD).createAddProductRequest(good);
+                    new Request(Request.type.CREATE_GOOD).createAddProductRequest(good);
                 } else {
-                    new Request(Request.requestType.EDIT_GOOD).createEditProductRequest(new Good(good.getName(), brandText, priceText, good.getSeller(), stockText, categoryValue, detailText, photoUrl, movie.getPath(), getProperties()));
+                    new Request(Request.type.EDIT_GOOD).createEditProductRequest(new Good(good.getName(), brandText, priceText, good.getSeller(), stockText, categoryValue, detailText, photoUrl, movie.getPath(), getProperties()));
                 }
                 Functions.showDialog("your request has been sent",false);
                 SellerProductHandlingController.sellerProductHandlingController.initialize(null,null);

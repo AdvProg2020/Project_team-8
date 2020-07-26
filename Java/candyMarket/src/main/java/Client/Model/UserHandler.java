@@ -56,7 +56,7 @@ public class UserHandler {
                                 break;
                         case MANAGER:
                                 currentManager = (Manager)user;
-                                currentManager = currentManager;
+                                Manager.currentManager = currentManager;
                                 break;
                         case SUPPORTER:
                                 currentSupporter = (Supporter)user;
