@@ -1,5 +1,7 @@
 package Client.Model;
 
+import Client.Controller;
+import Client.DataHandler.DataAccessor;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.ElementCollection;
@@ -96,13 +98,11 @@ public class Good {
         this.dateModified = System.currentTimeMillis();
         this.buyers = new ArrayList<>();
         this.comments = new ArrayList<>();
-        this.specialAttributes = new ArrayList<>();
         this.scores = new ArrayList<>();
         if (image!= null) this.image = image;
         if (movie != null) this.movie = movie;
         this.dateCreated = System.currentTimeMillis();
     }
-
 
     public List<Buyer> getBuyers() {
         List<Buyer> orginalBuyers = new ArrayList<>();
@@ -288,7 +288,7 @@ public class Good {
     public static void removeProduct(Good toNeRemovedGood) {
         for (Good good : ManageInfo.allGoods) {
             if (toNeRemovedGood.equals(good)) {
-                ManageInfo.allGoods.remove(toNeRemovedGood);
+                Controller.deleteObject("Good",good.getName());
             }
         }
     }
