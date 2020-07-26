@@ -1,9 +1,11 @@
 package Client.GraphicController;
 
+import Client.Controller;
 import Client.Model.Discount;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Control;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -54,6 +56,7 @@ public class DiscountCodeDetailsController implements Initializable {
             discount.setPercentReduction(percentageText);
             discount.setMaxReductionAmount(maxText);
             discount.setUsageNumber(usageText);
+            Controller.saveOrUpdateObject(discount);
         }catch(Exception e){
             errorMessage.setStyle("-fx-background-color: #ff0000;");
             errorMessage.setText("enter a valid number");

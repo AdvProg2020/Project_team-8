@@ -1,5 +1,6 @@
 package Client.GraphicController;
 
+import Client.Controller;
 import Client.GraphicView.MenuHandler;
 import Client.Model.Category;
 import javafx.fxml.Initializable;
@@ -57,8 +58,9 @@ public class CategoryAddPropertiesController implements Initializable {
     public void confirmBtnOnClick(MouseEvent mouseEvent) {
         if(CategoryManagingController.categoryManagingController.isEditMode()){
             Functions.showDialog(" category edited successfully", false);
-            CategoryManagingController.categoryManagingController.getTableView().getSelectionModel().getSelectedItem()
-                    .setSpecialAttributes(properties);
+            Category category = CategoryManagingController.categoryManagingController.getTableView().getSelectionModel().getSelectedItem();
+            category.setSpecialAttributes(properties);
+            Controller.saveOrUpdateObject(category);
         }else {
             Functions.showDialog(" category added successfully", false);
             new Category(CategoryManagingController.categoryManagingController.getCategoryName(), properties);

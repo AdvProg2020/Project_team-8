@@ -95,7 +95,6 @@ public class Good {
         this.dateModified = System.currentTimeMillis();
         this.buyers = new ArrayList<>();
         this.comments = new ArrayList<>();
-        this.specialAttributes = new ArrayList<>();
         this.scores = new ArrayList<>();
         if (image!= null) this.image = image;
         this.dateCreated = System.currentTimeMillis();

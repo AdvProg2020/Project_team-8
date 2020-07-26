@@ -1,6 +1,8 @@
 package Client.Model;
 
 import BothUtl.PathHandler;
+import Client.Controller;
+import Client.DataHandler.DataAccessor;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
@@ -177,6 +179,11 @@ public class User  {
                 break;
         }
     }
+    public boolean isOnline(){
+        if(UserHandler.onlineUsers.contains(this))
+            return true;
+        return false;
+    }
     public boolean isManager(){
         return type == UserType.MANAGER;
     }
@@ -190,6 +197,12 @@ public class User  {
         return type == UserType.SUPPORTER;
     }
     public static void deleteUser(User user) {
-        ManageInfo.allUsers.remove(user);
+        if(user instanceof Seller)
+        Controller.deleteObject("Seller",user.getUsername());
+        else if(user instanceof Buyer)
+            Controller.deleteObject("Buyer",user.getUsername());
+        else if(user instanceof Manager)
+            Controller.deleteObject("Manager",user.getUsername());
+        else Controller.deleteObject("Supporter",user.getUsername());
     }
 }

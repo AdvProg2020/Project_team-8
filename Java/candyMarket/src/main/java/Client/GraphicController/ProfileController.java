@@ -1,5 +1,6 @@
 package Client.GraphicController;
 
+import Client.Controller;
 import Client.GraphicView.MenuHandler;
 import BothUtl.PathHandler;
 import Client.Model.UserHandler;
@@ -77,6 +78,7 @@ public class ProfileController implements Initializable {
             UserHandler.getCurrentUser().setLastName(lastNameText);
             UserHandler.getCurrentUser().setEmail(emailText);
             UserHandler.getCurrentUser().setPhoneNumber(phoneNumberText);
+            Controller.saveOrUpdateObject(UserHandler.getCurrentUser());
         }
     }
 

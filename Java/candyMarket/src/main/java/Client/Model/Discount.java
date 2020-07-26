@@ -112,6 +112,10 @@ public class Discount {
         return null;
     }
     public static Discount getDiscountByCode(String code) {
+        for (Discount discount : ManageInfo.allDiscounts) {
+            if(discount.getCode().equals(code))
+                return discount;
+        }
         return null;
     }
 
@@ -120,6 +124,6 @@ public class Discount {
     }
 
     public static void removeCode(Discount code) {
-        ManageInfo.allDiscounts.remove(code);
+        Controller.deleteObject("Discount",code.getCode());
     }
 }

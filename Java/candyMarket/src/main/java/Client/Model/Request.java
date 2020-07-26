@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 public class Request {
-    public static enum requestType{
+    public static enum type{
         CREATE_GOOD,EDIT_GOOD,REMOVE_GOOD,SELLER_REGISTER,CREATE_SALE,EDIT_SALE
     }
     public static enum state {
@@ -18,7 +18,8 @@ public class Request {
     private String stateString;
     @Enumerated(EnumType.STRING)
     public state requestState;
-    public static requestType requestType;
+    @Enumerated(EnumType.STRING)
+    public type requestType;
     @ManyToOne
     private Good good;
     @ManyToOne
@@ -30,11 +31,10 @@ public class Request {
     private String requestCommand;
     public static List<Request> sellersRequest;
     public Request(){}
-    public Request(Request.requestType requestType) {
+    public Request(Request.type requestType) {
         this.requestState = state.CHECKING;
         this.requestType = requestType;
         this.requestId = ManageInfo.allRequests.size();
-        Controller.saveOrUpdateObject(this);
         this.stateString = "checking";
     }
 
@@ -65,6 +65,7 @@ public class Request {
     public void createRegisterSellerRequest(Seller seller) {
         this.seller = seller;
         this.requestCommand = "Register seller " + seller.getSellerCompanyName();
+        Controller.saveOrUpdateObject(this);
     }
 
     public String viewSellerRegisterDetails() {
@@ -79,16 +80,19 @@ public class Request {
     public void createAddProductRequest(Good good) {
         this.good = good;
         this.requestCommand = "Add product " + this.getGood().getName();
+        Controller.saveOrUpdateObject(this);
     }
 
     public void createEditProductRequest(Good good) {
-        this.good = this.good;
+        this.good = good;
         this.requestCommand = "Edit product " + this.getGood().getName();
+        Controller.saveOrUpdateObject(this);
     }
 
     public void createDeleteProductRequest(Good good) {
-        this.good = this.good;
+        this.good = good;
         this.requestCommand = "Delete product " + this.getGood().getName();
+        Controller.saveOrUpdateObject(this);
     }
 
     public String viewInfo() {
@@ -121,29 +125,49 @@ public class Request {
                         goodToBeRemoved = good;
                     }
                 }
-                DataAccessor.deleteDataById("Good",good.getName());
+                Controller.deleteObject("Good",good.getName());
                 goodToBeRemoved.getSeller().getGoods().add(this.getGood());
                 List<Good> goods = goodToBeRemoved.getSeller().getGoods();
                 goods.remove(goodToBeRemoved);
                 goodToBeRemoved.getSeller().setGoods(goods);
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Controller.saveOrUpdateObject(good);
+                Controller.saveOrUpdateObject(goodToBeRemoved.getSeller());
                 break;
             case REMOVE_GOOD:
-                DataAccessor.deleteDataById("Good",good.getName());
-                this.getGood().getSeller().getGoods().add(this.getGood());
+                Controller.deleteObject("Good",good.getName());
+                Seller seller = this.getGood().getSeller();
+                seller.getGoods().remove(this.getGood());
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Controller.saveOrUpdateObject(seller);
                 List<Good> products = this.getSeller().getGoods();
                 products.remove(this.getGood());
                 this.getGood().getSeller().setGoods(products);
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Controller.saveOrUpdateObject(good);
                 break;
         }
         this.requestState = state.ACCEPTED;
         stateString = "accepted";
+        Controller.saveOrUpdateObject(this);
     }
 
     public void declineRequest() {
         this.requestState = state.DECLINED;
         stateString = "declined";
+        Controller.saveOrUpdateObject(this);
     }
 
     public static List<Request> getUncheckedRequests() {
