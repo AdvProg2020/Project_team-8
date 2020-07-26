@@ -20,20 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/DebugAndTest/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/DebugAndTest/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/PathHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/PathHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AddNewFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AddNewFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodAttributesEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodAttributesEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/GoodEditing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/GoodEditing.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/GoodMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/GoodMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/FileGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/FileGood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Good.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/GoodAttributesEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/GoodAttributesEditor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Supporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/BothUtl/DebugAndTest/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/BothUtl/DebugAndTest/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/BothUtl/PathHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/BothUtl/PathHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AddNewFileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AddNewFileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/GoodMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/GoodMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/FileGood.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/FileGood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Good.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +248,7 @@
       <workItem from="1595163215521" duration="17084000" />
       <workItem from="1595339359501" duration="10619000" />
       <workItem from="1595589419157" duration="6811000" />
-      <workItem from="1595769666784" duration="9734000" />
+      <workItem from="1595769666784" duration="9979000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -544,7 +537,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595592299011</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="debug">
+      <created>1595789870213</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1595789870213</updated>
+    </task>
+    <task id="LOCAL-00043" summary="debug">
+      <created>1595789960765</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1595789960765</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +572,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update SellersMenu v2" />
     <MESSAGE value="finalize Register and Login Menus" />
     <MESSAGE value="finalize Register and Login Menus v2" />
     <MESSAGE value="finalize Register and Login Menus v3" />
@@ -590,7 +596,8 @@
     <MESSAGE value="add Supporter as a useless user" />
     <MESSAGE value="add file" />
     <MESSAGE value="add Supporter Chatting system" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Supporter Chatting system" />
+    <MESSAGE value="debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Inspections" timestamp="1595175785603">
@@ -667,11 +674,11 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="360" y="11" key="#main/0.0.1280.683@0.0.1280.683" timestamp="1595777182090" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595789868185">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595790068960">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595789868185" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595790068960" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
