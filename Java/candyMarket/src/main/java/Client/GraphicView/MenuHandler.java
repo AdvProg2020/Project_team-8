@@ -60,6 +60,7 @@ public class MenuHandler {
     public static Button viewProfileBtn;
     public static Button clientManagingBtn;
     public static Button productManagingBtn;
+    public static Button allLogsManagingBtn;
     public static Button discountManagingBtn;
     public static Button categoryManagingBtn;
     public static Button viewBuyerPersonalInfoBtn;
@@ -98,6 +99,7 @@ public class MenuHandler {
         goodsMenuBtn = new CustomButton("GoodsMenu","GoodsMenu");
         clientManagingBtn = new CustomButton("ClientManaging","ClientsProfileForManager");
         productManagingBtn = new CustomButton("ProductsManaging","ProductsManaging");
+        allLogsManagingBtn = new CustomButton("AllLogsManaging", "ManagerPurchasedManaging");
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
         discountManagingBtn = new CustomButton("DiscountManaging","DiscountCodeManaging");
         categoryManagingBtn = new CustomButton("CategoryManaging","CategoryManaging");

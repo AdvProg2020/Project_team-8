@@ -7,7 +7,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.ManagerPurchasedManagingController">
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.ManagerPurchasedManagingController">
    <children>
       <TableView fx:id="buyLogTableView" onMouseClicked="#serClickedOnTable" layoutX="65.0" layoutY="119.0" prefHeight="261.0" prefWidth="703.0">
          <columns>

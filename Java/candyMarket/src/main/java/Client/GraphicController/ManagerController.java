@@ -29,6 +29,7 @@ public class ManagerController extends PrimaryMenu {
         ArrayList<Button> buttons = new ArrayList<>();
         buttons.add(MenuHandler.viewProfileBtn);
         buttons.add(MenuHandler.clientManagingBtn);
+        buttons.add(MenuHandler.allLogsManagingBtn);
         buttons.add(MenuHandler.discountManagingBtn);
         buttons.add(MenuHandler.productManagingBtn);
         buttons.add(MenuHandler.categoryManagingBtn);
