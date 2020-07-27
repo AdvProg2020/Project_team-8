@@ -1,4 +1,4 @@
-package BankServer.src;
+package BankServer;
 
 public class Receipt {
     private String type;

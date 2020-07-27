@@ -1,4 +1,4 @@
-package BankServer.src;
+package BankServer;
 
 import org.json.*;
 import java.io.DataInputStream;

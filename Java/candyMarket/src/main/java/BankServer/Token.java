@@ -1,4 +1,4 @@
-package BankServer.src;
+package BankServer;
 
 import java.util.Random;
 
