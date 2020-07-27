@@ -35,28 +35,28 @@ public class PathHandler {
 
     static {
         try {
-            buttonClickMedia = new Media(new File(resourcePath+"\\Musics\\clickButton.mp3").toURI().toURL().toString());
+            buttonClickMedia = new Media(new File(resourcePath+"Musics\\clickButton.mp3").toURI().toURL().toString());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
     }
     static {
         try {
-             managerMenuMedia = new Media(new File(resourcePath+"\\Musics\\ManagerMenuMusic.mp3").toURI().toURL().toString());
+             managerMenuMedia = new Media(new File(resourcePath+"Musics\\ManagerMenuMusic.mp3").toURI().toURL().toString());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
     }
     static {
         try {
-            buyerMenuMedia = new Media(new File(resourcePath+"\\Musics\\BuyerMenuMusic.mp3").toURI().toURL().toString());
+            buyerMenuMedia = new Media(new File(resourcePath+"Musics\\BuyerMenuMusic.mp3").toURI().toURL().toString());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
     }
     static {
         try {
-            sellerMenuMedia = new Media(new File(resourcePath+"\\Musics\\SellerMenuMusic.mp3").toURI().toURL().toString());
+            sellerMenuMedia = new Media(new File(resourcePath+"Musics\\SellerMenuMusic.mp3").toURI().toURL().toString());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

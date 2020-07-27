@@ -2,6 +2,7 @@ package Client.GraphicView;
 
 import Client.GraphicController.ChatPageController;
 import Client.Model.User;
+import Client.Model.UserHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
 import javafx.scene.control.Label;
@@ -21,8 +22,11 @@ public class CustomProfileForChat extends HBox {
         circle = new Circle();
         username.setText(" " + user.getUsername());
         username.setFont(Font.font("System Bold", 18));
-        //if user online : circle green else gray
-        circle.setFill(Color.rgb(41, 203, 103));
+        circle.setFill(Color.GRAY);
+        for (User onlineUser : UserHandler.onlineUsers) {
+            if (user.getUsername().equals(onlineUser.getUsername()))
+                circle.setFill(Color.rgb(41, 203, 103));
+        }
         circle.setRadius(10);
         hBox1 = new HBox();
         hBox2 = new HBox();
@@ -43,7 +47,11 @@ public class CustomProfileForChat extends HBox {
         hBox1.setCursor(Cursor.HAND);
         hBox1.setOnMouseClicked((e) -> {
             ChatPageController.chatPageController.showWhoAmITalkingTo(this);
-            ChatPageController.chatPageController.setMessages(user);
+            try {
+                ChatPageController.chatPageController.setMessages(user);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
         });
         this.getChildren().addAll(hBox1, hBox2);
     }

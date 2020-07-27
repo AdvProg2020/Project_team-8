@@ -31,8 +31,8 @@ public class Chat {
         return supporter;
     }
 
-    public ArrayList<String> getTexts() {
-        return (ArrayList<String>) texts;
+    public List<String> getTexts() {
+        return texts;
     }
 
     public void addText(String sender, String text) {

@@ -69,9 +69,9 @@ public class DBHandler {
         DBManager.saveObject(category);
         Seller seller = new Seller("s","a","a","a","3","w","co");
         DBManager.saveObject(seller);
-        Good good = new Good("g","g",2,seller,2,category,"",null,at);
+        Good good = new Good("g","g",2,seller,2,category,"",null,null,at);
         DBManager.saveObject(good);
-        Good good2 = new Good("g2","g",2,seller,2,category,"",null,at);
+        Good good2 = new Good("g2","g",2,seller,2,category,"",null,null,at);
         DBManager.saveObject(good2);
         Buyer buyer1 = new Buyer("buyer1","a","a","b","c","d");
         HashMap<Good,Integer> goods = new HashMap<>();

@@ -29,6 +29,7 @@ public class ProfileController implements Initializable {
     @FXML private TextField lastName;
     @FXML private TextField email;
     @FXML private TextField phoneNumber;
+    @FXML private TextField typeLabel;
 
     @FXML private Label errorMessage;
 
@@ -41,6 +42,9 @@ public class ProfileController implements Initializable {
         lastName.setText(UserHandler.getCurrentUser().getLastName());
         email.setText(UserHandler.getCurrentUser().getEmail());
         phoneNumber.setText(UserHandler.getCurrentUser().getPhoneNumber());
+        typeLabel.setText(UserHandler.getCurrentUser().getType().toString());
+        username.setDisable(true);
+        typeLabel.setDisable(true);
         setProfileImg();
         errorMessage.setText("");
     }
