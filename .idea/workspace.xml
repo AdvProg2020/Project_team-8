@@ -20,33 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/FileGood.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Chat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/FileGood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/ClientSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/DBHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/HibernateConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/HibernateConfigs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/ManageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/ManageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket$ListenToServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket$ListenToServerThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/DataAccessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/DataAccessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/SellerProductHandlingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/META-INF/ApProject_OnlineShop.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/ManageInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User$UserType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_json_json_20151123.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BankServer/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BankServer/BankAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BankServer/BankServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BankServer/Receipt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BankServer/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/ChatPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/ChatPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodAttributesEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/GoodAttributesEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/CustomProfileForChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/CustomProfileForChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/Profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/FileGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/FileGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/ChatPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/ChatPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/GoodAttributesEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/GoodAttributesEditor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/ProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/CustomProfileForChat.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/CustomProfileForChat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Chat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/DBHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/DBHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/HibernateConfigs.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/HibernateConfigs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/DataAccessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/DataAccessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/ManageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/ManageInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/FileGood.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/FileGood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydb.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydb.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -634,7 +629,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finalize Register and Login Menus" />
     <MESSAGE value="finalize Register and Login Menus v2" />
     <MESSAGE value="finalize Register and Login Menus v3" />
     <MESSAGE value="finalize Register and Login Menus v4" />
@@ -659,7 +653,8 @@
     <MESSAGE value="add file" />
     <MESSAGE value="add Supporter Chatting system" />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="Merge branch 'Java' of https://github.com/AdvProg2020/Project_team-8 into Java&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Java/candyMarket/target/classes/Client/Model/Chat.class&#10;&#9;Java/candyMarket/target/classes/Server/DataHandler/DataBase/DBHandler.class&#10;&#9;mydb.db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'Java' of https://github.com/AdvProg2020/Project_team-8 into Java&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Java/candyMarket/target/classes/Client/Model/Chat.class&#10;&#9;Java/candyMarket/target/classes/Server/DataHandler/DataBase/DBHandler.class&#10;&#9;mydb.db" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Inspections" timestamp="1595175785603">
@@ -688,11 +683,11 @@
     </state>
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594724275130" />
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.683@0.0.1280.683" timestamp="1595019519967" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595791166190">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595859488489">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593777397286" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1595791166190" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1595859488489" />
     <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594725069925">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -702,11 +697,11 @@
     </state>
     <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1593093420947" />
     <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.683@0.0.1280.683" timestamp="1595784393888" />
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1595185415889">
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1595862896535">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1594839002015" />
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1595185415889" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1595862896535" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -736,60 +731,60 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="360" y="11" key="#main/0.0.1280.683@0.0.1280.683" timestamp="1595777182090" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595797312684">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595797351330">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595797312684" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595797351330" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="395" y="55" key="DetectedRootsChooserDialog/0.0.1280.683@0.0.1280.683" timestamp="1592071705791" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1595165814337">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1595859788758">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594662630612" />
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1595165814337" />
-    <state width="1237" height="124" key="GridCell.Tab.0.bottom" timestamp="1595797319498">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1595859788758" />
+    <state width="1237" height="124" key="GridCell.Tab.0.bottom" timestamp="1595866684703">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595797319498" />
-    <state width="1237" height="124" key="GridCell.Tab.0.center" timestamp="1595797319498">
+    <state width="1237" height="124" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595866684703" />
+    <state width="1237" height="124" key="GridCell.Tab.0.center" timestamp="1595866684702">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595797319498" />
-    <state width="1237" height="124" key="GridCell.Tab.0.left" timestamp="1595797319498">
+    <state width="1237" height="124" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595866684702" />
+    <state width="1237" height="124" key="GridCell.Tab.0.left" timestamp="1595866684702">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595797319498" />
-    <state width="1237" height="124" key="GridCell.Tab.0.right" timestamp="1595797319498">
+    <state width="1237" height="124" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595866684702" />
+    <state width="1237" height="124" key="GridCell.Tab.0.right" timestamp="1595866684703">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="124" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595797319498" />
-    <state width="1237" height="199" key="GridCell.Tab.1.bottom" timestamp="1595792814456">
+    <state width="1237" height="124" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595866684703" />
+    <state width="1237" height="199" key="GridCell.Tab.1.bottom" timestamp="1595864266551">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
-    <state width="1237" height="199" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595792814456" />
-    <state width="1237" height="199" key="GridCell.Tab.1.center" timestamp="1595792814456">
+    <state width="1237" height="199" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595864266551" />
+    <state width="1237" height="199" key="GridCell.Tab.1.center" timestamp="1595864266551">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
-    <state width="1237" height="199" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1595792814456" />
-    <state width="1237" height="199" key="GridCell.Tab.1.left" timestamp="1595792814456">
+    <state width="1237" height="199" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1595864266551" />
+    <state width="1237" height="199" key="GridCell.Tab.1.left" timestamp="1595864266551">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
-    <state width="1237" height="199" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1595792814456" />
-    <state width="1237" height="199" key="GridCell.Tab.1.right" timestamp="1595792814456">
+    <state width="1237" height="199" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1595864266551" />
+    <state width="1237" height="199" key="GridCell.Tab.1.right" timestamp="1595864266551">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
-    <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1595792814456" />
+    <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1595864266551" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1594921403463">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -809,11 +804,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="314" y="39" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1593041148078" />
-    <state x="121" y="0" width="1038" height="680" key="SettingsEditor" timestamp="1595783672822">
+    <state x="121" y="0" width="1038" height="680" key="SettingsEditor" timestamp="1595859895464">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="215" y="0" width="1038" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594825504420" />
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1595783672821" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1595859895464" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1595465442728">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -826,11 +821,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595454349990">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595797369672">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1595454349990" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1595797369672" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1593125982030">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -840,19 +835,20 @@
     </state>
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
     <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1595769666524" />
-    <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593041894737">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="375" y="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1595859887905">
+      <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1593041894737" />
+    <state x="375" y="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.683@0.0.1280.683" timestamp="1595859887905" />
     <state x="595" y="51" width="587" height="592" key="find.popup" timestamp="1594824385210">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="595" y="51" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1594824385210" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595796821716">
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595797361719">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595796821716" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595797361719" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

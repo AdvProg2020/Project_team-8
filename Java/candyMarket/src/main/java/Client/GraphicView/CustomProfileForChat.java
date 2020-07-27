@@ -24,7 +24,7 @@ public class CustomProfileForChat extends HBox {
         username.setFont(Font.font("System Bold", 18));
         circle.setFill(Color.GRAY);
         for (User onlineUser : UserHandler.onlineUsers) {
-            if (user == onlineUser)
+            if (user.getUsername().equals(onlineUser.getUsername()))
                 circle.setFill(Color.rgb(41, 203, 103));
         }
         circle.setRadius(10);
@@ -47,7 +47,11 @@ public class CustomProfileForChat extends HBox {
         hBox1.setCursor(Cursor.HAND);
         hBox1.setOnMouseClicked((e) -> {
             ChatPageController.chatPageController.showWhoAmITalkingTo(this);
-            ChatPageController.chatPageController.setMessages(user);
+            try {
+                ChatPageController.chatPageController.setMessages(user);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
         });
         this.getChildren().addAll(hBox1, hBox2);
     }
