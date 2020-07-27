@@ -1,11 +1,15 @@
 package Client.GraphicController;
 
+import Client.DataHandler.MessageHandler;
+import Client.DataHandler.WalletExceptions;
+import Client.Model.UserHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -22,8 +26,8 @@ public class IncreaseWalletMoneyController implements Initializable {
 
 
     public void paying(ActionEvent actionEvent) {
-        int accountNum;
-        int moneyAmount;
+        int accountNum = 0;
+        int moneyAmount = 0;
         boolean going = true;
         try {
             accountNum = Integer.parseInt(accNumField.getText());
@@ -42,6 +46,15 @@ public class IncreaseWalletMoneyController implements Initializable {
                 String username = usernameField.getText();
                 String password = passwordField.getText();
                 //...
+                try {
+                    MessageHandler.sendIncreaseWalletMessage(username,password,String.valueOf(moneyAmount),String.valueOf(accountNum));
+                    UserHandler.currentBuyer.setBalance(UserHandler.currentBuyer.getBalance()+moneyAmount);
+                    Functions.showDialog("successfully paid",false);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (WalletExceptions walletExceptions) {
+                    Functions.showDialog(walletExceptions.getMessage(),true);
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 package Client.GraphicController;
 
+import Client.Controller;
 import Client.GraphicView.MenuHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -46,6 +47,7 @@ public class PayController implements Initializable {
                         hasCode = true;
                         break;
                     }
+                    Controller.saveOrUpdateObject(discount);
                 }
             }
             if (!hasCode) {
@@ -97,6 +99,7 @@ public class PayController implements Initializable {
                 }
                 for (Good good : boughtGoods.keySet()) {
                     good.setStock(good.getStock() - boughtGoods.get(good));
+                    Controller.saveOrUpdateObject(good);
                 }
                 for (Good good : boughtGoods.keySet()) {
                     soldGoods.get(good.getSeller()).put(good, boughtGoods.get(good));
@@ -104,11 +107,12 @@ public class PayController implements Initializable {
                 BuyLog buyLog = new BuyLog(Cart.getTotalAmount(), Cart.getDiscountAmount(), boughtGoods,
                         UserHandler.currentBuyer.getUsername());
                 UserHandler.currentBuyer.addMyLogs(buyLog);
-
+                Controller.saveOrUpdateObject(UserHandler.currentBuyer);
                 for (Seller seller : soldGoods.keySet()) {
                     SellLog sellLog = new SellLog(countTotalAmount(soldGoods.get(seller)), Cart.getDiscountAmount(),
                             soldGoods.get(seller), UserHandler.currentBuyer.getUsername());
                     seller.addMySellLog(sellLog);
+                    Controller.saveOrUpdateObject(seller);
                 }
                 Cart.resetCart();
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

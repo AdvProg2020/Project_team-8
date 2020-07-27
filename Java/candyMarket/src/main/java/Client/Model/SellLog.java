@@ -60,8 +60,8 @@ public class SellLog{
         this.goods = goodsString;
         this.buyerName = buyerName;
         this.buySituation = CartSituation.ON_THE_WAY;
-        Controller.saveOrUpdateObject(this);
         this.id = ManageInfo.allBuyLogs.size();
+        Controller.saveOrUpdateObject(this);
     }
 
     public String getBuyerName() {

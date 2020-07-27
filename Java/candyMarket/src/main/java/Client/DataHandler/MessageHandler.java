@@ -85,6 +85,48 @@ public class MessageHandler {
         ClientSocket.dos.writeUTF("C.login#"+json);
         ClientSocket.dos.flush();
     }
+    public static void sendIncreaseWalletMessage(String username,String pass,String money,String accountNum) throws IOException,WalletExceptions {
+        if(UserHandler.token == null || UserHandler.endTimeToken<System.currentTimeMillis()){
+            ClientSocket.dos.writeUTF("C.Bank#"+"get_token "+username+" "+pass);
+            ClientSocket.dos.flush();
+            String response;
+            while (true){
+                response = ClientSocket.dis.readUTF();
+                if(response.startsWith("S.Bank"))
+                    break;
+            }
+            String inputs[] = response.split("#");
+            if(inputs[1].split(" ").length<=1){
+                UserHandler.token = inputs[1];
+                UserHandler.endTimeToken = System.currentTimeMillis()+1*3600*1000;
+            }else
+            throw new WalletExceptions(inputs[1]);
+            ClientSocket.dos.writeUTF("C.Bank#"+"create_receipt "+UserHandler.token+" withdraw "+money+" "+accountNum+" -1");
+            ClientSocket.dos.flush();
+            while (true){
+                response = ClientSocket.dis.readUTF();
+                if(response.startsWith("S.Bank"))
+                    break;
+            }
+            String receiptId;
+            inputs = response.split("#");
+            if(inputs[1].split(" ").length<=1){
+                receiptId = inputs[1];
+            }else
+                throw new WalletExceptions(inputs[1]);
+            ClientSocket.dos.writeUTF("C.Bank#"+"pay "+receiptId);
+            ClientSocket.dos.flush();
+            while (true){
+                response = ClientSocket.dis.readUTF();
+                if(response.startsWith("S.Bank"))
+                    break;
+            }
+            inputs = response.split("#");
+            if(!inputs[1].equals("done successfully"))
+                throw new WalletExceptions(inputs[1]);
+        }
+
+    }
     public static void getMessageListener() throws IOException, ClassNotFoundException, InterruptedException {
         List<String> serverChanges = new ArrayList<>();
         DataInputStream dis = null;
