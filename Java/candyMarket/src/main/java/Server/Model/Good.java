@@ -1,6 +1,5 @@
 package Server.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -20,7 +19,6 @@ public class Good {
     public void setDateModified(long dateModified) {
         this.dateModified = dateModified;
     }
-    @JsonIgnore
     public int getPriceAfterSale(){
         return (int) (price*(1-(double)salePercentageAmount/100));
     }

@@ -20,33 +20,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/FileGood.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Chat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/FileGood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/ClientSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/DBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/DBHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/HibernateConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/HibernateConfigs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/ManageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/ManageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket$ListenToServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket$ListenToServerThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/DataAccessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/DataAccessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/GraphicController/SellerProductHandlingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/META-INF/ApProject_OnlineShop.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Buyer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/ManageInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User$UserType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Model/UserHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_0_pr2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_0_pr2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_0_pr2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_facet_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_misc_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_search_engine_5_11_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_search_orm_5_11_5_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_search_orm_5_11_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jdeparser_jdeparser_2_0_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_2_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_processor_2_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_32_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_27_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/DebugAndTest/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BothUtl/DebugAndTest/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/JsonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/JsonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/JsonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/JsonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/FileGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/FileGood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/BothUtl/DebugAndTest/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/JsonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/JsonHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Chat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Good$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Good$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Good.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/User$UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/User$UserType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/DBHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/DBHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/HibernateConfigs.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/HibernateConfigs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/DataAccessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/DataAccessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/ManageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/ManageInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/JsonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/JsonHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/FileGood.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/FileGood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Good$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Good$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Good.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/User$UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/User$UserType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,18 +112,8 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Hibernate Maps" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\test\java\resources" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\test\java" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Server.DataHandler" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Hibernate Maps" />
@@ -118,6 +121,16 @@
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\resources" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\Server" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Server.DataHandler" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Hibernate Maps" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\test\java\resources" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\test\java" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -153,6 +166,20 @@
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ApProject_OnlineShop" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client.Main" />
+      <module name="ApProject_OnlineShop" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,7 +237,7 @@
         <item itemvalue="Application.main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.DataBaseHandler" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -269,6 +296,7 @@
       <workItem from="1595339359501" duration="10619000" />
       <workItem from="1595589419157" duration="6811000" />
       <workItem from="1595769666784" duration="16577000" />
+      <workItem from="1595855845234" duration="3436000" />
     </task>
     <task id="LOCAL-00003" summary="Finalize Registering (on View)">
       <created>1589670293131</created>
@@ -662,18 +690,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="debug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="0" key="#Inspections" timestamp="1595175785603">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="233" y="0" key="#Inspections" timestamp="1595858393157">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="233" y="0" key="#Inspections/0.0.1280.680@0.0.1280.680" timestamp="1595858393157" />
     <state x="233" y="0" key="#Inspections/0.0.1280.683@0.0.1280.683" timestamp="1595175785603" />
-    <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1595594201477">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1595859299273">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="360" y="0" width="578" height="680" key="#Main/0.0.1280.680@0.0.1280.680" timestamp="1593176867518" />
+    <state x="360" y="0" width="578" height="680" key="#Main/0.0.1280.680@0.0.1280.680" timestamp="1595859299273" />
     <state x="360" y="0" width="575" height="683" key="#Main/0.0.1280.683@0.0.1280.683" timestamp="1595594201477" />
-    <state x="360" y="11" width="759" height="660" key="#Main_(1)" timestamp="1595777472974">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="360" y="11" width="759" height="660" key="#Main_(1)" timestamp="1595858934908">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="360" y="11" key="#Main_(1)/0.0.1280.680@0.0.1280.680" timestamp="1595858934908" />
     <state x="360" y="11" width="759" height="660" key="#Main_(1)/0.0.1280.683@0.0.1280.683" timestamp="1595777472974" />
     <state x="233" y="0" key="#Notifications" timestamp="1595454372708">
       <screen x="0" y="0" width="1280" height="683" />
@@ -688,10 +718,10 @@
     </state>
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594724275130" />
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.683@0.0.1280.683" timestamp="1595019519967" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595791166190">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595859173041">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593777397286" />
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1595859173041" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1595791166190" />
     <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594725069925">
       <screen x="0" y="0" width="1280" height="680" />
@@ -750,25 +780,25 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594662630612" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1595165814337" />
-    <state width="1237" height="124" key="GridCell.Tab.0.bottom" timestamp="1595797319498">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1595859302896">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="108" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595859302896" />
     <state width="1237" height="124" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595797319498" />
-    <state width="1237" height="124" key="GridCell.Tab.0.center" timestamp="1595797319498">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1595859302896">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="108" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595859302896" />
     <state width="1237" height="124" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595797319498" />
-    <state width="1237" height="124" key="GridCell.Tab.0.left" timestamp="1595797319498">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1595859302896">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="108" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595859302896" />
     <state width="1237" height="124" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595797319498" />
-    <state width="1237" height="124" key="GridCell.Tab.0.right" timestamp="1595797319498">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1595859302896">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="108" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595859302896" />
     <state width="1237" height="124" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595797319498" />
     <state width="1237" height="199" key="GridCell.Tab.1.bottom" timestamp="1595792814456">
       <screen x="0" y="0" width="1280" height="683" />
@@ -790,10 +820,10 @@
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
     <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1595792814456" />
-    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1594921403463">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="99" y="0" key="Maven.ArtifactSearchDialog" timestamp="1595858628702">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="99" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1594823136195" />
+    <state x="99" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1595858628702" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1594921403463" />
     <state x="121" y="50" key="MergeDialog" timestamp="1595797278381">
       <screen x="0" y="0" width="1280" height="683" />
@@ -809,10 +839,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="314" y="39" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1593041148078" />
-    <state x="121" y="0" width="1038" height="680" key="SettingsEditor" timestamp="1595783672822">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="215" y="0" width="1038" height="680" key="SettingsEditor" timestamp="1595858947605">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="215" y="0" width="1038" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594825504420" />
+    <state x="215" y="0" width="1038" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1595858947605" />
     <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1595783672821" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1595465442728">
       <screen x="0" y="0" width="1280" height="683" />

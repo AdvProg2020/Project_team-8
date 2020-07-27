@@ -3,7 +3,6 @@ package Client.Model;
 import BothUtl.PathHandler;
 import Client.Controller;
 import Client.DataHandler.DataAccessor;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 import javax.persistence.*;
@@ -24,7 +23,6 @@ public class User  {
         BUYER, SELLER, MANAGER, SUPPORTER
     }
     @Transient
-    @JsonIgnore
     protected Cart cart = new Cart();
     @Id
     protected String username;
