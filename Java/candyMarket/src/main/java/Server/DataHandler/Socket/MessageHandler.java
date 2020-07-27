@@ -80,6 +80,13 @@ public class MessageHandler {
                     ServerSocket.clientSockets.remove(clientSocket);
                     System.out.println(clientSocket+"disconnected");
                 }
+                else if(input.startsWith("C.Bank")){
+                    String[] inputs = input.split("#");
+                    String response = BankClientSocket.sendMessage(inputs[1]);
+                    DataOutputStream dos =new DataOutputStream(clientSocket.getOutputStream());
+                    dos.writeUTF("S.Bank#"+response);
+                    dos.flush();
+                }
             }
         }
     }

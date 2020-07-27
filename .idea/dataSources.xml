@@ -33,5 +33,11 @@ C:/Users/My Tablet/Downloads/daneshga/Term 2/AP/Project/Phase 2/new5/Java/candyM
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:mydb.db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="mydb" uuid="229e356e-8d4d-4ad9-9c43-0c43efff19e9">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\My Tablet\Downloads\daneshga\Term 2\AP\Project\Phase 2\new5\mydb.db</jdbc-url>
+    </data-source>
   </component>
 </project>
