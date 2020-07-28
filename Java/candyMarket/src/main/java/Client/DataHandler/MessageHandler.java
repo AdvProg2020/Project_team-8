@@ -207,19 +207,6 @@ public class MessageHandler {
                     String id = inputs[1];
                     DataAccessor.deleteDataById(className,id);
                 }
-                else if(input.startsWith("S.login")){
-                    String[] inputs = input.split("#");
-                    String json = inputs[1];
-                    User user = JsonHandler.gson.fromJson(json, User.class);
-                    UserHandler.onlineUsers.remove(user);
-                }
-                else if(input.startsWith("S.logout")){
-                    String[] inputs = input.split("#");
-                    String json = inputs[1];
-                    User user = JsonHandler.gson.fromJson(json, User.class);
-                    user = UserHandler.getOnlineUserByUserName(user.getUsername());
-                    UserHandler.onlineUsers.add(user);
-                }
                 else if(input.startsWith("S.setData")){
                     String inputs[] = input.split("#");
                     String className = inputs[2];
