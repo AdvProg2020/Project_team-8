@@ -58,7 +58,12 @@ public class ScoreController implements Initializable {
 
     public void addScore(ActionEvent actionEvent) {
         Good good = goodTableView.getSelectionModel().getSelectedItem();
-        int score = Integer.parseInt(scoreField.getText());
-        UserHandler.currentBuyer.rate(good, score);
+        if (good == null) {
+            Functions.showDialog("select a row first", true);
+        } else {
+            int score = Integer.parseInt(scoreField.getText());
+            UserHandler.currentBuyer.rate(good, score);
+            Functions.showDialog("scored successfully", false);
+        }
     }
 }
