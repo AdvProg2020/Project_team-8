@@ -19,23 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/PayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/showBuyersOfGoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/showBuyersOfGoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/AuctionMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/AuctionMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/CustomAuctionBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/CustomAuctionBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/ShowBuyersOfGood.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/ShowBuyersOfGood.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/MessageHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AuctionMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AuctionMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/PayController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/showBuyersOfGoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/showBuyersOfGoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/CustomAuctionBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/CustomAuctionBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/MessageHandler.class" afterDir="false" />
-    </list>
+    <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -291,14 +275,7 @@
       <workItem from="1595589419157" duration="6811000" />
       <workItem from="1595769666784" duration="16577000" />
       <workItem from="1595872908887" duration="22404000" />
-      <workItem from="1595935059574" duration="16376000" />
-    </task>
-    <task id="LOCAL-00012" summary="fix a bug in personal info of Manager and Seller">
-      <created>1589796266407</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1589796266407</updated>
+      <workItem from="1595935059574" duration="16619000" />
     </task>
     <task id="LOCAL-00013" summary="show orders in BuyerMenu">
       <created>1589800507207</created>
@@ -636,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595968030342</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="debug">
+      <created>1595973945654</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1595973945654</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,11 +748,11 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="360" y="11" key="#main/0.0.1280.683@0.0.1280.683" timestamp="1595777182090" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595968027998">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595973942974">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595968027998" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595973942974" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -778,26 +762,26 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594662630612" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1595859788758" />
-    <state width="1237" height="121" key="GridCell.Tab.0.bottom" timestamp="1595973837701">
+    <state width="1237" height="121" key="GridCell.Tab.0.bottom" timestamp="1595973982417">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="121" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595973837701" />
-    <state width="1237" height="121" key="GridCell.Tab.0.center" timestamp="1595973837700">
+    <state width="1237" height="121" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595973982417" />
+    <state width="1237" height="121" key="GridCell.Tab.0.center" timestamp="1595973982417">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="121" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595973837700" />
-    <state width="1237" height="121" key="GridCell.Tab.0.left" timestamp="1595973837700">
+    <state width="1237" height="121" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595973982417" />
+    <state width="1237" height="121" key="GridCell.Tab.0.left" timestamp="1595973982416">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="121" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595973837700" />
-    <state width="1237" height="121" key="GridCell.Tab.0.right" timestamp="1595973837701">
+    <state width="1237" height="121" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595973982416" />
+    <state width="1237" height="121" key="GridCell.Tab.0.right" timestamp="1595973982417">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="121" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595973837701" />
+    <state width="1237" height="121" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595973982417" />
     <state width="1237" height="199" key="GridCell.Tab.1.bottom" timestamp="1595872702284">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -881,11 +865,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="595" y="51" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1594824385210" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595968037229">
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595973976993">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595968037229" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595973976993" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
