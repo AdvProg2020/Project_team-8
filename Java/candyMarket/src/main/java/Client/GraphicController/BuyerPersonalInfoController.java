@@ -24,12 +24,8 @@ public class BuyerPersonalInfoController implements Initializable {
     @FXML private TableColumn<Discount, Integer> maxAmountColumn;
     @FXML private TableColumn<Discount, Integer> usageTimeColumn;
 
-    @FXML private Label balance;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        balance.setText(Integer.toString(UserHandler.currentBuyer.getBalance()));
-
         codeColumn.setCellValueFactory(new PropertyValueFactory<Discount, Integer>("code"));
         initialDateColumn.setCellValueFactory(new PropertyValueFactory<Discount, LocalDate>("startDate"));
         endDateColumn.setCellValueFactory(new PropertyValueFactory<Discount, LocalDate>("endDate"));
@@ -47,9 +43,5 @@ public class BuyerPersonalInfoController implements Initializable {
         codes.addAll(UserHandler.currentBuyer.getMyDiscounts());
 
         return codes;
-    }
-
-    public void increaseBalance(ActionEvent actionEvent) {
-        MenuHandler.createStageWithScene("IncreaseWalletMoney");
     }
 }

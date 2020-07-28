@@ -4,6 +4,7 @@ import Client.GraphicView.MenuHandler;
 import BothUtl.PathHandler;
 import Client.GraphicView.PrimaryMenu;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 
@@ -31,6 +32,7 @@ public class BuyerController extends PrimaryMenu {
         buttons.add(MenuHandler.viewBuyerPersonalInfoBtn);
         buttons.add(MenuHandler.auctionsMenuBtn);
         buttons.add(MenuHandler.viewBuyerBuyLogBtn);
+        buttons.add(MenuHandler.bankAccountBtn);
         buttons.add(MenuHandler.backBtn);
         return buttons;
     }

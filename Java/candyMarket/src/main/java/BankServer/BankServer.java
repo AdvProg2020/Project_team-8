@@ -1,5 +1,6 @@
 package BankServer;
 
+import com.sun.javafx.iio.ios.IosDescriptor;
 import org.json.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -19,7 +20,13 @@ public class BankServer {
         while (true){
             DataInputStream dis = new DataInputStream(clientSocket.getInputStream());
             DataOutputStream dout = new DataOutputStream(clientSocket.getOutputStream());
-            String str = dis.readUTF();
+            String str;
+            try {
+                str = dis.readUTF();
+            }
+            catch (IOException e){
+                break;
+            }
             String[] inputs = str.split(" ");
             if(str.startsWith("create_account") && inputs.length == 6){
                 if(!inputs[4].equals(inputs[5])){

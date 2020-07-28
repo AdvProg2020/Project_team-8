@@ -41,6 +41,9 @@ public class ManagerPurchasedManagingController implements Initializable {
 
         situationChoiceBox.getItems().addAll(CartSituation.ON_THE_WAY, CartSituation.AT_DESTINATION);
 
+        karmozdField.setText(String.valueOf(ManageInfo.allManagers.get(0).getWage()));
+        minWalletField.setText(String.valueOf(ManageInfo.allManagers.get(0).getMinWalletMoney()));
+
         changeSituationBtn.setDisable(true);
         situationChoiceBox.setDisable(true);
     }
@@ -58,8 +61,9 @@ public class ManagerPurchasedManagingController implements Initializable {
             int minWalletMoney = Integer.parseInt(minWalletField.getText());
             if (karmozd < 0 || karmozd > 100 || minWalletMoney < 0)
                 throw new NumberFormatException();
-            Manager.karmozd = karmozd;
-            Manager.minWalletMoney = minWalletMoney;
+            ManageInfo.allManagers.get(0).setWage(karmozd);
+            ManageInfo.allManagers.get(0).setMinWalletMoney(minWalletMoney);
+            Controller.saveOrUpdateObject(ManageInfo.allManagers.get(0));
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setContentText("Successfully Changed");
             alert.show();

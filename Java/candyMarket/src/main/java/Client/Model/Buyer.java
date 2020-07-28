@@ -195,4 +195,5 @@ public class Buyer extends User {
     public String toString() {
         return username;
     }
+
 }

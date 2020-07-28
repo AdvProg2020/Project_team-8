@@ -12,12 +12,32 @@ import java.io.IOException;
 
 public class Controller {
     public static void saveOrUpdateObject(Object object)  {
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         DataAccessor.updateOrSaveObject(object);
         JsonHandler.setData(object);
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     public static void deleteObject(String className,String id)  {
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         DataAccessor.deleteDataById(className, id);
         MessageHandler.sendDeleteDataByIdMessage(id,className);
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     public static void connectToServer() throws IOException {
         while (true) {

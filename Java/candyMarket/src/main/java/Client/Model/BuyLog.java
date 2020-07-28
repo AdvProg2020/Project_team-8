@@ -46,6 +46,14 @@ public class BuyLog {
         Controller.saveOrUpdateObject(this);
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getBuyerName() {
         return buyerName;
     }

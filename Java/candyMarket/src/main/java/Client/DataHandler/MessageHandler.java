@@ -1,6 +1,7 @@
 package Client.DataHandler;
 
 import Client.Model.ManageInfo;
+import Client.Model.Manager;
 import Client.Model.User;
 import Client.Model.UserHandler;
 import com.google.gson.internal.$Gson$Preconditions;
@@ -13,6 +14,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MessageHandler {
+    public static String input;
     public static String sendGetByIdMessage(Object id,String className) throws IOException {
 
         ClientSocket.dos.writeUTF("C.getDataById#" + id.toString() + "#from#"+className);
@@ -85,55 +87,117 @@ public class MessageHandler {
         ClientSocket.dos.writeUTF("C.login#"+json);
         ClientSocket.dos.flush();
     }
-    public static void sendIncreaseWalletMessage(String username,String pass,String money,String accountNum) throws IOException,WalletExceptions {
-        if(UserHandler.token == null || UserHandler.endTimeToken<System.currentTimeMillis()){
-            ClientSocket.dos.writeUTF("C.Bank#"+"get_token "+username+" "+pass);
-            ClientSocket.dos.flush();
-            String response;
-            while (true){
-                response = ClientSocket.dis.readUTF();
-                if(response.startsWith("S.Bank"))
-                    break;
-            }
-            String inputs[] = response.split("#");
-            if(inputs[1].split(" ").length<=1){
-                UserHandler.token = inputs[1];
-                UserHandler.endTimeToken = System.currentTimeMillis()+1*3600*1000;
-            }else
-            throw new WalletExceptions(inputs[1]);
-            ClientSocket.dos.writeUTF("C.Bank#"+"create_receipt "+UserHandler.token+" withdraw "+money+" "+accountNum+" -1");
-            ClientSocket.dos.flush();
-            while (true){
-                response = ClientSocket.dis.readUTF();
-                if(response.startsWith("S.Bank"))
-                    break;
-            }
-            String receiptId;
-            inputs = response.split("#");
-            if(inputs[1].split(" ").length<=1){
-                receiptId = inputs[1];
-            }else
-                throw new WalletExceptions(inputs[1]);
-            ClientSocket.dos.writeUTF("C.Bank#"+"pay "+receiptId);
-            ClientSocket.dos.flush();
-            while (true){
-                response = ClientSocket.dis.readUTF();
-                if(response.startsWith("S.Bank"))
-                    break;
-            }
-            inputs = response.split("#");
-            if(!inputs[1].equals("done successfully"))
-                throw new WalletExceptions(inputs[1]);
+    public static void sendMoneyWithdrawMessage(String username,String pass,String money,String accountNum) throws WalletExceptions {
+        String receiptMessage = "C.Bank#" + "create_receipt " + "token" + " withdraw " + money + " " + accountNum + " -1";
+        try {
+            sendBankPayMessage(username,pass,receiptMessage);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
+    }
+    public static void sendMoneyDepositMessage(String username,String pass,String money,String accountNum) throws  WalletExceptions {
+        String receiptMessage = "C.Bank#" + "create_receipt " + "token" + " "+"deposit"+" " + money + " " + "-1 " + accountNum;
+        try {
+            sendBankPayMessage(username,pass,receiptMessage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void sendMoneyMoveMessage(String username,String pass,String money,String fromAccountNum,String toAccountNum) throws WalletExceptions {
+        String receiptMessage = "C.Bank#" + "create_receipt " + "token"+ " "+"move"+" " + money + " " + fromAccountNum + " "+toAccountNum;
+        try {
+            sendBankPayMessage(username,pass,receiptMessage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static String createBankAccount(String username,String pass,String firstName,String lastName){
+        try {
+            ClientSocket.dos.writeUTF("C.Bank#"+"create_account " + firstName +" "+lastName+" "+username+" "+pass+" "+pass);
+            ClientSocket.dos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return input;
+    }
+    private static void sendBankPayMessage(String username,String pass,String msg) throws IOException,WalletExceptions {
+        String response;
+        String inputs[];
+        if(UserHandler.token == null || UserHandler.endTimeToken<System.currentTimeMillis()) {
+            ClientSocket.dos.writeUTF("C.Bank#" + "get_token " + username + " " + pass);
+            ClientSocket.dos.flush();
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            while (true) {
+                response = input;
+                if(response != null)
+                if (response.startsWith("S.Bank"))
+                    break;
+            }
+              inputs = response.split("#");
+            if (inputs[1].split(" ").length <= 1) {
+                UserHandler.token = inputs[1];
+                UserHandler.endTimeToken = System.currentTimeMillis() + 1 * 3600 * 1000;
+                UserHandler.usernameToken =username;
+                UserHandler.passwordToken =pass;
+            } else throw new WalletExceptions(inputs[1]);
+        }
+            if(!username.equals(UserHandler.usernameToken) || !pass.equals(UserHandler.passwordToken))
+                throw new WalletExceptions("incorrect username or password");
+            ClientSocket.dos.writeUTF(msg.replaceAll("token",UserHandler.token));
+            ClientSocket.dos.flush();
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+            while (true) {
+                response = input;
+                if (response.startsWith("S.Bank"))
+                    break;
+            }
+            String receiptId = null;
+            inputs = response.split("#");
+            if (inputs[1].split(" ").length <= 1) {
+                receiptId = inputs[1];
+            } else
+                throw new WalletExceptions(inputs[1]);
+            ClientSocket.dos.writeUTF("C.Bank#" + "pay " + receiptId);
+            ClientSocket.dos.flush();
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+            while (true) {
+                response = input;
+                if (response.startsWith("S.Bank"))
+                    break;
+            }
+            inputs = response.split("#");
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+            if (!inputs[1].equals("done successfully"))
+                throw new WalletExceptions(inputs[1]);
     }
     public static void getMessageListener() throws IOException, ClassNotFoundException, InterruptedException {
         List<String> serverChanges = new ArrayList<>();
         DataInputStream dis = null;
         dis =new DataInputStream(ClientSocket.clientSocket.getInputStream());
-        String input;
         while (true){
-            input = dis.readUTF();
+            String tempInput = dis.readUTF();
+            input = tempInput;
             System.out.println(input);
             if(input.startsWith("S"))
             {
@@ -156,12 +220,11 @@ public class MessageHandler {
                     user = UserHandler.getOnlineUserByUserName(user.getUsername());
                     UserHandler.onlineUsers.add(user);
                 }
-                else {
+                else if(input.startsWith("S.setData")){
                     String inputs[] = input.split("#");
                     String className = inputs[2];
                     String json = inputs[3];
                     JsonHandler.updateOrSaveData(json, className);
-                    System.out.println(ManageInfo.allCategories.get(0).getName());
                 }
             }
         }

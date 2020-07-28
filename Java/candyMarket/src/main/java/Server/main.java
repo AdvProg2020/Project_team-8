@@ -1,5 +1,6 @@
 package Server;
 
+import Client.Model.ManageInfo;
 import Server.DataHandler.DataBase.DBHandler;
 import Server.DataHandler.Socket.BankClientSocket;
 import Server.DataHandler.Socket.ServerSocket;
