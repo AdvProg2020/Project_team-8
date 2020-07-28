@@ -1,6 +1,7 @@
 package Client.GraphicController;
 
 import Client.Controller;
+import Client.GraphicView.MenuHandler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,7 +15,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ManagerPurchasedManagingController implements Initializable {
-
+    public static ManagerPurchasedManagingController managerPurchasedManagingController;
 
     @FXML private TableView<BuyLog> buyLogTableView;
     @FXML private TableColumn<BuyLog, String> productColumn;
@@ -28,10 +29,12 @@ public class ManagerPurchasedManagingController implements Initializable {
 
     @FXML private ChoiceBox<CartSituation> situationChoiceBox;
     @FXML private Button changeSituationBtn;
+    @FXML private Button showDetailBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        productColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, String>(""));
+        managerPurchasedManagingController = this;
+        productColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, String>("goods"));
         amountColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, Integer>("totalAmount"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, Integer>("discountAmount"));
         addressColumn.setCellValueFactory(new PropertyValueFactory<BuyLog, String>("address"));
@@ -46,6 +49,7 @@ public class ManagerPurchasedManagingController implements Initializable {
 
         changeSituationBtn.setDisable(true);
         situationChoiceBox.setDisable(true);
+        showDetailBtn.setDisable(true);
     }
 
     private ObservableList<BuyLog> getLogs() {
@@ -74,6 +78,10 @@ public class ManagerPurchasedManagingController implements Initializable {
         }
     }
 
+    public BuyLog getLog() {
+        return buyLogTableView.getSelectionModel().getSelectedItem();
+    }
+
     public void changeSendingSituation(ActionEvent actionEvent) {
         if (situationChoiceBox.getValue() == CartSituation.AT_DESTINATION) {
             BuyLog log = buyLogTableView.getSelectionModel().getSelectedItem();
@@ -96,5 +104,10 @@ public class ManagerPurchasedManagingController implements Initializable {
             situationChoiceBox.setDisable(true);
             changeSituationBtn.setDisable(true);
         }
+        showDetailBtn.setDisable(false);
+    }
+
+    public void showDetails(ActionEvent actionEvent) {
+        MenuHandler.createStageWithScene("DetailLog");
     }
 }

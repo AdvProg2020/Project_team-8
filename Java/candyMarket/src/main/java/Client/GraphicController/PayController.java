@@ -112,17 +112,19 @@ public class PayController implements Initializable {
         String phoneNumber = phoneField.getText();
         if (Cart.getTotalAmount() > 10000) {
             Random rand = new Random();
-            int randNumber = rand.nextInt(ManageInfo.allDiscounts.size());
-            Discount discount = ManageInfo.allDiscounts.get(randNumber);
-            boolean added = false;
-            for (Discount myDiscount : UserHandler.currentBuyer.getMyDiscounts()) {
-                if (myDiscount == discount) {
-                    added = true;
-                    myDiscount.setUsageNumber(myDiscount.getUsageNumber() + 1);
+            if(ManageInfo.allDiscounts.size()!=0) {
+                int randNumber = rand.nextInt(ManageInfo.allDiscounts.size());
+                Discount discount = ManageInfo.allDiscounts.get(randNumber);
+                boolean added = false;
+                for (Discount myDiscount : UserHandler.currentBuyer.getMyDiscounts()) {
+                    if (myDiscount.getCode() == discount.getCode()) {
+                        added = true;
+                        myDiscount.setUsageNumber(myDiscount.getUsageNumber() + 1);
+                    }
                 }
+                if (!added)
+                    UserHandler.currentBuyer.addDiscount(discount);
             }
-            if (!added)
-                UserHandler.currentBuyer.addDiscount(discount);
         }
         HashMap<Seller, HashMap<Good, Integer>> soldGoods = new HashMap<>();
         HashMap<Good, Integer> boughtGoods;
@@ -138,8 +140,7 @@ public class PayController implements Initializable {
             soldGoods.get(good.getSeller()).put(good, boughtGoods.get(good));
         }
         BuyLog buyLog = new BuyLog(Cart.getTotalAmount(), Cart.getDiscountAmount(), boughtGoods,
-                UserHandler.currentBuyer.getUsername());
-        buyLog.setAddress(address);
+                UserHandler.currentBuyer.getUsername(), address);
         buyLog.setPhoneNumber(phoneNumber);
         UserHandler.currentBuyer.addMyLogs(buyLog);
         Controller.saveOrUpdateObject(UserHandler.currentBuyer);
@@ -149,7 +150,8 @@ public class PayController implements Initializable {
             seller.addMySellLog(sellLog);
             int sellerMoneyAdded = 0;
             for (Good good : sellLog.getGoods().keySet()) {
-                sellerMoneyAdded += (int)(good.getPrice()*((double)(100 - (double)Cart.getDiscountAmount())/100));
+                int num = Cart.getGoods().get(good);
+                sellerMoneyAdded += num * (int)(good.getPrice()*((double)(100 - (double)Cart.getDiscountAmount())/100));
             }
             sellerMoneyAdded = (int) (sellerMoneyAdded * ((double)(100 - (double)ManageInfo.allManagers.get(0).getWage()) / 100));
             seller.setBalance(seller.getBalance() + sellerMoneyAdded);
@@ -169,13 +171,10 @@ public class PayController implements Initializable {
         }
         return (totalAmount * ((100 - Cart.getDiscountAmount()) / 100));
     }
-
-
     public void back(ActionEvent actionEvent) {
         MenuHandler.secondCurrentWindow.close();
         MenuHandler.createStageWithScene("Cart");
     }
-
     private boolean phoneValidation(String phone) {
         String phoneRegex = "^\\+?\\d\\d\\d\\d+$";
         Pattern phonePattern = Pattern.compile(phoneRegex);

@@ -70,6 +70,7 @@ public class UserHandler {
         public static void loggingOut() {
                 UserHandler.currentUser.setOnline(false);
                 Controller.saveOrUpdateObject(UserHandler.currentUser);
+                token = null;
                 onlineUsers.remove(currentUser);
                 currentUser = null;
                 currentManager = null;

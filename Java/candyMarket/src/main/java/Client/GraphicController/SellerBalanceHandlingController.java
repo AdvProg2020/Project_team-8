@@ -28,16 +28,18 @@ public class SellerBalanceHandlingController implements Initializable {
         currentBalanceLabel.setText(String.valueOf(UserHandler.currentSeller.getBalance()));
     }
 
-    public void withdrawal(ActionEvent actionEvent) {
+    public void deposit(ActionEvent actionEvent) {
         if(UserHandler.currentSeller.getBalance()-Integer.valueOf(moneyField.getText())< ManageInfo.allManagers.get(0
         ).getMinWalletMoney())
             Functions.showDialog("you should have at least "+ManageInfo.allManagers.get(0).getMinWalletMoney()+" money " +
                     "in your wallet",true);
         else
         try {
-            MessageHandler.sendMoneyWithdrawMessage(usernameField.getText()
+            MessageHandler.sendMoneyDepositMessage(usernameField.getText()
             ,passwordField.getText(),moneyField.getText(),accNumField.getText());
             UserHandler.currentSeller.setBalance(UserHandler.currentSeller.getBalance()-Integer.valueOf(moneyField.getText()));
+            Functions.showDialog("successfully money moved from wallet to account",false);
+            initialize(null,null);
         } catch (WalletExceptions walletExceptions) {
             Functions.showDialog(walletExceptions.getMessage(),true);
         }

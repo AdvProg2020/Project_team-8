@@ -151,46 +151,4 @@ public class Cart {
             goods.put(good,goods.get(good)-1);
         good.setStock(good.getStock()+1);
     }
-
-    public static void createLogs(){
-        HashMap<Seller,HashMap<Good,Integer>> logs = new HashMap<>();
-        for(Map.Entry<Good,Integer> entry : goods.entrySet()) {
-            Good g = entry.getKey();
-            int gNum = entry.getValue();
-            if(logs.keySet().contains(g.getSeller())) {
-                HashMap<Good, Integer> currentGoods = logs.get(g.getSeller());
-                if(currentGoods.containsValue(g))
-                    currentGoods.put(g,currentGoods.get(g)+gNum);
-                else currentGoods.put(g,gNum);
-                logs.put(g.getSeller(),currentGoods);
-            }
-            else
-            {
-                HashMap<Good,Integer> goods = new HashMap<Good,Integer>(){
-                    {
-                        put(g,gNum);
-                    }
-                };
-                logs.put(g.getSeller(),goods);
-            }
-        }
-        for(Map.Entry<Seller, HashMap<Good, Integer>> entry : logs.entrySet()) {
-            Seller key = entry.getKey();
-            HashMap<Good,Integer> value = entry.getValue();
-            int totalAmount = 0;
-            int saleAmount = 0;
-            for(Map.Entry<Good,Integer> entry2 : value.entrySet()) {
-               Good key2 = entry2.getKey();
-               int value2 = entry2.getValue();
-               totalAmount+=key2.getPriceAfterSale();
-               saleAmount+=key2.getSalePercentageAmount()*key2.getPrice()/100;
-            }
-            BuyLog buyLog = new BuyLog(totalAmount-discountAmount,discountAmount,value,key.getUsername());
-            SellLog sellLog = new SellLog(totalAmount,saleAmount,value, Buyer.currentBuyer.getUsername());
-            Buyer.currentBuyer.addMyLogs(buyLog);
-            Seller.currentSeller.addMySellLog(sellLog);
-            ManageInfo.allBuyLogs.add(buyLog);
-            ManageInfo.allSellLogs.add(sellLog);
-        }
-        }
 }

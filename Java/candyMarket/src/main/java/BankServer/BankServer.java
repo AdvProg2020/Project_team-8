@@ -1,6 +1,7 @@
 package BankServer;
 
 import com.sun.javafx.iio.ios.IosDescriptor;
+import org.jboss.jdeparser.JCatch;
 import org.json.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -17,234 +18,218 @@ public class BankServer {
     private static int clientNumbers = 0;
 
     private static void listenToClient(Socket clientSocket) throws IOException {
-        while (true){
-            DataInputStream dis = new DataInputStream(clientSocket.getInputStream());
-            DataOutputStream dout = new DataOutputStream(clientSocket.getOutputStream());
-            String str;
+        while (true) {
             try {
-                str = dis.readUTF();
-            }
-            catch (IOException e){
-                break;
-            }
-            String[] inputs = str.split(" ");
-            if(str.startsWith("create_account") && inputs.length == 6){
-                if(!inputs[4].equals(inputs[5])){
-                    dout.writeUTF("passwords do not match");
-                    dout.flush();
-                }
-                else if(Account.isAccountWithUserName(inputs[3]))
-                {
-                    dout.writeUTF("username is not available");
-                    dout.flush();
-                }
-                else {
-                    Account account = new Account(inputs[1], inputs[2], inputs[3], inputs[4]);
-                    dout.writeUTF(account.getAccountNum());
-                    dout.flush();
-                }
-            }
-
-            else if (str.startsWith("get_token") && inputs.length == 3) {
-                if (!Account.isAccountWithUserName(inputs[1])) {
-                    dout.writeUTF("invalid username or password");
-                    dout.flush();
-                }
-                else if (!Account.isPasswordCorrect(inputs[1], inputs[2])) {
-                    dout.writeUTF("invalid username or password");
-                    dout.flush();
-                }
-                else {
-                    accountsWithTokens.put(Account.getAccountByUsername(inputs[1]), new Token());
-                    dout.writeUTF(accountsWithTokens.get(Account.getAccountByUsername(inputs[1])).getToken());
-                    dout.flush();
-                }
-            }
-
-            else if (str.startsWith("create_receipt") && inputs.length >= 6) {
+                DataInputStream dis = new DataInputStream(clientSocket.getInputStream());
+                DataOutputStream dout = new DataOutputStream(clientSocket.getOutputStream());
+                String str;
                 try {
-                    int money = Integer.parseInt(inputs[3]);
-                    String details = "";
-                    for (int i = 7; i < inputs.length; i++) {
-                        details += inputs[i] + " ";
+                    str = dis.readUTF();
+                } catch (IOException e) {
+                    break;
+                }
+                String[] inputs = str.split(" ");
+                if (str.startsWith("create_account") && inputs.length == 6) {
+                    if (!inputs[4].equals(inputs[5])) {
+                        dout.writeUTF("passwords do not match");
+                        dout.flush();
+                    } else if (Account.isAccountWithUserName(inputs[3])) {
+                        dout.writeUTF("username is not available");
+                        dout.flush();
+                    } else {
+                        Account account = new Account(inputs[1], inputs[2], inputs[3], inputs[4]);
+                        dout.writeUTF(account.getAccountNum());
+                        dout.flush();
                     }
-                    if (!(inputs[2].equalsIgnoreCase("deposit") ||
-                            inputs[2].equalsIgnoreCase("withdraw") ||
-                            inputs[2].equalsIgnoreCase("move"))) {
-                        dout.writeUTF("invalid receipt type");
+                } else if (str.startsWith("get_token") && inputs.length == 3) {
+                    if (!Account.isAccountWithUserName(inputs[1])) {
+                        dout.writeUTF("invalid username or password");
                         dout.flush();
-                    } else if ((inputs[2].equalsIgnoreCase("deposit") && !inputs[4].equals("-1")) ||
-                            (inputs[2].equalsIgnoreCase("withdraw") && !inputs[5].equals("-1"))) {
-                        dout.writeUTF("invalid parameters passed");
+                    } else if (!Account.isPasswordCorrect(inputs[1], inputs[2])) {
+                        dout.writeUTF("invalid username or password");
                         dout.flush();
-                    } else if (!checkAccountIdValidation(inputs[4])) {
-                        dout.writeUTF("source account id is invalid");
+                    } else {
+                        accountsWithTokens.put(Account.getAccountByUsername(inputs[1]), new Token());
+                        dout.writeUTF(accountsWithTokens.get(Account.getAccountByUsername(inputs[1])).getToken());
                         dout.flush();
-                    } else if (!checkAccountIdValidation(inputs[5])) {
-                        dout.writeUTF("dest account id is invalid");
+                    }
+                } else if (str.startsWith("create_receipt") && inputs.length >= 6) {
+                    try {
+                        int money = Integer.parseInt(inputs[3]);
+                        String details = "";
+                        for (int i = 7; i < inputs.length; i++) {
+                            details += inputs[i] + " ";
+                        }
+                        if (!(inputs[2].equalsIgnoreCase("deposit") ||
+                                inputs[2].equalsIgnoreCase("withdraw") ||
+                                inputs[2].equalsIgnoreCase("move"))) {
+                            dout.writeUTF("invalid receipt type");
+                            dout.flush();
+                        } else if ((inputs[2].equalsIgnoreCase("deposit") && !inputs[4].equals("-1")) ||
+                                (inputs[2].equalsIgnoreCase("withdraw") && !inputs[5].equals("-1"))) {
+                            dout.writeUTF("invalid parameters passed");
+                            dout.flush();
+                        } else if (!checkAccountIdValidation(inputs[4])) {
+                            dout.writeUTF("source account id is invalid");
+                            dout.flush();
+                        } else if (!checkAccountIdValidation(inputs[5])) {
+                            dout.writeUTF("dest account id is invalid");
+                            dout.flush();
+                        } else if ((inputs[2].equalsIgnoreCase("move") && inputs[4].equals("-1"))) {
+                            dout.writeUTF("source account id is invalid");
+                            dout.flush();
+                        } else if ((inputs[2].equalsIgnoreCase("move") && inputs[5].equals("-1"))) {
+                            dout.writeUTF("dest account id is invalid");
+                            dout.flush();
+                        } else if (inputs[4].equals(inputs[5])) {
+                            dout.writeUTF("equal source and dest account");
+                            dout.flush();
+                        } else if ((inputs[2].equalsIgnoreCase("deposit") && inputs[5].equals("-1")) ||
+                                (inputs[2].equalsIgnoreCase("withdraw") && inputs[4].equals("-1"))) {
+                            dout.writeUTF("invalid account id");
+                        } else if (!checkTokenValidation(inputs[1], inputs[4])) {
+                            dout.writeUTF("token is invalid");
+                            dout.flush();
+                        } else if (checkTokenExpiration(inputs[1])) {
+                            dout.writeUTF("token expired");
+                            dout.flush();
+                        } else if (!checkDetailsValidation(details)) {
+                            dout.writeUTF("your input contains invalid characters");
+                            dout.flush();
+                        } else {
+                            Receipt receipt = new Receipt(inputs[2], money, inputs[4], inputs[5], details);
+                            dout.writeUTF(Integer.toString(receipt.getId()));
+                            dout.flush();
+                        }
+                    } catch (NumberFormatException e) {
+                        dout.writeUTF("invalid money");
                         dout.flush();
-                    } else if ((inputs[2].equalsIgnoreCase("move") && inputs[4].equals("-1"))) {
-                        dout.writeUTF("source account id is invalid");
-                        dout.flush();
-                    } else if ((inputs[2].equalsIgnoreCase("move") && inputs[5].equals("-1"))) {
-                        dout.writeUTF("dest account id is invalid");
-                        dout.flush();
-                    } else if (inputs[4].equals(inputs[5])) {
-                        dout.writeUTF("equal source and dest account");
-                        dout.flush();
-                    } else if ((inputs[2].equalsIgnoreCase("deposit") && inputs[5].equals("-1")) ||
-                            (inputs[2].equalsIgnoreCase("withdraw") && inputs[4].equals("-1"))) {
-                        dout.writeUTF("invalid account id");
-                    } else if (!checkTokenValidation(inputs[1], inputs[4])) {
+                    }
+                } else if (str.startsWith("get_transactions") && inputs.length == 3) {
+                    if (!checkTokenValidation(inputs[1])) {
                         dout.writeUTF("token is invalid");
                         dout.flush();
                     } else if (checkTokenExpiration(inputs[1])) {
                         dout.writeUTF("token expired");
                         dout.flush();
-                    } else if (!checkDetailsValidation(details)) {
-                        dout.writeUTF("your input contains invalid characters");
+                    } else if (!checkReceiptValidation(inputs[1], inputs[2])) {
+                        dout.writeUTF("invalid receipt id");
                         dout.flush();
                     } else {
-                        Receipt receipt = new Receipt(inputs[2], money, inputs[4], inputs[5], details);
-                        dout.writeUTF(Integer.toString(receipt.getId()));
+                        Token token = Token.getTokenByTokenString(inputs[1]);
+                        Account account = null;
+                        for (Account account1 : accountsWithTokens.keySet()) {
+                            if (accountsWithTokens.get(account1) == token) {
+                                account = account1;
+                                break;
+                            }
+                        }
+                        String answer = "";
+                        switch (inputs[2]) {
+                            case "+":
+                                for (Receipt receipt : receipts) {
+                                    if (receipt.getDestID().equals(account.getAccountNum())) {
+                                        answer = buildTransaction(answer, receipt);
+                                    }
+                                }
+                                break;
+                            case "-":
+                                for (Receipt receipt : receipts) {
+                                    if (receipt.getSourceID().equals(account.getAccountNum()))
+                                        answer = buildTransaction(answer, receipt);
+                                }
+                                break;
+                            case "*":
+                                for (Receipt receipt : receipts) {
+                                    if (receipt.getDestID().equals(account.getAccountNum()) ||
+                                            receipt.getSourceID().equals(account.getAccountNum()))
+                                        answer = buildTransaction(answer, receipt);
+                                }
+                                break;
+                            default:
+                                for (Receipt receipt : receipts) {
+                                    if (Integer.toString(receipt.getId()).equals(inputs[2])) {
+                                        answer = buildTransaction(answer, receipt);
+                                        break;
+                                    }
+                                }
+                                break;
+                        }
+                        dout.writeUTF(answer);
                         dout.flush();
                     }
-                } catch (NumberFormatException e) {
-                    dout.writeUTF("invalid money");
-                    dout.flush();
-                }
-            }
-
-            else if (str.startsWith("get_transactions") && inputs.length == 3) {
-                if (!checkTokenValidation(inputs[1])) {
-                    dout.writeUTF("token is invalid");
-                    dout.flush();
-                } else if (checkTokenExpiration(inputs[1])) {
-                    dout.writeUTF("token expired");
-                    dout.flush();
-                } else if (!checkReceiptValidation(inputs[1], inputs[2])) {
-                    dout.writeUTF("invalid receipt id");
-                    dout.flush();
-                } else {
-                    Token token = Token.getTokenByTokenString(inputs[1]);
-                    Account account = null;
-                    for (Account account1 : accountsWithTokens.keySet()) {
-                        if (accountsWithTokens.get(account1) == token) {
-                            account = account1;
-                            break;
-                        }
-                    }
-                    String answer = "";
-                    switch (inputs[2]) {
-                        case "+":
-                            for (Receipt receipt : receipts) {
-                                if (receipt.getDestID().equals(account.getAccountNum())) {
-                                    answer = buildTransaction(answer, receipt);
-                                }
-                            }
-                            break;
-                        case "-":
-                            for (Receipt receipt : receipts) {
-                                if (receipt.getSourceID().equals(account.getAccountNum()))
-                                    answer = buildTransaction(answer, receipt);
-                            }
-                            break;
-                        case "*":
-                            for (Receipt receipt : receipts) {
-                                if (receipt.getDestID().equals(account.getAccountNum()) ||
-                                        receipt.getSourceID().equals(account.getAccountNum()))
-                                    answer = buildTransaction(answer, receipt);
-                            }
-                            break;
-                        default:
-                            for (Receipt receipt : receipts) {
-                                if (Integer.toString(receipt.getId()).equals(inputs[2])) {
-                                    answer = buildTransaction(answer, receipt);
+                } else if (str.startsWith("pay") && inputs.length == 2) {
+                    try {
+                        int id = Integer.parseInt(inputs[1]);
+                        if (!checkReceiptValidation(inputs[1])) {
+                            dout.writeUTF("invalid receipt id");
+                            dout.flush();
+                        } else if (checkReceiptPaid(inputs[1])) {
+                            dout.writeUTF("receipt is paid before");
+                            dout.flush();
+                        } else if (!checkEnoughMoney(inputs[1])) {
+                            dout.writeUTF("source account does not have enough money");
+                            dout.flush();
+                        } else {
+                            Receipt receipt = null;
+                            for (Receipt receipt1 : receipts) {
+                                if (receipt1.getId() == id) {
+                                    receipt = receipt1;
                                     break;
                                 }
                             }
-                            break;
-                    }
-                    dout.writeUTF(answer);
-                    dout.flush();
-                }
-            }
-
-            else if (str.startsWith("pay") && inputs.length == 2) {
-                try {
-                    int id = Integer.parseInt(inputs[1]);
-                    if (!checkReceiptValidation(inputs[1])) {
+                            Account account;
+                            switch (receipt.getType()) {
+                                case "deposit":
+                                    account = Account.getAccountById(receipt.getDestID());
+                                    account.addBalance(receipt.getMoney());
+                                    receipt.setPaid(1);
+                                    break;
+                                case "withdraw":
+                                    account = Account.getAccountById(receipt.getSourceID());
+                                    account.addBalance((-1) * receipt.getMoney());
+                                    receipt.setPaid(1);
+                                    break;
+                                case "move":
+                                    account = Account.getAccountById(receipt.getSourceID());
+                                    Account account2 = Account.getAccountById(receipt.getDestID());
+                                    account.addBalance((-1) * receipt.getMoney());
+                                    account2.addBalance(receipt.getMoney());
+                                    receipt.setPaid(1);
+                                    break;
+                            }
+                            dout.writeUTF("done successfully");
+                            dout.flush();
+                        }
+                    } catch (NumberFormatException e) {
                         dout.writeUTF("invalid receipt id");
                         dout.flush();
-                    } else if (checkReceiptPaid(inputs[1])) {
-                        dout.writeUTF("receipt is paid before");
+                    }
+                } else if (str.startsWith("get_balance") && inputs.length == 2) {
+                    if (!checkTokenValidation(inputs[1])) {
+                        dout.writeUTF("token is invalid");
                         dout.flush();
-                    } else if (!checkEnoughMoney(inputs[1])) {
-                        dout.writeUTF("source account does not have enough money");
+                    } else if (checkTokenExpiration(inputs[1])) {
+                        dout.writeUTF("token expired");
                         dout.flush();
                     } else {
-                        Receipt receipt = null;
-                        for (Receipt receipt1 : receipts) {
-                            if (receipt1.getId() == id) {
-                                receipt = receipt1;
+                        Token token = Token.getTokenByTokenString(inputs[1]);
+                        Account account = null;
+                        for (Account account1 : accountsWithTokens.keySet()) {
+                            if (accountsWithTokens.get(account1) == token) {
+                                account = account1;
                                 break;
                             }
                         }
-                        Account account;
-                        switch (receipt.getType()) {
-                            case "deposit" :
-                                account = Account.getAccountById(receipt.getDestID());
-                                account.addBalance(receipt.getMoney());
-                                receipt.setPaid(1);
-                                break;
-                            case "withdraw" :
-                                account = Account.getAccountById(receipt.getSourceID());
-                                account.addBalance((-1) * receipt.getMoney());
-                                receipt.setPaid(1);
-                                break;
-                            case "move" :
-                                account = Account.getAccountById(receipt.getSourceID());
-                                Account account2 = Account.getAccountById(receipt.getDestID());
-                                account.addBalance((-1) * receipt.getMoney());
-                                account2.addBalance(receipt.getMoney());
-                                receipt.setPaid(1);
-                                break;
-                        }
-                        dout.writeUTF("done successfully");
+                        dout.writeUTF(Integer.toString(account.getBalance()));
                         dout.flush();
                     }
-                }catch (NumberFormatException e) {
-                    dout.writeUTF("invalid receipt id");
-                    dout.flush();
-                }
+                } else if (str.equalsIgnoreCase("exit")) {
+                    break;
+                } else writeInvalidInput(clientSocket);
+            }catch (Exception e){
+                continue;
             }
-
-            else if (str.startsWith("get_balance") && inputs.length == 2) {
-                if (!checkTokenValidation(inputs[1])) {
-                    dout.writeUTF("token is invalid");
-                    dout.flush();
-                } else if (checkTokenExpiration(inputs[1])) {
-                    dout.writeUTF("token expired");
-                    dout.flush();
-                } else {
-                    Token token = Token.getTokenByTokenString(inputs[1]);
-                    Account account = null;
-                    for (Account account1 : accountsWithTokens.keySet()) {
-                        if (accountsWithTokens.get(account1) == token) {
-                            account = account1;
-                            break;
-                        }
-                    }
-                    dout.writeUTF(Integer.toString(account.getBalance()));
-                    dout.flush();
-                }
-            }
-
-            else if (str.equalsIgnoreCase("exit")) {
-                break;
-            }
-
-            else writeInvalidInput(clientSocket);
         }
     }
 
@@ -288,32 +273,32 @@ public class BankServer {
         return answer;
     }
 
-    private static boolean checkReceiptValidation(String tok, String input) {
-        try {
-            int id = Integer.parseInt(input);
-            Account account = null;
-            Receipt receipt = null;
-            for (Receipt receipt1 : receipts) {
-                if (receipt1.getId() == id) {
-                    receipt = receipt1;
-                    break;
+    private static boolean checkReceiptValidation(String tok, String input){
+            try {
+                int id = Integer.parseInt(input);
+                Account account = null;
+                Receipt receipt = null;
+                for (Receipt receipt1 : receipts) {
+                    if (receipt1.getId() == id) {
+                        receipt = receipt1;
+                        break;
+                    }
                 }
-            }
-            if (receipt == null)
-                return false;
-            Token token = Token.getTokenByTokenString(tok);
-            for (Account account1 : accountsWithTokens.keySet()) {
-                if (accountsWithTokens.get(account1) == token) {
-                    account = account1;
-                    break;
+                if (receipt == null)
+                    return false;
+                Token token = Token.getTokenByTokenString(tok);
+                for (Account account1 : accountsWithTokens.keySet()) {
+                    if (accountsWithTokens.get(account1) == token) {
+                        account = account1;
+                        break;
+                    }
                 }
+                if (account == null)
+                    return false;
+                return receipt.getSourceID().equals(account.getAccountNum()) || receipt.getDestID().equals(account.getAccountNum());
+            } catch (NumberFormatException e) {
+                return true;
             }
-            if (account == null)
-                return false;
-            return receipt.getSourceID().equals(account.getAccountNum()) || receipt.getDestID().equals(account.getAccountNum());
-        } catch (NumberFormatException e) {
-            return true;
-        }
     }
 
     private static boolean checkReceiptValidation(String receipt) {
