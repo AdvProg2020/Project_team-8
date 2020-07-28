@@ -45,6 +45,14 @@ public class Buyer extends User {
         Chat.newBuyerAdded(userName);
     }
 
+    public boolean hasBought(String good) {
+        for (String boughtGood : boughtGoods) {
+            if (good.equals(boughtGood))
+                return true;
+        }
+        return false;
+    }
+
     private void getDiscountCodeRandom(){
         Random rand = new Random();
         int size = ManageInfo.allDiscounts.size();
@@ -196,4 +204,15 @@ public class Buyer extends User {
         return username;
     }
 
+    public void addGood(Good good) {
+        boolean thereIs = false;
+        for (String boughtGood : boughtGoods) {
+            if (boughtGood.equals(good.getName())) {
+                thereIs = true;
+                break;
+            }
+        }
+        if (!thereIs)
+            this.boughtGoods.add(good.getName());
+    }
 }
