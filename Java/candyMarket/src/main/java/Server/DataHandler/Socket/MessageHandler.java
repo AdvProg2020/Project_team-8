@@ -95,8 +95,12 @@ public class MessageHandler {
         for (Socket clientSocket : ServerSocket.clientSockets) {
             if (clientSocket != senderClient) {
                 dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.login#"+json);
-                dos.flush();
+                try {
+                    dos.writeUTF("S.login#"+json);
+                    dos.flush();
+                }catch (Exception e){
+                    ServerSocket.clientSockets.remove(clientSocket);
+                }
             }
         }
     }
@@ -105,8 +109,12 @@ public class MessageHandler {
         for (Socket clientSocket : ServerSocket.clientSockets) {
             if (clientSocket != senderClient) {
                 dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.logout#"+json);
-                dos.flush();
+                try {
+                    dos.writeUTF("S.logout#"+json);
+                    dos.flush();
+                }catch (Exception e){
+                    ServerSocket.clientSockets.remove(clientSocket);
+                }
             }
         }
     }
@@ -114,9 +122,13 @@ public class MessageHandler {
         DataOutputStream dos = null;
         for (Socket clientSocket : ServerSocket.clientSockets) {
             if (clientSocket != senderClient) {
-                dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.deleteDataById#"+id+"#from#"+className);
-                dos.flush();
+                try {
+                    dos = new DataOutputStream(clientSocket.getOutputStream());
+                    dos.writeUTF("S.deleteDataById#" + id + "#from#" + className);
+                    dos.flush();
+                }catch (Exception e){
+                ServerSocket.clientSockets.remove(clientSocket);
+            }
             }
         }
     }
@@ -125,8 +137,12 @@ public class MessageHandler {
         for (Socket clientSocket : ServerSocket.clientSockets) {
             if (clientSocket != senderClient) {
                 dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.setData#to#"+className+"#"+json);
-                dos.flush();
+                try {
+                    dos.writeUTF("S.setData#to#" + className + "#" + json);
+                    dos.flush();
+                }catch (Exception e){
+                    ServerSocket.clientSockets.remove(clientSocket);
+                }
             }
         }
     }

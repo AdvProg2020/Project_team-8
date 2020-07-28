@@ -23,7 +23,7 @@ public class CustomButton extends Button {
         this.setOnMouseClicked(actionEvent -> {
             BorderPaneController.borderPaneController.setCenter(gridPaneNameOpen);
             MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-            mediaPlayer.play();
+
         });
     }
     public CustomButton(String buttonText){

@@ -154,8 +154,10 @@ public class DataAccessor {
             if (currentSeller != null) {
                 DBManager.deleteObject(currentSeller);
                 ManageInfo.allSellers.remove(currentSeller);
+                ManageInfo.allUsers.remove(currentSeller);
             }
             ManageInfo.allSellers.add(seller);
+            ManageInfo.allUsers.add(seller);
         }
         else if(object instanceof Buyer)
         {
@@ -164,8 +166,10 @@ public class DataAccessor {
             if (currentBuyer != null) {
                 DBManager.deleteObject(currentBuyer);
                 ManageInfo.allBuyers.remove(currentBuyer);
+                ManageInfo.allUsers.remove(currentBuyer);
             }
             ManageInfo.allBuyers.add(buyer);
+            ManageInfo.allUsers.add(buyer);
         }
         else if(object instanceof Manager)
         {
@@ -174,8 +178,10 @@ public class DataAccessor {
             if (currentManager != null) {
                 DBManager.deleteObject(currentManager);
                 ManageInfo.allManagers.remove(currentManager);
+                ManageInfo.allUsers.remove(currentManager);
             }
             ManageInfo.allManagers.add(manager);
+            ManageInfo.allUsers.add(manager);
         }
         else if(object instanceof Supporter){
             Supporter supporter = (Supporter) object;
@@ -183,8 +189,10 @@ public class DataAccessor {
             if (currentSupporter != null) {
                 DBManager.deleteObject(currentSupporter);
                 ManageInfo.allSupporters.remove(currentSupporter);
+                ManageInfo.allUsers.remove(currentSupporter);
             }
             ManageInfo.allSupporters.add(supporter);
+            ManageInfo.allUsers.add(supporter);
         }
         else if(object instanceof Request)
         {
@@ -225,11 +233,6 @@ public class DataAccessor {
                 ManageInfo.allAuctions.remove(currentAuction);
             }
             ManageInfo.allAuctions.add(auction);
-        }
-        try {
-            Thread.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
         DBManager.saveObject(object);
     }

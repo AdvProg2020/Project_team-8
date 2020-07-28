@@ -104,8 +104,10 @@ public class DataAccessor {
         {
             Seller seller = (Seller) object;
             Seller currentSeller = (Seller) Seller.getUserByUsername(seller.getUsername());
-            if (currentSeller != null)
+            if (currentSeller != null) {
                 ManageInfo.allSellers.remove(currentSeller);
+                ManageInfo.allUsers.remove(currentSeller);
+            }
             ManageInfo.allSellers.add(seller);
             ManageInfo.allUsers.add(seller);
         }
@@ -113,8 +115,10 @@ public class DataAccessor {
         {
             Buyer buyer = (Buyer) object;
             Buyer currentBuyer = (Buyer) Buyer.getUserByUsername(buyer.getUsername());
-            if (currentBuyer != null)
+            if (currentBuyer != null) {
                 ManageInfo.allBuyers.remove(currentBuyer);
+                ManageInfo.allUsers.remove(currentBuyer);
+            }
             ManageInfo.allBuyers.add(buyer);
             ManageInfo.allUsers.add(buyer);
         }
@@ -122,16 +126,20 @@ public class DataAccessor {
         {
             Manager manager = (Manager) object;
             Manager currentManager = (Manager) Manager.getUserByUsername(manager.getUsername());
-            if (currentManager != null)
+            if (currentManager != null){
                 ManageInfo.allManagers.remove(currentManager);
+                ManageInfo.allUsers.remove(currentManager);
+            }
             ManageInfo.allManagers.add(manager);
             ManageInfo.allUsers.add(manager);
         }
         else if(object instanceof Supporter){
             Supporter supporter = (Supporter) object;
             Supporter currentSupporter = (Supporter) Supporter.getUserByUsername(supporter.getUsername());
-            if (currentSupporter != null)
+            if (currentSupporter != null) {
                 ManageInfo.allSupporters.remove(currentSupporter);
+                ManageInfo.allUsers.remove(currentSupporter);
+            }
             ManageInfo.allSupporters.add(supporter);
             ManageInfo.allUsers.add(supporter);
         }

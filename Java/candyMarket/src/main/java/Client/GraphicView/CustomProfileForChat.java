@@ -1,6 +1,7 @@
 package Client.GraphicView;
 
 import Client.GraphicController.ChatPageController;
+import Client.Model.ManageInfo;
 import Client.Model.User;
 import Client.Model.UserHandler;
 import javafx.geometry.Pos;
@@ -23,8 +24,8 @@ public class CustomProfileForChat extends HBox {
         username.setText(" " + user.getUsername());
         username.setFont(Font.font("System Bold", 18));
         circle.setFill(Color.GRAY);
-        for (User onlineUser : UserHandler.onlineUsers) {
-            if (user.getUsername().equals(onlineUser.getUsername()))
+        for (User onlineUser : ManageInfo.allUsers) {
+            if (onlineUser.getUsername().equals(user.getUsername()) && onlineUser.isOnline())
                 circle.setFill(Color.rgb(41, 203, 103));
         }
         circle.setRadius(10);

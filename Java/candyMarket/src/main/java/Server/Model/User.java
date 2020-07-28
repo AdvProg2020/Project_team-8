@@ -15,9 +15,23 @@ public class User  {
         this.userPhoto = userPhoto;
     }
     public User(){}
+
+
+
     public enum UserType {
         BUYER, SELLER, MANAGER, SUPPORTER
     }
+
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
+    }
+
+    protected boolean online;
     @Transient
     protected Cart cart = new Cart();
     @Id

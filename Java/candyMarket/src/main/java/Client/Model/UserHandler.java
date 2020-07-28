@@ -1,5 +1,6 @@
 package Client.Model;
 
+import Client.Controller;
 import Client.DataHandler.MessageHandler;
 import Client.GraphicController.BorderPaneController;
 
@@ -43,11 +44,8 @@ public class UserHandler {
         public static void loggingIn(String userName) {
                 User user = User.getUserByUsername(userName);
                 currentUser = user;
-                try {
-                        MessageHandler.sendLoginMessage();
-                } catch (IOException e) {
-                        e.printStackTrace();
-                }
+                user.setOnline(true);
+                Controller.saveOrUpdateObject(user);
                 onlineUsers.add(user);
                 switch (currentUser.getType()) {
                         case BUYER:
@@ -70,11 +68,8 @@ public class UserHandler {
         }
 
         public static void loggingOut() {
-                try {
-                        MessageHandler.sendLogoutMessage();
-                } catch (IOException e) {
-                        e.printStackTrace();
-                }
+                UserHandler.currentUser.setOnline(false);
+                Controller.saveOrUpdateObject(UserHandler.currentUser);
                 onlineUsers.remove(currentUser);
                 currentUser = null;
                 currentManager = null;

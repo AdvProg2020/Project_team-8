@@ -83,18 +83,18 @@ public class MenuHandler {
         backBtn.setOnMouseClicked(actionEvent -> {
             BorderPaneController.borderPaneController.setCenter("MainMenu");
             MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-            mediaPlayer.play();
+
         });
         clientMenuBtn = new CustomButton("ClientMenu");
         clientMenuBtn.setOnAction(actionEvent -> {
             clientMenuBtnOnClick();
             MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-            mediaPlayer.play();
+
         });
         exitBtn =new CustomButton("saveObjectAndExit");
         exitBtn.setOnAction(actionEvent -> {
             MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-            mediaPlayer.play();
+
             Platform.exit();
         });
         buttons.clear();
@@ -122,7 +122,7 @@ public class MenuHandler {
     }
     public static void clientMenuBtnOnClick(){
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-        mediaPlayer.play();
+
 
         if(UserHandler.isLogeIn())
         {

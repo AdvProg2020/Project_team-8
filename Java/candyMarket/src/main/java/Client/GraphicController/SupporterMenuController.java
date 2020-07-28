@@ -15,12 +15,12 @@ public class SupporterMenuController extends PrimaryMenu {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         super.initialize(url, resourceBundle);
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.managerMenuMedia);
-        mediaPlayer.play();
+
         mediaPlayer.setOnEndOfMedia(new Runnable() {
             @Override
             public void run() {
                 mediaPlayer.seek(Duration.ZERO);
-                mediaPlayer.play();
+
             }
         });
     }
