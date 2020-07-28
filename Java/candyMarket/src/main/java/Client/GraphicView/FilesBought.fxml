@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.FilesBoughtController">
+   <children>
+      <Label layoutX="331.0" layoutY="20.0" text="Files Bought">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPane" layoutX="229.0" layoutY="75.0" prefHeight="435.0" prefWidth="344.0" />
+   </children>
+</AnchorPane>
