@@ -4,7 +4,9 @@ import Client.GraphicView.*;
 import Client.GraphicView.MenuHandler;
 import BothUtl.PathHandler;
 import Client.Model.*;
+import javafx.animation.Animation;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -12,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -33,6 +36,7 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
     public ImageView cartImage;
     public ImageView profileImage;
     public ImageView chatImage;
+    public ImageView spriteImageView;
     public static void setLeft(ArrayList<Button> buttons) {
         Node node = ((BorderPane)MenuHandler.currentWindow.getScene().getRoot()).getLeft();
         ((VBox)node).getChildren().clear();
@@ -54,6 +58,17 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         Image imageCart = null;
         Image imageProfile = null;
         Image imageChat = null;
+        Image spriteImage = null;
+        try {
+            spriteImage = new Image(String.valueOf(new File(PathHandler.resourcePath + "Photos\\SpriteAnimation.jpg").toURI().toURL()));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        spriteImageView.setImage(spriteImage);
+        spriteImageView.setViewport(new Rectangle2D(0, 0, 100, 100));
+        Animation animation = new SpriteAnimation(spriteImageView, Duration.millis(2000),7, 180, 0, 0, 170, 400);
+        animation.setCycleCount(Animation.INDEFINITE);
+        animation.play();
         try {
             imageCart = new Image(String.valueOf(new File(PathHandler.resourcePath+"Photos\\Shopping-Cart-PNG.png").toURI().toURL()));
         } catch (MalformedURLException e) {

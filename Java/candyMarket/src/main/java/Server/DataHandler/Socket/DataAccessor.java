@@ -211,6 +211,11 @@ public class DataAccessor {
             }
             ManageInfo.allChats.add(chat);
         }
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         DBManager.saveObject(object);
     }
     public static <T>List<T> getObjectsByClassName(String className){

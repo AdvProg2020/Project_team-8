@@ -26,6 +26,7 @@ import javafx.scene.media.MediaView;
 import javafx.scene.text.Font;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -75,8 +76,8 @@ public class GoodMenuController implements Initializable {
         imageView.preserveRatioProperty().set(true);
         scrollPane.setContent(imageView);
         scrollPane.setMinWidth(100);
-        scrollPane.setMaxWidth(250);
-        scrollPane.setMinHeight(150);
+        scrollPane.setMaxWidth(180);
+        scrollPane.setMinHeight(100);
         Media media;
         if (good.hasMovie()) {
             media = new Media(new File(good.getMovie()).toURI().toString());
@@ -102,7 +103,23 @@ public class GoodMenuController implements Initializable {
         }
         Label nameLbl = new Label("Name : "+good.getName());
         Label priceLbl = new Label("Price : "+good.getPrice());
-        Label scoreLbl = new Label("Score : "+good.getAverageScore());
+        Label scoreLbl = new Label("Score : ");
+        Image scoreImage = null;
+        String path = "Photos\\score5.jpg";
+        if (good.getAverageScore() >= 4)
+            path = "Photos\\score1.jpg";
+        else if (good.getAverageScore() < 4 && good.getAverageScore() >= 3)
+            path = "Photos\\score2.jpg";
+        else if (good.getAverageScore() < 3 && good.getAverageScore() >= 2)
+            path = "Photos\\score3.jpg";
+        else if (good.getAverageScore() < 2 && good.getAverageScore() >= 1)
+            path = "Photos\\score4.jpg";
+        try {
+            scoreImage = new Image(String.valueOf(new File(PathHandler.resourcePath + path).toURI().toURL()), 40, 40, false, false);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        ImageView scoreImageView = new ImageView(scoreImage);
         Label stockLbl = new Label("Stock : "+good.getStock());
         Label sellerNameLbl = new Label("Seller Name : "+good.getSeller().getUsername());
         nameLbl.setFont(Font.font ("Verdana", 20));
@@ -110,7 +127,7 @@ public class GoodMenuController implements Initializable {
         scoreLbl.setFont(Font.font ("Verdana", 20));
         stockLbl.setFont(Font.font ("Verdana", 20));
         sellerNameLbl.setFont(Font.font ("Verdana", 20));
-        summaryGoodPropertiesVBox.getChildren().addAll(scrollPane,nameLbl,priceLbl,scoreLbl,stockLbl,sellerNameLbl);
+        summaryGoodPropertiesVBox.getChildren().addAll(scrollPane,nameLbl,priceLbl,scoreLbl, scoreImageView,stockLbl,sellerNameLbl);
     }
     private void createSpecialProperties(){
         for (String s:

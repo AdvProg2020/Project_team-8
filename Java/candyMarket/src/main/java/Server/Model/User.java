@@ -1,6 +1,5 @@
 package Server.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
@@ -20,7 +19,6 @@ public class User  {
         BUYER, SELLER, MANAGER, SUPPORTER
     }
     @Transient
-    @JsonIgnore
     protected Cart cart = new Cart();
     @Id
     protected String username;

@@ -1,6 +1,5 @@
 package Server.DataHandler.Socket;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
 import javafx.scene.chart.XYChart;
 
@@ -10,7 +9,7 @@ import java.util.List;
 
 public class JsonHandler {
     public static Gson gson = new Gson();
-    public static void updateOrSaveData(String json,String className) throws ClassNotFoundException, JsonProcessingException {
+    public static void updateOrSaveData(String json,String className) throws ClassNotFoundException{
         Object object = gson.fromJson(json,Class.forName("Server.Model."+className));
         DataAccessor.updateOrSaveObject(object);
     }
