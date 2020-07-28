@@ -54,6 +54,11 @@ public class IncreaseWalletMoneyController implements Initializable {
                     else MessageHandler.sendMoneyDepositMessage(username,password,String.valueOf(moneyAmount),String.valueOf(accountNum));
                     if(withDraw) {
                         UserHandler.currentBuyer.setBalance(UserHandler.currentBuyer.getBalance() + moneyAmount);
+                        try {
+                            Thread.sleep(5);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                         Controller.saveOrUpdateObject(UserHandler.currentBuyer);
                         Functions.showDialog("successfully wallet increased", false);
                         initialize(null,null);

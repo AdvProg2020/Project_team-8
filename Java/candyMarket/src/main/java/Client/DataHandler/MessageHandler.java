@@ -104,7 +104,7 @@ public class MessageHandler {
         }
     }
     public static void sendMoneyMoveMessage(String username,String pass,String money,String fromAccountNum,String toAccountNum) throws WalletExceptions {
-        String receiptMessage = "C.Bank#" + "create_receipt " + "token"+ " "+"move"+" " + money + " " + fromAccountNum + toAccountNum;
+        String receiptMessage = "C.Bank#" + "create_receipt " + "token"+ " "+"move"+" " + money + " " + fromAccountNum + " "+toAccountNum;
         try {
             sendBankPayMessage(username,pass,receiptMessage);
         } catch (IOException e) {
@@ -183,6 +183,11 @@ public class MessageHandler {
                     break;
             }
             inputs = response.split("#");
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
             if (!inputs[1].equals("done successfully"))
                 throw new WalletExceptions(inputs[1]);
     }

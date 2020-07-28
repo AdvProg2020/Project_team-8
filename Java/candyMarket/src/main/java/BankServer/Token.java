@@ -17,7 +17,7 @@ public class Token {
             token = new StringBuilder();
             Random random = new Random();
             for (int i = 0; i < 16; i++) {
-                token.append((char) (random.nextInt(80) + 33));
+                token.append((char) (random.nextInt(10) + 48));
             }
         } while (isTokenExists(token.toString()));
         return token.toString();

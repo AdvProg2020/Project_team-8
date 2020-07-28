@@ -31,13 +31,28 @@ public class PayWithBankAccountController implements Initializable {
         try {
             MessageHandler.sendMoneyWithdrawMessage(usernameField.getText()
                     ,passwordField.getText(), String.valueOf(Cart.getTotalAmount()),accNumField.getText());
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             MessageHandler.sendMoneyDepositMessage(usernameField.getText()
                     ,passwordField.getText(),String.valueOf(Cart.getTotalAmount()),accNumField.getText());
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             int wagePercent = ManageInfo.allManagers.get(0).getWage();
             String withDrawMoney = String.valueOf(Cart.getTotalAmount()*(100-wagePercent)/100);
             String moveMoney = String.valueOf((Cart.getTotalAmount()*wagePercent)/100);
             MessageHandler.sendMoneyWithdrawMessage(usernameField.getText()
             ,passwordField.getText(),withDrawMoney,accNumField.getText());
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             MessageHandler.sendMoneyMoveMessage(usernameField.getText()
                     ,passwordField.getText(),moveMoney,accNumField.getText(),ManageInfo.allManagers.get(0).getBankAccountNumber());
             PayController.payController.finishBuying();

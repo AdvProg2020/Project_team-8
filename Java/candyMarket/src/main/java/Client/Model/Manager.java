@@ -13,12 +13,11 @@ public class Manager extends User {
     private int wage = 0;
     private int minWalletMoney = 0;
     private String bankAccountNumber;
-    private String token;
-    private String tokenEndTime;
     public Manager(){}
-    public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
+    public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord,String bankAccountNumber) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
         this.setType(UserType.MANAGER);
+        this.bankAccountNumber = bankAccountNumber;
         Controller.saveOrUpdateObject(this);
     }
     public static boolean isThisTheFirstManager() {
@@ -43,8 +42,7 @@ public class Manager extends User {
             String inputs[] = MessageHandler.createBankAccount(userName,pass,firstName,lastName).split("#");
             accNum = inputs[1];
         }else accNum = ManageInfo.allManagers.get(0).getBankAccountNumber();
-        Manager manager = new Manager(userName,firstName,lastName,email,phone,pass);
-        manager.setBankAccountNumber(accNum);
+        Manager manager = new Manager(userName,firstName,lastName,email,phone,pass,accNum);
         Controller.saveOrUpdateObject(manager);
     }
     public List<String> viewAllGoods() {
