@@ -10,6 +10,8 @@ import java.util.List;
 public class UserHandler {
         public static String token;
         public static long endTimeToken;
+        public static String usernameToken;
+        public static String passwordToken;
         public static List<User> onlineUsers = new ArrayList<>();
         public static User getCurrentUser() {
                 return currentUser;

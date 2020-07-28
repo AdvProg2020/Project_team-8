@@ -11,7 +11,7 @@ import java.util.Scanner;
  * and also responses from Bank server.
  */
 public class BankAPI {
-    public static final int PORT = 2222;
+    public static final int PORT = 9999;
     public static final String IP = "localhost";
 
     private static DataOutputStream outputStream;

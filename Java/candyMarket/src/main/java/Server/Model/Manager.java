@@ -8,8 +8,9 @@ import java.util.List;
 @Entity
 public class Manager extends User {
     public static Manager currentManager;
-    public static int karmozd = 0;
-    public static int minWalletMoney = 0;
+    private int wage = 0;
+    private int minWalletMoney = 0;
+    private String bankAccountNumber;
     public Manager(){}
     public Manager(String userName, String firstName, String lastName, String email, String phoneNumber, String passWord) {
         super(userName, firstName, lastName, email, phoneNumber, passWord);
@@ -48,6 +49,27 @@ public class Manager extends User {
     private void setUsersWhoGetDiscount(Discount discount) {
 
     }
+    public int getMinWalletMoney() {
+        return minWalletMoney;
+    }
 
+    public void setMinWalletMoney(int minWalletMoney) {
+        this.minWalletMoney = minWalletMoney;
+    }
 
+    public int getWage() {
+        return wage;
+    }
+
+    public void setWage(int wage) {
+        this.wage = wage;
+    }
+
+    public String getBankAccountNumber() {
+        return bankAccountNumber;
+    }
+
+    public void setBankAccountNumber(String bankAccountNumber) {
+        this.bankAccountNumber = bankAccountNumber;
+    }
 }

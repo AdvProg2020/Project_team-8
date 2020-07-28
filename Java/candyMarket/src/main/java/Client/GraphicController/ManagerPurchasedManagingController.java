@@ -55,8 +55,10 @@ public class ManagerPurchasedManagingController implements Initializable {
             int minWalletMoney = Integer.parseInt(minWalletField.getText());
             if (karmozd < 0 || karmozd > 100 || minWalletMoney < 0)
                 throw new NumberFormatException();
-            Manager.karmozd = karmozd;
-            Manager.minWalletMoney = minWalletMoney;
+            for (Manager manager : ManageInfo.allManagers) {
+                manager.setWage(karmozd);
+                manager.setMinWalletMoney(minWalletMoney);
+            }
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setContentText("Successfully Changed");
             alert.show();

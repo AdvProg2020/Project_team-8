@@ -19,7 +19,7 @@ public class BankClientSocket {
         String response = dis.readUTF();
         return response;
     }
-    public static boolean connectToBankServer(){
+    public static boolean connectToBankServer() throws IOException {
         try {
             bankClientSocket = new Socket("127.0.0.1", bankPort);
         }catch (Exception e){
@@ -27,6 +27,9 @@ public class BankClientSocket {
             return false;
         }
         System.out.println("connected to bank server");
+        DataInputStream dis = null;
+        dis =new DataInputStream(bankClientSocket.getInputStream());
+        dis.readUTF();
         return true;
     }
 }
