@@ -20,24 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/SellerBalanceHandlingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/AuctionMenu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/SellerBalanceHandling.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid7756.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid7756.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hs_err_pid10876.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hs_err_pid7516.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/replay_pid10876.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/replay_pid7516.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionsMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionsMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/BuyerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/SellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/CustomAuctionBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/CustomAuctionBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/MenuHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Auction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/BuyerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/BuyerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/SellerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/SellerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/MenuHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/ManageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/ManageInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydb.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydb.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +122,7 @@
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="BankServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BankServer.BankServer" />
       <module name="ApProject_OnlineShop" />
@@ -230,9 +223,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.BankServer" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
@@ -293,28 +286,8 @@
       <workItem from="1595339359501" duration="10619000" />
       <workItem from="1595589419157" duration="6811000" />
       <workItem from="1595769666784" duration="16577000" />
-      <workItem from="1595872908887" duration="21612000" />
-    </task>
-    <task id="LOCAL-00004" summary="Finalize Registering (on View)">
-      <created>1589670595698</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1589670595698</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Update SellersMenu v2">
-      <created>1589679879931</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1589679879931</updated>
-    </task>
-    <task id="LOCAL-00006" summary="finalize Register and Login Menus">
-      <created>1589714594540</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1589714594541</updated>
+      <workItem from="1595872908887" duration="22404000" />
+      <workItem from="1595935059574" duration="1968000" />
     </task>
     <task id="LOCAL-00007" summary="finalize Register and Login Menus v2">
       <created>1589715722402</created>
@@ -638,7 +611,28 @@
       <option name="project" value="LOCAL" />
       <updated>1595924806746</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="debug">
+      <created>1595934191269</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1595934191269</updated>
+    </task>
+    <task id="LOCAL-00054" summary="debug">
+      <created>1595934225772</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1595934225772</updated>
+    </task>
+    <task id="LOCAL-00055" summary="debug">
+      <created>1595934253344</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1595934253344</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -766,11 +760,11 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="360" y="11" key="#main/0.0.1280.683@0.0.1280.683" timestamp="1595777182090" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595934231688">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595937818441">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595934231688" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595937818441" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -780,26 +774,26 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594662630612" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1595859788758" />
-    <state width="1237" height="121" key="GridCell.Tab.0.bottom" timestamp="1595934214633">
+    <state width="1237" height="121" key="GridCell.Tab.0.bottom" timestamp="1595936185423">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="121" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595934214633" />
-    <state width="1237" height="121" key="GridCell.Tab.0.center" timestamp="1595934214633">
+    <state width="1237" height="121" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595936185423" />
+    <state width="1237" height="121" key="GridCell.Tab.0.center" timestamp="1595936185422">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="121" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595934214633" />
-    <state width="1237" height="121" key="GridCell.Tab.0.left" timestamp="1595934214632">
+    <state width="1237" height="121" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1595936185422" />
+    <state width="1237" height="121" key="GridCell.Tab.0.left" timestamp="1595936185422">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="121" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595934214632" />
-    <state width="1237" height="121" key="GridCell.Tab.0.right" timestamp="1595934214633">
+    <state width="1237" height="121" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1595936185422" />
+    <state width="1237" height="121" key="GridCell.Tab.0.right" timestamp="1595936185422">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state width="1237" height="108" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594841019588" />
-    <state width="1237" height="121" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595934214633" />
+    <state width="1237" height="121" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1595936185422" />
     <state width="1237" height="199" key="GridCell.Tab.1.bottom" timestamp="1595872702284">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -834,11 +828,11 @@
     </state>
     <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046263" />
     <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595797278381" />
-    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1595872138235">
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1595934273156">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046273" />
-    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595872138235" />
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595934273156" />
     <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -860,20 +854,20 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595924836516">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595934285176">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1595924836516" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1595934285176" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1593125982030">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="647" height="347" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1593125982030" />
-    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1595872919245">
+    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1595935059545">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
-    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1595872919245" />
+    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1595935059545" />
     <state x="375" y="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1595859887905">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -883,11 +877,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="595" y="51" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1594824385210" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595934202623">
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595937775350">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595934202623" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595937775350" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
