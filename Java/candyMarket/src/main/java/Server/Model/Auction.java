@@ -1,12 +1,13 @@
-package Client.Model;
+package Server.Model;
 
-import Client.Controller;
+
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
+
 @Entity
 public class Auction {
     @Id
@@ -22,11 +23,10 @@ public class Auction {
     public Auction(Long endTime, String good) {
         this.endTime = endTime;
         this.good = good;
-        this.id = ManageInfo.allAuctions.size();
+        ManageInfo.allAuctions.add(this);
         buyer = null;
         texts = new ArrayList<>();
         proposedMoney = -1;
-        Controller.saveOrUpdateObject(this);
     }
     public static Auction getAuctionById(int id){
         for (Auction auction : ManageInfo.allAuctions) {
@@ -69,20 +69,6 @@ public class Auction {
 
     public boolean isTimeLeft() {
         return System.currentTimeMillis() - endTime < 0;
-    }
-
-    public void finalizePurchasing() {
-        if (buyer != null) {
-            UserHandler.currentBuyer.addBalance((-1) * proposedMoney);
-            Good realGood = Good.getGoodByName(good);
-            realGood.setStock(realGood.getStock()-1);
-            realGood.getSeller().setBalance(realGood.getSeller().getBalance()+proposedMoney);
-            Controller.saveOrUpdateObject(UserHandler.currentBuyer);
-            Controller.saveOrUpdateObject(realGood);
-            Controller.saveOrUpdateObject(realGood.getSeller());
-        } else {
-            //idk;
-        }
     }
 
     public int getId() {

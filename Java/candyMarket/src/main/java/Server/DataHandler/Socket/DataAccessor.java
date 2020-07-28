@@ -4,6 +4,7 @@ import Server.DataHandler.DataBase.DBHandler;
 import Server.DataHandler.DataBase.DBManager;
 import Server.Model.*;
 import com.sun.webkit.graphics.WCFontCustomPlatformData;
+import javassist.bytecode.stackmap.TypeData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +70,10 @@ public class DataAccessor {
         if(className.equals("Chat")) {
             DBManager.deleteObject(Chat.getChatById(Integer.parseInt(id)));
             ManageInfo.allChats.remove(Chat.getChatById(Integer.parseInt(id)));
+        }
+        if(className.equals("Auction")) {
+            DBManager.deleteObject(Auction.getAuctionById(Integer.parseInt(id)));
+            ManageInfo.allAuctions.remove(Auction.getAuctionById(Integer.parseInt(id)));
         }
     }
     public static void updateOrSaveObject(Object object){
@@ -196,7 +201,7 @@ public class DataAccessor {
             Sale sale = (Sale) object;
             Sale currentSale = Sale.getSaleById(sale.getId());
             if (currentSale != null) {
-                DBManager.deleteObject(sale);
+                DBManager.deleteObject(currentSale);
                 ManageInfo.allSales.remove(currentSale);
             }
             ManageInfo.allSales.add(sale);
@@ -210,6 +215,16 @@ public class DataAccessor {
                 ManageInfo.allChats.remove(currentChat);
             }
             ManageInfo.allChats.add(chat);
+        }
+        else if(object instanceof Auction)
+        {
+            Auction auction = (Auction) object;
+            Auction currentAuction = Auction.getAuctionById(auction.getId());
+            if (currentAuction != null) {
+                DBManager.deleteObject(currentAuction);
+                ManageInfo.allAuctions.remove(currentAuction);
+            }
+            ManageInfo.allAuctions.add(auction);
         }
         try {
             Thread.sleep(5);
@@ -249,6 +264,8 @@ public class DataAccessor {
             return (List<T>) ManageInfo.allScores;
         else if(className.equals("Chat"))
             return (List<T>) ManageInfo.allChats;
+        else if(className.equals("Auction"))
+            return (List<T>) ManageInfo.allAuctions;
         else return null;
     }
     public static Object sendObject(String name,String id){
@@ -307,6 +324,10 @@ public class DataAccessor {
         else if(name.equals("Chat")){
             Chat chat = Chat.getChatById(Integer.parseInt(id));
             return chat;
+        }
+        else if(name.equals("Auction")){
+            Auction auction = Auction.getAuctionById(Integer.parseInt(id));
+            return auction;
         }
         return null;
     }

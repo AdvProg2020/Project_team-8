@@ -1,5 +1,6 @@
 package Client.GraphicController;
 
+import Client.Controller;
 import Client.GraphicView.CustomChatMessages;
 import Client.Model.Auction;
 import Client.Model.UserHandler;
@@ -68,6 +69,7 @@ public class AuctionMenuController implements Initializable {
             Auction.currentAuction.addTexts(UserHandler.currentBuyer.getUsername(), newText);
             allChats.getChildren().add(new CustomChatMessages(UserHandler.currentBuyer.getUsername(), newText));
             messagesPane.setContent(allChats);
+            Controller.saveOrUpdateObject(Auction.currentAuction);
         }
     }
 
@@ -82,6 +84,7 @@ public class AuctionMenuController implements Initializable {
                 Auction.currentAuction.setBuyer(UserHandler.currentBuyer.getUsername());
                 Auction.currentAuction.setProposedMoney(newBid);
                 currentPriceLabel.setText(String.valueOf(Auction.currentAuction.getProposedMoney()));
+                Controller.saveOrUpdateObject(Auction.currentAuction);
             }
         } catch (NumberFormatException e) {
             Functions.showDialog("Wrong Format!", true);
@@ -89,6 +92,7 @@ public class AuctionMenuController implements Initializable {
     }
 
     public void refreshing(ActionEvent actionEvent) {
+        Auction.currentAuction = Auction.getAuctionById(Auction.currentAuction.getId());
         currentPriceLabel.setText(String.valueOf(Auction.currentAuction.getProposedMoney()));
         allChats = new VBox();
         allChats.setSpacing(5);

@@ -8,38 +8,40 @@ public class DataAccessor {
             ManageInfo.allManagers.remove(Manager.getUserByUsername(id));
             ManageInfo.allUsers.remove(Manager.getUserByUsername(id));
         }
-        if(className.equals("Good"))
+        else if(className.equals("Good"))
             ManageInfo.allGoods.remove(Good.getGoodByName(id));
-        if(className.equals("Buyer")) {
+        else if(className.equals("Buyer")) {
             ManageInfo.allBuyers.remove(Buyer.getUserByUsername(id));
             ManageInfo.allUsers.remove(Buyer.getUserByUsername(id));
         }
-        if(className.equals("Seller")) {
+        else if(className.equals("Seller")) {
             ManageInfo.allSellers.remove(Seller.getUserByUsername(id));
             ManageInfo.allUsers.remove(Seller.getUserByUsername(id));
         }
-        if(className.equals("Supporter")) {
+        else if(className.equals("Supporter")) {
             ManageInfo.allSupporters.remove(Supporter.getUserByUsername(id));
             ManageInfo.allUsers.remove(Supporter.getUserByUsername(id));
         }
-        if(className.equals("Category"))
+        else if(className.equals("Category"))
             ManageInfo.allCategories.remove(Category.getCategoryByName(id));
-        if(className.equals("Request"))
+        else if(className.equals("Request"))
             ManageInfo.allRequests.remove(Request.getRequestById(Integer.parseInt(id)));
-        if(className.equals("Discount"))
+        else if(className.equals("Discount"))
             ManageInfo.allDiscounts.remove(Discount.getDiscountByCode(id));
-        if(className.equals("Comment"))
+        else if(className.equals("Comment"))
             ManageInfo.allComments.remove(Comment.getCommentById(Integer.parseInt(id)));
-        if(className.equals("Sale"))
+        else if(className.equals("Sale"))
             ManageInfo.allSales.remove(Sale.getSaleById(Integer.parseInt(id)));
-        if(className.equals("Score"))
+        else if(className.equals("Score"))
             ManageInfo.allScores.remove(Score.getScoreById(Integer.parseInt(id)));
-        if(className.equals("BuyLog"))
+        else if(className.equals("BuyLog"))
             ManageInfo.allBuyLogs.remove(BuyLog.getBuyLogById(Integer.parseInt(id)));
-        if(className.equals("SellLog"))
+        else if(className.equals("SellLog"))
             ManageInfo.allSellLogs.remove(SellLog.getSellLogById(Integer.parseInt(id)));
-        if(className.equals("Chat"))
+        else if(className.equals("Chat"))
             ManageInfo.allChats.remove(Chat.getChatById(Integer.parseInt(id)));
+        else if(className.equals("Auction"))
+            ManageInfo.allAuctions.remove(Auction.getAuctionById(Integer.parseInt(id)));
     }
     public static void updateOrSaveObject(Object object){
         if(object instanceof Good)
@@ -156,6 +158,13 @@ public class DataAccessor {
                 ManageInfo.allChats.remove(currentChat);
             ManageInfo.allChats.add(chat);
         }
+        else if(object instanceof Auction){
+            Auction auction = (Auction) object;
+            Auction currentAuction = Auction.getAuctionById(auction.getId());
+            if(currentAuction!=null)
+                ManageInfo.allAuctions.remove(currentAuction);
+            ManageInfo.allAuctions.add(auction);
+        }
     }
     public static Object sendObject(String name,String id){
         if(name.equals("Manager")){
@@ -213,6 +222,10 @@ public class DataAccessor {
         else if(name.equals("Chat")){
             Chat chat = Chat.getChatById(Integer.parseInt(id));
             return chat;
+        }
+        else if(name.equals("Auction")){
+            Auction auction = Auction.getAuctionById(Integer.parseInt(id));
+            return auction;
         }
         return null;
     }

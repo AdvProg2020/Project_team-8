@@ -1,7 +1,4 @@
-import Client.Model.Buyer;
-import Client.Model.Manager;
-import Client.Model.Seller;
-import Client.Model.User;
+import Server.Model.*;
 import javafx.css.Match;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -10,20 +7,21 @@ import org.junit.Test;
 
 public class LoginTest {
 
-    public static Seller seller;
+    public static Buyer buyer;
 
     @BeforeClass
     public static void createAManager() {
-        seller= new Seller("alex", "alex", "alexi", "alex@yahoo.com", "091234567", "alex","31232");
+        buyer= new Buyer("alex", "alex", "alexi", "alex@yahoo.com", "091234567", "alex");
+        ManageInfo.allBuyers.add(buyer);
     }
 
     @Test
     public void trueTestLogin() {
-        Assert.assertEquals(seller.isUsernameAndPasswordCorrect("alex", "alex"), true);
+        Assert.assertEquals(buyer.isUsernameAndPasswordCorrect("alex", "alex"), true);
     }
     @Test
     public void wrongTestLogin() {
-        Assert.assertEquals(seller.isUsernameAndPasswordCorrect("alex", "al"), false);
+        Assert.assertEquals(buyer.isUsernameAndPasswordCorrect("alex", "al"), false);
     }
 
 }

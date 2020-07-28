@@ -20,20 +20,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="add client details for manager page">
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/Auction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BankServer/BankAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/BankServer/BankAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/ClientSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionsMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AuctionsMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/SellerBalanceHandlingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/SellerBalanceHandlingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Auction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/HibernateConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/HibernateConfigs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/BankClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/BankClientSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/BuyerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/BuyerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/MainMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/MenuHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/ServerSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/ServerSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/ManageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/ManageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/BankServer/BankAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/BankServer/BankAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket$ListenToServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket$ListenToServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/DataAccessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/DataAccessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/MessageHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AuctionMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AuctionMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AuctionsMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AuctionsMenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Auction.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Auction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/HibernateConfigs.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/HibernateConfigs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/BankClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/BankClientSocket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/DataAccessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/DataAccessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydb.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydb.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/ServerSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/ServerSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/ManageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/ManageInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/test-classes/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/test-classes/LoginTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,8 +115,8 @@
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Client.Model" />
       <recent name="Server.Model" />
+      <recent name="Client.Model" />
       <recent name="Server.DataHandler" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -111,22 +127,9 @@
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.main (2)">
     <configuration name="BankAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BankServer.BankAPI" />
-      <module name="ApProject_OnlineShop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BankServer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BankServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BankServer.BankServer" />
       <module name="ApProject_OnlineShop" />
       <extension name="coverage">
         <pattern>
@@ -165,33 +168,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BothUtl.DebugAndTest.main" />
+    <configuration name="LoginTest.trueTestLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ApProject_OnlineShop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BothUtl.DebugAndTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <option name="METHOD_NAME" value="trueTestLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.wrongTestLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApProject_OnlineShop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <option name="METHOD_NAME" value="wrongTestLogin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.main" />
       <item itemvalue="Application.main (2)" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.BankServer" />
       <item itemvalue="Application.BankAPI" />
+      <item itemvalue="JUnit.LoginTest.trueTestLogin" />
+      <item itemvalue="JUnit.LoginTest.wrongTestLogin" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.main (2)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.BankAPI" />
-        <item itemvalue="Application.BankServer" />
-        <item itemvalue="Application.main" />
+        <item itemvalue="JUnit.LoginTest.trueTestLogin" />
+        <item itemvalue="JUnit.LoginTest.wrongTestLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +266,7 @@
       <workItem from="1595769925744" duration="46000" />
       <workItem from="1595770166798" duration="97000" />
       <workItem from="1595770337202" duration="25249000" />
-      <workItem from="1595852372102" duration="47355000" />
+      <workItem from="1595852372102" duration="53017000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -505,6 +515,10 @@
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1595784529812" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1592088967857" />
+    <state x="156" y="100" width="1080" height="481" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1595938164458">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="156" y="100" width="1080" height="481" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1595938164458" />
     <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595080058581">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -568,45 +582,45 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1595363347594" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1222" height="105" key="GridCell.Tab.0.bottom" timestamp="1595936659005">
+    <state width="1222" height="117" key="GridCell.Tab.0.bottom" timestamp="1595943334139">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1222" height="105" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595936659005" />
+    <state width="1222" height="117" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595943334139" />
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1222" height="105" key="GridCell.Tab.0.center" timestamp="1595936659005">
+    <state width="1222" height="117" key="GridCell.Tab.0.center" timestamp="1595943334139">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1222" height="105" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595936659005" />
+    <state width="1222" height="117" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595943334139" />
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1222" height="105" key="GridCell.Tab.0.left" timestamp="1595936659005">
+    <state width="1222" height="117" key="GridCell.Tab.0.left" timestamp="1595943334139">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1222" height="105" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595936659005" />
+    <state width="1222" height="117" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595943334139" />
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1222" height="105" key="GridCell.Tab.0.right" timestamp="1595936659005">
+    <state width="1222" height="117" key="GridCell.Tab.0.right" timestamp="1595943334139">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1222" height="105" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595936659005" />
+    <state width="1222" height="117" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595943334139" />
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1222" height="172" key="GridCell.Tab.1.bottom" timestamp="1595935001154">
+    <state width="1222" height="90" key="GridCell.Tab.1.bottom" timestamp="1595943267900">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1222" height="172" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595935001154" />
+    <state width="1222" height="90" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595943267900" />
     <state width="1237" height="199" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1222" height="172" key="GridCell.Tab.1.center" timestamp="1595935001154">
+    <state width="1222" height="90" key="GridCell.Tab.1.center" timestamp="1595943267900">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1222" height="172" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1595935001154" />
+    <state width="1222" height="90" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1595943267900" />
     <state width="1237" height="199" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1222" height="172" key="GridCell.Tab.1.left" timestamp="1595935001154">
+    <state width="1222" height="90" key="GridCell.Tab.1.left" timestamp="1595943267900">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1222" height="172" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1595935001154" />
+    <state width="1222" height="90" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1595943267900" />
     <state width="1237" height="199" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
-    <state width="1222" height="172" key="GridCell.Tab.1.right" timestamp="1595935001154">
+    <state width="1222" height="90" key="GridCell.Tab.1.right" timestamp="1595943267900">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1222" height="172" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1595935001154" />
+    <state width="1222" height="90" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1595943267900" />
     <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1594921403463">
       <screen x="0" y="0" width="1280" height="683" />
@@ -680,10 +694,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1595424086804" />
-    <state x="303" y="3" width="672" height="676" key="search.everywhere.popup" timestamp="1595892714873">
+    <state x="303" y="3" width="672" height="676" key="search.everywhere.popup" timestamp="1595941577549">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="3" width="672" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595892714873" />
+    <state x="303" y="3" width="672" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595941577549" />
     <state x="303" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1589670451097" />
   </component>
   <component name="XDebuggerManager">
@@ -711,32 +725,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java</url>
-          <line>164</line>
+          <line>169</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java</url>
-          <line>166</line>
+          <line>171</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java</url>
-          <line>167</line>
+          <line>172</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java</url>
-          <line>168</line>
+          <line>173</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java</url>
-          <line>169</line>
+          <line>174</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java</url>
-          <line>170</line>
+          <line>175</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -746,12 +760,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java</url>
-          <line>124</line>
+          <line>126</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java</url>
-          <line>125</line>
+          <line>127</line>
           <option name="timeStamp" value="136" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

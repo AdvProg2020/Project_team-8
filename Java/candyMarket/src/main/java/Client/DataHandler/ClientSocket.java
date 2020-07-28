@@ -11,7 +11,7 @@ public class ClientSocket {
     public static DataInputStream dis;
     public static DataOutputStream dos;
     public static Socket clientSocket;
-    public static int port = 8888;
+    public static int port = 6667;
     public static ListenToServerThread listenToServerThread;
     public static boolean connectToServer() throws IOException {
         try {
@@ -47,6 +47,7 @@ public class ClientSocket {
         ManageInfo.allBuyLogs = JsonHandler.getAllData(BuyLog[].class);
         ManageInfo.allSellLogs = JsonHandler.getAllData(SellLog[].class);
         ManageInfo.allChats = JsonHandler.getAllData(Chat[].class);
+        ManageInfo.allAuctions = JsonHandler.getAllData(Auction[].class);
         UserHandler.onlineUsers = MessageHandler.getLoginUsers();
         ManageInfo.allUsers.addAll(ManageInfo.allBuyers);
         ManageInfo.allUsers.addAll(ManageInfo.allManagers);

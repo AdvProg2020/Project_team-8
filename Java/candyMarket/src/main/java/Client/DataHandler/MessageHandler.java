@@ -132,7 +132,7 @@ public class MessageHandler {
             ClientSocket.dos.writeUTF("C.Bank#" + "get_token " + username + " " + pass);
             ClientSocket.dos.flush();
             try {
-                Thread.sleep(200);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

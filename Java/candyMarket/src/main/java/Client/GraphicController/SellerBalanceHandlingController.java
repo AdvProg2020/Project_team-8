@@ -2,6 +2,7 @@ package Client.GraphicController;
 
 import Client.DataHandler.MessageHandler;
 import Client.DataHandler.WalletExceptions;
+import Client.Model.ManageInfo;
 import Client.Model.User;
 import Client.Model.UserHandler;
 import javafx.event.ActionEvent;
@@ -28,8 +29,13 @@ public class SellerBalanceHandlingController implements Initializable {
     }
 
     public void withdrawal(ActionEvent actionEvent) {
+        if(UserHandler.currentSeller.getBalance()-Integer.valueOf(moneyField.getText())< ManageInfo.allManagers.get(0
+        ).getMinWalletMoney())
+            Functions.showDialog("you should have at least "+ManageInfo.allManagers.get(0).getMinWalletMoney()+" money " +
+                    "in your wallet",true);
+        else
         try {
-            MessageHandler.sendMoneyDepositMessage(usernameField.getText()
+            MessageHandler.sendMoneyWithdrawMessage(usernameField.getText()
             ,passwordField.getText(),moneyField.getText(),accNumField.getText());
             UserHandler.currentSeller.setBalance(UserHandler.currentSeller.getBalance()-Integer.valueOf(moneyField.getText()));
         } catch (WalletExceptions walletExceptions) {

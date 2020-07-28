@@ -4,6 +4,7 @@ package Server.Model;
 
 
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,4 +25,5 @@ public class ManageInfo {
     public static List<Score> allScores = new ArrayList<Score>();
     public static List<FileGood> allFileGoods = new ArrayList<FileGood>();
     public static List<Chat> allChats = new ArrayList<Chat>();
+    public static List<Auction> allAuctions = new ArrayList<Auction>();
 }

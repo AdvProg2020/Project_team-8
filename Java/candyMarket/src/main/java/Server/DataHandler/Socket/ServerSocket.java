@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class ServerSocket {
     public static java.net.ServerSocket serverSocket;
     public static ArrayList<Socket> clientSockets;
-    public static int port = 8888;
+    public static int port = 6667;
     static class ClientListeningThread extends Thread{
         Socket clientSocket;
         public ClientListeningThread(Socket clientSocket){
