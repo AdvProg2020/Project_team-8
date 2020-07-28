@@ -58,6 +58,7 @@ public class AuctionMenuController implements Initializable {
     }
 
     public void sendNewMessage(ActionEvent actionEvent) {
+        refreshing(null);
         String newText = messageArea.getText();
         if (newText.equals("")) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -74,6 +75,7 @@ public class AuctionMenuController implements Initializable {
     }
 
     public void offerANewBid(ActionEvent actionEvent) {
+        refreshing(null);
         try {
             int newBid = Integer.parseInt(setHigherPriceField.getText());
             if (newBid <= Auction.currentAuction.getProposedMoney()) {
