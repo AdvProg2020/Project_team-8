@@ -11,6 +11,9 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
+import java.time.Instant;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -31,12 +34,17 @@ public class AuctionMenuController implements Initializable {
     @FXML private Label whoGotItLabel;
     @FXML private Label buyerGotItLabel;
 
+    @FXML private Label timeLeftLabel;
+
     @FXML private Button refreshButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         currentPriceLabel.setText(Integer.toString(Auction.currentAuction.getProposedMoney()));
-        goodsNameLabel.setText(Auction.currentAuction.getGood());
+        goodsNameLabel.setText("Auction: " + Auction.currentAuction.getGood());
+        LocalTime localTime = Instant.ofEpochMilli(Auction.currentAuction.getEndTime() - System.currentTimeMillis() - 12600000).atZone(ZoneId.systemDefault()).toLocalTime();;
+        timeLeftLabel.setText(localTime.toString());
+        buyerGotItLabel.setText((Auction.currentAuction.getBuyer() == null ? "" : Auction.currentAuction.getBuyer()));
         allChats = new VBox();
         allChats.setSpacing(5);
         chatBoxes = createChatBoxes();
@@ -94,6 +102,9 @@ public class AuctionMenuController implements Initializable {
     public void refreshing(ActionEvent actionEvent) {
         Auction.currentAuction = Auction.getAuctionById(Auction.currentAuction.getId());
         currentPriceLabel.setText(String.valueOf(Auction.currentAuction.getProposedMoney()));
+        LocalTime localTime = Instant.ofEpochMilli(Auction.currentAuction.getEndTime() - System.currentTimeMillis() - 12600000).atZone(ZoneId.systemDefault()).toLocalTime();;
+        timeLeftLabel.setText(localTime.toString());
+        buyerGotItLabel.setText((Auction.currentAuction.getBuyer() == null ? "" : Auction.currentAuction.getBuyer()));
         allChats = new VBox();
         allChats.setSpacing(5);
         chatBoxes = createChatBoxes();

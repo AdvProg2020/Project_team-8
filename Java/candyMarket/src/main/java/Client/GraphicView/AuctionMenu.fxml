@@ -7,7 +7,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color:             linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),             #2193b0,             #6dd5ed,             radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.AuctionMenuController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+            style="-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
+                        #2193b0,
+                        #6dd5ed,
+                        radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Client.GraphicController.AuctionMenuController">
    <children>
       <Label fx:id="goodsNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="14.0" text="Goods Name">
          <font>
@@ -21,23 +27,33 @@
          </font>
       </Label>
       <Label fx:id="currentPriceLabel" layoutX="37.0" layoutY="115.0" text="0" />
-      <TextField fx:id="setHigherPriceField" layoutX="37.0" layoutY="219.0" prefHeight="39.0" prefWidth="201.0" />
-      <Label layoutX="14.0" layoutY="179.0" text="Offer A Higher Price:">
+      <TextField fx:id="setHigherPriceField" layoutX="34.0" layoutY="199.0" prefHeight="39.0" prefWidth="201.0" />
+      <Label layoutX="11.0" layoutY="159.0" text="Offer A Higher Price:">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="offerButton" layoutX="162.0" layoutY="281.0" mnemonicParsing="false" onAction="#offerANewBid" text="Offer" />
+      <Button fx:id="offerButton" layoutX="159.0" layoutY="261.0" mnemonicParsing="false" onAction="#offerANewBid" text="Offer" />
       <TextArea fx:id="messageArea" layoutX="265.0" layoutY="484.0" prefHeight="74.0" prefWidth="435.0" />
       <Button fx:id="sendButton" layoutX="700.0" layoutY="484.0" mnemonicParsing="false" onAction="#sendNewMessage" prefHeight="74.0" prefWidth="84.0" style="-fx-background-color: #22226f;" text="Send" textFill="WHITE" />
       <Button fx:id="refreshButton" layoutX="25.0" layoutY="502.0" mnemonicParsing="false" onAction="#refreshing" text="Refresh" />
-      <Label fx:id="buyerGotItLabel" layoutX="37.0" layoutY="402.0" text="buyer" textFill="WHITE" visible="false">
+      <Label fx:id="buyerGotItLabel" layoutX="34.0" layoutY="346.0" text="buyer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="whoGotItLabel" layoutX="14.0" layoutY="365.0" text="Who Got it:" visible="false">
+      <Label fx:id="whoGotItLabel" layoutX="16.0" layoutY="310.0" text="Who Got it:">
          <font>
             <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="387.0" text="Time Left:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeLeftLabel" layoutX="36.0" layoutY="423.0" text="time" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
    </children>

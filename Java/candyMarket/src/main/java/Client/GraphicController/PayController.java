@@ -137,6 +137,10 @@ public class PayController implements Initializable {
         for (Good good : boughtGoods.keySet()) {
             soldGoods.get(good.getSeller()).put(good, boughtGoods.get(good));
         }
+        for (Good good : boughtGoods.keySet()) {
+            UserHandler.currentBuyer.addGood(good);
+        }
+        Controller.saveOrUpdateObject(UserHandler.currentBuyer);
         BuyLog buyLog = new BuyLog(Cart.getTotalAmount(), Cart.getDiscountAmount(), boughtGoods,
                 UserHandler.currentBuyer.getUsername());
         buyLog.setAddress(address);
