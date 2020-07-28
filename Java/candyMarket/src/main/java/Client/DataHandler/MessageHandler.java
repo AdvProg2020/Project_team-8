@@ -132,7 +132,7 @@ public class MessageHandler {
             ClientSocket.dos.writeUTF("C.Bank#" + "get_token " + username + " " + pass);
             ClientSocket.dos.flush();
             try {
-                Thread.sleep(200);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -206,19 +206,6 @@ public class MessageHandler {
                     String className = inputs[3];
                     String id = inputs[1];
                     DataAccessor.deleteDataById(className,id);
-                }
-                else if(input.startsWith("S.login")){
-                    String[] inputs = input.split("#");
-                    String json = inputs[1];
-                    User user = JsonHandler.gson.fromJson(json, User.class);
-                    UserHandler.onlineUsers.remove(user);
-                }
-                else if(input.startsWith("S.logout")){
-                    String[] inputs = input.split("#");
-                    String json = inputs[1];
-                    User user = JsonHandler.gson.fromJson(json, User.class);
-                    user = UserHandler.getOnlineUserByUserName(user.getUsername());
-                    UserHandler.onlineUsers.add(user);
                 }
                 else if(input.startsWith("S.setData")){
                     String inputs[] = input.split("#");

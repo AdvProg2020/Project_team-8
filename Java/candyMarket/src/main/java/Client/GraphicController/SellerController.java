@@ -16,12 +16,12 @@ public class SellerController extends PrimaryMenu {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         super.initialize(url, resourceBundle);
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.sellerMenuMedia);
-        mediaPlayer.play();
+
         mediaPlayer.setOnEndOfMedia(new Runnable() {
             @Override
             public void run() {
                 mediaPlayer.seek(Duration.ZERO);
-                mediaPlayer.play();
+
             }
         });
     }

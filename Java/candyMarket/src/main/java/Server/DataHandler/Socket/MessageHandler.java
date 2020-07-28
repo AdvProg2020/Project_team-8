@@ -60,22 +60,6 @@ public class MessageHandler {
                     dos.writeUTF("S.login#"+json);
                     dos.flush();
                 }
-                else if(input.startsWith("C.login"))
-                {
-                    String[] inputs = input.split("#");
-                    String json = inputs[1];
-                    User user = JsonHandler.gson.fromJson(json,User.class);
-                    UserHandler.onlineUsers.add(user);
-                    sendUserLoginMessageToAllClients(clientSocket,json);
-                }
-                else if(input.startsWith("C.logout")) {
-                    String[] inputs = input.split("#");
-                    String json = inputs[1];
-                    User user = JsonHandler.gson.fromJson(json,User.class);
-                    user = UserHandler.getOnlineUserByUserName(user.getUsername());
-                    UserHandler.onlineUsers.remove(user);
-                    sendUserLogoutMessageToAllClients(clientSocket,json);
-                }
                 else if(input.startsWith("C.disconnected")){
                     ServerSocket.clientSockets.remove(clientSocket);
                     System.out.println(clientSocket+"disconnected");
@@ -90,33 +74,19 @@ public class MessageHandler {
             }
         }
     }
-    public static void sendUserLoginMessageToAllClients(Socket senderClient,String json) throws IOException {
-        DataOutputStream dos = null;
-        for (Socket clientSocket : ServerSocket.clientSockets) {
-            if (clientSocket != senderClient) {
-                dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.login#"+json);
-                dos.flush();
-            }
-        }
-    }
-    public static void sendUserLogoutMessageToAllClients(Socket senderClient,String json) throws IOException {
-        DataOutputStream dos = null;
-        for (Socket clientSocket : ServerSocket.clientSockets) {
-            if (clientSocket != senderClient) {
-                dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.logout#"+json);
-                dos.flush();
-            }
-        }
-    }
+
+
     public static void sendDeleteDataMessageToAllClients(Socket senderClient,String id,String className) throws IOException {
         DataOutputStream dos = null;
         for (Socket clientSocket : ServerSocket.clientSockets) {
             if (clientSocket != senderClient) {
-                dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.deleteDataById#"+id+"#from#"+className);
-                dos.flush();
+                try {
+                    dos = new DataOutputStream(clientSocket.getOutputStream());
+                    dos.writeUTF("S.deleteDataById#" + id + "#from#" + className);
+                    dos.flush();
+                }catch (Exception e){
+                ServerSocket.clientSockets.remove(clientSocket);
+            }
             }
         }
     }
@@ -125,8 +95,12 @@ public class MessageHandler {
         for (Socket clientSocket : ServerSocket.clientSockets) {
             if (clientSocket != senderClient) {
                 dos =new DataOutputStream(clientSocket.getOutputStream());
-                dos.writeUTF("S.setData#to#"+className+"#"+json);
-                dos.flush();
+                try {
+                    dos.writeUTF("S.setData#to#" + className + "#" + json);
+                    dos.flush();
+                }catch (Exception e){
+                    ServerSocket.clientSockets.remove(clientSocket);
+                }
             }
         }
     }

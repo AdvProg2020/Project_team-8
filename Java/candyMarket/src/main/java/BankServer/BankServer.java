@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class BankServer {
     public static HashMap<Account, Token> accountsWithTokens = new HashMap<>();
     public static ArrayList<Receipt> receipts = new ArrayList<>();
-    private static int port = 9999;
+    private static int port = 6666;
     private static int clientNumbers = 0;
 
     private static void listenToClient(Socket clientSocket) throws IOException {

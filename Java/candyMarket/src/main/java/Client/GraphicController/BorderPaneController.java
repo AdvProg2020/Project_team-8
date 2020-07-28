@@ -111,11 +111,11 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
         chatImage.setDisable(true);
         setCenter("MainMenu");
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-        mediaPlayer.play();
+
     }
     public void registerBtnOnClick(MouseEvent mouseEvent) {
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-        mediaPlayer.play();
+
         MenuHandler.createStageWithScene("RegisterMenu");
     }
     public void login(String currentUserName){
@@ -131,21 +131,21 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
     }
     public void loginBtnClick(MouseEvent mouseEvent) {
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-        mediaPlayer.play();
+
         MenuHandler.createStageWithScene("LoginMenu");
     }
 
 
     public void Buying(MouseEvent mouseEvent) {
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-        mediaPlayer.play();
+
         MenuHandler.secondCurrentWindow.close();
         MenuHandler.createStageWithScene("Cart");
     }
 
     public void viewProfile(MouseEvent mouseEvent) {
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-        mediaPlayer.play();
+
         if (UserHandler.isLogeIn()) {
             this.setCenter("Profile");
             MenuHandler.clientMenuBtnOnClick();
@@ -157,7 +157,7 @@ public class BorderPaneController extends CustomBorderPaneMenus implements Initi
 
     public void chatting(MouseEvent mouseEvent) {
         MediaPlayer mediaPlayer = new MediaPlayer(PathHandler.buttonClickMedia);
-        mediaPlayer.play();
+
         MenuHandler.createStageWithScene("ChatPage");
     }
 }

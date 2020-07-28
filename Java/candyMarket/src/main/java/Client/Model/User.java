@@ -22,6 +22,17 @@ public class User  {
     public enum UserType {
         BUYER, SELLER, MANAGER, SUPPORTER
     }
+
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
+    }
+
+    protected boolean online;
     @Transient
     protected Cart cart = new Cart();
     @Id
@@ -176,11 +187,6 @@ public class User  {
                 UserHandler.getCurrentUser().setPhoneNumber(newField);
                 break;
         }
-    }
-    public boolean isOnline(){
-        if(UserHandler.onlineUsers.contains(this))
-            return true;
-        return false;
     }
     public boolean isManager(){
         return type == UserType.MANAGER;

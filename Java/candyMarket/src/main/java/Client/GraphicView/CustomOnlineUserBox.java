@@ -23,8 +23,8 @@ public class CustomOnlineUserBox extends HBox {
         this.setMinHeight(25);
         this.setMaxWidth(324);
         circle.setFill(Color.GRAY);
-        for (User onlineUser : UserHandler.onlineUsers) {
-            if (onlineUser.getUsername().equals(user))
+        for (User onlineUser : ManageInfo.allUsers) {
+            if (onlineUser.getUsername().equals(user) && onlineUser.isOnline())
                 circle.setFill(Color.rgb(41, 203, 103));
         }
         HBox hBox1 = new HBox();

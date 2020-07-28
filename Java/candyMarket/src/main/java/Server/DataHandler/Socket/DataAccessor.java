@@ -4,6 +4,7 @@ import Server.DataHandler.DataBase.DBHandler;
 import Server.DataHandler.DataBase.DBManager;
 import Server.Model.*;
 import com.sun.webkit.graphics.WCFontCustomPlatformData;
+import javassist.bytecode.stackmap.TypeData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +70,10 @@ public class DataAccessor {
         if(className.equals("Chat")) {
             DBManager.deleteObject(Chat.getChatById(Integer.parseInt(id)));
             ManageInfo.allChats.remove(Chat.getChatById(Integer.parseInt(id)));
+        }
+        if(className.equals("Auction")) {
+            DBManager.deleteObject(Auction.getAuctionById(Integer.parseInt(id)));
+            ManageInfo.allAuctions.remove(Auction.getAuctionById(Integer.parseInt(id)));
         }
     }
     public static void updateOrSaveObject(Object object){
@@ -149,8 +154,10 @@ public class DataAccessor {
             if (currentSeller != null) {
                 DBManager.deleteObject(currentSeller);
                 ManageInfo.allSellers.remove(currentSeller);
+                ManageInfo.allUsers.remove(currentSeller);
             }
             ManageInfo.allSellers.add(seller);
+            ManageInfo.allUsers.add(seller);
         }
         else if(object instanceof Buyer)
         {
@@ -159,8 +166,10 @@ public class DataAccessor {
             if (currentBuyer != null) {
                 DBManager.deleteObject(currentBuyer);
                 ManageInfo.allBuyers.remove(currentBuyer);
+                ManageInfo.allUsers.remove(currentBuyer);
             }
             ManageInfo.allBuyers.add(buyer);
+            ManageInfo.allUsers.add(buyer);
         }
         else if(object instanceof Manager)
         {
@@ -169,8 +178,10 @@ public class DataAccessor {
             if (currentManager != null) {
                 DBManager.deleteObject(currentManager);
                 ManageInfo.allManagers.remove(currentManager);
+                ManageInfo.allUsers.remove(currentManager);
             }
             ManageInfo.allManagers.add(manager);
+            ManageInfo.allUsers.add(manager);
         }
         else if(object instanceof Supporter){
             Supporter supporter = (Supporter) object;
@@ -178,8 +189,10 @@ public class DataAccessor {
             if (currentSupporter != null) {
                 DBManager.deleteObject(currentSupporter);
                 ManageInfo.allSupporters.remove(currentSupporter);
+                ManageInfo.allUsers.remove(currentSupporter);
             }
             ManageInfo.allSupporters.add(supporter);
+            ManageInfo.allUsers.add(supporter);
         }
         else if(object instanceof Request)
         {
@@ -196,7 +209,7 @@ public class DataAccessor {
             Sale sale = (Sale) object;
             Sale currentSale = Sale.getSaleById(sale.getId());
             if (currentSale != null) {
-                DBManager.deleteObject(sale);
+                DBManager.deleteObject(currentSale);
                 ManageInfo.allSales.remove(currentSale);
             }
             ManageInfo.allSales.add(sale);
@@ -211,10 +224,15 @@ public class DataAccessor {
             }
             ManageInfo.allChats.add(chat);
         }
-        try {
-            Thread.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        else if(object instanceof Auction)
+        {
+            Auction auction = (Auction) object;
+            Auction currentAuction = Auction.getAuctionById(auction.getId());
+            if (currentAuction != null) {
+                DBManager.deleteObject(currentAuction);
+                ManageInfo.allAuctions.remove(currentAuction);
+            }
+            ManageInfo.allAuctions.add(auction);
         }
         DBManager.saveObject(object);
     }
@@ -249,6 +267,8 @@ public class DataAccessor {
             return (List<T>) ManageInfo.allScores;
         else if(className.equals("Chat"))
             return (List<T>) ManageInfo.allChats;
+        else if(className.equals("Auction"))
+            return (List<T>) ManageInfo.allAuctions;
         else return null;
     }
     public static Object sendObject(String name,String id){
@@ -307,6 +327,10 @@ public class DataAccessor {
         else if(name.equals("Chat")){
             Chat chat = Chat.getChatById(Integer.parseInt(id));
             return chat;
+        }
+        else if(name.equals("Auction")){
+            Auction auction = Auction.getAuctionById(Integer.parseInt(id));
+            return auction;
         }
         return null;
     }

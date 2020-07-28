@@ -1,6 +1,7 @@
 package Client.GraphicController;
 
 import Client.GraphicView.CustomOnlineUserBox;
+import Client.Model.Buyer;
 import Client.Model.ManageInfo;
 import Client.Model.User;
 import javafx.fxml.FXML;

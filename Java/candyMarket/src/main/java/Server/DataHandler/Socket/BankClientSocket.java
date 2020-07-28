@@ -9,7 +9,7 @@ import java.net.Socket;
 
 public class BankClientSocket {
     public static Socket bankClientSocket;
-    public static int bankPort = 9999;
+    public static int bankPort = 6666;
     public static String sendMessage(String msg) throws IOException {
         DataOutputStream dos = null;
         dos =new DataOutputStream(bankClientSocket.getOutputStream());

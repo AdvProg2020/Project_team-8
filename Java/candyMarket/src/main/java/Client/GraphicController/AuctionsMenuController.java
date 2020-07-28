@@ -1,5 +1,6 @@
 package Client.GraphicController;
 
+import Client.Controller;
 import Client.GraphicView.CustomAuctionBox;
 import Client.Model.Auction;
 import Client.Model.ManageInfo;
@@ -30,8 +31,9 @@ public class AuctionsMenuController implements Initializable {
         for (int i = 0; i < ManageInfo.allAuctions.size(); i++) {
             if (!ManageInfo.allAuctions.get(i).isTimeLeft()) {
                 ManageInfo.allAuctions.get(i).finalizePurchasing();
-                ManageInfo.allAuctions.remove(i);
+                Auction auction = ManageInfo.allAuctions.remove(i);
                 i--;
+                Controller.deleteObject("Auction", String.valueOf(auction.getId()));
             }
         }
         ArrayList<CustomAuctionBox> customAuctionBoxes = new ArrayList<>();
