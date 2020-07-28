@@ -47,11 +47,7 @@ public class CustomProfileForChat extends HBox {
         hBox1.setCursor(Cursor.HAND);
         hBox1.setOnMouseClicked((e) -> {
             ChatPageController.chatPageController.showWhoAmITalkingTo(this);
-            try {
-                ChatPageController.chatPageController.setMessages(user);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
+            ChatPageController.chatPageController.setMessages(user);
         });
         this.getChildren().addAll(hBox1, hBox2);
     }

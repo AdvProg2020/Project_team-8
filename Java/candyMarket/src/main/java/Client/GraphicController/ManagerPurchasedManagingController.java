@@ -1,5 +1,6 @@
 package Client.GraphicController;
 
+import Client.Controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,6 +39,8 @@ public class ManagerPurchasedManagingController implements Initializable {
 
         buyLogTableView.setItems(getLogs());
 
+        situationChoiceBox.getItems().addAll(CartSituation.ON_THE_WAY, CartSituation.AT_DESTINATION);
+
         changeSituationBtn.setDisable(true);
         situationChoiceBox.setDisable(true);
     }
@@ -73,6 +76,7 @@ public class ManagerPurchasedManagingController implements Initializable {
         if (situationChoiceBox.getValue() == CartSituation.AT_DESTINATION) {
             BuyLog log = buyLogTableView.getSelectionModel().getSelectedItem();
             log.setBuySituation(CartSituation.AT_DESTINATION);
+            Controller.saveOrUpdateObject(log);
             buyLogTableView.setItems(getLogs());
             changeSituationBtn.setDisable(true);
             situationChoiceBox.setDisable(true);

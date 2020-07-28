@@ -20,4 +20,5 @@ public class ManageInfo {
     public static List<Supporter> allSupporters = new ArrayList<Supporter>();
     public static List<FileGood> allFileGoods = new ArrayList<FileGood>();
     public static List<Chat> allChats = new ArrayList<Chat>();
+    public static List<Auction> allAuctions = new ArrayList<Auction>();
 }

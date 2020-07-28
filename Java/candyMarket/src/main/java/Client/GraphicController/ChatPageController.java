@@ -65,25 +65,7 @@ public class ChatPageController implements Initializable {
         return customProfileForChats;
     }
 
-    public void setMessages(User user) throws InterruptedException {
-        /*Platform.runLater(new Runnable() {
-            private boolean running = true;
-            private Long start = System.currentTimeMillis();
-
-            @Override
-            public void run() {
-                while (running) {
-                    if (System.currentTimeMillis() - start >= 1000) {
-                        try {
-                            setMessages(user);
-                            this.running = false;
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-        });*/
+    public void setMessages(User user){
         Chat chat;
         if (UserHandler.isSupporter())
             chat = Chat.getChatByBuyerSupporter(user.getUsername(), UserHandler.getCurrentUser().getUsername());
