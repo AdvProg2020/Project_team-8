@@ -5,7 +5,6 @@ import Client.Controller;
 import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
-@Entity
 public class Auction {
     private Long endTime;
     private String good;
