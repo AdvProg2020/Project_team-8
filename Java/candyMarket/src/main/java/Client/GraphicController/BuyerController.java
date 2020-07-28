@@ -30,6 +30,7 @@ public class BuyerController extends PrimaryMenu {
         ArrayList<Button> buttons= new ArrayList<>();
         buttons.add(MenuHandler.viewProfileBtn);
         buttons.add(MenuHandler.viewBuyerPersonalInfoBtn);
+        buttons.add(MenuHandler.auctionsMenuBtn);
         buttons.add(MenuHandler.viewBuyerBuyLogBtn);
         buttons.add(MenuHandler.bankAccountBtn);
         buttons.add(MenuHandler.backBtn);

@@ -34,6 +34,7 @@ public class SellerController extends PrimaryMenu {
         buttons.add(MenuHandler.sellerRequestsBtn);
         buttons.add(MenuHandler.sellerCreateSaleBtn);
         buttons.add(MenuHandler.sellerShowSaleBtn);
+        buttons.add(MenuHandler.sellerBalanceHandlingBtn);
         buttons.add(MenuHandler.backBtn);
         return buttons;
     }

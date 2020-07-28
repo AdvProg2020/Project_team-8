@@ -31,6 +31,10 @@ public class CustomAuctionBox extends HBox {
         enterAuction.setText("Enter");
         enterAuction.setTextFill(Color.WHITE);
         enterAuction.setStyle("-fx-background-color: #22226f");
+        enterAuction.setOnAction(e -> {
+            Auction.currentAuction = auction;
+            MenuHandler.createStageWithScene("AuctionMenu");
+        });
         this.getChildren().addAll(goodName, endTime, enterAuction);
     }
 }

@@ -29,7 +29,6 @@ public class MainMenuController extends PrimaryMenu {
         ArrayList<Button> buttons = new ArrayList<>();
         buttons.add(MenuHandler.clientMenuBtn);
         buttons.add(MenuHandler.goodsMenuBtn);
-        buttons.add(MenuHandler.auctionsMenuBtn);
         buttons.add(MenuHandler.exitBtn);
         return buttons;
     }
