@@ -1,8 +1,11 @@
 package Client.Model;
 
+import Client.Controller;
+
+import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
 public class Auction {
     private Long endTime;
     private String good;
@@ -17,7 +20,7 @@ public class Auction {
         ManageInfo.allAuctions.add(this);
         buyer = null;
         texts = new ArrayList<>();
-        proposedMoney = 0;
+        proposedMoney = -1;
     }
 
     public List<String> getTexts() {
@@ -58,7 +61,13 @@ public class Auction {
 
     public void finalizePurchasing() {
         if (buyer != null) {
-            //buy;
+            UserHandler.currentBuyer.addBalance((-1) * proposedMoney);
+            Good realGood = Good.getGoodByName(good);
+            realGood.setStock(realGood.getStock()-1);
+            realGood.getSeller().setBalance(realGood.getSeller().getBalance()+proposedMoney);
+            Controller.saveOrUpdateObject(UserHandler.currentBuyer);
+            Controller.saveOrUpdateObject(realGood);
+            Controller.saveOrUpdateObject(realGood.getSeller());
         } else {
             //idk;
         }

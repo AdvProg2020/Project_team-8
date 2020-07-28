@@ -39,7 +39,7 @@ public class AuctionMenuController implements Initializable {
         allChats = new VBox();
         allChats.setSpacing(5);
         chatBoxes = createChatBoxes();
-        allChats.getChildren().addAll(allChats);
+        allChats.getChildren().addAll(chatBoxes);
         messagesPane.setContent(allChats);
     }
 
@@ -93,7 +93,7 @@ public class AuctionMenuController implements Initializable {
         allChats = new VBox();
         allChats.setSpacing(5);
         chatBoxes = createChatBoxes();
-        allChats.getChildren().addAll(allChats);
+        allChats.getChildren().addAll(chatBoxes);
         messagesPane.setContent(allChats);
         if (!Auction.currentAuction.isTimeLeft()) {
             setHigherPriceField.setDisable(true);

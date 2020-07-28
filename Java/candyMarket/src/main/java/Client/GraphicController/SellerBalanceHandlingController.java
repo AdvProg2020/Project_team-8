@@ -1,5 +1,8 @@
 package Client.GraphicController;
 
+import Client.DataHandler.MessageHandler;
+import Client.DataHandler.WalletExceptions;
+import Client.Model.User;
 import Client.Model.UserHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +28,12 @@ public class SellerBalanceHandlingController implements Initializable {
     }
 
     public void withdrawal(ActionEvent actionEvent) {
-        //bank stuff
+        try {
+            MessageHandler.sendMoneyDepositMessage(usernameField.getText()
+            ,passwordField.getText(),moneyField.getText(),accNumField.getText());
+            UserHandler.currentSeller.setBalance(UserHandler.currentSeller.getBalance()-Integer.valueOf(moneyField.getText()));
+        } catch (WalletExceptions walletExceptions) {
+            Functions.showDialog(walletExceptions.getMessage(),true);
+        }
     }
 }

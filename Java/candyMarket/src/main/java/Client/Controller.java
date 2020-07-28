@@ -20,7 +20,7 @@ public class Controller {
         DataAccessor.updateOrSaveObject(object);
         JsonHandler.setData(object);
         try {
-            Thread.sleep(1);
+            Thread.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -34,7 +34,7 @@ public class Controller {
         DataAccessor.deleteDataById(className, id);
         MessageHandler.sendDeleteDataByIdMessage(id,className);
         try {
-            Thread.sleep(1);
+            Thread.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

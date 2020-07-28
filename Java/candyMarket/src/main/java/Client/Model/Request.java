@@ -117,6 +117,7 @@ public class Request {
             case CREATE_GOOD:
                 Controller.saveOrUpdateObject(good);
                 this.getGood().getSeller().addGood(this.getGood());
+                Controller.saveOrUpdateObject(this.getGood().getSeller());
                 break;
             case EDIT_GOOD:
                 Good goodToBeRemoved = null;
