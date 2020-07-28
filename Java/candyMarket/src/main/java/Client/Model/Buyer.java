@@ -118,8 +118,11 @@ public class Buyer extends User {
 
     public void rate(Good good, int score) {
         List<Score> scores = good.getScores();
-        scores.add(new Score(this, score, good));
+        Score rate = new Score(this,score,good);
+        scores.add(rate);
         good.setScores(scores);
+        Controller.saveOrUpdateObject(rate);
+        Controller.saveOrUpdateObject(good);
     }
 
     public void removeDiscount(Discount discount) {
@@ -192,4 +195,5 @@ public class Buyer extends User {
     public String toString() {
         return username;
     }
+
 }

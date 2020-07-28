@@ -22,6 +22,7 @@ public class PurchasedProductsController implements Initializable {
     @FXML private TableColumn<String, HashMap<String, Integer>> productColumn;
     @FXML private TableColumn<String, Integer> priceColumn;
     @FXML private TableColumn<String, Integer> discountColumn;
+    @FXML private TableColumn<String, CartSituation> situationColumn;
 
     @FXML private Button showLogButton;
 
@@ -34,6 +35,7 @@ public class PurchasedProductsController implements Initializable {
         productColumn.setCellValueFactory(new PropertyValueFactory<String, HashMap<String, Integer>>("goods"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<String, Integer>("totalAmount"));
         discountColumn.setCellValueFactory(new PropertyValueFactory<String, Integer>("discountAmount"));
+        situationColumn.setCellValueFactory(new PropertyValueFactory<String, CartSituation>("buySituation"));
 
         buyLogTableView.setItems(getLog());
     }

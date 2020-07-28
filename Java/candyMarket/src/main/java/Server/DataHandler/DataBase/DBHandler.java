@@ -84,10 +84,4 @@ public class DBHandler {
         ManageInfo.allBuyers.add(buyer);
         HibernateConfigs.shutdown();
     }
-    public static void setManagerDataTest(){
-        Manager manager = new Manager("a","a","a","b","c","d");
-        ManageInfo.allManagers.add(manager);
-        DBManager.saveObject(manager);
-        HibernateConfigs.shutdown();
-    }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+            style="-fx-background-color:
+                        linear-gradient(from 0% 93% to 0% 100%, #2193b0 0%, #6dd5ed 100%),
+                                 #2193b0,
+                                 #6dd5ed,
+                                  radial-gradient(center 50% 50%, radius 100%, #bdc3c7, #2c3e50);"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Client.GraphicController.AuctionSettingController">
+   <children>
+      <VBox fx:id="timePicker" alignment="TOP_CENTER" layoutX="214.0" layoutY="219.0" prefHeight="297.0" prefWidth="372.0" spacing="10.0" />
+      <Label contentDisplay="CENTER" layoutX="336.0" layoutY="48.0" text="Set Auction">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -10,6 +10,7 @@ public class Cart {
     private static String phoneNumber;
     private static int totalAmount = 0;
     private static int discountAmount = 0;
+    private static boolean Payed = false;
     private static HashMap<Good,Integer> goods = new HashMap<>();
     private static String fxml;
 
@@ -19,6 +20,14 @@ public class Cart {
     }
 
     public static void setAddress(String address1) { address = address1;
+    }
+
+    public static boolean isPayed() {
+        return Payed;
+    }
+
+    public static void setPayed(boolean Payed) {
+        Cart.Payed = Payed;
     }
 
     public static void setFxml(String fxml) {

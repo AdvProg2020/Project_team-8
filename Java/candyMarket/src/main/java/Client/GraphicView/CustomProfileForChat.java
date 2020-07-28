@@ -24,7 +24,7 @@ public class CustomProfileForChat extends HBox {
         username.setFont(Font.font("System Bold", 18));
         circle.setFill(Color.GRAY);
         for (User onlineUser : UserHandler.onlineUsers) {
-            if (user == onlineUser)
+            if (user.getUsername().equals(onlineUser.getUsername()))
                 circle.setFill(Color.rgb(41, 203, 103));
         }
         circle.setRadius(10);

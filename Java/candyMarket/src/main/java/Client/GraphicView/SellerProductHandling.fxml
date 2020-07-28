@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane  onMousePressed="#userClickedOnTable" id="AnchorPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.SellerProductHandlingController">
+<AnchorPane id="AnchorPane" onMousePressed="#userClickedOnTable" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.SellerProductHandlingController">
     <children>
         <VBox alignment="CENTER" />
         <VBox layoutX="210.0" layoutY="81.0" prefHeight="254.0" prefWidth="603.0" spacing="10.0">
@@ -26,6 +26,7 @@
             <children>
                 <Button fx:id="deleteProductBtn" disable="true" mnemonicParsing="false" onAction="#deleteButtonPushed" prefWidth="175.0" text="Delete Product(s) " />
                 <Button fx:id="editProductBtn" disable="true" mnemonicParsing="false" onAction="#editing" prefHeight="25.0" prefWidth="174.0" text="Edit Product" />
+                <Button fx:id="auctionBtn" disable="true" mnemonicParsing="false" onAction="#setAuction" prefHeight="39.0" prefWidth="174.0" text="Set on Auction" />
                 <Button fx:id="showBuyersButton" disable="true" layoutX="824.0" layoutY="416.0" mnemonicParsing="false" onAction="#showBuyers" prefHeight="59.0" prefWidth="146.0" text="Show Buyers" />
             </children>
         </VBox>
@@ -36,7 +37,7 @@
                  <Font name="System Bold Italic" size="18.0" />
              </font>
          </Label>
-      <Button onAction="#addFile" layoutX="306.0" layoutY="425.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="411.0" text="Add File" />
+      <Button layoutX="306.0" layoutY="425.0" mnemonicParsing="false" onAction="#addFile" prefHeight="39.0" prefWidth="411.0" text="Add File" />
 
     </children>
 

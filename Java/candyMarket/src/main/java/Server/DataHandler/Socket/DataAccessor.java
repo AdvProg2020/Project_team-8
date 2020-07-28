@@ -5,6 +5,7 @@ import Server.DataHandler.DataBase.DBManager;
 import Server.Model.*;
 import com.sun.webkit.graphics.WCFontCustomPlatformData;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataAccessor {
@@ -205,7 +206,7 @@ public class DataAccessor {
             Chat chat = (Chat) object;
             Chat currentChat = Chat.getChatById(chat.getId());
             if (currentChat != null) {
-                DBManager.deleteObject(chat);
+                DBManager.deleteObject(currentChat);
                 ManageInfo.allChats.remove(currentChat);
             }
             ManageInfo.allChats.add(chat);
