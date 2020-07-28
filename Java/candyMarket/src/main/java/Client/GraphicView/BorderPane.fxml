@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="borderPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.BorderPaneController">
+<BorderPane fx:id="borderPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GraphicController.BorderPaneController">
 
     <left>
         <VBox fx:id="optionBar" styleClass="myOptionBar">
@@ -26,7 +25,7 @@
                        <Button fx:id="logOutBtn" mnemonicParsing="false" onMouseClicked="#logOutBtnOnClick" styleClass="myRightButton" text="LogOut" />
                    </children>
                </VBox>
-            <ImageView fx:id="chatImage" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#chatting" layoutY="420.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="chatImage" fitHeight="100.0" fitWidth="100.0" layoutY="420.0" onMouseClicked="#chatting" pickOnBounds="true" preserveRatio="true" />
            </children>
         </AnchorPane>
     </right>
@@ -36,9 +35,10 @@
         </AnchorPane>
     </center>
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="990.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="470.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="cartImage" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#Buying" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="spriteImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="profileImage" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#viewProfile" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
