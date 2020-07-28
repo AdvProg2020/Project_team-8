@@ -33,6 +33,7 @@ public class ManagerController extends PrimaryMenu {
         buttons.add(MenuHandler.discountManagingBtn);
         buttons.add(MenuHandler.productManagingBtn);
         buttons.add(MenuHandler.categoryManagingBtn);
+        buttons.add(MenuHandler.onlineUsersManagingBtn);
         buttons.add(MenuHandler.requestsBtn);
         buttons.add(MenuHandler.backBtn);
         return buttons;
