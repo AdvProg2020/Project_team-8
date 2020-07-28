@@ -13,7 +13,7 @@ public class CustomFileDownloadBox extends HBox {
     private Label fileName;
     private Button downloadBtn;
 
-    public CustomFileDownloadBox(File file) {
+    public CustomFileDownloadBox(String file) {
         this.setAlignment(Pos.CENTER_LEFT);
         this.setSpacing(20);
         this.setMaxWidth(344);
@@ -23,7 +23,7 @@ public class CustomFileDownloadBox extends HBox {
         hBox1.setAlignment(Pos.CENTER_LEFT);
 
         fileName = new Label();
-        fileName.setText(" " + file.getName() + "...............................................................");
+        fileName.setText(" " + file + "...............................................................");
         fileName.setFont(Font.font("System Bold", 20));
 
         hBox1.getChildren().addAll(fileName);

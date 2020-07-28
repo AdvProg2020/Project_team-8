@@ -1,6 +1,9 @@
 package Client.GraphicController;
 
 import Client.GraphicView.CustomFileDownloadBox;
+import Client.Model.FileGood;
+import Client.Model.Good;
+import Client.Model.UserHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ScrollPane;
@@ -8,6 +11,7 @@ import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class FilesBoughtController implements Initializable {
@@ -26,9 +30,12 @@ public class FilesBoughtController implements Initializable {
 
     private ArrayList<CustomFileDownloadBox> createDownloadBoxes() {
         ArrayList<CustomFileDownloadBox> customFileDownloadBoxes = new ArrayList<>();
-        //for on buyers files
-        //create new CustomFileDownloadBoxes
-        //add to customFileDownloadBoxes
+        List<Good> goods = UserHandler.currentBuyer.getBoughtGoods();
+        for (Good good : goods) {
+            if (good instanceof FileGood) {
+                customFileDownloadBoxes.add(new CustomFileDownloadBox(((FileGood)good).getFileName()));
+            }
+        }
 
         return customFileDownloadBoxes;
     }
