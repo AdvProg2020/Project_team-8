@@ -4,6 +4,7 @@ import Client.Controller;
 import Client.GraphicView.CustomAuctionBox;
 import Client.Model.Auction;
 import Client.Model.ManageInfo;
+import Client.Model.TimeMachine;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ScrollPane;

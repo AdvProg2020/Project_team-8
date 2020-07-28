@@ -27,10 +27,11 @@ public class BuyLog {
     @Enumerated(EnumType.STRING)
     private CartSituation buySituation;
     public BuyLog(){}
-    public BuyLog(int totalAmount, int discountAmount, HashMap<Good,Integer> goods, String buyerName) {
+    public BuyLog(int totalAmount, int discountAmount, HashMap<Good,Integer> goods, String buyerName, String address) {
         this.date = System.currentTimeMillis();
         this.totalAmount = totalAmount;
         this.discountAmount = discountAmount;
+        this.address = address;
         HashMap<String,Integer> goodsString = new HashMap<>();
         for(Map.Entry<Good, Integer> entry : goods.entrySet()) {
             Good key = entry.getKey();
@@ -49,6 +50,8 @@ public class BuyLog {
     public void setAddress(String address) {
         this.address = address;
     }
+
+
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
