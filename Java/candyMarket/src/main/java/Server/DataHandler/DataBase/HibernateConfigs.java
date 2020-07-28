@@ -29,6 +29,7 @@ public class HibernateConfigs {
                     .addAnnotatedClass(Supporter.class)
                     .addAnnotatedClass(Chat.class)
                     .addAnnotatedClass(Auction.class)
+                    .addAnnotatedClass(FileGood.class)
                     .buildSessionFactory();
         } catch (Exception e) {
             System.err.println("SessionFactory Creation Failed" + e);
