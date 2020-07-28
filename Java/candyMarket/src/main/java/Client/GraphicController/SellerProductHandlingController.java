@@ -24,6 +24,7 @@ public class SellerProductHandlingController implements Initializable {
     public Button addProductBtn;
     public Button editProductBtn;
     public Button deleteProductBtn;
+    public Button auctionBtn;
 
     @FXML private TableView<Good> tableView;
     @FXML private TableColumn<Good, String> productNameColumn;
@@ -70,11 +71,13 @@ public class SellerProductHandlingController implements Initializable {
             showBuyersButton.setDisable(true);
             deleteProductBtn.setDisable(true);
             editProductBtn.setDisable(true);
+            auctionBtn.setDisable(true);
         }
         else {
             showBuyersButton.setDisable(false);
             deleteProductBtn.setDisable(false);
             editProductBtn.setDisable(false);
+            auctionBtn.setDisable(false);
         }
     }
 
@@ -138,5 +141,9 @@ public class SellerProductHandlingController implements Initializable {
     public void addFile(ActionEvent actionEvent) {
         currentGood = null;
         MenuHandler.createStageWithScene("AddNewFile");
+    }
+
+    public void setAuction(ActionEvent actionEvent) {
+        MenuHandler.createStageWithScene("AuctionSetting");
     }
 }
