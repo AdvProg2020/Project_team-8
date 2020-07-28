@@ -22,7 +22,7 @@ public class AuctionSettingController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dateTimePicker = new DateTimePicker();
-        Button button = new Button("hello");
+        Button button = new Button("Set");
         button.setOnAction(e -> {
             LocalDateTime localDateTime = dateTimePicker.getDateTimeValue();
             long millis = localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();

@@ -15,7 +15,7 @@ public class ClientSocket {
     public static ListenToServerThread listenToServerThread;
     public static boolean connectToServer() throws IOException {
         try {
-            clientSocket = new Socket("127.0.0.1", port);
+            clientSocket = new Socket("192.168.43.91", port);
         }catch (Exception e){
             System.out.println("can not connect to any server");
             return false;

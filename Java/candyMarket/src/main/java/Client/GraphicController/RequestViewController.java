@@ -1,5 +1,6 @@
 package Client.GraphicController;
 
+import Client.GraphicView.MenuHandler;
 import Client.Model.Request;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -20,12 +21,17 @@ public class RequestViewController implements Initializable {
 
     public void acceptRequest(ActionEvent actionEvent) {
         Request.getRequestById(ManagerRequestController.getId()).acceptRequest();
+        MenuHandler.secondCurrentWindow.close();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setContentText("confirm");
+        alert.setContentText("Confirmed");
         alert.show();
     }
 
     public void declineRequest(ActionEvent actionEvent) {
         Request.getRequestById(ManagerRequestController.getId()).declineRequest();
+        MenuHandler.secondCurrentWindow.close();
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setContentText("Declined");
+        alert.show();
     }
 }
