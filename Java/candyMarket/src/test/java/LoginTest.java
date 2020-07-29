@@ -12,16 +12,16 @@ public class LoginTest {
     @BeforeClass
     public static void createAManager() {
         buyer= new Buyer("alex", "alex", "alexi", "alex@yahoo.com", "091234567", "alex");
-        ManageInfo.allBuyers.add(buyer);
+        ManageInfo.allUsers.add(buyer);
     }
 
     @Test
     public void trueTestLogin() {
-        Assert.assertEquals(buyer.isUsernameAndPasswordCorrect("alex", "alex"), true);
+        Assert.assertEquals(true, buyer.isUsernameAndPasswordCorrect("alex", "alex"));
     }
     @Test
     public void wrongTestLogin() {
-        Assert.assertEquals(buyer.isUsernameAndPasswordCorrect("alex", "al"), false);
+        Assert.assertEquals(false, buyer.isUsernameAndPasswordCorrect("alex", "al"));
     }
 
 }

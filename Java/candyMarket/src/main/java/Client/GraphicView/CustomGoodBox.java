@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 //import org.controlsfx.control.Rating;
 
@@ -30,7 +31,7 @@ public class CustomGoodBox extends VBox {
     public CustomGoodBox(String name,int score,int price,Image image){
         good = Good.getGoodByName(name);
         photoIMG = new ImageView();
-        photoIMG.setFitWidth(100);
+        photoIMG.setFitHeight(100);
         photoIMG.setFitHeight(100);
         nameLBL = new Label();
         priceLBL = new Label();
@@ -43,11 +44,34 @@ public class CustomGoodBox extends VBox {
             }
         });
         photoIMG.setImage(image);
+        ImageView soldOutImageView = null;
+        if (good.getStock() == 0) {
+            soldOutImageView = new ImageView();
+            try {
+                String url = String.valueOf(new File(PathHandler.resourcePath+"Photos\\SoldOut.png").toURI().toURL());
+            } catch (MalformedURLException e) {
+                System.out.println("invalidPath");;
+            }
+            soldOutImageView.setImage(new Image(PathHandler.soldOutImageUrl));
+            soldOutImageView.setFitHeight(100);
+            soldOutImageView.setFitWidth(100);
+        }
+        AnchorPane imagePane = new AnchorPane();
+        imagePane.setMaxHeight(100);
+        imagePane.setMaxWidth(100);
+        imagePane.setMinWidth(100);
+        imagePane.setMinHeight(100);
+        if (soldOutImageView == null) {
+            imagePane.getChildren().add(photoIMG);
+        } else {
+            imagePane.getChildren().addAll(photoIMG, soldOutImageView);
+            soldOutImageView.toFront();
+        }
         nameLBL.setText("GoodName : "+name);
         priceLBL.setText("Price : "+String.valueOf(price));
         scoreLBL.setText("Score : "+String.valueOf(score));
         ///ratingBAR.setRating(score);
-        getChildren().addAll(photoIMG,nameLBL,priceLBL,scoreLBL,viewBtn);
+        getChildren().addAll(imagePane,nameLBL,priceLBL,scoreLBL,viewBtn);
     }
     public CustomGoodBox(String name,int score,int price){
         good = Good.getGoodByName(name);
@@ -64,6 +88,29 @@ public class CustomGoodBox extends VBox {
             System.out.println("invalidPath");;
         }
         photoIMG.setImage(new Image(PathHandler.withoutImageUrl));
+        ImageView soldOutImageView = null;
+        if (good.getStock() == 0) {
+            soldOutImageView = new ImageView();
+            try {
+                url = String.valueOf(new File(PathHandler.resourcePath+"Photos\\SoldOut.png").toURI().toURL());
+            } catch (MalformedURLException e) {
+                System.out.println("invalidPath");;
+            }
+            soldOutImageView.setImage(new Image(PathHandler.soldOutImageUrl));
+            soldOutImageView.setFitHeight(100);
+            soldOutImageView.setFitWidth(100);
+        }
+        AnchorPane imagePane = new AnchorPane();
+        imagePane.setMaxHeight(100);
+        imagePane.setMaxWidth(100);
+        imagePane.setMinWidth(100);
+        imagePane.setMinHeight(100);
+        if (soldOutImageView == null) {
+            imagePane.getChildren().add(photoIMG);
+        } else {
+            imagePane.getChildren().addAll(photoIMG, soldOutImageView);
+            soldOutImageView.toFront();
+        }
         nameLBL.setText("GoodName : "+name);
         priceLBL.setText("Price : "+String.valueOf(price));
         scoreLBL.setText("Score : "+String.valueOf(score));
@@ -75,6 +122,6 @@ public class CustomGoodBox extends VBox {
             }
         });
         ///ratingBAR.setRating(score);
-        getChildren().addAll(photoIMG,nameLBL,priceLBL,scoreLBL,viewBtn);
+        getChildren().addAll(imagePane,nameLBL,priceLBL,scoreLBL,viewBtn);
     }
 }
