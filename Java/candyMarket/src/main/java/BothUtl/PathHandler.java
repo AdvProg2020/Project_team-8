@@ -79,4 +79,13 @@ public class PathHandler {
             e.printStackTrace();
         }
     }
+
+    public static String soldOutImageUrl;
+    static {
+        try {
+            soldOutImageUrl = String.valueOf(new File(resourcePath + "Photos\\soldOut.png").toURI().toURL());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
 }

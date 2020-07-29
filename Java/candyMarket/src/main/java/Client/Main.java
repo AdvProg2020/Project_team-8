@@ -18,6 +18,7 @@ public class Main extends Application {
     public static String fxmlPath = "Java\\candyMarket\\src" +
             "\\main\\java\\Client.Client.GraphicView\\";
     public static void main(String[] args) throws IOException {
+        System.out.println(System.getProperty("user.home"));
         Controller.connectToServer();
         launch(args);
         if(UserHandler.getCurrentUser()!=null) {

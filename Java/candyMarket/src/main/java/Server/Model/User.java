@@ -140,7 +140,7 @@ public class User  {
         if (isThereUserWithUsername(username)) {
             for (User user : ManageInfo.allUsers) {
                 if (user.getPassword().equals(passWord)) {
-                    UserHandler.setCurrentUser(this);
+                    //UserHandler.setCurrentUser(this);
                     return true;
                 }
                 else
