@@ -1,0 +1,31 @@
+phase 1:
+done:
+1-moshahede kharidarane yek mahsul(10)
+2-moghayese 2 mahsul(30)
+3-moshahede nazarat(15)
+4-nazar dadan(20)
+5-etaye code takhfif be karbaran ruydade khas(30)
+will do:
+1-safe haraj(filter dorost kar konad) (10)
+2-neveshtane unit test (15)
+total:130
+
+phase2:
+done:
+1-namayeshe naghsh(5)
+2-namayeshe nomre graphici(15)
+3-nomre dadan be mahsul(5) nesfesho nagereftim
+4-sabte nazar(10)
+5-namayeshe liste nazarat(10)
+6-reply baraye nazarat(20)
+7-zoom dar aks(30)
+8-video (40)
+9-moghayese(5)
+10-sprite animation(20)
+will do:
+1-taghire akse kala motenaseb ba vaziate kala(15)
+2-emkane filter dar safe haraj ha(5)
+total:180
+
+phase3:
+don

@@ -15,6 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
+import org.apache.commons.io.FilenameUtils;
 
 import java.io.File;
 import java.net.URL;
@@ -103,9 +104,11 @@ public class AddNewFileController implements Initializable {
             else {
                 errorMessage.setStyle("-fx-background-color: #00ff00;");
                 errorMessage.setText("Update Request has been sent");
+                String fileType = FilenameUtils.getExtension(selectedFile.getPath());
                 FileGood filegood = new FileGood(nameText, brandText, priceText, UserHandler.currentSeller,
-                        stockText, categoryValue, detailText, photoUrl, null,getProperties(), selectedFile.getPath());
-                Functions.showDialog("your request has been sent",false);
+                        stockText, categoryValue, detailText, photoUrl, null,getProperties(), selectedFile.getPath(),fileType);
+                Thread.sleep(100);
+                Functions.showDialog("successfully file uploaded",false);
                 SellerProductHandlingController.sellerProductHandlingController.initialize(null,null);
                 MenuHandler.secondCurrentWindow.close();
             }

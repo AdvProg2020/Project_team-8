@@ -20,18 +20,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5056cf86-7e6b-4bdc-adba-19ed1ac6bda0" name="Default Changelist" comment="add client details for manager page">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/207file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/MyFilee.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/TestFilleee55.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/dashsttttttttttt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/ff.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/fff.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/ffffsf.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/fileeeeeeeeeeee.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/gfgfgf.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/myFileGood.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/mytext66.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/newFile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/stfile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/resources/FileGoods/testhlo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/ApProject_OnlineShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/ClientSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/JsonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/JsonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AddNewFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/AddNewFileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/BuyerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/FilesBoughtController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/FilesBoughtController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/CustomFileDownloadBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/CustomFileDownloadBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/MenuHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicView/MenuHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/FileGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/FileGood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/HibernateConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/DataBase/HibernateConfigs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/ManageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/ManageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/SortComparators.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/SortComparators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/DataAccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/DataHandler/Socket/MessageHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/FileGood.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/FileGood.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/ManageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/src/main/java/Server/Model/ManageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket$ListenToServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket$ListenToServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/ClientSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/DataAccessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/DataAccessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/JsonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/JsonHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/DataHandler/MessageHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AddNewFileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AddNewFileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AuctionMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/AuctionMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/BuyerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/BuyerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicController/PayController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/MenuHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/GraphicView/MenuHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/FileGood.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/FileGood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/HibernateConfigs.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/DataBase/HibernateConfigs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/ManageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/ManageInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/SortComparators$SortDateCreated.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/SortComparators$SortDateCreated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/SortComparators$SortDateModified.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Client/Model/SortComparators$SortDateModified.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/DataAccessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/DataAccessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/DataHandler/Socket/MessageHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/FileGood.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/FileGood.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Good$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Good$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/Good.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/ManageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/candyMarket/target/classes/Server/Model/ManageInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydb.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydb.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,31 +83,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="new5" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="CSS File" />
         <option value="Tag Library Descriptor" />
-        <option value="package-info" />
-        <option value="XSLT Stylesheet" />
+        <option value="FxmlFile" />
         <option value="FxmlFile" />
         <option value="Class" />
       </list>
@@ -91,38 +117,41 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/p2p-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3321839" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\Server" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\Client" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\Server\Model" />
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Server.Model" />
+      <recent name="Client.Model" />
+      <recent name="Server.DataHandler" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\Client\GraphicView" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Hibernate Maps" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\test\java\resources" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src" />
       <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\test\java" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Server.DataHandler" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources\Hibernate Maps" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\resources" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\resources" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\Server" />
-      <recent name="C:\Users\Asus\Documents\GitHub\ApProject\Java\candyMarket\src\main\java\GraphicController" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -139,50 +168,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataBaseHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server.DataHandler.DataBaseHandler" />
+    <configuration name="BankServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BankServer.BankServer" />
       <module name="ApProject_OnlineShop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Server.DataHandler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client.Main" />
-      <module name="ApProject_OnlineShop" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ApProject_OnlineShop" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client.Main" />
-      <module name="ApProject_OnlineShop" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Client.*" />
+          <option name="PATTERN" value="BankServer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,10 +184,10 @@
     <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.Main" />
       <module name="ApProject_OnlineShop" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\JavaFxFiles\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../../../../JavaFxFiles/javafx-sdk-11.0.2/lib --add-modules javafx.swing,javafx.graphics,javafx.fxml,javafx.media,javafx.controls" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Client.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -204,7 +195,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="main (2)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.main" />
       <module name="ApProject_OnlineShop" />
       <extension name="coverage">
@@ -217,12 +208,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTest.trueTestLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApProject_OnlineShop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <option name="METHOD_NAME" value="trueTestLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.DataBaseHandler" />
+      <item itemvalue="Application.main (2)" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.main" />
-      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.BankAPI" />
       <item itemvalue="Application.BankServer" />
+      <item itemvalue="JUnit.LoginTest.trueTestLogin" />
     </list>
     <recent_temporary>
       <list>
@@ -295,7 +296,8 @@
       <workItem from="1595769925744" duration="46000" />
       <workItem from="1595770166798" duration="97000" />
       <workItem from="1595770337202" duration="25249000" />
-      <workItem from="1595852372102" duration="76749000" />
+      <workItem from="1595852372102" duration="80980000" />
+      <workItem from="1596009876540" duration="13568000" />
     </task>
     <task id="LOCAL-00001" summary="make runnable">
       <created>1588080531585</created>
@@ -479,286 +481,29 @@
       <option name="project" value="LOCAL" />
       <updated>1593129900262</updated>
     </task>
-    <task id="LOCAL-00027" summary="add comment section">
-      <created>1594927350626</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1594927350626</updated>
-    </task>
-    <task id="LOCAL-00028" summary="add compare section">
-      <created>1595000832014</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1595000832014</updated>
-    </task>
-    <task id="LOCAL-00029" summary="edit compare section">
-      <created>1595002154153</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1595002154153</updated>
-    </task>
-    <task id="LOCAL-00030" summary="edit compare section">
-      <created>1595006304688</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1595006304688</updated>
-    </task>
-    <task id="LOCAL-00031" summary="edit compare section">
-      <created>1595006326674</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1595006326674</updated>
-    </task>
-    <task id="LOCAL-00032" summary="edit compare section">
-      <created>1595006334939</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1595006334939</updated>
-    </task>
-    <task id="LOCAL-00033" summary="add Supporter as a useless user">
-      <created>1595013775607</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1595013775607</updated>
-    </task>
-    <task id="LOCAL-00034" summary="add file">
-      <created>1595164703041</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1595164703041</updated>
-    </task>
-    <task id="LOCAL-00035" summary="add file">
-      <created>1595164773786</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1595164773786</updated>
-    </task>
-    <task id="LOCAL-00036" summary="add file">
-      <created>1595164792024</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1595164792024</updated>
-    </task>
-    <task id="LOCAL-00037" summary="add file">
-      <created>1595164819616</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1595164819616</updated>
-    </task>
-    <task id="LOCAL-00038" summary="add Supporter Chatting system">
-      <created>1595454309907</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1595454309907</updated>
-    </task>
-    <task id="LOCAL-00039" summary="add Supporter Chatting system">
-      <created>1595454323038</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1595454323038</updated>
-    </task>
-    <task id="LOCAL-00040" summary="add Supporter Chatting system">
-      <created>1595454331430</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1595454331430</updated>
-    </task>
-    <task id="LOCAL-00041" summary="add Supporter Chatting system">
-      <created>1595592299011</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1595592299011</updated>
-    </task>
-    <task id="LOCAL-00042" summary="debug">
-      <created>1595789870213</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1595789870213</updated>
-    </task>
-    <task id="LOCAL-00043" summary="debug">
-      <created>1595789960765</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1595789960765</updated>
-    </task>
-    <task id="LOCAL-00044" summary="debug">
-      <created>1595790069802</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1595790069802</updated>
-    </task>
-    <task id="LOCAL-00045" summary="debug">
-      <created>1595790092487</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1595790092487</updated>
-    </task>
-    <task id="LOCAL-00046" summary="debug">
-      <created>1595790169305</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1595790169305</updated>
-    </task>
-    <task id="LOCAL-00047" summary="debug">
-      <created>1595790182776</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1595790182776</updated>
-    </task>
-    <task id="LOCAL-00048" summary="debug">
-      <created>1595790209202</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1595790209202</updated>
-    </task>
-    <task id="LOCAL-00049" summary="debug">
-      <created>1595796612069</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1595796612069</updated>
-    </task>
-    <task id="LOCAL-00050" summary="debug">
-      <created>1595796646413</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1595796646414</updated>
-    </task>
-    <task id="LOCAL-00051" summary="debug">
-      <created>1595796774787</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1595796774787</updated>
-    </task>
-    <task id="LOCAL-00052" summary="debug">
-      <created>1595924806745</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1595924806746</updated>
-    </task>
-    <task id="LOCAL-00053" summary="debug">
-      <created>1595934191269</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1595934191269</updated>
-    </task>
-    <task id="LOCAL-00054" summary="debug">
-      <created>1595934225772</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1595934225772</updated>
-    </task>
-    <task id="LOCAL-00055" summary="debug">
-      <created>1595934253344</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1595934253344</updated>
-    </task>
-    <task id="LOCAL-00056" summary="debug">
-      <created>1595937846268</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1595937846269</updated>
-    </task>
-    <task id="LOCAL-00057" summary="debug">
-      <created>1595943559808</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1595943559809</updated>
-    </task>
-    <task id="LOCAL-00058" summary="debug">
-      <created>1595958108060</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1595958108060</updated>
-    </task>
-    <task id="LOCAL-00059" summary="debug">
-      <created>1595958136295</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1595958136295</updated>
-    </task>
-    <task id="LOCAL-00060" summary="debug">
-      <created>1595968030342</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1595968030342</updated>
-    </task>
-    <task id="LOCAL-00061" summary="debug">
-      <created>1595973945654</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1595973945654</updated>
-    </task>
-    <task id="LOCAL-00062" summary="debug">
-      <created>1595973994537</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1595973994537</updated>
-    </task>
-    <task id="LOCAL-00063" summary="debug">
-      <created>1595979040999</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1595979040999</updated>
-    </task>
-    <option name="localTasksCounter" value="64" />
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Finalize Registering (on View)" />
+    <MESSAGE value="Update SellersMenu v2" />
+    <MESSAGE value="finalize Register and Login Menus" />
     <MESSAGE value="finalize Register and Login Menus v2" />
     <MESSAGE value="finalize Register and Login Menus v3" />
     <MESSAGE value="finalize Register and Login Menus v4" />
@@ -776,101 +521,93 @@
     <MESSAGE value="add Personal Info Pages" />
     <MESSAGE value="fix Personal Info Pages" />
     <MESSAGE value="add client details for manager page" />
-    <MESSAGE value="add comment section" />
-    <MESSAGE value="add compare section" />
-    <MESSAGE value="edit compare section" />
-    <MESSAGE value="add Supporter as a useless user" />
-    <MESSAGE value="add file" />
-    <MESSAGE value="add Supporter Chatting system" />
-    <MESSAGE value="Merge branch 'Java' of https://github.com/AdvProg2020/Project_team-8 into Java&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;Java/candyMarket/target/classes/Client/Model/Chat.class&#10;&#9;Java/candyMarket/target/classes/Server/DataHandler/DataBase/DBHandler.class&#10;&#9;mydb.db" />
-    <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="add client details for manager page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="0" key="#Assign_Data_Sources" timestamp="1595872407166">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="233" y="0" key="#Assign_Data_Sources/0.0.1280.683@0.0.1280.683" timestamp="1595872407166" />
     <state x="233" y="0" key="#Inspections" timestamp="1595175785603">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="0" key="#Inspections/0.0.1280.683@0.0.1280.683" timestamp="1595175785603" />
-    <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1595594201477">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="360" y="0" width="578" height="680" key="#Main" timestamp="1593176867518">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="360" y="0" width="578" height="680" key="#Main/0.0.1280.680@0.0.1280.680" timestamp="1593176867518" />
-    <state x="360" y="0" width="575" height="683" key="#Main/0.0.1280.683@0.0.1280.683" timestamp="1595594201477" />
-    <state x="360" y="11" width="759" height="660" key="#Main_(1)" timestamp="1595873530137">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="360" y="0" width="575" height="683" key="#Main/0.0.1280.683@0.0.1280.683" timestamp="1593109668622" />
+    <state x="582" y="204" key="#Notifications" timestamp="1595963116847">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="360" y="11" width="759" height="660" key="#Main_(1)/0.0.1280.683@0.0.1280.683" timestamp="1595873530137" />
-    <state x="233" y="0" key="#Notifications" timestamp="1595454372708">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="233" y="0" key="#Notifications/0.0.1280.683@0.0.1280.683" timestamp="1595454372708" />
+    <state x="582" y="204" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1595963116847" />
     <state x="121" y="0" key="#Project_Structure" timestamp="1592219098177">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1592219098177" />
-    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1595019519967">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1594724275130">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594724275130" />
-    <state x="371" y="96" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1280.683@0.0.1280.683" timestamp="1595019519967" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595942508389">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595784529812">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1593777397286" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1595942508389" />
-    <state x="348" y="144" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595871526010">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1595784529812" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1592088967857" />
+    <state x="156" y="100" width="1080" height="481" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1595938164458">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="156" y="100" width="1080" height="481" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1595938164458" />
+    <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595080058581">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="348" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1594725069925" />
-    <state x="348" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.683@0.0.1280.683" timestamp="1595871526010" />
-    <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1595784393888">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1593093420947">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.680@0.0.1280.680" timestamp="1593093420947" />
-    <state x="421" y="45" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.683@0.0.1280.683" timestamp="1595784393888" />
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1595978117294">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1595966741549">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1594839002015" />
-    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1595978117294" />
+    <state x="869" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1595966741549" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1592092051466" />
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588079943544">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="490" y="230" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.683@0.0.1280.683" timestamp="1588079943544" />
-    <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1595594010081">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1593088346109">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.680@0.0.1280.680" timestamp="1593088346109" />
-    <state x="471" y="51" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.683@0.0.1280.683" timestamp="1595594010081" />
-    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594726044167">
+    <state x="447" y="265" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1595376879044">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="418" y="210" width="445" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1594726044167" />
-    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595009369318">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.683@0.0.1280.683" timestamp="1595009369318" />
-    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594831531438">
+    <state x="447" y="265" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1595376879044" />
+    <state x="418" y="210" width="445" height="307" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595371780790">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594831531438" />
+    <state x="418" y="210" width="445" height="307" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1595371780790" />
+    <state x="438" y="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1595371754952">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.680@0.0.1280.680" timestamp="1595371754952" />
+    <state x="426" y="137" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595165883412">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="426" y="137" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1595165883412" />
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595888411622">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1595888411622" />
+    <state x="371" y="88" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1595780060544">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="88" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1280.680@0.0.1280.680" timestamp="1595780060544" />
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1593086131481">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="381" y="95" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593086131481" />
-    <state x="360" y="11" key="#main" timestamp="1595777182090">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="360" y="11" key="#main/0.0.1280.683@0.0.1280.683" timestamp="1595777182090" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595979039489">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="125" y="0" key="CommitChangelistDialog2" timestamp="1593040742508">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1593040742508" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1595979039489" />
+    <state x="125" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1593129898909" />
     <state x="395" y="55" key="DetectedRootsChooserDialog" timestamp="1592071705791">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
@@ -880,132 +617,234 @@
     </state>
     <state x="421" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1595974107714" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1592073787943" />
-    <state width="1237" height="117" key="GridCell.Tab.0.bottom" timestamp="1595980265926">
+    <state width="1237" height="117" key="GridCell.Tab.0.bottom" timestamp="1596024744628">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="117" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595980265926" />
+    <state width="1237" height="117" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1596024744628" />
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1237" height="117" key="GridCell.Tab.0.center" timestamp="1595980265925">
+    <state width="1237" height="117" key="GridCell.Tab.0.center" timestamp="1596024744628">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="117" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595980265925" />
+    <state width="1237" height="117" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1596024744628" />
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="117" key="GridCell.Tab.0.left" timestamp="1595980265925">
+    <state width="1237" height="117" key="GridCell.Tab.0.left" timestamp="1596024744627">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="117" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595980265925" />
+    <state width="1237" height="117" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1596024744627" />
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1592093387512" />
-    <state width="1237" height="117" key="GridCell.Tab.0.right" timestamp="1595980265925">
+    <state width="1237" height="117" key="GridCell.Tab.0.right" timestamp="1596024744628">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="117" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595980265925" />
+    <state width="1237" height="117" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1596024744628" />
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1592093387513" />
-    <state width="1222" height="136" key="GridCell.Tab.1.bottom" timestamp="1595957430262">
+    <state width="1237" height="138" key="GridCell.Tab.1.bottom" timestamp="1596021937048">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
-    <state width="1237" height="199" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1595872702284" />
-    <state width="1237" height="199" key="GridCell.Tab.1.center" timestamp="1595872702284">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="138" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1596021937048" />
+    <state width="1237" height="199" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
+    <state width="1237" height="138" key="GridCell.Tab.1.center" timestamp="1596021937047">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
-    <state width="1237" height="199" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1595872702284" />
-    <state width="1237" height="199" key="GridCell.Tab.1.left" timestamp="1595872702284">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="138" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1596021937047" />
+    <state width="1237" height="199" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
+    <state width="1237" height="138" key="GridCell.Tab.1.left" timestamp="1596021937047">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
-    <state width="1237" height="199" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1595872702284" />
-    <state width="1237" height="199" key="GridCell.Tab.1.right" timestamp="1595872702284">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state width="1237" height="138" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1596021937047" />
+    <state width="1237" height="199" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
+    <state width="1237" height="138" key="GridCell.Tab.1.right" timestamp="1596021937047">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1593781945489" />
-    <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1595872702284" />
-    <state width="198" height="457" key="HiddenNamespacesPopup" timestamp="1595872523117">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="198" height="457" key="HiddenNamespacesPopup/0.0.1280.683@0.0.1280.683" timestamp="1595872523117" />
-    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1595888648556">
+    <state width="1237" height="138" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1596021937047" />
+    <state width="1237" height="199" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1589682405295" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1594921403463">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="99" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1594823136195" />
-    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1595888648556" />
-    <state x="121" y="50" key="MergeDialog" timestamp="1595797278381">
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1594921403463" />
+    <state x="121" y="50" key="MergeDialog" timestamp="1595164879212">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="121" y="50" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046263" />
-    <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595797278381" />
-    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1595974010147">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="121" y="50" key="MergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419472" />
+    <state x="354" y="57" key="MultipleFileMergeDialog" timestamp="1593034046273">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1593034046273" />
-    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1595974010147" />
+    <state x="354" y="57" key="MultipleFileMergeDialog/0.0.1280.683@0.0.1280.683" timestamp="1589840419485" />
     <state x="314" y="39" key="NewModule_or_Project.wizard" timestamp="1593041148078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="314" y="39" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1593041148078" />
-    <state x="121" y="0" width="1038" height="680" key="SettingsEditor" timestamp="1595867837939">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="215" y="0" width="1038" height="680" key="SettingsEditor" timestamp="1595867272169">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="215" y="0" width="1038" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594825504420" />
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1595867837939" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1595465442728">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1280.683@0.0.1280.683" timestamp="1595465442728" />
-    <state x="486" y="256" key="VCS.ChangelistChooser" timestamp="1594926976894">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="486" y="256" key="VCS.ChangelistChooser/0.0.1280.683@0.0.1280.683" timestamp="1594926976894" />
+    <state x="215" y="0" width="1038" height="680" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1595867272169" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1592076197171" />
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1593033946494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="333" y="97" key="Vcs.Multiple.Commit.Info.Dialog.Key/0.0.1280.680@0.0.1280.680" timestamp="1593033946494" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1595979052806">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1593129913443">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593034111139" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1595979052806" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1589841953191" />
     <state width="647" height="347" key="XDebugger.FullValuePopup" timestamp="1593125982030">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="647" height="347" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1593125982030" />
-    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1595935059545">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
-    <state x="337" y="165" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1595935059545" />
-    <state x="375" y="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1595859887905">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1593041894737" />
-    <state x="375" y="235" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.683@0.0.1280.683" timestamp="1595859887905" />
-    <state x="595" y="51" width="587" height="592" key="find.popup" timestamp="1594824385210">
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1593032403932">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="595" y="51" width="587" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1594824385210" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog" timestamp="1595979045902">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593032403932" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1593168788356" />
+    <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1595867267112">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="375" y="234" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1595867267112" />
+    <state x="356" y="17" width="764" height="592" key="find.popup" timestamp="1596022727532">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="356" y="17" width="764" height="592" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1596022727532" />
+    <state x="286" y="131" key="git4idea.merge.GitPullDialog" timestamp="1593033787588">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="286" y="131" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1593033787588" />
-    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1595979045902" />
+    <state x="286" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.683@0.0.1280.683" timestamp="1589841943867" />
     <state x="435" y="185" key="git4idea.ui.GitTagDialog" timestamp="1593187629573">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="435" y="185" key="git4idea.ui.GitTagDialog/0.0.1280.680@0.0.1280.680" timestamp="1593187629573" />
-    <state x="152" y="0" key="new project wizard" timestamp="1594825576224">
+    <state x="152" y="0" key="new project wizard" timestamp="1596015536285">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="152" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1594825576224" />
+    <state x="152" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1596015536285" />
     <state x="91" y="36" key="new project wizard/0.0.1280.683@0.0.1280.683" timestamp="1588513960615" />
-    <state x="297" y="151" key="run.anything.popup" timestamp="1593672165547">
+    <state x="282" y="67" width="700" height="530" key="recent.locations.popup" timestamp="1595004269049">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1593672165547" />
-    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1595465448900">
-      <screen x="0" y="0" width="1280" height="683" />
+    <state x="282" y="67" width="700" height="530" key="recent.locations.popup/0.0.1280.680@0.0.1280.680" timestamp="1595004269049" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1595424086804">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="3" width="672" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594835802527" />
-    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1595465448900" />
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1595424086804" />
+    <state x="303" y="3" width="672" height="676" key="search.everywhere.popup" timestamp="1596012224574">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="3" width="672" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1596012224574" />
+    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1589670451097" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/Discount.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/ProfileController.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/Model/SellLog.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/PayWithBankAccountController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/PayWithBankAccountController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/PayWithBankAccountController.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/GraphicController/PayWithBankAccountController.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>251</line>
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>256</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>257</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>215</line>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>223</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>225</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/BankServer/BankServer.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/DataAccessor.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>279</line>
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/candyMarket/src/main/java/Client/DataHandler/MessageHandler.java</url>
+          <line>281</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ApProject$Main.ic" NAME="Main Coverage Results" MODIFIED="1592397832356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

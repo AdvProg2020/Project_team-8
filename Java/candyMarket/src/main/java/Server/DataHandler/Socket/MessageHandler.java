@@ -1,12 +1,13 @@
 package Server.DataHandler.Socket;
 
+import BothUtl.PathHandler;
+import Client.DataHandler.ClientSocket;
+import Server.Model.FileGood;
 import Server.Model.ManageInfo;
 import Server.Model.User;
 import Server.Model.UserHandler;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.net.Socket;
 
@@ -71,10 +72,81 @@ public class MessageHandler {
                     dos.writeUTF("S.Bank#"+response);
                     dos.flush();
                 }
+                else if(input.startsWith("C.uploadFile")){
+                    String fileName = input.split("#")[1];
+                    String fileType = input.split("#")[2];
+                    int bytesRead;
+                    int current = 0;
+                    FileOutputStream fos = null;
+                    BufferedOutputStream bos = null;
+                    try {
+
+                        // receive file
+                        byte [] mybytearray  = new byte [20002];
+                        InputStream is = clientSocket.getInputStream();
+                        fos = new FileOutputStream(PathHandler.resourcePath+"FileGoods\\"+fileName+"."+fileType);
+                        bos = new BufferedOutputStream(fos);
+                        bytesRead = is.read(mybytearray,0,mybytearray.length);
+                        current = bytesRead;
+
+                        do {
+                            bytesRead =
+                                    is.read(mybytearray, current, (mybytearray.length-current));
+                            if(bytesRead >= 0) current += bytesRead;
+                        } while(bytesRead > -1);
+
+                        bos.write(mybytearray, 0 , current);
+                        bos.flush();
+                        System.out.println("File " + PathHandler.resourcePath+"FileGoods\\myTestTxt.txt"
+                                + " downloaded (" + current + " bytes read)");
+                    }
+                    finally {
+                        if (fos != null) fos.close();
+                        if (bos != null) bos.close();
+                    }
+                }
+                else if(input.startsWith("C.downloadFile")){
+                    String fileGoodName = input.split("#")[1];
+                    FileGood fileGood = FileGood.getFileGoodByName(fileGoodName);
+                    String fileName = fileGood.getName();
+                    String fileType = fileGood.getFileType();
+                    String path = PathHandler.resourcePath+"FileGoods\\"+fileName+"."+fileType;
+                    DataOutputStream dos;
+                    try {
+                        dos=new DataOutputStream(ClientSocket.clientSocket.getOutputStream());
+                        dos.writeUTF("S.uploadFile#"+fileName+"#"+fileType);
+                        dos.flush();
+                        FileInputStream fis = null;
+                        BufferedInputStream bis = null;
+                        try {
+                            File myFile = new File(path);
+                            byte[] mybytearray = new byte[(int) myFile.length()];
+                            fis = new FileInputStream(myFile);
+                            bis = new BufferedInputStream(fis);
+                            bis.read(mybytearray, 0, mybytearray.length);
+                            dos.write(mybytearray, 0, mybytearray.length);
+                            dos.flush();
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } finally {
+                            if (bis != null) {
+                                try {
+                                    bis.close();
+                                    dos.close();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
     }
-
 
     public static void sendDeleteDataMessageToAllClients(Socket senderClient,String id,String className) throws IOException {
         DataOutputStream dos = null;

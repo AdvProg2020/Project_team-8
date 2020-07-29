@@ -6,8 +6,8 @@ import Client.Model.User;
 import Client.Model.UserHandler;
 import com.google.gson.internal.$Gson$Preconditions;
 
-import java.io.DataInputStream;
-import java.io.IOException;
+import java.io.*;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -27,6 +27,86 @@ public class MessageHandler {
         }
         response = response.substring(2);
         return response;
+    }
+    public static void sendUploadDataMessage(String path,String fileName,String fileType) {
+         DataOutputStream dos;
+        try {
+            dos=new DataOutputStream(ClientSocket.clientSocket.getOutputStream());
+            dos.writeUTF("C.uploadFile#"+fileName+"#"+fileType);
+            dos.flush();
+            FileInputStream fis = null;
+            BufferedInputStream bis = null;
+            try {
+                 File myFile = new File(path);
+                 byte[] mybytearray = new byte[(int) myFile.length()];
+                 fis = new FileInputStream(myFile);
+                 bis = new BufferedInputStream(fis);
+                 bis.read(mybytearray, 0, mybytearray.length);
+                dos.write(mybytearray, 0, mybytearray.length);
+                dos.flush();
+             } catch (FileNotFoundException e) {
+                 e.printStackTrace();
+             } catch (IOException e) {
+                 e.printStackTrace();
+             } finally {
+                 if (bis != null) {
+                     try {
+                         bis.close();
+                     } catch (IOException e) {
+                         e.printStackTrace();
+                     }
+                 }
+             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void sendDownloadDataMessage(String path,String fileGoodName) throws IOException {
+        DataOutputStream dos;
+        DataInputStream dis;
+        int bytesRead;
+        int current = 0;
+        FileOutputStream fos = null;
+        BufferedOutputStream bos = null;
+        try {
+            dis = new DataInputStream(ClientSocket.clientSocket.getInputStream());
+            dos=new DataOutputStream(ClientSocket.clientSocket.getOutputStream());
+            dos.writeUTF("C.downloadFile"+"#"+fileGoodName);
+            dos.flush();
+            String input = dis.readUTF();
+            String fileName = input.split("#")[1];
+            String fileType = input.split("#")[2];
+            try {
+                Thread.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            // receive file
+            byte [] mybytearray  = new byte [20002];
+            InputStream is = ClientSocket.clientSocket.getInputStream();
+            fos = new FileOutputStream(path+fileName+"."+fileType);
+            bos = new BufferedOutputStream(fos);
+            bytesRead = is.read(mybytearray,0,mybytearray.length);
+            current = bytesRead;
+
+            do {
+                bytesRead =
+                        is.read(mybytearray, current, (mybytearray.length-current));
+                if(bytesRead >= 0) current += bytesRead;
+            } while(bytesRead > -1);
+
+            bos.write(mybytearray, 0 , current);
+            bos.flush();
+        }  finally {
+            if (fos != null) {
+                try {
+                    fos.close();
+                    if (bos != null) bos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
     public static String sendGetAllDataMessage(String className) throws IOException {
         ClientSocket.dos.writeUTF("C.getAllData#from#"+className);
@@ -192,7 +272,6 @@ public class MessageHandler {
                 throw new WalletExceptions(inputs[1]);
     }
     public static void getMessageListener() throws IOException, ClassNotFoundException, InterruptedException {
-        List<String> serverChanges = new ArrayList<>();
         DataInputStream dis = null;
         dis =new DataInputStream(ClientSocket.clientSocket.getInputStream());
         while (true){

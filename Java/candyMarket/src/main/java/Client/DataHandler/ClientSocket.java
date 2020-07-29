@@ -15,7 +15,7 @@ public class ClientSocket {
     public static ListenToServerThread listenToServerThread;
     public static boolean connectToServer() throws IOException {
         try {
-            clientSocket = new Socket("192.168.43.91", port);
+            clientSocket = new Socket("localhost", port);
         }catch (Exception e){
             System.out.println("can not connect to any server");
             return false;
@@ -48,6 +48,7 @@ public class ClientSocket {
         ManageInfo.allSellLogs = JsonHandler.getAllData(SellLog[].class);
         ManageInfo.allChats = JsonHandler.getAllData(Chat[].class);
         ManageInfo.allAuctions = JsonHandler.getAllData(Auction[].class);
+        ManageInfo.allFileGoods = JsonHandler.getAllData(FileGood[].class);
         UserHandler.onlineUsers = MessageHandler.getLoginUsers();
         ManageInfo.allUsers.addAll(ManageInfo.allBuyers);
         ManageInfo.allUsers.addAll(ManageInfo.allManagers);

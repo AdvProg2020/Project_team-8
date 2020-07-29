@@ -1,0 +1,250 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+ int n=200;
+int flag=0;
+int mode2flag=0;
+int mode2nextmove=0;
+int nextmoves[200];
+long long int time;
+int satr[20];
+int sotun[30];
+   void satrvasotun(int enemyposition[30][20]){
+    for(int i=0;i<20;i++){
+        int satrvasotunflag=0;
+        for(int j=0;j<30;j++)
+            if (enemyposition[j][i] == 1) satrvasotunflag=1;
+        if (satrvasotunflag==0) satr[i]=0;else satr[i]=1;
+    }
+        for(int i=0;i<30;i++){
+        int satrvasotunflag=0;
+        for(int j=0;j<20;j++)
+            if (enemyposition[i][j] == 1) satrvasotunflag=1;
+        if (satrvasotunflag==0) sotun[i]=0;else sotun[i]=1;
+        }
+
+}
+int safemovesmode2(int myposition[30][20],int enemyposition[30][20],int mycurrentx,int mycurrenty,int enemycurrentx,int enemycurrenty){
+    satrvasotun(myposition);
+    int m=2;
+    if(sotun[mycurrentx+1]==0){
+        satrvasotun(enemyposition);
+            if(sotun[mycurrentx+1]==0)
+                if(enemycurrentx>mycurrentx+m)
+                    if(mycurrenty<10)
+                return 12;
+                else if(mycurrenty>20) return 14;
+    }
+    satrvasotun(myposition);
+    if(sotun[mycurrentx-1]==0){
+            fprintf(stderr,"%d",myposition[mycurrentx-1][mycurrenty]);
+        satrvasotun(enemyposition);
+            if(sotun[mycurrentx-1]==0)
+                if(enemycurrentx<mycurrentx-m)
+                    if(mycurrenty<6)
+                    return 32;
+                    else if(mycurrenty>14) return 34;
+    }satrvasotun(myposition);
+    if(satr[mycurrenty+1]==0){
+        satrvasotun(enemyposition);
+            if(satr[mycurrenty+1]==0)
+                if(enemycurrenty>mycurrenty+m)
+                    if(mycurrentx<10)
+                    return 21;
+                    else if(mycurrentx>20) return 23;
+    }
+    satrvasotun(myposition);
+    if(satr[mycurrenty-1]==0){
+        satrvasotun(enemyposition);
+            if(satr[mycurrenty-1]==0)
+                if(enemycurrenty<mycurrenty-m)
+                    if(mycurrentx<10)
+                    return 41;
+                    else if(mycurrentx>20) return 43;
+    }
+    return 0;
+}
+//int enemysafemoves(int enemynextmoves[n],int myposition[30][20],int enemyposition[30][20],int step,int currentx,int currenty,int safeareascale,int zireisok )
+int safemoves(int mynextmoves[n],int myposition[30][20],int enemyposition[30][20],int step,int currentx,int currenty,int safeareascale,int zireisok){
+    time++;
+    //if(time % 1000==0) fprintf(stderr,"timeis(%d)",time);
+    if (flag==0){
+    if(step>=safeareascale){
+        flag=1;
+        for(int i=1;i<n;i++)
+        nextmoves[i]=mynextmoves[i];
+        return step;
+    }else{
+        nextmoves[1]=mynextmoves[1];
+    }
+    if(time>200000) {
+        flag=1;
+        fprintf(stderr,"\nDARRAFTI\n");
+    return step;
+    }
+    int ziro=1;
+    if (zireisok==1) ziro=0;
+    if(currentx+1<30-ziro && myposition[currentx+1][currenty]==0 && enemyposition[currentx+1][currenty]==0){
+        mynextmoves[step]=1;
+        myposition[currentx+1][currenty]=1;
+        safemoves(mynextmoves,myposition,enemyposition,step+1,currentx+1,currenty,safeareascale,zireisok);
+        myposition[currentx+1][currenty]=0;
+    }
+    if (zireisok==1) ziro=0;
+    if(currentx-1>=ziro && myposition[currentx-1][currenty]==0 && enemyposition[currentx-1][currenty]==0){
+        //printf("?%d?",step);
+        mynextmoves[step]=3;
+        myposition[currentx-1][currenty]=1;
+        safemoves(mynextmoves,myposition,enemyposition,step+1,currentx-1,currenty,safeareascale,zireisok);
+        myposition[currentx-1][currenty]=0;
+    }
+    if (zireisok==1) ziro=0;
+    if(currenty+1<20-ziro && myposition[currentx][currenty+1]==0 && enemyposition[currentx][currenty+1]==0){
+        mynextmoves[step]=2;
+        myposition[currentx][currenty+1]=1;
+        safemoves(mynextmoves,myposition,enemyposition,step+1,currentx,currenty+1,safeareascale,zireisok);
+        myposition[currentx][currenty+1]=0;
+    }
+    if (zireisok==1) ziro=0;
+    if(currenty-1>=ziro && myposition[currentx][currenty-1]==0 && enemyposition[currentx][currenty-1]==0){
+        mynextmoves[step]=4;
+        myposition[currentx][currenty-1]=1;
+        safemoves(mynextmoves,myposition,enemyposition,step+1,currentx,currenty-1,safeareascale,zireisok);
+        myposition[currentx][currenty-1]=0;
+    }
+    if(flag==0 && step==1 && zireisok==1){
+       safeareascale=safeareascale-(int)(safeareascale/10)-5;
+       if (safeareascale<0) safeareascale=1;
+       fprintf(stderr,"area=(%d) ",safeareascale);
+       safemoves(mynextmoves,myposition,enemyposition,1,currentx,currenty,safeareascale,0);
+    }
+    if(flag==0 && step==1 && zireisok==0){
+        fprintf(stderr,"area={%d} ",safeareascale);
+       safemoves(mynextmoves,myposition,enemyposition,1,currentx,currenty,safeareascale,1);
+    }
+    }
+
+}
+int main()
+{
+    int myposition[30][20];
+    int enemyposition[30][20];
+    for(int i=0;i<20;i++)
+        for(int j=0;j<30;j++){
+            myposition[j][i]=0;
+            enemyposition[j][i]=0;
+        }
+
+    // game loop
+    while (1) {
+        // total number of players (2 to 4).
+        int N;
+        // your player number (0 to 3).
+        int P;
+        scanf("%d%d", &N, &P);
+        int myx,myy;
+        int enemyx,enemyy;
+        for (int i = 0; i < N; i++) {
+            // starting X coordinate of lightcycle (or -1)
+            int X0;
+            // starting Y coordinate of lightcycle (or -1)
+            int Y0;
+            // starting X coordinate of lightcycle (can be the same as X0 if you play before this player)
+            int X1;
+            // starting Y coordinate of lightcycle (can be the same as Y0 if you play before this player)
+            int Y1;
+            scanf("%d%d%d%d", &X0, &Y0, &X1, &Y1);
+            if (i==P) {
+                myx=X1;
+                myy=Y1;
+                myposition[X1][Y1]=1;
+                fprintf(stderr,"(%d %d)",myx,myy);
+            }else{
+                enemyposition[X1][Y1]=1;
+                enemyx=X1;
+                enemyy=Y1;
+
+            }
+
+        }
+
+            int mode2=0;
+            mode2=safemovesmode2(myposition,enemyposition,myx,myy,enemyx,enemyy);
+            if(mode2flag==1){
+                satrvasotun(enemyposition);
+                 if (mode2nextmove==2 && sotun[myx]==0 && myy<19)
+                    printf("DOWN\n");
+                else if (mode2nextmove==4 && sotun[myx]==0 && myy>0)
+                    printf("UP\n");
+                else if (mode2nextmove==1 && satr[myy]==0 && myx<29)
+                    printf("RIGHT\n");
+                else if (mode2nextmove==3 && satr[myy]==0 && myx>0)
+                    printf("LEFT\n");
+                else mode2flag=0;
+            }
+            if(mode2 !=0 && mode2flag==0){
+                fprintf(stderr,"\najab\n");
+                mode2flag=1;
+                if (mode2==12) {
+                    mode2nextmove=2;
+                    printf("RIGHT\n");
+                }
+                if (mode2==14) {
+                    mode2nextmove=4;
+                    printf("RIGHT\n");
+                }
+                if (mode2==32) {
+                    mode2nextmove=2;
+                    printf("LEFT\n");
+                fprintf(stderr,"chappaiin");
+                }
+                if (mode2==34) {
+                    mode2nextmove=4;
+                    printf("LEFT\n");
+                    fprintf(stderr,"chapbala");
+                }
+                if (mode2==21) {
+                    mode2nextmove=1;
+                    printf("DOWN\n");
+                }
+                if (mode2==23) {
+                    mode2nextmove=3;
+                    printf("DOWN\n");
+                }
+                if (mode2==41) {
+                    mode2nextmove=1;
+                    printf("UP\n");
+                }
+                if (mode2==43) {
+                    mode2nextmove=3;
+                    printf("UP\n");
+                }
+            }
+            if(mode2flag==0){
+            int mynextmoves[n];
+            flag=0;
+            time=0;
+            fprintf(stderr,"\n step=(%d) mynextmove=(%d) \n",safemoves(mynextmoves,myposition,enemyposition,1,myx,myy,n,0),nextmoves[1]);
+            //for(int i=1;i<n;i+=5)  fprintf(stderr, "move(%d)=%d\n",i,nextmoves[i]);
+                if(nextmoves[1]==1) printf("RIGHT\n");
+                else if(nextmoves[1]==2) printf("DOWN\n");
+                else if(nextmoves[1]==3) printf("LEFT\n");
+                else{fprintf(stderr,"upnaro");printf("UP\n");}
+            }
+                //printf("%d",enemyposition[1][1]);
+
+
+        // Write an action using printf(). DON'T FORGET THE TRAILING \n
+        // To debug: fprintf(stderr, "Debug messages...\n");
+
+    // A single line with UP, DOWN, LEFT or RIGHT
+    }
+
+    return 0;
+}

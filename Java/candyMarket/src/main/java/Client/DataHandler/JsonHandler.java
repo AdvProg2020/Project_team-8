@@ -16,7 +16,6 @@ public class JsonHandler {
         int lastIndexOfSim = tClass.getName().lastIndexOf(";");
         String name = tClass.getName().substring(lastIndexOfDot+1,lastIndexOfSim);
         String response = MessageHandler.sendGetAllDataMessage(name);
-        ArrayList<Class> d = new ArrayList<>();
         List<T> objects= new LinkedList<>(Arrays.asList(gson.fromJson(response,tClass)));
         return objects;
     }

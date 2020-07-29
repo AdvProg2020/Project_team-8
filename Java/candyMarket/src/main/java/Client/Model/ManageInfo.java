@@ -18,7 +18,7 @@ public class ManageInfo {
     public static List<Sale> allSales = new ArrayList<Sale>();
     public static List<Score> allScores = new ArrayList<Score>();
     public static List<Supporter> allSupporters = new ArrayList<Supporter>();
-    public static List<FileGood> allFileGoods = new ArrayList<FileGood>();
     public static List<Chat> allChats = new ArrayList<Chat>();
     public static List<Auction> allAuctions = new ArrayList<Auction>();
+    public static List<FileGood> allFileGoods = new ArrayList<>();
 }

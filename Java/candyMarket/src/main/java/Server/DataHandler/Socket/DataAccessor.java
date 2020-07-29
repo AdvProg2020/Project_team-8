@@ -77,7 +77,19 @@ public class DataAccessor {
         }
     }
     public static void updateOrSaveObject(Object object){
-        if(object instanceof Good)
+        if(object instanceof FileGood)
+        {
+            FileGood fileGood = (FileGood) object;
+            FileGood currentGood = (FileGood) Good.getGoodByName(fileGood.getName());
+            if (currentGood != null) {
+                DBManager.deleteObject(currentGood);
+                ManageInfo.allGoods.remove((Good)currentGood);
+                ManageInfo.allFileGoods.remove(currentGood);
+            }
+            ManageInfo.allGoods.add((Good) fileGood);
+            ManageInfo.allFileGoods.add(fileGood);
+        }
+        else if(object instanceof Good)
         {
             Good good = (Good) object;
             Good currentGood =  Good.getGoodByName(good.getName());
@@ -239,6 +251,8 @@ public class DataAccessor {
     public static <T>List<T> getObjectsByClassName(String className){
         if(className.equals("Manager"))
             return (List<T>) ManageInfo.allManagers;
+        else if(className.equals("FileGood"))
+            return (List<T>) ManageInfo.allFileGoods;
         else if(className.equals("Good"))
             return (List<T>) ManageInfo.allGoods;
         else if(className.equals("Buyer"))
@@ -275,6 +289,10 @@ public class DataAccessor {
         if(name.equals("Manager")){
             Manager manager = (Manager) Manager.getUserByUsername(id);
             return manager;
+        }
+        else if(name.equals("FileGood")){
+            FileGood fileGood = FileGood.getFileGoodByName(id);
+            return fileGood;
         }
         else if(name.equals("Good")){
             Good good = Good.getGoodByName(id);

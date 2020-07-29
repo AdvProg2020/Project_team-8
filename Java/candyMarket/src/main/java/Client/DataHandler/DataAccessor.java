@@ -8,6 +8,10 @@ public class DataAccessor {
             ManageInfo.allManagers.remove(Manager.getUserByUsername(id));
             ManageInfo.allUsers.remove(Manager.getUserByUsername(id));
         }
+        else if(className.equals("FileGood")) {
+            ManageInfo.allFileGoods.remove(FileGood.getFileGoodByName(id));
+            ManageInfo.allGoods.remove(FileGood.getFileGoodByName(id));
+        }
         else if(className.equals("Good"))
             ManageInfo.allGoods.remove(Good.getGoodByName(id));
         else if(className.equals("Buyer")) {
@@ -44,7 +48,17 @@ public class DataAccessor {
             ManageInfo.allAuctions.remove(Auction.getAuctionById(Integer.parseInt(id)));
     }
     public static void updateOrSaveObject(Object object){
-        if(object instanceof Good)
+        if(object instanceof FileGood){
+            FileGood fileGood = (FileGood) object;
+            FileGood currentFileGood = (FileGood) Good.getGoodByName(fileGood.getName());
+            if (currentFileGood != null) {
+                ManageInfo.allGoods.remove((Good)currentFileGood);
+                ManageInfo.allFileGoods.remove(currentFileGood);
+            }
+            ManageInfo.allGoods.add((Good) fileGood);
+            ManageInfo.allFileGoods.add(fileGood);
+        }
+        else if(object instanceof Good)
         {
             Good good = (Good) object;
             Good currentGood =  Good.getGoodByName(good.getName());
@@ -173,69 +187,6 @@ public class DataAccessor {
                 ManageInfo.allAuctions.remove(currentAuction);
             ManageInfo.allAuctions.add(auction);
         }
-    }
-    public static Object sendObject(String name,String id){
-        if(name.equals("Manager")){
-            Manager manager = (Manager) Manager.getUserByUsername(id);
-            return manager;
-        }
-        else if(name.equals("Good")){
-            Good good = Good.getGoodByName(id);
-            return good;
-        }
-        else if(name.equals("Seller")){
-            Seller seller = (Seller) Seller.getUserByUsername(id);
-            return seller;
-        }
-        else if(name.equals("Buyer")){
-            Buyer buyer = (Buyer) Buyer.getUserByUsername(id);
-            return buyer;
-        }
-        else if(name.equals("Supporter")){
-            Supporter supporter = (Supporter) Supporter.getUserByUsername(id);
-            return supporter;
-        }
-        else if(name.equals("Category")){
-            Category category = (Category) Category.getCategoryByName(id);
-            return category;
-        }
-        else if(name.equals("Comment")){
-            Comment comment = Comment.getCommentById(Integer.parseInt(id));
-            return comment;
-        }
-        else if(name.equals("Discount")){
-            Discount discount = Discount.getDiscountByCode(id);
-            return discount;
-        }
-        else if(name.equals("BuyLog")){
-            BuyLog buyLog = BuyLog.getBuyLogById(Integer.parseInt(id));
-            return buyLog;
-        }
-        else if(name.equals("SellLog")){
-            SellLog sellLog = SellLog.getSellLogById(Integer.parseInt(id));
-            return sellLog;
-        }
-        else if(name.equals("Score")){
-            Score score = Score.getScoreById(Integer.parseInt(id));
-            return score;
-        }
-        else if(name.equals("Sale")){
-            Sale sale = Sale.getSaleById(Integer.parseInt(id));
-            return sale;
-        }
-        else if(name.equals("Request")){
-            Request request = Request.getRequestById(Integer.parseInt(id));
-            return request;
-        }
-        else if(name.equals("Chat")){
-            Chat chat = Chat.getChatById(Integer.parseInt(id));
-            return chat;
-        }
-        else if(name.equals("Auction")){
-            Auction auction = Auction.getAuctionById(Integer.parseInt(id));
-            return auction;
-        }
-        return null;
     }
 }
 

@@ -31,6 +31,7 @@ public class BuyerController extends PrimaryMenu {
         buttons.add(MenuHandler.viewProfileBtn);
         buttons.add(MenuHandler.viewBuyerPersonalInfoBtn);
         buttons.add(MenuHandler.auctionsMenuBtn);
+        buttons.add(MenuHandler.fileBoughtBtn);
         buttons.add(MenuHandler.viewBuyerBuyLogBtn);
         buttons.add(MenuHandler.bankAccountBtn);
         buttons.add(MenuHandler.backBtn);
