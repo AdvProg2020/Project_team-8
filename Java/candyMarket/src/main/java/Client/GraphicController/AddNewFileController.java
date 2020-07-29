@@ -104,9 +104,7 @@ public class AddNewFileController implements Initializable {
                 errorMessage.setStyle("-fx-background-color: #00ff00;");
                 errorMessage.setText("Update Request has been sent");
                 FileGood filegood = new FileGood(nameText, brandText, priceText, UserHandler.currentSeller,
-                        stockText, categoryValue, detailText, photoUrl, null,getProperties(), selectedFile);
-                ManageInfo.allFileGoods.add(filegood);
-                ManageInfo.allGoods.add(filegood);
+                        stockText, categoryValue, detailText, photoUrl, null,getProperties(), selectedFile.getPath());
                 Functions.showDialog("your request has been sent",false);
                 SellerProductHandlingController.sellerProductHandlingController.initialize(null,null);
                 MenuHandler.secondCurrentWindow.close();
